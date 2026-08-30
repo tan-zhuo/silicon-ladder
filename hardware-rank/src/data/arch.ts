@@ -55,6 +55,10 @@ export const CPU_ARCH: Record<string, CpuArch> = {
   steamroller: { cores: 'Steamroller（模块化）', process: 'GF 28nm', design: MONO, l1: '16 KB D / 核 + 96 KB I / 模块', isa: 'AVX, FMA3, HSA', smt: L('CMT 模块（2 整数核 / 模块）', 'CMT module (2 integer cores per module)', 'CMT モジュール') },
   'whiskey-lake': { cores: 'Skylake（U 系第 4 次迭代）', process: 'Intel 14nm++', design: MONO, l1: '32 KB D + 32 KB I', isa: 'AVX2', smt: SMT2 },
   'kaby-lake-r': { cores: 'Skylake（U 系四核）', process: 'Intel 14nm+', design: MONO, l1: '32 KB D + 32 KB I', isa: 'AVX2', smt: SMT2 },
+  'cascade-lake-x': { cores: 'Skylake-SP（Cascade Lake）', process: 'Intel 14nm++', design: MONO, l1: '32 KB D + 32 KB I', isa: 'AVX-512, VNNI', smt: SMT2 },
+  'skylake-x': { cores: 'Skylake-SP', process: 'Intel 14nm+', design: MONO, l1: '32 KB D + 32 KB I', isa: 'AVX-512', smt: SMT2 },
+  'broadwell-e': { cores: 'Broadwell', process: 'Intel 14nm', design: MONO, l1: '32 KB D + 32 KB I', isa: 'AVX2, FMA3', smt: SMT2 },
+  'ivy-bridge-e': { cores: 'Ivy Bridge-E', process: 'Intel 22nm', design: MONO, l1: '32 KB D + 32 KB I', isa: 'AVX', smt: SMT2 },
   'apple-m4': { cores: 'Apple P + E（ARMv9.2）', process: 'TSMC N3E', design: L('单片 SoC，统一内存封装', 'Monolithic SoC, unified memory on package', 'モノリシック SoC、ユニファイドメモリ同梱'), l1: 'P: 128 KB D + 192 KB I', isa: 'ARMv9.2, SME, AMX', smt: NO_SMT },
   'apple-m3': { cores: 'Apple P + E（ARMv8.6）', process: 'TSMC N3B', design: L('单片 SoC，统一内存封装', 'Monolithic SoC, unified memory on package', 'モノリシック SoC、ユニファイドメモリ同梱'), l1: 'P: 128 KB D + 192 KB I', isa: 'ARMv8.6, AMX', smt: NO_SMT },
   'apple-m2': { cores: 'Avalanche (P) + Blizzard (E)', process: 'TSMC N5P', design: L('单片 SoC，统一内存封装', 'Monolithic SoC, unified memory on package', 'モノリシック SoC、ユニファイドメモリ同梱'), l1: 'P: 128 KB D + 192 KB I', isa: 'ARMv8.6, AMX', smt: NO_SMT },
@@ -99,6 +103,7 @@ export const GPU_ARCH: Record<string, GpuArch> = {
   'apple-m3': { arch: 'Apple GPU (M3 family)', process: 'TSMC N3B', unitName: L('GPU 核心', 'GPU core', 'GPU コア'), shadersPerUnit: 128, rtGen: L('硬件光追（第 1 代）', 'Hardware RT (1st gen)', 'ハードウェア RT（第1世代）'), aiGen: null, design: L('SoC 集成，动态缓存', 'Integrated in SoC, Dynamic Caching', 'SoC 内蔵、Dynamic Caching') },
   'apple-m2': { arch: 'Apple GPU (M2 family)', process: 'TSMC N5P', unitName: L('GPU 核心', 'GPU core', 'GPU コア'), shadersPerUnit: 128, rtGen: null, aiGen: null, design: L('SoC 集成', 'Integrated in SoC', 'SoC 内蔵') },
   'apple-m1': { arch: 'Apple GPU (M1 family)', process: 'TSMC N5', unitName: L('GPU 核心', 'GPU core', 'GPU コア'), shadersPerUnit: 128, rtGen: null, aiGen: null, design: L('SoC 集成', 'Integrated in SoC', 'SoC 内蔵') },
+  volta: { arch: 'Volta (GV100)', process: 'TSMC 12nm FFN', unitName: L('SM', 'SM', 'SM'), shadersPerUnit: 64, rtGen: null, aiGen: L('第 1 代 Tensor Core', '1st-gen Tensor Core', '第1世代 Tensor コア'), design: L('GPU + HBM2 于中介层', 'GPU + HBM2 on interposer', 'GPU + HBM2 インターポーザ') },
   'apple-m4': { arch: 'Apple GPU (M4 family)', process: 'TSMC N3E', unitName: L('GPU 核心', 'GPU core', 'GPU コア'), shadersPerUnit: 128, rtGen: L('硬件光追（第 2 代）', 'Hardware RT (2nd gen)', 'ハードウェア RT（第2世代）'), aiGen: L('Neural Engine（SoC）', 'Neural Engine (SoC)', 'Neural Engine（SoC）'), design: L('SoC 集成，动态缓存', 'Integrated in SoC, Dynamic Caching', 'SoC 内蔵、Dynamic Caching') },
   'snapdragon-x': { arch: 'Adreno X1', process: 'TSMC N4', unitName: L('着色器核心', 'Shader core', 'シェーダコア'), shadersPerUnit: null, rtGen: null, aiGen: null, design: L('SoC 集成', 'Integrated in SoC', 'SoC 内蔵') },
 }

@@ -7735,5 +7735,1543 @@
       "raster_rel": 36,
       "rt_rel": null
     }
+  },
+  {
+    "id": "nvidia-rtx-5090-d",
+    "name": "RTX 5090 D",
+    "nameEn": "NVIDIA RTX 5090 D",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 50",
+    "gen": "blackwell",
+    "chip": "GB202",
+    "vram_gb": 32,
+    "vram_type": "GDDR7",
+    "bus_bit": 512,
+    "tdp_w": 575,
+    "release": "2025-01",
+    "price_cny": 16499,
+    "summary": "中国特供版，AI 算力受限，游戏几乎无差。",
+    "summary_en": "China-market version with capped AI throughput; gaming nearly identical.",
+    "summary_ja": "中国向け。AI 性能制限、ゲームはほぼ同じ。",
+    "tags": [
+      "旗舰",
+      "国产"
+    ],
+    "scores": {
+      "raster_rel": 99,
+      "rt_rel": 99
+    }
+  },
+  {
+    "id": "nvidia-rtx-4090-d",
+    "name": "RTX 4090 D",
+    "nameEn": "NVIDIA RTX 4090 D",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 40",
+    "gen": "ada",
+    "chip": "AD102",
+    "vram_gb": 24,
+    "vram_type": "GDDR6X",
+    "bus_bit": 384,
+    "tdp_w": 425,
+    "release": "2023-12",
+    "price_cny": 12999,
+    "summary": "中国特供版 4090，核心略减。",
+    "summary_en": "China-market 4090 with fewer cores.",
+    "summary_ja": "中国向け 4090。コア数微減。",
+    "tags": [
+      "国产"
+    ],
+    "scores": {
+      "raster_rel": 78,
+      "rt_rel": 80
+    }
+  },
+  {
+    "id": "nvidia-rtx-5050",
+    "name": "RTX 5050",
+    "nameEn": "NVIDIA RTX 5050",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 50",
+    "gen": "blackwell",
+    "chip": "GB207",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 128,
+    "tdp_w": 130,
+    "release": "2025-07",
+    "price_cny": 1999,
+    "summary": "GDDR6 版入门 50 系。",
+    "summary_en": "Entry 50-series with GDDR6.",
+    "summary_ja": "GDDR6 の入門 50 系。",
+    "tags": [
+      "1080p",
+      "入门"
+    ],
+    "scores": {
+      "raster_rel": 28,
+      "rt_rel": 29
+    }
+  },
+  {
+    "id": "nvidia-rtx-3090-ti",
+    "name": "RTX 3090 Ti",
+    "nameEn": "NVIDIA RTX 3090 Ti",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 30",
+    "gen": "ampere",
+    "chip": "GA102",
+    "vram_gb": 24,
+    "vram_type": "GDDR6X",
+    "bus_bit": 384,
+    "tdp_w": 450,
+    "release": "2022-03",
+    "price_cny": null,
+    "summary": "450W 完整 GA102。",
+    "summary_en": "Full GA102 at 450W.",
+    "summary_ja": "450W のフル GA102。",
+    "tags": [
+      "旗舰"
+    ],
+    "scores": {
+      "raster_rel": 58,
+      "rt_rel": 50
+    }
+  },
+  {
+    "id": "nvidia-rtx-2080",
+    "name": "RTX 2080",
+    "nameEn": "NVIDIA RTX 2080",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 20",
+    "gen": "turing",
+    "chip": "TU104",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 256,
+    "tdp_w": 215,
+    "release": "2018-09",
+    "price_cny": null,
+    "summary": "光追元年次旗舰。",
+    "summary_en": "RT year-one second-tier.",
+    "summary_ja": "RT 元年の準旗艦。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 25,
+      "rt_rel": 18
+    }
+  },
+  {
+    "id": "nvidia-titan-rtx",
+    "name": "TITAN RTX",
+    "nameEn": "NVIDIA TITAN RTX",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "TITAN",
+    "gen": "turing",
+    "chip": "TU102",
+    "vram_gb": 24,
+    "vram_type": "GDDR6",
+    "bus_bit": 384,
+    "tdp_w": 280,
+    "release": "2018-12",
+    "price_cny": null,
+    "summary": "24GB 完整 TU102。",
+    "summary_en": "Full TU102 with 24GB.",
+    "summary_ja": "24GB フル TU102。",
+    "tags": [
+      "历史",
+      "生产力"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 34,
+      "rt_rel": 25
+    }
+  },
+  {
+    "id": "nvidia-titan-v",
+    "name": "TITAN V",
+    "nameEn": "NVIDIA TITAN V",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "TITAN",
+    "gen": "volta",
+    "chip": "GV100",
+    "vram_gb": 12,
+    "vram_type": "HBM2",
+    "bus_bit": 3072,
+    "tdp_w": 250,
+    "release": "2017-12",
+    "price_cny": null,
+    "summary": "Volta 唯一消费级卡。",
+    "summary_en": "The only consumer Volta card.",
+    "summary_ja": "唯一の一般向け Volta。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 30,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-titan-xp",
+    "name": "TITAN Xp",
+    "nameEn": "NVIDIA TITAN Xp",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "TITAN",
+    "gen": "pascal",
+    "chip": "GP102",
+    "vram_gb": 12,
+    "vram_type": "GDDR5X",
+    "bus_bit": 384,
+    "tdp_w": 250,
+    "release": "2017-04",
+    "price_cny": null,
+    "summary": "完整 GP102。",
+    "summary_en": "Full GP102.",
+    "summary_ja": "フル GP102。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 25,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-titan-x-pascal",
+    "name": "TITAN X (Pascal)",
+    "nameEn": "NVIDIA TITAN X (Pascal)",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "TITAN",
+    "gen": "pascal",
+    "chip": "GP102",
+    "vram_gb": 12,
+    "vram_type": "GDDR5X",
+    "bus_bit": 384,
+    "tdp_w": 250,
+    "release": "2016-08",
+    "price_cny": null,
+    "summary": "1080 Ti 之前的旗舰。",
+    "summary_en": "The flagship before the 1080 Ti.",
+    "summary_ja": "1080 Ti 以前の旗艦。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 23,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-1060-3gb",
+    "name": "GTX 1060 3GB",
+    "nameEn": "NVIDIA GTX 1060 3GB",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 10",
+    "gen": "pascal",
+    "chip": "GP106",
+    "vram_gb": 3,
+    "vram_type": "GDDR5",
+    "bus_bit": 192,
+    "tdp_w": 120,
+    "release": "2016-08",
+    "price_cny": null,
+    "summary": "少 128 个核心的 3GB 版。",
+    "summary_en": "3GB version with 128 fewer cores.",
+    "summary_ja": "128 コア少ない 3GB 版。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 9.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gt-1030",
+    "name": "GT 1030",
+    "nameEn": "NVIDIA GT 1030",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 10",
+    "gen": "pascal",
+    "chip": "GP108",
+    "vram_gb": 2,
+    "vram_type": "GDDR5",
+    "bus_bit": 64,
+    "tdp_w": 30,
+    "release": "2017-05",
+    "price_cny": null,
+    "summary": "亮机卡，注意 DDR4 版更慢。",
+    "summary_en": "Display-out card; the DDR4 version is slower.",
+    "summary_ja": "表示用カード。DDR4 版はさらに遅い。",
+    "tags": [
+      "历史",
+      "入门"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 2.4,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-750",
+    "name": "GTX 750",
+    "nameEn": "NVIDIA GTX 750",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 700",
+    "gen": "maxwell",
+    "chip": "GM107",
+    "vram_gb": 1,
+    "vram_type": "GDDR5",
+    "bus_bit": 128,
+    "tdp_w": 55,
+    "release": "2014-02",
+    "price_cny": null,
+    "summary": "750 Ti 降配。",
+    "summary_en": "Cut-down 750 Ti.",
+    "summary_ja": "750 Ti の下位版。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 3,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-690",
+    "name": "GTX 690",
+    "nameEn": "NVIDIA GTX 690",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 600",
+    "gen": "kepler",
+    "chip": "2× GK104",
+    "vram_gb": 4,
+    "vram_type": "GDDR5",
+    "bus_bit": 512,
+    "tdp_w": 300,
+    "release": "2012-04",
+    "price_cny": null,
+    "summary": "双芯 Kepler。",
+    "summary_en": "Dual-GPU Kepler.",
+    "summary_ja": "デュアル GPU Kepler。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 9,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-660-ti",
+    "name": "GTX 660 Ti",
+    "nameEn": "NVIDIA GTX 660 Ti",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 600",
+    "gen": "kepler",
+    "chip": "GK104",
+    "vram_gb": 2,
+    "vram_type": "GDDR5",
+    "bus_bit": 192,
+    "tdp_w": 150,
+    "release": "2012-08",
+    "price_cny": null,
+    "summary": "位宽缩减的 GK104。",
+    "summary_en": "GK104 with a narrower bus.",
+    "summary_ja": "バス幅削減の GK104。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 5.3,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-650-ti-boost",
+    "name": "GTX 650 Ti Boost",
+    "nameEn": "NVIDIA GTX 650 Ti Boost",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 600",
+    "gen": "kepler",
+    "chip": "GK106",
+    "vram_gb": 2,
+    "vram_type": "GDDR5",
+    "bus_bit": 192,
+    "tdp_w": 134,
+    "release": "2013-03",
+    "price_cny": null,
+    "summary": "带 Boost 的 650 Ti。",
+    "summary_en": "650 Ti with Boost.",
+    "summary_ja": "Boost 付き 650 Ti。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 3.9,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-590",
+    "name": "GTX 590",
+    "nameEn": "NVIDIA GTX 590",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 500",
+    "gen": "fermi",
+    "chip": "2× GF110",
+    "vram_gb": 3,
+    "vram_type": "GDDR5",
+    "bus_bit": 768,
+    "tdp_w": 365,
+    "release": "2011-03",
+    "price_cny": null,
+    "summary": "双芯 Fermi。",
+    "summary_en": "Dual-GPU Fermi.",
+    "summary_ja": "デュアル GPU Fermi。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 6.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-560",
+    "name": "GTX 560",
+    "nameEn": "NVIDIA GTX 560",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 500",
+    "gen": "fermi",
+    "chip": "GF114",
+    "vram_gb": 1,
+    "vram_type": "GDDR5",
+    "bus_bit": 256,
+    "tdp_w": 150,
+    "release": "2011-05",
+    "price_cny": null,
+    "summary": "560 Ti 降配。",
+    "summary_en": "Cut-down 560 Ti.",
+    "summary_ja": "560 Ti の下位版。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 3,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-550-ti",
+    "name": "GTX 550 Ti",
+    "nameEn": "NVIDIA GTX 550 Ti",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 500",
+    "gen": "fermi",
+    "chip": "GF116",
+    "vram_gb": 1,
+    "vram_type": "GDDR5",
+    "bus_bit": 192,
+    "tdp_w": 116,
+    "release": "2011-03",
+    "price_cny": null,
+    "summary": "Fermi 入门。",
+    "summary_en": "Fermi entry.",
+    "summary_ja": "Fermi 入門。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 2.1,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-470",
+    "name": "GTX 470",
+    "nameEn": "NVIDIA GTX 470",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 400",
+    "gen": "fermi",
+    "chip": "GF100",
+    "vram_gb": 1.25,
+    "vram_type": "GDDR5",
+    "bus_bit": 320,
+    "tdp_w": 215,
+    "release": "2010-03",
+    "price_cny": null,
+    "summary": "480 降配。",
+    "summary_en": "Cut-down 480.",
+    "summary_ja": "480 の下位版。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 3.4,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-geforce-gtx-295",
+    "name": "GeForce GTX 295",
+    "nameEn": "NVIDIA GeForce GTX 295",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 200",
+    "gen": "tesla",
+    "chip": "2× GT200b",
+    "vram_gb": 1.75,
+    "vram_type": "GDDR3",
+    "bus_bit": 896,
+    "tdp_w": 289,
+    "release": "2009-01",
+    "price_cny": null,
+    "summary": "双芯 GT200。",
+    "summary_en": "Dual-GPU GT200.",
+    "summary_ja": "デュアル GPU GT200。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 3.6,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-geforce-gtx-285",
+    "name": "GeForce GTX 285",
+    "nameEn": "NVIDIA GeForce GTX 285",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 200",
+    "gen": "tesla",
+    "chip": "GT200b",
+    "vram_gb": 1,
+    "vram_type": "GDDR3",
+    "bus_bit": 512,
+    "tdp_w": 204,
+    "release": "2009-01",
+    "price_cny": null,
+    "summary": "55nm 版 280。",
+    "summary_en": "55nm 280.",
+    "summary_ja": "55nm 版 280。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 2.8,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-geforce-gtx-275",
+    "name": "GeForce GTX 275",
+    "nameEn": "NVIDIA GeForce GTX 275",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 200",
+    "gen": "tesla",
+    "chip": "GT200b",
+    "vram_gb": 0.875,
+    "vram_type": "GDDR3",
+    "bus_bit": 448,
+    "tdp_w": 219,
+    "release": "2009-04",
+    "price_cny": null,
+    "summary": "对标 4890。",
+    "summary_en": "Rival to the 4890.",
+    "summary_ja": "4890 の対抗馬。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 2.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-geforce-9800-gtx-plus",
+    "name": "GeForce 9800 GTX+",
+    "nameEn": "NVIDIA GeForce 9800 GTX+",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 9",
+    "gen": "tesla",
+    "chip": "G92b",
+    "vram_gb": 0.5,
+    "vram_type": "GDDR3",
+    "bus_bit": 256,
+    "tdp_w": 141,
+    "release": "2008-07",
+    "price_cny": null,
+    "summary": "55nm G92，后改名 GTS 250。",
+    "summary_en": "55nm G92, later renamed GTS 250.",
+    "summary_ja": "55nm G92、後に GTS 250 に改名。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 1.8,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-geforce-9800-gx2",
+    "name": "GeForce 9800 GX2",
+    "nameEn": "NVIDIA GeForce 9800 GX2",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 9",
+    "gen": "tesla",
+    "chip": "2× G92",
+    "vram_gb": 1,
+    "vram_type": "GDDR3",
+    "bus_bit": 512,
+    "tdp_w": 197,
+    "release": "2008-03",
+    "price_cny": null,
+    "summary": "双芯 G92。",
+    "summary_en": "Dual-GPU G92.",
+    "summary_ja": "デュアル GPU G92。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 2.6,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-geforce-9600-gt",
+    "name": "GeForce 9600 GT",
+    "nameEn": "NVIDIA GeForce 9600 GT",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 9",
+    "gen": "tesla",
+    "chip": "G94",
+    "vram_gb": 0.5,
+    "vram_type": "GDDR3",
+    "bus_bit": 256,
+    "tdp_w": 95,
+    "release": "2008-02",
+    "price_cny": null,
+    "summary": "2008 年的甜点。",
+    "summary_en": "The 2008 sweet spot.",
+    "summary_ja": "2008 年の定番。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 1,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-geforce-8800-gts-512",
+    "name": "GeForce 8800 GTS 512",
+    "nameEn": "NVIDIA GeForce 8800 GTS 512",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 8",
+    "gen": "tesla",
+    "chip": "G92",
+    "vram_gb": 0.5,
+    "vram_type": "GDDR3",
+    "bus_bit": 256,
+    "tdp_w": 140,
+    "release": "2007-12",
+    "price_cny": null,
+    "summary": "完整 G92。",
+    "summary_en": "Full G92.",
+    "summary_ja": "フル G92。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 1.7,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-geforce-8800-ultra",
+    "name": "GeForce 8800 Ultra",
+    "nameEn": "NVIDIA GeForce 8800 Ultra",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 8",
+    "gen": "tesla",
+    "chip": "G80",
+    "vram_gb": 0.75,
+    "vram_type": "GDDR3",
+    "bus_bit": 384,
+    "tdp_w": 175,
+    "release": "2007-05",
+    "price_cny": null,
+    "summary": "G80 提频版旗舰。",
+    "summary_en": "Higher-clocked G80 flagship.",
+    "summary_ja": "G80 高クロック旗艦。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 1.75,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-geforce-8600-gt",
+    "name": "GeForce 8600 GT",
+    "nameEn": "NVIDIA GeForce 8600 GT",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 8",
+    "gen": "tesla",
+    "chip": "G84",
+    "vram_gb": 0.25,
+    "vram_type": "GDDR3",
+    "bus_bit": 128,
+    "tdp_w": 43,
+    "release": "2007-04",
+    "price_cny": null,
+    "summary": "当年最普及的中端卡。",
+    "summary_en": "The most common mid-range card of its day.",
+    "summary_ja": "当時最も普及したミドル。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 0.45,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-rx-9070-gre",
+    "name": "RX 9070 GRE",
+    "nameEn": "AMD RX 9070 GRE",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "RX 9000",
+    "gen": "rdna4",
+    "chip": "Navi 48",
+    "vram_gb": 12,
+    "vram_type": "GDDR6",
+    "bus_bit": 192,
+    "tdp_w": 220,
+    "release": "2025-05",
+    "price_cny": 3999,
+    "summary": "12GB 中国首发版。",
+    "summary_en": "12GB China-first variant.",
+    "summary_ja": "12GB 中国先行版。",
+    "tags": [
+      "2K",
+      "国产"
+    ],
+    "scores": {
+      "raster_rel": 50,
+      "rt_rel": 44
+    }
+  },
+  {
+    "id": "amd-rx-7650-gre",
+    "name": "RX 7650 GRE",
+    "nameEn": "AMD RX 7650 GRE",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "RX 7000",
+    "gen": "rdna3",
+    "chip": "Navi 33",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 128,
+    "tdp_w": 170,
+    "release": "2025-02",
+    "price_cny": 1899,
+    "summary": "中国特供 7600 变体。",
+    "summary_en": "China-market 7600 variant.",
+    "summary_ja": "中国向け 7600 派生。",
+    "tags": [
+      "1080p",
+      "国产"
+    ],
+    "scores": {
+      "raster_rel": 27,
+      "rt_rel": 19
+    }
+  },
+  {
+    "id": "amd-rx-6400",
+    "name": "RX 6400",
+    "nameEn": "AMD RX 6400",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "RX 6000",
+    "gen": "rdna2",
+    "chip": "Navi 24",
+    "vram_gb": 4,
+    "vram_type": "GDDR6",
+    "bus_bit": 64,
+    "tdp_w": 53,
+    "release": "2022-04",
+    "price_cny": null,
+    "summary": "半高免供电，PCIe ×4。",
+    "summary_en": "Low-profile, no power connector, PCIe ×4.",
+    "summary_ja": "ロープロ、外部電源不要、PCIe ×4。",
+    "tags": [
+      "入门"
+    ],
+    "scores": {
+      "raster_rel": 10,
+      "rt_rel": 4
+    }
+  },
+  {
+    "id": "amd-rx-5500",
+    "name": "RX 5500",
+    "nameEn": "AMD RX 5500",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "RX 5000",
+    "gen": "rdna",
+    "chip": "Navi 14",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 128,
+    "tdp_w": 150,
+    "release": "2019-10",
+    "price_cny": null,
+    "summary": "OEM 版 5500 XT。",
+    "summary_en": "OEM 5500 XT.",
+    "summary_ja": "OEM 版 5500 XT。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 11,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-rx-550",
+    "name": "RX 550",
+    "nameEn": "AMD RX 550",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "RX 500",
+    "gen": "polaris",
+    "chip": "Polaris 12",
+    "vram_gb": 4,
+    "vram_type": "GDDR5",
+    "bus_bit": 128,
+    "tdp_w": 50,
+    "release": "2017-04",
+    "price_cny": null,
+    "summary": "亮机卡。",
+    "summary_en": "Display-out card.",
+    "summary_ja": "表示用カード。",
+    "tags": [
+      "历史",
+      "入门"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 2.6,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-r9-fury",
+    "name": "Radeon R9 Fury",
+    "nameEn": "AMD Radeon R9 Fury",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon R9 300",
+    "gen": "gcn",
+    "chip": "Fiji",
+    "vram_gb": 4,
+    "vram_type": "HBM",
+    "bus_bit": 4096,
+    "tdp_w": 275,
+    "release": "2015-07",
+    "price_cny": null,
+    "summary": "风冷版 Fury X 降配。",
+    "summary_en": "Air-cooled, cut-down Fury X.",
+    "summary_ja": "空冷の Fury X 下位版。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 12,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-r9-nano",
+    "name": "Radeon R9 Nano",
+    "nameEn": "AMD Radeon R9 Nano",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon R9 300",
+    "gen": "gcn",
+    "chip": "Fiji",
+    "vram_gb": 4,
+    "vram_type": "HBM",
+    "bus_bit": 4096,
+    "tdp_w": 175,
+    "release": "2015-09",
+    "price_cny": null,
+    "summary": "15cm 的完整 Fiji。",
+    "summary_en": "Full Fiji in 15 cm.",
+    "summary_ja": "15cm のフル Fiji。",
+    "tags": [
+      "历史",
+      "经典"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 11.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-r9-290",
+    "name": "Radeon R9 290",
+    "nameEn": "AMD Radeon R9 290",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon R9 200",
+    "gen": "gcn",
+    "chip": "Hawaii",
+    "vram_gb": 4,
+    "vram_type": "GDDR5",
+    "bus_bit": 512,
+    "tdp_w": 275,
+    "release": "2013-11",
+    "price_cny": null,
+    "summary": "$399 的 Hawaii。",
+    "summary_en": "The $399 Hawaii.",
+    "summary_ja": "$399 の Hawaii。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 9,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-r9-280",
+    "name": "Radeon R9 280",
+    "nameEn": "AMD Radeon R9 280",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon R9 200",
+    "gen": "gcn",
+    "chip": "Tahiti",
+    "vram_gb": 3,
+    "vram_type": "GDDR5",
+    "bus_bit": 384,
+    "tdp_w": 250,
+    "release": "2014-03",
+    "price_cny": null,
+    "summary": "7950 换标。",
+    "summary_en": "Rebadged 7950.",
+    "summary_ja": "7950 のリブランド。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 6,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-r9-270",
+    "name": "Radeon R9 270",
+    "nameEn": "AMD Radeon R9 270",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon R9 200",
+    "gen": "gcn",
+    "chip": "Curacao",
+    "vram_gb": 2,
+    "vram_type": "GDDR5",
+    "bus_bit": 256,
+    "tdp_w": 150,
+    "release": "2013-11",
+    "price_cny": null,
+    "summary": "7870 降频换标。",
+    "summary_en": "Lower-clocked rebadged 7870.",
+    "summary_ja": "7870 の低クロックリブランド。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 4.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-7990",
+    "name": "Radeon HD 7990",
+    "nameEn": "AMD Radeon HD 7990",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 7000",
+    "gen": "gcn",
+    "chip": "2× Tahiti",
+    "vram_gb": 6,
+    "vram_type": "GDDR5",
+    "bus_bit": 768,
+    "tdp_w": 375,
+    "release": "2013-04",
+    "price_cny": null,
+    "summary": "双芯 Tahiti。",
+    "summary_en": "Dual-GPU Tahiti.",
+    "summary_ja": "デュアル GPU Tahiti。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 11,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-7970-ghz",
+    "name": "Radeon HD 7970 GHz Edition",
+    "nameEn": "AMD Radeon HD 7970 GHz Edition",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 7000",
+    "gen": "gcn",
+    "chip": "Tahiti",
+    "vram_gb": 3,
+    "vram_type": "GDDR5",
+    "bus_bit": 384,
+    "tdp_w": 250,
+    "release": "2012-06",
+    "price_cny": null,
+    "summary": "1GHz Tahiti，压制 680。",
+    "summary_en": "1 GHz Tahiti that beat the 680.",
+    "summary_ja": "1GHz Tahiti、680 を抑えた。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 7.2,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-7790",
+    "name": "Radeon HD 7790",
+    "nameEn": "AMD Radeon HD 7790",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 7000",
+    "gen": "gcn",
+    "chip": "Bonaire",
+    "vram_gb": 1,
+    "vram_type": "GDDR5",
+    "bus_bit": 128,
+    "tdp_w": 85,
+    "release": "2013-03",
+    "price_cny": null,
+    "summary": "GCN 2 首作。",
+    "summary_en": "First GCN 2.",
+    "summary_ja": "GCN 2 初作。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 3,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-7750",
+    "name": "Radeon HD 7750",
+    "nameEn": "AMD Radeon HD 7750",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 7000",
+    "gen": "gcn",
+    "chip": "Cape Verde",
+    "vram_gb": 1,
+    "vram_type": "GDDR5",
+    "bus_bit": 128,
+    "tdp_w": 55,
+    "release": "2012-02",
+    "price_cny": null,
+    "summary": "免供电 GCN。",
+    "summary_en": "No-power-connector GCN.",
+    "summary_ja": "外部電源不要の GCN。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 1.9,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-6990",
+    "name": "Radeon HD 6990",
+    "nameEn": "AMD Radeon HD 6990",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 6000",
+    "gen": "terascale",
+    "chip": "2× Cayman",
+    "vram_gb": 4,
+    "vram_type": "GDDR5",
+    "bus_bit": 512,
+    "tdp_w": 375,
+    "release": "2011-03",
+    "price_cny": null,
+    "summary": "双芯 Cayman，375W。",
+    "summary_en": "Dual-GPU Cayman, 375W.",
+    "summary_ja": "デュアル Cayman、375W。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 7.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-6790",
+    "name": "Radeon HD 6790",
+    "nameEn": "AMD Radeon HD 6790",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 6000",
+    "gen": "terascale",
+    "chip": "Barts",
+    "vram_gb": 1,
+    "vram_type": "GDDR5",
+    "bus_bit": 256,
+    "tdp_w": 150,
+    "release": "2011-04",
+    "price_cny": null,
+    "summary": "Barts 降配。",
+    "summary_en": "Cut-down Barts.",
+    "summary_ja": "Barts 下位版。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 2.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-6770",
+    "name": "Radeon HD 6770",
+    "nameEn": "AMD Radeon HD 6770",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 6000",
+    "gen": "terascale",
+    "chip": "Juniper",
+    "vram_gb": 1,
+    "vram_type": "GDDR5",
+    "bus_bit": 128,
+    "tdp_w": 108,
+    "release": "2011-04",
+    "price_cny": null,
+    "summary": "5770 换标。",
+    "summary_en": "Rebadged 5770.",
+    "summary_ja": "5770 のリブランド。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 1.9,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-5970",
+    "name": "Radeon HD 5970",
+    "nameEn": "AMD Radeon HD 5970",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 5000",
+    "gen": "terascale",
+    "chip": "2× Cypress",
+    "vram_gb": 2,
+    "vram_type": "GDDR5",
+    "bus_bit": 512,
+    "tdp_w": 294,
+    "release": "2009-11",
+    "price_cny": null,
+    "summary": "当年最快的双芯卡。",
+    "summary_en": "Fastest dual-GPU card of its day.",
+    "summary_ja": "当時最速のデュアル GPU。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 6,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-5830",
+    "name": "Radeon HD 5830",
+    "nameEn": "AMD Radeon HD 5830",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 5000",
+    "gen": "terascale",
+    "chip": "Cypress",
+    "vram_gb": 1,
+    "vram_type": "GDDR5",
+    "bus_bit": 256,
+    "tdp_w": 175,
+    "release": "2010-02",
+    "price_cny": null,
+    "summary": "Cypress 大幅降配。",
+    "summary_en": "Heavily cut Cypress.",
+    "summary_ja": "大幅削減の Cypress。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 2.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-5750",
+    "name": "Radeon HD 5750",
+    "nameEn": "AMD Radeon HD 5750",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 5000",
+    "gen": "terascale",
+    "chip": "Juniper",
+    "vram_gb": 1,
+    "vram_type": "GDDR5",
+    "bus_bit": 128,
+    "tdp_w": 86,
+    "release": "2009-10",
+    "price_cny": null,
+    "summary": "5770 降配。",
+    "summary_en": "Cut-down 5770.",
+    "summary_ja": "5770 下位版。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 1.6,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-5670",
+    "name": "Radeon HD 5670",
+    "nameEn": "AMD Radeon HD 5670",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 5000",
+    "gen": "terascale",
+    "chip": "Redwood",
+    "vram_gb": 0.5,
+    "vram_type": "GDDR5",
+    "bus_bit": 128,
+    "tdp_w": 61,
+    "release": "2010-01",
+    "price_cny": null,
+    "summary": "免供电 DX11 入门。",
+    "summary_en": "No-power-connector DX11 entry.",
+    "summary_ja": "外部電源不要の DX11 入門。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 1,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-4870-x2",
+    "name": "Radeon HD 4870 X2",
+    "nameEn": "AMD Radeon HD 4870 X2",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 4000",
+    "gen": "terascale",
+    "chip": "2× RV770",
+    "vram_gb": 2,
+    "vram_type": "GDDR5",
+    "bus_bit": 512,
+    "tdp_w": 286,
+    "release": "2008-08",
+    "price_cny": null,
+    "summary": "双芯 RV770。",
+    "summary_en": "Dual-GPU RV770.",
+    "summary_ja": "デュアル RV770。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 4,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-4770",
+    "name": "Radeon HD 4770",
+    "nameEn": "AMD Radeon HD 4770",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 4000",
+    "gen": "terascale",
+    "chip": "RV740",
+    "vram_gb": 0.5,
+    "vram_type": "GDDR5",
+    "bus_bit": 128,
+    "tdp_w": 80,
+    "release": "2009-04",
+    "price_cny": null,
+    "summary": "首款 40nm GPU。",
+    "summary_en": "First 40nm GPU.",
+    "summary_ja": "初の 40nm GPU。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 1.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-4670",
+    "name": "Radeon HD 4670",
+    "nameEn": "AMD Radeon HD 4670",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 4000",
+    "gen": "terascale",
+    "chip": "RV730",
+    "vram_gb": 0.5,
+    "vram_type": "GDDR3",
+    "bus_bit": 128,
+    "tdp_w": 59,
+    "release": "2008-09",
+    "price_cny": null,
+    "summary": "免供电中端。",
+    "summary_en": "No-power-connector mid-range.",
+    "summary_ja": "外部電源不要のミドル。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 0.9,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-3870-x2",
+    "name": "Radeon HD 3870 X2",
+    "nameEn": "AMD Radeon HD 3870 X2",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 3000",
+    "gen": "terascale",
+    "chip": "2× RV670",
+    "vram_gb": 1,
+    "vram_type": "GDDR3",
+    "bus_bit": 512,
+    "tdp_w": 196,
+    "release": "2008-01",
+    "price_cny": null,
+    "summary": "首款单卡双芯回归。",
+    "summary_en": "Return of the dual-GPU single card.",
+    "summary_ja": "デュアル GPU 単一カードの復活。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 1.9,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-3850",
+    "name": "Radeon HD 3850",
+    "nameEn": "AMD Radeon HD 3850",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 3000",
+    "gen": "terascale",
+    "chip": "RV670",
+    "vram_gb": 0.25,
+    "vram_type": "GDDR3",
+    "bus_bit": 256,
+    "tdp_w": 75,
+    "release": "2007-11",
+    "price_cny": null,
+    "summary": "3870 降配。",
+    "summary_en": "Cut-down 3870.",
+    "summary_ja": "3870 下位版。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 0.9,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-2600-xt",
+    "name": "Radeon HD 2600 XT",
+    "nameEn": "AMD Radeon HD 2600 XT",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 2000",
+    "gen": "terascale",
+    "chip": "RV630",
+    "vram_gb": 0.25,
+    "vram_type": "GDDR3",
+    "bus_bit": 128,
+    "tdp_w": 45,
+    "release": "2007-06",
+    "price_cny": null,
+    "summary": "R600 时代中端。",
+    "summary_en": "R600-era mid-range.",
+    "summary_ja": "R600 時代のミドル。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 0.4,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "intel-arc-a770-8gb",
+    "name": "Arc A770 8GB",
+    "nameEn": "Intel Arc A770 8GB",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Arc A",
+    "gen": "xe",
+    "chip": "ACM-G10",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 256,
+    "tdp_w": 225,
+    "release": "2022-10",
+    "price_cny": null,
+    "summary": "8GB 版 A770。",
+    "summary_en": "8GB A770.",
+    "summary_ja": "8GB 版 A770。",
+    "tags": [
+      "2K"
+    ],
+    "scores": {
+      "raster_rel": 29,
+      "rt_rel": 25
+    }
+  },
+  {
+    "id": "intel-arc-a310",
+    "name": "Arc A310",
+    "nameEn": "Intel Arc A310",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Arc A",
+    "gen": "xe",
+    "chip": "ACM-G11",
+    "vram_gb": 4,
+    "vram_type": "GDDR6",
+    "bus_bit": 64,
+    "tdp_w": 75,
+    "release": "2022-09",
+    "price_cny": 599,
+    "summary": "半高 AV1 编码卡。",
+    "summary_en": "Low-profile AV1 encoding card.",
+    "summary_ja": "ロープロ AV1 エンコードカード。",
+    "tags": [
+      "入门"
+    ],
+    "scores": {
+      "raster_rel": 6,
+      "rt_rel": 4
+    }
   }
 ]
