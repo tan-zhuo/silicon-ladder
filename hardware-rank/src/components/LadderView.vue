@@ -81,7 +81,7 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
               <div class="h-2 rounded-full overflow-hidden mt-1" style="background: var(--bar-track)"><div class="h-full rounded-full" :style="{ width: score(r) + '%', background: brandColor(r.item.brand) }" /></div>
             </div>
             <span class="text-sm font-bold w-10 text-right">{{ fmtRel(score(r)) }}</span>
-            <UiCheckbox size="sm" :model-value="compare.has(category, r.item.id)" :aria-label="t('col.compare')" @update:model-value="compare.toggle(category, r.item.id)" />
+            <span data-no-export class="inline-flex"><UiCheckbox size="sm" :model-value="compare.has(category, r.item.id)" :aria-label="t('col.compare')" @update:model-value="compare.toggle(category, r.item.id)" /></span>
           </div>
         </div>
       </div>
@@ -128,7 +128,7 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
                 class="ladder-item group w-full flex items-center justify-end" tabindex="0" @click="go(r)" @keydown.enter="go(r)"
               >
                 <div class="flex items-center gap-2 pr-2 shrink-0">
-                  <UiCheckbox size="sm" :model-value="compare.has(category, r.item.id)" :aria-label="t('col.compare')" @update:model-value="compare.toggle(category, r.item.id)" />
+                  <span data-no-export class="inline-flex"><UiCheckbox size="sm" :model-value="compare.has(category, r.item.id)" :aria-label="t('col.compare')" @update:model-value="compare.toggle(category, r.item.id)" /></span>
                   <span v-if="r.item.est" class="badge !py-0">{{ t('product.est') }}</span>
                   <span v-if="formBadge(category, r)" class="badge !py-0">{{ formBadge(category, r) }}</span>
                   <span class="text-[11px] text-muted">{{ yearOf(r.item.release) }}</span>
@@ -159,7 +159,7 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
                   <span class="text-[11px] text-muted">{{ yearOf(r.item.release) }}</span>
                   <span v-if="formBadge(category, r)" class="badge !py-0">{{ formBadge(category, r) }}</span>
                   <span v-if="r.item.est" class="badge !py-0">{{ t('product.est') }}</span>
-                  <UiCheckbox size="sm" :model-value="compare.has(category, r.item.id)" :aria-label="t('col.compare')" @update:model-value="compare.toggle(category, r.item.id)" />
+                  <span data-no-export class="inline-flex"><UiCheckbox size="sm" :model-value="compare.has(category, r.item.id)" :aria-label="t('col.compare')" @update:model-value="compare.toggle(category, r.item.id)" /></span>
                 </div>
               </div>
             </div>
@@ -176,7 +176,7 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
                   <span class="font-semibold truncate group-hover:text-accent">{{ displayName(r.item) }}</span>
                   <span v-if="formBadge(category, r)" class="badge !py-0">{{ formBadge(category, r) }}</span>
                   <span class="ml-auto text-xs text-muted">{{ gap(r) === 0 ? t('ladder.top') : gap(r) + '%' }}</span>
-                  <UiCheckbox size="sm" :model-value="compare.has(category, r.item.id)" :aria-label="t('col.compare')" @update:model-value="compare.toggle(category, r.item.id)" />
+                  <span data-no-export class="inline-flex"><UiCheckbox size="sm" :model-value="compare.has(category, r.item.id)" :aria-label="t('col.compare')" @update:model-value="compare.toggle(category, r.item.id)" /></span>
                 </div>
                 <div class="h-5 rounded-md overflow-hidden" style="background: var(--bar-track)">
                   <div class="h-full flex items-center rounded-md" :style="{ width: score(r) + '%', minWidth: '44px', background: `linear-gradient(90deg, ${brandColor(b)}, ${brandColor(b)}99)` }">
