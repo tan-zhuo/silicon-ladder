@@ -76,5 +76,6 @@ export const en: Msg = {
     h6: 'Disclaimer', p6: 'Static snapshot; scores are for relative ranking and are not purchase advice. Laptop and desktop are separate pools; same-name GPUs differ by 20–40% with TGP.',
   },
   lang: 'Language',
+  footerx: { about: 'Silicon Ladder is a fully static ranking and ladder site for consumer hardware: CPU, GPU, memory, storage and PSU pooled by form factor, AMD / Intel / NVIDIA side by side, every score traceable to public reviews.', rankings: 'Rankings', ladders: 'Ladders', tools: 'Tools & docs', resources: 'Resources', desktop: 'Desktop', laptop: 'Laptop', igpu: 'iGPU', github: 'Source on GitHub', data: 'Data files (JSON)', sitemap: 'Sitemap', dataVersion: 'Data version', copyright: '© {y} Silicon Ladder · Brand names and trademarks belong to their respective owners', noAffiliation: 'Not affiliated with AMD, Intel, NVIDIA, Apple or any vendor. No ads, no affiliate links.', builtWith: 'Built with Vue 3 + Vite, hosted on Vercel' },
   loading: 'Loading data…', loadError: 'Failed to load data: ',
 }

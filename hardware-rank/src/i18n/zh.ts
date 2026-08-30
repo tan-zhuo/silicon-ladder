@@ -75,5 +75,6 @@ export const zh = {
     h6: '免责声明', p6: '数据为静态快照，分数用于相对排序，不构成购买建议。笔记本与桌面分数按形态分池，不可直接比较；同名 GPU 会因 TGP 不同出现 20–40% 差距。',
   },
   lang: '语言',
+  footerx: { about: 'Silicon Ladder 是一个纯静态的消费级硬件排行与天梯站：CPU、GPU、内存、存储、电源按形态分池归一，AMD / Intel / NVIDIA 并列对照，分数可追溯到公开评测。', rankings: '排行榜', ladders: '天梯图', tools: '工具与说明', resources: '资源', desktop: '桌面', laptop: '笔记本', igpu: '核显', github: 'GitHub 源码', data: '数据文件 (JSON)', sitemap: '站点地图', dataVersion: '数据版本', copyright: '© {y} Silicon Ladder · 站内品牌名称与商标归各自所有者所有', noAffiliation: '与 AMD、Intel、NVIDIA、Apple 等厂商无关联，不含广告与联盟链接。', builtWith: '由 Vue 3 + Vite 构建，托管于 Vercel' },
   loading: '加载数据中…', loadError: '数据加载失败：',
 }

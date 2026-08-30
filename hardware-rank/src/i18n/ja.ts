@@ -76,5 +76,6 @@ export const ja: Msg = {
     h6: '免責事項', p6: '静的スナップショットです。スコアは相対順位用で購入助言ではありません。ノートとデスクトップは別プールで比較不可。同名GPUはTGPで20–40%差があります。',
   },
   lang: '言語',
+  footerx: { about: 'Silicon Ladder はコンシューマー向けハードウェアの静的ランキング／ラダーサイトです。CPU・GPU・メモリ・ストレージ・電源をフォームファクタ別にプール分けし、AMD / Intel / NVIDIA を左右対照。スコアはすべて公開レビューに遡れます。', rankings: 'ランキング', ladders: 'ラダー', tools: 'ツールと説明', resources: 'リソース', desktop: 'デスクトップ', laptop: 'ノート', igpu: '内蔵GPU', github: 'GitHub ソース', data: 'データファイル (JSON)', sitemap: 'サイトマップ', dataVersion: 'データ版', copyright: '© {y} Silicon Ladder · ブランド名・商標は各社に帰属します', noAffiliation: 'AMD、Intel、NVIDIA、Apple 等のメーカーとは無関係です。広告・アフィリエイトなし。', builtWith: 'Vue 3 + Vite 製、Vercel でホスティング' },
   loading: 'データ読込中…', loadError: 'データの読込に失敗: ',
 }
