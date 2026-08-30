@@ -57,9 +57,10 @@ function currentScore(row: RankedRow): string {
           <tbody>
             <tr
               v-for="r in rows" :key="r.item.id"
-              class="border-b border-line/70 last:border-0 cursor-pointer group hover:bg-accent/[.04]"
+              class="border-b border-line/70 last:border-0 cursor-pointer group hover:bg-accent/[.04] focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
               :class="[r.rank <= 3 ? 'bg-accent/[.025]' : '', compare.has(category, r.item.id) ? '!bg-accent/10' : '']"
-              @click="go(r)"
+              tabindex="0" :aria-label="`#${r.rank} ${displayName(r.item)}`"
+              @click="go(r)" @keydown.enter="go(r)" @keydown.space.prevent="compare.toggle(category, r.item.id)"
             >
               <td class="pl-5 pr-2 py-3">
                 <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg text-sm font-bold" :class="r.rank <= 3 ? 'bg-card2 border border-line' : 'text-muted'" :style="rankStyle(r.rank)">{{ r.rank }}</span>
@@ -99,7 +100,7 @@ function currentScore(row: RankedRow): string {
 
     <!-- 移动端卡片 -->
     <div v-if="rows.length" class="md:hidden space-y-2">
-      <div v-for="r in rows" :key="r.item.id" class="card card-hover p-3 flex items-center gap-3" @click="go(r)">
+      <div v-for="r in rows" :key="r.item.id" class="card card-hover p-3 flex items-center gap-3" tabindex="0" @click="go(r)" @keydown.enter="go(r)">
         <div class="w-7 text-lg font-bold text-center" :style="rankStyle(r.rank)">{{ r.rank }}</div>
         <BrandLogo :brand="r.item.brand" :size="20" />
         <div class="flex-1 min-w-0">

@@ -13,7 +13,16 @@ npm install
 npm run dev        # http://localhost:5173
 npm run build      # 输出 dist/
 npm run gen:logos  # 从 simple-icons 重新生成品牌 Logo 路径
+npm test           # Vitest：分池归一 / 加权 / 排序用例
+npm run validate   # 数据校验（build 前自动执行）
+npm run calibrate  # 用 data-src/calibration.csv 回写真实评测分数
 ```
+
+## 数据管线
+
+1. `public/data/*.json` 是站点唯一数据源；`scripts/validate-data.mjs` 在每次 build 前校验 id 唯一/格式、枚举、`null` 而非 0 等。
+2. 分数校准：把公开评测数据填入 `data-src/calibration.csv`（模板见 `data-src/README.md`），`npm run calibrate` 按池内比例回写并清除 `est` 标记、`meta.version` +1。
+3. 构建后 `scripts/prerender.mjs` 生成每个路由的静态 HTML、sitemap、robots。
 
 ## 页面
 

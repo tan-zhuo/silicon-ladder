@@ -57,8 +57,11 @@ export const useCatalog = defineStore('catalog', () => {
     }
   }
 
+  const index = new Map<string, AnyItem>()
   function find(cat: Category, id: string): AnyItem | undefined {
-    return byCategory(cat).find((x) => x.id === id)
+    const key = cat + ':' + id
+    if (!index.has(key)) { const hit = byCategory(cat).find((x) => x.id === id); if (hit) index.set(key, hit) }
+    return index.get(key)
   }
 
   return { loaded, error, meta, cpus, gpus, rams, storages, psus, load, byCategory, find }

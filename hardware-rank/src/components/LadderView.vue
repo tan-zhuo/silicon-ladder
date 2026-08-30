@@ -106,7 +106,7 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
             <div class="flex flex-col gap-1.5 items-end" :class="band.count ? 'py-2 pl-4 pr-2' : ''">
               <div
                 v-for="r in band.cells[brands[0]]" :key="r.item.id"
-                class="ladder-item group w-full flex items-center justify-end" @click="go(r)"
+                class="ladder-item group w-full flex items-center justify-end" tabindex="0" @click="go(r)" @keydown.enter="go(r)"
               >
                 <div class="flex items-center gap-2 pr-2 shrink-0">
                   <input type="checkbox" class="accent-accent w-3.5 h-3.5 opacity-50 group-hover:opacity-100" :checked="compare.has(category, r.item.id)" @click.stop @change="compare.toggle(category, r.item.id)" />
@@ -130,7 +130,7 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
             </div>
             <!-- 右列：条形向右生长 -->
             <div class="flex flex-col gap-1.5" :class="band.count ? 'py-2 pr-4 pl-2' : ''">
-              <div v-for="r in band.cells[brands[1]]" :key="r.item.id" class="ladder-item group w-full flex items-center" @click="go(r)">
+              <div v-for="r in band.cells[brands[1]]" :key="r.item.id" class="ladder-item group w-full flex items-center" tabindex="0" @click="go(r)" @keydown.enter="go(r)">
                 <div class="relative h-7 flex items-center rounded-r-md" :style="{ width: score(r) + '%', minWidth: '52px', background: `linear-gradient(90deg, ${brandColor(brands[1])}, ${brandColor(brands[1])}88)` }">
                   <span class="text-white text-xs font-bold pl-2 drop-shadow">{{ fmtRel(score(r)) }}</span>
                 </div>
@@ -151,7 +151,7 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
               <span v-if="band.count"><b class="text-fg">{{ band.hi }}</b><br />{{ band.lo }}</span>
             </div>
             <div v-for="b in brands" :key="b" class="border-l border-line/60 px-2 flex flex-col gap-1.5" :class="band.count ? 'py-2' : ''">
-              <div v-for="r in band.cells[b]" :key="r.item.id" class="ladder-item group" @click="go(r)">
+              <div v-for="r in band.cells[b]" :key="r.item.id" class="ladder-item group" tabindex="0" @click="go(r)" @keydown.enter="go(r)">
                 <div class="flex items-center gap-2 text-sm mb-1">
                   <span class="text-[11px] text-muted w-6">#{{ r.rank }}</span>
                   <span class="font-semibold truncate group-hover:text-accent">{{ displayName(r.item) }}</span>
@@ -180,6 +180,7 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
 </template>
 
 <style scoped>
-.ladder-item { cursor: pointer; }
+.ladder-item { cursor: pointer; border-radius: 6px; }
+.ladder-item:focus-visible { outline: 2px solid rgb(var(--c-accent)); outline-offset: 2px; }
 .ladder-item:hover > div:first-child, .ladder-item:hover > div:last-child { filter: saturate(1.2); }
 </style>
