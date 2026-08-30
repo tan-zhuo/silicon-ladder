@@ -5,7 +5,8 @@ import { FX } from '@/utils/format'
 
 async function fetchJson<T>(path: string): Promise<T> {
   const base = import.meta.env.BASE_URL.replace(/\/$/, '')
-  const res = await fetch(`${base}/data/${path}`)
+  // 带构建版本号，避免浏览器沿用上一次部署缓存的数据
+  const res = await fetch(`${base}/data/${path}?v=${__BUILD_ID__}`)
   if (!res.ok) throw new Error(`加载 ${path} 失败: ${res.status}`)
   return res.json()
 }
