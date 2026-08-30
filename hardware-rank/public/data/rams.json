@@ -17,7 +17,9 @@
       "read_GBs": 90,
       "write_GBs": 84,
       "latency_ns": 62
-    }
+    },
+    "summary_en": "AM5 sweet-spot speed, EXPO one-click.",
+    "summary_ja": "AM5 の定番クロック。EXPO ワンクリック。"
   },
   {
     "id": "gskill-trident-z5-ddr5-7200-cl34-32",
@@ -37,7 +39,9 @@
       "read_GBs": 106,
       "write_GBs": 98,
       "latency_ns": 60
-    }
+    },
+    "summary_en": "High-speed pick for Intel; check board support on AM5.",
+    "summary_ja": "Intel 向け高クロックの定番。AM5 はボード次第。"
   },
   {
     "id": "kingston-fury-ddr5-5600-cl36-32",
@@ -57,7 +61,9 @@
       "read_GBs": 82,
       "write_GBs": 76,
       "latency_ns": 70
-    }
+    },
+    "summary_en": "Entry DDR5: stable but high latency.",
+    "summary_ja": "入門 DDR5。安定だがレイテンシ高め。"
   },
   {
     "id": "crucial-ddr5-5600-sodimm-32",
@@ -77,7 +83,9 @@
       "read_GBs": 78,
       "write_GBs": 72,
       "latency_ns": 80
-    }
+    },
+    "summary_en": "Common laptop upgrade, JEDEC timings.",
+    "summary_ja": "ノート増設の定番。JEDEC タイミング。"
   },
   {
     "id": "apple-m4-lpddr5x-onboard",
@@ -97,7 +105,9 @@
       "read_GBs": 120,
       "write_GBs": null,
       "latency_ns": null
-    }
+    },
+    "summary_en": "Onboard, not upgradeable; high bandwidth, spec reference only.",
+    "summary_ja": "オンボードで増設不可。帯域は高いが仕様参考のみ。"
   },
   {
     "id": "corsair-vengeance-ddr4-3600-cl16-32",
@@ -117,7 +127,9 @@
       "read_GBs": 52,
       "write_GBs": 50,
       "latency_ns": 64
-    }
+    },
+    "summary_en": "Last-gen reference: decent latency, low bandwidth.",
+    "summary_ja": "前世代の比較用。レイテンシは良く帯域は低い。"
   },
   {
     "id": "gskill-trident-z5-neo-ddr5-6000-cl30-64",
@@ -137,7 +149,9 @@
       "read_GBs": 92,
       "write_GBs": 86,
       "latency_ns": 61
-    }
+    },
+    "summary_en": "Top pick for large-capacity AM5, EXPO.",
+    "summary_ja": "AM5 大容量の第一候補。EXPO。"
   },
   {
     "id": "gskill-flare-x5-ddr5-6000-cl30-32",
@@ -157,7 +171,9 @@
       "read_GBs": 90,
       "write_GBs": 84,
       "latency_ns": 62
-    }
+    },
+    "summary_en": "No RGB, low profile, AM5 value pick.",
+    "summary_ja": "LED なし低背。AM5 のコスパ選択。"
   },
   {
     "id": "teamgroup-t-force-delta-ddr5-6400-cl32-32",
@@ -177,7 +193,9 @@
       "read_GBs": 96,
       "write_GBs": 90,
       "latency_ns": 61
-    }
+    },
+    "summary_en": "Hynix A-die, overclockable.",
+    "summary_ja": "Hynix A-die。OC 可能。"
   },
   {
     "id": "corsair-dominator-titanium-ddr5-7200-cl34-32",
@@ -197,7 +215,9 @@
       "read_GBs": 106,
       "write_GBs": 98,
       "latency_ns": 60
-    }
+    },
+    "summary_en": "Flagship looks, Intel platform.",
+    "summary_ja": "旗艦の外観。Intel 向け。"
   },
   {
     "id": "gskill-trident-z5-royal-ddr5-8000-cl38-48",
@@ -217,7 +237,9 @@
       "read_GBs": 118,
       "write_GBs": 108,
       "latency_ns": 59
-    }
+    },
+    "summary_en": "For overclockers; needs a good board.",
+    "summary_ja": "OC 向け。良いボードが必要。"
   },
   {
     "id": "kingston-fury-renegade-ddr5-6400-cl32-32",
@@ -237,7 +259,9 @@
       "read_GBs": 96,
       "write_GBs": 90,
       "latency_ns": 61
-    }
+    },
+    "summary_en": "Kingston's high-end line.",
+    "summary_ja": "Kingston の上位ライン。"
   },
   {
     "id": "crucial-pro-ddr5-5600-cl46-32",
@@ -257,7 +281,9 @@
       "read_GBs": 82,
       "write_GBs": 76,
       "latency_ns": 78
-    }
+    },
+    "summary_en": "JEDEC with Micron dies: stable but slow.",
+    "summary_ja": "Micron 純正 JEDEC。安定だが遅い。"
   },
   {
     "id": "gskill-ripjaws-v-ddr4-3200-cl16-16",
@@ -277,7 +303,9 @@
       "read_GBs": 46,
       "write_GBs": 44,
       "latency_ns": 68
-    }
+    },
+    "summary_en": "The DDR4-era standard answer.",
+    "summary_ja": "DDR4 時代の標準解。"
   },
   {
     "id": "gskill-ripjaws-ddr5-5600-sodimm-32",
@@ -297,7 +325,9 @@
       "read_GBs": 79,
       "write_GBs": 73,
       "latency_ns": 74
-    }
+    },
+    "summary_en": "Laptop kit with slightly better timings.",
+    "summary_ja": "タイミング少し良めのノート用。"
   },
   {
     "id": "kingston-fury-impact-ddr5-6400-sodimm-32",
@@ -317,7 +347,9 @@
       "read_GBs": 88,
       "write_GBs": 82,
       "latency_ns": 68
-    }
+    },
+    "summary_en": "High-speed laptop kit with XMP.",
+    "summary_ja": "XMP 対応の高クロックノート用。"
   },
   {
     "id": "crucial-ddr4-3200-sodimm-16",
@@ -337,7 +369,9 @@
       "read_GBs": 44,
       "write_GBs": 42,
       "latency_ns": 78
-    }
+    },
+    "summary_en": "Older laptop upgrade.",
+    "summary_ja": "旧ノートの増設用。"
   },
   {
     "id": "intel-lunar-lake-lpddr5x-8533-onboard",
@@ -357,7 +391,9 @@
       "read_GBs": 128,
       "write_GBs": null,
       "latency_ns": null
-    }
+    },
+    "summary_en": "Memory on the CPU package; fixed at purchase.",
+    "summary_ja": "CPU パッケージ内蔵。購入時に確定。"
   },
   {
     "id": "amd-strix-halo-lpddr5x-8000-onboard",
@@ -377,7 +413,9 @@
       "read_GBs": 250,
       "write_GBs": null,
       "latency_ns": null
-    }
+    },
+    "summary_en": "256-bit quad-channel, the base of its iGPU power.",
+    "summary_ja": "256-bit 4ch。内蔵GPU性能の土台。"
   },
   {
     "id": "apple-m4-max-lpddr5x-onboard",
@@ -397,7 +435,9 @@
       "read_GBs": 410,
       "write_GBs": null,
       "latency_ns": null
-    }
+    },
+    "summary_en": "Unified memory in the 546 GB/s class.",
+    "summary_ja": "546GB/s 級のユニファイドメモリ。"
   },
   {
     "id": "kingston-ddr2-800-cl5-4",
@@ -418,7 +458,9 @@
       "read_GBs": 9,
       "write_GBs": 8,
       "latency_ns": 90
-    }
+    },
+    "summary_en": "Core 2-era standard.",
+    "summary_ja": "Core 2 時代の標準。"
   },
   {
     "id": "kingston-ddr3-1333-cl9-8",
@@ -439,7 +481,9 @@
       "read_GBs": 17,
       "write_GBs": 16,
       "latency_ns": 80
-    }
+    },
+    "summary_en": "Nehalem / Lynnfield standard.",
+    "summary_ja": "Nehalem / Lynnfield の標準。"
   },
   {
     "id": "corsair-vengeance-ddr3-1600-cl9-8",
@@ -460,7 +504,9 @@
       "read_GBs": 20,
       "write_GBs": 19,
       "latency_ns": 75
-    }
+    },
+    "summary_en": "Sandy Bridge sweet spot.",
+    "summary_ja": "Sandy Bridge の定番。"
   },
   {
     "id": "gskill-tridentx-ddr3-2133-cl9-8",
@@ -481,7 +527,9 @@
       "read_GBs": 26,
       "write_GBs": 25,
       "latency_ns": 68
-    }
+    },
+    "summary_en": "High-speed DDR3 overclocking kit.",
+    "summary_ja": "DDR3 高クロック OC キット。"
   },
   {
     "id": "crucial-ddr4-2133-cl15-16",
@@ -502,7 +550,9 @@
       "read_GBs": 30,
       "write_GBs": 29,
       "latency_ns": 82
-    }
+    },
+    "summary_en": "DDR4 JEDEC baseline.",
+    "summary_ja": "DDR4 JEDEC の基準仕様。"
   },
   {
     "id": "corsair-vengeance-lpx-ddr4-2400-cl16-16",
@@ -523,7 +573,9 @@
       "read_GBs": 33,
       "write_GBs": 32,
       "latency_ns": 80
-    }
+    },
+    "summary_en": "Corsair Vengeance LPX DDR4-2400 CL16 16GB.",
+    "summary_ja": "Corsair Vengeance LPX DDR4-2400 CL16 16GB。"
   },
   {
     "id": "kingston-hyperx-fury-ddr4-2666-cl16-16",
@@ -544,7 +596,9 @@
       "read_GBs": 36,
       "write_GBs": 35,
       "latency_ns": 76
-    }
+    },
+    "summary_en": "Coffee Lake official ceiling.",
+    "summary_ja": "Coffee Lake 公式上限。"
   },
   {
     "id": "gskill-ripjaws-v-ddr4-3000-cl15-16",
@@ -565,7 +619,9 @@
       "read_GBs": 40,
       "write_GBs": 38,
       "latency_ns": 70
-    }
+    },
+    "summary_en": "First-gen Ryzen sweet spot.",
+    "summary_ja": "初代 Ryzen の定番。"
   },
   {
     "id": "corsair-vengeance-lpx-ddr4-3200-cl16-16",
@@ -586,7 +642,9 @@
       "read_GBs": 44,
       "write_GBs": 42,
       "latency_ns": 68
-    }
+    },
+    "summary_en": "The DDR4-era best-seller.",
+    "summary_ja": "DDR4 時代の販売王。"
   },
   {
     "id": "gskill-trident-z-royal-ddr4-4000-cl18-16",
@@ -607,7 +665,9 @@
       "read_GBs": 56,
       "write_GBs": 54,
       "latency_ns": 62
-    }
+    },
+    "summary_en": "High-speed DDR4, Intel platform.",
+    "summary_ja": "DDR4 高クロック。Intel 向け。"
   },
   {
     "id": "kingston-fury-beast-ddr5-4800-cl40-32",
@@ -628,7 +688,9 @@
       "read_GBs": 70,
       "write_GBs": 65,
       "latency_ns": 85
-    }
+    },
+    "summary_en": "DDR5 launch spec, high latency.",
+    "summary_ja": "DDR5 初期仕様。レイテンシ高い。"
   },
   {
     "id": "corsair-vengeance-ddr5-5200-cl40-32",
@@ -649,7 +711,9 @@
       "read_GBs": 76,
       "write_GBs": 70,
       "latency_ns": 80
-    }
+    },
+    "summary_en": "Corsair Vengeance DDR5-5200 CL40 32GB.",
+    "summary_ja": "Corsair Vengeance DDR5-5200 CL40 32GB。"
   },
   {
     "id": "crucial-ddr3l-1600-sodimm-8",
@@ -670,7 +734,9 @@
       "read_GBs": 18,
       "write_GBs": 17,
       "latency_ns": 82
-    }
+    },
+    "summary_en": "Older laptop upgrade.",
+    "summary_ja": "旧ノートの増設用。"
   },
   {
     "id": "crucial-ddr4-2666-sodimm-16",
@@ -691,7 +757,9 @@
       "read_GBs": 34,
       "write_GBs": 33,
       "latency_ns": 80
-    }
+    },
+    "summary_en": "8th-gen Core laptop standard.",
+    "summary_ja": "第8世代ノートの標準。"
   },
   {
     "id": "apple-m1-lpddr4x-onboard",
@@ -712,7 +780,9 @@
       "read_GBs": 60,
       "write_GBs": null,
       "latency_ns": null
-    }
+    },
+    "summary_en": "68 GB/s unified memory.",
+    "summary_ja": "68GB/s のユニファイドメモリ。"
   },
   {
     "id": "apple-m2-lpddr5-onboard",
@@ -733,6 +803,8 @@
       "read_GBs": 95,
       "write_GBs": null,
       "latency_ns": null
-    }
+    },
+    "summary_en": "100 GB/s unified memory.",
+    "summary_ja": "100GB/s のユニファイドメモリ。"
   }
 ]

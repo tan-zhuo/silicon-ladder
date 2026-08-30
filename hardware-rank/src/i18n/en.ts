@@ -80,5 +80,6 @@ export const en: Msg = {
   search: { title: 'Search everything', ph: 'Model or brand, e.g. 9800X3D, RTX 5070, 990 PRO', hint: '↑↓ select · Enter open · Esc close', empty: 'No matching products', shortcut: 'Search' },
   chips: { active: 'Active', clear: 'Clear all', era: 'Era', tdp: 'TDP', watt: 'Watts', q: 'Keyword' },
   rel: { rivals: 'Direct rivals', rivalsDesc: 'Same pool, same era (±1 yr), similar overall score, other brands', lineage: 'Same line, previous / next', prev: 'Previous', next: 'Next', vsFirst: 'vs. first column', same: 'same', diff: 'differs' },
+  tags: { X3D: 'X3D', 游戏: 'Gaming', 旗舰: 'Flagship', 生产力: 'Productivity', 性价比: 'Value', 能效: 'Efficient', ARM: 'ARM', 核显: 'iGPU', 轻薄: 'Thin & light', 全能本: 'All-rounder', 游戏本: 'Gaming laptop', AM4: 'AM4', 经典: 'Classic', 历史: 'Legacy', HEDT: 'HEDT', APU: 'APU', '4K': '4K', '2K': '1440p', 高TGP: 'High TGP', 中TGP: 'Mid TGP', 低TGP: 'Low TGP', '1080p': '1080p', PCIe5: 'PCIe 5.0', 国产: 'China-made', 入门: 'Entry', SATA: 'SATA', NAS: 'NAS', CMR: 'CMR', QLC: 'QLC', 企业: 'Enterprise', SMR: 'SMR' },
   loading: 'Loading data…', loadError: 'Failed to load data: ',
 }

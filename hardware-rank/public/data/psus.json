@@ -12,7 +12,9 @@
     "oem": "Seasonic",
     "release": "2023-02",
     "price_cny": 1299,
-    "summary": "海韵自产，12V-2x6 原生，十年保。"
+    "summary": "海韵自产，12V-2x6 原生，十年保。",
+    "summary_en": "Seasonic in-house, native 12V-2x6, 10-year warranty.",
+    "summary_ja": "Seasonic 自社製。ネイティブ 12V-2x6、10年保証。"
   },
   {
     "id": "corsair-rm1000x-shift",
@@ -27,7 +29,9 @@
     "oem": "CWT",
     "release": "2023-05",
     "price_cny": 1199,
-    "summary": "侧出线设计，理线友好。"
+    "summary": "侧出线设计，理线友好。",
+    "summary_en": "Side-mounted connectors, cable-management friendly.",
+    "summary_ja": "側面コネクタでケーブル整理しやすい。"
   },
   {
     "id": "super-flower-leadex-vii-gold-850",
@@ -42,7 +46,9 @@
     "oem": "Super Flower",
     "release": "2023-03",
     "price_cny": 799,
-    "summary": "振华自产，用料扎实。"
+    "summary": "振华自产，用料扎实。",
+    "summary_en": "Super Flower in-house, solid components.",
+    "summary_ja": "Super Flower 自社製。部品がしっかり。"
   },
   {
     "id": "msi-mpg-a850g-pcie5",
@@ -57,7 +63,9 @@
     "oem": "CWT",
     "release": "2022-10",
     "price_cny": 749,
-    "summary": "ATX 3.0 早期款，接口为 12VHPWR。"
+    "summary": "ATX 3.0 早期款，接口为 12VHPWR。",
+    "summary_en": "Early ATX 3.0 with a 12VHPWR connector.",
+    "summary_ja": "初期 ATX 3.0。コネクタは 12VHPWR。"
   },
   {
     "id": "coolermaster-mwe-gold-750-v2",
@@ -72,7 +80,9 @@
     "oem": "Gospower",
     "release": "2020-09",
     "price_cny": 549,
-    "summary": "中端主流，纹波中规中矩。"
+    "summary": "中端主流，纹波中规中矩。",
+    "summary_en": "Mid-range mainstream, average ripple.",
+    "summary_ja": "ミドル主流。リップルは平均的。"
   },
   {
     "id": "gigabyte-ud750gm",
@@ -87,7 +97,9 @@
     "oem": "MEIC",
     "release": "2020-11",
     "price_cny": 449,
-    "summary": "早期批次有炸机记录，谨慎选择。"
+    "summary": "早期批次有炸机记录，谨慎选择。",
+    "summary_en": "Early batches had failures; choose carefully.",
+    "summary_ja": "初期ロットに故障記録。慎重に。"
   },
   {
     "id": "unknown-generic-650-white",
@@ -102,7 +114,9 @@
     "oem": "未知",
     "release": "2022-01",
     "price_cny": 199,
-    "summary": "标称 650W 实际能力存疑，不推荐。"
+    "summary": "标称 650W 实际能力存疑，不推荐。",
+    "summary_en": "Rated 650W but real capability is doubtful; not recommended.",
+    "summary_ja": "650W 表記だが実力は疑問。非推奨。"
   },
   {
     "id": "lian-li-sp750",
@@ -117,7 +131,9 @@
     "oem": "Helly",
     "release": "2021-07",
     "price_cny": 899,
-    "summary": "SFX 小机箱好选择，安静。"
+    "summary": "SFX 小机箱好选择，安静。",
+    "summary_en": "Good SFX pick for small cases, quiet.",
+    "summary_ja": "小型ケース向け SFX の好選択。静か。"
   },
   {
     "id": "corsair-rm850x-2024",
@@ -132,7 +148,9 @@
     "oem": "CWT",
     "release": "2024-04",
     "price_cny": 899,
-    "summary": "2024 新版，风扇更静、原生 12V-2x6。"
+    "summary": "2024 新版，风扇更静、原生 12V-2x6。",
+    "summary_en": "2024 revision: quieter fan, native 12V-2x6.",
+    "summary_ja": "2024 改訂版。ファン静音化、ネイティブ 12V-2x6。"
   },
   {
     "id": "corsair-hx1200i-2023",
@@ -147,7 +165,9 @@
     "oem": "CWT",
     "release": "2023-02",
     "price_cny": 2199,
-    "summary": "双 4090 级别，数字监控。"
+    "summary": "双 4090 级别，数字监控。",
+    "summary_en": "Dual-4090 class with digital monitoring.",
+    "summary_ja": "4090 二枚級。デジタル監視付き。"
   },
   {
     "id": "corsair-sf1000l",
@@ -162,7 +182,9 @@
     "oem": "Great Wall",
     "release": "2023-03",
     "price_cny": 1499,
-    "summary": "SFX-L 千瓦，ITX 高端。"
+    "summary": "SFX-L 千瓦，ITX 高端。",
+    "summary_en": "SFX-L kilowatt for high-end ITX.",
+    "summary_ja": "SFX-L の 1kW。ハイエンド ITX 向け。"
   },
   {
     "id": "seasonic-focus-gx-850-atx31",
@@ -177,7 +199,9 @@
     "oem": "Seasonic",
     "release": "2024-03",
     "price_cny": 799,
-    "summary": "海韵入门金牌，十年保。"
+    "summary": "海韵入门金牌，十年保。",
+    "summary_en": "Seasonic entry Gold, 10-year warranty.",
+    "summary_ja": "Seasonic 入門 Gold。10年保証。"
   },
   {
     "id": "seasonic-prime-tx-1000",
@@ -192,7 +216,9 @@
     "oem": "Seasonic",
     "release": "2023-09",
     "price_cny": 2499,
-    "summary": "钛金旗舰，12 年保。"
+    "summary": "钛金旗舰，12 年保。",
+    "summary_en": "Titanium flagship, 12-year warranty.",
+    "summary_ja": "Titanium 旗艦。12年保証。"
   },
   {
     "id": "be-quiet-dark-power-13-1000",
@@ -207,7 +233,9 @@
     "oem": "FSP",
     "release": "2023-01",
     "price_cny": 2299,
-    "summary": "安静与用料兼得，ATX 3.0。"
+    "summary": "安静与用料兼得，ATX 3.0。",
+    "summary_en": "Quiet and well-built, ATX 3.0.",
+    "summary_ja": "静音と部品品質を両立。ATX 3.0。"
   },
   {
     "id": "be-quiet-pure-power-12-m-850",
@@ -222,7 +250,9 @@
     "oem": "HEC",
     "release": "2023-05",
     "price_cny": 749,
-    "summary": "静音主流款。"
+    "summary": "静音主流款。",
+    "summary_en": "Quiet mainstream unit.",
+    "summary_ja": "静音の主流モデル。"
   },
   {
     "id": "asus-rog-strix-850g-aura",
@@ -237,7 +267,9 @@
     "oem": "Great Wall",
     "release": "2024-01",
     "price_cny": 1099,
-    "summary": "长城代工，ROG 溢价。"
+    "summary": "长城代工，ROG 溢价。",
+    "summary_en": "Great Wall OEM with ROG premium.",
+    "summary_ja": "Great Wall 製造。ROG プレミアム。"
   },
   {
     "id": "asus-tuf-gaming-850g",
@@ -252,7 +284,9 @@
     "oem": "Great Wall",
     "release": "2023-06",
     "price_cny": 749,
-    "summary": "TUF 系列，扎实够用。"
+    "summary": "TUF 系列，扎实够用。",
+    "summary_en": "TUF series, solid and sufficient.",
+    "summary_ja": "TUF シリーズ。堅実で十分。"
   },
   {
     "id": "msi-mag-a850gl-pcie5",
@@ -267,7 +301,9 @@
     "oem": "CWT",
     "release": "2023-03",
     "price_cny": 599,
-    "summary": "微星主流金牌，ATX 3.0。"
+    "summary": "微星主流金牌，ATX 3.0。",
+    "summary_en": "MSI mainstream Gold, ATX 3.0.",
+    "summary_ja": "MSI 主流 Gold。ATX 3.0。"
   },
   {
     "id": "nzxt-c1000-gold-2024",
@@ -282,7 +318,9 @@
     "oem": "CWT",
     "release": "2024-02",
     "price_cny": 999,
-    "summary": "简约外观，CWT 方案。"
+    "summary": "简约外观，CWT 方案。",
+    "summary_en": "Minimal looks, CWT platform.",
+    "summary_ja": "ミニマルな外観。CWT プラットフォーム。"
   },
   {
     "id": "thermaltake-toughpower-gf3-850",
@@ -297,7 +335,9 @@
     "oem": "CWT",
     "release": "2022-09",
     "price_cny": 699,
-    "summary": "首批 ATX 3.0 之一。"
+    "summary": "首批 ATX 3.0 之一。",
+    "summary_en": "One of the first ATX 3.0 units.",
+    "summary_ja": "最初期の ATX 3.0 の一つ。"
   },
   {
     "id": "great-wall-x7-850",
@@ -312,7 +352,9 @@
     "oem": "Great Wall",
     "release": "2024-05",
     "price_cny": 599,
-    "summary": "国产大厂自产，性价比高。"
+    "summary": "国产大厂自产，性价比高。",
+    "summary_en": "Major Chinese maker's in-house unit, great value.",
+    "summary_ja": "中国大手の自社製。コスパ高い。"
   },
   {
     "id": "deepcool-pn850m",
@@ -327,7 +369,9 @@
     "oem": "CWT",
     "release": "2024-04",
     "price_cny": 549,
-    "summary": "九州风神主流金牌。"
+    "summary": "九州风神主流金牌。",
+    "summary_en": "DeepCool mainstream Gold.",
+    "summary_ja": "DeepCool 主流 Gold。"
   },
   {
     "id": "segotep-kl-850g",
@@ -342,7 +386,9 @@
     "oem": "Segotep",
     "release": "2023-10",
     "price_cny": 449,
-    "summary": "国产入门金牌，够用。"
+    "summary": "国产入门金牌，够用。",
+    "summary_en": "Chinese entry Gold, adequate.",
+    "summary_ja": "中国製入門 Gold。十分。"
   },
   {
     "id": "huntkey-mvp-k850",
@@ -357,7 +403,9 @@
     "oem": "Huntkey",
     "release": "2023-05",
     "price_cny": 499,
-    "summary": "老牌国产，规格中规中矩。"
+    "summary": "老牌国产，规格中规中矩。",
+    "summary_en": "Veteran Chinese brand, ordinary specs.",
+    "summary_ja": "中国老舗ブランド。仕様は平凡。"
   },
   {
     "id": "antec-neo-eco-850-modular",
@@ -372,7 +420,9 @@
     "oem": "Andyson",
     "release": "2022-06",
     "price_cny": 499,
-    "summary": "入门金牌。"
+    "summary": "入门金牌。",
+    "summary_en": "Entry Gold.",
+    "summary_ja": "入門 Gold。"
   },
   {
     "id": "xpg-core-reactor-ii-850",
@@ -387,7 +437,9 @@
     "oem": "CWT",
     "release": "2023-08",
     "price_cny": 799,
-    "summary": "CWT 高端方案，口碑好。"
+    "summary": "CWT 高端方案，口碑好。",
+    "summary_en": "High-end CWT platform, well reviewed.",
+    "summary_ja": "CWT 上位プラットフォーム。評判良好。"
   },
   {
     "id": "fsp-hydro-g-pro-850",
@@ -402,7 +454,9 @@
     "oem": "FSP",
     "release": "2023-04",
     "price_cny": 699,
-    "summary": "全汉自产金牌。"
+    "summary": "全汉自产金牌。",
+    "summary_en": "FSP in-house Gold.",
+    "summary_ja": "FSP 自社製 Gold。"
   },
   {
     "id": "cooler-master-v850-sfx-gold",
@@ -417,7 +471,9 @@
     "oem": "Enhance",
     "release": "2021-01",
     "price_cny": 1199,
-    "summary": "ITX 装机高端 SFX。"
+    "summary": "ITX 装机高端 SFX。",
+    "summary_en": "High-end SFX for ITX builds.",
+    "summary_ja": "ITX 向けハイエンド SFX。"
   },
   {
     "id": "silverstone-sx750-pt",
@@ -432,7 +488,9 @@
     "oem": "Enhance",
     "release": "2022-05",
     "price_cny": 1299,
-    "summary": "SFX 白金，体积极小。"
+    "summary": "SFX 白金，体积极小。",
+    "summary_en": "SFX Platinum, extremely compact.",
+    "summary_ja": "SFX Platinum。極小サイズ。"
   },
   {
     "id": "evga-supernova-750-g6",
@@ -447,7 +505,9 @@
     "oem": "FSP",
     "release": "2021-08",
     "price_cny": 699,
-    "summary": "EVGA 经典金牌，已渐退市。"
+    "summary": "EVGA 经典金牌，已渐退市。",
+    "summary_en": "EVGA classic Gold, being phased out.",
+    "summary_ja": "EVGA 定番 Gold。終息中。"
   },
   {
     "id": "corsair-hx620",
@@ -465,7 +525,9 @@
     "summary": "海盗船电源起家之作，海韵代工。",
     "tags": [
       "历史"
-    ]
+    ],
+    "summary_en": "Corsair's first PSU, Seasonic-built.",
+    "summary_ja": "Corsair 電源の原点。Seasonic 製造。"
   },
   {
     "id": "corsair-tx650",
@@ -483,7 +545,9 @@
     "summary": "非模组主流款。",
     "tags": [
       "历史"
-    ]
+    ],
+    "summary_en": "Non-modular mainstream.",
+    "summary_ja": "直出しの主流モデル。"
   },
   {
     "id": "antec-earthwatts-500",
@@ -501,7 +565,9 @@
     "summary": "入门级，用料一般。",
     "tags": [
       "历史"
-    ]
+    ],
+    "summary_en": "Entry level, ordinary components.",
+    "summary_ja": "入門級。部品は平凡。"
   },
   {
     "id": "cooler-master-gx-650",
@@ -519,7 +585,9 @@
     "summary": "纹波超标，评测口碑差。",
     "tags": [
       "历史"
-    ]
+    ],
+    "summary_en": "Out-of-spec ripple, poorly reviewed.",
+    "summary_ja": "リップル規格外。評価は低い。"
   },
   {
     "id": "seasonic-x-650",
@@ -537,7 +605,9 @@
     "summary": "金牌全模组开创者。",
     "tags": [
       "历史"
-    ]
+    ],
+    "summary_en": "Pioneer of Gold full-modular.",
+    "summary_ja": "Gold フルモジュラーの先駆け。"
   },
   {
     "id": "corsair-ax850-2010",
@@ -555,7 +625,9 @@
     "summary": "X 系列换壳。",
     "tags": [
       "历史"
-    ]
+    ],
+    "summary_en": "Rebranded X-series.",
+    "summary_ja": "X シリーズのリブランド。"
   },
   {
     "id": "corsair-cx600",
@@ -573,7 +645,9 @@
     "summary": "铜牌入门，电容一般。",
     "tags": [
       "历史"
-    ]
+    ],
+    "summary_en": "Bronze entry, ordinary capacitors.",
+    "summary_ja": "Bronze 入門。コンデンサは平凡。"
   },
   {
     "id": "corsair-rm750-2013",
@@ -591,7 +665,9 @@
     "summary": "首代 RM，电容用料被诟病。",
     "tags": [
       "历史"
-    ]
+    ],
+    "summary_en": "First RM; capacitor choice was criticized.",
+    "summary_ja": "初代 RM。コンデンサが批判された。"
   },
   {
     "id": "evga-supernova-750-g2",
@@ -609,7 +685,9 @@
     "summary": "振华 Leadex 平台，一代神机。",
     "tags": [
       "历史"
-    ]
+    ],
+    "summary_en": "Super Flower Leadex platform, a legend.",
+    "summary_ja": "Super Flower Leadex 基板。伝説の一台。"
   },
   {
     "id": "thermaltake-smart-600",
@@ -627,7 +705,9 @@
     "summary": "白牌入门，不建议带独显。",
     "tags": [
       "历史"
-    ]
+    ],
+    "summary_en": "White-rated entry; avoid with a dGPU.",
+    "summary_ja": "White 入門。dGPU との組み合わせは非推奨。"
   },
   {
     "id": "seasonic-focus-plus-gold-750",
@@ -645,7 +725,9 @@
     "summary": "海韵主流金牌，十年保。",
     "tags": [
       "历史"
-    ]
+    ],
+    "summary_en": "Seasonic mainstream Gold, 10-year warranty.",
+    "summary_ja": "Seasonic 主流 Gold。10年保証。"
   },
   {
     "id": "corsair-rm750x-2018",
@@ -663,7 +745,9 @@
     "summary": "长期推荐款。",
     "tags": [
       "历史"
-    ]
+    ],
+    "summary_en": "A long-standing recommendation.",
+    "summary_ja": "長年の推奨モデル。"
   },
   {
     "id": "corsair-sf600-2018",
@@ -681,7 +765,9 @@
     "summary": "ITX 装机经典。",
     "tags": [
       "历史"
-    ]
+    ],
+    "summary_en": "ITX build classic.",
+    "summary_ja": "ITX 自作の定番。"
   },
   {
     "id": "be-quiet-straight-power-11-750",
@@ -699,7 +785,9 @@
     "summary": "安静金牌。",
     "tags": [
       "历史"
-    ]
+    ],
+    "summary_en": "Quiet Gold.",
+    "summary_ja": "静音 Gold。"
   },
   {
     "id": "great-wall-gw-6000",
@@ -717,6 +805,8 @@
     "summary": "国产入门铜牌。",
     "tags": [
       "历史"
-    ]
+    ],
+    "summary_en": "Chinese entry Bronze.",
+    "summary_ja": "中国製入門 Bronze。"
   }
 ]

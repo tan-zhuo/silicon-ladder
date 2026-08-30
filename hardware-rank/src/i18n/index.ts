@@ -53,3 +53,15 @@ export function displayName(item: { name: string; nameEn?: string; brand?: strin
   const prefix = item.brand ? item.brand + ' ' : ''
   return prefix && item.nameEn.startsWith(prefix) ? item.nameEn.slice(prefix.length) : item.nameEn
 }
+
+/** 产品一句话评价：按语言取 summary_en / summary_ja，缺失回退中文 */
+export function displaySummary(item: { summary: string; summary_en?: string; summary_ja?: string }): string {
+  if (locale.value === 'en') return item.summary_en || item.summary
+  if (locale.value === 'ja') return item.summary_ja || item.summary
+  return item.summary
+}
+/** 标签翻译 */
+export function tagLabel(tag: string): string {
+  const v = get(messages[locale.value], 'tags.' + tag)
+  return typeof v === 'string' ? v : tag
+}

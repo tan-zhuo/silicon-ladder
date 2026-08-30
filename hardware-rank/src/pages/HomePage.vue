@@ -8,7 +8,7 @@ import { scorePool, sortRows } from '@/utils/rank'
 import type { Category, AnyItem } from '@/types/hardware'
 import AppLogo from '@/components/AppLogo.vue'
 import BrandLogo from '@/components/BrandLogo.vue'
-import { useI18n, displayName } from '@/i18n'
+import { useI18n, displayName, displaySummary } from '@/i18n'
 import { useSeo, SITE_URL, SITE_NAME } from '@/seo'
 
 const catalog = useCatalog()
@@ -145,7 +145,7 @@ useSeo(() => ({
       <router-link v-for="r in recent" :key="r.item.id" :to="`/product/${r.cat}/${r.item.id}`" class="card card-hover p-4">
         <div class="flex items-center gap-2 text-xs text-muted"><BrandLogo :brand="r.item.brand" :size="14" />{{ catLabel(r.cat) }} · {{ formLabel(r.item.form) }} · {{ r.item.release }}</div>
         <div class="font-semibold mt-2">{{ displayName(r.item) }}</div>
-        <div class="text-sm text-muted mt-1 line-clamp-2">{{ r.item.summary }}</div>
+        <div class="text-sm text-muted mt-1 line-clamp-2">{{ displaySummary(r.item) }}</div>
       </router-link>
     </div>
     <p class="text-xs text-muted mt-6">{{ t('home.disclaimer') }}</p>

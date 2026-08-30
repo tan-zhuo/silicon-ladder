@@ -44,7 +44,8 @@ npm run calibrate  # 用 data-src/calibration.csv 回写真实评测分数
 - 平台兼容知识表（插槽 / 芯片组 / 架构 / 供电 / 推荐电源等）在 `src/data/platforms.ts`，按 `socket` / `gen` 派生。
 - 排序逻辑 `src/utils/rank.ts`，列配置 `src/utils/columns.ts`。
 
-> 产品 `summary` 与平台兼容文案目前为中文；界面文案已三语。
+- 产品 `summary_en` / `summary_ja` 由 `scripts/i18n/summaries-*.mjs` 维护，`node scripts/i18n/merge-summaries.mjs` 合并进 JSON；平台兼容文案在 `src/data/platforms.ts` 内以 (zh, en, ja) 三元组维护；标签翻译在 `src/i18n/*.ts` 的 `tags`。
+- 统一控件在 `src/components/ui/`（UiButton / UiInput / UiSelect / UiCheckbox），高度 md 36px / sm 32px，不使用浏览器原生样式。
 
 ## 部署
 

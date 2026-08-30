@@ -15,6 +15,8 @@ export interface BaseItem {
   release: string
   price_cny?: number | null
   summary: string
+  summary_en?: string
+  summary_ja?: string
   tags?: string[]
   /** 历史硬件：分数为按公开评测比例换算的估算值 */
   est?: boolean

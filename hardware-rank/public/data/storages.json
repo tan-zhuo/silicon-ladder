@@ -18,7 +18,9 @@
     "summary": "PCIe 4.0 天花板，4K 与缓外均优秀。",
     "tags": [
       "旗舰"
-    ]
+    ],
+    "summary_en": "PCIe 4.0 ceiling; excellent 4K and post-cache.",
+    "summary_ja": "PCIe 4.0 の天井。4K もキャッシュ外も優秀。"
   },
   {
     "id": "wd-black-sn850x-2tb",
@@ -39,7 +41,9 @@
     "summary": "游戏盘口碑款，温度控制好。",
     "tags": [
       "游戏"
-    ]
+    ],
+    "summary_en": "Well-loved gaming drive with good thermals.",
+    "summary_ja": "ゲーム用の定評ドライブ。温度管理良好。"
   },
   {
     "id": "crucial-t705-2tb",
@@ -61,7 +65,9 @@
     "tags": [
       "旗舰",
       "PCIe5"
-    ]
+    ],
+    "summary_en": "PCIe 5.0 flagship; runs hot, needs a heatsink.",
+    "summary_ja": "PCIe 5.0 旗艦。発熱大でヒートシンク必須。"
   },
   {
     "id": "yangtze-zhi-ti600-2tb",
@@ -83,7 +89,9 @@
     "tags": [
       "国产",
       "性价比"
-    ]
+    ],
+    "summary_en": "Chinese mainstream; DRAM-less but HMB performs well.",
+    "summary_ja": "中国主流。DRAM なしだが HMB で好性能。"
   },
   {
     "id": "kingston-nv2-2tb",
@@ -104,7 +112,9 @@
     "summary": "入门盘，缓外与 4K 明显偏弱。",
     "tags": [
       "入门"
-    ]
+    ],
+    "summary_en": "Entry drive; weak post-cache and 4K.",
+    "summary_ja": "入門ドライブ。キャッシュ外と 4K が弱い。"
   },
   {
     "id": "samsung-870-evo-1tb",
@@ -125,7 +135,9 @@
     "summary": "SATA 标杆，老平台升级首选。",
     "tags": [
       "SATA"
-    ]
+    ],
+    "summary_en": "SATA benchmark, top pick for older platforms.",
+    "summary_ja": "SATA の基準。旧プラットフォーム更新の第一候補。"
   },
   {
     "id": "seagate-ironwolf-8tb",
@@ -147,7 +159,9 @@
     "tags": [
       "NAS",
       "CMR"
-    ]
+    ],
+    "summary_en": "NAS drive, CMR, somewhat noisy.",
+    "summary_ja": "NAS 用 CMR。やや騒音あり。"
   },
   {
     "id": "wd-red-plus-8tb",
@@ -169,7 +183,9 @@
     "tags": [
       "NAS",
       "CMR"
-    ]
+    ],
+    "summary_en": "Low-RPM CMR, quiet and efficient.",
+    "summary_ja": "低回転 CMR。静かで省電力。"
   },
   {
     "id": "samsung-9100-pro-2tb",
@@ -191,7 +207,9 @@
     "tags": [
       "旗舰",
       "PCIe5"
-    ]
+    ],
+    "summary_en": "Samsung PCIe 5.0 flagship, efficient.",
+    "summary_ja": "Samsung PCIe 5.0 旗艦。効率優秀。"
   },
   {
     "id": "wd-black-sn8100-2tb",
@@ -213,7 +231,9 @@
     "tags": [
       "旗舰",
       "PCIe5"
-    ]
+    ],
+    "summary_en": "Among the best PCIe 5.0 drives overall, manageable heat.",
+    "summary_ja": "PCIe 5.0 総合最強クラス。発熱は許容範囲。"
   },
   {
     "id": "zhitai-tiplus9100-2tb",
@@ -235,7 +255,9 @@
     "tags": [
       "国产",
       "PCIe5"
-    ]
+    ],
+    "summary_en": "Chinese PCIe 5.0 at a friendly price.",
+    "summary_ja": "中国製 PCIe 5.0。価格が手頃。"
   },
   {
     "id": "crucial-t500-2tb",
@@ -256,7 +278,9 @@
     "summary": "PCIe 4.0 后期优秀盘。",
     "tags": [
       "性价比"
-    ]
+    ],
+    "summary_en": "Excellent late-PCIe-4.0 drive.",
+    "summary_ja": "PCIe 4.0 後期の優秀ドライブ。"
   },
   {
     "id": "samsung-990-evo-plus-2tb",
@@ -275,7 +299,9 @@
     "release": "2024-10",
     "price_cny": 899,
     "summary": "HMB 无 DRAM，日常够用。",
-    "tags": []
+    "tags": [],
+    "summary_en": "DRAM-less HMB, fine for everyday.",
+    "summary_ja": "DRAM なし HMB。日常用途には十分。"
   },
   {
     "id": "solidigm-p44-pro-2tb",
@@ -296,7 +322,9 @@
     "summary": "海力士 P41 换壳，4K 极强。",
     "tags": [
       "游戏"
-    ]
+    ],
+    "summary_en": "Rebadged Hynix P41, superb 4K.",
+    "summary_ja": "Hynix P41 のリブランド。4K が極めて強い。"
   },
   {
     "id": "sk-hynix-platinum-p41-2tb",
@@ -317,7 +345,9 @@
     "summary": "PCIe 4.0 时代 4K 标杆。",
     "tags": [
       "游戏"
-    ]
+    ],
+    "summary_en": "The PCIe 4.0-era 4K benchmark.",
+    "summary_ja": "PCIe 4.0 時代の 4K 基準。"
   },
   {
     "id": "lexar-nm790-2tb",
@@ -338,7 +368,9 @@
     "summary": "无 DRAM 但表现出色，性价比高。",
     "tags": [
       "性价比"
-    ]
+    ],
+    "summary_en": "DRAM-less yet excellent, great value.",
+    "summary_ja": "DRAM なしでも優秀。コスパ高い。"
   },
   {
     "id": "kioxia-exceria-plus-g3-2tb",
@@ -357,7 +389,9 @@
     "release": "2023-09",
     "price_cny": 699,
     "summary": "铠侠原厂颗粒，低发热。",
-    "tags": []
+    "tags": [],
+    "summary_en": "Kioxia's own NAND, low heat.",
+    "summary_ja": "Kioxia 自社 NAND。低発熱。"
   },
   {
     "id": "crucial-p3-plus-2tb",
@@ -379,7 +413,9 @@
     "tags": [
       "入门",
       "QLC"
-    ]
+    ],
+    "summary_en": "QLC with very slow post-cache; archive use only.",
+    "summary_ja": "QLC でキャッシュ外が極端に遅い。倉庫用途のみ。"
   },
   {
     "id": "wd-blue-sn580-1tb",
@@ -400,7 +436,9 @@
     "summary": "入门 PCIe 4.0，稳妥。",
     "tags": [
       "入门"
-    ]
+    ],
+    "summary_en": "Safe entry PCIe 4.0.",
+    "summary_ja": "無難な入門 PCIe 4.0。"
   },
   {
     "id": "samsung-980-1tb",
@@ -421,7 +459,9 @@
     "summary": "PCIe 3.0 无 DRAM 入门。",
     "tags": [
       "入门"
-    ]
+    ],
+    "summary_en": "PCIe 3.0 DRAM-less entry.",
+    "summary_ja": "PCIe 3.0 DRAM なし入門。"
   },
   {
     "id": "crucial-mx500-1tb",
@@ -442,7 +482,9 @@
     "summary": "SATA 长青款。",
     "tags": [
       "SATA"
-    ]
+    ],
+    "summary_en": "SATA evergreen.",
+    "summary_ja": "SATA の定番ロングセラー。"
   },
   {
     "id": "samsung-870-qvo-2tb",
@@ -464,7 +506,9 @@
     "tags": [
       "SATA",
       "QLC"
-    ]
+    ],
+    "summary_en": "High-capacity QLC, slow post-cache.",
+    "summary_ja": "大容量 QLC。キャッシュ外は遅い。"
   },
   {
     "id": "wd-blue-sa510-1tb",
@@ -485,7 +529,9 @@
     "summary": "无 DRAM SATA 入门。",
     "tags": [
       "SATA"
-    ]
+    ],
+    "summary_en": "DRAM-less SATA entry.",
+    "summary_ja": "DRAM なし SATA 入門。"
   },
   {
     "id": "seagate-exos-x18-16tb",
@@ -507,7 +553,9 @@
     "tags": [
       "CMR",
       "企业"
-    ]
+    ],
+    "summary_en": "Enterprise drive as bulk storage, loud.",
+    "summary_ja": "エンタープライズ品を倉庫用に。騒音大。"
   },
   {
     "id": "wd-ultrastar-hc550-18tb",
@@ -529,7 +577,9 @@
     "tags": [
       "CMR",
       "企业"
-    ]
+    ],
+    "summary_en": "Enterprise high capacity.",
+    "summary_ja": "エンタープライズ大容量。"
   },
   {
     "id": "toshiba-n300-8tb",
@@ -551,7 +601,9 @@
     "tags": [
       "NAS",
       "CMR"
-    ]
+    ],
+    "summary_en": "The third NAS drive option.",
+    "summary_ja": "NAS ドライブ第三の選択肢。"
   },
   {
     "id": "wd-black-4tb-wd4005fzbx",
@@ -572,7 +624,9 @@
     "summary": "桌面性能盘，五年保。",
     "tags": [
       "CMR"
-    ]
+    ],
+    "summary_en": "Desktop performance drive, 5-year warranty.",
+    "summary_ja": "デスクトップ性能ドライブ。5年保証。"
   },
   {
     "id": "seagate-barracuda-2tb-smr",
@@ -593,7 +647,9 @@
     "summary": "SMR 叠瓦，只适合冷数据。",
     "tags": [
       "SMR"
-    ]
+    ],
+    "summary_en": "SMR; only for cold data.",
+    "summary_ja": "SMR。コールドデータ専用。"
   },
   {
     "id": "intel-x25-m-80gb",
@@ -616,7 +672,9 @@
       "经典",
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "Where consumer SSDs took off.",
+    "summary_ja": "一般向け SSD 普及の起点。"
   },
   {
     "id": "ocz-vertex-3-240gb",
@@ -638,7 +696,9 @@
     "tags": [
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "Early SATA III with many firmware failures.",
+    "summary_ja": "SATA III 初期。ファームウェア不具合多し。"
   },
   {
     "id": "samsung-840-pro-256gb",
@@ -661,7 +721,9 @@
       "经典",
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "The SATA SSD gold standard.",
+    "summary_ja": "SATA SSD の黄金基準。"
   },
   {
     "id": "samsung-850-evo-500gb",
@@ -684,7 +746,9 @@
       "经典",
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "Popularized 3D NAND, sold in huge numbers.",
+    "summary_ja": "3D NAND を普及させた大ヒット。"
   },
   {
     "id": "samsung-950-pro-512gb",
@@ -707,7 +771,9 @@
       "经典",
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "Year one of consumer NVMe.",
+    "summary_ja": "一般向け NVMe 元年。"
   },
   {
     "id": "samsung-960-pro-1tb",
@@ -729,7 +795,9 @@
     "tags": [
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "Last MLC flagship.",
+    "summary_ja": "MLC 最後の旗艦。"
   },
   {
     "id": "intel-660p-1tb",
@@ -752,7 +820,9 @@
       "QLC",
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "QLC debut, 100 MB/s post-cache.",
+    "summary_ja": "QLC 初採用。キャッシュ外 100MB/s。"
   },
   {
     "id": "crucial-p1-1tb",
@@ -775,7 +845,9 @@
       "QLC",
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "Contemporary QLC rival.",
+    "summary_ja": "同時期の QLC 競合品。"
   },
   {
     "id": "samsung-970-evo-plus-1tb",
@@ -798,7 +870,9 @@
       "经典",
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "Most recommended drive of the PCIe 3.0 era.",
+    "summary_ja": "PCIe 3.0 時代の最推奨。"
   },
   {
     "id": "wd-black-sn750-1tb",
@@ -820,7 +894,9 @@
     "tags": [
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "WD Black SN750 1TB.",
+    "summary_ja": "WD Black SN750 1TB。"
   },
   {
     "id": "sk-hynix-gold-p31-1tb",
@@ -843,7 +919,9 @@
       "能效",
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "Ultra-efficient PCIe 3.0 drive.",
+    "summary_ja": "効率抜群の PCIe 3.0 ドライブ。"
   },
   {
     "id": "samsung-980-pro-1tb",
@@ -865,7 +943,9 @@
     "tags": [
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "PCIe 4.0 flagship; keep firmware updated.",
+    "summary_ja": "PCIe 4.0 旗艦。ファームウェア更新必須。"
   },
   {
     "id": "wd-black-sn850-1tb",
@@ -887,7 +967,9 @@
     "tags": [
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "WD Black SN850 1TB.",
+    "summary_ja": "WD Black SN850 1TB。"
   },
   {
     "id": "kingston-kc3000-2tb",
@@ -909,7 +991,9 @@
     "tags": [
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "E18 controller, high endurance.",
+    "summary_ja": "E18 コントローラ。高耐久。"
   },
   {
     "id": "seagate-firecuda-530-2tb",
@@ -931,7 +1015,9 @@
     "tags": [
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "TBW 2550, the endurance king.",
+    "summary_ja": "TBW 2550。耐久の王者。"
   },
   {
     "id": "wd-caviar-black-1tb-2008",
@@ -954,7 +1040,9 @@
       "CMR",
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "The performance drive of its day.",
+    "summary_ja": "当時の性能ドライブ。"
   },
   {
     "id": "wd-velociraptor-300gb",
@@ -978,7 +1066,9 @@
       "CMR",
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "10,000 rpm; the performance king before SSDs.",
+    "summary_ja": "1万回転。SSD 以前の性能王。"
   },
   {
     "id": "seagate-barracuda-7200-12-1tb",
@@ -1001,7 +1091,9 @@
       "CMR",
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "Seagate Barracuda 7200.12 1TB.",
+    "summary_ja": "Seagate Barracuda 7200.12 1TB。"
   },
   {
     "id": "wd-red-3tb-2012",
@@ -1025,7 +1117,9 @@
       "CMR",
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "The first NAS-specific drive.",
+    "summary_ja": "初の NAS 専用ドライブ。"
   },
   {
     "id": "wd-blue-1tb-wd10ezex",
@@ -1048,7 +1142,9 @@
       "CMR",
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "The most common system drive in builds.",
+    "summary_ja": "自作で最も一般的なシステムドライブ。"
   },
   {
     "id": "seagate-ironwolf-4tb",
@@ -1072,6 +1168,8 @@
       "CMR",
       "历史"
     ],
-    "est": true
+    "est": true,
+    "summary_en": "Seagate IronWolf 4TB.",
+    "summary_ja": "Seagate IronWolf 4TB。"
   }
 ]

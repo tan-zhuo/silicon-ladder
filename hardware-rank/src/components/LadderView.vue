@@ -5,6 +5,7 @@ import type { Category, RankedRow } from '@/types/hardware'
 import { formBadge } from '@/utils/columns'
 import { brandColor, rel as fmtRel, yearOf } from '@/utils/format'
 import { useCompare } from '@/stores/compare'
+import { UiCheckbox } from '@/components/ui'
 import BrandLogo from '@/components/BrandLogo.vue'
 import { useI18n, displayName } from '@/i18n'
 
@@ -65,7 +66,7 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
               <div class="h-2 rounded-full overflow-hidden mt-1" style="background: var(--bar-track)"><div class="h-full rounded-full" :style="{ width: score(r) + '%', background: brandColor(r.item.brand) }" /></div>
             </div>
             <span class="text-sm font-bold w-10 text-right">{{ fmtRel(score(r)) }}</span>
-            <input type="checkbox" class="accent-accent w-4 h-4" :checked="compare.has(category, r.item.id)" @click.stop @change="compare.toggle(category, r.item.id)" />
+            <UiCheckbox size="sm" :model-value="compare.has(category, r.item.id)" :aria-label="t('col.compare')" @update:model-value="compare.toggle(category, r.item.id)" />
           </div>
         </div>
       </div>
@@ -109,7 +110,7 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
                 class="ladder-item group w-full flex items-center justify-end" tabindex="0" @click="go(r)" @keydown.enter="go(r)"
               >
                 <div class="flex items-center gap-2 pr-2 shrink-0">
-                  <input type="checkbox" class="accent-accent w-3.5 h-3.5 opacity-50 group-hover:opacity-100" :checked="compare.has(category, r.item.id)" @click.stop @change="compare.toggle(category, r.item.id)" />
+                  <UiCheckbox size="sm" :model-value="compare.has(category, r.item.id)" :aria-label="t('col.compare')" @update:model-value="compare.toggle(category, r.item.id)" />
                   <span v-if="r.item.est" class="badge !py-0">{{ t('product.est') }}</span>
                   <span v-if="formBadge(category, r)" class="badge !py-0">{{ formBadge(category, r) }}</span>
                   <span class="text-[11px] text-muted">{{ yearOf(r.item.release) }}</span>
@@ -140,7 +141,7 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
                   <span class="text-[11px] text-muted">{{ yearOf(r.item.release) }}</span>
                   <span v-if="formBadge(category, r)" class="badge !py-0">{{ formBadge(category, r) }}</span>
                   <span v-if="r.item.est" class="badge !py-0">{{ t('product.est') }}</span>
-                  <input type="checkbox" class="accent-accent w-3.5 h-3.5 opacity-50 group-hover:opacity-100" :checked="compare.has(category, r.item.id)" @click.stop @change="compare.toggle(category, r.item.id)" />
+                  <UiCheckbox size="sm" :model-value="compare.has(category, r.item.id)" :aria-label="t('col.compare')" @update:model-value="compare.toggle(category, r.item.id)" />
                 </div>
               </div>
             </div>
@@ -157,7 +158,7 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
                   <span class="font-semibold truncate group-hover:text-accent">{{ displayName(r.item) }}</span>
                   <span v-if="formBadge(category, r)" class="badge !py-0">{{ formBadge(category, r) }}</span>
                   <span class="ml-auto text-xs text-muted">{{ gap(r) === 0 ? t('ladder.top') : gap(r) + '%' }}</span>
-                  <input type="checkbox" class="accent-accent w-3.5 h-3.5 opacity-50 group-hover:opacity-100" :checked="compare.has(category, r.item.id)" @click.stop @change="compare.toggle(category, r.item.id)" />
+                  <UiCheckbox size="sm" :model-value="compare.has(category, r.item.id)" :aria-label="t('col.compare')" @update:model-value="compare.toggle(category, r.item.id)" />
                 </div>
                 <div class="h-5 rounded-md overflow-hidden" style="background: var(--bar-track)">
                   <div class="h-full flex items-center rounded-md" :style="{ width: score(r) + '%', minWidth: '44px', background: `linear-gradient(90deg, ${brandColor(b)}, ${brandColor(b)}99)` }">

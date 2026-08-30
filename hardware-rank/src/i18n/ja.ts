@@ -80,5 +80,6 @@ export const ja: Msg = {
   search: { title: 'サイト内検索', ph: 'モデル / ブランド 例: 9800X3D, RTX 5070, 990 PRO', hint: '↑↓ 選択 · Enter 開く · Esc 閉じる', empty: '該当する製品がありません', shortcut: '検索' },
   chips: { active: '選択中', clear: 'すべてクリア', era: '年代', tdp: 'TDP', watt: 'W数', q: 'キーワード' },
   rel: { rivals: '直接の競合', rivalsDesc: '同プール・同時期（±1年）・総合スコアが近い他ブランド', lineage: '同シリーズの前後世代', prev: '前世代', next: '次世代', vsFirst: '1列目との差', same: '同じ', diff: '異なる' },
+  tags: { X3D: 'X3D', 游戏: 'ゲーム', 旗舰: 'フラッグシップ', 生产力: '生産性', 性价比: 'コスパ', 能效: '高効率', ARM: 'ARM', 核显: '内蔵GPU', 轻薄: '薄型', 全能本: '汎用ノート', 游戏本: 'ゲーミングノート', AM4: 'AM4', 经典: '定番', 历史: '旧世代', HEDT: 'HEDT', APU: 'APU', '4K': '4K', '2K': 'WQHD', 高TGP: '高TGP', 中TGP: '中TGP', 低TGP: '低TGP', '1080p': '1080p', PCIe5: 'PCIe 5.0', 国产: '中国製', 入门: '入門', SATA: 'SATA', NAS: 'NAS', CMR: 'CMR', QLC: 'QLC', 企业: 'エンタープライズ', SMR: 'SMR' },
   loading: 'データ読込中…', loadError: 'データの読込に失敗: ',
 }

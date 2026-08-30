@@ -9,7 +9,7 @@ import { catLabel, formLabel, ifaceLabel, modularLabel, price, num, iops, capaci
 import ScoreBar from '@/components/ScoreBar.vue'
 import BrandLogo from '@/components/BrandLogo.vue'
 import { cpuPlatform, gpuPlatform, ramPlatform, storagePlatform, psuPlatform, type Row } from '@/data/platforms'
-import { useI18n, displayName } from '@/i18n'
+import { useI18n, displayName, displaySummary, tagLabel } from '@/i18n'
 import { useSeo, breadcrumb, SITE_URL } from '@/seo'
 
 const route = useRoute()
@@ -164,8 +164,8 @@ useSeo(() => {
           </div>
           <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mt-3">{{ displayName(item) }}</h1>
           <div v-if="item.nameEn && item.nameEn !== displayName(item)" class="text-sm text-muted mt-0.5">{{ item.nameEn }}</div>
-          <p class="mt-3 text-fg/90">{{ item.summary }}</p>
-          <p v-if="tags.length" class="text-sm text-muted mt-1">{{ t('product.fit', { tags: tags.join(' / ') }) }}</p>
+          <p class="mt-3 text-fg/90">{{ displaySummary(item) }}</p>
+          <p v-if="tags.length" class="text-sm text-muted mt-1">{{ t('product.fit', { tags: tags.map(tagLabel).join(' / ') }) }}</p>
           <p v-if="item.est" class="text-xs text-muted mt-2">{{ t('product.estNote') }}</p>
         </div>
         <div class="text-right">
@@ -244,7 +244,7 @@ useSeo(() => {
         <button v-for="r in similar" :key="r.item.id" class="card card-hover p-4 text-left" @click="router.push(`/product/${category}/${r.item.id}`)">
           <div class="flex items-center gap-2"><BrandLogo :brand="r.item.brand" :size="16" /><span class="font-semibold">{{ displayName(r.item) }}</span></div>
           <div class="text-xs text-muted mt-1">#{{ r.rank }}<span v-if="r.rel.overall != null"> · {{ t('sort.overall') }} {{ r.rel.overall?.toFixed(1) }}</span></div>
-          <div class="text-sm text-muted mt-1 line-clamp-2">{{ r.item.summary }}</div>
+          <div class="text-sm text-muted mt-1 line-clamp-2">{{ displaySummary(r.item) }}</div>
         </button>
       </div>
     </section>

@@ -22,7 +22,9 @@
     "scores": {
       "raster_rel": 100,
       "rt_rel": 100
-    }
+    },
+    "summary_en": "Fastest desktop card today; power and price equally shocking.",
+    "summary_ja": "現行デスクトップ最速。電力も価格も衝撃的。"
   },
   {
     "id": "nvidia-rtx-5080",
@@ -46,7 +48,9 @@
     "scores": {
       "raster_rel": 78,
       "rt_rel": 80
-    }
+    },
+    "summary_en": "Second-tier flagship; 16GB is a bit conservative.",
+    "summary_ja": "準フラッグシップ。16GB はやや控えめ。"
   },
   {
     "id": "nvidia-rtx-4090",
@@ -71,7 +75,9 @@
     "scores": {
       "raster_rel": 82,
       "rt_rel": 84
-    }
+    },
+    "summary_en": "Last-gen flagship; 24GB still a productivity weapon.",
+    "summary_ja": "前世代旗艦。24GB は今も生産性の武器。"
   },
   {
     "id": "nvidia-rtx-5070-ti",
@@ -95,7 +101,9 @@
     "scores": {
       "raster_rel": 66,
       "rt_rel": 68
-    }
+    },
+    "summary_en": "1440p high-refresh sweet spot; 16GB is enough.",
+    "summary_ja": "WQHD 高リフレッシュの定番。16GB で十分。"
   },
   {
     "id": "amd-rx-9070-xt",
@@ -120,7 +128,9 @@
     "scores": {
       "raster_rel": 64,
       "rt_rel": 58
-    }
+    },
+    "summary_en": "RDNA 4 makes big RT gains; good value.",
+    "summary_ja": "RDNA 4 で RT が大幅進化。コスパ良好。"
   },
   {
     "id": "nvidia-rtx-4070-super",
@@ -144,7 +154,9 @@
     "scores": {
       "raster_rel": 52,
       "rt_rel": 50
-    }
+    },
+    "summary_en": "Last-gen 1440p sweet spot, easy 220W.",
+    "summary_ja": "前世代 WQHD の定番。220W で扱いやすい。"
   },
   {
     "id": "amd-rx-7800-xt",
@@ -169,7 +181,9 @@
     "scores": {
       "raster_rel": 50,
       "rt_rel": 38
-    }
+    },
+    "summary_en": "Enough raster, weak RT, affordable 16GB.",
+    "summary_ja": "ラスタ十分、RT 弱め、16GB がお得。"
   },
   {
     "id": "nvidia-rtx-5090-laptop-175w",
@@ -196,7 +210,9 @@
     "scores": {
       "raster_rel": 72,
       "rt_rel": 70
-    }
+    },
+    "summary_en": "Mobile flagship; the die is really desktop-5080 class.",
+    "summary_ja": "モバイル旗艦。ダイは実質デスクトップ 5080 級。"
   },
   {
     "id": "nvidia-rtx-5080-laptop-150w",
@@ -222,7 +238,9 @@
     "scores": {
       "raster_rel": 60,
       "rt_rel": 58
-    }
+    },
+    "summary_en": "High-end gaming-laptop mainstay with good efficiency.",
+    "summary_ja": "ハイエンドゲーミングノートの主力。効率良好。"
   },
   {
     "id": "nvidia-rtx-5070-laptop-115w",
@@ -248,7 +266,9 @@
     "scores": {
       "raster_rel": 48,
       "rt_rel": 46
-    }
+    },
+    "summary_en": "Full 115W version; 8GB VRAM is the weak point.",
+    "summary_ja": "フル 115W 版。8GB VRAM が弱点。"
   },
   {
     "id": "nvidia-rtx-5070-laptop-80w",
@@ -275,7 +295,9 @@
     "scores": {
       "raster_rel": 38,
       "rt_rel": 36
-    }
+    },
+    "summary_en": "80W thin-and-light version, ~20% slower than full power.",
+    "summary_ja": "薄型向け 80W 版。フル版より約2割遅い。"
   },
   {
     "id": "nvidia-rtx-4070-laptop-140w",
@@ -301,7 +323,9 @@
     "scores": {
       "raster_rel": 44,
       "rt_rel": 42
-    }
+    },
+    "summary_en": "Last-gen mainstream, still competitive at full TGP.",
+    "summary_ja": "前世代主流。フル TGP なら今も戦える。"
   },
   {
     "id": "apple-m4-max-gpu-40",
@@ -327,7 +351,9 @@
     "scores": {
       "raster_rel": 58,
       "rt_rel": 20
-    }
+    },
+    "summary_en": "iGPU ceiling: weak RT, strong productivity.",
+    "summary_ja": "内蔵GPUの天井。RT は弱いが生産性は強い。"
   },
   {
     "id": "nvidia-rtx-5070",
@@ -351,7 +377,9 @@
     "scores": {
       "raster_rel": 52,
       "rt_rel": 54
-    }
+    },
+    "summary_en": "12GB is conservative; the 1440p mainstream card.",
+    "summary_ja": "12GB は控えめ。WQHD の主流カード。"
   },
   {
     "id": "nvidia-rtx-5060-ti-16gb",
@@ -376,7 +404,9 @@
     "scores": {
       "raster_rel": 42,
       "rt_rel": 43
-    }
+    },
+    "summary_en": "Only the 16GB version is worth buying.",
+    "summary_ja": "買うなら 16GB 版だけ。"
   },
   {
     "id": "nvidia-rtx-5060",
@@ -400,7 +430,9 @@
     "scores": {
       "raster_rel": 35,
       "rt_rel": 36
-    }
+    },
+    "summary_en": "8GB VRAM is the fatal flaw.",
+    "summary_ja": "8GB VRAM が致命的。"
   },
   {
     "id": "nvidia-rtx-4080-super",
@@ -424,7 +456,9 @@
     "scores": {
       "raster_rel": 68,
       "rt_rel": 70
-    }
+    },
+    "summary_en": "Last-gen 4K second-tier flagship.",
+    "summary_ja": "前世代 4K 準旗艦。"
   },
   {
     "id": "nvidia-rtx-4070-ti-super",
@@ -448,7 +482,9 @@
     "scores": {
       "raster_rel": 60,
       "rt_rel": 60
-    }
+    },
+    "summary_en": "1440p high-refresh card with 16GB.",
+    "summary_ja": "16GB 搭載の WQHD 高リフレッシュ向け。"
   },
   {
     "id": "nvidia-rtx-4070",
@@ -472,7 +508,9 @@
     "scores": {
       "raster_rel": 46,
       "rt_rel": 45
-    }
+    },
+    "summary_en": "Quiet 200W 1440p card.",
+    "summary_ja": "静かな 200W WQHD カード。"
   },
   {
     "id": "nvidia-rtx-4060-ti-8gb",
@@ -496,7 +534,9 @@
     "scores": {
       "raster_rel": 36,
       "rt_rel": 34
-    }
+    },
+    "summary_en": "Both bus width and VRAM were cut.",
+    "summary_ja": "バス幅も VRAM も削られた。"
   },
   {
     "id": "nvidia-rtx-4060",
@@ -521,7 +561,9 @@
     "scores": {
       "raster_rel": 30,
       "rt_rel": 28
-    }
+    },
+    "summary_en": "Low power; the net-café and entry favorite.",
+    "summary_ja": "低消費電力。ネットカフェと入門の定番。"
   },
   {
     "id": "nvidia-rtx-3080-10gb",
@@ -545,7 +587,9 @@
     "scores": {
       "raster_rel": 47,
       "rt_rel": 40
-    }
+    },
+    "summary_en": "Two-gen-old flagship, still capable used.",
+    "summary_ja": "2世代前の旗艦。中古なら今も現役。"
   },
   {
     "id": "nvidia-rtx-3070",
@@ -569,7 +613,9 @@
     "scores": {
       "raster_rel": 37,
       "rt_rel": 30
-    }
+    },
+    "summary_en": "8GB VRAM starting to run tight.",
+    "summary_ja": "8GB VRAM が厳しくなってきた。"
   },
   {
     "id": "nvidia-rtx-3060-12gb",
@@ -593,7 +639,9 @@
     "scores": {
       "raster_rel": 26,
       "rt_rel": 20
-    }
+    },
+    "summary_en": "Big-VRAM entry classic.",
+    "summary_ja": "大容量 VRAM の入門定番。"
   },
   {
     "id": "amd-rx-9070",
@@ -618,7 +666,9 @@
     "scores": {
       "raster_rel": 57,
       "rt_rel": 50
-    }
+    },
+    "summary_en": "Great 220W efficiency, more balanced than the XT.",
+    "summary_ja": "220W で効率抜群。XT よりバランス型。"
   },
   {
     "id": "amd-rx-9060-xt-16gb",
@@ -643,7 +693,9 @@
     "scores": {
       "raster_rel": 36,
       "rt_rel": 31
-    }
+    },
+    "summary_en": "16GB at the same price, aimed at the 5060 Ti.",
+    "summary_ja": "同価格で 16GB。5060 Ti が対抗馬。"
   },
   {
     "id": "amd-rx-7900-xtx",
@@ -667,7 +719,9 @@
     "scores": {
       "raster_rel": 70,
       "rt_rel": 52
-    }
+    },
+    "summary_en": "24GB with strong raster, average RT.",
+    "summary_ja": "24GB でラスタは強力、RT は平凡。"
   },
   {
     "id": "amd-rx-7900-xt",
@@ -692,7 +746,9 @@
     "scores": {
       "raster_rel": 62,
       "rt_rel": 45
-    }
+    },
+    "summary_en": "Great value after price cuts.",
+    "summary_ja": "値下げ後はコスパ良好。"
   },
   {
     "id": "amd-rx-7700-xt",
@@ -716,7 +772,9 @@
     "scores": {
       "raster_rel": 42,
       "rt_rel": 32
-    }
+    },
+    "summary_en": "Sits between the 7800 XT and 7600.",
+    "summary_ja": "7800 XT と 7600 の間。"
   },
   {
     "id": "amd-rx-7600",
@@ -741,7 +799,9 @@
     "scores": {
       "raster_rel": 28,
       "rt_rel": 20
-    }
+    },
+    "summary_en": "1080p entry.",
+    "summary_ja": "1080p 入門。"
   },
   {
     "id": "amd-rx-6800-xt",
@@ -765,7 +825,9 @@
     "scores": {
       "raster_rel": 50,
       "rt_rel": 30
-    }
+    },
+    "summary_en": "Two-gen-old 16GB, good used value.",
+    "summary_ja": "2世代前の 16GB。中古コスパ良好。"
   },
   {
     "id": "amd-rx-6600",
@@ -790,7 +852,9 @@
     "scores": {
       "raster_rel": 24,
       "rt_rel": 14
-    }
+    },
+    "summary_en": "The budget 1080p king.",
+    "summary_ja": "低価格帯 1080p の王者。"
   },
   {
     "id": "intel-arc-b580",
@@ -816,7 +880,9 @@
     "scores": {
       "raster_rel": 33,
       "rt_rel": 30
-    }
+    },
+    "summary_en": "Battlemage 12GB; drivers vastly improved.",
+    "summary_ja": "Battlemage 12GB。ドライバが大幅改善。"
   },
   {
     "id": "intel-arc-b570",
@@ -840,7 +906,9 @@
     "scores": {
       "raster_rel": 28,
       "rt_rel": 25
-    }
+    },
+    "summary_en": "Cut-down B580.",
+    "summary_ja": "B580 の縮小版。"
   },
   {
     "id": "intel-arc-a770-16gb",
@@ -864,7 +932,9 @@
     "scores": {
       "raster_rel": 30,
       "rt_rel": 26
-    }
+    },
+    "summary_en": "First-gen Arc; older games can be hit-or-miss.",
+    "summary_ja": "初代 Arc。旧作ゲームの互換性は微妙。"
   },
   {
     "id": "nvidia-rtx-5070-ti-laptop-140w",
@@ -890,7 +960,9 @@
     "scores": {
       "raster_rel": 55,
       "rt_rel": 53
-    }
+    },
+    "summary_en": "12GB VRAM, the high-end gaming-laptop mainstream.",
+    "summary_ja": "12GB VRAM。ハイエンドゲーミングノートの主流。"
   },
   {
     "id": "nvidia-rtx-5060-laptop-115w",
@@ -916,7 +988,9 @@
     "scores": {
       "raster_rel": 40,
       "rt_rel": 38
-    }
+    },
+    "summary_en": "Full-power 5060 for mainstream gaming laptops.",
+    "summary_ja": "フルパワー 5060。主流ゲーミングノート向け。"
   },
   {
     "id": "nvidia-rtx-5060-laptop-80w",
@@ -943,7 +1017,9 @@
     "scores": {
       "raster_rel": 33,
       "rt_rel": 31
-    }
+    },
+    "summary_en": "80W version for thin gaming laptops.",
+    "summary_ja": "薄型ゲーミングノート向け 80W 版。"
   },
   {
     "id": "nvidia-rtx-5050-laptop-100w",
@@ -969,7 +1045,9 @@
     "scores": {
       "raster_rel": 30,
       "rt_rel": 28
-    }
+    },
+    "summary_en": "Entry discrete-GPU laptop part.",
+    "summary_ja": "入門 dGPU ノート向け。"
   },
   {
     "id": "nvidia-rtx-4090-laptop-175w",
@@ -996,7 +1074,9 @@
     "scores": {
       "raster_rel": 66,
       "rt_rel": 64
-    }
+    },
+    "summary_en": "Last-gen mobile flagship; the die is a desktop 4080.",
+    "summary_ja": "前世代モバイル旗艦。ダイはデスクトップ 4080。"
   },
   {
     "id": "nvidia-rtx-4080-laptop-175w",
@@ -1022,7 +1102,9 @@
     "scores": {
       "raster_rel": 58,
       "rt_rel": 56
-    }
+    },
+    "summary_en": "Last-gen second-tier mobile flagship.",
+    "summary_ja": "前世代モバイル準旗艦。"
   },
   {
     "id": "nvidia-rtx-4070-laptop-90w",
@@ -1049,7 +1131,9 @@
     "scores": {
       "raster_rel": 38,
       "rt_rel": 36
-    }
+    },
+    "summary_en": "90W thin version, 10%+ slower than full power.",
+    "summary_ja": "薄型向け 90W 版。フル版より1割強遅い。"
   },
   {
     "id": "nvidia-rtx-4060-laptop-140w",
@@ -1076,7 +1160,9 @@
     "scores": {
       "raster_rel": 36,
       "rt_rel": 34
-    }
+    },
+    "summary_en": "The best-selling gaming-laptop GPU.",
+    "summary_ja": "最も売れたゲーミングノート GPU。"
   },
   {
     "id": "nvidia-rtx-4060-laptop-90w",
@@ -1102,7 +1188,9 @@
     "scores": {
       "raster_rel": 31,
       "rt_rel": 29
-    }
+    },
+    "summary_en": "Common 90W version in all-rounders.",
+    "summary_ja": "汎用ノートに多い 90W 版。"
   },
   {
     "id": "nvidia-rtx-4050-laptop-100w",
@@ -1128,7 +1216,9 @@
     "scores": {
       "raster_rel": 27,
       "rt_rel": 25
-    }
+    },
+    "summary_en": "6GB entry discrete GPU.",
+    "summary_ja": "6GB の入門 dGPU。"
   },
   {
     "id": "amd-rx-7900m",
@@ -1154,7 +1244,9 @@
     "scores": {
       "raster_rel": 56,
       "rt_rel": 40
-    }
+    },
+    "summary_en": "AMD mobile flagship, in very few laptops.",
+    "summary_ja": "AMD モバイル旗艦。搭載機は極少。"
   },
   {
     "id": "amd-rx-7700s",
@@ -1180,7 +1272,9 @@
     "scores": {
       "raster_rel": 33,
       "rt_rel": 22
-    }
+    },
+    "summary_en": "Found in a few models like the Framework 16.",
+    "summary_ja": "Framework 16 など少数機種のみ。"
   },
   {
     "id": "apple-m4-pro-gpu-20",
@@ -1205,7 +1299,9 @@
     "scores": {
       "raster_rel": 36,
       "rt_rel": 12
-    }
+    },
+    "summary_en": "Rivals a low-TGP 4060 Laptop.",
+    "summary_ja": "低 TGP の 4060 Laptop に匹敵。"
   },
   {
     "id": "apple-m4-gpu-10",
@@ -1230,7 +1326,9 @@
     "scores": {
       "raster_rel": 18,
       "rt_rel": 6
-    }
+    },
+    "summary_en": "Air-class iGPU.",
+    "summary_ja": "Air クラスの内蔵GPU。"
   },
   {
     "id": "amd-radeon-8060s",
@@ -1256,7 +1354,9 @@
     "scores": {
       "raster_rel": 55,
       "rt_rel": 18
-    }
+    },
+    "summary_en": "x86 iGPU ceiling, close to a 4070 Laptop.",
+    "summary_ja": "x86 内蔵GPUの天井。4070 Laptop に迫る。"
   },
   {
     "id": "amd-radeon-890m",
@@ -1281,7 +1381,9 @@
     "scores": {
       "raster_rel": 20,
       "rt_rel": 6
-    }
+    },
+    "summary_en": "One of the strongest x86 iGPUs for thin-and-lights.",
+    "summary_ja": "薄型ノート最強クラスの x86 内蔵GPU。"
   },
   {
     "id": "amd-radeon-780m",
@@ -1306,7 +1408,9 @@
     "scores": {
       "raster_rel": 15,
       "rt_rel": 5
-    }
+    },
+    "summary_en": "Common in handhelds and thin laptops.",
+    "summary_ja": "携帯ゲーム機や薄型ノートに多い。"
   },
   {
     "id": "intel-arc-140v",
@@ -1331,7 +1435,9 @@
     "scores": {
       "raster_rel": 16,
       "rt_rel": 6
-    }
+    },
+    "summary_en": "Lunar Lake iGPU with excellent efficiency.",
+    "summary_ja": "Lunar Lake の内蔵GPU。効率が優秀。"
   },
   {
     "id": "intel-arc-140t",
@@ -1356,7 +1462,9 @@
     "scores": {
       "raster_rel": 15,
       "rt_rel": 5
-    }
+    },
+    "summary_en": "Arrow Lake-H iGPU.",
+    "summary_ja": "Arrow Lake-H の内蔵GPU。"
   },
   {
     "id": "qualcomm-adreno-x1-85",
@@ -1382,7 +1490,9 @@
     "scores": {
       "raster_rel": 13,
       "rt_rel": null
-    }
+    },
+    "summary_en": "ARM-laptop iGPU with many compatibility limits.",
+    "summary_ja": "ARM ノートの内蔵GPU。互換性の制約多し。"
   },
   {
     "id": "nvidia-geforce-8800-gt",
@@ -1408,7 +1518,9 @@
     "scores": {
       "raster_rel": 1.5,
       "rt_rel": null
-    }
+    },
+    "summary_en": "Popularized unified shaders; a value legend.",
+    "summary_ja": "統合シェーダを普及させたコスパの伝説。"
   },
   {
     "id": "nvidia-geforce-gtx-280",
@@ -1433,7 +1545,9 @@
     "scores": {
       "raster_rel": 2.5,
       "rt_rel": null
-    }
+    },
+    "summary_en": "512-bit big-die flagship.",
+    "summary_ja": "512-bit 巨大ダイの旗艦。"
   },
   {
     "id": "nvidia-gtx-480",
@@ -1458,7 +1572,9 @@
     "scores": {
       "raster_rel": 4.2,
       "rt_rel": null
-    }
+    },
+    "summary_en": "Fermi debut — the \"nuclear\" card.",
+    "summary_ja": "Fermi 初代。「核爆弾」。"
   },
   {
     "id": "nvidia-gtx-580",
@@ -1483,7 +1599,9 @@
     "scores": {
       "raster_rel": 4.8,
       "rt_rel": null
-    }
+    },
+    "summary_en": "Fermi fully realized.",
+    "summary_ja": "Fermi の完成形。"
   },
   {
     "id": "nvidia-gtx-680",
@@ -1508,7 +1626,9 @@
     "scores": {
       "raster_rel": 6.5,
       "rt_rel": null
-    }
+    },
+    "summary_en": "Kepler; a big efficiency leap.",
+    "summary_ja": "Kepler。効率が大きく前進。"
   },
   {
     "id": "nvidia-gtx-780-ti",
@@ -1533,7 +1653,9 @@
     "scores": {
       "raster_rel": 9.5,
       "rt_rel": null
-    }
+    },
+    "summary_en": "Kepler big-die flagship.",
+    "summary_ja": "Kepler 大型ダイの旗艦。"
   },
   {
     "id": "nvidia-gtx-970",
@@ -1559,7 +1681,9 @@
     "scores": {
       "raster_rel": 9,
       "rt_rel": null
-    }
+    },
+    "summary_en": "The 3.5GB memory scandal, yet a huge seller.",
+    "summary_ja": "3.5GB 問題があったが大ヒット。"
   },
   {
     "id": "nvidia-gtx-980",
@@ -1584,7 +1708,9 @@
     "scores": {
       "raster_rel": 10.5,
       "rt_rel": null
-    }
+    },
+    "summary_en": "Maxwell efficiency benchmark.",
+    "summary_ja": "Maxwell 効率の基準。"
   },
   {
     "id": "nvidia-gtx-980-ti",
@@ -1609,7 +1735,9 @@
     "scores": {
       "raster_rel": 13.5,
       "rt_rel": null
-    }
+    },
+    "summary_en": "Last 28nm flagship.",
+    "summary_ja": "28nm 最後の旗艦。"
   },
   {
     "id": "nvidia-gtx-1060-6gb",
@@ -1636,7 +1764,9 @@
     "scores": {
       "raster_rel": 10.5,
       "rt_rel": null
-    }
+    },
+    "summary_en": "King of the Steam hardware survey.",
+    "summary_ja": "Steam シェアの王者。"
   },
   {
     "id": "nvidia-gtx-1070",
@@ -1661,7 +1791,9 @@
     "scores": {
       "raster_rel": 15,
       "rt_rel": null
-    }
+    },
+    "summary_en": "8GB VRAM, long-lived.",
+    "summary_ja": "8GB VRAM で長寿。"
   },
   {
     "id": "nvidia-gtx-1080",
@@ -1686,7 +1818,9 @@
     "scores": {
       "raster_rel": 18.5,
       "rt_rel": null
-    }
+    },
+    "summary_en": "Pascal launch flagship.",
+    "summary_ja": "Pascal 初代旗艦。"
   },
   {
     "id": "nvidia-gtx-1080-ti",
@@ -1712,7 +1846,9 @@
     "scores": {
       "raster_rel": 24,
       "rt_rel": null
-    }
+    },
+    "summary_en": "Widely considered the best-value flagship ever.",
+    "summary_ja": "史上最も値持ちの良い旗艦と評される。"
   },
   {
     "id": "nvidia-gtx-1650",
@@ -1737,7 +1873,9 @@
     "scores": {
       "raster_rel": 8,
       "rt_rel": null
-    }
+    },
+    "summary_en": "Entry card with no external power.",
+    "summary_ja": "外部電源不要の入門カード。"
   },
   {
     "id": "nvidia-gtx-1660-super",
@@ -1763,7 +1901,9 @@
     "scores": {
       "raster_rel": 14,
       "rt_rel": null
-    }
+    },
+    "summary_en": "Turing sweet spot without RT.",
+    "summary_ja": "RT なしの Turing 定番。"
   },
   {
     "id": "nvidia-rtx-2060",
@@ -1788,7 +1928,9 @@
     "scores": {
       "raster_rel": 19,
       "rt_rel": 12
-    }
+    },
+    "summary_en": "Cheapest first-gen RT card.",
+    "summary_ja": "初代 RT 最安カード。"
   },
   {
     "id": "nvidia-rtx-2070-super",
@@ -1813,7 +1955,9 @@
     "scores": {
       "raster_rel": 25,
       "rt_rel": 17
-    }
+    },
+    "summary_en": "Turing upper-mid.",
+    "summary_ja": "Turing 上位ミドル。"
   },
   {
     "id": "nvidia-rtx-2080-ti",
@@ -1838,7 +1982,9 @@
     "scores": {
       "raster_rel": 32,
       "rt_rel": 24
-    }
+    },
+    "summary_en": "RT year-one flagship, four-figure pricing.",
+    "summary_ja": "RT 元年の旗艦。万元スタート。"
   },
   {
     "id": "nvidia-rtx-3050-8gb",
@@ -1863,7 +2009,9 @@
     "scores": {
       "raster_rel": 18,
       "rt_rel": 13
-    }
+    },
+    "summary_en": "Ampere entry.",
+    "summary_ja": "Ampere 入門。"
   },
   {
     "id": "nvidia-rtx-3060-ti",
@@ -1889,7 +2037,9 @@
     "scores": {
       "raster_rel": 33,
       "rt_rel": 26
-    }
+    },
+    "summary_en": "The pre-mining-boom sweet spot.",
+    "summary_ja": "マイニングブーム前の定番。"
   },
   {
     "id": "nvidia-rtx-3080-ti",
@@ -1914,7 +2064,9 @@
     "scores": {
       "raster_rel": 53,
       "rt_rel": 45
-    }
+    },
+    "summary_en": "Close to a 3090.",
+    "summary_ja": "3090 に迫る。"
   },
   {
     "id": "nvidia-rtx-3090",
@@ -1940,7 +2092,9 @@
     "scores": {
       "raster_rel": 55,
       "rt_rel": 47
-    }
+    },
+    "summary_en": "The BFGPU, 24GB.",
+    "summary_ja": "BFGPU、24GB。"
   },
   {
     "id": "amd-radeon-hd-4870",
@@ -1966,7 +2120,9 @@
     "scores": {
       "raster_rel": 2.3,
       "rt_rel": null
-    }
+    },
+    "summary_en": "GDDR5 debut; a value comeback.",
+    "summary_ja": "GDDR5 初採用。コスパで逆襲。"
   },
   {
     "id": "amd-radeon-hd-5870",
@@ -1991,7 +2147,9 @@
     "scores": {
       "raster_rel": 3.6,
       "rt_rel": null
-    }
+    },
+    "summary_en": "First DX11 GPU.",
+    "summary_ja": "初の DX11 GPU。"
   },
   {
     "id": "amd-radeon-hd-6970",
@@ -2016,7 +2174,9 @@
     "scores": {
       "raster_rel": 4.5,
       "rt_rel": null
-    }
+    },
+    "summary_en": "VLIW4 architecture.",
+    "summary_ja": "VLIW4 アーキテクチャ。"
   },
   {
     "id": "amd-radeon-hd-7970",
@@ -2042,7 +2202,9 @@
     "scores": {
       "raster_rel": 6.8,
       "rt_rel": null
-    }
+    },
+    "summary_en": "GCN and 28nm debut.",
+    "summary_ja": "GCN と 28nm の初採用。"
   },
   {
     "id": "amd-r9-290x",
@@ -2067,7 +2229,9 @@
     "scores": {
       "raster_rel": 9.8,
       "rt_rel": null
-    }
+    },
+    "summary_en": "\"Hawaii\" — the reference cooler was a disaster.",
+    "summary_ja": "「Hawaii」。リファレンスクーラーが災難。"
   },
   {
     "id": "amd-r9-fury-x",
@@ -2092,7 +2256,9 @@
     "scores": {
       "raster_rel": 13,
       "rt_rel": null
-    }
+    },
+    "summary_en": "HBM debut with a liquid-cooled reference card.",
+    "summary_ja": "HBM 初採用、水冷リファレンス。"
   },
   {
     "id": "amd-rx-480-8gb",
@@ -2118,7 +2284,9 @@
     "scores": {
       "raster_rel": 9.5,
       "rt_rel": null
-    }
+    },
+    "summary_en": "Polaris sweet spot.",
+    "summary_ja": "Polaris の定番。"
   },
   {
     "id": "amd-rx-580-8gb",
@@ -2144,7 +2312,9 @@
     "scores": {
       "raster_rel": 10.5,
       "rt_rel": null
-    }
+    },
+    "summary_en": "King of mining cards, flooding the used market.",
+    "summary_ja": "マイニングカードの王。中古が大量。"
   },
   {
     "id": "amd-rx-vega-64",
@@ -2169,7 +2339,9 @@
     "scores": {
       "raster_rel": 20,
       "rt_rel": null
-    }
+    },
+    "summary_en": "HBM2, power hungry.",
+    "summary_ja": "HBM2、消費電力大。"
   },
   {
     "id": "amd-rx-5700-xt",
@@ -2194,7 +2366,9 @@
     "scores": {
       "raster_rel": 24,
       "rt_rel": null
-    }
+    },
+    "summary_en": "RDNA debut, no RT.",
+    "summary_ja": "RDNA 初代。RT なし。"
   },
   {
     "id": "amd-rx-5600-xt",
@@ -2219,7 +2393,9 @@
     "scores": {
       "raster_rel": 18,
       "rt_rel": null
-    }
+    },
+    "summary_en": "Pre-launch BIOS clock bump.",
+    "summary_ja": "発売前の BIOS でクロック引き上げ。"
   },
   {
     "id": "amd-rx-6650-xt",
@@ -2244,7 +2420,9 @@
     "scores": {
       "raster_rel": 27,
       "rt_rel": 15
-    }
+    },
+    "summary_en": "1080p mainstream.",
+    "summary_ja": "1080p 主流。"
   },
   {
     "id": "amd-rx-6700-xt",
@@ -2269,7 +2447,9 @@
     "scores": {
       "raster_rel": 36,
       "rt_rel": 21
-    }
+    },
+    "summary_en": "12GB 1440p card.",
+    "summary_ja": "12GB の WQHD カード。"
   },
   {
     "id": "amd-rx-6900-xt",
@@ -2294,7 +2474,9 @@
     "scores": {
       "raster_rel": 55,
       "rt_rel": 33
-    }
+    },
+    "summary_en": "RDNA2 flagship; raster matches the 3090.",
+    "summary_ja": "RDNA2 旗艦。ラスタで 3090 に並ぶ。"
   },
   {
     "id": "intel-arc-a750",
@@ -2319,7 +2501,9 @@
     "scores": {
       "raster_rel": 27,
       "rt_rel": 22
-    }
+    },
+    "summary_en": "Intel returns to discrete GPUs.",
+    "summary_ja": "Intel が dGPU に復帰。"
   },
   {
     "id": "nvidia-gtx-1060-laptop-80w",
@@ -2346,7 +2530,9 @@
     "scores": {
       "raster_rel": 12,
       "rt_rel": null
-    }
+    },
+    "summary_en": "Where mobile started matching desktop.",
+    "summary_ja": "モバイルがデスクトップに並び始めた起点。"
   },
   {
     "id": "nvidia-gtx-1070-laptop-115w",
@@ -2372,7 +2558,9 @@
     "scores": {
       "raster_rel": 16,
       "rt_rel": null
-    }
+    },
+    "summary_en": "GTX 1070 Laptop.",
+    "summary_ja": "GTX 1070 Laptop。"
   },
   {
     "id": "nvidia-gtx-1650-laptop-50w",
@@ -2399,7 +2587,9 @@
     "scores": {
       "raster_rel": 8,
       "rt_rel": null
-    }
+    },
+    "summary_en": "Entry discrete-GPU laptop.",
+    "summary_ja": "入門 dGPU ノート。"
   },
   {
     "id": "nvidia-gtx-1660-ti-laptop-80w",
@@ -2426,7 +2616,9 @@
     "scores": {
       "raster_rel": 13,
       "rt_rel": null
-    }
+    },
+    "summary_en": "GTX 1660 Ti Laptop.",
+    "summary_ja": "GTX 1660 Ti Laptop。"
   },
   {
     "id": "nvidia-rtx-2060-laptop-90w",
@@ -2453,7 +2645,9 @@
     "scores": {
       "raster_rel": 17,
       "rt_rel": 11
-    }
+    },
+    "summary_en": "RTX 2060 Laptop.",
+    "summary_ja": "RTX 2060 Laptop。"
   },
   {
     "id": "nvidia-rtx-2070-max-q-80w",
@@ -2481,7 +2675,9 @@
     "scores": {
       "raster_rel": 18,
       "rt_rel": 12
-    }
+    },
+    "summary_en": "Max-Q thin gaming laptops.",
+    "summary_ja": "Max-Q 薄型ゲーミングノート。"
   },
   {
     "id": "nvidia-rtx-2080-laptop-150w",
@@ -2508,7 +2704,9 @@
     "scores": {
       "raster_rel": 26,
       "rt_rel": 18
-    }
+    },
+    "summary_en": "RTX 2080 Laptop.",
+    "summary_ja": "RTX 2080 Laptop。"
   },
   {
     "id": "nvidia-rtx-3050-laptop-95w",
@@ -2535,7 +2733,9 @@
     "scores": {
       "raster_rel": 15,
       "rt_rel": 10
-    }
+    },
+    "summary_en": "4GB VRAM is a tight squeeze.",
+    "summary_ja": "4GB VRAM は厳しい。"
   },
   {
     "id": "nvidia-rtx-3060-laptop-130w",
@@ -2563,7 +2763,9 @@
     "scores": {
       "raster_rel": 25,
       "rt_rel": 19
-    }
+    },
+    "summary_en": "30-series gaming-laptop mainstay.",
+    "summary_ja": "30 シリーズゲーミングノートの主力。"
   },
   {
     "id": "nvidia-rtx-3070-laptop-140w",
@@ -2590,7 +2792,9 @@
     "scores": {
       "raster_rel": 31,
       "rt_rel": 25
-    }
+    },
+    "summary_en": "RTX 3070 Laptop.",
+    "summary_ja": "RTX 3070 Laptop。"
   },
   {
     "id": "nvidia-rtx-3080-laptop-165w",
@@ -2617,7 +2821,9 @@
     "scores": {
       "raster_rel": 38,
       "rt_rel": 31
-    }
+    },
+    "summary_en": "16GB VRAM; the die is a desktop 3070.",
+    "summary_ja": "16GB VRAM。ダイはデスクトップ 3070。"
   },
   {
     "id": "amd-rx-6800m",
@@ -2644,6 +2850,8 @@
     "scores": {
       "raster_rel": 35,
       "rt_rel": 20
-    }
+    },
+    "summary_en": "AMD mobile high-end, few models.",
+    "summary_ja": "AMD モバイル上位。搭載機は少ない。"
   }
 ]

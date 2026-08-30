@@ -7,6 +7,7 @@ import { rel as fmtRel, yearOf } from '@/utils/format'
 import ScoreBar from '@/components/ScoreBar.vue'
 import BrandLogo from '@/components/BrandLogo.vue'
 import { useCompare } from '@/stores/compare'
+import { UiCheckbox } from '@/components/ui'
 import { useI18n, displayName } from '@/i18n'
 
 const props = defineProps<{ category: Category; rows: RankedRow[]; sort: string; dir: 'asc' | 'desc' }>()
@@ -90,7 +91,7 @@ function currentScore(row: RankedRow): string {
                 <ScoreBar v-else :value="r.rel[c.key]" :raw="c.raw ? c.raw(r) : null" :dim="c.key !== sort" />
               </td>
               <td class="px-3 py-3 text-center" @click.stop>
-                <input type="checkbox" class="accent-accent w-4 h-4 cursor-pointer" :checked="compare.has(category, r.item.id)" @change="compare.toggle(category, r.item.id)" />
+                <UiCheckbox size="sm" :model-value="compare.has(category, r.item.id)" :aria-label="t('col.compare')" @update:model-value="compare.toggle(category, r.item.id)" />
               </td>
             </tr>
           </tbody>
@@ -113,7 +114,7 @@ function currentScore(row: RankedRow): string {
           <div class="text-[10px] text-muted uppercase tracking-wide">{{ sortLabel }}</div>
           <div class="font-bold text-accent">{{ currentScore(r) }}</div>
         </div>
-        <input type="checkbox" class="accent-accent w-5 h-5 shrink-0" :checked="compare.has(category, r.item.id)" @click.stop @change="compare.toggle(category, r.item.id)" />
+        <UiCheckbox size="sm" :model-value="compare.has(category, r.item.id)" :aria-label="t('col.compare')" @update:model-value="compare.toggle(category, r.item.id)" />
       </div>
     </div>
   </div>
