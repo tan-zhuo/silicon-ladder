@@ -54,6 +54,12 @@ const specRows = computed<SpecRow[]>(() => {
 })
 const scoreKeys = computed(() => (cat.value && cat.value !== 'psu' ? SORT_DEFS[cat.value].filter((s) => s.key !== 'value') : []))
 const best = (key: string) => Math.max(...rows.value.map((r) => r.rel[key] ?? -1))
+function delta(key: string, row: RankedRow): string | null {
+  const base = rows.value[0]?.rel[key]; const v = row.rel[key]
+  if (row === rows.value[0] || base == null || v == null || base === 0) return null
+  const d = ((v as number) / (base as number) - 1) * 100
+  return (d >= 0 ? '+' : '') + d.toFixed(0) + '%'
+}
 
 useSeo(() => ({
   title: items.value.length >= 2 ? `${items.value.map((i) => displayName(i)).join(' vs ')} · ${t('compare.title')}` : t('compare.title'),
@@ -90,10 +96,10 @@ useSeo(() => ({
             <tr><td :colspan="items.length + 1" class="px-4 pt-3 pb-1 kicker">{{ t('compare.specs') }}</td></tr>
             <tr v-for="r in specRows" :key="r.label" class="border-b border-line/50">
               <td class="px-4 py-2.5 text-muted">{{ r.label }}</td>
-              <td v-for="(v, i) in r.values" :key="i" class="px-4 py-2.5 font-medium">{{ v }}</td>
+              <td v-for="(v, i) in r.values" :key="i" class="px-4 py-2.5 font-medium" :class="i > 0 && v !== r.values[0] ? 'bg-amber-500/[.07]' : ''">{{ v }}</td>
             </tr>
             <template v-if="scoreKeys.length">
-              <tr><td :colspan="items.length + 1" class="px-4 pt-4 pb-1 kicker">{{ t('compare.scores') }}</td></tr>
+              <tr><td :colspan="items.length + 1" class="px-4 pt-4 pb-1 kicker">{{ t('compare.scores') }} <span class="text-muted font-normal normal-case tracking-normal">· {{ t('rel.vsFirst') }}</span></td></tr>
               <tr v-for="s in scoreKeys" :key="s.key" class="border-b border-line/50 last:border-0">
                 <td class="px-4 py-3 text-muted">{{ t('sort.' + s.key) }}</td>
                 <td v-for="row in rows" :key="row.item.id" class="px-4 py-3">
@@ -102,6 +108,7 @@ useSeo(() => ({
                       <div v-if="row.rel[s.key] != null" class="h-full rounded-full" :style="{ width: Math.min(100, row.rel[s.key] as number) + '%', background: row.rel[s.key] === best(s.key) ? 'var(--bar-fill)' : 'var(--bar-fill-dim)' }" />
                     </div>
                     <span class="w-12 text-right font-medium" :class="row.rel[s.key] === best(s.key) ? 'text-accent' : ''">{{ s.key === 'latency' && row.raw.latency != null ? row.raw.latency + 'ns' : fmtRel(row.rel[s.key]) }}</span>
+                    <span class="w-12 text-right text-xs" :class="delta(s.key, row)?.startsWith('+') ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'">{{ delta(s.key, row) ?? '' }}</span>
                   </div>
                 </td>
               </tr>

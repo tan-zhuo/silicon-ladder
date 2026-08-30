@@ -52,7 +52,25 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
 
 <template>
   <div class="card overflow-hidden">
-    <div class="overflow-x-auto">
+    <!-- 移动端：单列紧凑天梯 -->
+    <div class="md:hidden">
+      <div v-for="(band, bi) in bands" :key="'m' + band.hi" class="border-b border-line/60 last:border-0" :class="band.count ? 'px-3 py-2' : 'h-2'" :style="{ background: `rgb(var(--c-accent) / ${(0.06 * (1 - bi / bands.length)).toFixed(3)})` }">
+        <div v-if="band.count" class="text-[11px] text-muted mb-1.5"><b class="text-fg">{{ band.hi }}</b> – {{ band.lo }}</div>
+        <div class="space-y-1.5">
+          <div v-for="r in brands.flatMap(b => band.cells[b]).sort((a, b) => a.rank - b.rank)" :key="r.item.id" class="flex items-center gap-2" @click="go(r)">
+            <span class="text-[11px] text-muted w-7">#{{ r.rank }}</span>
+            <BrandLogo :brand="r.item.brand" :size="14" />
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-1.5 text-sm"><span class="font-semibold truncate">{{ displayName(r.item) }}</span><span v-if="formBadge(category, r)" class="badge !py-0">{{ formBadge(category, r) }}</span></div>
+              <div class="h-2 rounded-full overflow-hidden mt-1" style="background: var(--bar-track)"><div class="h-full rounded-full" :style="{ width: score(r) + '%', background: brandColor(r.item.brand) }" /></div>
+            </div>
+            <span class="text-sm font-bold w-10 text-right">{{ fmtRel(score(r)) }}</span>
+            <input type="checkbox" class="accent-accent w-4 h-4" :checked="compare.has(category, r.item.id)" @click.stop @change="compare.toggle(category, r.item.id)" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overflow-x-auto hidden md:block">
       <div class="min-w-[640px]">
         <!-- 品牌表头 -->
         <div class="grid border-b border-line bg-card2" :style="{ gridTemplateColumns: gridCols }">

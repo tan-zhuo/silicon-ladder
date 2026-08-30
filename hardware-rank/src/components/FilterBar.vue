@@ -30,6 +30,21 @@ function reset() {
   emit('update:modelValue', { ...props.modelValue, brand: [], gen: '', q: '', tdpMin: null, tdpMax: null, tgpTier: '', interface: '', wattMin: null, wattMax: null, tier: '', atx31: false, yearMin: null, yearMax: null })
 }
 const IFACES = ['pcie5', 'pcie4', 'pcie3', 'sata', 'sata-hdd']
+const chips = computed(() => {
+  const f = props.modelValue
+  const out: { label: string; clear: () => void }[] = []
+  for (const b of f.brand) out.push({ label: b, clear: () => toggleBrand(b) })
+  if (f.gen) out.push({ label: f.gen, clear: () => set('gen', '') })
+  if (f.yearMin !== null || f.yearMax !== null) out.push({ label: `${t('chips.era')} ${f.yearMin ?? ''}–${f.yearMax ?? ''}`, clear: () => emit('update:modelValue', { ...f, yearMin: null, yearMax: null }) })
+  if (f.tdpMin !== null || f.tdpMax !== null) out.push({ label: `${t('chips.tdp')} ${f.tdpMin ?? ''}–${f.tdpMax ?? ''}W`, clear: () => emit('update:modelValue', { ...f, tdpMin: null, tdpMax: null }) })
+  if (f.tgpTier) out.push({ label: `TGP ${f.tgpTier}`, clear: () => set('tgpTier', '') })
+  if (f.interface) out.push({ label: ifaceLabel(f.interface), clear: () => set('interface', '') })
+  if (f.wattMin !== null || f.wattMax !== null) out.push({ label: `${t('chips.watt')} ${f.wattMin ?? ''}–${f.wattMax ?? ''}W`, clear: () => emit('update:modelValue', { ...f, wattMin: null, wattMax: null }) })
+  if (f.tier) out.push({ label: `Tier ${f.tier}`, clear: () => set('tier', '') })
+  if (f.atx31) out.push({ label: 'ATX 3.1', clear: () => set('atx31', false) })
+  if (f.q) out.push({ label: `${t('chips.q')} “${f.q}”`, clear: () => set('q', '') })
+  return out
+})
 </script>
 
 <template>
@@ -43,6 +58,11 @@ const IFACES = ['pcie5', 'pcie4', 'pcie3', 'sata', 'sata-hdd']
       <button v-if="activeCount || modelValue.q" class="btn-ghost hidden md:inline-flex" @click="reset">{{ t('filter.clear') }}</button>
     </div>
 
+    <div v-if="chips.length" class="mt-3 flex flex-wrap items-center gap-1.5">
+      <span class="text-xs text-muted">{{ t('chips.active') }}</span>
+      <button v-for="c in chips" :key="c.label" class="pill pill-active !py-0.5 !text-xs inline-flex items-center gap-1" @click="c.clear()">{{ c.label }}<span class="opacity-70">×</span></button>
+      <button class="text-xs text-muted hover:text-fg underline underline-offset-2 ml-1" @click="reset">{{ t('chips.clear') }}</button>
+    </div>
     <div class="mt-3 flex-col gap-2.5" :class="open ? 'flex' : 'hidden md:flex'">
       <div class="flex flex-wrap items-center gap-1.5">
         <span class="text-xs text-muted min-w-[3rem] pr-1 shrink-0 whitespace-nowrap">{{ t('filter.brand') }}</span>

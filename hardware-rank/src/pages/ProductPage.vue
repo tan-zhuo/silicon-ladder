@@ -94,6 +94,25 @@ const platformRows = computed<Row[]>(() => {
     case 'psu': return psuPlatform(it as Psu)
   }
 })
+/** 直接竞品：同池、其他品牌优先、发布 ±1 年、综合分差 ≤ 10 */
+const rivals = computed(() => {
+  const me = row.value
+  if (!me || me.rel.overall == null) return []
+  const y = Number(me.item.release.slice(0, 4))
+  const cand = ranked.value.filter((r) => r.item.id !== me.item.id && r.rel.overall != null && Math.abs(Number(r.item.release.slice(0, 4)) - y) <= 1 && Math.abs((r.rel.overall as number) - (me.rel.overall as number)) <= 10)
+  cand.sort((a, b) => Number(a.item.brand === me.item.brand) - Number(b.item.brand === me.item.brand) || Math.abs((a.rel.overall as number) - (me.rel.overall as number)) - Math.abs((b.rel.overall as number) - (me.rel.overall as number)))
+  return cand.slice(0, 4)
+})
+/** 同系列前后代：同品牌 + 同 series，按发布排序 */
+const lineage = computed(() => {
+  const it = item.value as (Cpu | Gpu) | undefined
+  if (!it || !('series' in it)) return { prev: null, next: null }
+  const same = (catalog.byCategory(category.value) as (Cpu | Gpu)[]).filter((x) => x.form === it.form && x.brand === it.brand && x.series === it.series).sort((a, b) => a.release.localeCompare(b.release))
+  const i = same.findIndex((x) => x.id === it.id)
+  return { prev: i > 0 ? same[i - 1] : null, next: i >= 0 && i < same.length - 1 ? same[i + 1] : null }
+})
+const rowOf = (id: string) => scored.value.find((r) => r.item.id === id)
+
 const inCompare = computed(() => item.value ? compare.has(category.value, item.value.id) : false)
 const tags = computed(() => ((item.value as { tags?: string[] } | undefined)?.tags ?? []).filter((x) => x !== '历史'))
 
@@ -186,6 +205,37 @@ useSeo(() => {
           <dd><div>{{ r.value }}</div><div v-if="r.note" class="text-xs text-muted mt-0.5">{{ r.note }}</div></dd>
         </div>
       </dl>
+    </section>
+
+    <section v-if="rivals.length || lineage.prev || lineage.next" class="grid lg:grid-cols-3 gap-4">
+      <div v-if="rivals.length" class="card p-5 lg:col-span-2">
+        <h2 class="font-bold">{{ t('rel.rivals') }}</h2>
+        <p class="text-xs text-muted mt-0.5 mb-3">{{ t('rel.rivalsDesc') }}</p>
+        <div class="divide-y divide-line/60">
+          <router-link v-for="r in rivals" :key="r.item.id" :to="`/product/${category}/${r.item.id}`" class="flex items-center gap-3 py-2 group text-sm">
+            <BrandLogo :brand="r.item.brand" :size="16" />
+            <span class="font-medium group-hover:text-accent flex-1 truncate">{{ displayName(r.item) }}</span>
+            <span class="text-xs text-muted">{{ r.item.release }}</span>
+            <span class="text-xs text-muted">#{{ r.rank }}</span>
+            <span class="w-24 h-1.5 rounded-full overflow-hidden" style="background: var(--bar-track)"><span class="block h-full" :style="{ width: (r.rel.overall ?? 0) + '%', background: 'var(--bar-fill)' }" /></span>
+            <span class="w-10 text-right font-medium">{{ r.rel.overall?.toFixed(1) }}</span>
+            <span class="w-14 text-right text-xs" :class="(r.rel.overall ?? 0) >= (row!.rel.overall ?? 0) ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'">{{ ((r.rel.overall ?? 0) - (row!.rel.overall ?? 0) >= 0 ? '+' : '') + ((r.rel.overall ?? 0) - (row!.rel.overall ?? 0)).toFixed(1) }}</span>
+          </router-link>
+        </div>
+      </div>
+      <div v-if="lineage.prev || lineage.next" class="card p-5">
+        <h2 class="font-bold mb-3">{{ t('rel.lineage') }}</h2>
+        <div class="space-y-3 text-sm">
+          <div v-for="[k, x] in [['prev', lineage.prev], ['next', lineage.next]] as const" :key="k">
+            <div class="text-[11px] text-muted uppercase tracking-wide">{{ t('rel.' + k) }}</div>
+            <router-link v-if="x" :to="`/product/${category}/${x.id}`" class="flex items-center gap-2 mt-1 group">
+              <BrandLogo :brand="x.brand" :size="16" /><span class="font-medium group-hover:text-accent flex-1 truncate">{{ displayName(x) }}</span>
+              <span class="text-xs text-muted">{{ x.release }}</span><span class="w-10 text-right">{{ rowOf(x.id)?.rel.overall?.toFixed(1) ?? '—' }}</span>
+            </router-link>
+            <div v-else class="text-muted mt-1">—</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section v-if="similar.length">

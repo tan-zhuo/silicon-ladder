@@ -3,8 +3,10 @@ import { ref, computed } from 'vue'
 import AppLogo from '@/components/AppLogo.vue'
 import { useTheme } from '@/stores/theme'
 import { useI18n, LOCALES } from '@/i18n'
+import GlobalSearch from '@/components/GlobalSearch.vue'
 
 const open = ref(false)
+const searchOpen = ref(false)
 const theme = useTheme()
 const { t, locale, setLocale } = useI18n()
 const links = computed(() => [
@@ -39,6 +41,10 @@ const links = computed(() => [
       </nav>
 
       <div class="flex items-center gap-1.5 lg:ml-2">
+        <button class="btn-ghost !px-2.5 gap-2" :title="t('search.title') + ' (⌘K)'" @click="searchOpen = true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" /><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+          <span class="hidden xl:inline text-xs">{{ t('search.shortcut') }}</span><kbd class="hidden xl:inline badge !py-0">⌘K</kbd>
+        </button>
         <label class="relative inline-flex items-center btn-ghost !pl-2 !pr-7 cursor-pointer" :title="t('lang')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" class="mr-1.5 shrink-0"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" /><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18" stroke="currentColor" stroke-width="1.8" /></svg>
           <span class="text-xs">{{ LOCALES.find(l => l.key === locale)?.label }}</span>
@@ -60,4 +66,5 @@ const links = computed(() => [
       <router-link v-for="l in links" :key="l.to" :to="l.to" class="px-3 py-2 rounded-lg text-muted hover:text-fg" active-class="!text-accent bg-accent/10">{{ l.label }}</router-link>
     </nav>
   </header>
+  <GlobalSearch v-model="searchOpen" />
 </template>

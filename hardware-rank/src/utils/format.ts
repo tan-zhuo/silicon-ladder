@@ -1,4 +1,4 @@
-import { t } from '@/i18n'
+import { t, locale } from '@/i18n'
 
 export const DASH = '—'
 
@@ -10,7 +10,10 @@ export function rel(v: number | null | undefined): string {
   return v === null || v === undefined ? DASH : v.toFixed(1)
 }
 export function price(v: number | null | undefined): string {
-  return v === null || v === undefined ? DASH : `¥${v.toLocaleString('en-US')}`
+  if (v === null || v === undefined) return DASH
+  const loc = locale.value === 'zh' ? 'zh-CN' : locale.value === 'ja' ? 'ja-JP' : 'en-US'
+  const s = new Intl.NumberFormat(loc, { style: 'currency', currency: 'CNY', maximumFractionDigits: 0 }).format(v)
+  return locale.value === 'zh' ? s : s.replace(/^(CN¥|￥|¥|CNY)\s?/, 'CN¥')
 }
 export function bool(v: boolean | null | undefined): string {
   if (v === null || v === undefined) return DASH
