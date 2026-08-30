@@ -86,10 +86,7 @@ const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
       <!-- 底栏 -->
       <div class="mt-10 pt-6 border-t border-line text-xs text-muted space-y-1.5">
         <p>{{ t('footer.disclaimer') }} {{ t('footerx.noAffiliation') }}</p>
-        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-          <span>{{ t('footerx.copyright', { y: year }) }}</span>
-          <span>{{ t('footerx.builtWith') }}</span>
-        </div>
+        <div>{{ t('footerx.copyright', { y: year }) }}</div>
       </div>
     </div>
   </footer>
