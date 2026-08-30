@@ -65,3 +65,13 @@ export function tagLabel(tag: string): string {
   const v = get(messages[locale.value], 'tags.' + tag)
   return typeof v === 'string' ? v : tag
 }
+
+/** 去掉 /en /ja 前缀 */
+export function stripLocale(path: string): string {
+  return path.replace(/^\/(en|ja)(?=\/|$)/, '') || '/'
+}
+/** 为路径加上语言前缀（zh 无前缀） */
+export function localizePath(path: string, l: Locale = locale.value): string {
+  const base = stripLocale(path)
+  return l === 'zh' ? base : `/${l}${base === '/' ? '' : base}`
+}

@@ -2,13 +2,17 @@
 import { ref, computed } from 'vue'
 import AppLogo from '@/components/AppLogo.vue'
 import { useTheme } from '@/stores/theme'
-import { useI18n, LOCALES } from '@/i18n'
+import { useI18n, LOCALES, localizePath, type Locale } from '@/i18n'
+import { useRoute, useRouter } from 'vue-router'
 import GlobalSearch from '@/components/GlobalSearch.vue'
 import { UiSelect } from '@/components/ui'
 
 const open = ref(false)
 const searchOpen = ref(false)
 const theme = useTheme()
+const route = useRoute()
+const router = useRouter()
+function switchLang(l: Locale) { setLocale(l); router.replace({ path: localizePath(route.path, l), query: route.query }) }
 const { t, locale, setLocale } = useI18n()
 const links = computed(() => [
   { to: '/rank/cpu', label: t('nav.cpu') },
@@ -46,7 +50,7 @@ const links = computed(() => [
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" /><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
           <span class="hidden xl:inline text-xs">{{ t('search.shortcut') }}</span><kbd class="hidden xl:inline badge !py-0">⌘K</kbd>
         </button>
-        <UiSelect :model-value="locale" :options="LOCALES.map(l => ({ value: l.key, label: l.label }))" :aria-label="t('lang')" align="right" @update:model-value="setLocale($event as any)">
+        <UiSelect :model-value="locale" :options="LOCALES.map(l => ({ value: l.key, label: l.label }))" :aria-label="t('lang')" align="right" @update:model-value="switchLang($event as Locale)">
           <template #prefix><svg width="15" height="15" viewBox="0 0 24 24" fill="none" class="text-muted"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" /><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18" stroke="currentColor" stroke-width="1.8" /></svg></template>
         </UiSelect>
         <button class="btn-ghost !px-2.5" :title="t('theme.toggle')" :aria-label="t('theme.toggle')" @click="theme.toggle()">

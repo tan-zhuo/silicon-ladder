@@ -1,4 +1,5 @@
 import { watchEffect, onUnmounted, type Ref } from 'vue'
+import { locale, localizePath, stripLocale } from '@/i18n'
 
 export const SITE_URL = 'https://silicon-ladder.vercel.app'
 export const SITE_NAME = 'Silicon Ladder'
@@ -17,18 +18,25 @@ function upsertMeta(attr: 'name' | 'property', key: string, content: string) {
   if (!el) { el = document.createElement('meta'); el.setAttribute(attr, key); document.head.appendChild(el) }
   el.setAttribute('content', content)
 }
-function upsertLink(rel: string, href: string) {
-  let el = document.head.querySelector<HTMLLinkElement>(`link[rel="${rel}"]`)
-  if (!el) { el = document.createElement('link'); el.setAttribute('rel', rel); document.head.appendChild(el) }
+function upsertLink(rel: string, href: string, hreflang?: string) {
+  const sel = hreflang ? `link[rel="${rel}"][hreflang="${hreflang}"]` : `link[rel="${rel}"]`
+  let el = document.head.querySelector<HTMLLinkElement>(sel)
+  if (!el) { el = document.createElement('link'); el.setAttribute('rel', rel); if (hreflang) el.setAttribute('hreflang', hreflang); document.head.appendChild(el) }
   el.setAttribute('href', href)
 }
 
 export function applySeo(s: SeoInput) {
   const full = s.title.includes(SITE_NAME) ? s.title : `${s.title} · ${SITE_NAME}`
   document.title = full
-  const url = SITE_URL + s.path
+  const base = stripLocale(s.path)
+  const url = SITE_URL + localizePath(base, locale.value)
   upsertMeta('name', 'description', s.description)
   upsertLink('canonical', url)
+  upsertLink('alternate', SITE_URL + localizePath(base, 'zh'), 'zh-CN')
+  upsertLink('alternate', SITE_URL + localizePath(base, 'en'), 'en')
+  upsertLink('alternate', SITE_URL + localizePath(base, 'ja'), 'ja')
+  upsertLink('alternate', SITE_URL + localizePath(base, 'zh'), 'x-default')
+  upsertMeta('property', 'og:locale', locale.value === 'zh' ? 'zh_CN' : locale.value === 'ja' ? 'ja_JP' : 'en_US')
   upsertMeta('property', 'og:title', full)
   upsertMeta('property', 'og:description', s.description)
   upsertMeta('property', 'og:url', url)
