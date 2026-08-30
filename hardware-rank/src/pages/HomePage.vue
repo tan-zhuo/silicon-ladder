@@ -78,9 +78,9 @@ useSeo(() => ({
         </div>
       </div>
     </div>
-    <div class="relative mt-10 grid grid-cols-2 sm:grid-cols-5 gap-3 max-w-3xl">
-      <div v-for="s in [[all.length, t('home.statItems')], [catalog.cpus.length, t('home.statCpu')], [catalog.gpus.length, t('home.statGpu')], [years, t('home.statSpan')], [catalog.meta.updated, t('home.statUpdated')]]" :key="String(s[1])">
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight">{{ s[0] }}</div>
+    <div class="relative mt-10 flex flex-wrap gap-x-10 gap-y-4">
+      <div v-for="s in [[all.length, t('home.statItems')], [catalog.cpus.length, t('home.statCpu')], [catalog.gpus.length, t('home.statGpu')], [years, t('home.statSpan')], [catalog.meta.updated, t('home.statUpdated')]]" :key="String(s[1])" class="whitespace-nowrap">
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight tabular-nums">{{ s[0] }}</div>
         <div class="text-xs text-muted mt-0.5">{{ s[1] }}</div>
       </div>
     </div>
@@ -97,7 +97,7 @@ useSeo(() => ({
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path :d="c.icon" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
         </div>
         <div class="flex items-baseline gap-2"><span class="font-bold text-lg group-hover:text-accent transition-colors">{{ c.title }}</span><span v-if="c.count" class="text-xs text-muted">{{ c.count }}</span></div>
-        <div class="text-sm text-muted mt-1">{{ c.desc }}</div>
+        <div class="text-sm text-muted mt-1 truncate">{{ c.desc }}</div>
       </router-link>
     </div>
   </section>
@@ -105,7 +105,7 @@ useSeo(() => ({
   <!-- 榜首 -->
   <section class="mt-12">
     <div class="mb-4"><h2 class="text-xl font-bold">{{ t('home.sectionTop') }}</h2><p class="text-sm text-muted">{{ t('home.sectionTopDesc') }}</p></div>
-    <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
+    <div class="grid md:grid-cols-2 2xl:grid-cols-4 gap-4">
       <div v-for="tp in tops" :key="tp.cat + tp.form" class="card p-4">
         <div class="flex items-center justify-between mb-3">
           <div class="font-semibold">{{ formLabel(tp.form) }} {{ catLabel(tp.cat) }}</div>
@@ -116,8 +116,8 @@ useSeo(() => ({
             <span class="w-5 text-sm font-bold" :style="{ color: r.rank === 1 ? 'var(--gold)' : r.rank === 2 ? 'var(--silver)' : 'var(--bronze)' }">{{ r.rank }}</span>
             <BrandLogo :brand="r.item.brand" :size="16" />
             <span class="flex-1 text-sm font-medium truncate group-hover:text-accent">{{ displayName(r.item) }}</span>
-            <div class="w-16 h-1.5 rounded-full overflow-hidden" style="background: var(--bar-track)"><div class="h-full" :style="{ width: (r.rel.overall ?? 0) + '%', background: 'var(--bar-fill)' }" /></div>
-            <span class="text-xs w-9 text-right">{{ fmtRel(r.rel.overall) }}</span>
+            <div class="w-20 h-1.5 rounded-full overflow-hidden shrink-0" style="background: var(--bar-track)"><div class="h-full" :style="{ width: (r.rel.overall ?? 0) + '%', background: 'var(--bar-fill)' }" /></div>
+            <span class="text-xs w-9 text-right shrink-0 tabular-nums">{{ fmtRel(r.rel.overall) }}</span>
           </router-link>
         </div>
       </div>

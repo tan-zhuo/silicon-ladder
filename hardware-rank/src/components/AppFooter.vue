@@ -18,9 +18,9 @@ const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
 <template>
   <footer class="border-t border-line mt-16 bg-card2/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-8">
-      <div class="grid gap-10 md:grid-cols-12">
+      <div class="grid gap-10 lg:grid-cols-12">
         <!-- 品牌 -->
-        <div class="md:col-span-4">
+        <div class="lg:col-span-4">
           <router-link to="/" class="flex items-center gap-2.5 font-semibold">
             <AppLogo :size="34" />
             <span class="leading-tight"><span class="block text-base">{{ t('site.name') }}</span><span class="block text-muted font-normal text-[11px] tracking-wide">{{ t('site.tagline') }}</span></span>
@@ -33,11 +33,12 @@ const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
           </dl>
         </div>
 
+        <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
         <!-- 排行榜 -->
-        <div class="md:col-span-3">
+        <div>
           <h3 class="text-xs font-semibold uppercase tracking-widest text-muted mb-3">{{ t('footerx.rankings') }}</h3>
-          <ul class="space-y-2 text-sm">
-            <li v-for="c in CATS" :key="c" class="flex flex-wrap items-baseline gap-x-2">
+          <ul class="space-y-2 text-sm whitespace-nowrap">
+            <li v-for="c in CATS" :key="c" class="flex flex-col">
               <router-link :to="`/rank/${c}`" class="font-medium hover:text-accent">{{ catLabel(c) }}</router-link>
               <span class="text-xs text-muted">
                 <template v-for="(f, i) in FORMS[c]" :key="f.key">
@@ -50,9 +51,9 @@ const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
         </div>
 
         <!-- 天梯 -->
-        <div class="md:col-span-2">
+        <div>
           <h3 class="text-xs font-semibold uppercase tracking-widest text-muted mb-3">{{ t('footerx.ladders') }}</h3>
-          <ul class="space-y-2 text-sm">
+          <ul class="space-y-2 text-sm whitespace-nowrap">
             <li><router-link :to="{ path: '/rank/cpu', query: { view: 'ladder' } }" class="hover:text-accent">{{ t('footerx.desktop') }} CPU</router-link></li>
             <li><router-link :to="{ path: '/rank/cpu', query: { view: 'ladder', form: 'laptop' } }" class="hover:text-accent">{{ t('footerx.laptop') }} CPU</router-link></li>
             <li><router-link :to="{ path: '/rank/gpu', query: { view: 'ladder' } }" class="hover:text-accent">{{ t('footerx.desktop') }} GPU</router-link></li>
@@ -62,10 +63,9 @@ const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
         </div>
 
         <!-- 工具 / 资源 -->
-        <div class="md:col-span-3 grid grid-cols-2 gap-6">
           <div>
             <h3 class="text-xs font-semibold uppercase tracking-widest text-muted mb-3">{{ t('footerx.tools') }}</h3>
-            <ul class="space-y-2 text-sm">
+            <ul class="space-y-2 text-sm whitespace-nowrap">
               <li><router-link to="/compare" class="hover:text-accent">{{ t('nav.compare') }}</router-link></li>
               <li><router-link to="/guide" class="hover:text-accent">{{ t('nav.guide') }}</router-link></li>
               <li><router-link to="/methodology" class="hover:text-accent">{{ t('nav.methodology') }}</router-link></li>
@@ -73,7 +73,7 @@ const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
           </div>
           <div>
             <h3 class="text-xs font-semibold uppercase tracking-widest text-muted mb-3">{{ t('footerx.resources') }}</h3>
-            <ul class="space-y-2 text-sm">
+            <ul class="space-y-2 text-sm whitespace-nowrap">
               <li><a :href="REPO" target="_blank" rel="noopener" class="hover:text-accent inline-flex items-center gap-1">{{ t('footerx.github') }}<svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg></a></li>
               <li><a :href="`${REPO}/tree/main/hardware-rank/public/data`" target="_blank" rel="noopener" class="hover:text-accent">{{ t('footerx.data') }}</a></li>
               <li><a href="/sitemap.xml" class="hover:text-accent">{{ t('footerx.sitemap') }}</a></li>
