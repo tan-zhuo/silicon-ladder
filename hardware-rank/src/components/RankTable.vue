@@ -47,7 +47,7 @@ function currentScore(row: RankedRow): string {
               <th class="text-left px-2 py-3">{{ t('col.model') }}</th>
               <th
                 v-for="c in cols" :key="c.key" class="px-2 py-3 whitespace-nowrap"
-                :class="[c.kind === 'score' || c.align === 'right' ? 'text-right' : 'text-left', c.sortKey ? 'cursor-pointer select-none hover:text-fg' : '', hideCls(c), c.kind === 'score' ? 'w-[9.5rem] xl:w-[11rem]' : c.key === 'spec' ? 'w-[15rem]' : 'w-[6.5rem]']"
+                :class="[c.kind === 'score' || c.align === 'right' ? 'text-right' : 'text-left', c.sortKey ? 'cursor-pointer select-none hover:text-fg' : '', hideCls(c), c.kind === 'score' ? 'w-[7.5rem] xl:w-[9.5rem] 2xl:w-[11rem]' : c.key === 'spec' ? 'w-[14rem]' : 'w-[6rem]']"
                 @click="c.sortKey && emit('sort', c.sortKey)"
               >
                 <span :class="c.sortKey === sort ? 'text-accent' : ''">{{ t('col.' + c.label) }}</span>
@@ -76,7 +76,7 @@ function currentScore(row: RankedRow): string {
                       <span v-if="formBadge(category, r)" class="badge">{{ formBadge(category, r) }}</span>
                       <span v-if="r.item.est" class="badge !text-amber-700 dark:!text-amber-300 !border-amber-500/40">{{ t('product.est') }}</span>
                     </div>
-                    <div class="text-[11px] text-muted mt-0.5 flex items-center gap-1.5">
+                    <div class="text-[11px] text-muted mt-0.5 flex items-center gap-1.5 whitespace-nowrap truncate">
                       <span v-if="genBadge(category, r)">{{ genBadge(category, r) }}</span>
                       <span v-if="genBadge(category, r)">·</span>
                       <span>{{ yearOf(r.item.release) }}</span>
