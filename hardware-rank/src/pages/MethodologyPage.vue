@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { useCatalog } from '@/data/load'
 import { useI18n } from '@/i18n'
+import { useSeo } from '@/seo'
 const catalog = useCatalog()
 const { t } = useI18n()
+
+useSeo(() => ({ title: t('method.title'), description: t('method.p1a'), path: '/methodology' }))
 </script>
 
 <template>

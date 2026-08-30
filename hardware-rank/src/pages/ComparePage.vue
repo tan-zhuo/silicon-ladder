@@ -8,6 +8,7 @@ import { scoreAllPools, SORT_DEFS } from '@/utils/rank'
 import { catLabel, formLabel, ifaceLabel, modularLabel, price, num, iops, bool, capacity, vram, DASH, rel as fmtRel } from '@/utils/format'
 import BrandLogo from '@/components/BrandLogo.vue'
 import { useI18n, displayName } from '@/i18n'
+import { useSeo } from '@/seo'
 
 const route = useRoute()
 const catalog = useCatalog()
@@ -53,6 +54,12 @@ const specRows = computed<SpecRow[]>(() => {
 })
 const scoreKeys = computed(() => (cat.value && cat.value !== 'psu' ? SORT_DEFS[cat.value].filter((s) => s.key !== 'value') : []))
 const best = (key: string) => Math.max(...rows.value.map((r) => r.rel[key] ?? -1))
+
+useSeo(() => ({
+  title: items.value.length >= 2 ? `${items.value.map((i) => displayName(i)).join(' vs ')} · ${t('compare.title')}` : t('compare.title'),
+  description: items.value.length >= 2 ? `${items.value.map((i) => displayName(i)).join(' vs ')} — ${t('compare.scores')}` : t('home.cards.compare'),
+  path: '/compare',
+}))
 </script>
 
 <template>

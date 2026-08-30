@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite",
     "gen:logos": "node scripts/gen-logos.mjs",
-    "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "build": "vue-tsc -b && vite build && node scripts/prerender.mjs",
+    "preview": "vite preview",
+    "prerender": "node scripts/prerender.mjs"
   },
   "dependencies": {
     "pinia": "^2.2.6",

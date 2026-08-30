@@ -9,6 +9,7 @@ import type { Category, AnyItem } from '@/types/hardware'
 import AppLogo from '@/components/AppLogo.vue'
 import BrandLogo from '@/components/BrandLogo.vue'
 import { useI18n, displayName } from '@/i18n'
+import { useSeo, SITE_URL, SITE_NAME } from '@/seo'
 
 const catalog = useCatalog()
 const router = useRouter()
@@ -37,6 +38,17 @@ const tops = computed(() => ([['cpu', 'desktop'], ['gpu', 'desktop'], ['cpu', 'l
   const pool = catalog.byCategory(cat).filter((i) => i.form === form)
   const rows = sortRows(cat, scorePool(cat, pool), 'overall').slice(0, 3)
   return { cat, form, rows }
+}))
+
+useSeo(() => ({
+  title: `${SITE_NAME} — ${t('site.tagline')} · ${t('site.sub')}`,
+  description: t('home.heroDesc'),
+  path: '/',
+  jsonLd: [{
+    '@context': 'https://schema.org', '@type': 'WebSite', name: SITE_NAME, url: SITE_URL,
+    description: t('home.heroDesc'),
+    potentialAction: { '@type': 'SearchAction', target: `${SITE_URL}/rank/cpu?q={search_term_string}`, 'query-input': 'required name=search_term_string' },
+  }],
 }))
 </script>
 

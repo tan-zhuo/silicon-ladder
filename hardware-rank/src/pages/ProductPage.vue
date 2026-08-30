@@ -10,6 +10,7 @@ import ScoreBar from '@/components/ScoreBar.vue'
 import BrandLogo from '@/components/BrandLogo.vue'
 import { cpuPlatform, gpuPlatform, ramPlatform, storagePlatform, psuPlatform, type Row } from '@/data/platforms'
 import { useI18n, displayName } from '@/i18n'
+import { useSeo, breadcrumb, SITE_URL } from '@/seo'
 
 const route = useRoute()
 const router = useRouter()
@@ -95,6 +96,29 @@ const platformRows = computed<Row[]>(() => {
 })
 const inCompare = computed(() => item.value ? compare.has(category.value, item.value.id) : false)
 const tags = computed(() => ((item.value as { tags?: string[] } | undefined)?.tags ?? []).filter((x) => x !== '历史'))
+
+useSeo(() => {
+  const it = item.value
+  if (!it) return null
+  const name = displayName(it)
+  const specText = specs.value.slice(0, 5).map(([k, v]) => `${k} ${v}`).join(' · ')
+  const rank = rankPos.value ? ` #${rankPos.value} ${formLabel(it.form)} ${catLabel(category.value)}` : ''
+  return {
+    title: `${name} ${t('product.specs')}、${t('product.scores')}、${t('product.platform')}`,
+    description: `${it.brand} ${name}（${it.release}）${rank}。${it.summary} ${specText}`,
+    path: `/product/${category.value}/${it.id}`,
+    jsonLd: [
+      breadcrumb([{ name: t('product.home'), path: '/' }, { name: `${formLabel(it.form)} ${catLabel(category.value)}`, path: `/rank/${category.value}` }, { name, path: `/product/${category.value}/${it.id}` }]),
+      {
+        '@context': 'https://schema.org', '@type': 'Product', name, brand: { '@type': 'Brand', name: it.brand },
+        description: it.summary, category: `${formLabel(it.form)} ${catLabel(category.value)}`, releaseDate: it.release,
+        url: `${SITE_URL}/product/${category.value}/${it.id}`, sku: it.id,
+        additionalProperty: specs.value.map(([k, v]) => ({ '@type': 'PropertyValue', name: k, value: v })),
+        ...(it.price_cny ? { offers: { '@type': 'Offer', priceCurrency: 'CNY', price: it.price_cny, availability: 'https://schema.org/InStock' } } : {}),
+      },
+    ],
+  }
+})
 </script>
 
 <template>

@@ -4,6 +4,7 @@ import { useI18n } from '@/i18n'
 import { useCatalog } from '@/data/load'
 import { displayName } from '@/i18n'
 import type { Category } from '@/types/hardware'
+import { useSeo } from '@/seo'
 const { t } = useI18n()
 const catalog = useCatalog()
 const name = (cat: Category, id: string) => { const it = catalog.find(cat, id); return it ? displayName(it) : id }
@@ -13,6 +14,8 @@ const scenes = computed(() => [
   { title: t('guide.s3'), desc: t('guide.s3d'), picks: [['cpu', 'apple-m4-pro-14', 'c1'], ['cpu', 'amd-ryzen-ai-9-hx-370', 'c2'], ['gpu', 'nvidia-rtx-5070-laptop-80w', 'c3']] },
   { title: t('guide.s4'), desc: t('guide.s4d'), picks: [['cpu', 'amd-ryzen-9-9955hx', 'd1'], ['gpu', 'nvidia-rtx-5080-laptop-150w', 'd2'], ['ram', 'crucial-ddr5-5600-sodimm-32', 'd3']] },
 ] as { title: string; desc: string; picks: [Category, string, string][] }[])
+
+useSeo(() => ({ title: t('guide.title'), description: t('guide.sub'), path: '/guide' }))
 </script>
 
 <template>

@@ -7,6 +7,8 @@ import { SORT_DEFS, FORMS, scorePool, sortRows } from '@/utils/rank'
 import { parseQuery, toQuery, applyFilters, uniq, type FilterState } from '@/utils/filters'
 import { catLabel, formLabel, yearOf } from '@/utils/format'
 import { useI18n } from '@/i18n'
+import { useSeo, breadcrumb, SITE_URL } from '@/seo'
+import { displayName } from '@/i18n'
 import FormTabs from '@/components/FormTabs.vue'
 import SortTabs from '@/components/SortTabs.vue'
 import FilterBar from '@/components/FilterBar.vue'
@@ -65,6 +67,19 @@ const sortLabel = computed(() => t('sort.' + effectiveSort.value))
 const title = computed(() => t('rank.title', { form: formLabel(filters.value.form), cat: catLabel(category.value) }))
 const isLaptop = computed(() => filters.value.form === 'laptop' && (category.value === 'cpu' || category.value === 'gpu'))
 const hasEst = computed(() => rows.value.some((r) => r.item.est))
+
+useSeo(() => ({
+  title: `${title.value} · ${sortLabel.value}`,
+  description: `${title.value}：${rows.value.slice(0, 5).map((r) => displayName(r.item)).join('、')} … ${t('rank.count', { n: rows.value.length })}`,
+  path: `/rank/${category.value}`,
+  jsonLd: [
+    breadcrumb([{ name: t('product.home'), path: '/' }, { name: title.value, path: `/rank/${category.value}` }]),
+    {
+      '@context': 'https://schema.org', '@type': 'ItemList', name: title.value, numberOfItems: rows.value.length,
+      itemListElement: rows.value.slice(0, 50).map((r) => ({ '@type': 'ListItem', position: r.rank, name: displayName(r.item), url: `${SITE_URL}/product/${category.value}/${r.item.id}` })),
+    },
+  ],
+}))
 </script>
 
 <template>
