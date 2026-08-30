@@ -60,6 +60,25 @@ function render(path, l, { title, description, jsonLd = [], body = '', image }) 
 }
 const bc = (l, items) => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map((it, i) => ({ '@type': 'ListItem', position: i + 1, name: it[0], item: SITE + prefix(l) + it[1] })) })
 
+const NA = -1
+const techLines = (cat, i, l) => {
+  const x = i.tech; if (!x) return []
+  const T = { zh: { die: '晶片布局', area: '晶片面积', tr: '晶体管', l2: 'L2', base: '基础频率', boost: '加速频率', pmax: '最大功耗', memc: '内存控制器', pcie: 'PCIe', usd: '首发价', units: '计算单元', sh: '着色器', tmu: 'TMU', rop: 'ROP', rt: 'RT 核心', tc: 'Tensor', bw: '显存带宽', gbps: '显存速率', l2g: 'L2', tf: 'FP32 算力' },
+    en: { die: 'Die layout', area: 'Die area', tr: 'Transistors', l2: 'L2', base: 'Base clock', boost: 'Boost clock', pmax: 'Max power', memc: 'Memory controller', pcie: 'PCIe', usd: 'Launch price', units: 'Compute units', sh: 'Shaders', tmu: 'TMUs', rop: 'ROPs', rt: 'RT cores', tc: 'Tensor', bw: 'Memory bandwidth', gbps: 'Memory speed', l2g: 'L2', tf: 'FP32 compute' },
+    ja: { die: 'ダイ構成', area: 'ダイ面積', tr: 'トランジスタ', l2: 'L2', base: 'ベースクロック', boost: 'ブーストクロック', pmax: '最大電力', memc: 'メモリコントローラ', pcie: 'PCIe', usd: '発売価格', units: '演算ユニット', sh: 'シェーダ', tmu: 'TMU', rop: 'ROP', rt: 'RT コア', tc: 'Tensor', bw: 'メモリ帯域', gbps: 'メモリ速度', l2g: 'L2', tf: 'FP32 演算性能' } }[l]
+  const ok = (v) => v != null && v !== NA
+  const out = []
+  if (cat === 'cpu') {
+    if (ok(x.die)) out.push([T.die, x.die]); if (ok(x.die_mm2)) out.push([T.area, x.die_mm2 + ' mm²']); if (ok(x.transistors_m)) out.push([T.tr, x.transistors_m >= 1000 ? (x.transistors_m / 1000).toFixed(1) + ' B' : x.transistors_m + ' M'])
+    if (ok(x.l2_mb)) out.push([T.l2, x.l2_mb + ' MB']); if (ok(x.base_ghz)) out.push([T.base, x.base_ghz + ' GHz']); if (ok(x.boost_ghz)) out.push([T.boost, x.boost_ghz + ' GHz'])
+    if (ok(x.power_max_w)) out.push([T.pmax, x.power_max_w + ' W (' + x.power_label + ')']); if (ok(x.mem_channels)) out.push([T.memc, x.mem_channels + 'ch ' + (x.mem_max_mt ? x.mem_max_mt + ' MT/s' : '')]); if (ok(x.pcie)) out.push([T.pcie, x.pcie]); if (ok(x.launch_usd)) out.push([T.usd, '$' + x.launch_usd])
+  } else {
+    if (ok(x.die_mm2)) out.push([T.area, x.die_mm2 + ' mm²']); if (ok(x.transistors_m)) out.push([T.tr, x.transistors_m >= 1000 ? (x.transistors_m / 1000).toFixed(1) + ' B' : x.transistors_m + ' M'])
+    if (ok(x.units)) out.push([T.units, x.units]); if (ok(x.shaders)) out.push([T.sh, x.shaders]); if (ok(x.tmus)) out.push([T.tmu, x.tmus]); if (ok(x.rops)) out.push([T.rop, x.rops]); if (ok(x.rt_cores) && x.rt_cores) out.push([T.rt, x.rt_cores]); if (ok(x.tensor_cores) && x.tensor_cores) out.push([T.tc, x.tensor_cores])
+    if (ok(x.base_mhz)) out.push([T.base, x.base_mhz + ' MHz']); if (ok(x.boost_mhz)) out.push([T.boost, x.boost_mhz + ' MHz']); if (ok(x.mem_gbps)) out.push([T.gbps, x.mem_gbps + ' Gbps']); if (ok(x.mem_bw_gbs)) out.push([T.bw, x.mem_bw_gbs + ' GB/s']); if (ok(x.l2_mb)) out.push([T.l2g, x.l2_mb + ' MB']); if (ok(x.tflops_fp32)) out.push([T.tf, x.tflops_fp32 + ' TFLOPS']); if (ok(x.launch_usd)) out.push([T.usd, '$' + x.launch_usd])
+  }
+  return out
+}
 function specLines(cat, i, S) {
   switch (cat) {
     case 'cpu': return [[S.socket, i.socket], [S.cores, i.cores], [S.clocks, i.clocks], [S.tdp, i.tdp_w + 'W'], [S.igpu, i.igpu ?? '—'], [S.l3, i.cache_l3], [S.mem, i.mem], [S.st, i.scores.cb24_st], [S.mt, i.scores.cb24_mt]]
@@ -83,7 +102,7 @@ for (const l of LANGS) {
   }
   // 详情页
   for (const cat of Object.keys(data)) for (const i of data[cat]) {
-    const lines = specLines(cat, i, t.spec).filter(([, v]) => v !== null && v !== undefined)
+    const lines = [...specLines(cat, i, t.spec).filter(([, v]) => v !== null && v !== undefined), ...techLines(cat, i, l)]
     const n = nameOf(i, l); const C = t.cat[cat]; const F = t.form[i.form]
     const title = t.prodTitle(n, F, C); const desc = t.prodDesc(i.brand, n, i.release, sumOf(i, l), lines.slice(0, 5).map(([k, v]) => `${k} ${v}`).join(', '))
     const body = `<h1>${esc(n)}</h1><p>${esc(i.brand)} · ${esc(F)} ${esc(C)} · ${esc(i.release)}</p><p>${esc(sumOf(i, l))}</p><table>` + lines.map(([k, v]) => `<tr><th align="left">${esc(k)}</th><td>${esc(v)}</td></tr>`).join('') + `</table><p><a href="${prefix(l)}/rank/${cat}">${esc(t.viewAll(C))}</a></p>`
