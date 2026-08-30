@@ -18,6 +18,7 @@ const { t } = useI18n()
 const cols = computed(() => COLUMNS[props.category])
 const sortLabel = computed(() => t('sort.' + props.sort))
 
+const hideCls = (c: { hide?: 'lg' | 'xl' }) => (c.hide === 'lg' ? 'hidden lg:table-cell' : c.hide === 'xl' ? 'hidden xl:table-cell' : '')
 function go(row: RankedRow) { router.push(`/product/${props.category}/${row.item.id}`) }
 function rankStyle(r: number) {
   if (r === 1) return { color: 'var(--gold)' }
@@ -38,15 +39,15 @@ function currentScore(row: RankedRow): string {
 
     <!-- 桌面端表格 -->
     <div v-else class="card overflow-hidden hidden md:block">
-      <div class="overflow-x-auto">
-        <table class="w-full text-sm">
+      <div>
+        <table class="w-full text-sm table-fixed">
           <thead class="text-[11px] uppercase tracking-wider text-muted bg-card2">
             <tr class="border-b border-line">
               <th class="text-left pl-5 pr-2 py-3 w-14">{{ t('col.rank') }}</th>
               <th class="text-left px-2 py-3">{{ t('col.model') }}</th>
               <th
-                v-for="c in cols" :key="c.key" class="px-3 py-3 whitespace-nowrap"
-                :class="[c.kind === 'score' || c.align === 'right' ? 'text-right' : 'text-left', c.sortKey ? 'cursor-pointer select-none hover:text-fg' : '']"
+                v-for="c in cols" :key="c.key" class="px-2 py-3 whitespace-nowrap"
+                :class="[c.kind === 'score' || c.align === 'right' ? 'text-right' : 'text-left', c.sortKey ? 'cursor-pointer select-none hover:text-fg' : '', hideCls(c), c.kind === 'score' ? 'w-[9.5rem] xl:w-[11rem]' : c.key === 'spec' ? 'w-[15rem]' : 'w-[6.5rem]']"
                 @click="c.sortKey && emit('sort', c.sortKey)"
               >
                 <span :class="c.sortKey === sort ? 'text-accent' : ''">{{ t('col.' + c.label) }}</span>
@@ -70,8 +71,8 @@ function currentScore(row: RankedRow): string {
                 <div class="flex items-center gap-2.5">
                   <BrandLogo :brand="r.item.brand" :size="20" />
                   <div class="min-w-0">
-                    <div class="flex items-center gap-1.5">
-                      <router-link :to="`/product/${category}/${r.item.id}`" class="font-semibold whitespace-nowrap group-hover:text-accent" @click.stop>{{ displayName(r.item) }}</router-link>
+                    <div class="flex items-center gap-1.5 min-w-0">
+                      <router-link :to="`/product/${category}/${r.item.id}`" class="font-semibold truncate group-hover:text-accent" :title="displayName(r.item)" @click.stop>{{ displayName(r.item) }}</router-link>
                       <span v-if="formBadge(category, r)" class="badge">{{ formBadge(category, r) }}</span>
                       <span v-if="r.item.est" class="badge !text-amber-700 dark:!text-amber-300 !border-amber-500/40">{{ t('product.est') }}</span>
                     </div>
@@ -83,7 +84,7 @@ function currentScore(row: RankedRow): string {
                   </div>
                 </div>
               </td>
-              <td v-for="c in cols" :key="c.key" class="px-3 py-3" :class="[c.align === 'right' ? 'text-right' : '', c.kind === 'text' ? 'whitespace-nowrap' : '']">
+              <td v-for="c in cols" :key="c.key" class="px-2 py-3" :class="[c.align === 'right' ? 'text-right' : '', c.kind === 'text' ? 'truncate' : '', hideCls(c)]" :title="c.kind === 'text' ? c.text!(r) : undefined">
                 <template v-if="c.kind === 'text'">
                   <span v-if="c.key === 'tier'" class="inline-flex w-7 h-7 items-center justify-center rounded-md font-bold text-xs" :class="{ 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-300': c.text!(r) === 'A', 'bg-sky-500/15 text-sky-700 dark:text-sky-300': c.text!(r) === 'B', 'bg-amber-500/15 text-amber-700 dark:text-amber-300': c.text!(r) === 'C', 'bg-rose-500/15 text-rose-700 dark:text-rose-300': c.text!(r) === 'D' }">{{ c.text!(r) }}</span>
                   <span v-else>{{ c.text!(r) }}</span>

@@ -86,8 +86,8 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
         </div>
       </div>
     </div>
-    <div class="overflow-x-auto hidden md:block">
-      <div ref="exportEl" class="min-w-[640px]">
+    <div class="hidden md:block">
+      <div ref="exportEl">
         <div class="hidden export-only px-4 py-3 border-b border-line items-center gap-3">
           <span class="font-bold">Silicon Ladder</span><span class="text-muted text-sm">{{ formLabel(rows[0]?.item.form ?? '') }} {{ catLabel(category) }} · {{ sortLabel }}</span>
         </div>
@@ -127,12 +127,12 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
                 v-for="r in band.cells[brands[0]]" :key="r.item.id"
                 class="ladder-item group w-full flex items-center justify-end" tabindex="0" @click="go(r)" @keydown.enter="go(r)"
               >
-                <div class="flex items-center gap-2 pr-2 shrink-0">
+                <div class="flex items-center gap-2 pr-2 shrink-0 min-w-0">
                   <span data-no-export class="inline-flex"><UiCheckbox size="sm" :model-value="compare.has(category, r.item.id)" :aria-label="t('col.compare')" @update:model-value="compare.toggle(category, r.item.id)" /></span>
                   <span v-if="r.item.est" class="badge !py-0">{{ t('product.est') }}</span>
                   <span v-if="formBadge(category, r)" class="badge !py-0">{{ formBadge(category, r) }}</span>
-                  <span class="text-[11px] text-muted">{{ yearOf(r.item.release) }}</span>
-                  <span class="text-sm font-semibold whitespace-nowrap group-hover:text-accent">{{ displayName(r.item) }}</span>
+                  <span class="hidden xl:inline text-[11px] text-muted">{{ yearOf(r.item.release) }}</span>
+                  <span class="text-sm font-semibold truncate max-w-[11rem] xl:max-w-none group-hover:text-accent" :title="displayName(r.item)">{{ displayName(r.item) }}</span>
                   <span class="text-[11px] text-muted w-8 text-right">#{{ r.rank }}</span>
                 </div>
                 <div class="relative h-7 flex items-center justify-end rounded-l-md" :style="{ width: score(r) + '%', minWidth: '52px', background: `linear-gradient(270deg, ${brandColor(brands[0])}, ${brandColor(brands[0])}88)` }">
@@ -153,10 +153,10 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
                 <div class="relative h-7 flex items-center rounded-r-md" :style="{ width: score(r) + '%', minWidth: '52px', background: `linear-gradient(90deg, ${brandColor(brands[1])}, ${brandColor(brands[1])}88)` }">
                   <span class="text-white text-xs font-bold pl-2 drop-shadow">{{ fmtRel(score(r)) }}</span>
                 </div>
-                <div class="flex items-center gap-2 pl-2 shrink-0">
+                <div class="flex items-center gap-2 pl-2 shrink-0 min-w-0">
                   <span class="text-[11px] text-muted w-8">#{{ r.rank }}</span>
-                  <span class="text-sm font-semibold whitespace-nowrap group-hover:text-accent">{{ displayName(r.item) }}</span>
-                  <span class="text-[11px] text-muted">{{ yearOf(r.item.release) }}</span>
+                  <span class="text-sm font-semibold truncate max-w-[11rem] xl:max-w-none group-hover:text-accent" :title="displayName(r.item)">{{ displayName(r.item) }}</span>
+                  <span class="hidden xl:inline text-[11px] text-muted">{{ yearOf(r.item.release) }}</span>
                   <span v-if="formBadge(category, r)" class="badge !py-0">{{ formBadge(category, r) }}</span>
                   <span v-if="r.item.est" class="badge !py-0">{{ t('product.est') }}</span>
                   <span data-no-export class="inline-flex"><UiCheckbox size="sm" :model-value="compare.has(category, r.item.id)" :aria-label="t('col.compare')" @update:model-value="compare.toggle(category, r.item.id)" /></span>

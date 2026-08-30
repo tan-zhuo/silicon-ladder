@@ -33,11 +33,11 @@ const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
           </dl>
         </div>
 
-        <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-6 min-w-0 [&>div]:min-w-0">
         <!-- 排行榜 -->
         <div>
           <h3 class="text-xs font-semibold uppercase tracking-widest text-muted mb-3">{{ t('footerx.rankings') }}</h3>
-          <ul class="space-y-2 text-sm whitespace-nowrap">
+          <ul class="space-y-2 text-sm">
             <li v-for="c in CATS" :key="c" class="flex flex-col">
               <router-link :to="`/rank/${c}`" class="font-medium hover:text-accent">{{ catLabel(c) }}</router-link>
               <span class="text-xs text-muted">
@@ -53,7 +53,7 @@ const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
         <!-- 天梯 -->
         <div>
           <h3 class="text-xs font-semibold uppercase tracking-widest text-muted mb-3">{{ t('footerx.ladders') }}</h3>
-          <ul class="space-y-2 text-sm whitespace-nowrap">
+          <ul class="space-y-2 text-sm">
             <li><router-link :to="{ path: '/rank/cpu', query: { view: 'ladder' } }" class="hover:text-accent">{{ t('footerx.desktop') }} CPU</router-link></li>
             <li><router-link :to="{ path: '/rank/cpu', query: { view: 'ladder', form: 'laptop' } }" class="hover:text-accent">{{ t('footerx.laptop') }} CPU</router-link></li>
             <li><router-link :to="{ path: '/rank/gpu', query: { view: 'ladder' } }" class="hover:text-accent">{{ t('footerx.desktop') }} GPU</router-link></li>
@@ -65,7 +65,7 @@ const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
         <!-- 工具 / 资源 -->
           <div>
             <h3 class="text-xs font-semibold uppercase tracking-widest text-muted mb-3">{{ t('footerx.tools') }}</h3>
-            <ul class="space-y-2 text-sm whitespace-nowrap">
+            <ul class="space-y-2 text-sm">
               <li><router-link to="/compare" class="hover:text-accent">{{ t('nav.compare') }}</router-link></li>
               <li><router-link to="/guide" class="hover:text-accent">{{ t('nav.guide') }}</router-link></li>
               <li><router-link to="/methodology" class="hover:text-accent">{{ t('nav.methodology') }}</router-link></li>
@@ -73,11 +73,11 @@ const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
           </div>
           <div>
             <h3 class="text-xs font-semibold uppercase tracking-widest text-muted mb-3">{{ t('footerx.resources') }}</h3>
-            <ul class="space-y-2 text-sm whitespace-nowrap">
+            <ul class="space-y-2 text-sm">
               <li><a :href="REPO" target="_blank" rel="noopener" class="hover:text-accent inline-flex items-center gap-1">{{ t('footerx.github') }}<svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg></a></li>
               <li><a :href="`${REPO}/tree/main/hardware-rank/public/data`" target="_blank" rel="noopener" class="hover:text-accent">{{ t('footerx.data') }}</a></li>
               <li><a href="/sitemap.xml" class="hover:text-accent">{{ t('footerx.sitemap') }}</a></li>
-              <li><a href="https://tanzhuo.xyz" target="_blank" rel="noopener me" class="hover:text-accent inline-flex items-center gap-1">{{ t('footerx.blog') }} · tanzhuo.xyz<svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg></a></li>
+              <li><a href="https://tanzhuo.xyz" target="_blank" rel="noopener me" class="hover:text-accent inline-flex items-center gap-1">{{ t('footerx.blog') }}<svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg></a></li>
             </ul>
           </div>
         </div>

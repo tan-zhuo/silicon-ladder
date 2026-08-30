@@ -52,9 +52,9 @@ useSeo(() => ({ title: t('guide.title'), description: t('guide.sub'), path: '/gu
         </div>
       </div>
 
-      <div v-if="s.table" class="card overflow-x-auto">
+      <div v-if="s.table" class="card overflow-hidden">
         <table class="w-full text-sm">
-          <thead class="bg-card2 text-xs text-muted"><tr><th v-for="h in s.table.head" :key="p(h)" class="text-left px-4 py-2.5 whitespace-nowrap">{{ p(h) }}</th></tr></thead>
+          <thead class="bg-card2 text-xs text-muted"><tr><th v-for="h in s.table.head" :key="p(h)" class="text-left px-4 py-2.5">{{ p(h) }}</th></tr></thead>
           <tbody><tr v-for="(row, i) in s.table.rows" :key="i" class="border-t border-line/60"><td v-for="(c, j) in row" :key="j" class="px-4 py-2.5" :class="j === 0 ? 'font-semibold' : ''">{{ p(c) }}</td></tr></tbody>
         </table>
       </div>

@@ -102,13 +102,13 @@ useSeo(() => ({
 
     <template v-else>
       <div v-if="mixedForm" class="notice-warn">{{ t('compare.mixed') }}</div>
-      <div class="card overflow-x-auto">
-        <table class="w-full text-sm">
+      <div class="card overflow-hidden">
+        <table class="w-full text-sm table-fixed">
           <thead>
             <tr class="border-b border-line bg-card2">
-              <th class="text-left px-4 py-3 text-xs text-muted w-36">{{ t('compare.metric') }}</th>
-              <th v-for="it in items" :key="it.id" class="text-left px-4 py-3 min-w-[170px]">
-                <div class="flex items-center gap-2"><BrandLogo :brand="it.brand" :size="18" /><router-link :to="`/product/${cat}/${it.id}`" class="font-semibold hover:text-accent">{{ displayName(it) }}</router-link></div>
+              <th class="text-left px-3 py-3 text-xs text-muted w-28 lg:w-36">{{ t('compare.metric') }}</th>
+              <th v-for="it in items" :key="it.id" class="text-left px-3 py-3">
+                <div class="flex items-center gap-2"><BrandLogo :brand="it.brand" :size="18" /><router-link :to="`/product/${cat}/${it.id}`" class="font-semibold hover:text-accent truncate" :title="displayName(it)">{{ displayName(it) }}</router-link></div>
                 <div class="text-[11px] text-muted font-normal mt-0.5">{{ formLabel(it.form) }} <button class="ml-1 hover:text-fg underline" @click="compare.remove(it.id)">{{ t('compare.remove') }}</button></div>
               </th>
             </tr>
@@ -117,13 +117,13 @@ useSeo(() => ({
             <tr><td :colspan="items.length + 1" class="px-4 pt-3 pb-1 kicker">{{ t('compare.specs') }}</td></tr>
             <tr v-for="r in specRows" :key="r.label" class="border-b border-line/50">
               <td class="px-4 py-2.5 text-muted">{{ r.label }}</td>
-              <td v-for="(v, i) in r.values" :key="i" class="px-4 py-2.5 font-medium" :class="i > 0 && v !== r.values[0] ? 'bg-amber-500/[.07]' : ''">{{ v }}</td>
+              <td v-for="(v, i) in r.values" :key="i" class="px-3 py-2.5 font-medium break-words" :class="i > 0 && v !== r.values[0] ? 'bg-amber-500/[.07]' : ''">{{ v }}</td>
             </tr>
             <template v-for="g in techCompare" :key="g.group">
               <tr><td :colspan="items.length + 1" class="px-4 pt-4 pb-1 kicker">{{ t('tech.title') }} · {{ g.group }}</td></tr>
               <tr v-for="row in g.rows" :key="row.key" class="border-b border-line/50">
                 <td class="px-4 py-2 text-muted">{{ row.label }}</td>
-                <td v-for="(c, i) in row.cells" :key="i" class="px-4 py-2" :class="[row.bestIdx.includes(i) ? 'text-accent font-semibold' : c.value === '—' ? 'text-muted' : 'font-medium', row.bestIdx.length && !row.bestIdx.includes(i) && c.value !== '—' ? '' : '']">
+                <td v-for="(c, i) in row.cells" :key="i" class="px-3 py-2 break-words" :class="[row.bestIdx.includes(i) ? 'text-accent font-semibold' : c.value === '—' ? 'text-muted' : 'font-medium', row.bestIdx.length && !row.bestIdx.includes(i) && c.value !== '—' ? '' : '']">
                   {{ c.value }}<span v-if="row.bestIdx.includes(i) && row.bestIdx.length < row.cells.length" class="ml-1 text-[10px]">★</span>
                 </td>
               </tr>

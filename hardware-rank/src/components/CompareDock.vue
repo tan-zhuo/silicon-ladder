@@ -20,7 +20,7 @@ const visible = computed(() => compare.ids.length > 0 && route.path !== '/compar
       <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-3">
         <div class="flex-1 min-w-0">
           <div class="text-xs text-muted mb-1">{{ t('dock.basket', { cat: catLabel(compare.category!) }) }}</div>
-          <div class="flex gap-2 overflow-x-auto">
+          <div class="flex flex-wrap gap-2">
             <span v-for="it in items" :key="it!.id" class="inline-flex items-center gap-1 pill !py-1 !text-fg">
               {{ displayName(it!) }}
               <button class="text-muted hover:text-fg ml-0.5" :aria-label="t('dock.remove')" @click="compare.remove(it!.id)">×</button>

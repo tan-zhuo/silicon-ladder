@@ -6,7 +6,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div class="flex gap-2 overflow-x-auto pb-1">
+  <div class="flex flex-wrap gap-2">
     <button
       v-for="o in options" :key="o.key"
       class="pill" :class="{ 'pill-active': o.key === modelValue }"
