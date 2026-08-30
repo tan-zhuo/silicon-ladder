@@ -11,6 +11,7 @@ import BrandLogo from '@/components/BrandLogo.vue'
 import { cpuPlatform, gpuPlatform, ramPlatform, storagePlatform, psuPlatform, type Row } from '@/data/platforms'
 import { cpuTechRows, gpuTechRows, type TechRow } from '@/data/techrows'
 import { shopLinks, shopQuery } from '@/data/shops'
+import ShopLogo from '@/components/ShopLogo.vue'
 import { useI18n, displayName, displaySummary, tagLabel } from '@/i18n'
 import { useSeo, breadcrumb, SITE_URL } from '@/seo'
 
@@ -215,8 +216,9 @@ useSeo(() => {
         <span class="text-xs text-muted">{{ t('shop.search', { q: shopQuery(item) }) }}</span>
       </div>
       <div class="mt-3 flex flex-wrap gap-2">
-        <a v-for="l in shopLinks(item)" :key="l.key" :href="l.url" target="_blank" rel="noopener nofollow sponsored" class="btn-ghost">
-          <span class="badge !py-0">{{ l.region }}</span>{{ l.label }}
+        <a v-for="l in shopLinks(item)" :key="l.key" :href="l.url" target="_blank" rel="noopener nofollow sponsored" class="btn-ghost !h-10 !pl-2.5">
+          <ShopLogo :shop="l.key.startsWith('amz') ? 'amazon' : 'jd'" :height="18" />
+          <span class="text-fg">{{ l.label }}</span><span class="badge !py-0">{{ l.region }}</span>
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
         </a>
       </div>
