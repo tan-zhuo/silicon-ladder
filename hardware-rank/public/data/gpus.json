@@ -1,16 +1,1387 @@
 [
-  { "id": "nvidia-rtx-5090", "name": "RTX 5090", "nameEn": "NVIDIA GeForce RTX 5090", "brand": "NVIDIA", "form": "desktop", "series": "RTX 50", "gen": "blackwell", "chip": "GB202", "vram_gb": 32, "vram_type": "GDDR7", "bus_bit": 512, "tdp_w": 575, "release": "2025-01", "price_cny": 16499, "summary": "当前桌面最强，功耗与价格同样惊人。", "tags": ["旗舰", "4K"], "scores": { "raster_rel": 100, "rt_rel": 100 } },
-  { "id": "nvidia-rtx-5080", "name": "RTX 5080", "nameEn": "NVIDIA GeForce RTX 5080", "brand": "NVIDIA", "form": "desktop", "series": "RTX 50", "gen": "blackwell", "chip": "GB203", "vram_gb": 16, "vram_type": "GDDR7", "bus_bit": 256, "tdp_w": 360, "release": "2025-01", "price_cny": 8299, "summary": "次旗舰，16GB 显存略保守。", "tags": ["4K"], "scores": { "raster_rel": 78, "rt_rel": 80 } },
-  { "id": "nvidia-rtx-4090", "name": "RTX 4090", "nameEn": "NVIDIA GeForce RTX 4090", "brand": "NVIDIA", "form": "desktop", "series": "RTX 40", "gen": "ada", "chip": "AD102", "vram_gb": 24, "vram_type": "GDDR6X", "bus_bit": 384, "tdp_w": 450, "release": "2022-10", "price_cny": 12999, "summary": "上代旗舰，24GB 显存仍是生产力利器。", "tags": ["旗舰", "生产力"], "scores": { "raster_rel": 82, "rt_rel": 84 } },
-  { "id": "nvidia-rtx-5070-ti", "name": "RTX 5070 Ti", "nameEn": "NVIDIA GeForce RTX 5070 Ti", "brand": "NVIDIA", "form": "desktop", "series": "RTX 50", "gen": "blackwell", "chip": "GB203", "vram_gb": 16, "vram_type": "GDDR7", "bus_bit": 256, "tdp_w": 300, "release": "2025-02", "price_cny": 6299, "summary": "2K 高刷甜点，16GB 显存够用。", "tags": ["2K"], "scores": { "raster_rel": 66, "rt_rel": 68 } },
-  { "id": "amd-rx-9070-xt", "name": "RX 9070 XT", "nameEn": "AMD Radeon RX 9070 XT", "brand": "AMD", "form": "desktop", "series": "RX 9000", "gen": "rdna4", "chip": "Navi 48", "vram_gb": 16, "vram_type": "GDDR6", "bus_bit": 256, "tdp_w": 304, "release": "2025-03", "price_cny": 4999, "summary": "RDNA4 光追大幅进步，性价比好。", "tags": ["2K", "性价比"], "scores": { "raster_rel": 64, "rt_rel": 58 } },
-  { "id": "nvidia-rtx-4070-super", "name": "RTX 4070 SUPER", "nameEn": "NVIDIA GeForce RTX 4070 SUPER", "brand": "NVIDIA", "form": "desktop", "series": "RTX 40", "gen": "ada", "chip": "AD104", "vram_gb": 12, "vram_type": "GDDR6X", "bus_bit": 192, "tdp_w": 220, "release": "2024-01", "price_cny": 4599, "summary": "上代 2K 甜点，220W 好搭配。", "tags": ["2K"], "scores": { "raster_rel": 52, "rt_rel": 50 } },
-  { "id": "amd-rx-7800-xt", "name": "RX 7800 XT", "nameEn": "AMD Radeon RX 7800 XT", "brand": "AMD", "form": "desktop", "series": "RX 7000", "gen": "rdna3", "chip": "Navi 32", "vram_gb": 16, "vram_type": "GDDR6", "bus_bit": 256, "tdp_w": 263, "release": "2023-09", "price_cny": 3799, "summary": "光栅够用光追弱，16GB 显存实惠。", "tags": ["2K", "性价比"], "scores": { "raster_rel": 50, "rt_rel": 38 } },
-
-  { "id": "nvidia-rtx-5090-laptop-175w", "name": "RTX 5090 Laptop", "nameEn": "NVIDIA GeForce RTX 5090 Laptop GPU", "brand": "NVIDIA", "form": "laptop", "series": "RTX 50 Laptop", "gen": "blackwell", "chip": "GB203", "vram_gb": 24, "vram_type": "GDDR7", "bus_bit": 256, "tdp_w": 175, "tgp_w": 175, "tgp_range": "95–150W (+25W Boost)", "release": "2025-03", "price_cny": null, "summary": "移动旗舰，核心其实是桌面 5080 级。", "tags": ["旗舰", "高TGP"], "scores": { "raster_rel": 72, "rt_rel": 70 } },
-  { "id": "nvidia-rtx-5080-laptop-150w", "name": "RTX 5080 Laptop", "nameEn": "NVIDIA GeForce RTX 5080 Laptop GPU", "brand": "NVIDIA", "form": "laptop", "series": "RTX 50 Laptop", "gen": "blackwell", "chip": "GB203", "vram_gb": 16, "vram_type": "GDDR7", "bus_bit": 256, "tdp_w": 150, "tgp_w": 150, "tgp_range": "80–150W", "release": "2025-03", "price_cny": null, "summary": "高端游戏本主力，能效不错。", "tags": ["高TGP"], "scores": { "raster_rel": 60, "rt_rel": 58 } },
-  { "id": "nvidia-rtx-5070-laptop-115w", "name": "RTX 5070 Laptop", "nameEn": "NVIDIA GeForce RTX 5070 Laptop GPU (115W)", "brand": "NVIDIA", "form": "laptop", "series": "RTX 50 Laptop", "gen": "blackwell", "chip": "GB206", "vram_gb": 8, "vram_type": "GDDR7", "bus_bit": 128, "tdp_w": 115, "tgp_w": 115, "tgp_range": "50–115W", "release": "2025-04", "price_cny": null, "summary": "满血 115W 版，8GB 显存是短板。", "tags": ["中TGP"], "scores": { "raster_rel": 48, "rt_rel": 46 } },
-  { "id": "nvidia-rtx-5070-laptop-80w", "name": "RTX 5070 Laptop", "nameEn": "NVIDIA GeForce RTX 5070 Laptop GPU (80W)", "brand": "NVIDIA", "form": "laptop", "series": "RTX 50 Laptop", "gen": "blackwell", "chip": "GB206", "vram_gb": 8, "vram_type": "GDDR7", "bus_bit": 128, "tdp_w": 80, "tgp_w": 80, "tgp_range": "50–115W", "release": "2025-04", "price_cny": null, "summary": "轻薄本 80W 版，同名但比满血慢两成。", "tags": ["低TGP", "轻薄"], "scores": { "raster_rel": 38, "rt_rel": 36 } },
-  { "id": "nvidia-rtx-4070-laptop-140w", "name": "RTX 4070 Laptop", "nameEn": "NVIDIA GeForce RTX 4070 Laptop GPU", "brand": "NVIDIA", "form": "laptop", "series": "RTX 40 Laptop", "gen": "ada", "chip": "AD106", "vram_gb": 8, "vram_type": "GDDR6", "bus_bit": 128, "tdp_w": 140, "tgp_w": 140, "tgp_range": "35–115W (+25W Boost)", "release": "2023-02", "price_cny": null, "summary": "上代主流，满 TGP 下仍有竞争力。", "tags": ["高TGP"], "scores": { "raster_rel": 44, "rt_rel": 42 } },
-  { "id": "apple-m4-max-gpu-40", "name": "M4 Max GPU (40核)", "nameEn": "Apple M4 Max 40-core GPU", "brand": "Apple", "form": "igpu", "series": "M4", "gen": "apple-m4", "chip": "M4 Max", "vram_gb": 48, "vram_type": "LPDDR5X (统一内存)", "bus_bit": 512, "tdp_w": 70, "tgp_w": 70, "release": "2024-11", "price_cny": null, "summary": "核显天花板，光追弱，生产力强。", "tags": ["核显", "生产力"], "scores": { "raster_rel": 58, "rt_rel": 20 } }
+  {
+    "id": "nvidia-rtx-5090",
+    "name": "RTX 5090",
+    "nameEn": "NVIDIA GeForce RTX 5090",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 50",
+    "gen": "blackwell",
+    "chip": "GB202",
+    "vram_gb": 32,
+    "vram_type": "GDDR7",
+    "bus_bit": 512,
+    "tdp_w": 575,
+    "release": "2025-01",
+    "price_cny": 16499,
+    "summary": "当前桌面最强，功耗与价格同样惊人。",
+    "tags": [
+      "旗舰",
+      "4K"
+    ],
+    "scores": {
+      "raster_rel": 100,
+      "rt_rel": 100
+    }
+  },
+  {
+    "id": "nvidia-rtx-5080",
+    "name": "RTX 5080",
+    "nameEn": "NVIDIA GeForce RTX 5080",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 50",
+    "gen": "blackwell",
+    "chip": "GB203",
+    "vram_gb": 16,
+    "vram_type": "GDDR7",
+    "bus_bit": 256,
+    "tdp_w": 360,
+    "release": "2025-01",
+    "price_cny": 8299,
+    "summary": "次旗舰，16GB 显存略保守。",
+    "tags": [
+      "4K"
+    ],
+    "scores": {
+      "raster_rel": 78,
+      "rt_rel": 80
+    }
+  },
+  {
+    "id": "nvidia-rtx-4090",
+    "name": "RTX 4090",
+    "nameEn": "NVIDIA GeForce RTX 4090",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 40",
+    "gen": "ada",
+    "chip": "AD102",
+    "vram_gb": 24,
+    "vram_type": "GDDR6X",
+    "bus_bit": 384,
+    "tdp_w": 450,
+    "release": "2022-10",
+    "price_cny": 12999,
+    "summary": "上代旗舰，24GB 显存仍是生产力利器。",
+    "tags": [
+      "旗舰",
+      "生产力"
+    ],
+    "scores": {
+      "raster_rel": 82,
+      "rt_rel": 84
+    }
+  },
+  {
+    "id": "nvidia-rtx-5070-ti",
+    "name": "RTX 5070 Ti",
+    "nameEn": "NVIDIA GeForce RTX 5070 Ti",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 50",
+    "gen": "blackwell",
+    "chip": "GB203",
+    "vram_gb": 16,
+    "vram_type": "GDDR7",
+    "bus_bit": 256,
+    "tdp_w": 300,
+    "release": "2025-02",
+    "price_cny": 6299,
+    "summary": "2K 高刷甜点，16GB 显存够用。",
+    "tags": [
+      "2K"
+    ],
+    "scores": {
+      "raster_rel": 66,
+      "rt_rel": 68
+    }
+  },
+  {
+    "id": "amd-rx-9070-xt",
+    "name": "RX 9070 XT",
+    "nameEn": "AMD Radeon RX 9070 XT",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "RX 9000",
+    "gen": "rdna4",
+    "chip": "Navi 48",
+    "vram_gb": 16,
+    "vram_type": "GDDR6",
+    "bus_bit": 256,
+    "tdp_w": 304,
+    "release": "2025-03",
+    "price_cny": 4999,
+    "summary": "RDNA4 光追大幅进步，性价比好。",
+    "tags": [
+      "2K",
+      "性价比"
+    ],
+    "scores": {
+      "raster_rel": 64,
+      "rt_rel": 58
+    }
+  },
+  {
+    "id": "nvidia-rtx-4070-super",
+    "name": "RTX 4070 SUPER",
+    "nameEn": "NVIDIA GeForce RTX 4070 SUPER",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 40",
+    "gen": "ada",
+    "chip": "AD104",
+    "vram_gb": 12,
+    "vram_type": "GDDR6X",
+    "bus_bit": 192,
+    "tdp_w": 220,
+    "release": "2024-01",
+    "price_cny": 4599,
+    "summary": "上代 2K 甜点，220W 好搭配。",
+    "tags": [
+      "2K"
+    ],
+    "scores": {
+      "raster_rel": 52,
+      "rt_rel": 50
+    }
+  },
+  {
+    "id": "amd-rx-7800-xt",
+    "name": "RX 7800 XT",
+    "nameEn": "AMD Radeon RX 7800 XT",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "RX 7000",
+    "gen": "rdna3",
+    "chip": "Navi 32",
+    "vram_gb": 16,
+    "vram_type": "GDDR6",
+    "bus_bit": 256,
+    "tdp_w": 263,
+    "release": "2023-09",
+    "price_cny": 3799,
+    "summary": "光栅够用光追弱，16GB 显存实惠。",
+    "tags": [
+      "2K",
+      "性价比"
+    ],
+    "scores": {
+      "raster_rel": 50,
+      "rt_rel": 38
+    }
+  },
+  {
+    "id": "nvidia-rtx-5090-laptop-175w",
+    "name": "RTX 5090 Laptop",
+    "nameEn": "NVIDIA GeForce RTX 5090 Laptop GPU",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 50 Laptop",
+    "gen": "blackwell",
+    "chip": "GB203",
+    "vram_gb": 24,
+    "vram_type": "GDDR7",
+    "bus_bit": 256,
+    "tdp_w": 175,
+    "tgp_w": 175,
+    "tgp_range": "95–150W (+25W Boost)",
+    "release": "2025-03",
+    "price_cny": null,
+    "summary": "移动旗舰，核心其实是桌面 5080 级。",
+    "tags": [
+      "旗舰",
+      "高TGP"
+    ],
+    "scores": {
+      "raster_rel": 72,
+      "rt_rel": 70
+    }
+  },
+  {
+    "id": "nvidia-rtx-5080-laptop-150w",
+    "name": "RTX 5080 Laptop",
+    "nameEn": "NVIDIA GeForce RTX 5080 Laptop GPU",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 50 Laptop",
+    "gen": "blackwell",
+    "chip": "GB203",
+    "vram_gb": 16,
+    "vram_type": "GDDR7",
+    "bus_bit": 256,
+    "tdp_w": 150,
+    "tgp_w": 150,
+    "tgp_range": "80–150W",
+    "release": "2025-03",
+    "price_cny": null,
+    "summary": "高端游戏本主力，能效不错。",
+    "tags": [
+      "高TGP"
+    ],
+    "scores": {
+      "raster_rel": 60,
+      "rt_rel": 58
+    }
+  },
+  {
+    "id": "nvidia-rtx-5070-laptop-115w",
+    "name": "RTX 5070 Laptop",
+    "nameEn": "NVIDIA GeForce RTX 5070 Laptop GPU (115W)",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 50 Laptop",
+    "gen": "blackwell",
+    "chip": "GB206",
+    "vram_gb": 8,
+    "vram_type": "GDDR7",
+    "bus_bit": 128,
+    "tdp_w": 115,
+    "tgp_w": 115,
+    "tgp_range": "50–115W",
+    "release": "2025-04",
+    "price_cny": null,
+    "summary": "满血 115W 版，8GB 显存是短板。",
+    "tags": [
+      "中TGP"
+    ],
+    "scores": {
+      "raster_rel": 48,
+      "rt_rel": 46
+    }
+  },
+  {
+    "id": "nvidia-rtx-5070-laptop-80w",
+    "name": "RTX 5070 Laptop",
+    "nameEn": "NVIDIA GeForce RTX 5070 Laptop GPU (80W)",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 50 Laptop",
+    "gen": "blackwell",
+    "chip": "GB206",
+    "vram_gb": 8,
+    "vram_type": "GDDR7",
+    "bus_bit": 128,
+    "tdp_w": 80,
+    "tgp_w": 80,
+    "tgp_range": "50–115W",
+    "release": "2025-04",
+    "price_cny": null,
+    "summary": "轻薄本 80W 版，同名但比满血慢两成。",
+    "tags": [
+      "低TGP",
+      "轻薄"
+    ],
+    "scores": {
+      "raster_rel": 38,
+      "rt_rel": 36
+    }
+  },
+  {
+    "id": "nvidia-rtx-4070-laptop-140w",
+    "name": "RTX 4070 Laptop",
+    "nameEn": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 40 Laptop",
+    "gen": "ada",
+    "chip": "AD106",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 128,
+    "tdp_w": 140,
+    "tgp_w": 140,
+    "tgp_range": "35–115W (+25W Boost)",
+    "release": "2023-02",
+    "price_cny": null,
+    "summary": "上代主流，满 TGP 下仍有竞争力。",
+    "tags": [
+      "高TGP"
+    ],
+    "scores": {
+      "raster_rel": 44,
+      "rt_rel": 42
+    }
+  },
+  {
+    "id": "apple-m4-max-gpu-40",
+    "name": "M4 Max GPU (40核)",
+    "nameEn": "Apple M4 Max 40-core GPU",
+    "brand": "Apple",
+    "form": "igpu",
+    "series": "M4",
+    "gen": "apple-m4",
+    "chip": "M4 Max",
+    "vram_gb": 48,
+    "vram_type": "LPDDR5X (统一内存)",
+    "bus_bit": 512,
+    "tdp_w": 70,
+    "tgp_w": 70,
+    "release": "2024-11",
+    "price_cny": null,
+    "summary": "核显天花板，光追弱，生产力强。",
+    "tags": [
+      "核显",
+      "生产力"
+    ],
+    "scores": {
+      "raster_rel": 58,
+      "rt_rel": 20
+    }
+  },
+  {
+    "id": "nvidia-rtx-5070",
+    "name": "RTX 5070",
+    "nameEn": "NVIDIA RTX 5070",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 50",
+    "gen": "blackwell",
+    "chip": "GB205",
+    "vram_gb": 12,
+    "vram_type": "GDDR7",
+    "bus_bit": 192,
+    "tdp_w": 250,
+    "release": "2025-03",
+    "price_cny": 4599,
+    "summary": "12GB 显存偏保守，2K 主流。",
+    "tags": [
+      "2K"
+    ],
+    "scores": {
+      "raster_rel": 52,
+      "rt_rel": 54
+    }
+  },
+  {
+    "id": "nvidia-rtx-5060-ti-16gb",
+    "name": "RTX 5060 Ti 16GB",
+    "nameEn": "NVIDIA RTX 5060 Ti 16GB",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 50",
+    "gen": "blackwell",
+    "chip": "GB206",
+    "vram_gb": 16,
+    "vram_type": "GDDR7",
+    "bus_bit": 128,
+    "tdp_w": 180,
+    "release": "2025-04",
+    "price_cny": 3599,
+    "summary": "16GB 版本才值得买。",
+    "tags": [
+      "1080p",
+      "2K"
+    ],
+    "scores": {
+      "raster_rel": 42,
+      "rt_rel": 43
+    }
+  },
+  {
+    "id": "nvidia-rtx-5060",
+    "name": "RTX 5060",
+    "nameEn": "NVIDIA RTX 5060",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 50",
+    "gen": "blackwell",
+    "chip": "GB206",
+    "vram_gb": 8,
+    "vram_type": "GDDR7",
+    "bus_bit": 128,
+    "tdp_w": 145,
+    "release": "2025-05",
+    "price_cny": 2499,
+    "summary": "8GB 显存是硬伤。",
+    "tags": [
+      "1080p"
+    ],
+    "scores": {
+      "raster_rel": 35,
+      "rt_rel": 36
+    }
+  },
+  {
+    "id": "nvidia-rtx-4080-super",
+    "name": "RTX 4080 SUPER",
+    "nameEn": "NVIDIA RTX 4080 SUPER",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 40",
+    "gen": "ada",
+    "chip": "AD103",
+    "vram_gb": 16,
+    "vram_type": "GDDR6X",
+    "bus_bit": 256,
+    "tdp_w": 320,
+    "release": "2024-01",
+    "price_cny": 7999,
+    "summary": "上代 4K 次旗舰。",
+    "tags": [
+      "4K"
+    ],
+    "scores": {
+      "raster_rel": 68,
+      "rt_rel": 70
+    }
+  },
+  {
+    "id": "nvidia-rtx-4070-ti-super",
+    "name": "RTX 4070 Ti SUPER",
+    "nameEn": "NVIDIA RTX 4070 Ti SUPER",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 40",
+    "gen": "ada",
+    "chip": "AD103",
+    "vram_gb": 16,
+    "vram_type": "GDDR6X",
+    "bus_bit": 256,
+    "tdp_w": 285,
+    "release": "2024-01",
+    "price_cny": 6499,
+    "summary": "16GB 显存的 2K 高刷卡。",
+    "tags": [
+      "2K"
+    ],
+    "scores": {
+      "raster_rel": 60,
+      "rt_rel": 60
+    }
+  },
+  {
+    "id": "nvidia-rtx-4070",
+    "name": "RTX 4070",
+    "nameEn": "NVIDIA RTX 4070",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 40",
+    "gen": "ada",
+    "chip": "AD104",
+    "vram_gb": 12,
+    "vram_type": "GDDR6X",
+    "bus_bit": 192,
+    "tdp_w": 200,
+    "release": "2023-04",
+    "price_cny": 4299,
+    "summary": "200W 安静的 2K 卡。",
+    "tags": [
+      "2K"
+    ],
+    "scores": {
+      "raster_rel": 46,
+      "rt_rel": 45
+    }
+  },
+  {
+    "id": "nvidia-rtx-4060-ti-8gb",
+    "name": "RTX 4060 Ti 8GB",
+    "nameEn": "NVIDIA RTX 4060 Ti 8GB",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 40",
+    "gen": "ada",
+    "chip": "AD106",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 128,
+    "tdp_w": 160,
+    "release": "2023-05",
+    "price_cny": 2999,
+    "summary": "位宽与显存都缩水。",
+    "tags": [
+      "1080p"
+    ],
+    "scores": {
+      "raster_rel": 36,
+      "rt_rel": 34
+    }
+  },
+  {
+    "id": "nvidia-rtx-4060",
+    "name": "RTX 4060",
+    "nameEn": "NVIDIA RTX 4060",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 40",
+    "gen": "ada",
+    "chip": "AD107",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 128,
+    "tdp_w": 115,
+    "release": "2023-06",
+    "price_cny": 2299,
+    "summary": "功耗低，网吧与入门首选。",
+    "tags": [
+      "1080p",
+      "性价比"
+    ],
+    "scores": {
+      "raster_rel": 30,
+      "rt_rel": 28
+    }
+  },
+  {
+    "id": "nvidia-rtx-3080-10gb",
+    "name": "RTX 3080 10GB",
+    "nameEn": "NVIDIA RTX 3080 10GB",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 30",
+    "gen": "ampere",
+    "chip": "GA102",
+    "vram_gb": 10,
+    "vram_type": "GDDR6X",
+    "bus_bit": 320,
+    "tdp_w": 320,
+    "release": "2020-09",
+    "price_cny": null,
+    "summary": "上上代旗舰，二手仍能打。",
+    "tags": [
+      "2K"
+    ],
+    "scores": {
+      "raster_rel": 47,
+      "rt_rel": 40
+    }
+  },
+  {
+    "id": "nvidia-rtx-3070",
+    "name": "RTX 3070",
+    "nameEn": "NVIDIA RTX 3070",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 30",
+    "gen": "ampere",
+    "chip": "GA104",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 256,
+    "tdp_w": 220,
+    "release": "2020-10",
+    "price_cny": null,
+    "summary": "8GB 显存开始吃紧。",
+    "tags": [
+      "2K"
+    ],
+    "scores": {
+      "raster_rel": 37,
+      "rt_rel": 30
+    }
+  },
+  {
+    "id": "nvidia-rtx-3060-12gb",
+    "name": "RTX 3060 12GB",
+    "nameEn": "NVIDIA RTX 3060 12GB",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 30",
+    "gen": "ampere",
+    "chip": "GA106",
+    "vram_gb": 12,
+    "vram_type": "GDDR6",
+    "bus_bit": 192,
+    "tdp_w": 170,
+    "release": "2021-02",
+    "price_cny": null,
+    "summary": "大显存入门经典。",
+    "tags": [
+      "1080p"
+    ],
+    "scores": {
+      "raster_rel": 26,
+      "rt_rel": 20
+    }
+  },
+  {
+    "id": "amd-rx-9070",
+    "name": "RX 9070",
+    "nameEn": "AMD RX 9070",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "RX 9000",
+    "gen": "rdna4",
+    "chip": "Navi 48",
+    "vram_gb": 16,
+    "vram_type": "GDDR6",
+    "bus_bit": 256,
+    "tdp_w": 220,
+    "release": "2025-03",
+    "price_cny": 4499,
+    "summary": "220W 能效很好，比 XT 更均衡。",
+    "tags": [
+      "2K",
+      "能效"
+    ],
+    "scores": {
+      "raster_rel": 57,
+      "rt_rel": 50
+    }
+  },
+  {
+    "id": "amd-rx-9060-xt-16gb",
+    "name": "RX 9060 XT 16GB",
+    "nameEn": "AMD RX 9060 XT 16GB",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "RX 9000",
+    "gen": "rdna4",
+    "chip": "Navi 44",
+    "vram_gb": 16,
+    "vram_type": "GDDR6",
+    "bus_bit": 128,
+    "tdp_w": 160,
+    "release": "2025-06",
+    "price_cny": 2799,
+    "summary": "同价位 16GB，对标 5060 Ti。",
+    "tags": [
+      "1080p",
+      "性价比"
+    ],
+    "scores": {
+      "raster_rel": 36,
+      "rt_rel": 31
+    }
+  },
+  {
+    "id": "amd-rx-7900-xtx",
+    "name": "RX 7900 XTX",
+    "nameEn": "AMD RX 7900 XTX",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "RX 7000",
+    "gen": "rdna3",
+    "chip": "Navi 31",
+    "vram_gb": 24,
+    "vram_type": "GDDR6",
+    "bus_bit": 384,
+    "tdp_w": 355,
+    "release": "2022-12",
+    "price_cny": 6999,
+    "summary": "24GB 光栅强，光追一般。",
+    "tags": [
+      "4K"
+    ],
+    "scores": {
+      "raster_rel": 70,
+      "rt_rel": 52
+    }
+  },
+  {
+    "id": "amd-rx-7900-xt",
+    "name": "RX 7900 XT",
+    "nameEn": "AMD RX 7900 XT",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "RX 7000",
+    "gen": "rdna3",
+    "chip": "Navi 31",
+    "vram_gb": 20,
+    "vram_type": "GDDR6",
+    "bus_bit": 320,
+    "tdp_w": 315,
+    "release": "2022-12",
+    "price_cny": 5499,
+    "summary": "降价后性价比高。",
+    "tags": [
+      "4K",
+      "2K"
+    ],
+    "scores": {
+      "raster_rel": 62,
+      "rt_rel": 45
+    }
+  },
+  {
+    "id": "amd-rx-7700-xt",
+    "name": "RX 7700 XT",
+    "nameEn": "AMD RX 7700 XT",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "RX 7000",
+    "gen": "rdna3",
+    "chip": "Navi 32",
+    "vram_gb": 12,
+    "vram_type": "GDDR6",
+    "bus_bit": 192,
+    "tdp_w": 245,
+    "release": "2023-09",
+    "price_cny": 2999,
+    "summary": "夹在 7800 XT 与 7600 之间。",
+    "tags": [
+      "2K"
+    ],
+    "scores": {
+      "raster_rel": 42,
+      "rt_rel": 32
+    }
+  },
+  {
+    "id": "amd-rx-7600",
+    "name": "RX 7600",
+    "nameEn": "AMD RX 7600",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "RX 7000",
+    "gen": "rdna3",
+    "chip": "Navi 33",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 128,
+    "tdp_w": 165,
+    "release": "2023-05",
+    "price_cny": 1899,
+    "summary": "1080p 入门。",
+    "tags": [
+      "1080p",
+      "性价比"
+    ],
+    "scores": {
+      "raster_rel": 28,
+      "rt_rel": 20
+    }
+  },
+  {
+    "id": "amd-rx-6800-xt",
+    "name": "RX 6800 XT",
+    "nameEn": "AMD RX 6800 XT",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "RX 6000",
+    "gen": "rdna2",
+    "chip": "Navi 21",
+    "vram_gb": 16,
+    "vram_type": "GDDR6",
+    "bus_bit": 256,
+    "tdp_w": 300,
+    "release": "2020-11",
+    "price_cny": null,
+    "summary": "上上代 16GB，二手性价比。",
+    "tags": [
+      "2K"
+    ],
+    "scores": {
+      "raster_rel": 50,
+      "rt_rel": 30
+    }
+  },
+  {
+    "id": "amd-rx-6600",
+    "name": "RX 6600",
+    "nameEn": "AMD RX 6600",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "RX 6000",
+    "gen": "rdna2",
+    "chip": "Navi 23",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 128,
+    "tdp_w": 132,
+    "release": "2021-10",
+    "price_cny": 1299,
+    "summary": "千元档 1080p 王者。",
+    "tags": [
+      "1080p",
+      "性价比"
+    ],
+    "scores": {
+      "raster_rel": 24,
+      "rt_rel": 14
+    }
+  },
+  {
+    "id": "intel-arc-b580",
+    "name": "Arc B580",
+    "nameEn": "Intel Arc B580",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Arc B",
+    "gen": "xe2",
+    "chip": "BMG-G21",
+    "vram_gb": 12,
+    "vram_type": "GDDR6",
+    "bus_bit": 192,
+    "tdp_w": 190,
+    "release": "2024-12",
+    "price_cny": 2199,
+    "summary": "Battlemage 12GB，驱动大幅改善。",
+    "tags": [
+      "1080p",
+      "2K",
+      "性价比"
+    ],
+    "scores": {
+      "raster_rel": 33,
+      "rt_rel": 30
+    }
+  },
+  {
+    "id": "intel-arc-b570",
+    "name": "Arc B570",
+    "nameEn": "Intel Arc B570",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Arc B",
+    "gen": "xe2",
+    "chip": "BMG-G21",
+    "vram_gb": 10,
+    "vram_type": "GDDR6",
+    "bus_bit": 160,
+    "tdp_w": 150,
+    "release": "2025-01",
+    "price_cny": 1799,
+    "summary": "B580 的缩减版。",
+    "tags": [
+      "1080p"
+    ],
+    "scores": {
+      "raster_rel": 28,
+      "rt_rel": 25
+    }
+  },
+  {
+    "id": "intel-arc-a770-16gb",
+    "name": "Arc A770 16GB",
+    "nameEn": "Intel Arc A770 16GB",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Arc A",
+    "gen": "xe",
+    "chip": "ACM-G10",
+    "vram_gb": 16,
+    "vram_type": "GDDR6",
+    "bus_bit": 256,
+    "tdp_w": 225,
+    "release": "2022-10",
+    "price_cny": null,
+    "summary": "首代 Arc，老游戏兼容性一般。",
+    "tags": [
+      "2K"
+    ],
+    "scores": {
+      "raster_rel": 30,
+      "rt_rel": 26
+    }
+  },
+  {
+    "id": "nvidia-rtx-5070-ti-laptop-140w",
+    "name": "RTX 5070 Ti Laptop",
+    "nameEn": "NVIDIA RTX 5070 Ti Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 50 Laptop",
+    "gen": "blackwell",
+    "chip": "GB205",
+    "vram_gb": 12,
+    "vram_type": "GDDR7",
+    "bus_bit": 192,
+    "tdp_w": 140,
+    "tgp_w": 140,
+    "tgp_range": "60–115W (+25W Boost)",
+    "release": "2025-03",
+    "price_cny": null,
+    "summary": "12GB 显存，高端游戏本主流。",
+    "tags": [
+      "高TGP"
+    ],
+    "scores": {
+      "raster_rel": 55,
+      "rt_rel": 53
+    }
+  },
+  {
+    "id": "nvidia-rtx-5060-laptop-115w",
+    "name": "RTX 5060 Laptop",
+    "nameEn": "NVIDIA RTX 5060 Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 50 Laptop",
+    "gen": "blackwell",
+    "chip": "GB206",
+    "vram_gb": 8,
+    "vram_type": "GDDR7",
+    "bus_bit": 128,
+    "tdp_w": 115,
+    "tgp_w": 115,
+    "tgp_range": "45–115W",
+    "release": "2025-05",
+    "price_cny": null,
+    "summary": "满血 5060，主流游戏本。",
+    "tags": [
+      "中TGP"
+    ],
+    "scores": {
+      "raster_rel": 40,
+      "rt_rel": 38
+    }
+  },
+  {
+    "id": "nvidia-rtx-5060-laptop-80w",
+    "name": "RTX 5060 Laptop",
+    "nameEn": "NVIDIA RTX 5060 Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 50 Laptop",
+    "gen": "blackwell",
+    "chip": "GB206",
+    "vram_gb": 8,
+    "vram_type": "GDDR7",
+    "bus_bit": 128,
+    "tdp_w": 80,
+    "tgp_w": 80,
+    "tgp_range": "45–115W",
+    "release": "2025-05",
+    "price_cny": null,
+    "summary": "轻薄游戏本 80W 版。",
+    "tags": [
+      "低TGP",
+      "轻薄"
+    ],
+    "scores": {
+      "raster_rel": 33,
+      "rt_rel": 31
+    }
+  },
+  {
+    "id": "nvidia-rtx-5050-laptop-100w",
+    "name": "RTX 5050 Laptop",
+    "nameEn": "NVIDIA RTX 5050 Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 50 Laptop",
+    "gen": "blackwell",
+    "chip": "GB207",
+    "vram_gb": 8,
+    "vram_type": "GDDR7",
+    "bus_bit": 128,
+    "tdp_w": 100,
+    "tgp_w": 100,
+    "tgp_range": "50–100W",
+    "release": "2025-06",
+    "price_cny": null,
+    "summary": "入门独显本。",
+    "tags": [
+      "中TGP"
+    ],
+    "scores": {
+      "raster_rel": 30,
+      "rt_rel": 28
+    }
+  },
+  {
+    "id": "nvidia-rtx-4090-laptop-175w",
+    "name": "RTX 4090 Laptop",
+    "nameEn": "NVIDIA RTX 4090 Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 40 Laptop",
+    "gen": "ada",
+    "chip": "AD103",
+    "vram_gb": 16,
+    "vram_type": "GDDR6",
+    "bus_bit": 256,
+    "tdp_w": 175,
+    "tgp_w": 175,
+    "tgp_range": "80–150W (+25W Boost)",
+    "release": "2023-02",
+    "price_cny": null,
+    "summary": "上代移动旗舰，核心是桌面 4080。",
+    "tags": [
+      "旗舰",
+      "高TGP"
+    ],
+    "scores": {
+      "raster_rel": 66,
+      "rt_rel": 64
+    }
+  },
+  {
+    "id": "nvidia-rtx-4080-laptop-175w",
+    "name": "RTX 4080 Laptop",
+    "nameEn": "NVIDIA RTX 4080 Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 40 Laptop",
+    "gen": "ada",
+    "chip": "AD104",
+    "vram_gb": 12,
+    "vram_type": "GDDR6",
+    "bus_bit": 192,
+    "tdp_w": 175,
+    "tgp_w": 175,
+    "tgp_range": "60–150W (+25W Boost)",
+    "release": "2023-02",
+    "price_cny": null,
+    "summary": "上代次旗舰。",
+    "tags": [
+      "高TGP"
+    ],
+    "scores": {
+      "raster_rel": 58,
+      "rt_rel": 56
+    }
+  },
+  {
+    "id": "nvidia-rtx-4070-laptop-90w",
+    "name": "RTX 4070 Laptop",
+    "nameEn": "NVIDIA RTX 4070 Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 40 Laptop",
+    "gen": "ada",
+    "chip": "AD106",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 128,
+    "tdp_w": 90,
+    "tgp_w": 90,
+    "tgp_range": "35–115W (+25W Boost)",
+    "release": "2023-02",
+    "price_cny": null,
+    "summary": "轻薄本 90W 版，比满血慢一成多。",
+    "tags": [
+      "中TGP",
+      "轻薄"
+    ],
+    "scores": {
+      "raster_rel": 38,
+      "rt_rel": 36
+    }
+  },
+  {
+    "id": "nvidia-rtx-4060-laptop-140w",
+    "name": "RTX 4060 Laptop",
+    "nameEn": "NVIDIA RTX 4060 Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 40 Laptop",
+    "gen": "ada",
+    "chip": "AD107",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 128,
+    "tdp_w": 140,
+    "tgp_w": 140,
+    "tgp_range": "35–115W (+25W Boost)",
+    "release": "2023-02",
+    "price_cny": null,
+    "summary": "销量最大的游戏本显卡。",
+    "tags": [
+      "高TGP",
+      "性价比"
+    ],
+    "scores": {
+      "raster_rel": 36,
+      "rt_rel": 34
+    }
+  },
+  {
+    "id": "nvidia-rtx-4060-laptop-90w",
+    "name": "RTX 4060 Laptop",
+    "nameEn": "NVIDIA RTX 4060 Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 40 Laptop",
+    "gen": "ada",
+    "chip": "AD107",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 128,
+    "tdp_w": 90,
+    "tgp_w": 90,
+    "tgp_range": "35–115W (+25W Boost)",
+    "release": "2023-02",
+    "price_cny": null,
+    "summary": "全能本常见 90W 版本。",
+    "tags": [
+      "中TGP"
+    ],
+    "scores": {
+      "raster_rel": 31,
+      "rt_rel": 29
+    }
+  },
+  {
+    "id": "nvidia-rtx-4050-laptop-100w",
+    "name": "RTX 4050 Laptop",
+    "nameEn": "NVIDIA RTX 4050 Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 40 Laptop",
+    "gen": "ada",
+    "chip": "AD107",
+    "vram_gb": 6,
+    "vram_type": "GDDR6",
+    "bus_bit": 96,
+    "tdp_w": 100,
+    "tgp_w": 100,
+    "tgp_range": "35–115W",
+    "release": "2023-02",
+    "price_cny": null,
+    "summary": "6GB 显存入门独显。",
+    "tags": [
+      "中TGP"
+    ],
+    "scores": {
+      "raster_rel": 27,
+      "rt_rel": 25
+    }
+  },
+  {
+    "id": "amd-rx-7900m",
+    "name": "RX 7900M",
+    "nameEn": "AMD RX 7900M",
+    "brand": "AMD",
+    "form": "laptop",
+    "series": "RX 7000M",
+    "gen": "rdna3",
+    "chip": "Navi 31",
+    "vram_gb": 16,
+    "vram_type": "GDDR6",
+    "bus_bit": 256,
+    "tdp_w": 180,
+    "tgp_w": 180,
+    "tgp_range": "180W",
+    "release": "2023-10",
+    "price_cny": null,
+    "summary": "AMD 移动旗舰，机型极少。",
+    "tags": [
+      "高TGP"
+    ],
+    "scores": {
+      "raster_rel": 56,
+      "rt_rel": 40
+    }
+  },
+  {
+    "id": "amd-rx-7700s",
+    "name": "RX 7700S",
+    "nameEn": "AMD RX 7700S",
+    "brand": "AMD",
+    "form": "laptop",
+    "series": "RX 7000S",
+    "gen": "rdna3",
+    "chip": "Navi 33",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 128,
+    "tdp_w": 100,
+    "tgp_w": 100,
+    "tgp_range": "75–100W",
+    "release": "2023-02",
+    "price_cny": null,
+    "summary": "Framework 16 等少数机型。",
+    "tags": [
+      "中TGP"
+    ],
+    "scores": {
+      "raster_rel": 33,
+      "rt_rel": 22
+    }
+  },
+  {
+    "id": "apple-m4-pro-gpu-20",
+    "name": "M4 Pro GPU (20核)",
+    "nameEn": "Apple M4 Pro GPU (20核)",
+    "brand": "Apple",
+    "form": "igpu",
+    "series": "M4",
+    "gen": "apple-m4",
+    "chip": "M4 Pro",
+    "vram_gb": 24,
+    "vram_type": "LPDDR5X (统一内存)",
+    "bus_bit": 256,
+    "tdp_w": 45,
+    "tgp_w": 45,
+    "release": "2024-11",
+    "price_cny": null,
+    "summary": "媲美 4060 Laptop 低功耗档。",
+    "tags": [
+      "核显"
+    ],
+    "scores": {
+      "raster_rel": 36,
+      "rt_rel": 12
+    }
+  },
+  {
+    "id": "apple-m4-gpu-10",
+    "name": "M4 GPU (10核)",
+    "nameEn": "Apple M4 GPU (10核)",
+    "brand": "Apple",
+    "form": "igpu",
+    "series": "M4",
+    "gen": "apple-m4",
+    "chip": "M4",
+    "vram_gb": 16,
+    "vram_type": "LPDDR5X (统一内存)",
+    "bus_bit": 128,
+    "tdp_w": 20,
+    "tgp_w": 20,
+    "release": "2024-05",
+    "price_cny": null,
+    "summary": "Air 级核显。",
+    "tags": [
+      "核显"
+    ],
+    "scores": {
+      "raster_rel": 18,
+      "rt_rel": 6
+    }
+  },
+  {
+    "id": "amd-radeon-8060s",
+    "name": "Radeon 8060S",
+    "nameEn": "AMD Radeon 8060S",
+    "brand": "AMD",
+    "form": "igpu",
+    "series": "Radeon 8000S",
+    "gen": "rdna3.5",
+    "chip": "Strix Halo (40CU)",
+    "vram_gb": 32,
+    "vram_type": "LPDDR5X (统一内存)",
+    "bus_bit": 256,
+    "tdp_w": 55,
+    "tgp_w": 55,
+    "release": "2025-02",
+    "price_cny": null,
+    "summary": "核显天花板 x86 侧，接近 4070 Laptop。",
+    "tags": [
+      "核显",
+      "旗舰"
+    ],
+    "scores": {
+      "raster_rel": 55,
+      "rt_rel": 18
+    }
+  },
+  {
+    "id": "amd-radeon-890m",
+    "name": "Radeon 890M",
+    "nameEn": "AMD Radeon 890M",
+    "brand": "AMD",
+    "form": "igpu",
+    "series": "Radeon 800M",
+    "gen": "rdna3.5",
+    "chip": "Strix Point (16CU)",
+    "vram_gb": 8,
+    "vram_type": "LPDDR5X (共享)",
+    "bus_bit": 128,
+    "tdp_w": 28,
+    "tgp_w": 28,
+    "release": "2024-07",
+    "price_cny": null,
+    "summary": "轻薄本最强 x86 核显之一。",
+    "tags": [
+      "核显"
+    ],
+    "scores": {
+      "raster_rel": 20,
+      "rt_rel": 6
+    }
+  },
+  {
+    "id": "amd-radeon-780m",
+    "name": "Radeon 780M",
+    "nameEn": "AMD Radeon 780M",
+    "brand": "AMD",
+    "form": "igpu",
+    "series": "Radeon 700M",
+    "gen": "rdna3",
+    "chip": "Phoenix (12CU)",
+    "vram_gb": 8,
+    "vram_type": "LPDDR5X (共享)",
+    "bus_bit": 128,
+    "tdp_w": 28,
+    "tgp_w": 28,
+    "release": "2023-01",
+    "price_cny": null,
+    "summary": "掌机与轻薄本常见。",
+    "tags": [
+      "核显"
+    ],
+    "scores": {
+      "raster_rel": 15,
+      "rt_rel": 5
+    }
+  },
+  {
+    "id": "intel-arc-140v",
+    "name": "Arc 140V",
+    "nameEn": "Intel Arc 140V",
+    "brand": "Intel",
+    "form": "igpu",
+    "series": "Arc (Xe2)",
+    "gen": "xe2",
+    "chip": "Lunar Lake (8Xe)",
+    "vram_gb": 8,
+    "vram_type": "LPDDR5X (板载)",
+    "bus_bit": 128,
+    "tdp_w": 17,
+    "tgp_w": 17,
+    "release": "2024-09",
+    "price_cny": null,
+    "summary": "Lunar Lake 核显，能效出色。",
+    "tags": [
+      "核显"
+    ],
+    "scores": {
+      "raster_rel": 16,
+      "rt_rel": 6
+    }
+  },
+  {
+    "id": "intel-arc-140t",
+    "name": "Arc 140T",
+    "nameEn": "Intel Arc 140T",
+    "brand": "Intel",
+    "form": "igpu",
+    "series": "Arc (Xe)",
+    "gen": "xe",
+    "chip": "Arrow Lake-H (8Xe)",
+    "vram_gb": 8,
+    "vram_type": "LPDDR5X (共享)",
+    "bus_bit": 128,
+    "tdp_w": 28,
+    "tgp_w": 28,
+    "release": "2025-01",
+    "price_cny": null,
+    "summary": "Arrow Lake H 核显。",
+    "tags": [
+      "核显"
+    ],
+    "scores": {
+      "raster_rel": 15,
+      "rt_rel": 5
+    }
+  },
+  {
+    "id": "qualcomm-adreno-x1-85",
+    "name": "Adreno X1-85",
+    "nameEn": "Qualcomm Adreno X1-85",
+    "brand": "Qualcomm",
+    "form": "igpu",
+    "series": "Adreno X1",
+    "gen": "snapdragon-x",
+    "chip": "X Elite",
+    "vram_gb": 8,
+    "vram_type": "LPDDR5X (共享)",
+    "bus_bit": 128,
+    "tdp_w": 30,
+    "tgp_w": 30,
+    "release": "2024-06",
+    "price_cny": null,
+    "summary": "ARM 本核显，兼容性限制多。",
+    "tags": [
+      "核显",
+      "ARM"
+    ],
+    "scores": {
+      "raster_rel": 13,
+      "rt_rel": null
+    }
+  }
 ]

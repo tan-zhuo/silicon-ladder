@@ -8,6 +8,7 @@ import { scorePool, sortRows, SORT_DEFS } from '@/utils/rank'
 import { CATEGORY_LABEL, FORM_LABEL, INTERFACE_LABEL, MODULAR_LABEL, price, num, iops, capacity, bool, DASH } from '@/utils/format'
 import ScoreBar from '@/components/ScoreBar.vue'
 import BrandLogo from '@/components/BrandLogo.vue'
+import { cpuPlatform, gpuPlatform, ramPlatform, storagePlatform, psuPlatform, type Row } from '@/data/platforms'
 
 const route = useRoute()
 const router = useRouter()
@@ -87,7 +88,21 @@ const scoreCards = computed(() => {
     if (typeof v === 'number') return String(Math.round(v * 100) / 100)
     return String(v)
   }
-  return SORT_DEFS[category.value].map((s) => ({ key: s.key, label: s.label, rel: row.value!.rel[s.key] ?? null, raw: s.key === 'overall' || s.key === 'value' ? null : rawText(s.key) }))
+  return SORT_DEFS[category.value]
+    .map((s) => ({ key: s.key, label: s.label, rel: row.value!.rel[s.key] ?? null, raw: s.key === 'overall' || s.key === 'value' ? null : rawText(s.key) }))
+    .filter((s) => s.rel !== null || scored.value.some((r) => r.rel[s.key] != null))
+})
+
+const platformRows = computed<Row[]>(() => {
+  const it = item.value
+  if (!it) return []
+  switch (category.value) {
+    case 'cpu': return cpuPlatform(it as Cpu)
+    case 'gpu': return gpuPlatform(it as Gpu)
+    case 'ram': return ramPlatform(it as Ram)
+    case 'storage': return storagePlatform(it as Storage)
+    case 'psu': return psuPlatform(it as Psu)
+  }
 })
 
 const inCompare = computed(() => item.value ? compare.has(category.value, item.value.id) : false)
@@ -160,6 +175,20 @@ function useCase(): string {
         </div>
       </section>
     </div>
+
+    <section v-if="platformRows.length" class="card p-5">
+      <h2 class="font-semibold">平台与兼容性</h2>
+      <p class="text-xs text-muted mt-1 mb-3">按插槽 / 架构整理的公开规格，装机前请以主板厂商支持列表为准。</p>
+      <dl class="divide-y divide-line/60">
+        <div v-for="r in platformRows" :key="r.label" class="grid grid-cols-[7rem_1fr] sm:grid-cols-[9rem_1fr] gap-3 py-2.5 text-sm">
+          <dt class="text-muted">{{ r.label }}</dt>
+          <dd>
+            <div>{{ r.value }}</div>
+            <div v-if="r.note" class="text-xs text-muted mt-0.5">{{ r.note }}</div>
+          </dd>
+        </div>
+      </dl>
+    </section>
 
     <section v-if="similar.length">
       <h2 class="font-semibold mb-3">同类推荐</h2>

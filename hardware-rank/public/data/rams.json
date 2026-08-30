@@ -1,8 +1,402 @@
 [
-  { "id": "corsair-vengeance-ddr5-6000-cl30-32", "name": "Corsair Vengeance DDR5-6000 CL30 32GB", "brand": "Corsair", "form": "kit-desktop", "type": "DDR5", "spec": "DDR5-6000 CL30 32GB (16x2)", "capacity_gb": 32, "speed_mt": 6000, "cl": 30, "latency_ns": 62, "release": "2023-03", "price_cny": 699, "summary": "AM5 甜点频率，EXPO 一键即用。", "scores": { "read_GBs": 90, "write_GBs": 84, "latency_ns": 62 } },
-  { "id": "gskill-trident-z5-ddr5-7200-cl34-32", "name": "G.Skill Trident Z5 DDR5-7200 CL34 32GB", "brand": "G.Skill", "form": "kit-desktop", "type": "DDR5", "spec": "DDR5-7200 CL34 32GB (16x2)", "capacity_gb": 32, "speed_mt": 7200, "cl": 34, "latency_ns": 60, "release": "2023-06", "price_cny": 999, "summary": "Intel 平台高频首选，AM5 需看板。", "scores": { "read_GBs": 106, "write_GBs": 98, "latency_ns": 60 } },
-  { "id": "kingston-fury-ddr5-5600-cl36-32", "name": "Kingston FURY Beast DDR5-5600 CL36 32GB", "brand": "Kingston", "form": "kit-desktop", "type": "DDR5", "spec": "DDR5-5600 CL36 32GB (16x2)", "capacity_gb": 32, "speed_mt": 5600, "cl": 36, "latency_ns": 70, "release": "2022-11", "price_cny": 599, "summary": "入门 DDR5，稳定但延迟偏高。", "scores": { "read_GBs": 82, "write_GBs": 76, "latency_ns": 70 } },
-  { "id": "crucial-ddr5-5600-sodimm-32", "name": "Crucial DDR5-5600 SO-DIMM 32GB", "brand": "Crucial", "form": "sodimm", "type": "DDR5", "spec": "DDR5-5600 CL46 32GB (16x2) SO-DIMM", "capacity_gb": 32, "speed_mt": 5600, "cl": 46, "latency_ns": 80, "release": "2023-01", "price_cny": 649, "summary": "笔记本升级常见选择，JEDEC 时序。", "scores": { "read_GBs": 78, "write_GBs": 72, "latency_ns": 80 } },
-  { "id": "apple-m4-lpddr5x-onboard", "name": "Apple M4 LPDDR5X 板载", "brand": "Apple", "form": "onboard", "type": "LPDDR5X", "spec": "LPDDR5X-7500 统一内存 (M4)", "capacity_gb": 16, "speed_mt": 7500, "cl": null, "latency_ns": null, "release": "2024-05", "price_cny": null, "summary": "板载不可升级，带宽高但仅作规格参考。", "scores": { "read_GBs": 120, "write_GBs": null, "latency_ns": null } },
-  { "id": "corsair-vengeance-ddr4-3600-cl16-32", "name": "Corsair Vengeance LPX DDR4-3600 CL16 32GB", "brand": "Corsair", "form": "kit-desktop", "type": "DDR4", "spec": "DDR4-3600 CL16 32GB (16x2)", "capacity_gb": 32, "speed_mt": 3600, "cl": 16, "latency_ns": 64, "release": "2020-03", "price_cny": 399, "summary": "上代平台对照组，延迟不差带宽低。", "scores": { "read_GBs": 52, "write_GBs": 50, "latency_ns": 64 } }
+  {
+    "id": "corsair-vengeance-ddr5-6000-cl30-32",
+    "name": "Corsair Vengeance DDR5-6000 CL30 32GB",
+    "brand": "Corsair",
+    "form": "kit-desktop",
+    "type": "DDR5",
+    "spec": "DDR5-6000 CL30 32GB (16x2)",
+    "capacity_gb": 32,
+    "speed_mt": 6000,
+    "cl": 30,
+    "latency_ns": 62,
+    "release": "2023-03",
+    "price_cny": 699,
+    "summary": "AM5 甜点频率，EXPO 一键即用。",
+    "scores": {
+      "read_GBs": 90,
+      "write_GBs": 84,
+      "latency_ns": 62
+    }
+  },
+  {
+    "id": "gskill-trident-z5-ddr5-7200-cl34-32",
+    "name": "G.Skill Trident Z5 DDR5-7200 CL34 32GB",
+    "brand": "G.Skill",
+    "form": "kit-desktop",
+    "type": "DDR5",
+    "spec": "DDR5-7200 CL34 32GB (16x2)",
+    "capacity_gb": 32,
+    "speed_mt": 7200,
+    "cl": 34,
+    "latency_ns": 60,
+    "release": "2023-06",
+    "price_cny": 999,
+    "summary": "Intel 平台高频首选，AM5 需看板。",
+    "scores": {
+      "read_GBs": 106,
+      "write_GBs": 98,
+      "latency_ns": 60
+    }
+  },
+  {
+    "id": "kingston-fury-ddr5-5600-cl36-32",
+    "name": "Kingston FURY Beast DDR5-5600 CL36 32GB",
+    "brand": "Kingston",
+    "form": "kit-desktop",
+    "type": "DDR5",
+    "spec": "DDR5-5600 CL36 32GB (16x2)",
+    "capacity_gb": 32,
+    "speed_mt": 5600,
+    "cl": 36,
+    "latency_ns": 70,
+    "release": "2022-11",
+    "price_cny": 599,
+    "summary": "入门 DDR5，稳定但延迟偏高。",
+    "scores": {
+      "read_GBs": 82,
+      "write_GBs": 76,
+      "latency_ns": 70
+    }
+  },
+  {
+    "id": "crucial-ddr5-5600-sodimm-32",
+    "name": "Crucial DDR5-5600 SO-DIMM 32GB",
+    "brand": "Crucial",
+    "form": "sodimm",
+    "type": "DDR5",
+    "spec": "DDR5-5600 CL46 32GB (16x2) SO-DIMM",
+    "capacity_gb": 32,
+    "speed_mt": 5600,
+    "cl": 46,
+    "latency_ns": 80,
+    "release": "2023-01",
+    "price_cny": 649,
+    "summary": "笔记本升级常见选择，JEDEC 时序。",
+    "scores": {
+      "read_GBs": 78,
+      "write_GBs": 72,
+      "latency_ns": 80
+    }
+  },
+  {
+    "id": "apple-m4-lpddr5x-onboard",
+    "name": "Apple M4 LPDDR5X 板载",
+    "brand": "Apple",
+    "form": "onboard",
+    "type": "LPDDR5X",
+    "spec": "LPDDR5X-7500 统一内存 (M4)",
+    "capacity_gb": 16,
+    "speed_mt": 7500,
+    "cl": null,
+    "latency_ns": null,
+    "release": "2024-05",
+    "price_cny": null,
+    "summary": "板载不可升级，带宽高但仅作规格参考。",
+    "scores": {
+      "read_GBs": 120,
+      "write_GBs": null,
+      "latency_ns": null
+    }
+  },
+  {
+    "id": "corsair-vengeance-ddr4-3600-cl16-32",
+    "name": "Corsair Vengeance LPX DDR4-3600 CL16 32GB",
+    "brand": "Corsair",
+    "form": "kit-desktop",
+    "type": "DDR4",
+    "spec": "DDR4-3600 CL16 32GB (16x2)",
+    "capacity_gb": 32,
+    "speed_mt": 3600,
+    "cl": 16,
+    "latency_ns": 64,
+    "release": "2020-03",
+    "price_cny": 399,
+    "summary": "上代平台对照组，延迟不差带宽低。",
+    "scores": {
+      "read_GBs": 52,
+      "write_GBs": 50,
+      "latency_ns": 64
+    }
+  },
+  {
+    "id": "gskill-trident-z5-neo-ddr5-6000-cl30-64",
+    "name": "G.Skill Trident Z5 Neo DDR5-6000 CL30 64GB",
+    "brand": "G.Skill",
+    "form": "kit-desktop",
+    "type": "DDR5",
+    "spec": "DDR5-6000 CL30 64GB (32x2)",
+    "capacity_gb": 64,
+    "speed_mt": 6000,
+    "cl": 30,
+    "latency_ns": 61,
+    "release": "2024-03",
+    "price_cny": 1399,
+    "summary": "AM5 大容量首选，EXPO。",
+    "scores": {
+      "read_GBs": 92,
+      "write_GBs": 86,
+      "latency_ns": 61
+    }
+  },
+  {
+    "id": "gskill-flare-x5-ddr5-6000-cl30-32",
+    "name": "G.Skill Flare X5 DDR5-6000 CL30 32GB",
+    "brand": "G.Skill",
+    "form": "kit-desktop",
+    "type": "DDR5",
+    "spec": "DDR5-6000 CL30 32GB (16x2)",
+    "capacity_gb": 32,
+    "speed_mt": 6000,
+    "cl": 30,
+    "latency_ns": 62,
+    "release": "2022-11",
+    "price_cny": 599,
+    "summary": "无灯低矮，AM5 性价比之选。",
+    "scores": {
+      "read_GBs": 90,
+      "write_GBs": 84,
+      "latency_ns": 62
+    }
+  },
+  {
+    "id": "teamgroup-t-force-delta-ddr5-6400-cl32-32",
+    "name": "TEAMGROUP T-Force Delta DDR5-6400 CL32 32GB",
+    "brand": "TEAMGROUP",
+    "form": "kit-desktop",
+    "type": "DDR5",
+    "spec": "DDR5-6400 CL32 32GB (16x2)",
+    "capacity_gb": 32,
+    "speed_mt": 6400,
+    "cl": 32,
+    "latency_ns": 61,
+    "release": "2023-03",
+    "price_cny": 699,
+    "summary": "海力士 A-die，可超。",
+    "scores": {
+      "read_GBs": 96,
+      "write_GBs": 90,
+      "latency_ns": 61
+    }
+  },
+  {
+    "id": "corsair-dominator-titanium-ddr5-7200-cl34-32",
+    "name": "Corsair Dominator Titanium DDR5-7200 CL34 32GB",
+    "brand": "Corsair",
+    "form": "kit-desktop",
+    "type": "DDR5",
+    "spec": "DDR5-7200 CL34 32GB (16x2)",
+    "capacity_gb": 32,
+    "speed_mt": 7200,
+    "cl": 34,
+    "latency_ns": 60,
+    "release": "2023-07",
+    "price_cny": 1299,
+    "summary": "旗舰外观，Intel 平台。",
+    "scores": {
+      "read_GBs": 106,
+      "write_GBs": 98,
+      "latency_ns": 60
+    }
+  },
+  {
+    "id": "gskill-trident-z5-royal-ddr5-8000-cl38-48",
+    "name": "G.Skill Trident Z5 Royal DDR5-8000 CL38 48GB",
+    "brand": "G.Skill",
+    "form": "kit-desktop",
+    "type": "DDR5",
+    "spec": "DDR5-8000 CL38 48GB (24x2)",
+    "capacity_gb": 48,
+    "speed_mt": 8000,
+    "cl": 38,
+    "latency_ns": 59,
+    "release": "2024-06",
+    "price_cny": 1899,
+    "summary": "超频玩家向，需好主板。",
+    "scores": {
+      "read_GBs": 118,
+      "write_GBs": 108,
+      "latency_ns": 59
+    }
+  },
+  {
+    "id": "kingston-fury-renegade-ddr5-6400-cl32-32",
+    "name": "Kingston FURY Renegade DDR5-6400 CL32 32GB",
+    "brand": "Kingston",
+    "form": "kit-desktop",
+    "type": "DDR5",
+    "spec": "DDR5-6400 CL32 32GB (16x2)",
+    "capacity_gb": 32,
+    "speed_mt": 6400,
+    "cl": 32,
+    "latency_ns": 61,
+    "release": "2022-06",
+    "price_cny": 799,
+    "summary": "金士顿高端线。",
+    "scores": {
+      "read_GBs": 96,
+      "write_GBs": 90,
+      "latency_ns": 61
+    }
+  },
+  {
+    "id": "crucial-pro-ddr5-5600-cl46-32",
+    "name": "Crucial Pro DDR5-5600 CL46 32GB",
+    "brand": "Crucial",
+    "form": "kit-desktop",
+    "type": "DDR5",
+    "spec": "DDR5-5600 CL46 32GB (16x2)",
+    "capacity_gb": 32,
+    "speed_mt": 5600,
+    "cl": 46,
+    "latency_ns": 78,
+    "release": "2023-05",
+    "price_cny": 499,
+    "summary": "JEDEC 原厂颗粒，稳但慢。",
+    "scores": {
+      "read_GBs": 82,
+      "write_GBs": 76,
+      "latency_ns": 78
+    }
+  },
+  {
+    "id": "gskill-ripjaws-v-ddr4-3200-cl16-16",
+    "name": "G.Skill Ripjaws V DDR4-3200 CL16 16GB",
+    "brand": "G.Skill",
+    "form": "kit-desktop",
+    "type": "DDR4",
+    "spec": "DDR4-3200 CL16 16GB (8x2)",
+    "capacity_gb": 16,
+    "speed_mt": 3200,
+    "cl": 16,
+    "latency_ns": 68,
+    "release": "2016-01",
+    "price_cny": 229,
+    "summary": "DDR4 时代的标准答案。",
+    "scores": {
+      "read_GBs": 46,
+      "write_GBs": 44,
+      "latency_ns": 68
+    }
+  },
+  {
+    "id": "gskill-ripjaws-ddr5-5600-sodimm-32",
+    "name": "G.Skill Ripjaws DDR5-5600 SO-DIMM 32GB",
+    "brand": "G.Skill",
+    "form": "sodimm",
+    "type": "DDR5",
+    "spec": "DDR5-5600 CL40 32GB (16x2) SO-DIMM",
+    "capacity_gb": 32,
+    "speed_mt": 5600,
+    "cl": 40,
+    "latency_ns": 74,
+    "release": "2023-04",
+    "price_cny": 699,
+    "summary": "时序稍好的笔记本条。",
+    "scores": {
+      "read_GBs": 79,
+      "write_GBs": 73,
+      "latency_ns": 74
+    }
+  },
+  {
+    "id": "kingston-fury-impact-ddr5-6400-sodimm-32",
+    "name": "Kingston FURY Impact DDR5-6400 SO-DIMM 32GB",
+    "brand": "Kingston",
+    "form": "sodimm",
+    "type": "DDR5",
+    "spec": "DDR5-6400 CL38 32GB (16x2) SO-DIMM",
+    "capacity_gb": 32,
+    "speed_mt": 6400,
+    "cl": 38,
+    "latency_ns": 68,
+    "release": "2024-02",
+    "price_cny": 899,
+    "summary": "支持 XMP 的高频笔记本条。",
+    "scores": {
+      "read_GBs": 88,
+      "write_GBs": 82,
+      "latency_ns": 68
+    }
+  },
+  {
+    "id": "crucial-ddr4-3200-sodimm-16",
+    "name": "Crucial DDR4-3200 SO-DIMM 16GB",
+    "brand": "Crucial",
+    "form": "sodimm",
+    "type": "DDR4",
+    "spec": "DDR4-3200 CL22 16GB (8x2) SO-DIMM",
+    "capacity_gb": 16,
+    "speed_mt": 3200,
+    "cl": 22,
+    "latency_ns": 78,
+    "release": "2020-01",
+    "price_cny": 249,
+    "summary": "老笔记本升级。",
+    "scores": {
+      "read_GBs": 44,
+      "write_GBs": 42,
+      "latency_ns": 78
+    }
+  },
+  {
+    "id": "intel-lunar-lake-lpddr5x-8533-onboard",
+    "name": "Lunar Lake LPDDR5X-8533 板载",
+    "brand": "Intel",
+    "form": "onboard",
+    "type": "LPDDR5X",
+    "spec": "LPDDR5X-8533 封装内 32GB",
+    "capacity_gb": 32,
+    "speed_mt": 8533,
+    "cl": null,
+    "latency_ns": null,
+    "release": "2024-09",
+    "price_cny": null,
+    "summary": "内存封装在 CPU 上，购机时定死。",
+    "scores": {
+      "read_GBs": 128,
+      "write_GBs": null,
+      "latency_ns": null
+    }
+  },
+  {
+    "id": "amd-strix-halo-lpddr5x-8000-onboard",
+    "name": "Strix Halo LPDDR5X-8000 板载",
+    "brand": "AMD",
+    "form": "onboard",
+    "type": "LPDDR5X",
+    "spec": "LPDDR5X-8000 256-bit 128GB",
+    "capacity_gb": 128,
+    "speed_mt": 8000,
+    "cl": null,
+    "latency_ns": null,
+    "release": "2025-02",
+    "price_cny": null,
+    "summary": "256-bit 四通道，核显性能的根基。",
+    "scores": {
+      "read_GBs": 250,
+      "write_GBs": null,
+      "latency_ns": null
+    }
+  },
+  {
+    "id": "apple-m4-max-lpddr5x-onboard",
+    "name": "Apple M4 Max LPDDR5X 板载",
+    "brand": "Apple",
+    "form": "onboard",
+    "type": "LPDDR5X",
+    "spec": "LPDDR5X-8533 512-bit 最高 128GB",
+    "capacity_gb": 128,
+    "speed_mt": 8533,
+    "cl": null,
+    "latency_ns": null,
+    "release": "2024-11",
+    "price_cny": null,
+    "summary": "统一内存带宽 546GB/s 级别。",
+    "scores": {
+      "read_GBs": 410,
+      "write_GBs": null,
+      "latency_ns": null
+    }
+  }
 ]
