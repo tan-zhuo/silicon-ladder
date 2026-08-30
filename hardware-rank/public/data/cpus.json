@@ -1,0 +1,79 @@
+[
+  {
+    "id": "amd-ryzen-7-7800x3d", "name": "Ryzen 7 7800X3D", "nameEn": "AMD Ryzen 7 7800X3D", "brand": "AMD", "form": "desktop",
+    "series": "Ryzen 7", "gen": "zen4", "socket": "AM5", "cores": "8P / 16T", "clocks": "4.2 / 5.0 GHz", "tdp_w": 120,
+    "igpu": "Radeon (2CU)", "cache_l3": "96 MB (3D V-Cache)", "mem": "DDR5-5200", "release": "2023-04", "price_cny": 2499,
+    "summary": "上代游戏神U，3D 缓存加持，功耗温和。", "tags": ["X3D", "游戏"],
+    "scores": { "cb24_st": 1120, "cb24_mt": 14200, "gaming_rel": 100, "igpu_rel": null }
+  },
+  {
+    "id": "amd-ryzen-7-9800x3d", "name": "Ryzen 7 9800X3D", "nameEn": "AMD Ryzen 7 9800X3D", "brand": "AMD", "form": "desktop",
+    "series": "Ryzen 7", "gen": "zen5", "socket": "AM5", "cores": "8P / 16T", "clocks": "4.7 / 5.2 GHz", "tdp_w": 120,
+    "igpu": "Radeon (2CU)", "cache_l3": "96 MB (3D V-Cache)", "mem": "DDR5-5600", "release": "2024-11", "price_cny": 3699,
+    "summary": "当前游戏最强，第二代 3D 缓存可超频。", "tags": ["X3D", "游戏", "旗舰"],
+    "scores": { "cb24_st": 1320, "cb24_mt": 16200, "gaming_rel": 104, "igpu_rel": null }
+  },
+  {
+    "id": "amd-ryzen-9-9950x", "name": "Ryzen 9 9950X", "nameEn": "AMD Ryzen 9 9950X", "brand": "AMD", "form": "desktop",
+    "series": "Ryzen 9", "gen": "zen5", "socket": "AM5", "cores": "16P / 32T", "clocks": "4.3 / 5.7 GHz", "tdp_w": 170,
+    "igpu": "Radeon (2CU)", "cache_l3": "64 MB", "mem": "DDR5-5600", "release": "2024-08", "price_cny": 4599,
+    "summary": "16 核生产力旗舰，多核与单核俱佳。", "tags": ["生产力", "旗舰"],
+    "scores": { "cb24_st": 1380, "cb24_mt": 25500, "gaming_rel": 86, "igpu_rel": null }
+  },
+  {
+    "id": "intel-core-ultra-7-265k", "name": "Core Ultra 7 265K", "nameEn": "Intel Core Ultra 7 265K", "brand": "Intel", "form": "desktop",
+    "series": "Core Ultra 7", "gen": "arrow-lake", "socket": "LGA1851", "cores": "8P+12E / 20T", "clocks": "3.9 / 5.5 GHz", "tdp_w": 125,
+    "igpu": "Intel Graphics (4Xe)", "cache_l3": "30 MB", "mem": "DDR5-6400", "release": "2024-10", "price_cny": 2799,
+    "summary": "Arrow Lake 主流高端，能效改善，游戏一般。", "tags": ["生产力"],
+    "scores": { "cb24_st": 1360, "cb24_mt": 22000, "gaming_rel": 84, "igpu_rel": null }
+  },
+  {
+    "id": "intel-core-i7-14700k", "name": "Core i7-14700K", "nameEn": "Intel Core i7-14700K", "brand": "Intel", "form": "desktop",
+    "series": "Core i7", "gen": "raptor-lake", "socket": "LGA1700", "cores": "8P+12E / 28T", "clocks": "3.4 / 5.6 GHz", "tdp_w": 125,
+    "igpu": "UHD 770", "cache_l3": "33 MB", "mem": "DDR5-5600 / DDR4-3200", "release": "2023-10", "price_cny": 2599,
+    "summary": "多线程强，功耗高，注意微码更新。", "tags": ["生产力"],
+    "scores": { "cb24_st": 1280, "cb24_mt": 23000, "gaming_rel": 82, "igpu_rel": null }
+  },
+  {
+    "id": "amd-ryzen-5-7600", "name": "Ryzen 5 7600", "nameEn": "AMD Ryzen 5 7600", "brand": "AMD", "form": "desktop",
+    "series": "Ryzen 5", "gen": "zen4", "socket": "AM5", "cores": "6P / 12T", "clocks": "3.8 / 5.1 GHz", "tdp_w": 65,
+    "igpu": "Radeon (2CU)", "cache_l3": "32 MB", "mem": "DDR5-5200", "release": "2023-01", "price_cny": 1199,
+    "summary": "AM5 入门甜点，65W 安静好养。", "tags": ["性价比"],
+    "scores": { "cb24_st": 1080, "cb24_mt": 10200, "gaming_rel": 78, "igpu_rel": null }
+  },
+  {
+    "id": "apple-m4-pro-14", "name": "Apple M4 Pro (14核)", "nameEn": "Apple M4 Pro 14-core", "brand": "Apple", "form": "laptop",
+    "series": "M4", "gen": "apple-m4", "socket": "soldered", "cores": "10P+4E / 14T", "clocks": "— / 4.5 GHz", "tdp_w": 45, "tdp_range": "30–45W",
+    "igpu": "M4 Pro GPU (20核)", "cache_l3": "—", "mem": "LPDDR5X-8533", "release": "2024-11", "price_cny": null,
+    "summary": "单核最强笔记本芯片，能效领先。", "tags": ["能效", "旗舰"],
+    "scores": { "cb24_st": 1720, "cb24_mt": 16800, "gaming_rel": 70, "igpu_rel": 92 }
+  },
+  {
+    "id": "qualcomm-snapdragon-x-elite-x1e-84-100", "name": "Snapdragon X Elite X1E-84-100", "nameEn": "Qualcomm Snapdragon X Elite X1E-84-100", "brand": "Qualcomm", "form": "laptop",
+    "series": "Snapdragon X Elite", "gen": "snapdragon-x", "socket": "soldered", "cores": "12P / 12T", "clocks": "3.8 / 4.2 GHz", "tdp_w": 30, "tdp_range": "23–80W",
+    "igpu": "Adreno X1-85", "cache_l3": "42 MB", "mem": "LPDDR5X-8448", "release": "2024-06", "price_cny": null,
+    "summary": "ARM Windows 本旗舰，续航强，兼容性需留意。", "tags": ["ARM", "能效"],
+    "scores": { "cb24_st": 1490, "cb24_mt": 14600, "gaming_rel": 55, "igpu_rel": 80 }
+  },
+  {
+    "id": "amd-ryzen-ai-9-hx-370", "name": "Ryzen AI 9 HX 370", "nameEn": "AMD Ryzen AI 9 HX 370", "brand": "AMD", "form": "laptop",
+    "series": "Ryzen AI 9", "gen": "zen5", "socket": "soldered", "cores": "4P+8c / 24T", "clocks": "2.0 / 5.1 GHz", "tdp_w": 28, "tdp_range": "15–54W",
+    "igpu": "Radeon 890M", "cache_l3": "24 MB", "mem": "LPDDR5X-7500", "release": "2024-07", "price_cny": null,
+    "summary": "核显最强 x86 轻薄本芯片，均衡。", "tags": ["核显", "轻薄"],
+    "scores": { "cb24_st": 1200, "cb24_mt": 12500, "gaming_rel": 62, "igpu_rel": 88 }
+  },
+  {
+    "id": "intel-core-ultra-9-185h", "name": "Core Ultra 9 185H", "nameEn": "Intel Core Ultra 9 185H", "brand": "Intel", "form": "laptop",
+    "series": "Core Ultra 9", "gen": "meteor-lake", "socket": "soldered", "cores": "6P+8E+2LP / 22T", "clocks": "2.3 / 5.1 GHz", "tdp_w": 45, "tdp_range": "45–115W",
+    "igpu": "Arc (8Xe)", "cache_l3": "24 MB", "mem": "LPDDR5X-7467 / DDR5-5600", "release": "2023-12", "price_cny": null,
+    "summary": "Meteor Lake 旗舰，多核尚可，能效一般。", "tags": ["全能本"],
+    "scores": { "cb24_st": 1100, "cb24_mt": 14000, "gaming_rel": 58, "igpu_rel": 70 }
+  },
+  {
+    "id": "amd-ryzen-9-9955hx", "name": "Ryzen 9 9955HX", "nameEn": "AMD Ryzen 9 9955HX", "brand": "AMD", "form": "laptop",
+    "series": "Ryzen 9", "gen": "zen5", "socket": "soldered (FL1)", "cores": "16P / 32T", "clocks": "2.5 / 5.4 GHz", "tdp_w": 55, "tdp_range": "55–75W",
+    "igpu": "Radeon 610M", "cache_l3": "64 MB", "mem": "DDR5-5600", "release": "2025-01", "price_cny": null,
+    "summary": "游戏本桌面级性能，配独显使用。", "tags": ["游戏本", "旗舰"],
+    "scores": { "cb24_st": 1340, "cb24_mt": 20900, "gaming_rel": 80, "igpu_rel": 26 }
+  }
+]

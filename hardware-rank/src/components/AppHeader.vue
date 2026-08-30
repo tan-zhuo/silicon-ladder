@@ -1,0 +1,42 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+const open = ref(false)
+const links = [
+  { to: '/rank/cpu', label: 'CPU' },
+  { to: '/rank/gpu', label: 'GPU' },
+  { to: '/rank/ram', label: '内存' },
+  { to: '/rank/storage', label: '存储' },
+  { to: '/rank/psu', label: '电源' },
+  { to: '/compare', label: '对比' },
+  { to: '/guide', label: '选购指南' },
+  { to: '/methodology', label: '方法论' },
+]
+</script>
+
+<template>
+  <header class="sticky top-0 z-40 bg-bg/90 backdrop-blur border-b border-line">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center gap-4">
+      <router-link to="/" class="flex items-center gap-2 font-semibold tracking-tight">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-accent">
+          <rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="2" />
+          <path d="M8 16V10M12 16V7M16 16v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <span>Hardware Rank</span>
+        <span class="hidden sm:inline text-muted font-normal text-sm">消费级硬件排行榜</span>
+      </router-link>
+      <nav class="ml-auto hidden md:flex items-center gap-1 text-sm">
+        <router-link
+          v-for="l in links" :key="l.to" :to="l.to"
+          class="px-3 py-1.5 rounded-lg text-muted hover:text-fg"
+          active-class="!text-fg bg-card"
+        >{{ l.label }}</router-link>
+      </nav>
+      <button class="ml-auto md:hidden btn-ghost" aria-label="菜单" @click="open = !open">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+      </button>
+    </div>
+    <nav v-if="open" class="md:hidden border-t border-line px-4 py-2 grid grid-cols-2 gap-1 text-sm" @click="open = false">
+      <router-link v-for="l in links" :key="l.to" :to="l.to" class="px-3 py-2 rounded-lg text-muted hover:text-fg" active-class="!text-fg bg-card">{{ l.label }}</router-link>
+    </nav>
+  </header>
+</template>
