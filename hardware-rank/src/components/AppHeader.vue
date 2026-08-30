@@ -39,12 +39,14 @@ const links = computed(() => [
       </nav>
 
       <div class="flex items-center gap-1.5 lg:ml-2">
-        <div class="seg !p-0.5">
-          <button
-            v-for="l in LOCALES" :key="l.key" class="seg-btn !px-2 !py-0.5 text-xs" :class="{ 'seg-active': locale === l.key }"
-            @click="setLocale(l.key)"
-          >{{ l.label }}</button>
-        </div>
+        <label class="relative inline-flex items-center btn-ghost !pl-2 !pr-7 cursor-pointer" :title="t('lang')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" class="mr-1.5 shrink-0"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" /><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18" stroke="currentColor" stroke-width="1.8" /></svg>
+          <span class="text-xs">{{ LOCALES.find(l => l.key === locale)?.label }}</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="absolute right-2 pointer-events-none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          <select class="absolute inset-0 opacity-0 cursor-pointer w-full" :value="locale" :aria-label="t('lang')" @change="setLocale(($event.target as HTMLSelectElement).value as any)">
+            <option v-for="l in LOCALES" :key="l.key" :value="l.key">{{ l.label }}</option>
+          </select>
+        </label>
         <button class="btn-ghost !px-2" :title="t('theme.toggle')" :aria-label="t('theme.toggle')" @click="theme.toggle()">
           <svg v-if="theme.theme === 'light'" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" /></svg>
           <svg v-else width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" /><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>

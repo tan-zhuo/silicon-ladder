@@ -75,5 +75,6 @@ export const en: Msg = {
     h5: 'Why PSUs have no score', p5: 'The PSU chart is a quality/spec tier list, not a benchmark. Default order: tier A→D, then wattage, then name. Tiers consider ripple, protections, components and OEM reputation and are for display only. 80Plus certifies efficiency, not build quality.',
     h6: 'Disclaimer', p6: 'Static snapshot; scores are for relative ranking and are not purchase advice. Laptop and desktop are separate pools; same-name GPUs differ by 20–40% with TGP.',
   },
+  lang: 'Language',
   loading: 'Loading data…', loadError: 'Failed to load data: ',
 }
