@@ -24,7 +24,25 @@
       "rt_rel": 100
     },
     "summary_en": "Fastest desktop card today; power and price equally shocking.",
-    "summary_ja": "現行デスクトップ最速。電力も価格も衝撃的。"
+    "summary_ja": "現行デスクトップ最速。電力も価格も衝撃的。",
+    "tech": {
+      "die_mm2": 750,
+      "transistors_m": 92200,
+      "units": 170,
+      "shaders": 21760,
+      "tmus": 680,
+      "rops": 176,
+      "rt_cores": 170,
+      "tensor_cores": 680,
+      "base_mhz": 2017,
+      "boost_mhz": 2407,
+      "mem_gbps": 28,
+      "mem_bw_gbs": 1792,
+      "l2_mb": 96,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 104.8,
+      "launch_usd": 1999
+    }
   },
   {
     "id": "nvidia-rtx-5080",
@@ -50,7 +68,25 @@
       "rt_rel": 80
     },
     "summary_en": "Second-tier flagship; 16GB is a bit conservative.",
-    "summary_ja": "準フラッグシップ。16GB はやや控えめ。"
+    "summary_ja": "準フラッグシップ。16GB はやや控えめ。",
+    "tech": {
+      "die_mm2": 378,
+      "transistors_m": 45600,
+      "units": 84,
+      "shaders": 10752,
+      "tmus": 336,
+      "rops": 112,
+      "rt_cores": 84,
+      "tensor_cores": 336,
+      "base_mhz": 2295,
+      "boost_mhz": 2617,
+      "mem_gbps": 30,
+      "mem_bw_gbs": 960,
+      "l2_mb": 64,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 56.3,
+      "launch_usd": 999
+    }
   },
   {
     "id": "nvidia-rtx-4090",
@@ -77,7 +113,25 @@
       "rt_rel": 84
     },
     "summary_en": "Last-gen flagship; 24GB still a productivity weapon.",
-    "summary_ja": "前世代旗艦。24GB は今も生産性の武器。"
+    "summary_ja": "前世代旗艦。24GB は今も生産性の武器。",
+    "tech": {
+      "die_mm2": 609,
+      "transistors_m": 76300,
+      "units": 128,
+      "shaders": 16384,
+      "tmus": 512,
+      "rops": 176,
+      "rt_cores": 128,
+      "tensor_cores": 512,
+      "base_mhz": 2235,
+      "boost_mhz": 2520,
+      "mem_gbps": 21,
+      "mem_bw_gbs": 1008,
+      "l2_mb": 72,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 82.6,
+      "launch_usd": 1599
+    }
   },
   {
     "id": "nvidia-rtx-5070-ti",
@@ -103,7 +157,25 @@
       "rt_rel": 68
     },
     "summary_en": "1440p high-refresh sweet spot; 16GB is enough.",
-    "summary_ja": "WQHD 高リフレッシュの定番。16GB で十分。"
+    "summary_ja": "WQHD 高リフレッシュの定番。16GB で十分。",
+    "tech": {
+      "die_mm2": 378,
+      "transistors_m": 45600,
+      "units": 70,
+      "shaders": 8960,
+      "tmus": 280,
+      "rops": 96,
+      "rt_cores": 70,
+      "tensor_cores": 280,
+      "base_mhz": 2295,
+      "boost_mhz": 2452,
+      "mem_gbps": 28,
+      "mem_bw_gbs": 896,
+      "l2_mb": 48,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 43.9,
+      "launch_usd": 749
+    }
   },
   {
     "id": "amd-rx-9070-xt",
@@ -130,7 +202,25 @@
       "rt_rel": 58
     },
     "summary_en": "RDNA 4 makes big RT gains; good value.",
-    "summary_ja": "RDNA 4 で RT が大幅進化。コスパ良好。"
+    "summary_ja": "RDNA 4 で RT が大幅進化。コスパ良好。",
+    "tech": {
+      "die_mm2": 357,
+      "transistors_m": 53900,
+      "units": 64,
+      "shaders": 4096,
+      "tmus": 256,
+      "rops": 128,
+      "rt_cores": 64,
+      "tensor_cores": 128,
+      "base_mhz": 2400,
+      "boost_mhz": 2970,
+      "mem_gbps": 20,
+      "mem_bw_gbs": 640,
+      "l2_mb": 8,
+      "infinity_cache_mb": 64,
+      "tflops_fp32": 48.7,
+      "launch_usd": 599
+    }
   },
   {
     "id": "nvidia-rtx-4070-super",
@@ -156,7 +246,25 @@
       "rt_rel": 50
     },
     "summary_en": "Last-gen 1440p sweet spot, easy 220W.",
-    "summary_ja": "前世代 WQHD の定番。220W で扱いやすい。"
+    "summary_ja": "前世代 WQHD の定番。220W で扱いやすい。",
+    "tech": {
+      "die_mm2": 294,
+      "transistors_m": 35800,
+      "units": 56,
+      "shaders": 7168,
+      "tmus": 224,
+      "rops": 80,
+      "rt_cores": 56,
+      "tensor_cores": 224,
+      "base_mhz": 1980,
+      "boost_mhz": 2475,
+      "mem_gbps": 21,
+      "mem_bw_gbs": 504,
+      "l2_mb": 48,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 35.5,
+      "launch_usd": 599
+    }
   },
   {
     "id": "amd-rx-7800-xt",
@@ -183,7 +291,25 @@
       "rt_rel": 38
     },
     "summary_en": "Enough raster, weak RT, affordable 16GB.",
-    "summary_ja": "ラスタ十分、RT 弱め、16GB がお得。"
+    "summary_ja": "ラスタ十分、RT 弱め、16GB がお得。",
+    "tech": {
+      "die_mm2": 346,
+      "transistors_m": 28100,
+      "units": 60,
+      "shaders": 3840,
+      "tmus": 240,
+      "rops": 96,
+      "rt_cores": 60,
+      "tensor_cores": 120,
+      "base_mhz": 1295,
+      "boost_mhz": 2430,
+      "mem_gbps": 19.5,
+      "mem_bw_gbs": 624,
+      "l2_mb": 4,
+      "infinity_cache_mb": 64,
+      "tflops_fp32": 37.3,
+      "launch_usd": 499
+    }
   },
   {
     "id": "nvidia-rtx-5090-laptop-175w",
@@ -212,7 +338,25 @@
       "rt_rel": 70
     },
     "summary_en": "Mobile flagship; the die is really desktop-5080 class.",
-    "summary_ja": "モバイル旗艦。ダイは実質デスクトップ 5080 級。"
+    "summary_ja": "モバイル旗艦。ダイは実質デスクトップ 5080 級。",
+    "tech": {
+      "die_mm2": 378,
+      "transistors_m": 45600,
+      "units": 82,
+      "shaders": 10496,
+      "tmus": 328,
+      "rops": 112,
+      "rt_cores": 82,
+      "tensor_cores": 328,
+      "base_mhz": 1597,
+      "boost_mhz": 2160,
+      "mem_gbps": 28,
+      "mem_bw_gbs": 896,
+      "l2_mb": 64,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 45.3,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-5080-laptop-150w",
@@ -240,7 +384,25 @@
       "rt_rel": 58
     },
     "summary_en": "High-end gaming-laptop mainstay with good efficiency.",
-    "summary_ja": "ハイエンドゲーミングノートの主力。効率良好。"
+    "summary_ja": "ハイエンドゲーミングノートの主力。効率良好。",
+    "tech": {
+      "die_mm2": 378,
+      "transistors_m": 45600,
+      "units": 60,
+      "shaders": 7680,
+      "tmus": 240,
+      "rops": 96,
+      "rt_cores": 60,
+      "tensor_cores": 240,
+      "base_mhz": 1335,
+      "boost_mhz": 2190,
+      "mem_gbps": 28,
+      "mem_bw_gbs": 896,
+      "l2_mb": 48,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 33.6,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-5070-laptop-115w",
@@ -268,7 +430,25 @@
       "rt_rel": 46
     },
     "summary_en": "Full 115W version; 8GB VRAM is the weak point.",
-    "summary_ja": "フル 115W 版。8GB VRAM が弱点。"
+    "summary_ja": "フル 115W 版。8GB VRAM が弱点。",
+    "tech": {
+      "die_mm2": 181,
+      "transistors_m": 21900,
+      "units": 36,
+      "shaders": 4608,
+      "tmus": 144,
+      "rops": 48,
+      "rt_cores": 36,
+      "tensor_cores": 144,
+      "base_mhz": 1230,
+      "boost_mhz": 2005,
+      "mem_gbps": 28,
+      "mem_bw_gbs": 448,
+      "l2_mb": 32,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 18.5,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-5070-laptop-80w",
@@ -297,7 +477,25 @@
       "rt_rel": 36
     },
     "summary_en": "80W thin-and-light version, ~20% slower than full power.",
-    "summary_ja": "薄型向け 80W 版。フル版より約2割遅い。"
+    "summary_ja": "薄型向け 80W 版。フル版より約2割遅い。",
+    "tech": {
+      "die_mm2": 181,
+      "transistors_m": 21900,
+      "units": 36,
+      "shaders": 4608,
+      "tmus": 144,
+      "rops": 48,
+      "rt_cores": 36,
+      "tensor_cores": 144,
+      "base_mhz": 1230,
+      "boost_mhz": 1900,
+      "mem_gbps": 28,
+      "mem_bw_gbs": 448,
+      "l2_mb": 32,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 17.5,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-4070-laptop-140w",
@@ -325,7 +523,25 @@
       "rt_rel": 42
     },
     "summary_en": "Last-gen mainstream, still competitive at full TGP.",
-    "summary_ja": "前世代主流。フル TGP なら今も戦える。"
+    "summary_ja": "前世代主流。フル TGP なら今も戦える。",
+    "tech": {
+      "die_mm2": 188,
+      "transistors_m": 22900,
+      "units": 36,
+      "shaders": 4608,
+      "tmus": 144,
+      "rops": 48,
+      "rt_cores": 36,
+      "tensor_cores": 144,
+      "base_mhz": 1230,
+      "boost_mhz": 2175,
+      "mem_gbps": 16,
+      "mem_bw_gbs": 256,
+      "l2_mb": 32,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 20,
+      "launch_usd": null
+    }
   },
   {
     "id": "apple-m4-max-gpu-40",
@@ -353,7 +569,25 @@
       "rt_rel": 20
     },
     "summary_en": "iGPU ceiling: weak RT, strong productivity.",
-    "summary_ja": "内蔵GPUの天井。RT は弱いが生産性は強い。"
+    "summary_ja": "内蔵GPUの天井。RT は弱いが生産性は強い。",
+    "tech": {
+      "die_mm2": null,
+      "transistors_m": null,
+      "units": 40,
+      "shaders": 5120,
+      "tmus": 320,
+      "rops": 160,
+      "rt_cores": 40,
+      "tensor_cores": null,
+      "base_mhz": null,
+      "boost_mhz": 1578,
+      "mem_gbps": null,
+      "mem_bw_gbs": 546,
+      "l2_mb": null,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 16.2,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-5070",
@@ -379,7 +613,25 @@
       "rt_rel": 54
     },
     "summary_en": "12GB is conservative; the 1440p mainstream card.",
-    "summary_ja": "12GB は控えめ。WQHD の主流カード。"
+    "summary_ja": "12GB は控えめ。WQHD の主流カード。",
+    "tech": {
+      "die_mm2": 263,
+      "transistors_m": 31100,
+      "units": 48,
+      "shaders": 6144,
+      "tmus": 192,
+      "rops": 80,
+      "rt_cores": 48,
+      "tensor_cores": 192,
+      "base_mhz": 2325,
+      "boost_mhz": 2512,
+      "mem_gbps": 28,
+      "mem_bw_gbs": 672,
+      "l2_mb": 48,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 30.9,
+      "launch_usd": 549
+    }
   },
   {
     "id": "nvidia-rtx-5060-ti-16gb",
@@ -406,7 +658,25 @@
       "rt_rel": 43
     },
     "summary_en": "Only the 16GB version is worth buying.",
-    "summary_ja": "買うなら 16GB 版だけ。"
+    "summary_ja": "買うなら 16GB 版だけ。",
+    "tech": {
+      "die_mm2": 181,
+      "transistors_m": 21900,
+      "units": 36,
+      "shaders": 4608,
+      "tmus": 144,
+      "rops": 48,
+      "rt_cores": 36,
+      "tensor_cores": 144,
+      "base_mhz": 2407,
+      "boost_mhz": 2572,
+      "mem_gbps": 28,
+      "mem_bw_gbs": 448,
+      "l2_mb": 32,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 23.7,
+      "launch_usd": 429
+    }
   },
   {
     "id": "nvidia-rtx-5060",
@@ -432,7 +702,25 @@
       "rt_rel": 36
     },
     "summary_en": "8GB VRAM is the fatal flaw.",
-    "summary_ja": "8GB VRAM が致命的。"
+    "summary_ja": "8GB VRAM が致命的。",
+    "tech": {
+      "die_mm2": 181,
+      "transistors_m": 21900,
+      "units": 30,
+      "shaders": 3840,
+      "tmus": 120,
+      "rops": 48,
+      "rt_cores": 30,
+      "tensor_cores": 120,
+      "base_mhz": 2280,
+      "boost_mhz": 2497,
+      "mem_gbps": 28,
+      "mem_bw_gbs": 448,
+      "l2_mb": 32,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 19.2,
+      "launch_usd": 299
+    }
   },
   {
     "id": "nvidia-rtx-4080-super",
@@ -458,7 +746,25 @@
       "rt_rel": 70
     },
     "summary_en": "Last-gen 4K second-tier flagship.",
-    "summary_ja": "前世代 4K 準旗艦。"
+    "summary_ja": "前世代 4K 準旗艦。",
+    "tech": {
+      "die_mm2": 379,
+      "transistors_m": 45900,
+      "units": 80,
+      "shaders": 10240,
+      "tmus": 320,
+      "rops": 112,
+      "rt_cores": 80,
+      "tensor_cores": 320,
+      "base_mhz": 2295,
+      "boost_mhz": 2550,
+      "mem_gbps": 23,
+      "mem_bw_gbs": 736,
+      "l2_mb": 64,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 52.2,
+      "launch_usd": 999
+    }
   },
   {
     "id": "nvidia-rtx-4070-ti-super",
@@ -484,7 +790,25 @@
       "rt_rel": 60
     },
     "summary_en": "1440p high-refresh card with 16GB.",
-    "summary_ja": "16GB 搭載の WQHD 高リフレッシュ向け。"
+    "summary_ja": "16GB 搭載の WQHD 高リフレッシュ向け。",
+    "tech": {
+      "die_mm2": 379,
+      "transistors_m": 45900,
+      "units": 66,
+      "shaders": 8448,
+      "tmus": 264,
+      "rops": 96,
+      "rt_cores": 66,
+      "tensor_cores": 264,
+      "base_mhz": 2340,
+      "boost_mhz": 2610,
+      "mem_gbps": 21,
+      "mem_bw_gbs": 672,
+      "l2_mb": 48,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 44.1,
+      "launch_usd": 799
+    }
   },
   {
     "id": "nvidia-rtx-4070",
@@ -510,7 +834,25 @@
       "rt_rel": 45
     },
     "summary_en": "Quiet 200W 1440p card.",
-    "summary_ja": "静かな 200W WQHD カード。"
+    "summary_ja": "静かな 200W WQHD カード。",
+    "tech": {
+      "die_mm2": 294,
+      "transistors_m": 35800,
+      "units": 46,
+      "shaders": 5888,
+      "tmus": 184,
+      "rops": 64,
+      "rt_cores": 46,
+      "tensor_cores": 184,
+      "base_mhz": 1920,
+      "boost_mhz": 2475,
+      "mem_gbps": 21,
+      "mem_bw_gbs": 504,
+      "l2_mb": 36,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 29.1,
+      "launch_usd": 599
+    }
   },
   {
     "id": "nvidia-rtx-4060-ti-8gb",
@@ -536,7 +878,25 @@
       "rt_rel": 34
     },
     "summary_en": "Both bus width and VRAM were cut.",
-    "summary_ja": "バス幅も VRAM も削られた。"
+    "summary_ja": "バス幅も VRAM も削られた。",
+    "tech": {
+      "die_mm2": 188,
+      "transistors_m": 22900,
+      "units": 34,
+      "shaders": 4352,
+      "tmus": 136,
+      "rops": 48,
+      "rt_cores": 34,
+      "tensor_cores": 136,
+      "base_mhz": 2310,
+      "boost_mhz": 2535,
+      "mem_gbps": 18,
+      "mem_bw_gbs": 288,
+      "l2_mb": 32,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 22.1,
+      "launch_usd": 399
+    }
   },
   {
     "id": "nvidia-rtx-4060",
@@ -563,7 +923,25 @@
       "rt_rel": 28
     },
     "summary_en": "Low power; the net-café and entry favorite.",
-    "summary_ja": "低消費電力。ネットカフェと入門の定番。"
+    "summary_ja": "低消費電力。ネットカフェと入門の定番。",
+    "tech": {
+      "die_mm2": 159,
+      "transistors_m": 18900,
+      "units": 24,
+      "shaders": 3072,
+      "tmus": 96,
+      "rops": 48,
+      "rt_cores": 24,
+      "tensor_cores": 96,
+      "base_mhz": 1830,
+      "boost_mhz": 2460,
+      "mem_gbps": 17,
+      "mem_bw_gbs": 272,
+      "l2_mb": 24,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 15.1,
+      "launch_usd": 299
+    }
   },
   {
     "id": "nvidia-rtx-3080-10gb",
@@ -589,7 +967,25 @@
       "rt_rel": 40
     },
     "summary_en": "Two-gen-old flagship, still capable used.",
-    "summary_ja": "2世代前の旗艦。中古なら今も現役。"
+    "summary_ja": "2世代前の旗艦。中古なら今も現役。",
+    "tech": {
+      "die_mm2": 628,
+      "transistors_m": 28300,
+      "units": 68,
+      "shaders": 8704,
+      "tmus": 272,
+      "rops": 96,
+      "rt_cores": 68,
+      "tensor_cores": 272,
+      "base_mhz": 1440,
+      "boost_mhz": 1710,
+      "mem_gbps": 19,
+      "mem_bw_gbs": 760,
+      "l2_mb": 5,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 29.8,
+      "launch_usd": 699
+    }
   },
   {
     "id": "nvidia-rtx-3070",
@@ -615,7 +1011,25 @@
       "rt_rel": 30
     },
     "summary_en": "8GB VRAM starting to run tight.",
-    "summary_ja": "8GB VRAM が厳しくなってきた。"
+    "summary_ja": "8GB VRAM が厳しくなってきた。",
+    "tech": {
+      "die_mm2": 392,
+      "transistors_m": 17400,
+      "units": 46,
+      "shaders": 5888,
+      "tmus": 184,
+      "rops": 96,
+      "rt_cores": 46,
+      "tensor_cores": 184,
+      "base_mhz": 1500,
+      "boost_mhz": 1725,
+      "mem_gbps": 14,
+      "mem_bw_gbs": 448,
+      "l2_mb": 4,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 20.3,
+      "launch_usd": 499
+    }
   },
   {
     "id": "nvidia-rtx-3060-12gb",
@@ -641,7 +1055,25 @@
       "rt_rel": 20
     },
     "summary_en": "Big-VRAM entry classic.",
-    "summary_ja": "大容量 VRAM の入門定番。"
+    "summary_ja": "大容量 VRAM の入門定番。",
+    "tech": {
+      "die_mm2": 276,
+      "transistors_m": 12000,
+      "units": 28,
+      "shaders": 3584,
+      "tmus": 112,
+      "rops": 48,
+      "rt_cores": 28,
+      "tensor_cores": 112,
+      "base_mhz": 1320,
+      "boost_mhz": 1777,
+      "mem_gbps": 15,
+      "mem_bw_gbs": 360,
+      "l2_mb": 3,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 12.7,
+      "launch_usd": 329
+    }
   },
   {
     "id": "amd-rx-9070",
@@ -668,7 +1100,25 @@
       "rt_rel": 50
     },
     "summary_en": "Great 220W efficiency, more balanced than the XT.",
-    "summary_ja": "220W で効率抜群。XT よりバランス型。"
+    "summary_ja": "220W で効率抜群。XT よりバランス型。",
+    "tech": {
+      "die_mm2": 357,
+      "transistors_m": 53900,
+      "units": 56,
+      "shaders": 3584,
+      "tmus": 224,
+      "rops": 128,
+      "rt_cores": 56,
+      "tensor_cores": 112,
+      "base_mhz": 2070,
+      "boost_mhz": 2520,
+      "mem_gbps": 20,
+      "mem_bw_gbs": 640,
+      "l2_mb": 8,
+      "infinity_cache_mb": 64,
+      "tflops_fp32": 36.1,
+      "launch_usd": 549
+    }
   },
   {
     "id": "amd-rx-9060-xt-16gb",
@@ -695,7 +1145,25 @@
       "rt_rel": 31
     },
     "summary_en": "16GB at the same price, aimed at the 5060 Ti.",
-    "summary_ja": "同価格で 16GB。5060 Ti が対抗馬。"
+    "summary_ja": "同価格で 16GB。5060 Ti が対抗馬。",
+    "tech": {
+      "die_mm2": 199,
+      "transistors_m": 29700,
+      "units": 32,
+      "shaders": 2048,
+      "tmus": 128,
+      "rops": 64,
+      "rt_cores": 32,
+      "tensor_cores": 64,
+      "base_mhz": 2220,
+      "boost_mhz": 3130,
+      "mem_gbps": 20,
+      "mem_bw_gbs": 320,
+      "l2_mb": 8,
+      "infinity_cache_mb": 32,
+      "tflops_fp32": 25.6,
+      "launch_usd": 349
+    }
   },
   {
     "id": "amd-rx-7900-xtx",
@@ -721,7 +1189,25 @@
       "rt_rel": 52
     },
     "summary_en": "24GB with strong raster, average RT.",
-    "summary_ja": "24GB でラスタは強力、RT は平凡。"
+    "summary_ja": "24GB でラスタは強力、RT は平凡。",
+    "tech": {
+      "die_mm2": 529,
+      "transistors_m": 57700,
+      "units": 96,
+      "shaders": 6144,
+      "tmus": 384,
+      "rops": 192,
+      "rt_cores": 96,
+      "tensor_cores": 192,
+      "base_mhz": 1929,
+      "boost_mhz": 2498,
+      "mem_gbps": 20,
+      "mem_bw_gbs": 960,
+      "l2_mb": 6,
+      "infinity_cache_mb": 96,
+      "tflops_fp32": 61.4,
+      "launch_usd": 999
+    }
   },
   {
     "id": "amd-rx-7900-xt",
@@ -748,7 +1234,25 @@
       "rt_rel": 45
     },
     "summary_en": "Great value after price cuts.",
-    "summary_ja": "値下げ後はコスパ良好。"
+    "summary_ja": "値下げ後はコスパ良好。",
+    "tech": {
+      "die_mm2": 529,
+      "transistors_m": 57700,
+      "units": 84,
+      "shaders": 5376,
+      "tmus": 336,
+      "rops": 192,
+      "rt_cores": 84,
+      "tensor_cores": 168,
+      "base_mhz": 1500,
+      "boost_mhz": 2394,
+      "mem_gbps": 20,
+      "mem_bw_gbs": 800,
+      "l2_mb": 6,
+      "infinity_cache_mb": 80,
+      "tflops_fp32": 51.5,
+      "launch_usd": 899
+    }
   },
   {
     "id": "amd-rx-7700-xt",
@@ -774,7 +1278,25 @@
       "rt_rel": 32
     },
     "summary_en": "Sits between the 7800 XT and 7600.",
-    "summary_ja": "7800 XT と 7600 の間。"
+    "summary_ja": "7800 XT と 7600 の間。",
+    "tech": {
+      "die_mm2": 346,
+      "transistors_m": 28100,
+      "units": 54,
+      "shaders": 3456,
+      "tmus": 216,
+      "rops": 96,
+      "rt_cores": 54,
+      "tensor_cores": 108,
+      "base_mhz": 1700,
+      "boost_mhz": 2544,
+      "mem_gbps": 18,
+      "mem_bw_gbs": 432,
+      "l2_mb": 4,
+      "infinity_cache_mb": 48,
+      "tflops_fp32": 35.2,
+      "launch_usd": 449
+    }
   },
   {
     "id": "amd-rx-7600",
@@ -801,7 +1323,25 @@
       "rt_rel": 20
     },
     "summary_en": "1080p entry.",
-    "summary_ja": "1080p 入門。"
+    "summary_ja": "1080p 入門。",
+    "tech": {
+      "die_mm2": 204,
+      "transistors_m": 13300,
+      "units": 32,
+      "shaders": 2048,
+      "tmus": 128,
+      "rops": 64,
+      "rt_cores": 32,
+      "tensor_cores": 64,
+      "base_mhz": 1720,
+      "boost_mhz": 2655,
+      "mem_gbps": 18,
+      "mem_bw_gbs": 288,
+      "l2_mb": 2,
+      "infinity_cache_mb": 32,
+      "tflops_fp32": 21.7,
+      "launch_usd": 269
+    }
   },
   {
     "id": "amd-rx-6800-xt",
@@ -827,7 +1367,25 @@
       "rt_rel": 30
     },
     "summary_en": "Two-gen-old 16GB, good used value.",
-    "summary_ja": "2世代前の 16GB。中古コスパ良好。"
+    "summary_ja": "2世代前の 16GB。中古コスパ良好。",
+    "tech": {
+      "die_mm2": 520,
+      "transistors_m": 26800,
+      "units": 72,
+      "shaders": 4608,
+      "tmus": 288,
+      "rops": 128,
+      "rt_cores": 72,
+      "tensor_cores": 0,
+      "base_mhz": 1825,
+      "boost_mhz": 2250,
+      "mem_gbps": 16,
+      "mem_bw_gbs": 512,
+      "l2_mb": 4,
+      "infinity_cache_mb": 128,
+      "tflops_fp32": 20.7,
+      "launch_usd": 649
+    }
   },
   {
     "id": "amd-rx-6600",
@@ -854,7 +1412,25 @@
       "rt_rel": 14
     },
     "summary_en": "The budget 1080p king.",
-    "summary_ja": "低価格帯 1080p の王者。"
+    "summary_ja": "低価格帯 1080p の王者。",
+    "tech": {
+      "die_mm2": 237,
+      "transistors_m": 11100,
+      "units": 28,
+      "shaders": 1792,
+      "tmus": 112,
+      "rops": 64,
+      "rt_cores": 28,
+      "tensor_cores": 0,
+      "base_mhz": 1626,
+      "boost_mhz": 2491,
+      "mem_gbps": 14,
+      "mem_bw_gbs": 224,
+      "l2_mb": 2,
+      "infinity_cache_mb": 32,
+      "tflops_fp32": 8.9,
+      "launch_usd": 329
+    }
   },
   {
     "id": "intel-arc-b580",
@@ -882,7 +1458,25 @@
       "rt_rel": 30
     },
     "summary_en": "Battlemage 12GB; drivers vastly improved.",
-    "summary_ja": "Battlemage 12GB。ドライバが大幅改善。"
+    "summary_ja": "Battlemage 12GB。ドライバが大幅改善。",
+    "tech": {
+      "die_mm2": 272,
+      "transistors_m": 19600,
+      "units": 20,
+      "shaders": 2560,
+      "tmus": 160,
+      "rops": 80,
+      "rt_cores": 20,
+      "tensor_cores": 160,
+      "base_mhz": 2670,
+      "boost_mhz": 2670,
+      "mem_gbps": 19,
+      "mem_bw_gbs": 456,
+      "l2_mb": 18,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 13.7,
+      "launch_usd": 249
+    }
   },
   {
     "id": "intel-arc-b570",
@@ -908,7 +1502,25 @@
       "rt_rel": 25
     },
     "summary_en": "Cut-down B580.",
-    "summary_ja": "B580 の縮小版。"
+    "summary_ja": "B580 の縮小版。",
+    "tech": {
+      "die_mm2": 272,
+      "transistors_m": 19600,
+      "units": 18,
+      "shaders": 2304,
+      "tmus": 144,
+      "rops": 80,
+      "rt_cores": 18,
+      "tensor_cores": 144,
+      "base_mhz": 2500,
+      "boost_mhz": 2500,
+      "mem_gbps": 19,
+      "mem_bw_gbs": 380,
+      "l2_mb": 18,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 11.5,
+      "launch_usd": 219
+    }
   },
   {
     "id": "intel-arc-a770-16gb",
@@ -934,7 +1546,25 @@
       "rt_rel": 26
     },
     "summary_en": "First-gen Arc; older games can be hit-or-miss.",
-    "summary_ja": "初代 Arc。旧作ゲームの互換性は微妙。"
+    "summary_ja": "初代 Arc。旧作ゲームの互換性は微妙。",
+    "tech": {
+      "die_mm2": 406,
+      "transistors_m": 21700,
+      "units": 32,
+      "shaders": 4096,
+      "tmus": 256,
+      "rops": 128,
+      "rt_cores": 32,
+      "tensor_cores": 512,
+      "base_mhz": 2100,
+      "boost_mhz": 2100,
+      "mem_gbps": 17.5,
+      "mem_bw_gbs": 560,
+      "l2_mb": 16,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 17.2,
+      "launch_usd": 349
+    }
   },
   {
     "id": "nvidia-rtx-5070-ti-laptop-140w",
@@ -962,7 +1592,25 @@
       "rt_rel": 53
     },
     "summary_en": "12GB VRAM, the high-end gaming-laptop mainstream.",
-    "summary_ja": "12GB VRAM。ハイエンドゲーミングノートの主流。"
+    "summary_ja": "12GB VRAM。ハイエンドゲーミングノートの主流。",
+    "tech": {
+      "die_mm2": 263,
+      "transistors_m": 31100,
+      "units": 46,
+      "shaders": 5888,
+      "tmus": 184,
+      "rops": 64,
+      "rt_cores": 46,
+      "tensor_cores": 184,
+      "base_mhz": 1042,
+      "boost_mhz": 2010,
+      "mem_gbps": 28,
+      "mem_bw_gbs": 672,
+      "l2_mb": 48,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 23.7,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-5060-laptop-115w",
@@ -990,7 +1638,25 @@
       "rt_rel": 38
     },
     "summary_en": "Full-power 5060 for mainstream gaming laptops.",
-    "summary_ja": "フルパワー 5060。主流ゲーミングノート向け。"
+    "summary_ja": "フルパワー 5060。主流ゲーミングノート向け。",
+    "tech": {
+      "die_mm2": 181,
+      "transistors_m": 21900,
+      "units": 26,
+      "shaders": 3328,
+      "tmus": 104,
+      "rops": 48,
+      "rt_cores": 26,
+      "tensor_cores": 104,
+      "base_mhz": 1297,
+      "boost_mhz": 2160,
+      "mem_gbps": 28,
+      "mem_bw_gbs": 448,
+      "l2_mb": 32,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 14.4,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-5060-laptop-80w",
@@ -1019,7 +1685,25 @@
       "rt_rel": 31
     },
     "summary_en": "80W version for thin gaming laptops.",
-    "summary_ja": "薄型ゲーミングノート向け 80W 版。"
+    "summary_ja": "薄型ゲーミングノート向け 80W 版。",
+    "tech": {
+      "die_mm2": 181,
+      "transistors_m": 21900,
+      "units": 26,
+      "shaders": 3328,
+      "tmus": 104,
+      "rops": 48,
+      "rt_cores": 26,
+      "tensor_cores": 104,
+      "base_mhz": 1297,
+      "boost_mhz": 2000,
+      "mem_gbps": 28,
+      "mem_bw_gbs": 448,
+      "l2_mb": 32,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 13.3,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-5050-laptop-100w",
@@ -1047,7 +1731,25 @@
       "rt_rel": 28
     },
     "summary_en": "Entry discrete-GPU laptop part.",
-    "summary_ja": "入門 dGPU ノート向け。"
+    "summary_ja": "入門 dGPU ノート向け。",
+    "tech": {
+      "die_mm2": null,
+      "transistors_m": null,
+      "units": 20,
+      "shaders": 2560,
+      "tmus": 80,
+      "rops": 32,
+      "rt_cores": 20,
+      "tensor_cores": 80,
+      "base_mhz": 1500,
+      "boost_mhz": 2400,
+      "mem_gbps": 24,
+      "mem_bw_gbs": 384,
+      "l2_mb": 24,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 12.3,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-4090-laptop-175w",
@@ -1076,7 +1778,25 @@
       "rt_rel": 64
     },
     "summary_en": "Last-gen mobile flagship; the die is a desktop 4080.",
-    "summary_ja": "前世代モバイル旗艦。ダイはデスクトップ 4080。"
+    "summary_ja": "前世代モバイル旗艦。ダイはデスクトップ 4080。",
+    "tech": {
+      "die_mm2": 379,
+      "transistors_m": 45900,
+      "units": 76,
+      "shaders": 9728,
+      "tmus": 304,
+      "rops": 112,
+      "rt_cores": 76,
+      "tensor_cores": 304,
+      "base_mhz": 1455,
+      "boost_mhz": 2040,
+      "mem_gbps": 18,
+      "mem_bw_gbs": 576,
+      "l2_mb": 64,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 39.7,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-4080-laptop-175w",
@@ -1104,7 +1824,25 @@
       "rt_rel": 56
     },
     "summary_en": "Last-gen second-tier mobile flagship.",
-    "summary_ja": "前世代モバイル準旗艦。"
+    "summary_ja": "前世代モバイル準旗艦。",
+    "tech": {
+      "die_mm2": 294,
+      "transistors_m": 35800,
+      "units": 58,
+      "shaders": 7424,
+      "tmus": 232,
+      "rops": 80,
+      "rt_cores": 58,
+      "tensor_cores": 232,
+      "base_mhz": 1350,
+      "boost_mhz": 2280,
+      "mem_gbps": 20,
+      "mem_bw_gbs": 432,
+      "l2_mb": 48,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 33.9,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-4070-laptop-90w",
@@ -1133,7 +1871,25 @@
       "rt_rel": 36
     },
     "summary_en": "90W thin version, 10%+ slower than full power.",
-    "summary_ja": "薄型向け 90W 版。フル版より1割強遅い。"
+    "summary_ja": "薄型向け 90W 版。フル版より1割強遅い。",
+    "tech": {
+      "die_mm2": 188,
+      "transistors_m": 22900,
+      "units": 36,
+      "shaders": 4608,
+      "tmus": 144,
+      "rops": 48,
+      "rt_cores": 36,
+      "tensor_cores": 144,
+      "base_mhz": 1230,
+      "boost_mhz": 1980,
+      "mem_gbps": 16,
+      "mem_bw_gbs": 256,
+      "l2_mb": 32,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 18.2,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-4060-laptop-140w",
@@ -1162,7 +1918,25 @@
       "rt_rel": 34
     },
     "summary_en": "The best-selling gaming-laptop GPU.",
-    "summary_ja": "最も売れたゲーミングノート GPU。"
+    "summary_ja": "最も売れたゲーミングノート GPU。",
+    "tech": {
+      "die_mm2": 159,
+      "transistors_m": 18900,
+      "units": 24,
+      "shaders": 3072,
+      "tmus": 96,
+      "rops": 48,
+      "rt_cores": 24,
+      "tensor_cores": 96,
+      "base_mhz": 1470,
+      "boost_mhz": 2370,
+      "mem_gbps": 16,
+      "mem_bw_gbs": 256,
+      "l2_mb": 24,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 14.6,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-4060-laptop-90w",
@@ -1190,7 +1964,25 @@
       "rt_rel": 29
     },
     "summary_en": "Common 90W version in all-rounders.",
-    "summary_ja": "汎用ノートに多い 90W 版。"
+    "summary_ja": "汎用ノートに多い 90W 版。",
+    "tech": {
+      "die_mm2": 159,
+      "transistors_m": 18900,
+      "units": 24,
+      "shaders": 3072,
+      "tmus": 96,
+      "rops": 48,
+      "rt_cores": 24,
+      "tensor_cores": 96,
+      "base_mhz": 1470,
+      "boost_mhz": 2130,
+      "mem_gbps": 16,
+      "mem_bw_gbs": 256,
+      "l2_mb": 24,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 13.1,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-4050-laptop-100w",
@@ -1218,7 +2010,25 @@
       "rt_rel": 25
     },
     "summary_en": "6GB entry discrete GPU.",
-    "summary_ja": "6GB の入門 dGPU。"
+    "summary_ja": "6GB の入門 dGPU。",
+    "tech": {
+      "die_mm2": 159,
+      "transistors_m": 18900,
+      "units": 20,
+      "shaders": 2560,
+      "tmus": 80,
+      "rops": 32,
+      "rt_cores": 20,
+      "tensor_cores": 80,
+      "base_mhz": 1140,
+      "boost_mhz": 2370,
+      "mem_gbps": 16,
+      "mem_bw_gbs": 192,
+      "l2_mb": 24,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 12.1,
+      "launch_usd": null
+    }
   },
   {
     "id": "amd-rx-7900m",
@@ -1246,7 +2056,25 @@
       "rt_rel": 40
     },
     "summary_en": "AMD mobile flagship, in very few laptops.",
-    "summary_ja": "AMD モバイル旗艦。搭載機は極少。"
+    "summary_ja": "AMD モバイル旗艦。搭載機は極少。",
+    "tech": {
+      "die_mm2": 529,
+      "transistors_m": 57700,
+      "units": 72,
+      "shaders": 4608,
+      "tmus": 288,
+      "rops": 192,
+      "rt_cores": 72,
+      "tensor_cores": 144,
+      "base_mhz": 1825,
+      "boost_mhz": 2090,
+      "mem_gbps": 18,
+      "mem_bw_gbs": 576,
+      "l2_mb": 6,
+      "infinity_cache_mb": 64,
+      "tflops_fp32": 19.3,
+      "launch_usd": null
+    }
   },
   {
     "id": "amd-rx-7700s",
@@ -1274,7 +2102,25 @@
       "rt_rel": 22
     },
     "summary_en": "Found in a few models like the Framework 16.",
-    "summary_ja": "Framework 16 など少数機種のみ。"
+    "summary_ja": "Framework 16 など少数機種のみ。",
+    "tech": {
+      "die_mm2": 204,
+      "transistors_m": 13300,
+      "units": 32,
+      "shaders": 2048,
+      "tmus": 128,
+      "rops": 64,
+      "rt_cores": 32,
+      "tensor_cores": 64,
+      "base_mhz": 1500,
+      "boost_mhz": 2200,
+      "mem_gbps": 18,
+      "mem_bw_gbs": 288,
+      "l2_mb": 2,
+      "infinity_cache_mb": 32,
+      "tflops_fp32": 9,
+      "launch_usd": null
+    }
   },
   {
     "id": "apple-m4-pro-gpu-20",
@@ -1301,7 +2147,25 @@
       "rt_rel": 12
     },
     "summary_en": "Rivals a low-TGP 4060 Laptop.",
-    "summary_ja": "低 TGP の 4060 Laptop に匹敵。"
+    "summary_ja": "低 TGP の 4060 Laptop に匹敵。",
+    "tech": {
+      "die_mm2": null,
+      "transistors_m": null,
+      "units": 20,
+      "shaders": 2560,
+      "tmus": 160,
+      "rops": 80,
+      "rt_cores": 20,
+      "tensor_cores": null,
+      "base_mhz": null,
+      "boost_mhz": 1578,
+      "mem_gbps": null,
+      "mem_bw_gbs": 273,
+      "l2_mb": null,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 8.1,
+      "launch_usd": null
+    }
   },
   {
     "id": "apple-m4-gpu-10",
@@ -1328,7 +2192,25 @@
       "rt_rel": 6
     },
     "summary_en": "Air-class iGPU.",
-    "summary_ja": "Air クラスの内蔵GPU。"
+    "summary_ja": "Air クラスの内蔵GPU。",
+    "tech": {
+      "die_mm2": null,
+      "transistors_m": null,
+      "units": 10,
+      "shaders": 1280,
+      "tmus": 80,
+      "rops": 40,
+      "rt_cores": 10,
+      "tensor_cores": null,
+      "base_mhz": null,
+      "boost_mhz": 1578,
+      "mem_gbps": null,
+      "mem_bw_gbs": 120,
+      "l2_mb": null,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 4,
+      "launch_usd": null
+    }
   },
   {
     "id": "amd-radeon-8060s",
@@ -1356,7 +2238,25 @@
       "rt_rel": 18
     },
     "summary_en": "x86 iGPU ceiling, close to a 4070 Laptop.",
-    "summary_ja": "x86 内蔵GPUの天井。4070 Laptop に迫る。"
+    "summary_ja": "x86 内蔵GPUの天井。4070 Laptop に迫る。",
+    "tech": {
+      "die_mm2": null,
+      "transistors_m": null,
+      "units": 40,
+      "shaders": 2560,
+      "tmus": 160,
+      "rops": 64,
+      "rt_cores": 40,
+      "tensor_cores": 80,
+      "base_mhz": null,
+      "boost_mhz": 2900,
+      "mem_gbps": 8,
+      "mem_bw_gbs": 256,
+      "l2_mb": null,
+      "infinity_cache_mb": 32,
+      "tflops_fp32": 14.8,
+      "launch_usd": null
+    }
   },
   {
     "id": "amd-radeon-890m",
@@ -1383,7 +2283,25 @@
       "rt_rel": 6
     },
     "summary_en": "One of the strongest x86 iGPUs for thin-and-lights.",
-    "summary_ja": "薄型ノート最強クラスの x86 内蔵GPU。"
+    "summary_ja": "薄型ノート最強クラスの x86 内蔵GPU。",
+    "tech": {
+      "die_mm2": null,
+      "transistors_m": null,
+      "units": 16,
+      "shaders": 1024,
+      "tmus": 64,
+      "rops": 32,
+      "rt_cores": 16,
+      "tensor_cores": 32,
+      "base_mhz": null,
+      "boost_mhz": 2900,
+      "mem_gbps": 7.5,
+      "mem_bw_gbs": 120,
+      "l2_mb": null,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 5.9,
+      "launch_usd": null
+    }
   },
   {
     "id": "amd-radeon-780m",
@@ -1410,7 +2328,25 @@
       "rt_rel": 5
     },
     "summary_en": "Common in handhelds and thin laptops.",
-    "summary_ja": "携帯ゲーム機や薄型ノートに多い。"
+    "summary_ja": "携帯ゲーム機や薄型ノートに多い。",
+    "tech": {
+      "die_mm2": null,
+      "transistors_m": null,
+      "units": 12,
+      "shaders": 768,
+      "tmus": 48,
+      "rops": 32,
+      "rt_cores": 12,
+      "tensor_cores": 24,
+      "base_mhz": null,
+      "boost_mhz": 2700,
+      "mem_gbps": 7.5,
+      "mem_bw_gbs": 120,
+      "l2_mb": null,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 4.1,
+      "launch_usd": null
+    }
   },
   {
     "id": "intel-arc-140v",
@@ -1437,7 +2373,25 @@
       "rt_rel": 6
     },
     "summary_en": "Lunar Lake iGPU with excellent efficiency.",
-    "summary_ja": "Lunar Lake の内蔵GPU。効率が優秀。"
+    "summary_ja": "Lunar Lake の内蔵GPU。効率が優秀。",
+    "tech": {
+      "die_mm2": null,
+      "transistors_m": null,
+      "units": 8,
+      "shaders": 1024,
+      "tmus": 64,
+      "rops": 32,
+      "rt_cores": 8,
+      "tensor_cores": 64,
+      "base_mhz": null,
+      "boost_mhz": 2050,
+      "mem_gbps": 8.5,
+      "mem_bw_gbs": 136,
+      "l2_mb": 8,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 4.2,
+      "launch_usd": null
+    }
   },
   {
     "id": "intel-arc-140t",
@@ -1464,7 +2418,25 @@
       "rt_rel": 5
     },
     "summary_en": "Arrow Lake-H iGPU.",
-    "summary_ja": "Arrow Lake-H の内蔵GPU。"
+    "summary_ja": "Arrow Lake-H の内蔵GPU。",
+    "tech": {
+      "die_mm2": null,
+      "transistors_m": null,
+      "units": 8,
+      "shaders": 1024,
+      "tmus": 64,
+      "rops": 32,
+      "rt_cores": 8,
+      "tensor_cores": 64,
+      "base_mhz": null,
+      "boost_mhz": 2250,
+      "mem_gbps": 8.4,
+      "mem_bw_gbs": 134,
+      "l2_mb": 8,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 4.6,
+      "launch_usd": null
+    }
   },
   {
     "id": "qualcomm-adreno-x1-85",
@@ -1520,7 +2492,25 @@
       "rt_rel": null
     },
     "summary_en": "Popularized unified shaders; a value legend.",
-    "summary_ja": "統合シェーダを普及させたコスパの伝説。"
+    "summary_ja": "統合シェーダを普及させたコスパの伝説。",
+    "tech": {
+      "die_mm2": 324,
+      "transistors_m": 754,
+      "units": 14,
+      "shaders": 112,
+      "tmus": 56,
+      "rops": 16,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 600,
+      "boost_mhz": 1500,
+      "mem_gbps": 1.8,
+      "mem_bw_gbs": 57.6,
+      "l2_mb": null,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 0.34,
+      "launch_usd": 249
+    }
   },
   {
     "id": "nvidia-geforce-gtx-280",
@@ -1547,7 +2537,25 @@
       "rt_rel": null
     },
     "summary_en": "512-bit big-die flagship.",
-    "summary_ja": "512-bit 巨大ダイの旗艦。"
+    "summary_ja": "512-bit 巨大ダイの旗艦。",
+    "tech": {
+      "die_mm2": 576,
+      "transistors_m": 1400,
+      "units": 30,
+      "shaders": 240,
+      "tmus": 80,
+      "rops": 32,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 602,
+      "boost_mhz": 1296,
+      "mem_gbps": 2.2,
+      "mem_bw_gbs": 141,
+      "l2_mb": null,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 0.62,
+      "launch_usd": 649
+    }
   },
   {
     "id": "nvidia-gtx-480",
@@ -1574,7 +2582,25 @@
       "rt_rel": null
     },
     "summary_en": "Fermi debut — the \"nuclear\" card.",
-    "summary_ja": "Fermi 初代。「核爆弾」。"
+    "summary_ja": "Fermi 初代。「核爆弾」。",
+    "tech": {
+      "die_mm2": 529,
+      "transistors_m": 3200,
+      "units": 15,
+      "shaders": 480,
+      "tmus": 60,
+      "rops": 48,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 700,
+      "boost_mhz": 1401,
+      "mem_gbps": 3.7,
+      "mem_bw_gbs": 177,
+      "l2_mb": 0.75,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 1.34,
+      "launch_usd": 499
+    }
   },
   {
     "id": "nvidia-gtx-580",
@@ -1601,7 +2627,25 @@
       "rt_rel": null
     },
     "summary_en": "Fermi fully realized.",
-    "summary_ja": "Fermi の完成形。"
+    "summary_ja": "Fermi の完成形。",
+    "tech": {
+      "die_mm2": 520,
+      "transistors_m": 3000,
+      "units": 16,
+      "shaders": 512,
+      "tmus": 64,
+      "rops": 48,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 772,
+      "boost_mhz": 1544,
+      "mem_gbps": 4,
+      "mem_bw_gbs": 192,
+      "l2_mb": 0.75,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 1.58,
+      "launch_usd": 499
+    }
   },
   {
     "id": "nvidia-gtx-680",
@@ -1628,7 +2672,25 @@
       "rt_rel": null
     },
     "summary_en": "Kepler; a big efficiency leap.",
-    "summary_ja": "Kepler。効率が大きく前進。"
+    "summary_ja": "Kepler。効率が大きく前進。",
+    "tech": {
+      "die_mm2": 294,
+      "transistors_m": 3540,
+      "units": 8,
+      "shaders": 1536,
+      "tmus": 128,
+      "rops": 32,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1006,
+      "boost_mhz": 1058,
+      "mem_gbps": 6,
+      "mem_bw_gbs": 192,
+      "l2_mb": 0.5,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 3.3,
+      "launch_usd": 499
+    }
   },
   {
     "id": "nvidia-gtx-780-ti",
@@ -1655,7 +2717,25 @@
       "rt_rel": null
     },
     "summary_en": "Kepler big-die flagship.",
-    "summary_ja": "Kepler 大型ダイの旗艦。"
+    "summary_ja": "Kepler 大型ダイの旗艦。",
+    "tech": {
+      "die_mm2": 561,
+      "transistors_m": 7100,
+      "units": 15,
+      "shaders": 2880,
+      "tmus": 240,
+      "rops": 48,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 875,
+      "boost_mhz": 928,
+      "mem_gbps": 7,
+      "mem_bw_gbs": 336,
+      "l2_mb": 1.5,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 5.3,
+      "launch_usd": 699
+    }
   },
   {
     "id": "nvidia-gtx-970",
@@ -1683,7 +2763,25 @@
       "rt_rel": null
     },
     "summary_en": "The 3.5GB memory scandal, yet a huge seller.",
-    "summary_ja": "3.5GB 問題があったが大ヒット。"
+    "summary_ja": "3.5GB 問題があったが大ヒット。",
+    "tech": {
+      "die_mm2": 398,
+      "transistors_m": 5200,
+      "units": 13,
+      "shaders": 1664,
+      "tmus": 104,
+      "rops": 56,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1050,
+      "boost_mhz": 1178,
+      "mem_gbps": 7,
+      "mem_bw_gbs": 224,
+      "l2_mb": 1.75,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 3.9,
+      "launch_usd": 329
+    }
   },
   {
     "id": "nvidia-gtx-980",
@@ -1710,7 +2808,25 @@
       "rt_rel": null
     },
     "summary_en": "Maxwell efficiency benchmark.",
-    "summary_ja": "Maxwell 効率の基準。"
+    "summary_ja": "Maxwell 効率の基準。",
+    "tech": {
+      "die_mm2": 398,
+      "transistors_m": 5200,
+      "units": 16,
+      "shaders": 2048,
+      "tmus": 128,
+      "rops": 64,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1126,
+      "boost_mhz": 1216,
+      "mem_gbps": 7,
+      "mem_bw_gbs": 224,
+      "l2_mb": 2,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 5,
+      "launch_usd": 549
+    }
   },
   {
     "id": "nvidia-gtx-980-ti",
@@ -1737,7 +2853,25 @@
       "rt_rel": null
     },
     "summary_en": "Last 28nm flagship.",
-    "summary_ja": "28nm 最後の旗艦。"
+    "summary_ja": "28nm 最後の旗艦。",
+    "tech": {
+      "die_mm2": 601,
+      "transistors_m": 8000,
+      "units": 22,
+      "shaders": 2816,
+      "tmus": 176,
+      "rops": 96,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1000,
+      "boost_mhz": 1075,
+      "mem_gbps": 7,
+      "mem_bw_gbs": 336,
+      "l2_mb": 3,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 6.1,
+      "launch_usd": 649
+    }
   },
   {
     "id": "nvidia-gtx-1060-6gb",
@@ -1766,7 +2900,25 @@
       "rt_rel": null
     },
     "summary_en": "King of the Steam hardware survey.",
-    "summary_ja": "Steam シェアの王者。"
+    "summary_ja": "Steam シェアの王者。",
+    "tech": {
+      "die_mm2": 200,
+      "transistors_m": 4400,
+      "units": 10,
+      "shaders": 1280,
+      "tmus": 80,
+      "rops": 48,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1506,
+      "boost_mhz": 1708,
+      "mem_gbps": 8,
+      "mem_bw_gbs": 192,
+      "l2_mb": 1.5,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 4.4,
+      "launch_usd": 249
+    }
   },
   {
     "id": "nvidia-gtx-1070",
@@ -1793,7 +2945,25 @@
       "rt_rel": null
     },
     "summary_en": "8GB VRAM, long-lived.",
-    "summary_ja": "8GB VRAM で長寿。"
+    "summary_ja": "8GB VRAM で長寿。",
+    "tech": {
+      "die_mm2": 314,
+      "transistors_m": 7200,
+      "units": 15,
+      "shaders": 1920,
+      "tmus": 120,
+      "rops": 64,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1506,
+      "boost_mhz": 1683,
+      "mem_gbps": 8,
+      "mem_bw_gbs": 256,
+      "l2_mb": 2,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 6.5,
+      "launch_usd": 379
+    }
   },
   {
     "id": "nvidia-gtx-1080",
@@ -1820,7 +2990,25 @@
       "rt_rel": null
     },
     "summary_en": "Pascal launch flagship.",
-    "summary_ja": "Pascal 初代旗艦。"
+    "summary_ja": "Pascal 初代旗艦。",
+    "tech": {
+      "die_mm2": 314,
+      "transistors_m": 7200,
+      "units": 20,
+      "shaders": 2560,
+      "tmus": 160,
+      "rops": 64,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1607,
+      "boost_mhz": 1733,
+      "mem_gbps": 10,
+      "mem_bw_gbs": 320,
+      "l2_mb": 2,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 8.9,
+      "launch_usd": 599
+    }
   },
   {
     "id": "nvidia-gtx-1080-ti",
@@ -1848,7 +3036,25 @@
       "rt_rel": null
     },
     "summary_en": "Widely considered the best-value flagship ever.",
-    "summary_ja": "史上最も値持ちの良い旗艦と評される。"
+    "summary_ja": "史上最も値持ちの良い旗艦と評される。",
+    "tech": {
+      "die_mm2": 471,
+      "transistors_m": 11800,
+      "units": 28,
+      "shaders": 3584,
+      "tmus": 224,
+      "rops": 88,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1480,
+      "boost_mhz": 1582,
+      "mem_gbps": 11,
+      "mem_bw_gbs": 484,
+      "l2_mb": 2.75,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 11.3,
+      "launch_usd": 699
+    }
   },
   {
     "id": "nvidia-gtx-1650",
@@ -1875,7 +3081,25 @@
       "rt_rel": null
     },
     "summary_en": "Entry card with no external power.",
-    "summary_ja": "外部電源不要の入門カード。"
+    "summary_ja": "外部電源不要の入門カード。",
+    "tech": {
+      "die_mm2": 200,
+      "transistors_m": 4700,
+      "units": 14,
+      "shaders": 896,
+      "tmus": 56,
+      "rops": 32,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1485,
+      "boost_mhz": 1665,
+      "mem_gbps": 8,
+      "mem_bw_gbs": 128,
+      "l2_mb": 1,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 3,
+      "launch_usd": 149
+    }
   },
   {
     "id": "nvidia-gtx-1660-super",
@@ -1903,7 +3127,25 @@
       "rt_rel": null
     },
     "summary_en": "Turing sweet spot without RT.",
-    "summary_ja": "RT なしの Turing 定番。"
+    "summary_ja": "RT なしの Turing 定番。",
+    "tech": {
+      "die_mm2": 284,
+      "transistors_m": 6600,
+      "units": 22,
+      "shaders": 1408,
+      "tmus": 88,
+      "rops": 48,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1530,
+      "boost_mhz": 1785,
+      "mem_gbps": 14,
+      "mem_bw_gbs": 336,
+      "l2_mb": 1.5,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 5,
+      "launch_usd": 229
+    }
   },
   {
     "id": "nvidia-rtx-2060",
@@ -1930,7 +3172,25 @@
       "rt_rel": 12
     },
     "summary_en": "Cheapest first-gen RT card.",
-    "summary_ja": "初代 RT 最安カード。"
+    "summary_ja": "初代 RT 最安カード。",
+    "tech": {
+      "die_mm2": 445,
+      "transistors_m": 10800,
+      "units": 30,
+      "shaders": 1920,
+      "tmus": 120,
+      "rops": 48,
+      "rt_cores": 30,
+      "tensor_cores": 240,
+      "base_mhz": 1365,
+      "boost_mhz": 1680,
+      "mem_gbps": 14,
+      "mem_bw_gbs": 336,
+      "l2_mb": 3,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 6.5,
+      "launch_usd": 349
+    }
   },
   {
     "id": "nvidia-rtx-2070-super",
@@ -1957,7 +3217,25 @@
       "rt_rel": 17
     },
     "summary_en": "Turing upper-mid.",
-    "summary_ja": "Turing 上位ミドル。"
+    "summary_ja": "Turing 上位ミドル。",
+    "tech": {
+      "die_mm2": 545,
+      "transistors_m": 13600,
+      "units": 40,
+      "shaders": 2560,
+      "tmus": 160,
+      "rops": 64,
+      "rt_cores": 40,
+      "tensor_cores": 320,
+      "base_mhz": 1605,
+      "boost_mhz": 1770,
+      "mem_gbps": 14,
+      "mem_bw_gbs": 448,
+      "l2_mb": 4,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 9.1,
+      "launch_usd": 499
+    }
   },
   {
     "id": "nvidia-rtx-2080-ti",
@@ -1984,7 +3262,25 @@
       "rt_rel": 24
     },
     "summary_en": "RT year-one flagship, four-figure pricing.",
-    "summary_ja": "RT 元年の旗艦。万元スタート。"
+    "summary_ja": "RT 元年の旗艦。万元スタート。",
+    "tech": {
+      "die_mm2": 754,
+      "transistors_m": 18600,
+      "units": 68,
+      "shaders": 4352,
+      "tmus": 272,
+      "rops": 88,
+      "rt_cores": 68,
+      "tensor_cores": 544,
+      "base_mhz": 1350,
+      "boost_mhz": 1545,
+      "mem_gbps": 14,
+      "mem_bw_gbs": 616,
+      "l2_mb": 5.5,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 13.4,
+      "launch_usd": 999
+    }
   },
   {
     "id": "nvidia-rtx-3050-8gb",
@@ -2011,7 +3307,25 @@
       "rt_rel": 13
     },
     "summary_en": "Ampere entry.",
-    "summary_ja": "Ampere 入門。"
+    "summary_ja": "Ampere 入門。",
+    "tech": {
+      "die_mm2": 276,
+      "transistors_m": 12000,
+      "units": 20,
+      "shaders": 2560,
+      "tmus": 80,
+      "rops": 32,
+      "rt_cores": 20,
+      "tensor_cores": 80,
+      "base_mhz": 1552,
+      "boost_mhz": 1777,
+      "mem_gbps": 14,
+      "mem_bw_gbs": 224,
+      "l2_mb": 2,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 9.1,
+      "launch_usd": 249
+    }
   },
   {
     "id": "nvidia-rtx-3060-ti",
@@ -2039,7 +3353,25 @@
       "rt_rel": 26
     },
     "summary_en": "The pre-mining-boom sweet spot.",
-    "summary_ja": "マイニングブーム前の定番。"
+    "summary_ja": "マイニングブーム前の定番。",
+    "tech": {
+      "die_mm2": 392,
+      "transistors_m": 17400,
+      "units": 38,
+      "shaders": 4864,
+      "tmus": 152,
+      "rops": 80,
+      "rt_cores": 38,
+      "tensor_cores": 152,
+      "base_mhz": 1410,
+      "boost_mhz": 1665,
+      "mem_gbps": 14,
+      "mem_bw_gbs": 448,
+      "l2_mb": 4,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 16.2,
+      "launch_usd": 399
+    }
   },
   {
     "id": "nvidia-rtx-3080-ti",
@@ -2066,7 +3398,25 @@
       "rt_rel": 45
     },
     "summary_en": "Close to a 3090.",
-    "summary_ja": "3090 に迫る。"
+    "summary_ja": "3090 に迫る。",
+    "tech": {
+      "die_mm2": 628,
+      "transistors_m": 28300,
+      "units": 80,
+      "shaders": 10240,
+      "tmus": 320,
+      "rops": 112,
+      "rt_cores": 80,
+      "tensor_cores": 320,
+      "base_mhz": 1365,
+      "boost_mhz": 1665,
+      "mem_gbps": 19,
+      "mem_bw_gbs": 912,
+      "l2_mb": 6,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 34.1,
+      "launch_usd": 1199
+    }
   },
   {
     "id": "nvidia-rtx-3090",
@@ -2094,7 +3444,25 @@
       "rt_rel": 47
     },
     "summary_en": "The BFGPU, 24GB.",
-    "summary_ja": "BFGPU、24GB。"
+    "summary_ja": "BFGPU、24GB。",
+    "tech": {
+      "die_mm2": 628,
+      "transistors_m": 28300,
+      "units": 82,
+      "shaders": 10496,
+      "tmus": 328,
+      "rops": 112,
+      "rt_cores": 82,
+      "tensor_cores": 328,
+      "base_mhz": 1395,
+      "boost_mhz": 1695,
+      "mem_gbps": 19.5,
+      "mem_bw_gbs": 936,
+      "l2_mb": 6,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 35.6,
+      "launch_usd": 1499
+    }
   },
   {
     "id": "amd-radeon-hd-4870",
@@ -2122,7 +3490,25 @@
       "rt_rel": null
     },
     "summary_en": "GDDR5 debut; a value comeback.",
-    "summary_ja": "GDDR5 初採用。コスパで逆襲。"
+    "summary_ja": "GDDR5 初採用。コスパで逆襲。",
+    "tech": {
+      "die_mm2": 256,
+      "transistors_m": 956,
+      "units": 10,
+      "shaders": 800,
+      "tmus": 40,
+      "rops": 16,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 750,
+      "boost_mhz": 750,
+      "mem_gbps": 3.6,
+      "mem_bw_gbs": 115,
+      "l2_mb": null,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 1.2,
+      "launch_usd": 299
+    }
   },
   {
     "id": "amd-radeon-hd-5870",
@@ -2149,7 +3535,25 @@
       "rt_rel": null
     },
     "summary_en": "First DX11 GPU.",
-    "summary_ja": "初の DX11 GPU。"
+    "summary_ja": "初の DX11 GPU。",
+    "tech": {
+      "die_mm2": 334,
+      "transistors_m": 2150,
+      "units": 20,
+      "shaders": 1600,
+      "tmus": 80,
+      "rops": 32,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 850,
+      "boost_mhz": 850,
+      "mem_gbps": 4.8,
+      "mem_bw_gbs": 154,
+      "l2_mb": null,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 2.72,
+      "launch_usd": 379
+    }
   },
   {
     "id": "amd-radeon-hd-6970",
@@ -2176,7 +3580,25 @@
       "rt_rel": null
     },
     "summary_en": "VLIW4 architecture.",
-    "summary_ja": "VLIW4 アーキテクチャ。"
+    "summary_ja": "VLIW4 アーキテクチャ。",
+    "tech": {
+      "die_mm2": 389,
+      "transistors_m": 2640,
+      "units": 24,
+      "shaders": 1536,
+      "tmus": 96,
+      "rops": 32,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 880,
+      "boost_mhz": 880,
+      "mem_gbps": 5.5,
+      "mem_bw_gbs": 176,
+      "l2_mb": 0.5,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 2.7,
+      "launch_usd": 369
+    }
   },
   {
     "id": "amd-radeon-hd-7970",
@@ -2204,7 +3626,25 @@
       "rt_rel": null
     },
     "summary_en": "GCN and 28nm debut.",
-    "summary_ja": "GCN と 28nm の初採用。"
+    "summary_ja": "GCN と 28nm の初採用。",
+    "tech": {
+      "die_mm2": 352,
+      "transistors_m": 4310,
+      "units": 32,
+      "shaders": 2048,
+      "tmus": 128,
+      "rops": 32,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 925,
+      "boost_mhz": 925,
+      "mem_gbps": 5.5,
+      "mem_bw_gbs": 264,
+      "l2_mb": 0.75,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 3.8,
+      "launch_usd": 549
+    }
   },
   {
     "id": "amd-r9-290x",
@@ -2231,7 +3671,25 @@
       "rt_rel": null
     },
     "summary_en": "\"Hawaii\" — the reference cooler was a disaster.",
-    "summary_ja": "「Hawaii」。リファレンスクーラーが災難。"
+    "summary_ja": "「Hawaii」。リファレンスクーラーが災難。",
+    "tech": {
+      "die_mm2": 438,
+      "transistors_m": 6200,
+      "units": 44,
+      "shaders": 2816,
+      "tmus": 176,
+      "rops": 64,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1000,
+      "boost_mhz": 1000,
+      "mem_gbps": 5,
+      "mem_bw_gbs": 320,
+      "l2_mb": 1,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 5.6,
+      "launch_usd": 549
+    }
   },
   {
     "id": "amd-r9-fury-x",
@@ -2258,7 +3716,25 @@
       "rt_rel": null
     },
     "summary_en": "HBM debut with a liquid-cooled reference card.",
-    "summary_ja": "HBM 初採用、水冷リファレンス。"
+    "summary_ja": "HBM 初採用、水冷リファレンス。",
+    "tech": {
+      "die_mm2": 596,
+      "transistors_m": 8900,
+      "units": 64,
+      "shaders": 4096,
+      "tmus": 256,
+      "rops": 64,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1050,
+      "boost_mhz": 1050,
+      "mem_gbps": 1,
+      "mem_bw_gbs": 512,
+      "l2_mb": 2,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 8.6,
+      "launch_usd": 649
+    }
   },
   {
     "id": "amd-rx-480-8gb",
@@ -2286,7 +3762,25 @@
       "rt_rel": null
     },
     "summary_en": "Polaris sweet spot.",
-    "summary_ja": "Polaris の定番。"
+    "summary_ja": "Polaris の定番。",
+    "tech": {
+      "die_mm2": 232,
+      "transistors_m": 5700,
+      "units": 36,
+      "shaders": 2304,
+      "tmus": 144,
+      "rops": 32,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1120,
+      "boost_mhz": 1266,
+      "mem_gbps": 8,
+      "mem_bw_gbs": 256,
+      "l2_mb": 2,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 5.8,
+      "launch_usd": 239
+    }
   },
   {
     "id": "amd-rx-580-8gb",
@@ -2314,7 +3808,25 @@
       "rt_rel": null
     },
     "summary_en": "King of mining cards, flooding the used market.",
-    "summary_ja": "マイニングカードの王。中古が大量。"
+    "summary_ja": "マイニングカードの王。中古が大量。",
+    "tech": {
+      "die_mm2": 232,
+      "transistors_m": 5700,
+      "units": 36,
+      "shaders": 2304,
+      "tmus": 144,
+      "rops": 32,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1257,
+      "boost_mhz": 1340,
+      "mem_gbps": 8,
+      "mem_bw_gbs": 256,
+      "l2_mb": 2,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 6.2,
+      "launch_usd": 229
+    }
   },
   {
     "id": "amd-rx-vega-64",
@@ -2341,7 +3853,25 @@
       "rt_rel": null
     },
     "summary_en": "HBM2, power hungry.",
-    "summary_ja": "HBM2、消費電力大。"
+    "summary_ja": "HBM2、消費電力大。",
+    "tech": {
+      "die_mm2": 495,
+      "transistors_m": 12500,
+      "units": 64,
+      "shaders": 4096,
+      "tmus": 256,
+      "rops": 64,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1247,
+      "boost_mhz": 1546,
+      "mem_gbps": 1.89,
+      "mem_bw_gbs": 484,
+      "l2_mb": 4,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 12.7,
+      "launch_usd": 499
+    }
   },
   {
     "id": "amd-rx-5700-xt",
@@ -2368,7 +3898,25 @@
       "rt_rel": null
     },
     "summary_en": "RDNA debut, no RT.",
-    "summary_ja": "RDNA 初代。RT なし。"
+    "summary_ja": "RDNA 初代。RT なし。",
+    "tech": {
+      "die_mm2": 251,
+      "transistors_m": 10300,
+      "units": 40,
+      "shaders": 2560,
+      "tmus": 160,
+      "rops": 64,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1605,
+      "boost_mhz": 1905,
+      "mem_gbps": 14,
+      "mem_bw_gbs": 448,
+      "l2_mb": 4,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 9.75,
+      "launch_usd": 399
+    }
   },
   {
     "id": "amd-rx-5600-xt",
@@ -2395,7 +3943,25 @@
       "rt_rel": null
     },
     "summary_en": "Pre-launch BIOS clock bump.",
-    "summary_ja": "発売前の BIOS でクロック引き上げ。"
+    "summary_ja": "発売前の BIOS でクロック引き上げ。",
+    "tech": {
+      "die_mm2": 251,
+      "transistors_m": 10300,
+      "units": 36,
+      "shaders": 2304,
+      "tmus": 144,
+      "rops": 64,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1130,
+      "boost_mhz": 1560,
+      "mem_gbps": 12,
+      "mem_bw_gbs": 288,
+      "l2_mb": 4,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 7.2,
+      "launch_usd": 279
+    }
   },
   {
     "id": "amd-rx-6650-xt",
@@ -2422,7 +3988,25 @@
       "rt_rel": 15
     },
     "summary_en": "1080p mainstream.",
-    "summary_ja": "1080p 主流。"
+    "summary_ja": "1080p 主流。",
+    "tech": {
+      "die_mm2": 237,
+      "transistors_m": 11100,
+      "units": 32,
+      "shaders": 2048,
+      "tmus": 128,
+      "rops": 64,
+      "rt_cores": 32,
+      "tensor_cores": 0,
+      "base_mhz": 2055,
+      "boost_mhz": 2635,
+      "mem_gbps": 17.5,
+      "mem_bw_gbs": 280,
+      "l2_mb": 2,
+      "infinity_cache_mb": 32,
+      "tflops_fp32": 10.8,
+      "launch_usd": 399
+    }
   },
   {
     "id": "amd-rx-6700-xt",
@@ -2449,7 +4033,25 @@
       "rt_rel": 21
     },
     "summary_en": "12GB 1440p card.",
-    "summary_ja": "12GB の WQHD カード。"
+    "summary_ja": "12GB の WQHD カード。",
+    "tech": {
+      "die_mm2": 335,
+      "transistors_m": 17200,
+      "units": 40,
+      "shaders": 2560,
+      "tmus": 160,
+      "rops": 64,
+      "rt_cores": 40,
+      "tensor_cores": 0,
+      "base_mhz": 2321,
+      "boost_mhz": 2581,
+      "mem_gbps": 16,
+      "mem_bw_gbs": 384,
+      "l2_mb": 3,
+      "infinity_cache_mb": 96,
+      "tflops_fp32": 13.2,
+      "launch_usd": 479
+    }
   },
   {
     "id": "amd-rx-6900-xt",
@@ -2476,7 +4078,25 @@
       "rt_rel": 33
     },
     "summary_en": "RDNA2 flagship; raster matches the 3090.",
-    "summary_ja": "RDNA2 旗艦。ラスタで 3090 に並ぶ。"
+    "summary_ja": "RDNA2 旗艦。ラスタで 3090 に並ぶ。",
+    "tech": {
+      "die_mm2": 520,
+      "transistors_m": 26800,
+      "units": 80,
+      "shaders": 5120,
+      "tmus": 320,
+      "rops": 128,
+      "rt_cores": 80,
+      "tensor_cores": 0,
+      "base_mhz": 1825,
+      "boost_mhz": 2250,
+      "mem_gbps": 16,
+      "mem_bw_gbs": 512,
+      "l2_mb": 4,
+      "infinity_cache_mb": 128,
+      "tflops_fp32": 23,
+      "launch_usd": 999
+    }
   },
   {
     "id": "intel-arc-a750",
@@ -2503,7 +4123,25 @@
       "rt_rel": 22
     },
     "summary_en": "Intel returns to discrete GPUs.",
-    "summary_ja": "Intel が dGPU に復帰。"
+    "summary_ja": "Intel が dGPU に復帰。",
+    "tech": {
+      "die_mm2": 406,
+      "transistors_m": 21700,
+      "units": 28,
+      "shaders": 3584,
+      "tmus": 224,
+      "rops": 112,
+      "rt_cores": 28,
+      "tensor_cores": 448,
+      "base_mhz": 2050,
+      "boost_mhz": 2050,
+      "mem_gbps": 16,
+      "mem_bw_gbs": 512,
+      "l2_mb": 16,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 14.7,
+      "launch_usd": 289
+    }
   },
   {
     "id": "nvidia-gtx-1060-laptop-80w",
@@ -2532,7 +4170,25 @@
       "rt_rel": null
     },
     "summary_en": "Where mobile started matching desktop.",
-    "summary_ja": "モバイルがデスクトップに並び始めた起点。"
+    "summary_ja": "モバイルがデスクトップに並び始めた起点。",
+    "tech": {
+      "die_mm2": 200,
+      "transistors_m": 4400,
+      "units": 10,
+      "shaders": 1280,
+      "tmus": 80,
+      "rops": 48,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1404,
+      "boost_mhz": 1670,
+      "mem_gbps": 8,
+      "mem_bw_gbs": 192,
+      "l2_mb": 1.5,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 4.3,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-gtx-1070-laptop-115w",
@@ -2560,7 +4216,25 @@
       "rt_rel": null
     },
     "summary_en": "GTX 1070 Laptop.",
-    "summary_ja": "GTX 1070 Laptop。"
+    "summary_ja": "GTX 1070 Laptop。",
+    "tech": {
+      "die_mm2": 314,
+      "transistors_m": 7200,
+      "units": 16,
+      "shaders": 2048,
+      "tmus": 128,
+      "rops": 64,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1442,
+      "boost_mhz": 1645,
+      "mem_gbps": 8,
+      "mem_bw_gbs": 256,
+      "l2_mb": 2,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 6.7,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-gtx-1650-laptop-50w",
@@ -2589,7 +4263,25 @@
       "rt_rel": null
     },
     "summary_en": "Entry discrete-GPU laptop.",
-    "summary_ja": "入門 dGPU ノート。"
+    "summary_ja": "入門 dGPU ノート。",
+    "tech": {
+      "die_mm2": 200,
+      "transistors_m": 4700,
+      "units": 16,
+      "shaders": 1024,
+      "tmus": 64,
+      "rops": 32,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1395,
+      "boost_mhz": 1560,
+      "mem_gbps": 8,
+      "mem_bw_gbs": 128,
+      "l2_mb": 1,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 3.2,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-gtx-1660-ti-laptop-80w",
@@ -2618,7 +4310,25 @@
       "rt_rel": null
     },
     "summary_en": "GTX 1660 Ti Laptop.",
-    "summary_ja": "GTX 1660 Ti Laptop。"
+    "summary_ja": "GTX 1660 Ti Laptop。",
+    "tech": {
+      "die_mm2": 284,
+      "transistors_m": 6600,
+      "units": 24,
+      "shaders": 1536,
+      "tmus": 96,
+      "rops": 48,
+      "rt_cores": 0,
+      "tensor_cores": 0,
+      "base_mhz": 1455,
+      "boost_mhz": 1590,
+      "mem_gbps": 12,
+      "mem_bw_gbs": 288,
+      "l2_mb": 1.5,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 4.9,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-2060-laptop-90w",
@@ -2647,7 +4357,25 @@
       "rt_rel": 11
     },
     "summary_en": "RTX 2060 Laptop.",
-    "summary_ja": "RTX 2060 Laptop。"
+    "summary_ja": "RTX 2060 Laptop。",
+    "tech": {
+      "die_mm2": 445,
+      "transistors_m": 10800,
+      "units": 30,
+      "shaders": 1920,
+      "tmus": 120,
+      "rops": 48,
+      "rt_cores": 30,
+      "tensor_cores": 240,
+      "base_mhz": 960,
+      "boost_mhz": 1200,
+      "mem_gbps": 14,
+      "mem_bw_gbs": 336,
+      "l2_mb": 3,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 4.6,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-2070-max-q-80w",
@@ -2677,7 +4405,25 @@
       "rt_rel": 12
     },
     "summary_en": "Max-Q thin gaming laptops.",
-    "summary_ja": "Max-Q 薄型ゲーミングノート。"
+    "summary_ja": "Max-Q 薄型ゲーミングノート。",
+    "tech": {
+      "die_mm2": 445,
+      "transistors_m": 10800,
+      "units": 36,
+      "shaders": 2304,
+      "tmus": 144,
+      "rops": 64,
+      "rt_cores": 36,
+      "tensor_cores": 288,
+      "base_mhz": 885,
+      "boost_mhz": 1185,
+      "mem_gbps": 12,
+      "mem_bw_gbs": 384,
+      "l2_mb": 4,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 5.5,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-2080-laptop-150w",
@@ -2706,7 +4452,25 @@
       "rt_rel": 18
     },
     "summary_en": "RTX 2080 Laptop.",
-    "summary_ja": "RTX 2080 Laptop。"
+    "summary_ja": "RTX 2080 Laptop。",
+    "tech": {
+      "die_mm2": 545,
+      "transistors_m": 13600,
+      "units": 46,
+      "shaders": 2944,
+      "tmus": 184,
+      "rops": 64,
+      "rt_cores": 46,
+      "tensor_cores": 368,
+      "base_mhz": 1380,
+      "boost_mhz": 1590,
+      "mem_gbps": 14,
+      "mem_bw_gbs": 448,
+      "l2_mb": 4,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 9.4,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-3050-laptop-95w",
@@ -2735,7 +4499,25 @@
       "rt_rel": 10
     },
     "summary_en": "4GB VRAM is a tight squeeze.",
-    "summary_ja": "4GB VRAM は厳しい。"
+    "summary_ja": "4GB VRAM は厳しい。",
+    "tech": {
+      "die_mm2": 200,
+      "transistors_m": 8700,
+      "units": 16,
+      "shaders": 2048,
+      "tmus": 64,
+      "rops": 32,
+      "rt_cores": 16,
+      "tensor_cores": 64,
+      "base_mhz": 1057,
+      "boost_mhz": 1740,
+      "mem_gbps": 12,
+      "mem_bw_gbs": 192,
+      "l2_mb": 2,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 7.1,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-3060-laptop-130w",
@@ -2765,7 +4547,25 @@
       "rt_rel": 19
     },
     "summary_en": "30-series gaming-laptop mainstay.",
-    "summary_ja": "30 シリーズゲーミングノートの主力。"
+    "summary_ja": "30 シリーズゲーミングノートの主力。",
+    "tech": {
+      "die_mm2": 276,
+      "transistors_m": 12000,
+      "units": 30,
+      "shaders": 3840,
+      "tmus": 120,
+      "rops": 48,
+      "rt_cores": 30,
+      "tensor_cores": 120,
+      "base_mhz": 1283,
+      "boost_mhz": 1703,
+      "mem_gbps": 14,
+      "mem_bw_gbs": 336,
+      "l2_mb": 3,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 13.1,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-3070-laptop-140w",
@@ -2794,7 +4594,25 @@
       "rt_rel": 25
     },
     "summary_en": "RTX 3070 Laptop.",
-    "summary_ja": "RTX 3070 Laptop。"
+    "summary_ja": "RTX 3070 Laptop。",
+    "tech": {
+      "die_mm2": 392,
+      "transistors_m": 17400,
+      "units": 40,
+      "shaders": 5120,
+      "tmus": 160,
+      "rops": 80,
+      "rt_cores": 40,
+      "tensor_cores": 160,
+      "base_mhz": 1110,
+      "boost_mhz": 1620,
+      "mem_gbps": 14,
+      "mem_bw_gbs": 448,
+      "l2_mb": 4,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 16.6,
+      "launch_usd": null
+    }
   },
   {
     "id": "nvidia-rtx-3080-laptop-165w",
@@ -2823,7 +4641,25 @@
       "rt_rel": 31
     },
     "summary_en": "16GB VRAM; the die is a desktop 3070.",
-    "summary_ja": "16GB VRAM。ダイはデスクトップ 3070。"
+    "summary_ja": "16GB VRAM。ダイはデスクトップ 3070。",
+    "tech": {
+      "die_mm2": 392,
+      "transistors_m": 17400,
+      "units": 48,
+      "shaders": 6144,
+      "tmus": 192,
+      "rops": 96,
+      "rt_cores": 48,
+      "tensor_cores": 192,
+      "base_mhz": 1110,
+      "boost_mhz": 1710,
+      "mem_gbps": 14,
+      "mem_bw_gbs": 448,
+      "l2_mb": 4,
+      "infinity_cache_mb": null,
+      "tflops_fp32": 21,
+      "launch_usd": null
+    }
   },
   {
     "id": "amd-rx-6800m",
@@ -2852,6 +4688,24 @@
       "rt_rel": 20
     },
     "summary_en": "AMD mobile high-end, few models.",
-    "summary_ja": "AMD モバイル上位。搭載機は少ない。"
+    "summary_ja": "AMD モバイル上位。搭載機は少ない。",
+    "tech": {
+      "die_mm2": 335,
+      "transistors_m": 17200,
+      "units": 40,
+      "shaders": 2560,
+      "tmus": 160,
+      "rops": 64,
+      "rt_cores": 40,
+      "tensor_cores": 0,
+      "base_mhz": 2116,
+      "boost_mhz": 2300,
+      "mem_gbps": 16,
+      "mem_bw_gbs": 384,
+      "l2_mb": 3,
+      "infinity_cache_mb": 96,
+      "tflops_fp32": 11.8,
+      "launch_usd": null
+    }
   }
 ]

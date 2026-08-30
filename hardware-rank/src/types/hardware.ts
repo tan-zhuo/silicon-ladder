@@ -42,6 +42,44 @@ export interface Cpu extends BaseItem {
     gaming_rel: number | null
     igpu_rel: number | null
   }
+  tech?: CpuTech
+}
+
+export interface CpuTech {
+  die: string | null
+  die_mm2: number | null
+  transistors_m: number | null
+  l2_mb: number | null
+  base_ghz: number | null
+  boost_ghz: number | null
+  power_label: string | null
+  power_max_w: number | null
+  mem_channels: number | null
+  mem_max_mt: number | null
+  mem_max_gb: number | null
+  pcie: string | null
+  igpu_cu: number | null
+  igpu_ghz: number | null
+  launch_usd: number | null
+}
+
+export interface GpuTech {
+  die_mm2: number | null
+  transistors_m: number | null
+  units: number | null
+  shaders: number | null
+  tmus: number | null
+  rops: number | null
+  rt_cores: number | null
+  tensor_cores: number | null
+  base_mhz: number | null
+  boost_mhz: number | null
+  mem_gbps: number | null
+  mem_bw_gbs: number | null
+  l2_mb: number | null
+  infinity_cache_mb: number | null
+  tflops_fp32: number | null
+  launch_usd: number | null
 }
 
 export interface Gpu extends BaseItem {
@@ -61,6 +99,7 @@ export interface Gpu extends BaseItem {
     raster_rel: number | null
     rt_rel: number | null
   }
+  tech?: GpuTech
 }
 
 export interface Ram extends BaseItem {

@@ -7,6 +7,7 @@ import { useCompare } from '@/stores/compare'
 import { scoreAllPools, SORT_DEFS } from '@/utils/rank'
 import { catLabel, formLabel, ifaceLabel, modularLabel, price, num, iops, bool, capacity, vram, DASH, rel as fmtRel } from '@/utils/format'
 import BrandLogo from '@/components/BrandLogo.vue'
+import { cpuTechRows, gpuTechRows, type TechRow } from '@/data/techrows'
 import { useI18n, displayName } from '@/i18n'
 import { useSeo } from '@/seo'
 
@@ -52,6 +53,26 @@ const specRows = computed<SpecRow[]>(() => {
     case 'psu': return [...common, mk(L('watt'), (i) => `${(i as Psu).watt}W`), mk(L('tier'), (i) => (i as Psu).tier), mk(L('eff'), (i) => (i as Psu).efficiency), mk(L('atx31'), (i) => bool((i as Psu).atx31)), mk(L('modular'), (i) => modularLabel((i as Psu).modular)), mk(L('oem'), (i) => (i as Psu).oem)]
   }
 })
+/** 技术规格对比：按 key 对齐各列 */
+const techCompare = computed(() => {
+  if (!cat.value || (cat.value !== 'cpu' && cat.value !== 'gpu')) return [] as { group: string; rows: { key: string; label: string; cells: TechRow[]; bestIdx: number[] }[] }[]
+  const per = items.value.map((i) => (cat.value === 'cpu' ? cpuTechRows(i as Cpu) : gpuTechRows(i as Gpu)))
+  const groups: { group: string; rows: { key: string; label: string; cells: TechRow[]; bestIdx: number[] }[] }[] = []
+  per[0].forEach((row, ri) => {
+    const cells = per.map((rows) => rows[ri])
+    if (cells.every((c) => c.value === '—')) return
+    let bestIdx: number[] = []
+    if (row.better) {
+      const vals = cells.map((c) => c.n)
+      const valid = vals.filter((v): v is number => v != null)
+      if (valid.length > 1) { const best = row.better === 'higher' ? Math.max(...valid) : Math.min(...valid); bestIdx = vals.map((v, i) => (v === best ? i : -1)).filter((i) => i >= 0); if (bestIdx.length === vals.length) bestIdx = [] }
+    }
+    let g = groups.find((x) => x.group === row.group); if (!g) { g = { group: row.group, rows: [] }; groups.push(g) }
+    g.rows.push({ key: row.key, label: row.label, cells, bestIdx })
+  })
+  return groups
+})
+
 const scoreKeys = computed(() => (cat.value && cat.value !== 'psu' ? SORT_DEFS[cat.value].filter((s) => s.key !== 'value') : []))
 const best = (key: string) => Math.max(...rows.value.map((r) => r.rel[key] ?? -1))
 function delta(key: string, row: RankedRow): string | null {
@@ -98,6 +119,15 @@ useSeo(() => ({
               <td class="px-4 py-2.5 text-muted">{{ r.label }}</td>
               <td v-for="(v, i) in r.values" :key="i" class="px-4 py-2.5 font-medium" :class="i > 0 && v !== r.values[0] ? 'bg-amber-500/[.07]' : ''">{{ v }}</td>
             </tr>
+            <template v-for="g in techCompare" :key="g.group">
+              <tr><td :colspan="items.length + 1" class="px-4 pt-4 pb-1 kicker">{{ t('tech.title') }} · {{ g.group }}</td></tr>
+              <tr v-for="row in g.rows" :key="row.key" class="border-b border-line/50">
+                <td class="px-4 py-2 text-muted">{{ row.label }}</td>
+                <td v-for="(c, i) in row.cells" :key="i" class="px-4 py-2" :class="[row.bestIdx.includes(i) ? 'text-accent font-semibold' : c.value === '—' ? 'text-muted' : 'font-medium', row.bestIdx.length && !row.bestIdx.includes(i) && c.value !== '—' ? '' : '']">
+                  {{ c.value }}<span v-if="row.bestIdx.includes(i) && row.bestIdx.length < row.cells.length" class="ml-1 text-[10px]">★</span>
+                </td>
+              </tr>
+            </template>
             <template v-if="scoreKeys.length">
               <tr><td :colspan="items.length + 1" class="px-4 pt-4 pb-1 kicker">{{ t('compare.scores') }} <span class="text-muted font-normal normal-case tracking-normal">· {{ t('rel.vsFirst') }}</span></td></tr>
               <tr v-for="s in scoreKeys" :key="s.key" class="border-b border-line/50 last:border-0">

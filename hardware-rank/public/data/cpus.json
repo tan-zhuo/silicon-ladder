@@ -28,7 +28,24 @@
       "igpu_rel": null
     },
     "summary_en": "Last-gen gaming king with 3D V-Cache and modest power draw.",
-    "summary_ja": "前世代のゲーム最強。3D V-Cache 搭載で消費電力も控えめ。"
+    "summary_ja": "前世代のゲーム最強。3D V-Cache 搭載で消費電力も控えめ。",
+    "tech": {
+      "die": "1× CCD (N5 71mm²) + IOD (N6 122mm²)",
+      "die_mm2": 193,
+      "transistors_m": 6500,
+      "l2_mb": 8,
+      "base_ghz": 4.2,
+      "boost_ghz": 5,
+      "power_label": "PPT",
+      "power_max_w": 162,
+      "mem_channels": 2,
+      "mem_max_mt": 5200,
+      "mem_max_gb": 128,
+      "pcie": "5.0 ×24 + 4",
+      "igpu_cu": 2,
+      "igpu_ghz": 2.2,
+      "launch_usd": 449
+    }
   },
   {
     "id": "amd-ryzen-7-9800x3d",
@@ -60,7 +77,24 @@
       "igpu_rel": null
     },
     "summary_en": "The fastest gaming CPU today; 2nd-gen 3D V-Cache is overclockable.",
-    "summary_ja": "現行ゲーム最速。第2世代 3D V-Cache はOCも可能。"
+    "summary_ja": "現行ゲーム最速。第2世代 3D V-Cache はOCも可能。",
+    "tech": {
+      "die": "1× CCD (N4P 70.6mm²) + IOD (N6 122mm²)",
+      "die_mm2": 193,
+      "transistors_m": 8300,
+      "l2_mb": 8,
+      "base_ghz": 4.7,
+      "boost_ghz": 5.2,
+      "power_label": "PPT",
+      "power_max_w": 162,
+      "mem_channels": 2,
+      "mem_max_mt": 5600,
+      "mem_max_gb": 192,
+      "pcie": "5.0 ×24 + 4 (chipset)",
+      "igpu_cu": 2,
+      "igpu_ghz": 2.2,
+      "launch_usd": 479
+    }
   },
   {
     "id": "amd-ryzen-9-9950x",
@@ -91,7 +125,24 @@
       "igpu_rel": null
     },
     "summary_en": "16-core productivity flagship, strong in both single and multi.",
-    "summary_ja": "16コアの生産性フラッグシップ。シングル・マルチとも優秀。"
+    "summary_ja": "16コアの生産性フラッグシップ。シングル・マルチとも優秀。",
+    "tech": {
+      "die": "2× CCD (N4P 70.6mm²) + IOD (N6 122mm²)",
+      "die_mm2": 263,
+      "transistors_m": 16600,
+      "l2_mb": 16,
+      "base_ghz": 4.3,
+      "boost_ghz": 5.7,
+      "power_label": "PPT",
+      "power_max_w": 230,
+      "mem_channels": 2,
+      "mem_max_mt": 5600,
+      "mem_max_gb": 192,
+      "pcie": "5.0 ×24 + 4",
+      "igpu_cu": 2,
+      "igpu_ghz": 2.2,
+      "launch_usd": 649
+    }
   },
   {
     "id": "intel-core-ultra-7-265k",
@@ -121,7 +172,24 @@
       "igpu_rel": null
     },
     "summary_en": "Arrow Lake upper-mid; better efficiency, so-so gaming.",
-    "summary_ja": "Arrow Lake の上位ミドル。効率改善、ゲームは平凡。"
+    "summary_ja": "Arrow Lake の上位ミドル。効率改善、ゲームは平凡。",
+    "tech": {
+      "die": "Compute Tile (N3B) + GPU/SoC/IO Tile (Foveros)",
+      "die_mm2": 243,
+      "transistors_m": null,
+      "l2_mb": 36,
+      "base_ghz": 3.9,
+      "boost_ghz": 5.5,
+      "power_label": "PL2",
+      "power_max_w": 250,
+      "mem_channels": 2,
+      "mem_max_mt": 6400,
+      "mem_max_gb": 256,
+      "pcie": "20×5.0 + 4×4.0",
+      "igpu_cu": 4,
+      "igpu_ghz": 2,
+      "launch_usd": 394
+    }
   },
   {
     "id": "intel-core-i7-14700k",
@@ -151,7 +219,24 @@
       "igpu_rel": null
     },
     "summary_en": "Strong multi-thread, high power; keep microcode updated.",
-    "summary_ja": "マルチ性能は高いが電力も高い。マイクロコード更新必須。"
+    "summary_ja": "マルチ性能は高いが電力も高い。マイクロコード更新必須。",
+    "tech": {
+      "die": "单片 (Intel 7 257mm²)",
+      "die_mm2": 257,
+      "transistors_m": null,
+      "l2_mb": 28,
+      "base_ghz": 3.4,
+      "boost_ghz": 5.6,
+      "power_label": "PL2",
+      "power_max_w": 253,
+      "mem_channels": 2,
+      "mem_max_mt": 5600,
+      "mem_max_gb": 192,
+      "pcie": "16×5.0 + 4×4.0",
+      "igpu_cu": 32,
+      "igpu_ghz": 1.6,
+      "launch_usd": 409
+    }
   },
   {
     "id": "amd-ryzen-5-7600",
@@ -181,7 +266,24 @@
       "igpu_rel": null
     },
     "summary_en": "AM5 entry sweet spot, 65W quiet and easy to cool.",
-    "summary_ja": "AM5 入門の定番。65W で静かで扱いやすい。"
+    "summary_ja": "AM5 入門の定番。65W で静かで扱いやすい。",
+    "tech": {
+      "die": "1× CCD (6C, N5) + IOD (N6)",
+      "die_mm2": 193,
+      "transistors_m": 6500,
+      "l2_mb": 6,
+      "base_ghz": 3.8,
+      "boost_ghz": 5.1,
+      "power_label": "PPT",
+      "power_max_w": 88,
+      "mem_channels": 2,
+      "mem_max_mt": 5200,
+      "mem_max_gb": 128,
+      "pcie": "5.0 ×24 + 4",
+      "igpu_cu": 2,
+      "igpu_ghz": 2.2,
+      "launch_usd": 229
+    }
   },
   {
     "id": "apple-m4-pro-14",
@@ -213,7 +315,24 @@
       "igpu_rel": 92
     },
     "summary_en": "Best single-core of any laptop chip, class-leading efficiency.",
-    "summary_ja": "ノート向けでシングル最強、効率もトップクラス。"
+    "summary_ja": "ノート向けでシングル最強、効率もトップクラス。",
+    "tech": {
+      "die": "单片 SoC (N3E)",
+      "die_mm2": null,
+      "transistors_m": null,
+      "l2_mb": null,
+      "base_ghz": null,
+      "boost_ghz": 4.5,
+      "power_label": "cTDP",
+      "power_max_w": 45,
+      "mem_channels": 4,
+      "mem_max_mt": 8533,
+      "mem_max_gb": 64,
+      "pcie": "4.0 ×? (Thunderbolt 5)",
+      "igpu_cu": 20,
+      "igpu_ghz": null,
+      "launch_usd": null
+    }
   },
   {
     "id": "qualcomm-snapdragon-x-elite-x1e-84-100",
@@ -245,7 +364,24 @@
       "igpu_rel": 80
     },
     "summary_en": "ARM Windows flagship: great battery, mind app compatibility.",
-    "summary_ja": "ARM Windows のフラッグシップ。電池持ち抜群、互換性に注意。"
+    "summary_ja": "ARM Windows のフラッグシップ。電池持ち抜群、互換性に注意。",
+    "tech": {
+      "die": "单片 SoC (N4)",
+      "die_mm2": 170,
+      "transistors_m": null,
+      "l2_mb": 36,
+      "base_ghz": 3.8,
+      "boost_ghz": 4.2,
+      "power_label": "cTDP",
+      "power_max_w": 80,
+      "mem_channels": 8,
+      "mem_max_mt": 8448,
+      "mem_max_gb": 64,
+      "pcie": "4.0 ×8",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": null
+    }
   },
   {
     "id": "amd-ryzen-ai-9-hx-370",
@@ -277,7 +413,24 @@
       "igpu_rel": 88
     },
     "summary_en": "Strongest iGPU among x86 thin-and-lights, well balanced.",
-    "summary_ja": "x86 薄型ノートで内蔵GPU最強、バランス良好。"
+    "summary_ja": "x86 薄型ノートで内蔵GPU最強、バランス良好。",
+    "tech": {
+      "die": "单片 (N4P 232mm²)",
+      "die_mm2": 232,
+      "transistors_m": null,
+      "l2_mb": 12,
+      "base_ghz": 2,
+      "boost_ghz": 5.1,
+      "power_label": "cTDP",
+      "power_max_w": 54,
+      "mem_channels": 2,
+      "mem_max_mt": 8000,
+      "mem_max_gb": 256,
+      "pcie": "4.0 ×16",
+      "igpu_cu": 16,
+      "igpu_ghz": 2.9,
+      "launch_usd": null
+    }
   },
   {
     "id": "intel-core-ultra-9-185h",
@@ -340,7 +493,24 @@
       "igpu_rel": 26
     },
     "summary_en": "Desktop-class gaming laptop chip; pair with a dGPU.",
-    "summary_ja": "デスクトップ級のゲーミングノート用。dGPU と組み合わせて。"
+    "summary_ja": "デスクトップ級のゲーミングノート用。dGPU と組み合わせて。",
+    "tech": {
+      "die": "2× CCD (N4P 70.6mm²) + IOD (N6)",
+      "die_mm2": 263,
+      "transistors_m": 16600,
+      "l2_mb": 16,
+      "base_ghz": 2.5,
+      "boost_ghz": 5.4,
+      "power_label": "cTDP",
+      "power_max_w": 75,
+      "mem_channels": 2,
+      "mem_max_mt": 5600,
+      "mem_max_gb": 96,
+      "pcie": "5.0 ×28",
+      "igpu_cu": 2,
+      "igpu_ghz": 2.2,
+      "launch_usd": null
+    }
   },
   {
     "id": "amd-ryzen-9-9950x3d",
@@ -372,7 +542,24 @@
       "igpu_rel": null
     },
     "summary_en": "Gaming and productivity flagship in one — no more compromise.",
-    "summary_ja": "ゲームと生産性の両立フラッグシップ。もう二者択一は不要。"
+    "summary_ja": "ゲームと生産性の両立フラッグシップ。もう二者択一は不要。",
+    "tech": {
+      "die": "2× CCD (N4P 70.6mm²) + IOD (N6 122mm²)",
+      "die_mm2": 263,
+      "transistors_m": 16600,
+      "l2_mb": 16,
+      "base_ghz": 4.3,
+      "boost_ghz": 5.7,
+      "power_label": "PPT",
+      "power_max_w": 230,
+      "mem_channels": 2,
+      "mem_max_mt": 5600,
+      "mem_max_gb": 192,
+      "pcie": "5.0 ×24 + 4",
+      "igpu_cu": 2,
+      "igpu_ghz": 2.2,
+      "launch_usd": 699
+    }
   },
   {
     "id": "amd-ryzen-9-9900x",
@@ -402,7 +589,24 @@
       "igpu_rel": null
     },
     "summary_en": "12 cores at 120W, the productivity sweet spot.",
-    "summary_ja": "12コア 120W、生産性のスイートスポット。"
+    "summary_ja": "12コア 120W、生産性のスイートスポット。",
+    "tech": {
+      "die": "2× CCD (6+6, N4P) + IOD (N6)",
+      "die_mm2": 263,
+      "transistors_m": 16600,
+      "l2_mb": 12,
+      "base_ghz": 4.4,
+      "boost_ghz": 5.6,
+      "power_label": "PPT",
+      "power_max_w": 162,
+      "mem_channels": 2,
+      "mem_max_mt": 5600,
+      "mem_max_gb": 192,
+      "pcie": "5.0 ×24 + 4",
+      "igpu_cu": 2,
+      "igpu_ghz": 2.2,
+      "launch_usd": 499
+    }
   },
   {
     "id": "amd-ryzen-7-9700x",
@@ -432,7 +636,24 @@
       "igpu_rel": null
     },
     "summary_en": "Excellent 65W efficiency with strong single-core.",
-    "summary_ja": "65W で効率抜群、シングルも強い。"
+    "summary_ja": "65W で効率抜群、シングルも強い。",
+    "tech": {
+      "die": "1× CCD (N4P 70.6mm²) + IOD (N6 122mm²)",
+      "die_mm2": 193,
+      "transistors_m": 8300,
+      "l2_mb": 8,
+      "base_ghz": 3.8,
+      "boost_ghz": 5.5,
+      "power_label": "PPT",
+      "power_max_w": 88,
+      "mem_channels": 2,
+      "mem_max_mt": 5600,
+      "mem_max_gb": 192,
+      "pcie": "5.0 ×24 + 4",
+      "igpu_cu": 2,
+      "igpu_ghz": 2.2,
+      "launch_usd": 359
+    }
   },
   {
     "id": "amd-ryzen-5-9600x",
@@ -462,7 +683,24 @@
       "igpu_rel": null
     },
     "summary_en": "Zen 5 entry; single-core matches the flagships.",
-    "summary_ja": "Zen 5 の入門。シングルは上位に劣らない。"
+    "summary_ja": "Zen 5 の入門。シングルは上位に劣らない。",
+    "tech": {
+      "die": "1× CCD (6C, N4P) + IOD (N6)",
+      "die_mm2": 193,
+      "transistors_m": 8300,
+      "l2_mb": 6,
+      "base_ghz": 3.9,
+      "boost_ghz": 5.4,
+      "power_label": "PPT",
+      "power_max_w": 88,
+      "mem_channels": 2,
+      "mem_max_mt": 5600,
+      "mem_max_gb": 192,
+      "pcie": "5.0 ×24 + 4",
+      "igpu_cu": 2,
+      "igpu_ghz": 2.2,
+      "launch_usd": 279
+    }
   },
   {
     "id": "amd-ryzen-9-7950x3d",
@@ -493,7 +731,24 @@
       "igpu_rel": null
     },
     "summary_en": "Last-gen do-it-all flagship; relies on core scheduling.",
-    "summary_ja": "前世代の万能フラッグシップ。コアスケジューリング依存。"
+    "summary_ja": "前世代の万能フラッグシップ。コアスケジューリング依存。",
+    "tech": {
+      "die": "2× CCD (N5 71mm²) + IOD (N6 122mm²)",
+      "die_mm2": 264,
+      "transistors_m": 13100,
+      "l2_mb": 16,
+      "base_ghz": 4.2,
+      "boost_ghz": 5.7,
+      "power_label": "PPT",
+      "power_max_w": 162,
+      "mem_channels": 2,
+      "mem_max_mt": 5200,
+      "mem_max_gb": 128,
+      "pcie": "5.0 ×24 + 4",
+      "igpu_cu": 2,
+      "igpu_ghz": 2.2,
+      "launch_usd": 699
+    }
   },
   {
     "id": "amd-ryzen-9-7950x",
@@ -523,7 +778,24 @@
       "igpu_rel": null
     },
     "summary_en": "16-core productivity, a bargain after price cuts.",
-    "summary_ja": "16コア生産性向け。値下げ後はお買い得。"
+    "summary_ja": "16コア生産性向け。値下げ後はお買い得。",
+    "tech": {
+      "die": "2× CCD (N5 71mm²) + IOD (N6 122mm²)",
+      "die_mm2": 264,
+      "transistors_m": 13100,
+      "l2_mb": 16,
+      "base_ghz": 4.5,
+      "boost_ghz": 5.7,
+      "power_label": "PPT",
+      "power_max_w": 230,
+      "mem_channels": 2,
+      "mem_max_mt": 5200,
+      "mem_max_gb": 128,
+      "pcie": "5.0 ×24 + 4",
+      "igpu_cu": 2,
+      "igpu_ghz": 2.2,
+      "launch_usd": 699
+    }
   },
   {
     "id": "amd-ryzen-9-7900x",
@@ -553,7 +825,24 @@
       "igpu_rel": null
     },
     "summary_en": "12 cores, power on the high side.",
-    "summary_ja": "12コア、消費電力はやや高め。"
+    "summary_ja": "12コア、消費電力はやや高め。",
+    "tech": {
+      "die": "2× CCD (6+6, N5) + IOD (N6)",
+      "die_mm2": 264,
+      "transistors_m": 13100,
+      "l2_mb": 12,
+      "base_ghz": 4.7,
+      "boost_ghz": 5.6,
+      "power_label": "PPT",
+      "power_max_w": 230,
+      "mem_channels": 2,
+      "mem_max_mt": 5200,
+      "mem_max_gb": 128,
+      "pcie": "5.0 ×24 + 4",
+      "igpu_cu": 2,
+      "igpu_ghz": 2.2,
+      "launch_usd": 549
+    }
   },
   {
     "id": "amd-ryzen-7-7700x",
@@ -581,7 +870,24 @@
       "igpu_rel": null
     },
     "summary_en": "Balanced 8-core, the early AM5 workhorse.",
-    "summary_ja": "バランスの良い8コア。初期 AM5 の主力。"
+    "summary_ja": "バランスの良い8コア。初期 AM5 の主力。",
+    "tech": {
+      "die": "1× CCD (N5 71mm²) + IOD (N6 122mm²)",
+      "die_mm2": 193,
+      "transistors_m": 6500,
+      "l2_mb": 8,
+      "base_ghz": 4.5,
+      "boost_ghz": 5.4,
+      "power_label": "PPT",
+      "power_max_w": 142,
+      "mem_channels": 2,
+      "mem_max_mt": 5200,
+      "mem_max_gb": 128,
+      "pcie": "5.0 ×24 + 4",
+      "igpu_cu": 2,
+      "igpu_ghz": 2.2,
+      "launch_usd": 399
+    }
   },
   {
     "id": "amd-ryzen-5-7600x",
@@ -609,7 +915,24 @@
       "igpu_rel": null
     },
     "summary_en": "Slightly higher clocks than the 7600; not worth the premium.",
-    "summary_ja": "7600 より少し高クロック。差額の価値は薄い。"
+    "summary_ja": "7600 より少し高クロック。差額の価値は薄い。",
+    "tech": {
+      "die": "1× CCD (6C, N5) + IOD (N6)",
+      "die_mm2": 193,
+      "transistors_m": 6500,
+      "l2_mb": 6,
+      "base_ghz": 4.7,
+      "boost_ghz": 5.3,
+      "power_label": "PPT",
+      "power_max_w": 142,
+      "mem_channels": 2,
+      "mem_max_mt": 5200,
+      "mem_max_gb": 128,
+      "pcie": "5.0 ×24 + 4",
+      "igpu_cu": 2,
+      "igpu_ghz": 2.2,
+      "launch_usd": 299
+    }
   },
   {
     "id": "amd-ryzen-5-7500f",
@@ -640,7 +963,24 @@
       "igpu_rel": null
     },
     "summary_en": "No-iGPU special; the best-value entry gaming chip.",
-    "summary_ja": "内蔵GPUなしの特別版。入門ゲーム用コスパ王。"
+    "summary_ja": "内蔵GPUなしの特別版。入門ゲーム用コスパ王。",
+    "tech": {
+      "die": "1× CCD (6C, N5) + IOD (N6)",
+      "die_mm2": 193,
+      "transistors_m": 6500,
+      "l2_mb": 6,
+      "base_ghz": 3.7,
+      "boost_ghz": 5,
+      "power_label": "PPT",
+      "power_max_w": 88,
+      "mem_channels": 2,
+      "mem_max_mt": 5200,
+      "mem_max_gb": 128,
+      "pcie": "5.0 ×24 + 4",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 179
+    }
   },
   {
     "id": "amd-ryzen-7-5800x3d",
@@ -672,7 +1012,24 @@
       "igpu_rel": null
     },
     "summary_en": "The final gaming stop for AM4.",
-    "summary_ja": "AM4 プラットフォームのゲーム最終到達点。"
+    "summary_ja": "AM4 プラットフォームのゲーム最終到達点。",
+    "tech": {
+      "die": "1× CCD (N7 80.7mm²) + IOD (GF 12nm 125mm²)",
+      "die_mm2": 206,
+      "transistors_m": 4150,
+      "l2_mb": 4,
+      "base_ghz": 3.4,
+      "boost_ghz": 4.5,
+      "power_label": "PPT",
+      "power_max_w": 142,
+      "mem_channels": 2,
+      "mem_max_mt": 3200,
+      "mem_max_gb": 128,
+      "pcie": "4.0 ×24",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 449
+    }
   },
   {
     "id": "amd-ryzen-5-5600",
@@ -703,7 +1060,24 @@
       "igpu_rel": null
     },
     "summary_en": "Cheapest upgrade path for an older platform.",
-    "summary_ja": "旧プラットフォーム最安のアップグレード。"
+    "summary_ja": "旧プラットフォーム最安のアップグレード。",
+    "tech": {
+      "die": "1× CCD (6C, N7) + IOD (GF 12nm)",
+      "die_mm2": 206,
+      "transistors_m": 4150,
+      "l2_mb": 3,
+      "base_ghz": 3.5,
+      "boost_ghz": 4.4,
+      "power_label": "PPT",
+      "power_max_w": 76,
+      "mem_channels": 2,
+      "mem_max_mt": 3200,
+      "mem_max_gb": 128,
+      "pcie": "4.0 ×24",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 199
+    }
   },
   {
     "id": "intel-core-ultra-9-285k",
@@ -734,7 +1108,24 @@
       "igpu_rel": null
     },
     "summary_en": "Intel's strongest multi-core; gaming trails X3D.",
-    "summary_ja": "Intel 最強のマルチ。ゲームでは X3D に及ばず。"
+    "summary_ja": "Intel 最強のマルチ。ゲームでは X3D に及ばず。",
+    "tech": {
+      "die": "Compute Tile (N3B) + GPU/SoC/IO Tile (Foveros)",
+      "die_mm2": 243,
+      "transistors_m": null,
+      "l2_mb": 40,
+      "base_ghz": 3.7,
+      "boost_ghz": 5.7,
+      "power_label": "PL2",
+      "power_max_w": 250,
+      "mem_channels": 2,
+      "mem_max_mt": 6400,
+      "mem_max_gb": 256,
+      "pcie": "20×5.0 + 4×4.0",
+      "igpu_cu": 4,
+      "igpu_ghz": 2,
+      "launch_usd": 589
+    }
   },
   {
     "id": "intel-core-ultra-5-245k",
@@ -762,7 +1153,24 @@
       "igpu_rel": null
     },
     "summary_en": "Arrow Lake entry with solid single-core.",
-    "summary_ja": "Arrow Lake 入門。シングルは良好。"
+    "summary_ja": "Arrow Lake 入門。シングルは良好。",
+    "tech": {
+      "die": "Compute Tile (N3B) + GPU/SoC/IO Tile (Foveros)",
+      "die_mm2": 243,
+      "transistors_m": null,
+      "l2_mb": 26,
+      "base_ghz": 4.2,
+      "boost_ghz": 5.2,
+      "power_label": "PL2",
+      "power_max_w": 159,
+      "mem_channels": 2,
+      "mem_max_mt": 6400,
+      "mem_max_gb": 256,
+      "pcie": "20×5.0 + 4×4.0",
+      "igpu_cu": 4,
+      "igpu_ghz": 1.9,
+      "launch_usd": 309
+    }
   },
   {
     "id": "intel-core-i9-14900k",
@@ -792,7 +1200,24 @@
       "igpu_rel": null
     },
     "summary_en": "6 GHz flagship; power and stability were controversial.",
-    "summary_ja": "6GHz フラッグシップ。電力と安定性で物議。"
+    "summary_ja": "6GHz フラッグシップ。電力と安定性で物議。",
+    "tech": {
+      "die": "单片 (Intel 7 257mm²)",
+      "die_mm2": 257,
+      "transistors_m": null,
+      "l2_mb": 32,
+      "base_ghz": 3.2,
+      "boost_ghz": 6,
+      "power_label": "PL2",
+      "power_max_w": 253,
+      "mem_channels": 2,
+      "mem_max_mt": 5600,
+      "mem_max_gb": 192,
+      "pcie": "16×5.0 + 4×4.0",
+      "igpu_cu": 32,
+      "igpu_ghz": 1.65,
+      "launch_usd": 589
+    }
   },
   {
     "id": "intel-core-i5-14600k",
@@ -822,7 +1247,24 @@
       "igpu_rel": null
     },
     "summary_en": "Great mid-range multi-thread, the LGA1700 sweet spot.",
-    "summary_ja": "ミドルでマルチ優秀。LGA1700 の定番。"
+    "summary_ja": "ミドルでマルチ優秀。LGA1700 の定番。",
+    "tech": {
+      "die": "单片 (Intel 7 257mm²)",
+      "die_mm2": 257,
+      "transistors_m": null,
+      "l2_mb": 20,
+      "base_ghz": 3.5,
+      "boost_ghz": 5.3,
+      "power_label": "PL2",
+      "power_max_w": 181,
+      "mem_channels": 2,
+      "mem_max_mt": 5600,
+      "mem_max_gb": 192,
+      "pcie": "16×5.0 + 4×4.0",
+      "igpu_cu": 32,
+      "igpu_ghz": 1.55,
+      "launch_usd": 319
+    }
   },
   {
     "id": "intel-core-i5-14400",
@@ -850,7 +1292,24 @@
       "igpu_rel": null
     },
     "summary_en": "65W dual-purpose for office and gaming.",
-    "summary_ja": "65W でオフィスもゲームも。"
+    "summary_ja": "65W でオフィスもゲームも。",
+    "tech": {
+      "die": "单片 (Intel 7)",
+      "die_mm2": 257,
+      "transistors_m": null,
+      "l2_mb": 9.5,
+      "base_ghz": 2.5,
+      "boost_ghz": 4.7,
+      "power_label": "PL2",
+      "power_max_w": 148,
+      "mem_channels": 2,
+      "mem_max_mt": 4800,
+      "mem_max_gb": 192,
+      "pcie": "16×5.0 + 4×4.0",
+      "igpu_cu": 24,
+      "igpu_ghz": 1.55,
+      "launch_usd": 221
+    }
   },
   {
     "id": "intel-core-i9-13900k",
@@ -880,7 +1339,24 @@
       "igpu_rel": null
     },
     "summary_en": "Practically identical to the 14900K.",
-    "summary_ja": "14900K とほぼ同一。"
+    "summary_ja": "14900K とほぼ同一。",
+    "tech": {
+      "die": "单片 (Intel 7 257mm²)",
+      "die_mm2": 257,
+      "transistors_m": null,
+      "l2_mb": 32,
+      "base_ghz": 3,
+      "boost_ghz": 5.8,
+      "power_label": "PL2",
+      "power_max_w": 253,
+      "mem_channels": 2,
+      "mem_max_mt": 5600,
+      "mem_max_gb": 192,
+      "pcie": "16×5.0 + 4×4.0",
+      "igpu_cu": 32,
+      "igpu_ghz": 1.65,
+      "launch_usd": 589
+    }
   },
   {
     "id": "intel-core-i5-13400f",
@@ -910,7 +1386,24 @@
       "igpu_rel": null
     },
     "summary_en": "No-iGPU entry, enough for gaming.",
-    "summary_ja": "内蔵GPUなしの入門。ゲームには十分。"
+    "summary_ja": "内蔵GPUなしの入門。ゲームには十分。",
+    "tech": {
+      "die": "单片 (Intel 7)",
+      "die_mm2": 257,
+      "transistors_m": null,
+      "l2_mb": 9.5,
+      "base_ghz": 2.5,
+      "boost_ghz": 4.6,
+      "power_label": "PL2",
+      "power_max_w": 148,
+      "mem_channels": 2,
+      "mem_max_mt": 4800,
+      "mem_max_gb": 192,
+      "pcie": "16×5.0 + 4×4.0",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 196
+    }
   },
   {
     "id": "intel-core-i7-12700k",
@@ -938,7 +1431,24 @@
       "igpu_rel": null
     },
     "summary_en": "First hybrid generation; good used value.",
-    "summary_ja": "初のハイブリッド世代。中古が狙い目。"
+    "summary_ja": "初のハイブリッド世代。中古が狙い目。",
+    "tech": {
+      "die": "单片 (Intel 7 215mm²)",
+      "die_mm2": 215,
+      "transistors_m": null,
+      "l2_mb": 12,
+      "base_ghz": 3.6,
+      "boost_ghz": 5,
+      "power_label": "PL2",
+      "power_max_w": 190,
+      "mem_channels": 2,
+      "mem_max_mt": 4800,
+      "mem_max_gb": 128,
+      "pcie": "16×5.0 + 4×4.0",
+      "igpu_cu": 32,
+      "igpu_ghz": 1.5,
+      "launch_usd": 409
+    }
   },
   {
     "id": "intel-core-i5-12400f",
@@ -968,7 +1478,24 @@
       "igpu_rel": null
     },
     "summary_en": "Classic entry-level favorite.",
-    "summary_ja": "定番の入門神CPU。"
+    "summary_ja": "定番の入門神CPU。",
+    "tech": {
+      "die": "单片 (Intel 7 163mm²)",
+      "die_mm2": 163,
+      "transistors_m": null,
+      "l2_mb": 7.5,
+      "base_ghz": 2.5,
+      "boost_ghz": 4.4,
+      "power_label": "PL2",
+      "power_max_w": 117,
+      "mem_channels": 2,
+      "mem_max_mt": 4800,
+      "mem_max_gb": 128,
+      "pcie": "16×5.0 + 4×4.0",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 167
+    }
   },
   {
     "id": "apple-m4-10",
@@ -1000,7 +1527,24 @@
       "igpu_rel": 70
     },
     "summary_en": "MacBook Air mainstay; single-core on par with the flagships.",
-    "summary_ja": "MacBook Air の主力。シングルは上位と同等。"
+    "summary_ja": "MacBook Air の主力。シングルは上位と同等。",
+    "tech": {
+      "die": "单片 SoC (N3E)",
+      "die_mm2": null,
+      "transistors_m": 28000,
+      "l2_mb": null,
+      "base_ghz": null,
+      "boost_ghz": 4.4,
+      "power_label": "cTDP",
+      "power_max_w": 22,
+      "mem_channels": 2,
+      "mem_max_mt": 7500,
+      "mem_max_gb": 32,
+      "pcie": "Thunderbolt 4",
+      "igpu_cu": 10,
+      "igpu_ghz": null,
+      "launch_usd": null
+    }
   },
   {
     "id": "apple-m4-max-16",
@@ -1032,7 +1576,24 @@
       "igpu_rel": 96
     },
     "summary_en": "Mobile-workstation class with huge memory bandwidth.",
-    "summary_ja": "モバイルワークステーション級。メモリ帯域が巨大。"
+    "summary_ja": "モバイルワークステーション級。メモリ帯域が巨大。",
+    "tech": {
+      "die": "单片 SoC (N3E)",
+      "die_mm2": null,
+      "transistors_m": null,
+      "l2_mb": null,
+      "base_ghz": null,
+      "boost_ghz": 4.5,
+      "power_label": "cTDP",
+      "power_max_w": 70,
+      "mem_channels": 8,
+      "mem_max_mt": 8533,
+      "mem_max_gb": 128,
+      "pcie": "Thunderbolt 5",
+      "igpu_cu": 40,
+      "igpu_ghz": null,
+      "launch_usd": null
+    }
   },
   {
     "id": "apple-m3-8",
@@ -1095,7 +1656,24 @@
       "igpu_rel": 85
     },
     "summary_en": "Lunar Lake flagship: great battery and iGPU, weak multi-core.",
-    "summary_ja": "Lunar Lake フラッグシップ。電池と内蔵GPUは強くマルチは弱い。"
+    "summary_ja": "Lunar Lake フラッグシップ。電池と内蔵GPUは強くマルチは弱い。",
+    "tech": {
+      "die": "Compute + Platform Tile, 内存封装内 (N3B)",
+      "die_mm2": null,
+      "transistors_m": null,
+      "l2_mb": 10,
+      "base_ghz": 3.3,
+      "boost_ghz": 5.1,
+      "power_label": "PL2",
+      "power_max_w": 37,
+      "mem_channels": 2,
+      "mem_max_mt": 8533,
+      "mem_max_gb": 32,
+      "pcie": "4.0 ×8",
+      "igpu_cu": 8,
+      "igpu_ghz": 2.05,
+      "launch_usd": null
+    }
   },
   {
     "id": "intel-core-ultra-7-258v",
@@ -1127,7 +1705,24 @@
       "igpu_rel": 82
     },
     "summary_en": "The mainstream Lunar Lake part for thin-and-lights.",
-    "summary_ja": "薄型ノート向け Lunar Lake の主力。"
+    "summary_ja": "薄型ノート向け Lunar Lake の主力。",
+    "tech": {
+      "die": "Compute + Platform Tile, 内存封装内 (N3B)",
+      "die_mm2": null,
+      "transistors_m": null,
+      "l2_mb": 10,
+      "base_ghz": 2.2,
+      "boost_ghz": 4.8,
+      "power_label": "PL2",
+      "power_max_w": 37,
+      "mem_channels": 2,
+      "mem_max_mt": 8533,
+      "mem_max_gb": 32,
+      "pcie": "4.0 ×8",
+      "igpu_cu": 8,
+      "igpu_ghz": 1.95,
+      "launch_usd": null
+    }
   },
   {
     "id": "intel-core-ultra-9-275hx",
@@ -1159,7 +1754,24 @@
       "igpu_rel": 30
     },
     "summary_en": "Gaming-laptop flagship with desktop-class multi-core.",
-    "summary_ja": "ゲーミングノートのフラッグシップ。マルチはデスクトップ級。"
+    "summary_ja": "ゲーミングノートのフラッグシップ。マルチはデスクトップ級。",
+    "tech": {
+      "die": "Compute Tile (N3B) + SoC/IO Tile",
+      "die_mm2": null,
+      "transistors_m": null,
+      "l2_mb": 40,
+      "base_ghz": 2.7,
+      "boost_ghz": 5.4,
+      "power_label": "PL2",
+      "power_max_w": 160,
+      "mem_channels": 2,
+      "mem_max_mt": 6400,
+      "mem_max_gb": 192,
+      "pcie": "20×5.0 + 4×4.0",
+      "igpu_cu": 4,
+      "igpu_ghz": 2,
+      "launch_usd": null
+    }
   },
   {
     "id": "intel-core-ultra-7-255h",
@@ -1221,7 +1833,24 @@
       "igpu_rel": 22
     },
     "summary_en": "Last-gen gaming-laptop flagship, runs hot.",
-    "summary_ja": "前世代ゲーミングノート旗艦。発熱大。"
+    "summary_ja": "前世代ゲーミングノート旗艦。発熱大。",
+    "tech": {
+      "die": "单片 (Intel 7 257mm²)",
+      "die_mm2": 257,
+      "transistors_m": null,
+      "l2_mb": 32,
+      "base_ghz": 2.2,
+      "boost_ghz": 5.8,
+      "power_label": "PL2",
+      "power_max_w": 157,
+      "mem_channels": 2,
+      "mem_max_mt": 5600,
+      "mem_max_gb": 192,
+      "pcie": "16×5.0 + 4×4.0",
+      "igpu_cu": 32,
+      "igpu_ghz": 1.65,
+      "launch_usd": null
+    }
   },
   {
     "id": "amd-ryzen-ai-max-395",
@@ -1254,7 +1883,24 @@
       "igpu_rel": 100
     },
     "summary_en": "Strix Halo: an iGPU that rivals discrete cards.",
-    "summary_ja": "Strix Halo。内蔵GPUが dGPU に迫る怪物。"
+    "summary_ja": "Strix Halo。内蔵GPUが dGPU に迫る怪物。",
+    "tech": {
+      "die": "2× CCD (N4P) + IOD (N4P, 含 40CU GPU)",
+      "die_mm2": null,
+      "transistors_m": null,
+      "l2_mb": 16,
+      "base_ghz": 3,
+      "boost_ghz": 5.1,
+      "power_label": "cTDP",
+      "power_max_w": 120,
+      "mem_channels": 4,
+      "mem_max_mt": 8000,
+      "mem_max_gb": 128,
+      "pcie": "4.0 ×16",
+      "igpu_cu": 40,
+      "igpu_ghz": 2.9,
+      "launch_usd": null
+    }
   },
   {
     "id": "amd-ryzen-ai-7-350",
@@ -1443,7 +2089,24 @@
       "igpu_rel": null
     },
     "summary_en": "First affordable quad-core, an overclocking legend.",
-    "summary_ja": "初の庶民派クアッドコア。OC の伝説。"
+    "summary_ja": "初の庶民派クアッドコア。OC の伝説。",
+    "tech": {
+      "die": "2× 双核晶片 (65nm 2×143mm²)",
+      "die_mm2": 286,
+      "transistors_m": 582,
+      "l2_mb": 8,
+      "base_ghz": 2.4,
+      "boost_ghz": null,
+      "power_label": "TDP",
+      "power_max_w": 105,
+      "mem_channels": 2,
+      "mem_max_mt": 800,
+      "mem_max_gb": 8,
+      "pcie": "1.1 (北桥)",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 266
+    }
   },
   {
     "id": "intel-core-2-duo-e8400",
@@ -1475,7 +2138,24 @@
       "igpu_rel": null
     },
     "summary_en": "45nm dual-core, the gaming pick of its day.",
-    "summary_ja": "45nm デュアルコア。当時のゲーム定番。"
+    "summary_ja": "45nm デュアルコア。当時のゲーム定番。",
+    "tech": {
+      "die": "单片 (45nm 107mm²)",
+      "die_mm2": 107,
+      "transistors_m": 410,
+      "l2_mb": 6,
+      "base_ghz": 3,
+      "boost_ghz": null,
+      "power_label": "TDP",
+      "power_max_w": 65,
+      "mem_channels": 2,
+      "mem_max_mt": 800,
+      "mem_max_gb": 8,
+      "pcie": "2.0 (北桥)",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 183
+    }
   },
   {
     "id": "intel-core-2-quad-q9550",
@@ -1506,7 +2186,24 @@
       "igpu_rel": null
     },
     "summary_en": "Late-LGA775 quad-core flagship.",
-    "summary_ja": "LGA775 末期のクアッド旗艦。"
+    "summary_ja": "LGA775 末期のクアッド旗艦。",
+    "tech": {
+      "die": "2× 双核晶片 (45nm 2×107mm²)",
+      "die_mm2": 214,
+      "transistors_m": 820,
+      "l2_mb": 12,
+      "base_ghz": 2.83,
+      "boost_ghz": null,
+      "power_label": "TDP",
+      "power_max_w": 95,
+      "mem_channels": 2,
+      "mem_max_mt": 800,
+      "mem_max_gb": 8,
+      "pcie": "2.0 (北桥)",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 316
+    }
   },
   {
     "id": "intel-core-i7-920",
@@ -1538,7 +2235,24 @@
       "igpu_rel": null
     },
     "summary_en": "First Core i7; Hyper-Threading returns.",
-    "summary_ja": "初代 Core i7。HT が復活。"
+    "summary_ja": "初代 Core i7。HT が復活。",
+    "tech": {
+      "die": "单片 (45nm 263mm²)",
+      "die_mm2": 263,
+      "transistors_m": 731,
+      "l2_mb": 1,
+      "base_ghz": 2.66,
+      "boost_ghz": 2.93,
+      "power_label": "TDP",
+      "power_max_w": 130,
+      "mem_channels": 3,
+      "mem_max_mt": 1066,
+      "mem_max_gb": 24,
+      "pcie": "2.0 (X58 ×36)",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 284
+    }
   },
   {
     "id": "intel-core-i5-750",
@@ -1569,7 +2283,24 @@
       "igpu_rel": null
     },
     "summary_en": "Mainstream quad-core with superb value.",
-    "summary_ja": "主流クアッド。コスパ抜群。"
+    "summary_ja": "主流クアッド。コスパ抜群。",
+    "tech": {
+      "die": "单片 (45nm 296mm²)",
+      "die_mm2": 296,
+      "transistors_m": 774,
+      "l2_mb": 1,
+      "base_ghz": 2.66,
+      "boost_ghz": 3.2,
+      "power_label": "TDP",
+      "power_max_w": 95,
+      "mem_channels": 2,
+      "mem_max_mt": 1333,
+      "mem_max_gb": 16,
+      "pcie": "2.0 ×16",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 196
+    }
   },
   {
     "id": "intel-core-i7-870",
@@ -1600,7 +2331,24 @@
       "igpu_rel": null
     },
     "summary_en": "Lynnfield flagship.",
-    "summary_ja": "Lynnfield の旗艦。"
+    "summary_ja": "Lynnfield の旗艦。",
+    "tech": {
+      "die": "单片 (45nm 296mm²)",
+      "die_mm2": 296,
+      "transistors_m": 774,
+      "l2_mb": 1,
+      "base_ghz": 2.93,
+      "boost_ghz": 3.6,
+      "power_label": "TDP",
+      "power_max_w": 95,
+      "mem_channels": 2,
+      "mem_max_mt": 1333,
+      "mem_max_gb": 16,
+      "pcie": "2.0 ×16",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 562
+    }
   },
   {
     "id": "intel-core-i5-2500k",
@@ -1632,7 +2380,24 @@
       "igpu_rel": null
     },
     "summary_en": "Legendary chip; 4.5 GHz with ease.",
-    "summary_ja": "伝説の神CPU。4.5GHz が余裕。"
+    "summary_ja": "伝説の神CPU。4.5GHz が余裕。",
+    "tech": {
+      "die": "单片 (32nm 216mm²)",
+      "die_mm2": 216,
+      "transistors_m": 1160,
+      "l2_mb": 1,
+      "base_ghz": 3.3,
+      "boost_ghz": 3.7,
+      "power_label": "TDP",
+      "power_max_w": 95,
+      "mem_channels": 2,
+      "mem_max_mt": 1333,
+      "mem_max_gb": 32,
+      "pcie": "2.0 ×16",
+      "igpu_cu": 12,
+      "igpu_ghz": 1.1,
+      "launch_usd": 216
+    }
   },
   {
     "id": "intel-core-i7-2600k",
@@ -1664,7 +2429,24 @@
       "igpu_rel": null
     },
     "summary_en": "A decade of service — the legend.",
-    "summary_ja": "10年現役の伝説。"
+    "summary_ja": "10年現役の伝説。",
+    "tech": {
+      "die": "单片 (32nm 216mm²)",
+      "die_mm2": 216,
+      "transistors_m": 1160,
+      "l2_mb": 1,
+      "base_ghz": 3.4,
+      "boost_ghz": 3.8,
+      "power_label": "TDP",
+      "power_max_w": 95,
+      "mem_channels": 2,
+      "mem_max_mt": 1333,
+      "mem_max_gb": 32,
+      "pcie": "2.0 ×16",
+      "igpu_cu": 12,
+      "igpu_ghz": 1.35,
+      "launch_usd": 317
+    }
   },
   {
     "id": "intel-core-i5-3570k",
@@ -1695,7 +2477,24 @@
       "igpu_rel": null
     },
     "summary_en": "22nm; paste under the IHS drew complaints.",
-    "summary_ja": "22nm。グリス封止が不評。"
+    "summary_ja": "22nm。グリス封止が不評。",
+    "tech": {
+      "die": "单片 (22nm 160mm²)",
+      "die_mm2": 160,
+      "transistors_m": 1400,
+      "l2_mb": 1,
+      "base_ghz": 3.4,
+      "boost_ghz": 3.8,
+      "power_label": "TDP",
+      "power_max_w": 77,
+      "mem_channels": 2,
+      "mem_max_mt": 1600,
+      "mem_max_gb": 32,
+      "pcie": "3.0 ×16",
+      "igpu_cu": 16,
+      "igpu_ghz": 1.15,
+      "launch_usd": 212
+    }
   },
   {
     "id": "intel-core-i7-3770k",
@@ -1726,7 +2525,24 @@
       "igpu_rel": null
     },
     "summary_en": "Ivy Bridge flagship.",
-    "summary_ja": "Ivy Bridge の旗艦。"
+    "summary_ja": "Ivy Bridge の旗艦。",
+    "tech": {
+      "die": "单片 (22nm 160mm²)",
+      "die_mm2": 160,
+      "transistors_m": 1400,
+      "l2_mb": 1,
+      "base_ghz": 3.5,
+      "boost_ghz": 3.9,
+      "power_label": "TDP",
+      "power_max_w": 77,
+      "mem_channels": 2,
+      "mem_max_mt": 1600,
+      "mem_max_gb": 32,
+      "pcie": "3.0 ×16",
+      "igpu_cu": 16,
+      "igpu_ghz": 1.15,
+      "launch_usd": 313
+    }
   },
   {
     "id": "intel-core-i7-4770k",
@@ -1757,7 +2573,24 @@
       "igpu_rel": null
     },
     "summary_en": "Haswell launch flagship.",
-    "summary_ja": "Haswell 初期の旗艦。"
+    "summary_ja": "Haswell 初期の旗艦。",
+    "tech": {
+      "die": "单片 (22nm 177mm²)",
+      "die_mm2": 177,
+      "transistors_m": 1400,
+      "l2_mb": 1,
+      "base_ghz": 3.5,
+      "boost_ghz": 3.9,
+      "power_label": "TDP",
+      "power_max_w": 84,
+      "mem_channels": 2,
+      "mem_max_mt": 1600,
+      "mem_max_gb": 32,
+      "pcie": "3.0 ×16",
+      "igpu_cu": 20,
+      "igpu_ghz": 1.25,
+      "launch_usd": 339
+    }
   },
   {
     "id": "intel-core-i5-4690k",
@@ -1788,7 +2621,24 @@
       "igpu_rel": null
     },
     "summary_en": "Devil's Canyon quad-core.",
-    "summary_ja": "Devil's Canyon のクアッド。"
+    "summary_ja": "Devil's Canyon のクアッド。",
+    "tech": {
+      "die": "单片 (22nm 177mm²)",
+      "die_mm2": 177,
+      "transistors_m": 1400,
+      "l2_mb": 1,
+      "base_ghz": 3.5,
+      "boost_ghz": 3.9,
+      "power_label": "TDP",
+      "power_max_w": 88,
+      "mem_channels": 2,
+      "mem_max_mt": 1600,
+      "mem_max_gb": 32,
+      "pcie": "3.0 ×16",
+      "igpu_cu": 20,
+      "igpu_ghz": 1.2,
+      "launch_usd": 242
+    }
   },
   {
     "id": "intel-core-i7-4790k",
@@ -1820,7 +2670,24 @@
       "igpu_rel": null
     },
     "summary_en": "First 4 GHz base clock; the peak before solder returned.",
-    "summary_ja": "初の 4GHz ベース。ソルダー復活前の頂点。"
+    "summary_ja": "初の 4GHz ベース。ソルダー復活前の頂点。",
+    "tech": {
+      "die": "单片 (22nm 177mm²)",
+      "die_mm2": 177,
+      "transistors_m": 1400,
+      "l2_mb": 1,
+      "base_ghz": 4,
+      "boost_ghz": 4.4,
+      "power_label": "TDP",
+      "power_max_w": 88,
+      "mem_channels": 2,
+      "mem_max_mt": 1600,
+      "mem_max_gb": 32,
+      "pcie": "3.0 ×16",
+      "igpu_cu": 20,
+      "igpu_ghz": 1.25,
+      "launch_usd": 339
+    }
   },
   {
     "id": "intel-core-i7-5960x",
@@ -1852,7 +2719,24 @@
       "igpu_rel": null
     },
     "summary_en": "First consumer 8-core, DDR4 debut.",
-    "summary_ja": "初の一般向け8コア。DDR4 初採用。"
+    "summary_ja": "初の一般向け8コア。DDR4 初採用。",
+    "tech": {
+      "die": "单片 (22nm 356mm²)",
+      "die_mm2": 356,
+      "transistors_m": 2600,
+      "l2_mb": 2,
+      "base_ghz": 3,
+      "boost_ghz": 3.5,
+      "power_label": "TDP",
+      "power_max_w": 140,
+      "mem_channels": 4,
+      "mem_max_mt": 2133,
+      "mem_max_gb": 64,
+      "pcie": "3.0 ×40",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 999
+    }
   },
   {
     "id": "intel-core-i7-6700k",
@@ -1883,7 +2767,24 @@
       "igpu_rel": null
     },
     "summary_en": "Skylake; DDR4 goes mainstream.",
-    "summary_ja": "Skylake。DDR4 が普及。"
+    "summary_ja": "Skylake。DDR4 が普及。",
+    "tech": {
+      "die": "单片 (14nm 122mm²)",
+      "die_mm2": 122,
+      "transistors_m": null,
+      "l2_mb": 1,
+      "base_ghz": 4,
+      "boost_ghz": 4.2,
+      "power_label": "TDP",
+      "power_max_w": 91,
+      "mem_channels": 2,
+      "mem_max_mt": 2133,
+      "mem_max_gb": 64,
+      "pcie": "3.0 ×16",
+      "igpu_cu": 24,
+      "igpu_ghz": 1.15,
+      "launch_usd": 339
+    }
   },
   {
     "id": "intel-core-i7-7700k",
@@ -1914,7 +2815,24 @@
       "igpu_rel": null
     },
     "summary_en": "The last quad-core i7.",
-    "summary_ja": "最後のクアッド i7。"
+    "summary_ja": "最後のクアッド i7。",
+    "tech": {
+      "die": "单片 (14nm 126mm²)",
+      "die_mm2": 126,
+      "transistors_m": null,
+      "l2_mb": 1,
+      "base_ghz": 4.2,
+      "boost_ghz": 4.5,
+      "power_label": "TDP",
+      "power_max_w": 91,
+      "mem_channels": 2,
+      "mem_max_mt": 2400,
+      "mem_max_gb": 64,
+      "pcie": "3.0 ×16",
+      "igpu_cu": 24,
+      "igpu_ghz": 1.15,
+      "launch_usd": 339
+    }
   },
   {
     "id": "intel-core-i7-8700k",
@@ -1946,7 +2864,24 @@
       "igpu_rel": null
     },
     "summary_en": "The six-core Ryzen forced out of Intel.",
-    "summary_ja": "Ryzen に押されて生まれた6コア。"
+    "summary_ja": "Ryzen に押されて生まれた6コア。",
+    "tech": {
+      "die": "单片 (14nm 149mm²)",
+      "die_mm2": 149,
+      "transistors_m": null,
+      "l2_mb": 1.5,
+      "base_ghz": 3.7,
+      "boost_ghz": 4.7,
+      "power_label": "PL2",
+      "power_max_w": 119,
+      "mem_channels": 2,
+      "mem_max_mt": 2666,
+      "mem_max_gb": 64,
+      "pcie": "3.0 ×16",
+      "igpu_cu": 24,
+      "igpu_ghz": 1.2,
+      "launch_usd": 359
+    }
   },
   {
     "id": "intel-core-i5-8400",
@@ -1978,7 +2913,24 @@
       "igpu_rel": null
     },
     "summary_en": "Affordable six-core i5 favorite.",
-    "summary_ja": "庶民派6コア i5 の定番。"
+    "summary_ja": "庶民派6コア i5 の定番。",
+    "tech": {
+      "die": "单片 (14nm 149mm²)",
+      "die_mm2": 149,
+      "transistors_m": null,
+      "l2_mb": 1.5,
+      "base_ghz": 2.8,
+      "boost_ghz": 4,
+      "power_label": "PL2",
+      "power_max_w": 81,
+      "mem_channels": 2,
+      "mem_max_mt": 2666,
+      "mem_max_gb": 64,
+      "pcie": "3.0 ×16",
+      "igpu_cu": 24,
+      "igpu_ghz": 1.05,
+      "launch_usd": 182
+    }
   },
   {
     "id": "intel-core-i9-9900k",
@@ -2009,7 +2961,24 @@
       "igpu_rel": null
     },
     "summary_en": "First mainstream i9, soldered 8-core.",
-    "summary_ja": "初の主流 i9。ソルダー8コア。"
+    "summary_ja": "初の主流 i9。ソルダー8コア。",
+    "tech": {
+      "die": "单片 (14nm 174mm²)",
+      "die_mm2": 174,
+      "transistors_m": null,
+      "l2_mb": 2,
+      "base_ghz": 3.6,
+      "boost_ghz": 5,
+      "power_label": "PL2",
+      "power_max_w": 210,
+      "mem_channels": 2,
+      "mem_max_mt": 2666,
+      "mem_max_gb": 128,
+      "pcie": "3.0 ×16",
+      "igpu_cu": 24,
+      "igpu_ghz": 1.2,
+      "launch_usd": 488
+    }
   },
   {
     "id": "intel-core-i5-9600k",
@@ -2040,7 +3009,24 @@
       "igpu_rel": null
     },
     "summary_en": "Six cores, no HT, gaming-oriented.",
-    "summary_ja": "6コア HT なしのゲーム向け。"
+    "summary_ja": "6コア HT なしのゲーム向け。",
+    "tech": {
+      "die": "单片 (14nm 149mm²)",
+      "die_mm2": 149,
+      "transistors_m": null,
+      "l2_mb": 1.5,
+      "base_ghz": 3.7,
+      "boost_ghz": 4.6,
+      "power_label": "PL2",
+      "power_max_w": 119,
+      "mem_channels": 2,
+      "mem_max_mt": 2666,
+      "mem_max_gb": 128,
+      "pcie": "3.0 ×16",
+      "igpu_cu": 24,
+      "igpu_ghz": 1.15,
+      "launch_usd": 262
+    }
   },
   {
     "id": "intel-core-i9-10900k",
@@ -2071,7 +3057,24 @@
       "igpu_rel": null
     },
     "summary_en": "14nm squeezed to ten cores.",
-    "summary_ja": "14nm を10コアまで絞り出した。"
+    "summary_ja": "14nm を10コアまで絞り出した。",
+    "tech": {
+      "die": "单片 (14nm 206mm²)",
+      "die_mm2": 206,
+      "transistors_m": null,
+      "l2_mb": 2.5,
+      "base_ghz": 3.7,
+      "boost_ghz": 5.3,
+      "power_label": "PL2",
+      "power_max_w": 250,
+      "mem_channels": 2,
+      "mem_max_mt": 2933,
+      "mem_max_gb": 128,
+      "pcie": "3.0 ×16",
+      "igpu_cu": 24,
+      "igpu_ghz": 1.2,
+      "launch_usd": 488
+    }
   },
   {
     "id": "intel-core-i5-10400f",
@@ -2103,7 +3106,24 @@
       "igpu_rel": null
     },
     "summary_en": "Budget gaming favorite under ¥1000.",
-    "summary_ja": "1000元以下のゲーム神CPU。"
+    "summary_ja": "1000元以下のゲーム神CPU。",
+    "tech": {
+      "die": "单片 (14nm 206mm²)",
+      "die_mm2": 206,
+      "transistors_m": null,
+      "l2_mb": 1.5,
+      "base_ghz": 2.9,
+      "boost_ghz": 4.3,
+      "power_label": "PL2",
+      "power_max_w": 134,
+      "mem_channels": 2,
+      "mem_max_mt": 2666,
+      "mem_max_gb": 128,
+      "pcie": "3.0 ×16",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 155
+    }
   },
   {
     "id": "intel-core-i9-11900k",
@@ -2134,7 +3154,24 @@
       "igpu_rel": null
     },
     "summary_en": "Back to 8 cores; lukewarm reception.",
-    "summary_ja": "8コアに後退、評判はいまいち。"
+    "summary_ja": "8コアに後退、評判はいまいち。",
+    "tech": {
+      "die": "单片 (14nm 276mm²)",
+      "die_mm2": 276,
+      "transistors_m": null,
+      "l2_mb": 4,
+      "base_ghz": 3.5,
+      "boost_ghz": 5.3,
+      "power_label": "PL2",
+      "power_max_w": 251,
+      "mem_channels": 2,
+      "mem_max_mt": 3200,
+      "mem_max_gb": 128,
+      "pcie": "4.0 ×20",
+      "igpu_cu": 32,
+      "igpu_ghz": 1.3,
+      "launch_usd": 539
+    }
   },
   {
     "id": "intel-core-i5-11400f",
@@ -2166,7 +3203,24 @@
       "igpu_rel": null
     },
     "summary_en": "Good-value six-core.",
-    "summary_ja": "コスパ良好な6コア。"
+    "summary_ja": "コスパ良好な6コア。",
+    "tech": {
+      "die": "单片 (14nm 276mm²)",
+      "die_mm2": 276,
+      "transistors_m": null,
+      "l2_mb": 3,
+      "base_ghz": 2.6,
+      "boost_ghz": 4.4,
+      "power_label": "PL2",
+      "power_max_w": 154,
+      "mem_channels": 2,
+      "mem_max_mt": 3200,
+      "mem_max_gb": 128,
+      "pcie": "4.0 ×20",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 157
+    }
   },
   {
     "id": "intel-core-i9-12900k",
@@ -2197,7 +3251,24 @@
       "igpu_rel": null
     },
     "summary_en": "Hybrid-architecture launch flagship.",
-    "summary_ja": "ハイブリッド初代の旗艦。"
+    "summary_ja": "ハイブリッド初代の旗艦。",
+    "tech": {
+      "die": "单片 (Intel 7 215mm²)",
+      "die_mm2": 215,
+      "transistors_m": null,
+      "l2_mb": 14,
+      "base_ghz": 3.2,
+      "boost_ghz": 5.2,
+      "power_label": "PL2",
+      "power_max_w": 241,
+      "mem_channels": 2,
+      "mem_max_mt": 4800,
+      "mem_max_gb": 128,
+      "pcie": "16×5.0 + 4×4.0",
+      "igpu_cu": 32,
+      "igpu_ghz": 1.55,
+      "launch_usd": 589
+    }
   },
   {
     "id": "intel-core-i5-12600k",
@@ -2229,7 +3300,24 @@
       "igpu_rel": null
     },
     "summary_en": "12th-gen sweet spot.",
-    "summary_ja": "第12世代のスイートスポット。"
+    "summary_ja": "第12世代のスイートスポット。",
+    "tech": {
+      "die": "单片 (Intel 7 215mm²)",
+      "die_mm2": 215,
+      "transistors_m": null,
+      "l2_mb": 9.5,
+      "base_ghz": 3.7,
+      "boost_ghz": 4.9,
+      "power_label": "PL2",
+      "power_max_w": 150,
+      "mem_channels": 2,
+      "mem_max_mt": 4800,
+      "mem_max_gb": 128,
+      "pcie": "16×5.0 + 4×4.0",
+      "igpu_cu": 32,
+      "igpu_ghz": 1.45,
+      "launch_usd": 289
+    }
   },
   {
     "id": "intel-core-i7-13700k",
@@ -2260,7 +3348,24 @@
       "igpu_rel": null
     },
     "summary_en": "13th-gen i7, close to the 14700K.",
-    "summary_ja": "第13世代 i7。14700K に近い。"
+    "summary_ja": "第13世代 i7。14700K に近い。",
+    "tech": {
+      "die": "单片 (Intel 7 257mm²)",
+      "die_mm2": 257,
+      "transistors_m": null,
+      "l2_mb": 24,
+      "base_ghz": 3.4,
+      "boost_ghz": 5.4,
+      "power_label": "PL2",
+      "power_max_w": 253,
+      "mem_channels": 2,
+      "mem_max_mt": 5600,
+      "mem_max_gb": 192,
+      "pcie": "16×5.0 + 4×4.0",
+      "igpu_cu": 32,
+      "igpu_ghz": 1.6,
+      "launch_usd": 409
+    }
   },
   {
     "id": "amd-phenom-x4-9850",
@@ -2291,7 +3396,24 @@
       "igpu_rel": null
     },
     "summary_en": "First native quad-core, post-TLB-bug revision.",
-    "summary_ja": "初のネイティブクアッド。TLB バグ修正版。"
+    "summary_ja": "初のネイティブクアッド。TLB バグ修正版。",
+    "tech": {
+      "die": "单片 (65nm SOI 285mm²)",
+      "die_mm2": 285,
+      "transistors_m": 450,
+      "l2_mb": 2,
+      "base_ghz": 2.5,
+      "boost_ghz": null,
+      "power_label": "TDP",
+      "power_max_w": 125,
+      "mem_channels": 2,
+      "mem_max_mt": 1066,
+      "mem_max_gb": 8,
+      "pcie": "2.0 (北桥)",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 235
+    }
   },
   {
     "id": "amd-phenom-ii-x4-955",
@@ -2323,7 +3445,24 @@
       "igpu_rel": null
     },
     "summary_en": "AMD's comeback quad-core, great value.",
-    "summary_ja": "AMD 巻き返しのクアッド。コスパ良好。"
+    "summary_ja": "AMD 巻き返しのクアッド。コスパ良好。",
+    "tech": {
+      "die": "单片 (45nm SOI 258mm²)",
+      "die_mm2": 258,
+      "transistors_m": 758,
+      "l2_mb": 2,
+      "base_ghz": 3.2,
+      "boost_ghz": null,
+      "power_label": "TDP",
+      "power_max_w": 125,
+      "mem_channels": 2,
+      "mem_max_mt": 1333,
+      "mem_max_gb": 16,
+      "pcie": "2.0 (北桥)",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 245
+    }
   },
   {
     "id": "amd-phenom-ii-x6-1090t",
@@ -2354,7 +3493,24 @@
       "igpu_rel": null
     },
     "summary_en": "First consumer six-core.",
-    "summary_ja": "初の一般向け6コア。"
+    "summary_ja": "初の一般向け6コア。",
+    "tech": {
+      "die": "单片 (45nm SOI 346mm²)",
+      "die_mm2": 346,
+      "transistors_m": 904,
+      "l2_mb": 3,
+      "base_ghz": 3.2,
+      "boost_ghz": 3.6,
+      "power_label": "TDP",
+      "power_max_w": 125,
+      "mem_channels": 2,
+      "mem_max_mt": 1333,
+      "mem_max_gb": 16,
+      "pcie": "2.0 (北桥)",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 295
+    }
   },
   {
     "id": "amd-fx-8150",
@@ -2385,7 +3541,24 @@
       "igpu_rel": null
     },
     "summary_en": "Bulldozer debut; disappointing single-core.",
-    "summary_ja": "Bulldozer 初代。シングルが期待外れ。"
+    "summary_ja": "Bulldozer 初代。シングルが期待外れ。",
+    "tech": {
+      "die": "单片 (GF 32nm SOI 315mm²)",
+      "die_mm2": 315,
+      "transistors_m": 1200,
+      "l2_mb": 8,
+      "base_ghz": 3.6,
+      "boost_ghz": 4.2,
+      "power_label": "TDP",
+      "power_max_w": 125,
+      "mem_channels": 2,
+      "mem_max_mt": 1866,
+      "mem_max_gb": 32,
+      "pcie": "2.0 (北桥)",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 245
+    }
   },
   {
     "id": "amd-fx-8350",
@@ -2416,7 +3589,24 @@
       "igpu_rel": null
     },
     "summary_en": "Piledriver, multi-thread value.",
-    "summary_ja": "Piledriver。マルチのコスパ。"
+    "summary_ja": "Piledriver。マルチのコスパ。",
+    "tech": {
+      "die": "单片 (GF 32nm SOI 315mm²)",
+      "die_mm2": 315,
+      "transistors_m": 1200,
+      "l2_mb": 8,
+      "base_ghz": 4,
+      "boost_ghz": 4.2,
+      "power_label": "TDP",
+      "power_max_w": 125,
+      "mem_channels": 2,
+      "mem_max_mt": 1866,
+      "mem_max_gb": 32,
+      "pcie": "2.0 (北桥)",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 195
+    }
   },
   {
     "id": "amd-ryzen-7-1800x",
@@ -2448,7 +3638,24 @@
       "igpu_rel": null
     },
     "summary_en": "Zen launch flagship; AMD's revival.",
-    "summary_ja": "Zen 初代旗艦。AMD 復活の狼煙。"
+    "summary_ja": "Zen 初代旗艦。AMD 復活の狼煙。",
+    "tech": {
+      "die": "单片 (GF 14nm 213mm²)",
+      "die_mm2": 213,
+      "transistors_m": 4800,
+      "l2_mb": 4,
+      "base_ghz": 3.6,
+      "boost_ghz": 4,
+      "power_label": "PPT",
+      "power_max_w": 128,
+      "mem_channels": 2,
+      "mem_max_mt": 2667,
+      "mem_max_gb": 64,
+      "pcie": "3.0 ×20",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 499
+    }
   },
   {
     "id": "amd-ryzen-5-1600",
@@ -2481,7 +3688,24 @@
       "igpu_rel": null
     },
     "summary_en": "6C/12T at a budget price changed the market.",
-    "summary_ja": "6コア12スレッドを廉価で。市場を変えた。"
+    "summary_ja": "6コア12スレッドを廉価で。市場を変えた。",
+    "tech": {
+      "die": "单片 (GF 14nm 213mm²)",
+      "die_mm2": 213,
+      "transistors_m": 4800,
+      "l2_mb": 3,
+      "base_ghz": 3.2,
+      "boost_ghz": 3.6,
+      "power_label": "PPT",
+      "power_max_w": 88,
+      "mem_channels": 2,
+      "mem_max_mt": 2667,
+      "mem_max_gb": 64,
+      "pcie": "3.0 ×20",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 219
+    }
   },
   {
     "id": "amd-ryzen-7-2700x",
@@ -2512,7 +3736,24 @@
       "igpu_rel": null
     },
     "summary_en": "12nm refresh.",
-    "summary_ja": "12nm の小改良。"
+    "summary_ja": "12nm の小改良。",
+    "tech": {
+      "die": "单片 (GF 12nm 213mm²)",
+      "die_mm2": 213,
+      "transistors_m": 4800,
+      "l2_mb": 4,
+      "base_ghz": 3.7,
+      "boost_ghz": 4.3,
+      "power_label": "PPT",
+      "power_max_w": 141,
+      "mem_channels": 2,
+      "mem_max_mt": 2933,
+      "mem_max_gb": 64,
+      "pcie": "3.0 ×20",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 329
+    }
   },
   {
     "id": "amd-ryzen-9-3900x",
@@ -2543,7 +3784,24 @@
       "igpu_rel": null
     },
     "summary_en": "First 12-core on a mainstream platform.",
-    "summary_ja": "主流プラットフォーム初の12コア。"
+    "summary_ja": "主流プラットフォーム初の12コア。",
+    "tech": {
+      "die": "2× CCD (6+6, N7) + IOD (GF 12nm)",
+      "die_mm2": 273,
+      "transistors_m": 7600,
+      "l2_mb": 6,
+      "base_ghz": 3.8,
+      "boost_ghz": 4.6,
+      "power_label": "PPT",
+      "power_max_w": 142,
+      "mem_channels": 2,
+      "mem_max_mt": 3200,
+      "mem_max_gb": 128,
+      "pcie": "4.0 ×24",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 499
+    }
   },
   {
     "id": "amd-ryzen-9-3950x",
@@ -2575,7 +3833,24 @@
       "igpu_rel": null
     },
     "summary_en": "First 16-core on a mainstream platform.",
-    "summary_ja": "主流プラットフォーム初の16コア。"
+    "summary_ja": "主流プラットフォーム初の16コア。",
+    "tech": {
+      "die": "2× CCD (N7 74mm²) + IOD (GF 12nm 125mm²)",
+      "die_mm2": 273,
+      "transistors_m": 7600,
+      "l2_mb": 8,
+      "base_ghz": 3.5,
+      "boost_ghz": 4.7,
+      "power_label": "PPT",
+      "power_max_w": 142,
+      "mem_channels": 2,
+      "mem_max_mt": 3200,
+      "mem_max_gb": 128,
+      "pcie": "4.0 ×24",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 749
+    }
   },
   {
     "id": "amd-ryzen-7-3700x",
@@ -2606,7 +3881,24 @@
       "igpu_rel": null
     },
     "summary_en": "65W eight-core, the efficiency benchmark.",
-    "summary_ja": "65W の8コア。効率の基準。"
+    "summary_ja": "65W の8コア。効率の基準。",
+    "tech": {
+      "die": "1× CCD (N7 74mm²) + IOD (GF 12nm)",
+      "die_mm2": 199,
+      "transistors_m": 3800,
+      "l2_mb": 4,
+      "base_ghz": 3.6,
+      "boost_ghz": 4.4,
+      "power_label": "PPT",
+      "power_max_w": 88,
+      "mem_channels": 2,
+      "mem_max_mt": 3200,
+      "mem_max_gb": 128,
+      "pcie": "4.0 ×24",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 329
+    }
   },
   {
     "id": "amd-ryzen-5-3600",
@@ -2639,7 +3931,24 @@
       "igpu_rel": null
     },
     "summary_en": "The best-seller.",
-    "summary_ja": "販売数の王者。"
+    "summary_ja": "販売数の王者。",
+    "tech": {
+      "die": "1× CCD (6C, N7) + IOD (GF 12nm)",
+      "die_mm2": 199,
+      "transistors_m": 3800,
+      "l2_mb": 3,
+      "base_ghz": 3.6,
+      "boost_ghz": 4.2,
+      "power_label": "PPT",
+      "power_max_w": 88,
+      "mem_channels": 2,
+      "mem_max_mt": 3200,
+      "mem_max_gb": 128,
+      "pcie": "4.0 ×24",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 199
+    }
   },
   {
     "id": "amd-ryzen-9-5950x",
@@ -2671,7 +3980,24 @@
       "igpu_rel": null
     },
     "summary_en": "The peak of AM4 productivity.",
-    "summary_ja": "AM4 生産性の頂点。"
+    "summary_ja": "AM4 生産性の頂点。",
+    "tech": {
+      "die": "2× CCD (N7 80.7mm²) + IOD (GF 12nm 125mm²)",
+      "die_mm2": 286,
+      "transistors_m": 8300,
+      "l2_mb": 8,
+      "base_ghz": 3.4,
+      "boost_ghz": 4.9,
+      "power_label": "PPT",
+      "power_max_w": 142,
+      "mem_channels": 2,
+      "mem_max_mt": 3200,
+      "mem_max_gb": 128,
+      "pcie": "4.0 ×24",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 799
+    }
   },
   {
     "id": "amd-ryzen-9-5900x",
@@ -2702,7 +4028,24 @@
       "igpu_rel": null
     },
     "summary_en": "Balanced 12-core choice.",
-    "summary_ja": "バランスの良い12コア。"
+    "summary_ja": "バランスの良い12コア。",
+    "tech": {
+      "die": "2× CCD (6+6, N7) + IOD (GF 12nm)",
+      "die_mm2": 286,
+      "transistors_m": 8300,
+      "l2_mb": 6,
+      "base_ghz": 3.7,
+      "boost_ghz": 4.8,
+      "power_label": "PPT",
+      "power_max_w": 142,
+      "mem_channels": 2,
+      "mem_max_mt": 3200,
+      "mem_max_gb": 128,
+      "pcie": "4.0 ×24",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 549
+    }
   },
   {
     "id": "amd-ryzen-7-5800x",
@@ -2733,7 +4076,24 @@
       "igpu_rel": null
     },
     "summary_en": "Single-CCD eight-core.",
-    "summary_ja": "単一 CCD の8コア。"
+    "summary_ja": "単一 CCD の8コア。",
+    "tech": {
+      "die": "1× CCD (N7) + IOD (GF 12nm)",
+      "die_mm2": 206,
+      "transistors_m": 4150,
+      "l2_mb": 4,
+      "base_ghz": 3.8,
+      "boost_ghz": 4.7,
+      "power_label": "PPT",
+      "power_max_w": 142,
+      "mem_channels": 2,
+      "mem_max_mt": 3200,
+      "mem_max_gb": 128,
+      "pcie": "4.0 ×24",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 449
+    }
   },
   {
     "id": "amd-ryzen-5-5600x",
@@ -2765,7 +4125,24 @@
       "igpu_rel": null
     },
     "summary_en": "Value gaming six-core.",
-    "summary_ja": "ゲーム向けコスパ6コア。"
+    "summary_ja": "ゲーム向けコスパ6コア。",
+    "tech": {
+      "die": "1× CCD (6C, N7) + IOD (GF 12nm)",
+      "die_mm2": 206,
+      "transistors_m": 4150,
+      "l2_mb": 3,
+      "base_ghz": 3.7,
+      "boost_ghz": 4.6,
+      "power_label": "PPT",
+      "power_max_w": 76,
+      "mem_channels": 2,
+      "mem_max_mt": 3200,
+      "mem_max_gb": 128,
+      "pcie": "4.0 ×24",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 299
+    }
   },
   {
     "id": "amd-ryzen-7-5700x3d",
@@ -2799,7 +4176,24 @@
       "igpu_rel": null
     },
     "summary_en": "AM4's last value gaming chip.",
-    "summary_ja": "AM4 最後のコスパゲームCPU。"
+    "summary_ja": "AM4 最後のコスパゲームCPU。",
+    "tech": {
+      "die": "1× CCD (N7) + IOD (GF 12nm)",
+      "die_mm2": 206,
+      "transistors_m": 4150,
+      "l2_mb": 4,
+      "base_ghz": 3,
+      "boost_ghz": 4.1,
+      "power_label": "PPT",
+      "power_max_w": 142,
+      "mem_channels": 2,
+      "mem_max_mt": 3200,
+      "mem_max_gb": 128,
+      "pcie": "4.0 ×24",
+      "igpu_cu": null,
+      "igpu_ghz": null,
+      "launch_usd": 249
+    }
   },
   {
     "id": "amd-ryzen-7-8700g",
@@ -2832,7 +4226,24 @@
       "igpu_rel": 100
     },
     "summary_en": "Strongest desktop iGPU APU.",
-    "summary_ja": "デスクトップ最強の内蔵GPU APU。"
+    "summary_ja": "デスクトップ最強の内蔵GPU APU。",
+    "tech": {
+      "die": "单片 (N4 178mm²)",
+      "die_mm2": 178,
+      "transistors_m": 25000,
+      "l2_mb": 8,
+      "base_ghz": 4.2,
+      "boost_ghz": 5.1,
+      "power_label": "PPT",
+      "power_max_w": 88,
+      "mem_channels": 2,
+      "mem_max_mt": 5200,
+      "mem_max_gb": 256,
+      "pcie": "4.0 ×20",
+      "igpu_cu": 12,
+      "igpu_ghz": 2.9,
+      "launch_usd": 329
+    }
   },
   {
     "id": "amd-ryzen-5-8600g",
@@ -2865,7 +4276,24 @@
       "igpu_rel": 78
     },
     "summary_en": "The stop-gap build without a dGPU.",
-    "summary_ja": "dGPU なしのつなぎ構成に。"
+    "summary_ja": "dGPU なしのつなぎ構成に。",
+    "tech": {
+      "die": "单片 (N4 178mm²)",
+      "die_mm2": 178,
+      "transistors_m": 25000,
+      "l2_mb": 6,
+      "base_ghz": 4.3,
+      "boost_ghz": 5,
+      "power_label": "PPT",
+      "power_max_w": 88,
+      "mem_channels": 2,
+      "mem_max_mt": 5200,
+      "mem_max_gb": 256,
+      "pcie": "4.0 ×20",
+      "igpu_cu": 8,
+      "igpu_ghz": 2.8,
+      "launch_usd": 229
+    }
   },
   {
     "id": "amd-ryzen-5-5600g",
@@ -2898,7 +4326,24 @@
       "igpu_rel": 40
     },
     "summary_en": "AM4 iGPU APU.",
-    "summary_ja": "AM4 の内蔵GPU APU。"
+    "summary_ja": "AM4 の内蔵GPU APU。",
+    "tech": {
+      "die": "单片 (N7 180mm²)",
+      "die_mm2": 180,
+      "transistors_m": 10700,
+      "l2_mb": 3,
+      "base_ghz": 3.9,
+      "boost_ghz": 4.4,
+      "power_label": "PPT",
+      "power_max_w": 88,
+      "mem_channels": 2,
+      "mem_max_mt": 3200,
+      "mem_max_gb": 128,
+      "pcie": "3.0 ×20",
+      "igpu_cu": 7,
+      "igpu_ghz": 1.9,
+      "launch_usd": 259
+    }
   },
   {
     "id": "intel-core-i7-4700hq",

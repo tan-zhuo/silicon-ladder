@@ -9,6 +9,7 @@ import { catLabel, formLabel, ifaceLabel, modularLabel, price, num, iops, capaci
 import ScoreBar from '@/components/ScoreBar.vue'
 import BrandLogo from '@/components/BrandLogo.vue'
 import { cpuPlatform, gpuPlatform, ramPlatform, storagePlatform, psuPlatform, type Row } from '@/data/platforms'
+import { cpuTechRows, gpuTechRows, type TechRow } from '@/data/techrows'
 import { useI18n, displayName, displaySummary, tagLabel } from '@/i18n'
 import { useSeo, breadcrumb, SITE_URL } from '@/seo'
 
@@ -113,6 +114,15 @@ const lineage = computed(() => {
 })
 const rowOf = (id: string) => scored.value.find((r) => r.item.id === id)
 
+const techGroups = computed<{ group: string; rows: TechRow[] }[]>(() => {
+  const it = item.value
+  if (!it) return []
+  const rows = category.value === 'cpu' ? cpuTechRows(it as Cpu) : category.value === 'gpu' ? gpuTechRows(it as Gpu) : []
+  const out: { group: string; rows: TechRow[] }[] = []
+  for (const row of rows) { const g = out.find((x) => x.group === row.group); if (g) g.rows.push(row); else out.push({ group: row.group, rows: [row] }) }
+  return out.filter((g) => g.rows.some((x) => x.value !== '—'))
+})
+
 const inCompare = computed(() => item.value ? compare.has(category.value, item.value.id) : false)
 const tags = computed(() => ((item.value as { tags?: string[] } | undefined)?.tags ?? []).filter((x) => x !== '历史'))
 
@@ -196,6 +206,22 @@ useSeo(() => {
         </div>
       </section>
     </div>
+
+    <section v-if="techGroups.length" class="card p-5">
+      <h2 class="font-bold">{{ t('tech.title') }}</h2>
+      <p class="text-xs text-muted mt-1 mb-4">{{ t('tech.note') }}</p>
+      <div class="grid md:grid-cols-2 gap-x-8 gap-y-5">
+        <div v-for="g in techGroups" :key="g.group">
+          <div class="kicker mb-2">{{ g.group }}</div>
+          <dl class="divide-y divide-line/60">
+            <div v-for="row in g.rows" :key="row.key" class="grid grid-cols-[8.5rem_1fr] gap-3 py-1.5 text-sm">
+              <dt class="text-muted">{{ row.label }}</dt>
+              <dd :class="row.value === '—' ? 'text-muted' : 'font-medium'">{{ row.value }}</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
 
     <section v-if="platformRows.length" class="card p-5">
       <h2 class="font-bold">{{ t('product.platform') }}</h2>

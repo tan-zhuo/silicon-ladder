@@ -43,6 +43,7 @@ npm run calibrate  # 用 data-src/calibration.csv 回写真实评测分数
 - `est: true` 表示历史硬件估算分（按公开评测比例换算），详情页与列表会显示「估算」标记。
 - 追加脚本：`scripts/seed-more.mjs`（2020+ 主流）、`scripts/seed-history.mjs`（2007–2023），按 id 幂等。
 - 平台兼容知识表（插槽 / 芯片组 / 架构 / 供电 / 推荐电源等）在 `src/data/platforms.ts`，按 `socket` / `gen` 派生。
+- 技术规格：架构级（核心微架构、制程、芯片设计、L1、指令集、SMT；GPU 单元名/每单元着色器/RT·AI 世代）在 `src/data/arch.ts` 按 `gen` 派生；产品级（晶片布局/面积/晶体管、L2、基础/加速频率、PPT·PL2、内存控制器、PCIe、核显；GPU 的 SM/CU、着色器/TMU/ROP/RT/Tensor、时钟、显存速率与带宽、L2/Infinity Cache、FP32 算力、首发价）以 `tech` 字段存于 JSON，由 `scripts/seed-tech.mjs` 写入，行生成逻辑在 `src/data/techrows.ts`（详情页与对比页共用，对比页按 higher/lower 标 ★）。
 - 排序逻辑 `src/utils/rank.ts`，列配置 `src/utils/columns.ts`。
 
 - 产品 `summary_en` / `summary_ja` 由 `scripts/i18n/summaries-*.mjs` 维护，`node scripts/i18n/merge-summaries.mjs` 合并进 JSON；平台兼容文案在 `src/data/platforms.ts` 内以 (zh, en, ja) 三元组维护；标签翻译在 `src/i18n/*.ts` 的 `tags`。
