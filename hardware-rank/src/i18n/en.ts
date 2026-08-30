@@ -53,7 +53,7 @@ export const en: Msg = {
   compare: { title: 'Compare', needTwo: 'You need at least 2 items. Go to the', goRank: 'rankings', pick: 'and tick products (up to 4 in one category).', mixed: 'You are comparing different form factors — these numbers are not a basis for switching devices.', metric: 'Metric', specs: 'Specs', scores: 'Scores (relative, same pool)', psuNoScore: 'PSUs are not benchmarked; only specs and tiers are compared.', addMore: 'Add more', clear: 'Clear basket', remove: 'Remove' },
   footer: { updated: 'Data updated: ', method: 'Methodology & sources', disclaimer: 'Static snapshot; scores are for relative ranking and are not purchase advice.' },
   guide: {
-    title: 'Buying guide by scenario', sub: 'Four common scenarios, three picks each. Picks come from this site\'s static data — no price comparison.',
+    title: 'Buying guide by scenario', sub: 'Build reference: by budget, by workload, laptops, upgrade paths, quick tables and common myths. Picks come from this site\'s static data; no price comparison.',
     s1: 'Pure gaming desktop', s1d: 'Big-cache CPU + strong raster GPU; leave 30% PSU headroom.',
     s2: 'Productivity / video editing', s2d: 'Cores and VRAM first; check post-cache write speed on storage.',
     s3: 'Thin & light (battery first)', s3d: 'Look at efficiency and iGPU, not the desktop chart.',
