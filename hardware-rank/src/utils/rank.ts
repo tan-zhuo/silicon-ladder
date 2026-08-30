@@ -32,67 +32,66 @@ export function weighted(parts: Record<string, number | null>, weights: Record<s
 
 export interface SortDef {
   key: string
-  label: string
   /** 升序（延迟）；默认降序 */
   asc?: boolean
 }
 
 export const SORT_DEFS: Record<Category, SortDef[]> = {
   cpu: [
-    { key: 'overall', label: '综合' },
-    { key: 'gaming', label: '游戏' },
-    { key: 'single', label: '单核' },
-    { key: 'multi', label: '生产力' },
-    { key: 'efficiency', label: '能效' },
-    { key: 'igpu', label: '核显' },
-    { key: 'value', label: '性价比' },
+    { key: 'overall' },
+    { key: 'gaming' },
+    { key: 'single' },
+    { key: 'multi' },
+    { key: 'efficiency' },
+    { key: 'igpu' },
+    { key: 'value' },
   ],
   gpu: [
-    { key: 'overall', label: '综合' },
-    { key: 'raster', label: '光栅' },
-    { key: 'rt', label: '光追' },
-    { key: 'efficiency', label: '能效' },
-    { key: 'value', label: '性价比' },
+    { key: 'overall' },
+    { key: 'raster' },
+    { key: 'rt' },
+    { key: 'efficiency' },
+    { key: 'value' },
   ],
   ram: [
-    { key: 'overall', label: '综合' },
-    { key: 'bandwidth', label: '带宽' },
-    { key: 'latency', label: '延迟', asc: true },
+    { key: 'overall' },
+    { key: 'bandwidth' },
+    { key: 'latency', asc: true },
   ],
   storage: [
-    { key: 'overall', label: '综合' },
-    { key: 'random4k', label: '4K 随机' },
-    { key: 'cacheOut', label: '缓外写入' },
-    { key: 'seqRead', label: '顺序读' },
-    { key: 'endurance', label: '耐久' },
+    { key: 'overall' },
+    { key: 'random4k' },
+    { key: 'cacheOut' },
+    { key: 'seqRead' },
+    { key: 'endurance' },
   ],
-  psu: [{ key: 'tier', label: '品质分档' }],
+  psu: [{ key: 'tier' }],
 }
 
 /** 每个品类可用的 form 枚举 */
-export const FORMS: Record<Category, { key: string; label: string }[]> = {
+export const FORMS: Record<Category, { key: string }[]> = {
   cpu: [
-    { key: 'desktop', label: '桌面' },
-    { key: 'laptop', label: '笔记本' },
+    { key: 'desktop' },
+    { key: 'laptop' },
   ],
   gpu: [
-    { key: 'desktop', label: '桌面' },
-    { key: 'laptop', label: '笔记本' },
-    { key: 'igpu', label: '核显' },
+    { key: 'desktop' },
+    { key: 'laptop' },
+    { key: 'igpu' },
   ],
   ram: [
-    { key: 'kit-desktop', label: '台式套装' },
-    { key: 'sodimm', label: '笔记本条' },
-    { key: 'onboard', label: '板载' },
+    { key: 'kit-desktop' },
+    { key: 'sodimm' },
+    { key: 'onboard' },
   ],
   storage: [
-    { key: 'nvme', label: 'NVMe' },
-    { key: 'sata', label: 'SATA' },
-    { key: 'hdd', label: 'HDD' },
+    { key: 'nvme' },
+    { key: 'sata' },
+    { key: 'hdd' },
   ],
   psu: [
-    { key: 'atx', label: 'ATX' },
-    { key: 'sfx', label: 'SFX' },
+    { key: 'atx' },
+    { key: 'sfx' },
   ],
 }
 

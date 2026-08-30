@@ -1383,5 +1383,1267 @@
       "raster_rel": 13,
       "rt_rel": null
     }
+  },
+  {
+    "id": "nvidia-geforce-8800-gt",
+    "name": "GeForce 8800 GT",
+    "nameEn": "NVIDIA GeForce 8800 GT",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 8",
+    "gen": "tesla",
+    "chip": "G92",
+    "vram_gb": 0.5,
+    "vram_type": "GDDR3",
+    "bus_bit": 256,
+    "tdp_w": 105,
+    "release": "2007-10",
+    "price_cny": null,
+    "summary": "统一渲染架构普及者，性价比传奇。",
+    "tags": [
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 1.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-geforce-gtx-280",
+    "name": "GeForce GTX 280",
+    "nameEn": "NVIDIA GeForce GTX 280",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 200",
+    "gen": "tesla",
+    "chip": "GT200",
+    "vram_gb": 1,
+    "vram_type": "GDDR3",
+    "bus_bit": 512,
+    "tdp_w": 236,
+    "release": "2008-06",
+    "price_cny": null,
+    "summary": "512-bit 巨核旗舰。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 2.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-480",
+    "name": "GeForce GTX 480",
+    "nameEn": "NVIDIA GeForce GTX 480",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 400",
+    "gen": "fermi",
+    "chip": "GF100",
+    "vram_gb": 1.5,
+    "vram_type": "GDDR5",
+    "bus_bit": 384,
+    "tdp_w": 250,
+    "release": "2010-03",
+    "price_cny": null,
+    "summary": "Fermi 首发，「核弹」。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 4.2,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-580",
+    "name": "GeForce GTX 580",
+    "nameEn": "NVIDIA GeForce GTX 580",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 500",
+    "gen": "fermi",
+    "chip": "GF110",
+    "vram_gb": 1.5,
+    "vram_type": "GDDR5",
+    "bus_bit": 384,
+    "tdp_w": 244,
+    "release": "2010-11",
+    "price_cny": null,
+    "summary": "Fermi 完全体。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 4.8,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-680",
+    "name": "GeForce GTX 680",
+    "nameEn": "NVIDIA GeForce GTX 680",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 600",
+    "gen": "kepler",
+    "chip": "GK104",
+    "vram_gb": 2,
+    "vram_type": "GDDR5",
+    "bus_bit": 256,
+    "tdp_w": 195,
+    "release": "2012-03",
+    "price_cny": null,
+    "summary": "Kepler，能效大进步。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 6.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-780-ti",
+    "name": "GeForce GTX 780 Ti",
+    "nameEn": "NVIDIA GeForce GTX 780 Ti",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 700",
+    "gen": "kepler",
+    "chip": "GK110",
+    "vram_gb": 3,
+    "vram_type": "GDDR5",
+    "bus_bit": 384,
+    "tdp_w": 250,
+    "release": "2013-11",
+    "price_cny": null,
+    "summary": "Kepler 大核旗舰。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 9.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-970",
+    "name": "GeForce GTX 970",
+    "nameEn": "NVIDIA GeForce GTX 970",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 900",
+    "gen": "maxwell",
+    "chip": "GM204",
+    "vram_gb": 4,
+    "vram_type": "GDDR5",
+    "bus_bit": 256,
+    "tdp_w": 145,
+    "release": "2014-09",
+    "price_cny": null,
+    "summary": "3.5GB 显存门，但销量极佳。",
+    "tags": [
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 9,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-980",
+    "name": "GeForce GTX 980",
+    "nameEn": "NVIDIA GeForce GTX 980",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 900",
+    "gen": "maxwell",
+    "chip": "GM204",
+    "vram_gb": 4,
+    "vram_type": "GDDR5",
+    "bus_bit": 256,
+    "tdp_w": 165,
+    "release": "2014-09",
+    "price_cny": null,
+    "summary": "Maxwell 能效标杆。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 10.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-980-ti",
+    "name": "GeForce GTX 980 Ti",
+    "nameEn": "NVIDIA GeForce GTX 980 Ti",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 900",
+    "gen": "maxwell",
+    "chip": "GM200",
+    "vram_gb": 6,
+    "vram_type": "GDDR5",
+    "bus_bit": 384,
+    "tdp_w": 250,
+    "release": "2015-06",
+    "price_cny": null,
+    "summary": "28nm 末代旗舰。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 13.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-1060-6gb",
+    "name": "GeForce GTX 1060 6GB",
+    "nameEn": "NVIDIA GeForce GTX 1060 6GB",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 10",
+    "gen": "pascal",
+    "chip": "GP106",
+    "vram_gb": 6,
+    "vram_type": "GDDR5",
+    "bus_bit": 192,
+    "tdp_w": 120,
+    "release": "2016-07",
+    "price_cny": null,
+    "summary": "Steam 占有率之王。",
+    "tags": [
+      "经典",
+      "性价比",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 10.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-1070",
+    "name": "GeForce GTX 1070",
+    "nameEn": "NVIDIA GeForce GTX 1070",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 10",
+    "gen": "pascal",
+    "chip": "GP104",
+    "vram_gb": 8,
+    "vram_type": "GDDR5",
+    "bus_bit": 256,
+    "tdp_w": 150,
+    "release": "2016-06",
+    "price_cny": null,
+    "summary": "8GB 显存，长寿。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 15,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-1080",
+    "name": "GeForce GTX 1080",
+    "nameEn": "NVIDIA GeForce GTX 1080",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 10",
+    "gen": "pascal",
+    "chip": "GP104",
+    "vram_gb": 8,
+    "vram_type": "GDDR5X",
+    "bus_bit": 256,
+    "tdp_w": 180,
+    "release": "2016-05",
+    "price_cny": null,
+    "summary": "Pascal 首发旗舰。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 18.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-1080-ti",
+    "name": "GeForce GTX 1080 Ti",
+    "nameEn": "NVIDIA GeForce GTX 1080 Ti",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 10",
+    "gen": "pascal",
+    "chip": "GP102",
+    "vram_gb": 11,
+    "vram_type": "GDDR5X",
+    "bus_bit": 352,
+    "tdp_w": 250,
+    "release": "2017-03",
+    "price_cny": null,
+    "summary": "公认最保值旗舰。",
+    "tags": [
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 24,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-1650",
+    "name": "GeForce GTX 1650",
+    "nameEn": "NVIDIA GeForce GTX 1650",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 16",
+    "gen": "turing",
+    "chip": "TU117",
+    "vram_gb": 4,
+    "vram_type": "GDDR5",
+    "bus_bit": 128,
+    "tdp_w": 75,
+    "release": "2019-04",
+    "price_cny": null,
+    "summary": "无需外接供电的入门卡。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 8,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-1660-super",
+    "name": "GeForce GTX 1660 SUPER",
+    "nameEn": "NVIDIA GeForce GTX 1660 SUPER",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "GeForce 16",
+    "gen": "turing",
+    "chip": "TU116",
+    "vram_gb": 6,
+    "vram_type": "GDDR6",
+    "bus_bit": 192,
+    "tdp_w": 125,
+    "release": "2019-10",
+    "price_cny": null,
+    "summary": "无光追的 Turing 甜点。",
+    "tags": [
+      "性价比",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 14,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-rtx-2060",
+    "name": "GeForce RTX 2060",
+    "nameEn": "NVIDIA GeForce RTX 2060",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 20",
+    "gen": "turing",
+    "chip": "TU106",
+    "vram_gb": 6,
+    "vram_type": "GDDR6",
+    "bus_bit": 192,
+    "tdp_w": 160,
+    "release": "2019-01",
+    "price_cny": null,
+    "summary": "最便宜的首代光追卡。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 19,
+      "rt_rel": 12
+    }
+  },
+  {
+    "id": "nvidia-rtx-2070-super",
+    "name": "GeForce RTX 2070 SUPER",
+    "nameEn": "NVIDIA GeForce RTX 2070 SUPER",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 20",
+    "gen": "turing",
+    "chip": "TU104",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 256,
+    "tdp_w": 215,
+    "release": "2019-07",
+    "price_cny": null,
+    "summary": "Turing 中高端。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 25,
+      "rt_rel": 17
+    }
+  },
+  {
+    "id": "nvidia-rtx-2080-ti",
+    "name": "GeForce RTX 2080 Ti",
+    "nameEn": "NVIDIA GeForce RTX 2080 Ti",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 20",
+    "gen": "turing",
+    "chip": "TU102",
+    "vram_gb": 11,
+    "vram_type": "GDDR6",
+    "bus_bit": 352,
+    "tdp_w": 250,
+    "release": "2018-09",
+    "price_cny": null,
+    "summary": "光追元年旗舰，万元起步。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 32,
+      "rt_rel": 24
+    }
+  },
+  {
+    "id": "nvidia-rtx-3050-8gb",
+    "name": "GeForce RTX 3050 8GB",
+    "nameEn": "NVIDIA GeForce RTX 3050 8GB",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 30",
+    "gen": "ampere",
+    "chip": "GA106",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 128,
+    "tdp_w": 130,
+    "release": "2022-01",
+    "price_cny": null,
+    "summary": "Ampere 入门。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 18,
+      "rt_rel": 13
+    }
+  },
+  {
+    "id": "nvidia-rtx-3060-ti",
+    "name": "GeForce RTX 3060 Ti",
+    "nameEn": "NVIDIA GeForce RTX 3060 Ti",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 30",
+    "gen": "ampere",
+    "chip": "GA104",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 256,
+    "tdp_w": 200,
+    "release": "2020-12",
+    "price_cny": null,
+    "summary": "矿潮前的甜点。",
+    "tags": [
+      "性价比",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 33,
+      "rt_rel": 26
+    }
+  },
+  {
+    "id": "nvidia-rtx-3080-ti",
+    "name": "GeForce RTX 3080 Ti",
+    "nameEn": "NVIDIA GeForce RTX 3080 Ti",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 30",
+    "gen": "ampere",
+    "chip": "GA102",
+    "vram_gb": 12,
+    "vram_type": "GDDR6X",
+    "bus_bit": 384,
+    "tdp_w": 350,
+    "release": "2021-06",
+    "price_cny": null,
+    "summary": "接近 3090。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 53,
+      "rt_rel": 45
+    }
+  },
+  {
+    "id": "nvidia-rtx-3090",
+    "name": "GeForce RTX 3090",
+    "nameEn": "NVIDIA GeForce RTX 3090",
+    "brand": "NVIDIA",
+    "form": "desktop",
+    "series": "RTX 30",
+    "gen": "ampere",
+    "chip": "GA102",
+    "vram_gb": 24,
+    "vram_type": "GDDR6X",
+    "bus_bit": 384,
+    "tdp_w": 350,
+    "release": "2020-09",
+    "price_cny": null,
+    "summary": "BFGPU，24GB。",
+    "tags": [
+      "生产力",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 55,
+      "rt_rel": 47
+    }
+  },
+  {
+    "id": "amd-radeon-hd-4870",
+    "name": "Radeon HD 4870",
+    "nameEn": "AMD Radeon HD 4870",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 4000",
+    "gen": "terascale",
+    "chip": "RV770",
+    "vram_gb": 0.5,
+    "vram_type": "GDDR5",
+    "bus_bit": 256,
+    "tdp_w": 150,
+    "release": "2008-06",
+    "price_cny": null,
+    "summary": "GDDR5 首发，性价比逆袭。",
+    "tags": [
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 2.3,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-5870",
+    "name": "Radeon HD 5870",
+    "nameEn": "AMD Radeon HD 5870",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 5000",
+    "gen": "terascale",
+    "chip": "Cypress",
+    "vram_gb": 1,
+    "vram_type": "GDDR5",
+    "bus_bit": 256,
+    "tdp_w": 188,
+    "release": "2009-09",
+    "price_cny": null,
+    "summary": "首款 DX11 显卡。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 3.6,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-6970",
+    "name": "Radeon HD 6970",
+    "nameEn": "AMD Radeon HD 6970",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 6000",
+    "gen": "terascale",
+    "chip": "Cayman",
+    "vram_gb": 2,
+    "vram_type": "GDDR5",
+    "bus_bit": 256,
+    "tdp_w": 250,
+    "release": "2010-12",
+    "price_cny": null,
+    "summary": "VLIW4 架构。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 4.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-radeon-hd-7970",
+    "name": "Radeon HD 7970",
+    "nameEn": "AMD Radeon HD 7970",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon HD 7000",
+    "gen": "gcn",
+    "chip": "Tahiti",
+    "vram_gb": 3,
+    "vram_type": "GDDR5",
+    "bus_bit": 384,
+    "tdp_w": 250,
+    "release": "2011-12",
+    "price_cny": null,
+    "summary": "GCN 首发，28nm 首发。",
+    "tags": [
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 6.8,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-r9-290x",
+    "name": "Radeon R9 290X",
+    "nameEn": "AMD Radeon R9 290X",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon R9 200",
+    "gen": "gcn",
+    "chip": "Hawaii",
+    "vram_gb": 4,
+    "vram_type": "GDDR5",
+    "bus_bit": 512,
+    "tdp_w": 290,
+    "release": "2013-10",
+    "price_cny": null,
+    "summary": "「夏威夷」，公版散热灾难。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 9.8,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-r9-fury-x",
+    "name": "Radeon R9 Fury X",
+    "nameEn": "AMD Radeon R9 Fury X",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon R9 300",
+    "gen": "gcn",
+    "chip": "Fiji",
+    "vram_gb": 4,
+    "vram_type": "HBM",
+    "bus_bit": 4096,
+    "tdp_w": 275,
+    "release": "2015-06",
+    "price_cny": null,
+    "summary": "HBM 首发，水冷公版。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 13,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-rx-480-8gb",
+    "name": "Radeon RX 480 8GB",
+    "nameEn": "AMD Radeon RX 480 8GB",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon RX 400",
+    "gen": "polaris",
+    "chip": "Polaris 10",
+    "vram_gb": 8,
+    "vram_type": "GDDR5",
+    "bus_bit": 256,
+    "tdp_w": 150,
+    "release": "2016-06",
+    "price_cny": null,
+    "summary": "Polaris 甜点。",
+    "tags": [
+      "性价比",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 9.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-rx-580-8gb",
+    "name": "Radeon RX 580 8GB",
+    "nameEn": "AMD Radeon RX 580 8GB",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon RX 500",
+    "gen": "polaris",
+    "chip": "Polaris 20",
+    "vram_gb": 8,
+    "vram_type": "GDDR5",
+    "bus_bit": 256,
+    "tdp_w": 185,
+    "release": "2017-04",
+    "price_cny": null,
+    "summary": "矿卡之王，二手海量。",
+    "tags": [
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 10.5,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-rx-vega-64",
+    "name": "Radeon RX Vega 64",
+    "nameEn": "AMD Radeon RX Vega 64",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon RX Vega",
+    "gen": "vega",
+    "chip": "Vega 10",
+    "vram_gb": 8,
+    "vram_type": "HBM2",
+    "bus_bit": 2048,
+    "tdp_w": 295,
+    "release": "2017-08",
+    "price_cny": null,
+    "summary": "HBM2，功耗大。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 20,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-rx-5700-xt",
+    "name": "Radeon RX 5700 XT",
+    "nameEn": "AMD Radeon RX 5700 XT",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon RX 5000",
+    "gen": "rdna",
+    "chip": "Navi 10",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 256,
+    "tdp_w": 225,
+    "release": "2019-07",
+    "price_cny": null,
+    "summary": "RDNA 首发，无光追。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 24,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-rx-5600-xt",
+    "name": "Radeon RX 5600 XT",
+    "nameEn": "AMD Radeon RX 5600 XT",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon RX 5000",
+    "gen": "rdna",
+    "chip": "Navi 10",
+    "vram_gb": 6,
+    "vram_type": "GDDR6",
+    "bus_bit": 192,
+    "tdp_w": 150,
+    "release": "2020-01",
+    "price_cny": null,
+    "summary": "发售前 BIOS 提频。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 18,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "amd-rx-6650-xt",
+    "name": "Radeon RX 6650 XT",
+    "nameEn": "AMD Radeon RX 6650 XT",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon RX 6000",
+    "gen": "rdna2",
+    "chip": "Navi 23",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 128,
+    "tdp_w": 180,
+    "release": "2022-05",
+    "price_cny": null,
+    "summary": "1080p 主流。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 27,
+      "rt_rel": 15
+    }
+  },
+  {
+    "id": "amd-rx-6700-xt",
+    "name": "Radeon RX 6700 XT",
+    "nameEn": "AMD Radeon RX 6700 XT",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon RX 6000",
+    "gen": "rdna2",
+    "chip": "Navi 22",
+    "vram_gb": 12,
+    "vram_type": "GDDR6",
+    "bus_bit": 192,
+    "tdp_w": 230,
+    "release": "2021-03",
+    "price_cny": null,
+    "summary": "12GB 显存 2K 卡。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 36,
+      "rt_rel": 21
+    }
+  },
+  {
+    "id": "amd-rx-6900-xt",
+    "name": "Radeon RX 6900 XT",
+    "nameEn": "AMD Radeon RX 6900 XT",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Radeon RX 6000",
+    "gen": "rdna2",
+    "chip": "Navi 21",
+    "vram_gb": 16,
+    "vram_type": "GDDR6",
+    "bus_bit": 256,
+    "tdp_w": 300,
+    "release": "2020-12",
+    "price_cny": null,
+    "summary": "RDNA2 旗舰，光栅追平 3090。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 55,
+      "rt_rel": 33
+    }
+  },
+  {
+    "id": "intel-arc-a750",
+    "name": "Arc A750",
+    "nameEn": "Intel Arc A750",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Arc A",
+    "gen": "xe",
+    "chip": "ACM-G10",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 256,
+    "tdp_w": 225,
+    "release": "2022-10",
+    "price_cny": null,
+    "summary": "Intel 独显回归。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 27,
+      "rt_rel": 22
+    }
+  },
+  {
+    "id": "nvidia-gtx-1060-laptop-80w",
+    "name": "GTX 1060 Laptop",
+    "nameEn": "NVIDIA GTX 1060 Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "GeForce 10 Laptop",
+    "gen": "pascal",
+    "chip": "GP106",
+    "vram_gb": 6,
+    "vram_type": "GDDR5",
+    "bus_bit": 192,
+    "tdp_w": 80,
+    "tgp_w": 80,
+    "release": "2016-08",
+    "price_cny": null,
+    "summary": "移动端追平桌面的开始。",
+    "tags": [
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 12,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-1070-laptop-115w",
+    "name": "GTX 1070 Laptop",
+    "nameEn": "NVIDIA GTX 1070 Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "GeForce 10 Laptop",
+    "gen": "pascal",
+    "chip": "GP104",
+    "vram_gb": 8,
+    "vram_type": "GDDR5",
+    "bus_bit": 256,
+    "tdp_w": 115,
+    "tgp_w": 115,
+    "release": "2016-08",
+    "price_cny": null,
+    "summary": "GTX 1070 Laptop。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 16,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-1650-laptop-50w",
+    "name": "GTX 1650 Laptop",
+    "nameEn": "NVIDIA GTX 1650 Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "GeForce 16 Laptop",
+    "gen": "turing",
+    "chip": "TU117",
+    "vram_gb": 4,
+    "vram_type": "GDDR5",
+    "bus_bit": 128,
+    "tdp_w": 50,
+    "tgp_w": 50,
+    "release": "2019-04",
+    "price_cny": null,
+    "summary": "入门独显本。",
+    "tags": [
+      "低TGP",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 8,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-gtx-1660-ti-laptop-80w",
+    "name": "GTX 1660 Ti Laptop",
+    "nameEn": "NVIDIA GTX 1660 Ti Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "GeForce 16 Laptop",
+    "gen": "turing",
+    "chip": "TU116",
+    "vram_gb": 6,
+    "vram_type": "GDDR6",
+    "bus_bit": 192,
+    "tdp_w": 80,
+    "tgp_w": 80,
+    "release": "2019-04",
+    "price_cny": null,
+    "summary": "GTX 1660 Ti Laptop。",
+    "tags": [
+      "低TGP",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 13,
+      "rt_rel": null
+    }
+  },
+  {
+    "id": "nvidia-rtx-2060-laptop-90w",
+    "name": "RTX 2060 Laptop",
+    "nameEn": "NVIDIA RTX 2060 Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 20 Laptop",
+    "gen": "turing",
+    "chip": "TU106",
+    "vram_gb": 6,
+    "vram_type": "GDDR6",
+    "bus_bit": 192,
+    "tdp_w": 90,
+    "tgp_w": 90,
+    "release": "2019-01",
+    "price_cny": null,
+    "summary": "RTX 2060 Laptop。",
+    "tags": [
+      "中TGP",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 17,
+      "rt_rel": 11
+    }
+  },
+  {
+    "id": "nvidia-rtx-2070-max-q-80w",
+    "name": "RTX 2070 Max-Q",
+    "nameEn": "NVIDIA RTX 2070 Max-Q",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 20 Laptop",
+    "gen": "turing",
+    "chip": "TU106",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 256,
+    "tdp_w": 80,
+    "tgp_w": 80,
+    "release": "2019-01",
+    "price_cny": null,
+    "summary": "Max-Q 轻薄游戏本。",
+    "tags": [
+      "低TGP",
+      "轻薄",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 18,
+      "rt_rel": 12
+    }
+  },
+  {
+    "id": "nvidia-rtx-2080-laptop-150w",
+    "name": "RTX 2080 Laptop",
+    "nameEn": "NVIDIA RTX 2080 Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 20 Laptop",
+    "gen": "turing",
+    "chip": "TU104",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 256,
+    "tdp_w": 150,
+    "tgp_w": 150,
+    "release": "2019-01",
+    "price_cny": null,
+    "summary": "RTX 2080 Laptop。",
+    "tags": [
+      "高TGP",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 26,
+      "rt_rel": 18
+    }
+  },
+  {
+    "id": "nvidia-rtx-3050-laptop-95w",
+    "name": "RTX 3050 Laptop",
+    "nameEn": "NVIDIA RTX 3050 Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 30 Laptop",
+    "gen": "ampere",
+    "chip": "GA107",
+    "vram_gb": 4,
+    "vram_type": "GDDR6",
+    "bus_bit": 128,
+    "tdp_w": 95,
+    "tgp_w": 95,
+    "release": "2021-05",
+    "price_cny": null,
+    "summary": "4GB 显存捉襟见肘。",
+    "tags": [
+      "中TGP",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 15,
+      "rt_rel": 10
+    }
+  },
+  {
+    "id": "nvidia-rtx-3060-laptop-130w",
+    "name": "RTX 3060 Laptop",
+    "nameEn": "NVIDIA RTX 3060 Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 30 Laptop",
+    "gen": "ampere",
+    "chip": "GA106",
+    "vram_gb": 6,
+    "vram_type": "GDDR6",
+    "bus_bit": 192,
+    "tdp_w": 130,
+    "tgp_w": 130,
+    "release": "2021-01",
+    "price_cny": null,
+    "summary": "30 系游戏本主力。",
+    "tags": [
+      "高TGP",
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 25,
+      "rt_rel": 19
+    }
+  },
+  {
+    "id": "nvidia-rtx-3070-laptop-140w",
+    "name": "RTX 3070 Laptop",
+    "nameEn": "NVIDIA RTX 3070 Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 30 Laptop",
+    "gen": "ampere",
+    "chip": "GA104",
+    "vram_gb": 8,
+    "vram_type": "GDDR6",
+    "bus_bit": 256,
+    "tdp_w": 140,
+    "tgp_w": 140,
+    "release": "2021-01",
+    "price_cny": null,
+    "summary": "RTX 3070 Laptop。",
+    "tags": [
+      "高TGP",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 31,
+      "rt_rel": 25
+    }
+  },
+  {
+    "id": "nvidia-rtx-3080-laptop-165w",
+    "name": "RTX 3080 Laptop",
+    "nameEn": "NVIDIA RTX 3080 Laptop",
+    "brand": "NVIDIA",
+    "form": "laptop",
+    "series": "RTX 30 Laptop",
+    "gen": "ampere",
+    "chip": "GA104",
+    "vram_gb": 16,
+    "vram_type": "GDDR6",
+    "bus_bit": 256,
+    "tdp_w": 165,
+    "tgp_w": 165,
+    "release": "2021-01",
+    "price_cny": null,
+    "summary": "16GB 显存，核心是桌面 3070。",
+    "tags": [
+      "高TGP",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 38,
+      "rt_rel": 31
+    }
+  },
+  {
+    "id": "amd-rx-6800m",
+    "name": "Radeon RX 6800M",
+    "nameEn": "AMD Radeon RX 6800M",
+    "brand": "AMD",
+    "form": "laptop",
+    "series": "Radeon RX 6000M",
+    "gen": "rdna2",
+    "chip": "Navi 22",
+    "vram_gb": 12,
+    "vram_type": "GDDR6",
+    "bus_bit": 192,
+    "tdp_w": 145,
+    "tgp_w": 145,
+    "release": "2021-06",
+    "price_cny": null,
+    "summary": "AMD 移动高端，机型少。",
+    "tags": [
+      "高TGP",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "raster_rel": 35,
+      "rt_rel": 20
+    }
   }
 ]

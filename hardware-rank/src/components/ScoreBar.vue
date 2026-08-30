@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import { rel as fmt } from '@/utils/format'
-defineProps<{ value: number | null | undefined; raw?: string | null; color?: string }>()
+withDefaults(defineProps<{ value: number | null | undefined; raw?: string | null; dim?: boolean; height?: number }>(), { dim: false, height: 6 })
 </script>
 
 <template>
   <div class="flex items-center gap-2 justify-end">
-    <div class="flex-1 min-w-[56px] h-1.5 rounded-full bg-line overflow-hidden">
+    <span v-if="raw" class="hidden xl:inline text-[11px] text-muted w-16 text-right truncate">{{ raw }}</span>
+    <div class="flex-1 min-w-[56px] max-w-[120px] rounded-full overflow-hidden" :style="{ height: height + 'px', background: 'var(--bar-track)' }">
       <div
         v-if="value !== null && value !== undefined"
         class="h-full rounded-full"
-        :style="{ width: Math.min(100, Math.max(0, value)) + '%', background: color || '#5B8CFF' }"
+        :style="{ width: Math.min(100, Math.max(0, value)) + '%', background: dim ? 'var(--bar-fill-dim)' : 'var(--bar-fill)' }"
       />
     </div>
-    <span class="w-12 text-right text-sm" :class="value == null ? 'text-muted' : ''">{{ fmt(value) }}</span>
-    <span v-if="raw" class="hidden lg:inline text-xs text-muted w-16 text-right">{{ raw }}</span>
+    <span class="w-11 text-right text-sm font-medium" :class="value == null ? 'text-muted' : ''">{{ fmt(value) }}</span>
   </div>
 </template>

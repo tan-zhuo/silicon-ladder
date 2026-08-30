@@ -1,0 +1,223 @@
+// 历史硬件（2007–2023）：分数按公开评测比例换算为同池示意分，est=true
+import { readFileSync, writeFileSync } from 'node:fs'
+const D = 'public/data/'
+const load = (f) => JSON.parse(readFileSync(D + f, 'utf8'))
+const save = (f, arr) => writeFileSync(D + f, JSON.stringify(arr, null, 2) + '\n')
+const merge = (f, add) => { const cur = load(f); const ids = new Set(cur.map((x) => x.id)); const n = add.filter((x) => !ids.has(x.id)); save(f, [...cur, ...n]); console.log(f, '+' + n.length, '=', cur.length + n.length) }
+
+/* CPU: [id, name, brand, form, series, gen, socket, cores, clocks, tdp, igpu, l3, mem, st, mt, gaming, igpu_rel, release, summary, tags] */
+const C = (a) => a.map(([id, name, brand, form, series, gen, socket, cores, clocks, tdp_w, igpu, cache_l3, mem, st, mt, gaming, igpu_rel, release, summary, tags = [], tdp_range]) => ({
+  id, name, nameEn: `${brand} ${name}`, brand, form, series, gen, socket, cores, clocks, tdp_w, ...(tdp_range ? { tdp_range } : {}), igpu, cache_l3, mem, release, price_cny: null, summary, tags: [...tags, '历史'], est: true,
+  scores: { cb24_st: st, cb24_mt: mt, gaming_rel: gaming, igpu_rel },
+}))
+merge('cpus.json', C([
+  // ---- Intel 桌面 2007–2022 ----
+  ['intel-core-2-quad-q6600', 'Core 2 Quad Q6600', 'Intel', 'desktop', 'Core 2 Quad', 'core2', 'LGA775', '4C / 4T', '2.4 GHz', 105, null, '8 MB (2×4)', 'DDR2-800', 160, 600, 12, null, '2007-01', '首款平民四核，超频神话。', ['经典']],
+  ['intel-core-2-duo-e8400', 'Core 2 Duo E8400', 'Intel', 'desktop', 'Core 2 Duo', 'core2', 'LGA775', '2C / 2T', '3.0 GHz', 65, null, '6 MB', 'DDR2-800 / DDR3-1066', 200, 380, 12, null, '2008-01', '45nm 双核，当年游戏首选。', ['经典']],
+  ['intel-core-2-quad-q9550', 'Core 2 Quad Q9550', 'Intel', 'desktop', 'Core 2 Quad', 'core2', 'LGA775', '4C / 4T', '2.83 GHz', 95, null, '12 MB (2×6)', 'DDR2-800 / DDR3-1066', 210, 800, 14, null, '2008-03', 'LGA775 末期四核旗舰。', []],
+  ['intel-core-i7-920', 'Core i7-920', 'Intel', 'desktop', 'Core i7', 'nehalem', 'LGA1366', '4C / 8T', '2.66 / 2.93 GHz', 130, null, '8 MB', 'DDR3-1066 三通道', 230, 1150, 16, null, '2008-11', '首代 Core i7，超线程回归。', ['经典']],
+  ['intel-core-i5-750', 'Core i5-750', 'Intel', 'desktop', 'Core i5', 'nehalem', 'LGA1156', '4C / 4T', '2.66 / 3.2 GHz', 95, null, '8 MB', 'DDR3-1333', 220, 850, 15, null, '2009-09', '主流四核，性价比极高。', []],
+  ['intel-core-i7-870', 'Core i7-870', 'Intel', 'desktop', 'Core i7', 'nehalem', 'LGA1156', '4C / 8T', '2.93 / 3.6 GHz', 95, null, '8 MB', 'DDR3-1333', 240, 1150, 16, null, '2009-09', 'Lynnfield 旗舰。', []],
+  ['intel-core-i5-2500k', 'Core i5-2500K', 'Intel', 'desktop', 'Core i5', 'sandy-bridge', 'LGA1155', '4C / 4T', '3.3 / 3.7 GHz', 95, 'HD 3000', '6 MB', 'DDR3-1333', 340, 1300, 24, null, '2011-01', '一代神 U，随便超 4.5GHz。', ['经典']],
+  ['intel-core-i7-2600k', 'Core i7-2600K', 'Intel', 'desktop', 'Core i7', 'sandy-bridge', 'LGA1155', '4C / 8T', '3.4 / 3.8 GHz', 95, 'HD 3000', '8 MB', 'DDR3-1333', 350, 1700, 25, null, '2011-01', '服役十年的传奇。', ['经典']],
+  ['intel-core-i5-3570k', 'Core i5-3570K', 'Intel', 'desktop', 'Core i5', 'ivy-bridge', 'LGA1155', '4C / 4T', '3.4 / 3.8 GHz', 77, 'HD 4000', '6 MB', 'DDR3-1600', 370, 1400, 26, null, '2012-04', '22nm，硅脂散热被吐槽。', []],
+  ['intel-core-i7-3770k', 'Core i7-3770K', 'Intel', 'desktop', 'Core i7', 'ivy-bridge', 'LGA1155', '4C / 8T', '3.5 / 3.9 GHz', 77, 'HD 4000', '8 MB', 'DDR3-1600', 380, 1850, 27, null, '2012-04', 'Ivy Bridge 旗舰。', []],
+  ['intel-core-i7-4770k', 'Core i7-4770K', 'Intel', 'desktop', 'Core i7', 'haswell', 'LGA1150', '4C / 8T', '3.5 / 3.9 GHz', 84, 'HD 4600', '8 MB', 'DDR3-1600', 420, 2050, 30, null, '2013-06', 'Haswell 首发旗舰。', []],
+  ['intel-core-i5-4690k', 'Core i5-4690K', 'Intel', 'desktop', 'Core i5', 'haswell', 'LGA1150', '4C / 4T', '3.5 / 3.9 GHz', 88, 'HD 4600', '6 MB', 'DDR3-1600', 410, 1600, 29, null, '2014-05', 'Devil’s Canyon 四核。', []],
+  ['intel-core-i7-4790k', 'Core i7-4790K', 'Intel', 'desktop', 'Core i7', 'haswell', 'LGA1150', '4C / 8T', '4.0 / 4.4 GHz', 88, 'HD 4600', '8 MB', 'DDR3-1600', 450, 2200, 32, null, '2014-05', '首款 4GHz 基频，钎焊回归前的巅峰。', ['经典']],
+  ['intel-core-i7-5960x', 'Core i7-5960X', 'Intel', 'desktop', 'Core i7 Extreme', 'haswell-e', 'LGA2011-3', '8C / 16T', '3.0 / 3.5 GHz', 140, null, '20 MB', 'DDR4-2133 四通道', 420, 3800, 30, null, '2014-08', '首款消费级 8 核，DDR4 首发。', ['HEDT']],
+  ['intel-core-i7-6700k', 'Core i7-6700K', 'Intel', 'desktop', 'Core i7', 'skylake', 'LGA1151', '4C / 8T', '4.0 / 4.2 GHz', 91, 'HD 530', '8 MB', 'DDR4-2133', 490, 2400, 36, null, '2015-08', 'Skylake，DDR4 普及。', []],
+  ['intel-core-i7-7700k', 'Core i7-7700K', 'Intel', 'desktop', 'Core i7', 'kaby-lake', 'LGA1151', '4C / 8T', '4.2 / 4.5 GHz', 91, 'HD 630', '8 MB', 'DDR4-2400', 530, 2600, 39, null, '2017-01', '最后的四核 i7。', []],
+  ['intel-core-i7-8700k', 'Core i7-8700K', 'Intel', 'desktop', 'Core i7', 'coffee-lake', 'LGA1151v2', '6C / 12T', '3.7 / 4.7 GHz', 95, 'UHD 630', '12 MB', 'DDR4-2666', 560, 3900, 44, null, '2017-10', '被 Ryzen 逼出来的六核。', ['经典']],
+  ['intel-core-i5-8400', 'Core i5-8400', 'Intel', 'desktop', 'Core i5', 'coffee-lake', 'LGA1151v2', '6C / 6T', '2.8 / 4.0 GHz', 65, 'UHD 630', '9 MB', 'DDR4-2666', 500, 2700, 38, null, '2017-10', '六核 i5 平民首选。', ['性价比']],
+  ['intel-core-i9-9900k', 'Core i9-9900K', 'Intel', 'desktop', 'Core i9', 'coffee-lake', 'LGA1151v2', '8C / 16T', '3.6 / 5.0 GHz', 95, 'UHD 630', '16 MB', 'DDR4-2666', 600, 5200, 50, null, '2018-10', '首款主流 i9，钎焊 8 核。', []],
+  ['intel-core-i5-9600k', 'Core i5-9600K', 'Intel', 'desktop', 'Core i5', 'coffee-lake', 'LGA1151v2', '6C / 6T', '3.7 / 4.6 GHz', 95, 'UHD 630', '9 MB', 'DDR4-2666', 570, 3200, 44, null, '2018-10', '六核无超线程游戏 U。', []],
+  ['intel-core-i9-10900k', 'Core i9-10900K', 'Intel', 'desktop', 'Core i9', 'comet-lake', 'LGA1200', '10C / 20T', '3.7 / 5.3 GHz', 125, 'UHD 630', '20 MB', 'DDR4-2933', 640, 6400, 54, null, '2020-05', '14nm 榨到十核。', []],
+  ['intel-core-i5-10400f', 'Core i5-10400F', 'Intel', 'desktop', 'Core i5', 'comet-lake', 'LGA1200', '6C / 12T', '2.9 / 4.3 GHz', 65, null, '12 MB', 'DDR4-2666', 560, 3600, 45, null, '2020-05', '千元内游戏神 U。', ['性价比']],
+  ['intel-core-i9-11900k', 'Core i9-11900K', 'Intel', 'desktop', 'Core i9', 'rocket-lake', 'LGA1200', '8C / 16T', '3.5 / 5.3 GHz', 125, 'UHD 750', '16 MB', 'DDR4-3200', 800, 6200, 58, null, '2021-03', '核心倒退到 8，口碑一般。', []],
+  ['intel-core-i5-11400f', 'Core i5-11400F', 'Intel', 'desktop', 'Core i5', 'rocket-lake', 'LGA1200', '6C / 12T', '2.6 / 4.4 GHz', 65, null, '12 MB', 'DDR4-3200', 700, 4800, 50, null, '2021-03', '性价比不错的六核。', ['性价比']],
+  ['intel-core-i9-12900k', 'Core i9-12900K', 'Intel', 'desktop', 'Core i9', 'alder-lake', 'LGA1700', '8P+8E / 24T', '3.2 / 5.2 GHz', 125, 'UHD 770', '30 MB', 'DDR5-4800 / DDR4-3200', 1120, 17000, 78, null, '2021-11', '大小核首发旗舰。', []],
+  ['intel-core-i5-12600k', 'Core i5-12600K', 'Intel', 'desktop', 'Core i5', 'alder-lake', 'LGA1700', '6P+4E / 16T', '3.7 / 4.9 GHz', 125, 'UHD 770', '20 MB', 'DDR5-4800 / DDR4-3200', 1050, 11500, 72, null, '2021-11', '12 代甜点。', ['性价比']],
+  ['intel-core-i7-13700k', 'Core i7-13700K', 'Intel', 'desktop', 'Core i7', 'raptor-lake', 'LGA1700', '8P+8E / 24T', '3.4 / 5.4 GHz', 125, 'UHD 770', '30 MB', 'DDR5-5600 / DDR4-3200', 1260, 19500, 83, null, '2022-10', '13 代 i7，与 14700K 接近。', []],
+  // ---- AMD 桌面 2007–2024 ----
+  ['amd-phenom-x4-9850', 'Phenom X4 9850 Black', 'AMD', 'desktop', 'Phenom', 'k10', 'AM2+', '4C / 4T', '2.5 GHz', 125, null, '2 MB', 'DDR2-1066', 130, 480, 9, null, '2008-03', '原生四核首作，TLB 门后修正版。', []],
+  ['amd-phenom-ii-x4-955', 'Phenom II X4 955 BE', 'AMD', 'desktop', 'Phenom II', 'k10', 'AM3', '4C / 4T', '3.2 GHz', 125, null, '6 MB', 'DDR3-1333', 190, 720, 13, null, '2009-04', 'AMD 翻身四核，性价比高。', ['经典']],
+  ['amd-phenom-ii-x6-1090t', 'Phenom II X6 1090T', 'AMD', 'desktop', 'Phenom II', 'k10', 'AM3', '6C / 6T', '3.2 / 3.6 GHz', 125, null, '6 MB', 'DDR3-1333', 195, 1000, 13, null, '2010-04', '首款消费级六核。', []],
+  ['amd-fx-8150', 'FX-8150', 'AMD', 'desktop', 'FX', 'bulldozer', 'AM3+', '8C / 8T', '3.6 / 4.2 GHz', 125, null, '8 MB', 'DDR3-1866', 240, 1500, 17, null, '2011-10', '推土机首发，单核令人失望。', []],
+  ['amd-fx-8350', 'FX-8350', 'AMD', 'desktop', 'FX', 'piledriver', 'AM3+', '8C / 8T', '4.0 / 4.2 GHz', 125, null, '8 MB', 'DDR3-1866', 270, 1750, 19, null, '2012-10', '打桩机，多线程性价比。', []],
+  ['amd-ryzen-7-1800x', 'Ryzen 7 1800X', 'AMD', 'desktop', 'Ryzen 7', 'zen', 'AM4', '8C / 16T', '3.6 / 4.0 GHz', 95, null, '16 MB', 'DDR4-2667', 470, 3700, 33, null, '2017-03', 'Zen 首发旗舰，AMD 复兴。', ['经典']],
+  ['amd-ryzen-5-1600', 'Ryzen 5 1600', 'AMD', 'desktop', 'Ryzen 5', 'zen', 'AM4', '6C / 12T', '3.2 / 3.6 GHz', 65, null, '16 MB', 'DDR4-2667', 440, 2700, 30, null, '2017-04', '六核十二线程千元价，改变市场。', ['性价比', '经典']],
+  ['amd-ryzen-7-2700x', 'Ryzen 7 2700X', 'AMD', 'desktop', 'Ryzen 7', 'zen+', 'AM4', '8C / 16T', '3.7 / 4.3 GHz', 105, null, '16 MB', 'DDR4-2933', 510, 4100, 36, null, '2018-04', '12nm 小改。', []],
+  ['amd-ryzen-9-3900x', 'Ryzen 9 3900X', 'AMD', 'desktop', 'Ryzen 9', 'zen2', 'AM4', '12C / 24T', '3.8 / 4.6 GHz', 105, null, '64 MB', 'DDR4-3200', 620, 7200, 45, null, '2019-07', '主流平台 12 核首作。', []],
+  ['amd-ryzen-9-3950x', 'Ryzen 9 3950X', 'AMD', 'desktop', 'Ryzen 9', 'zen2', 'AM4', '16C / 32T', '3.5 / 4.7 GHz', 105, null, '64 MB', 'DDR4-3200', 630, 9500, 46, null, '2019-11', '主流平台 16 核首作。', ['生产力']],
+  ['amd-ryzen-7-3700x', 'Ryzen 7 3700X', 'AMD', 'desktop', 'Ryzen 7', 'zen2', 'AM4', '8C / 16T', '3.6 / 4.4 GHz', 65, null, '32 MB', 'DDR4-3200', 600, 4900, 44, null, '2019-07', '65W 八核，能效标杆。', []],
+  ['amd-ryzen-5-3600', 'Ryzen 5 3600', 'AMD', 'desktop', 'Ryzen 5', 'zen2', 'AM4', '6C / 12T', '3.6 / 4.2 GHz', 65, null, '32 MB', 'DDR4-3200', 590, 3700, 43, null, '2019-07', '销量之王。', ['性价比', '经典']],
+  ['amd-ryzen-9-5950x', 'Ryzen 9 5950X', 'AMD', 'desktop', 'Ryzen 9', 'zen3', 'AM4', '16C / 32T', '3.4 / 4.9 GHz', 105, null, '64 MB', 'DDR4-3200', 800, 12500, 62, null, '2020-11', 'AM4 生产力之巅。', ['生产力']],
+  ['amd-ryzen-9-5900x', 'Ryzen 9 5900X', 'AMD', 'desktop', 'Ryzen 9', 'zen3', 'AM4', '12C / 24T', '3.7 / 4.8 GHz', 105, null, '64 MB', 'DDR4-3200', 790, 9800, 62, null, '2020-11', '12 核均衡之选。', []],
+  ['amd-ryzen-7-5800x', 'Ryzen 7 5800X', 'AMD', 'desktop', 'Ryzen 7', 'zen3', 'AM4', '8C / 16T', '3.8 / 4.7 GHz', 105, null, '32 MB', 'DDR4-3200', 780, 7000, 61, null, '2020-11', '单 CCD 八核。', []],
+  ['amd-ryzen-5-5600x', 'Ryzen 5 5600X', 'AMD', 'desktop', 'Ryzen 5', 'zen3', 'AM4', '6C / 12T', '3.7 / 4.6 GHz', 65, null, '32 MB', 'DDR4-3200', 770, 5500, 60, null, '2020-11', '游戏性价比六核。', ['性价比']],
+  ['amd-ryzen-7-5700x3d', 'Ryzen 7 5700X3D', 'AMD', 'desktop', 'Ryzen 7', 'zen3', 'AM4', '8C / 16T', '3.0 / 4.1 GHz', 105, null, '96 MB (3D V-Cache)', 'DDR4-3200', 830, 9500, 83, null, '2024-01', 'AM4 最后的性价比游戏 U。', ['X3D', '游戏', 'AM4']],
+  ['amd-ryzen-7-8700g', 'Ryzen 7 8700G', 'AMD', 'desktop', 'Ryzen 7', 'zen4', 'AM5', '8C / 16T', '4.2 / 5.1 GHz', 65, 'Radeon 780M', '16 MB', 'DDR5-5200', 1100, 12000, 73, 100, '2024-01', '桌面最强核显 APU。', ['核显', 'APU']],
+  ['amd-ryzen-5-8600g', 'Ryzen 5 8600G', 'AMD', 'desktop', 'Ryzen 5', 'zen4', 'AM5', '6C / 12T', '4.3 / 5.0 GHz', 65, 'Radeon 760M', '16 MB', 'DDR5-5200', 1050, 9500, 70, 78, '2024-01', '无独显过渡装机之选。', ['核显', 'APU']],
+  ['amd-ryzen-5-5600g', 'Ryzen 5 5600G', 'AMD', 'desktop', 'Ryzen 5', 'zen3', 'AM4', '6C / 12T', '3.9 / 4.4 GHz', 65, 'Vega 7', '16 MB', 'DDR4-3200', 740, 5200, 55, 40, '2021-08', 'AM4 核显 APU。', ['核显', 'APU']],
+  // ---- 笔记本 2013–2023 ----
+  ['intel-core-i7-4700hq', 'Core i7-4700HQ', 'Intel', 'laptop', 'Core i7', 'haswell', 'soldered', '4C / 8T', '2.4 / 3.4 GHz', 47, 'HD 4600', '6 MB', 'DDR3L-1600', 380, 1700, 25, 15, '2013-06', 'Haswell 游戏本标配。', []],
+  ['intel-core-i7-6700hq', 'Core i7-6700HQ', 'Intel', 'laptop', 'Core i7', 'skylake', 'soldered', '4C / 8T', '2.6 / 3.5 GHz', 45, 'HD 530', '6 MB', 'DDR4-2133', 430, 2000, 30, 18, '2015-09', 'Skylake 标压四核。', []],
+  ['intel-core-i7-7700hq', 'Core i7-7700HQ', 'Intel', 'laptop', 'Core i7', 'kaby-lake', 'soldered', '4C / 8T', '2.8 / 3.8 GHz', 45, 'HD 630', '6 MB', 'DDR4-2400', 460, 2100, 32, 18, '2017-01', '最常见的游戏本 U 之一。', []],
+  ['intel-core-i7-8750h', 'Core i7-8750H', 'Intel', 'laptop', 'Core i7', 'coffee-lake', 'soldered', '6C / 12T', '2.2 / 4.1 GHz', 45, 'UHD 630', '9 MB', 'DDR4-2666', 520, 3300, 40, 20, '2018-04', '笔记本六核元年。', ['经典']],
+  ['intel-core-i7-9750h', 'Core i7-9750H', 'Intel', 'laptop', 'Core i7', 'coffee-lake', 'soldered', '6C / 12T', '2.6 / 4.5 GHz', 45, 'UHD 630', '12 MB', 'DDR4-2666', 550, 3500, 42, 20, '2019-04', '8750H 小改。', []],
+  ['intel-core-i7-10750h', 'Core i7-10750H', 'Intel', 'laptop', 'Core i7', 'comet-lake', 'soldered', '6C / 12T', '2.6 / 5.0 GHz', 45, 'UHD 630', '12 MB', 'DDR4-2933', 600, 3900, 46, 20, '2020-04', '14nm 末代六核。', []],
+  ['intel-core-i7-11800h', 'Core i7-11800H', 'Intel', 'laptop', 'Core i7', 'tiger-lake', 'soldered', '8C / 16T', '2.3 / 4.6 GHz', 45, 'Iris Xe (32EU)', '24 MB', 'DDR4-3200', 780, 6500, 55, 38, '2021-05', '10nm 八核，PCIe 4.0。', []],
+  ['intel-core-i7-12700h', 'Core i7-12700H', 'Intel', 'laptop', 'Core i7', 'alder-lake', 'soldered', '6P+8E / 20T', '2.3 / 4.7 GHz', 45, 'Iris Xe (96EU)', '24 MB', 'DDR5-4800 / LPDDR5-5200', 1040, 9500, 63, 40, '2022-01', '大小核进入笔记本。', []],
+  ['intel-core-i7-13700h', 'Core i7-13700H', 'Intel', 'laptop', 'Core i7', 'raptor-lake', 'soldered', '6P+8E / 20T', '2.4 / 5.0 GHz', 45, 'Iris Xe (96EU)', '24 MB', 'DDR5-5200 / LPDDR5-6400', 1090, 10500, 62, 42, '2023-01', '13 代全能本主力。', []],
+  ['intel-core-i9-13980hx', 'Core i9-13980HX', 'Intel', 'laptop', 'Core i9', 'raptor-lake-hx', 'soldered', '8P+16E / 32T', '2.2 / 5.6 GHz', 55, 'UHD', '36 MB', 'DDR5-5600', 1230, 19500, 76, 22, '2023-01', '13 代游戏本旗舰。', ['游戏本'], '55–157W'],
+  ['intel-core-i7-1360p', 'Core i7-1360P', 'Intel', 'laptop', 'Core i7', 'raptor-lake', 'soldered', '4P+8E / 16T', '2.2 / 5.0 GHz', 28, 'Iris Xe (96EU)', '18 MB', 'LPDDR5-5200', 1020, 6800, 48, 40, '2023-01', '轻薄本 P 系列。', ['轻薄'], '28–64W'],
+  ['amd-ryzen-7-4800h', 'Ryzen 7 4800H', 'AMD', 'laptop', 'Ryzen 7', 'zen2', 'soldered', '8C / 16T', '2.9 / 4.2 GHz', 45, 'Vega 8', '8 MB', 'DDR4-3200', 660, 6500, 48, 30, '2020-01', 'AMD 笔记本翻身之作。', ['经典']],
+  ['amd-ryzen-7-5800h', 'Ryzen 7 5800H', 'AMD', 'laptop', 'Ryzen 7', 'zen3', 'soldered', '8C / 16T', '3.2 / 4.4 GHz', 45, 'Vega 8', '16 MB', 'DDR4-3200', 790, 8500, 56, 35, '2021-01', 'Zen 3 游戏本主力。', []],
+  ['amd-ryzen-9-6900hs', 'Ryzen 9 6900HS', 'AMD', 'laptop', 'Ryzen 9', 'zen3+', 'soldered', '8C / 16T', '3.3 / 4.9 GHz', 35, 'Radeon 680M', '16 MB', 'DDR5-4800 / LPDDR5-6400', 830, 8700, 58, 60, '2022-02', 'RDNA2 核显首发。', ['核显']],
+  ['amd-ryzen-7-7735hs', 'Ryzen 7 7735HS', 'AMD', 'laptop', 'Ryzen 7', 'zen3+', 'soldered', '8C / 16T', '3.2 / 4.75 GHz', 45, 'Radeon 680M', '16 MB', 'DDR5-4800', 850, 8800, 56, 60, '2023-01', '6800H 换标。', []],
+  ['amd-ryzen-7-7840hs', 'Ryzen 7 7840HS', 'AMD', 'laptop', 'Ryzen 7', 'zen4', 'soldered', '8C / 16T', '3.8 / 5.1 GHz', 45, 'Radeon 780M', '16 MB', 'LPDDR5X-7500 / DDR5-5600', 1090, 10800, 56, 73, '2023-04', 'Phoenix，780M 首发。', ['核显']],
+  ['apple-m1-8', 'Apple M1 (8核)', 'Apple', 'laptop', 'M1', 'apple-m1', 'soldered', '4P+4E / 8T', '— / 3.2 GHz', 15, 'M1 GPU (8核)', '—', 'LPDDR4X-4266', 1090, 5000, 32, 45, '2020-11', 'Apple Silicon 开山之作。', ['经典', '能效'], '10–20W'],
+  ['apple-m1-pro-10', 'Apple M1 Pro (10核)', 'Apple', 'laptop', 'M1', 'apple-m1', 'soldered', '8P+2E / 10T', '— / 3.2 GHz', 30, 'M1 Pro GPU (16核)', '—', 'LPDDR5-6400', 1100, 8500, 50, 65, '2021-10', '专业本重生。', [], '20–40W'],
+  ['apple-m1-max-10', 'Apple M1 Max (10核)', 'Apple', 'laptop', 'M1', 'apple-m1', 'soldered', '8P+2E / 10T', '— / 3.2 GHz', 60, 'M1 Max GPU (32核)', '—', 'LPDDR5-6400', 1100, 8600, 60, 80, '2021-10', '400GB/s 统一内存。', ['生产力'], '30–70W'],
+  ['apple-m2-8', 'Apple M2 (8核)', 'Apple', 'laptop', 'M2', 'apple-m2', 'soldered', '4P+4E / 8T', '— / 3.5 GHz', 20, 'M2 GPU (10核)', '—', 'LPDDR5-6400', 1230, 5700, 36, 50, '2022-06', 'M1 小改。', ['轻薄'], '10–22W'],
+  ['apple-m2-pro-12', 'Apple M2 Pro (12核)', 'Apple', 'laptop', 'M2', 'apple-m2', 'soldered', '8P+4E / 12T', '— / 3.5 GHz', 30, 'M2 Pro GPU (19核)', '—', 'LPDDR5-6400', 1250, 10500, 55, 70, '2023-01', '', [], '25–45W'],
+  ['apple-m2-max-12', 'Apple M2 Max (12核)', 'Apple', 'laptop', 'M2', 'apple-m2', 'soldered', '8P+4E / 12T', '— / 3.7 GHz', 60, 'M2 Max GPU (38核)', '—', 'LPDDR5-6400', 1260, 10800, 65, 88, '2023-01', '', ['生产力'], '35–80W'],
+  ['apple-m3-pro-12', 'Apple M3 Pro (12核)', 'Apple', 'laptop', 'M3', 'apple-m3', 'soldered', '6P+6E / 12T', '— / 4.05 GHz', 35, 'M3 Pro GPU (18核)', '—', 'LPDDR5-6400', 1430, 10300, 58, 72, '2023-11', 'P 核减少，能效为先。', [], '25–45W'],
+  ['apple-m3-max-16', 'Apple M3 Max (16核)', 'Apple', 'laptop', 'M3', 'apple-m3', 'soldered', '12P+4E / 16T', '— / 4.05 GHz', 60, 'M3 Max GPU (40核)', '—', 'LPDDR5-6400', 1450, 17500, 72, 94, '2023-11', '硬件光追首次登陆 Mac。', ['生产力'], '40–80W'],
+  ['qualcomm-snapdragon-8cx-gen3', 'Snapdragon 8cx Gen 3', 'Qualcomm', 'laptop', 'Snapdragon 8cx', 'snapdragon-8cx', 'soldered', '8C / 8T', '3.0 GHz', 15, 'Adreno 690', '—', 'LPDDR4X-4266', 600, 3500, 15, 25, '2022-03', 'X Elite 之前的 ARM 本，性能弱。', ['ARM']],
+].map((r) => { if (!r[18]) r[18] = `${r[1]}。`; return r })))
+
+/* GPU: [id, name, brand, form, series, gen, chip, vram, type, bus, tdp, raster, rt, release, summary, tags, tgp?] */
+const G = (a) => a.map(([id, name, brand, form, series, gen, chip, vram_gb, vram_type, bus_bit, tdp_w, raster, rt, release, summary, tags = [], tgp]) => ({
+  id, name, nameEn: `${brand} ${name}`, brand, form, series, gen, chip, vram_gb, vram_type, bus_bit, tdp_w, ...(tgp ? { tgp_w: tgp } : {}), release, price_cny: null, summary, tags: [...tags, '历史'], est: true,
+  scores: { raster_rel: raster, rt_rel: rt },
+}))
+merge('gpus.json', G([
+  // NVIDIA 桌面
+  ['nvidia-geforce-8800-gt', 'GeForce 8800 GT', 'NVIDIA', 'desktop', 'GeForce 8', 'tesla', 'G92', 0.5, 'GDDR3', 256, 105, 1.5, null, '2007-10', '统一渲染架构普及者，性价比传奇。', ['经典']],
+  ['nvidia-geforce-gtx-280', 'GeForce GTX 280', 'NVIDIA', 'desktop', 'GeForce 200', 'tesla', 'GT200', 1, 'GDDR3', 512, 236, 2.5, null, '2008-06', '512-bit 巨核旗舰。', []],
+  ['nvidia-gtx-480', 'GeForce GTX 480', 'NVIDIA', 'desktop', 'GeForce 400', 'fermi', 'GF100', 1.5, 'GDDR5', 384, 250, 4.2, null, '2010-03', 'Fermi 首发，「核弹」。', []],
+  ['nvidia-gtx-580', 'GeForce GTX 580', 'NVIDIA', 'desktop', 'GeForce 500', 'fermi', 'GF110', 1.5, 'GDDR5', 384, 244, 4.8, null, '2010-11', 'Fermi 完全体。', []],
+  ['nvidia-gtx-680', 'GeForce GTX 680', 'NVIDIA', 'desktop', 'GeForce 600', 'kepler', 'GK104', 2, 'GDDR5', 256, 195, 6.5, null, '2012-03', 'Kepler，能效大进步。', []],
+  ['nvidia-gtx-780-ti', 'GeForce GTX 780 Ti', 'NVIDIA', 'desktop', 'GeForce 700', 'kepler', 'GK110', 3, 'GDDR5', 384, 250, 9.5, null, '2013-11', 'Kepler 大核旗舰。', []],
+  ['nvidia-gtx-970', 'GeForce GTX 970', 'NVIDIA', 'desktop', 'GeForce 900', 'maxwell', 'GM204', 4, 'GDDR5', 256, 145, 9.0, null, '2014-09', '3.5GB 显存门，但销量极佳。', ['经典']],
+  ['nvidia-gtx-980', 'GeForce GTX 980', 'NVIDIA', 'desktop', 'GeForce 900', 'maxwell', 'GM204', 4, 'GDDR5', 256, 165, 10.5, null, '2014-09', 'Maxwell 能效标杆。', []],
+  ['nvidia-gtx-980-ti', 'GeForce GTX 980 Ti', 'NVIDIA', 'desktop', 'GeForce 900', 'maxwell', 'GM200', 6, 'GDDR5', 384, 250, 13.5, null, '2015-06', '28nm 末代旗舰。', []],
+  ['nvidia-gtx-1060-6gb', 'GeForce GTX 1060 6GB', 'NVIDIA', 'desktop', 'GeForce 10', 'pascal', 'GP106', 6, 'GDDR5', 192, 120, 10.5, null, '2016-07', 'Steam 占有率之王。', ['经典', '性价比']],
+  ['nvidia-gtx-1070', 'GeForce GTX 1070', 'NVIDIA', 'desktop', 'GeForce 10', 'pascal', 'GP104', 8, 'GDDR5', 256, 150, 15, null, '2016-06', '8GB 显存，长寿。', []],
+  ['nvidia-gtx-1080', 'GeForce GTX 1080', 'NVIDIA', 'desktop', 'GeForce 10', 'pascal', 'GP104', 8, 'GDDR5X', 256, 180, 18.5, null, '2016-05', 'Pascal 首发旗舰。', []],
+  ['nvidia-gtx-1080-ti', 'GeForce GTX 1080 Ti', 'NVIDIA', 'desktop', 'GeForce 10', 'pascal', 'GP102', 11, 'GDDR5X', 352, 250, 24, null, '2017-03', '公认最保值旗舰。', ['经典']],
+  ['nvidia-gtx-1650', 'GeForce GTX 1650', 'NVIDIA', 'desktop', 'GeForce 16', 'turing', 'TU117', 4, 'GDDR5', 128, 75, 8, null, '2019-04', '无需外接供电的入门卡。', []],
+  ['nvidia-gtx-1660-super', 'GeForce GTX 1660 SUPER', 'NVIDIA', 'desktop', 'GeForce 16', 'turing', 'TU116', 6, 'GDDR6', 192, 125, 14, null, '2019-10', '无光追的 Turing 甜点。', ['性价比']],
+  ['nvidia-rtx-2060', 'GeForce RTX 2060', 'NVIDIA', 'desktop', 'RTX 20', 'turing', 'TU106', 6, 'GDDR6', 192, 160, 19, 12, '2019-01', '最便宜的首代光追卡。', []],
+  ['nvidia-rtx-2070-super', 'GeForce RTX 2070 SUPER', 'NVIDIA', 'desktop', 'RTX 20', 'turing', 'TU104', 8, 'GDDR6', 256, 215, 25, 17, '2019-07', 'Turing 中高端。', []],
+  ['nvidia-rtx-2080-ti', 'GeForce RTX 2080 Ti', 'NVIDIA', 'desktop', 'RTX 20', 'turing', 'TU102', 11, 'GDDR6', 352, 250, 32, 24, '2018-09', '光追元年旗舰，万元起步。', []],
+  ['nvidia-rtx-3050-8gb', 'GeForce RTX 3050 8GB', 'NVIDIA', 'desktop', 'RTX 30', 'ampere', 'GA106', 8, 'GDDR6', 128, 130, 18, 13, '2022-01', 'Ampere 入门。', []],
+  ['nvidia-rtx-3060-ti', 'GeForce RTX 3060 Ti', 'NVIDIA', 'desktop', 'RTX 30', 'ampere', 'GA104', 8, 'GDDR6', 256, 200, 33, 26, '2020-12', '矿潮前的甜点。', ['性价比']],
+  ['nvidia-rtx-3080-ti', 'GeForce RTX 3080 Ti', 'NVIDIA', 'desktop', 'RTX 30', 'ampere', 'GA102', 12, 'GDDR6X', 384, 350, 53, 45, '2021-06', '接近 3090。', []],
+  ['nvidia-rtx-3090', 'GeForce RTX 3090', 'NVIDIA', 'desktop', 'RTX 30', 'ampere', 'GA102', 24, 'GDDR6X', 384, 350, 55, 47, '2020-09', 'BFGPU，24GB。', ['生产力']],
+  // AMD 桌面
+  ['amd-radeon-hd-4870', 'Radeon HD 4870', 'AMD', 'desktop', 'Radeon HD 4000', 'terascale', 'RV770', 0.5, 'GDDR5', 256, 150, 2.3, null, '2008-06', 'GDDR5 首发，性价比逆袭。', ['经典']],
+  ['amd-radeon-hd-5870', 'Radeon HD 5870', 'AMD', 'desktop', 'Radeon HD 5000', 'terascale', 'Cypress', 1, 'GDDR5', 256, 188, 3.6, null, '2009-09', '首款 DX11 显卡。', []],
+  ['amd-radeon-hd-6970', 'Radeon HD 6970', 'AMD', 'desktop', 'Radeon HD 6000', 'terascale', 'Cayman', 2, 'GDDR5', 256, 250, 4.5, null, '2010-12', 'VLIW4 架构。', []],
+  ['amd-radeon-hd-7970', 'Radeon HD 7970', 'AMD', 'desktop', 'Radeon HD 7000', 'gcn', 'Tahiti', 3, 'GDDR5', 384, 250, 6.8, null, '2011-12', 'GCN 首发，28nm 首发。', ['经典']],
+  ['amd-r9-290x', 'Radeon R9 290X', 'AMD', 'desktop', 'Radeon R9 200', 'gcn', 'Hawaii', 4, 'GDDR5', 512, 290, 9.8, null, '2013-10', '「夏威夷」，公版散热灾难。', []],
+  ['amd-r9-fury-x', 'Radeon R9 Fury X', 'AMD', 'desktop', 'Radeon R9 300', 'gcn', 'Fiji', 4, 'HBM', 4096, 275, 13, null, '2015-06', 'HBM 首发，水冷公版。', []],
+  ['amd-rx-480-8gb', 'Radeon RX 480 8GB', 'AMD', 'desktop', 'Radeon RX 400', 'polaris', 'Polaris 10', 8, 'GDDR5', 256, 150, 9.5, null, '2016-06', 'Polaris 甜点。', ['性价比']],
+  ['amd-rx-580-8gb', 'Radeon RX 580 8GB', 'AMD', 'desktop', 'Radeon RX 500', 'polaris', 'Polaris 20', 8, 'GDDR5', 256, 185, 10.5, null, '2017-04', '矿卡之王，二手海量。', ['经典']],
+  ['amd-rx-vega-64', 'Radeon RX Vega 64', 'AMD', 'desktop', 'Radeon RX Vega', 'vega', 'Vega 10', 8, 'HBM2', 2048, 295, 20, null, '2017-08', 'HBM2，功耗大。', []],
+  ['amd-rx-5700-xt', 'Radeon RX 5700 XT', 'AMD', 'desktop', 'Radeon RX 5000', 'rdna', 'Navi 10', 8, 'GDDR6', 256, 225, 24, null, '2019-07', 'RDNA 首发，无光追。', []],
+  ['amd-rx-5600-xt', 'Radeon RX 5600 XT', 'AMD', 'desktop', 'Radeon RX 5000', 'rdna', 'Navi 10', 6, 'GDDR6', 192, 150, 18, null, '2020-01', '发售前 BIOS 提频。', []],
+  ['amd-rx-6650-xt', 'Radeon RX 6650 XT', 'AMD', 'desktop', 'Radeon RX 6000', 'rdna2', 'Navi 23', 8, 'GDDR6', 128, 180, 27, 15, '2022-05', '1080p 主流。', []],
+  ['amd-rx-6700-xt', 'Radeon RX 6700 XT', 'AMD', 'desktop', 'Radeon RX 6000', 'rdna2', 'Navi 22', 12, 'GDDR6', 192, 230, 36, 21, '2021-03', '12GB 显存 2K 卡。', []],
+  ['amd-rx-6900-xt', 'Radeon RX 6900 XT', 'AMD', 'desktop', 'Radeon RX 6000', 'rdna2', 'Navi 21', 16, 'GDDR6', 256, 300, 55, 33, '2020-12', 'RDNA2 旗舰，光栅追平 3090。', []],
+  // Intel 桌面
+  ['intel-arc-a750', 'Arc A750', 'Intel', 'desktop', 'Arc A', 'xe', 'ACM-G10', 8, 'GDDR6', 256, 225, 27, 22, '2022-10', 'Intel 独显回归。', []],
+  // 笔记本
+  ['nvidia-gtx-1060-laptop-80w', 'GTX 1060 Laptop', 'NVIDIA', 'laptop', 'GeForce 10 Laptop', 'pascal', 'GP106', 6, 'GDDR5', 192, 80, 12, null, '2016-08', '移动端追平桌面的开始。', ['经典'], 80],
+  ['nvidia-gtx-1070-laptop-115w', 'GTX 1070 Laptop', 'NVIDIA', 'laptop', 'GeForce 10 Laptop', 'pascal', 'GP104', 8, 'GDDR5', 256, 115, 16, null, '2016-08', '', [], 115],
+  ['nvidia-gtx-1650-laptop-50w', 'GTX 1650 Laptop', 'NVIDIA', 'laptop', 'GeForce 16 Laptop', 'turing', 'TU117', 4, 'GDDR5', 128, 50, 8, null, '2019-04', '入门独显本。', ['低TGP'], 50],
+  ['nvidia-gtx-1660-ti-laptop-80w', 'GTX 1660 Ti Laptop', 'NVIDIA', 'laptop', 'GeForce 16 Laptop', 'turing', 'TU116', 6, 'GDDR6', 192, 80, 13, null, '2019-04', '', ['低TGP'], 80],
+  ['nvidia-rtx-2060-laptop-90w', 'RTX 2060 Laptop', 'NVIDIA', 'laptop', 'RTX 20 Laptop', 'turing', 'TU106', 6, 'GDDR6', 192, 90, 17, 11, '2019-01', '', ['中TGP'], 90],
+  ['nvidia-rtx-2070-max-q-80w', 'RTX 2070 Max-Q', 'NVIDIA', 'laptop', 'RTX 20 Laptop', 'turing', 'TU106', 8, 'GDDR6', 256, 80, 18, 12, '2019-01', 'Max-Q 轻薄游戏本。', ['低TGP', '轻薄'], 80],
+  ['nvidia-rtx-2080-laptop-150w', 'RTX 2080 Laptop', 'NVIDIA', 'laptop', 'RTX 20 Laptop', 'turing', 'TU104', 8, 'GDDR6', 256, 150, 26, 18, '2019-01', '', ['高TGP'], 150],
+  ['nvidia-rtx-3050-laptop-95w', 'RTX 3050 Laptop', 'NVIDIA', 'laptop', 'RTX 30 Laptop', 'ampere', 'GA107', 4, 'GDDR6', 128, 95, 15, 10, '2021-05', '4GB 显存捉襟见肘。', ['中TGP'], 95],
+  ['nvidia-rtx-3060-laptop-130w', 'RTX 3060 Laptop', 'NVIDIA', 'laptop', 'RTX 30 Laptop', 'ampere', 'GA106', 6, 'GDDR6', 192, 130, 25, 19, '2021-01', '30 系游戏本主力。', ['高TGP', '经典'], 130],
+  ['nvidia-rtx-3070-laptop-140w', 'RTX 3070 Laptop', 'NVIDIA', 'laptop', 'RTX 30 Laptop', 'ampere', 'GA104', 8, 'GDDR6', 256, 140, 31, 25, '2021-01', '', ['高TGP'], 140],
+  ['nvidia-rtx-3080-laptop-165w', 'RTX 3080 Laptop', 'NVIDIA', 'laptop', 'RTX 30 Laptop', 'ampere', 'GA104', 16, 'GDDR6', 256, 165, 38, 31, '2021-01', '16GB 显存，核心是桌面 3070。', ['高TGP'], 165],
+  ['amd-rx-6800m', 'Radeon RX 6800M', 'AMD', 'laptop', 'Radeon RX 6000M', 'rdna2', 'Navi 22', 12, 'GDDR6', 192, 145, 35, 20, '2021-06', 'AMD 移动高端，机型少。', ['高TGP'], 145],
+].map((r) => { if (!r[14]) r[14] = `${r[1]}。`; return r })))
+
+/* RAM */
+const R = (a) => a.map(([id, name, brand, form, type, spec, capacity_gb, speed_mt, cl, latency_ns, read, write, release, summary]) => ({
+  id, name, brand, form, type, spec, capacity_gb, speed_mt, cl, latency_ns, release, price_cny: null, summary, est: true, scores: { read_GBs: read, write_GBs: write, latency_ns },
+}))
+merge('rams.json', R([
+  ['kingston-ddr2-800-cl5-4', 'Kingston ValueRAM DDR2-800 CL5 4GB', 'Kingston', 'kit-desktop', 'DDR2', 'DDR2-800 CL5 4GB (2x2)', 4, 800, 5, 90, 9, 8, '2007-01', 'Core 2 时代标配。'],
+  ['kingston-ddr3-1333-cl9-8', 'Kingston ValueRAM DDR3-1333 CL9 8GB', 'Kingston', 'kit-desktop', 'DDR3', 'DDR3-1333 CL9 8GB (4x2)', 8, 1333, 9, 80, 17, 16, '2010-01', 'Nehalem / Lynnfield 标配。'],
+  ['corsair-vengeance-ddr3-1600-cl9-8', 'Corsair Vengeance DDR3-1600 CL9 8GB', 'Corsair', 'kit-desktop', 'DDR3', 'DDR3-1600 CL9 8GB (4x2)', 8, 1600, 9, 75, 20, 19, '2011-03', 'Sandy Bridge 甜点。'],
+  ['gskill-tridentx-ddr3-2133-cl9-8', 'G.Skill TridentX DDR3-2133 CL9 8GB', 'G.Skill', 'kit-desktop', 'DDR3', 'DDR3-2133 CL9 8GB (4x2)', 8, 2133, 9, 68, 26, 25, '2013-01', 'DDR3 高频超频条。'],
+  ['crucial-ddr4-2133-cl15-16', 'Crucial DDR4-2133 CL15 16GB', 'Crucial', 'kit-desktop', 'DDR4', 'DDR4-2133 CL15 16GB (8x2)', 16, 2133, 15, 82, 30, 29, '2015-08', 'DDR4 JEDEC 起步规格。'],
+  ['corsair-vengeance-lpx-ddr4-2400-cl16-16', 'Corsair Vengeance LPX DDR4-2400 CL16 16GB', 'Corsair', 'kit-desktop', 'DDR4', 'DDR4-2400 CL16 16GB (8x2)', 16, 2400, 16, 80, 33, 32, '2016-01', ''],
+  ['kingston-hyperx-fury-ddr4-2666-cl16-16', 'HyperX Fury DDR4-2666 CL16 16GB', 'Kingston', 'kit-desktop', 'DDR4', 'DDR4-2666 CL16 16GB (8x2)', 16, 2666, 16, 76, 36, 35, '2017-01', 'Coffee Lake 官方支持上限。'],
+  ['gskill-ripjaws-v-ddr4-3000-cl15-16', 'G.Skill Ripjaws V DDR4-3000 CL15 16GB', 'G.Skill', 'kit-desktop', 'DDR4', 'DDR4-3000 CL15 16GB (8x2)', 16, 3000, 15, 70, 40, 38, '2017-01', '首代 Ryzen 甜点。'],
+  ['corsair-vengeance-lpx-ddr4-3200-cl16-16', 'Corsair Vengeance LPX DDR4-3200 CL16 16GB', 'Corsair', 'kit-desktop', 'DDR4', 'DDR4-3200 CL16 16GB (8x2)', 16, 3200, 16, 68, 44, 42, '2017-06', 'DDR4 时代销量之王。'],
+  ['gskill-trident-z-royal-ddr4-4000-cl18-16', 'G.Skill Trident Z Royal DDR4-4000 CL18 16GB', 'G.Skill', 'kit-desktop', 'DDR4', 'DDR4-4000 CL18 16GB (8x2)', 16, 4000, 18, 62, 56, 54, '2019-01', 'DDR4 高频，Intel 平台。'],
+  ['kingston-fury-beast-ddr5-4800-cl40-32', 'Kingston FURY Beast DDR5-4800 CL40 32GB', 'Kingston', 'kit-desktop', 'DDR5', 'DDR5-4800 CL40 32GB (16x2)', 32, 4800, 40, 85, 70, 65, '2021-11', 'DDR5 首发规格，延迟高。'],
+  ['corsair-vengeance-ddr5-5200-cl40-32', 'Corsair Vengeance DDR5-5200 CL40 32GB', 'Corsair', 'kit-desktop', 'DDR5', 'DDR5-5200 CL40 32GB (16x2)', 32, 5200, 40, 80, 76, 70, '2022-01', ''],
+  ['crucial-ddr3l-1600-sodimm-8', 'Crucial DDR3L-1600 SO-DIMM 8GB', 'Crucial', 'sodimm', 'DDR3', 'DDR3L-1600 CL11 8GB (4x2) SO-DIMM', 8, 1600, 11, 82, 18, 17, '2012-01', '老笔记本升级。'],
+  ['crucial-ddr4-2666-sodimm-16', 'Crucial DDR4-2666 SO-DIMM 16GB', 'Crucial', 'sodimm', 'DDR4', 'DDR4-2666 CL19 16GB (8x2) SO-DIMM', 16, 2666, 19, 80, 34, 33, '2018-01', '8 代酷睿笔记本标配。'],
+  ['apple-m1-lpddr4x-onboard', 'Apple M1 LPDDR4X 板载', 'Apple', 'onboard', 'LPDDR5', 'LPDDR4X-4266 128-bit 8/16GB', 16, 4266, null, null, 60, null, '2020-11', '统一内存 68GB/s。'],
+  ['apple-m2-lpddr5-onboard', 'Apple M2 LPDDR5 板载', 'Apple', 'onboard', 'LPDDR5', 'LPDDR5-6400 128-bit 8–24GB', 24, 6400, null, null, 95, null, '2022-06', '统一内存 100GB/s。'],
+].map((r) => { if (!r[13]) r[13] = `${r[1]}。`; return r })))
+
+/* Storage */
+const S = (a) => a.map(([id, name, brand, form, iface, cap, nand, dram, sr, sw, r4k, co, tbw, release, summary, tags = []]) => ({
+  id, name, brand, form, interface: iface, capacity_gb: cap, nand, dram, seq_read: sr, seq_write: sw, iops_4k_read: r4k, write_cache_out: co, tbw, release, price_cny: null, summary, tags: [...tags, '历史'], est: true,
+}))
+merge('storages.json', S([
+  ['intel-x25-m-80gb', 'Intel X25-M 80GB', 'Intel', 'sata', 'sata', 80, 'Intel 50nm MLC', true, 250, 70, 35000, 70, null, '2008-09', '消费级 SSD 普及起点。', ['经典']],
+  ['ocz-vertex-3-240gb', 'OCZ Vertex 3 240GB', 'OCZ', 'sata', 'sata', 240, 'MLC (SandForce)', false, 550, 500, 60000, 400, null, '2011-03', 'SATA III 首批，固件翻车多。', []],
+  ['samsung-840-pro-256gb', 'Samsung 840 PRO 256GB', 'Samsung', 'sata', 'sata', 256, 'Toggle MLC', true, 540, 520, 100000, 500, 150, '2012-10', 'SATA SSD 黄金标准。', ['经典']],
+  ['samsung-850-evo-500gb', 'Samsung 850 EVO 500GB', 'Samsung', 'sata', 'sata', 500, 'V-NAND TLC', true, 540, 520, 98000, 500, 150, '2014-12', '3D NAND 普及者，销量巨大。', ['经典']],
+  ['samsung-950-pro-512gb', 'Samsung 950 PRO 512GB', 'Samsung', 'nvme', 'pcie3', 512, 'V-NAND MLC', true, 2500, 1500, 300000, 1500, 400, '2015-10', '消费级 NVMe 元年。', ['经典']],
+  ['samsung-960-pro-1tb', 'Samsung 960 PRO 1TB', 'Samsung', 'nvme', 'pcie3', 1000, 'V-NAND MLC', true, 3500, 2100, 440000, 2100, 800, '2016-10', 'MLC 末代旗舰。', []],
+  ['intel-660p-1tb', 'Intel 660p 1TB', 'Intel', 'nvme', 'pcie3', 1000, 'QLC', true, 1800, 1800, 220000, 100, 200, '2018-08', 'QLC 首发，缓外 100MB/s。', ['QLC']],
+  ['crucial-p1-1tb', 'Crucial P1 1TB', 'Crucial', 'nvme', 'pcie3', 1000, 'QLC', true, 2000, 1700, 170000, 90, 200, '2018-10', '同期 QLC 竞品。', ['QLC']],
+  ['samsung-970-evo-plus-1tb', 'Samsung 970 EVO Plus 1TB', 'Samsung', 'nvme', 'pcie3', 1000, 'V-NAND TLC', true, 3500, 3300, 600000, 1500, 600, '2019-01', 'PCIe 3.0 时代最推荐。', ['经典']],
+  ['wd-black-sn750-1tb', 'WD Black SN750 1TB', 'WD', 'nvme', 'pcie3', 1000, 'BiCS3 TLC', true, 3470, 3000, 515000, 1300, 600, '2019-01', '', []],
+  ['sk-hynix-gold-p31-1tb', 'SK hynix Gold P31 1TB', 'SK Hynix', 'nvme', 'pcie3', 1000, '128L TLC', true, 3500, 3200, 570000, 1200, 750, '2020-08', '能效极佳的 PCIe 3.0 盘。', ['能效']],
+  ['samsung-980-pro-1tb', 'Samsung 980 PRO 1TB', 'Samsung', 'nvme', 'pcie4', 1000, 'V-NAND TLC', true, 7000, 5000, 1000000, 1500, 600, '2020-09', 'PCIe 4.0 旗舰，注意固件更新。', []],
+  ['wd-black-sn850-1tb', 'WD Black SN850 1TB', 'WD', 'nvme', 'pcie4', 1000, 'BiCS4 TLC', true, 7000, 5300, 1000000, 1500, 600, '2020-11', '', []],
+  ['kingston-kc3000-2tb', 'Kingston KC3000 2TB', 'Kingston', 'nvme', 'pcie4', 2000, 'Micron 176L TLC', true, 7000, 7000, 1000000, 1600, 1600, '2021-11', 'E18 主控，耐久高。', []],
+  ['seagate-firecuda-530-2tb', 'Seagate FireCuda 530 2TB', 'Seagate', 'nvme', 'pcie4', 2000, 'Micron 176L TLC', true, 7300, 6900, 1000000, 2000, 2550, '2021-07', 'TBW 2550，耐久之王。', []],
+  ['wd-caviar-black-1tb-2008', 'WD Caviar Black 1TB', 'WD', 'hdd', 'sata-hdd', 1000, 'CMR 7200rpm 32MB', false, 110, 110, null, null, null, '2008-10', '当年性能盘。', ['CMR']],
+  ['wd-velociraptor-300gb', 'WD VelociRaptor 300GB', 'WD', 'hdd', 'sata-hdd', 300, 'CMR 10000rpm', false, 120, 120, null, null, null, '2008-04', '万转机械盘，SSD 前的性能王。', ['经典', 'CMR']],
+  ['seagate-barracuda-7200-12-1tb', 'Seagate Barracuda 7200.12 1TB', 'Seagate', 'hdd', 'sata-hdd', 1000, 'CMR 7200rpm', false, 125, 125, null, null, null, '2009-01', '', ['CMR']],
+  ['wd-red-3tb-2012', 'WD Red 3TB', 'WD', 'hdd', 'sata-hdd', 3000, 'CMR 5400rpm', false, 145, 145, null, null, null, '2012-07', 'NAS 专用盘首作。', ['NAS', 'CMR']],
+  ['wd-blue-1tb-wd10ezex', 'WD Blue 1TB (WD10EZEX)', 'WD', 'hdd', 'sata-hdd', 1000, 'CMR 7200rpm 64MB', false, 150, 150, null, null, null, '2012-01', '装机最常见系统盘。', ['CMR']],
+  ['seagate-ironwolf-4tb', 'Seagate IronWolf 4TB', 'Seagate', 'hdd', 'sata-hdd', 4000, 'CMR 5900rpm', false, 180, 180, null, null, null, '2016-07', '', ['NAS', 'CMR']],
+].map((r) => { if (!r[14]) r[14] = `${r[1]}。`; return r })))
+
+/* PSU */
+const P = (a) => a.map(([id, name, brand, form, watt, tier, efficiency, atx31, modular, oem, release, summary]) => ({
+  id, name, brand, form, watt, tier, efficiency, atx31, modular, oem, release, price_cny: null, summary, tags: ['历史'],
+}))
+merge('psus.json', P([
+  ['corsair-hx620', 'Corsair HX620W', 'Corsair', 'atx', 620, 'A', '80Plus', false, 'semi', 'Seasonic', '2007-01', '海盗船电源起家之作，海韵代工。'],
+  ['corsair-tx650', 'Corsair TX650W', 'Corsair', 'atx', 650, 'B', '80Plus', false, 'none', 'Seasonic', '2008-01', '非模组主流款。'],
+  ['antec-earthwatts-500', 'Antec EarthWatts 500', 'Antec', 'atx', 500, 'C', '80Plus', false, 'none', 'Seasonic', '2008-01', '入门级，用料一般。'],
+  ['cooler-master-gx-650', 'Cooler Master GX 650W', 'Cooler Master', 'atx', 650, 'D', '80Plus Bronze', false, 'none', 'Enhance', '2010-01', '纹波超标，评测口碑差。'],
+  ['seasonic-x-650', 'Seasonic X-650', 'Seasonic', 'atx', 650, 'A', '80Plus Gold', false, 'full', 'Seasonic', '2010-01', '金牌全模组开创者。'],
+  ['corsair-ax850-2010', 'Corsair AX850 (2010)', 'Corsair', 'atx', 850, 'A', '80Plus Gold', false, 'full', 'Seasonic', '2010-06', 'X 系列换壳。'],
+  ['corsair-cx600', 'Corsair CX600', 'Corsair', 'atx', 600, 'C', '80Plus Bronze', false, 'none', 'CWT', '2012-01', '铜牌入门，电容一般。'],
+  ['corsair-rm750-2013', 'Corsair RM750 (2013)', 'Corsair', 'atx', 750, 'B', '80Plus Gold', false, 'full', 'CWT', '2013-09', '首代 RM，电容用料被诟病。'],
+  ['evga-supernova-750-g2', 'EVGA SuperNOVA 750 G2', 'EVGA', 'atx', 750, 'A', '80Plus Gold', false, 'full', 'Super Flower', '2014-01', '振华 Leadex 平台，一代神机。'],
+  ['thermaltake-smart-600', 'Thermaltake Smart 600W', 'Thermaltake', 'atx', 600, 'D', '80Plus White', false, 'none', 'HEC', '2015-01', '白牌入门，不建议带独显。'],
+  ['seasonic-focus-plus-gold-750', 'Seasonic Focus Plus Gold 750', 'Seasonic', 'atx', 750, 'A', '80Plus Gold', false, 'full', 'Seasonic', '2017-08', '海韵主流金牌，十年保。'],
+  ['corsair-rm750x-2018', 'Corsair RM750x (2018)', 'Corsair', 'atx', 750, 'A', '80Plus Gold', false, 'full', 'CWT', '2018-03', '长期推荐款。'],
+  ['corsair-sf600-2018', 'Corsair SF600 Platinum', 'Corsair', 'sfx', 600, 'A', '80Plus Platinum', false, 'full', 'Great Wall', '2018-05', 'ITX 装机经典。'],
+  ['be-quiet-straight-power-11-750', 'be quiet! Straight Power 11 750W', 'be quiet!', 'atx', 750, 'A', '80Plus Gold', false, 'full', 'FSP', '2018-01', '安静金牌。'],
+  ['great-wall-gw-6000', '长城 GW-6000', 'Great Wall', 'atx', 500, 'C', '80Plus Bronze', false, 'none', 'Great Wall', '2018-01', '国产入门铜牌。'],
+]))

@@ -398,5 +398,341 @@
       "write_GBs": null,
       "latency_ns": null
     }
+  },
+  {
+    "id": "kingston-ddr2-800-cl5-4",
+    "name": "Kingston ValueRAM DDR2-800 CL5 4GB",
+    "brand": "Kingston",
+    "form": "kit-desktop",
+    "type": "DDR2",
+    "spec": "DDR2-800 CL5 4GB (2x2)",
+    "capacity_gb": 4,
+    "speed_mt": 800,
+    "cl": 5,
+    "latency_ns": 90,
+    "release": "2007-01",
+    "price_cny": null,
+    "summary": "Core 2 时代标配。",
+    "est": true,
+    "scores": {
+      "read_GBs": 9,
+      "write_GBs": 8,
+      "latency_ns": 90
+    }
+  },
+  {
+    "id": "kingston-ddr3-1333-cl9-8",
+    "name": "Kingston ValueRAM DDR3-1333 CL9 8GB",
+    "brand": "Kingston",
+    "form": "kit-desktop",
+    "type": "DDR3",
+    "spec": "DDR3-1333 CL9 8GB (4x2)",
+    "capacity_gb": 8,
+    "speed_mt": 1333,
+    "cl": 9,
+    "latency_ns": 80,
+    "release": "2010-01",
+    "price_cny": null,
+    "summary": "Nehalem / Lynnfield 标配。",
+    "est": true,
+    "scores": {
+      "read_GBs": 17,
+      "write_GBs": 16,
+      "latency_ns": 80
+    }
+  },
+  {
+    "id": "corsair-vengeance-ddr3-1600-cl9-8",
+    "name": "Corsair Vengeance DDR3-1600 CL9 8GB",
+    "brand": "Corsair",
+    "form": "kit-desktop",
+    "type": "DDR3",
+    "spec": "DDR3-1600 CL9 8GB (4x2)",
+    "capacity_gb": 8,
+    "speed_mt": 1600,
+    "cl": 9,
+    "latency_ns": 75,
+    "release": "2011-03",
+    "price_cny": null,
+    "summary": "Sandy Bridge 甜点。",
+    "est": true,
+    "scores": {
+      "read_GBs": 20,
+      "write_GBs": 19,
+      "latency_ns": 75
+    }
+  },
+  {
+    "id": "gskill-tridentx-ddr3-2133-cl9-8",
+    "name": "G.Skill TridentX DDR3-2133 CL9 8GB",
+    "brand": "G.Skill",
+    "form": "kit-desktop",
+    "type": "DDR3",
+    "spec": "DDR3-2133 CL9 8GB (4x2)",
+    "capacity_gb": 8,
+    "speed_mt": 2133,
+    "cl": 9,
+    "latency_ns": 68,
+    "release": "2013-01",
+    "price_cny": null,
+    "summary": "DDR3 高频超频条。",
+    "est": true,
+    "scores": {
+      "read_GBs": 26,
+      "write_GBs": 25,
+      "latency_ns": 68
+    }
+  },
+  {
+    "id": "crucial-ddr4-2133-cl15-16",
+    "name": "Crucial DDR4-2133 CL15 16GB",
+    "brand": "Crucial",
+    "form": "kit-desktop",
+    "type": "DDR4",
+    "spec": "DDR4-2133 CL15 16GB (8x2)",
+    "capacity_gb": 16,
+    "speed_mt": 2133,
+    "cl": 15,
+    "latency_ns": 82,
+    "release": "2015-08",
+    "price_cny": null,
+    "summary": "DDR4 JEDEC 起步规格。",
+    "est": true,
+    "scores": {
+      "read_GBs": 30,
+      "write_GBs": 29,
+      "latency_ns": 82
+    }
+  },
+  {
+    "id": "corsair-vengeance-lpx-ddr4-2400-cl16-16",
+    "name": "Corsair Vengeance LPX DDR4-2400 CL16 16GB",
+    "brand": "Corsair",
+    "form": "kit-desktop",
+    "type": "DDR4",
+    "spec": "DDR4-2400 CL16 16GB (8x2)",
+    "capacity_gb": 16,
+    "speed_mt": 2400,
+    "cl": 16,
+    "latency_ns": 80,
+    "release": "2016-01",
+    "price_cny": null,
+    "summary": "Corsair Vengeance LPX DDR4-2400 CL16 16GB。",
+    "est": true,
+    "scores": {
+      "read_GBs": 33,
+      "write_GBs": 32,
+      "latency_ns": 80
+    }
+  },
+  {
+    "id": "kingston-hyperx-fury-ddr4-2666-cl16-16",
+    "name": "HyperX Fury DDR4-2666 CL16 16GB",
+    "brand": "Kingston",
+    "form": "kit-desktop",
+    "type": "DDR4",
+    "spec": "DDR4-2666 CL16 16GB (8x2)",
+    "capacity_gb": 16,
+    "speed_mt": 2666,
+    "cl": 16,
+    "latency_ns": 76,
+    "release": "2017-01",
+    "price_cny": null,
+    "summary": "Coffee Lake 官方支持上限。",
+    "est": true,
+    "scores": {
+      "read_GBs": 36,
+      "write_GBs": 35,
+      "latency_ns": 76
+    }
+  },
+  {
+    "id": "gskill-ripjaws-v-ddr4-3000-cl15-16",
+    "name": "G.Skill Ripjaws V DDR4-3000 CL15 16GB",
+    "brand": "G.Skill",
+    "form": "kit-desktop",
+    "type": "DDR4",
+    "spec": "DDR4-3000 CL15 16GB (8x2)",
+    "capacity_gb": 16,
+    "speed_mt": 3000,
+    "cl": 15,
+    "latency_ns": 70,
+    "release": "2017-01",
+    "price_cny": null,
+    "summary": "首代 Ryzen 甜点。",
+    "est": true,
+    "scores": {
+      "read_GBs": 40,
+      "write_GBs": 38,
+      "latency_ns": 70
+    }
+  },
+  {
+    "id": "corsair-vengeance-lpx-ddr4-3200-cl16-16",
+    "name": "Corsair Vengeance LPX DDR4-3200 CL16 16GB",
+    "brand": "Corsair",
+    "form": "kit-desktop",
+    "type": "DDR4",
+    "spec": "DDR4-3200 CL16 16GB (8x2)",
+    "capacity_gb": 16,
+    "speed_mt": 3200,
+    "cl": 16,
+    "latency_ns": 68,
+    "release": "2017-06",
+    "price_cny": null,
+    "summary": "DDR4 时代销量之王。",
+    "est": true,
+    "scores": {
+      "read_GBs": 44,
+      "write_GBs": 42,
+      "latency_ns": 68
+    }
+  },
+  {
+    "id": "gskill-trident-z-royal-ddr4-4000-cl18-16",
+    "name": "G.Skill Trident Z Royal DDR4-4000 CL18 16GB",
+    "brand": "G.Skill",
+    "form": "kit-desktop",
+    "type": "DDR4",
+    "spec": "DDR4-4000 CL18 16GB (8x2)",
+    "capacity_gb": 16,
+    "speed_mt": 4000,
+    "cl": 18,
+    "latency_ns": 62,
+    "release": "2019-01",
+    "price_cny": null,
+    "summary": "DDR4 高频，Intel 平台。",
+    "est": true,
+    "scores": {
+      "read_GBs": 56,
+      "write_GBs": 54,
+      "latency_ns": 62
+    }
+  },
+  {
+    "id": "kingston-fury-beast-ddr5-4800-cl40-32",
+    "name": "Kingston FURY Beast DDR5-4800 CL40 32GB",
+    "brand": "Kingston",
+    "form": "kit-desktop",
+    "type": "DDR5",
+    "spec": "DDR5-4800 CL40 32GB (16x2)",
+    "capacity_gb": 32,
+    "speed_mt": 4800,
+    "cl": 40,
+    "latency_ns": 85,
+    "release": "2021-11",
+    "price_cny": null,
+    "summary": "DDR5 首发规格，延迟高。",
+    "est": true,
+    "scores": {
+      "read_GBs": 70,
+      "write_GBs": 65,
+      "latency_ns": 85
+    }
+  },
+  {
+    "id": "corsair-vengeance-ddr5-5200-cl40-32",
+    "name": "Corsair Vengeance DDR5-5200 CL40 32GB",
+    "brand": "Corsair",
+    "form": "kit-desktop",
+    "type": "DDR5",
+    "spec": "DDR5-5200 CL40 32GB (16x2)",
+    "capacity_gb": 32,
+    "speed_mt": 5200,
+    "cl": 40,
+    "latency_ns": 80,
+    "release": "2022-01",
+    "price_cny": null,
+    "summary": "Corsair Vengeance DDR5-5200 CL40 32GB。",
+    "est": true,
+    "scores": {
+      "read_GBs": 76,
+      "write_GBs": 70,
+      "latency_ns": 80
+    }
+  },
+  {
+    "id": "crucial-ddr3l-1600-sodimm-8",
+    "name": "Crucial DDR3L-1600 SO-DIMM 8GB",
+    "brand": "Crucial",
+    "form": "sodimm",
+    "type": "DDR3",
+    "spec": "DDR3L-1600 CL11 8GB (4x2) SO-DIMM",
+    "capacity_gb": 8,
+    "speed_mt": 1600,
+    "cl": 11,
+    "latency_ns": 82,
+    "release": "2012-01",
+    "price_cny": null,
+    "summary": "老笔记本升级。",
+    "est": true,
+    "scores": {
+      "read_GBs": 18,
+      "write_GBs": 17,
+      "latency_ns": 82
+    }
+  },
+  {
+    "id": "crucial-ddr4-2666-sodimm-16",
+    "name": "Crucial DDR4-2666 SO-DIMM 16GB",
+    "brand": "Crucial",
+    "form": "sodimm",
+    "type": "DDR4",
+    "spec": "DDR4-2666 CL19 16GB (8x2) SO-DIMM",
+    "capacity_gb": 16,
+    "speed_mt": 2666,
+    "cl": 19,
+    "latency_ns": 80,
+    "release": "2018-01",
+    "price_cny": null,
+    "summary": "8 代酷睿笔记本标配。",
+    "est": true,
+    "scores": {
+      "read_GBs": 34,
+      "write_GBs": 33,
+      "latency_ns": 80
+    }
+  },
+  {
+    "id": "apple-m1-lpddr4x-onboard",
+    "name": "Apple M1 LPDDR4X 板载",
+    "brand": "Apple",
+    "form": "onboard",
+    "type": "LPDDR5",
+    "spec": "LPDDR4X-4266 128-bit 8/16GB",
+    "capacity_gb": 16,
+    "speed_mt": 4266,
+    "cl": null,
+    "latency_ns": null,
+    "release": "2020-11",
+    "price_cny": null,
+    "summary": "统一内存 68GB/s。",
+    "est": true,
+    "scores": {
+      "read_GBs": 60,
+      "write_GBs": null,
+      "latency_ns": null
+    }
+  },
+  {
+    "id": "apple-m2-lpddr5-onboard",
+    "name": "Apple M2 LPDDR5 板载",
+    "brand": "Apple",
+    "form": "onboard",
+    "type": "LPDDR5",
+    "spec": "LPDDR5-6400 128-bit 8–24GB",
+    "capacity_gb": 24,
+    "speed_mt": 6400,
+    "cl": null,
+    "latency_ns": null,
+    "release": "2022-06",
+    "price_cny": null,
+    "summary": "统一内存 100GB/s。",
+    "est": true,
+    "scores": {
+      "read_GBs": 95,
+      "write_GBs": null,
+      "latency_ns": null
+    }
   }
 ]

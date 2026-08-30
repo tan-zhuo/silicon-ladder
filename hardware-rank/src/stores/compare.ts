@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref, watch } from 'vue'
 import type { Category } from '@/types/hardware'
+import { t } from '@/i18n'
 
 const KEY = 'hr-compare'
 export const MAX_COMPARE = 4
@@ -42,7 +43,7 @@ export const useCompare = defineStore('compare', () => {
 
   function toggle(cat: Category, id: string): boolean {
     if (category.value !== cat) {
-      if (ids.value.length) flash('已切换品类，对比篮已清空')
+      if (ids.value.length) flash(t('dock.switched'))
       category.value = cat
       ids.value = [id]
       return true
@@ -52,7 +53,7 @@ export const useCompare = defineStore('compare', () => {
       return false
     }
     if (ids.value.length >= MAX_COMPARE) {
-      flash(`最多对比 ${MAX_COMPARE} 项`)
+      flash(t('dock.max', { max: MAX_COMPARE }))
       return false
     }
     ids.value = [...ids.value, id]

@@ -1320,5 +1320,2146 @@
       "gaming_rel": 45,
       "igpu_rel": 68
     }
+  },
+  {
+    "id": "intel-core-2-quad-q6600",
+    "name": "Core 2 Quad Q6600",
+    "nameEn": "Intel Core 2 Quad Q6600",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core 2 Quad",
+    "gen": "core2",
+    "socket": "LGA775",
+    "cores": "4C / 4T",
+    "clocks": "2.4 GHz",
+    "tdp_w": 105,
+    "igpu": null,
+    "cache_l3": "8 MB (2×4)",
+    "mem": "DDR2-800",
+    "release": "2007-01",
+    "price_cny": null,
+    "summary": "首款平民四核，超频神话。",
+    "tags": [
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 160,
+      "cb24_mt": 600,
+      "gaming_rel": 12,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-2-duo-e8400",
+    "name": "Core 2 Duo E8400",
+    "nameEn": "Intel Core 2 Duo E8400",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core 2 Duo",
+    "gen": "core2",
+    "socket": "LGA775",
+    "cores": "2C / 2T",
+    "clocks": "3.0 GHz",
+    "tdp_w": 65,
+    "igpu": null,
+    "cache_l3": "6 MB",
+    "mem": "DDR2-800 / DDR3-1066",
+    "release": "2008-01",
+    "price_cny": null,
+    "summary": "45nm 双核，当年游戏首选。",
+    "tags": [
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 200,
+      "cb24_mt": 380,
+      "gaming_rel": 12,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-2-quad-q9550",
+    "name": "Core 2 Quad Q9550",
+    "nameEn": "Intel Core 2 Quad Q9550",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core 2 Quad",
+    "gen": "core2",
+    "socket": "LGA775",
+    "cores": "4C / 4T",
+    "clocks": "2.83 GHz",
+    "tdp_w": 95,
+    "igpu": null,
+    "cache_l3": "12 MB (2×6)",
+    "mem": "DDR2-800 / DDR3-1066",
+    "release": "2008-03",
+    "price_cny": null,
+    "summary": "LGA775 末期四核旗舰。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 210,
+      "cb24_mt": 800,
+      "gaming_rel": 14,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i7-920",
+    "name": "Core i7-920",
+    "nameEn": "Intel Core i7-920",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i7",
+    "gen": "nehalem",
+    "socket": "LGA1366",
+    "cores": "4C / 8T",
+    "clocks": "2.66 / 2.93 GHz",
+    "tdp_w": 130,
+    "igpu": null,
+    "cache_l3": "8 MB",
+    "mem": "DDR3-1066 三通道",
+    "release": "2008-11",
+    "price_cny": null,
+    "summary": "首代 Core i7，超线程回归。",
+    "tags": [
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 230,
+      "cb24_mt": 1150,
+      "gaming_rel": 16,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i5-750",
+    "name": "Core i5-750",
+    "nameEn": "Intel Core i5-750",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i5",
+    "gen": "nehalem",
+    "socket": "LGA1156",
+    "cores": "4C / 4T",
+    "clocks": "2.66 / 3.2 GHz",
+    "tdp_w": 95,
+    "igpu": null,
+    "cache_l3": "8 MB",
+    "mem": "DDR3-1333",
+    "release": "2009-09",
+    "price_cny": null,
+    "summary": "主流四核，性价比极高。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 220,
+      "cb24_mt": 850,
+      "gaming_rel": 15,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i7-870",
+    "name": "Core i7-870",
+    "nameEn": "Intel Core i7-870",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i7",
+    "gen": "nehalem",
+    "socket": "LGA1156",
+    "cores": "4C / 8T",
+    "clocks": "2.93 / 3.6 GHz",
+    "tdp_w": 95,
+    "igpu": null,
+    "cache_l3": "8 MB",
+    "mem": "DDR3-1333",
+    "release": "2009-09",
+    "price_cny": null,
+    "summary": "Lynnfield 旗舰。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 240,
+      "cb24_mt": 1150,
+      "gaming_rel": 16,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i5-2500k",
+    "name": "Core i5-2500K",
+    "nameEn": "Intel Core i5-2500K",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i5",
+    "gen": "sandy-bridge",
+    "socket": "LGA1155",
+    "cores": "4C / 4T",
+    "clocks": "3.3 / 3.7 GHz",
+    "tdp_w": 95,
+    "igpu": "HD 3000",
+    "cache_l3": "6 MB",
+    "mem": "DDR3-1333",
+    "release": "2011-01",
+    "price_cny": null,
+    "summary": "一代神 U，随便超 4.5GHz。",
+    "tags": [
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 340,
+      "cb24_mt": 1300,
+      "gaming_rel": 24,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i7-2600k",
+    "name": "Core i7-2600K",
+    "nameEn": "Intel Core i7-2600K",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i7",
+    "gen": "sandy-bridge",
+    "socket": "LGA1155",
+    "cores": "4C / 8T",
+    "clocks": "3.4 / 3.8 GHz",
+    "tdp_w": 95,
+    "igpu": "HD 3000",
+    "cache_l3": "8 MB",
+    "mem": "DDR3-1333",
+    "release": "2011-01",
+    "price_cny": null,
+    "summary": "服役十年的传奇。",
+    "tags": [
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 350,
+      "cb24_mt": 1700,
+      "gaming_rel": 25,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i5-3570k",
+    "name": "Core i5-3570K",
+    "nameEn": "Intel Core i5-3570K",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i5",
+    "gen": "ivy-bridge",
+    "socket": "LGA1155",
+    "cores": "4C / 4T",
+    "clocks": "3.4 / 3.8 GHz",
+    "tdp_w": 77,
+    "igpu": "HD 4000",
+    "cache_l3": "6 MB",
+    "mem": "DDR3-1600",
+    "release": "2012-04",
+    "price_cny": null,
+    "summary": "22nm，硅脂散热被吐槽。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 370,
+      "cb24_mt": 1400,
+      "gaming_rel": 26,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i7-3770k",
+    "name": "Core i7-3770K",
+    "nameEn": "Intel Core i7-3770K",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i7",
+    "gen": "ivy-bridge",
+    "socket": "LGA1155",
+    "cores": "4C / 8T",
+    "clocks": "3.5 / 3.9 GHz",
+    "tdp_w": 77,
+    "igpu": "HD 4000",
+    "cache_l3": "8 MB",
+    "mem": "DDR3-1600",
+    "release": "2012-04",
+    "price_cny": null,
+    "summary": "Ivy Bridge 旗舰。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 380,
+      "cb24_mt": 1850,
+      "gaming_rel": 27,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i7-4770k",
+    "name": "Core i7-4770K",
+    "nameEn": "Intel Core i7-4770K",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i7",
+    "gen": "haswell",
+    "socket": "LGA1150",
+    "cores": "4C / 8T",
+    "clocks": "3.5 / 3.9 GHz",
+    "tdp_w": 84,
+    "igpu": "HD 4600",
+    "cache_l3": "8 MB",
+    "mem": "DDR3-1600",
+    "release": "2013-06",
+    "price_cny": null,
+    "summary": "Haswell 首发旗舰。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 420,
+      "cb24_mt": 2050,
+      "gaming_rel": 30,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i5-4690k",
+    "name": "Core i5-4690K",
+    "nameEn": "Intel Core i5-4690K",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i5",
+    "gen": "haswell",
+    "socket": "LGA1150",
+    "cores": "4C / 4T",
+    "clocks": "3.5 / 3.9 GHz",
+    "tdp_w": 88,
+    "igpu": "HD 4600",
+    "cache_l3": "6 MB",
+    "mem": "DDR3-1600",
+    "release": "2014-05",
+    "price_cny": null,
+    "summary": "Devil’s Canyon 四核。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 410,
+      "cb24_mt": 1600,
+      "gaming_rel": 29,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i7-4790k",
+    "name": "Core i7-4790K",
+    "nameEn": "Intel Core i7-4790K",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i7",
+    "gen": "haswell",
+    "socket": "LGA1150",
+    "cores": "4C / 8T",
+    "clocks": "4.0 / 4.4 GHz",
+    "tdp_w": 88,
+    "igpu": "HD 4600",
+    "cache_l3": "8 MB",
+    "mem": "DDR3-1600",
+    "release": "2014-05",
+    "price_cny": null,
+    "summary": "首款 4GHz 基频，钎焊回归前的巅峰。",
+    "tags": [
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 450,
+      "cb24_mt": 2200,
+      "gaming_rel": 32,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i7-5960x",
+    "name": "Core i7-5960X",
+    "nameEn": "Intel Core i7-5960X",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i7 Extreme",
+    "gen": "haswell-e",
+    "socket": "LGA2011-3",
+    "cores": "8C / 16T",
+    "clocks": "3.0 / 3.5 GHz",
+    "tdp_w": 140,
+    "igpu": null,
+    "cache_l3": "20 MB",
+    "mem": "DDR4-2133 四通道",
+    "release": "2014-08",
+    "price_cny": null,
+    "summary": "首款消费级 8 核，DDR4 首发。",
+    "tags": [
+      "HEDT",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 420,
+      "cb24_mt": 3800,
+      "gaming_rel": 30,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i7-6700k",
+    "name": "Core i7-6700K",
+    "nameEn": "Intel Core i7-6700K",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i7",
+    "gen": "skylake",
+    "socket": "LGA1151",
+    "cores": "4C / 8T",
+    "clocks": "4.0 / 4.2 GHz",
+    "tdp_w": 91,
+    "igpu": "HD 530",
+    "cache_l3": "8 MB",
+    "mem": "DDR4-2133",
+    "release": "2015-08",
+    "price_cny": null,
+    "summary": "Skylake，DDR4 普及。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 490,
+      "cb24_mt": 2400,
+      "gaming_rel": 36,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i7-7700k",
+    "name": "Core i7-7700K",
+    "nameEn": "Intel Core i7-7700K",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i7",
+    "gen": "kaby-lake",
+    "socket": "LGA1151",
+    "cores": "4C / 8T",
+    "clocks": "4.2 / 4.5 GHz",
+    "tdp_w": 91,
+    "igpu": "HD 630",
+    "cache_l3": "8 MB",
+    "mem": "DDR4-2400",
+    "release": "2017-01",
+    "price_cny": null,
+    "summary": "最后的四核 i7。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 530,
+      "cb24_mt": 2600,
+      "gaming_rel": 39,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i7-8700k",
+    "name": "Core i7-8700K",
+    "nameEn": "Intel Core i7-8700K",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i7",
+    "gen": "coffee-lake",
+    "socket": "LGA1151v2",
+    "cores": "6C / 12T",
+    "clocks": "3.7 / 4.7 GHz",
+    "tdp_w": 95,
+    "igpu": "UHD 630",
+    "cache_l3": "12 MB",
+    "mem": "DDR4-2666",
+    "release": "2017-10",
+    "price_cny": null,
+    "summary": "被 Ryzen 逼出来的六核。",
+    "tags": [
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 560,
+      "cb24_mt": 3900,
+      "gaming_rel": 44,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i5-8400",
+    "name": "Core i5-8400",
+    "nameEn": "Intel Core i5-8400",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i5",
+    "gen": "coffee-lake",
+    "socket": "LGA1151v2",
+    "cores": "6C / 6T",
+    "clocks": "2.8 / 4.0 GHz",
+    "tdp_w": 65,
+    "igpu": "UHD 630",
+    "cache_l3": "9 MB",
+    "mem": "DDR4-2666",
+    "release": "2017-10",
+    "price_cny": null,
+    "summary": "六核 i5 平民首选。",
+    "tags": [
+      "性价比",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 500,
+      "cb24_mt": 2700,
+      "gaming_rel": 38,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i9-9900k",
+    "name": "Core i9-9900K",
+    "nameEn": "Intel Core i9-9900K",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i9",
+    "gen": "coffee-lake",
+    "socket": "LGA1151v2",
+    "cores": "8C / 16T",
+    "clocks": "3.6 / 5.0 GHz",
+    "tdp_w": 95,
+    "igpu": "UHD 630",
+    "cache_l3": "16 MB",
+    "mem": "DDR4-2666",
+    "release": "2018-10",
+    "price_cny": null,
+    "summary": "首款主流 i9，钎焊 8 核。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 600,
+      "cb24_mt": 5200,
+      "gaming_rel": 50,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i5-9600k",
+    "name": "Core i5-9600K",
+    "nameEn": "Intel Core i5-9600K",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i5",
+    "gen": "coffee-lake",
+    "socket": "LGA1151v2",
+    "cores": "6C / 6T",
+    "clocks": "3.7 / 4.6 GHz",
+    "tdp_w": 95,
+    "igpu": "UHD 630",
+    "cache_l3": "9 MB",
+    "mem": "DDR4-2666",
+    "release": "2018-10",
+    "price_cny": null,
+    "summary": "六核无超线程游戏 U。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 570,
+      "cb24_mt": 3200,
+      "gaming_rel": 44,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i9-10900k",
+    "name": "Core i9-10900K",
+    "nameEn": "Intel Core i9-10900K",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i9",
+    "gen": "comet-lake",
+    "socket": "LGA1200",
+    "cores": "10C / 20T",
+    "clocks": "3.7 / 5.3 GHz",
+    "tdp_w": 125,
+    "igpu": "UHD 630",
+    "cache_l3": "20 MB",
+    "mem": "DDR4-2933",
+    "release": "2020-05",
+    "price_cny": null,
+    "summary": "14nm 榨到十核。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 640,
+      "cb24_mt": 6400,
+      "gaming_rel": 54,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i5-10400f",
+    "name": "Core i5-10400F",
+    "nameEn": "Intel Core i5-10400F",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i5",
+    "gen": "comet-lake",
+    "socket": "LGA1200",
+    "cores": "6C / 12T",
+    "clocks": "2.9 / 4.3 GHz",
+    "tdp_w": 65,
+    "igpu": null,
+    "cache_l3": "12 MB",
+    "mem": "DDR4-2666",
+    "release": "2020-05",
+    "price_cny": null,
+    "summary": "千元内游戏神 U。",
+    "tags": [
+      "性价比",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 560,
+      "cb24_mt": 3600,
+      "gaming_rel": 45,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i9-11900k",
+    "name": "Core i9-11900K",
+    "nameEn": "Intel Core i9-11900K",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i9",
+    "gen": "rocket-lake",
+    "socket": "LGA1200",
+    "cores": "8C / 16T",
+    "clocks": "3.5 / 5.3 GHz",
+    "tdp_w": 125,
+    "igpu": "UHD 750",
+    "cache_l3": "16 MB",
+    "mem": "DDR4-3200",
+    "release": "2021-03",
+    "price_cny": null,
+    "summary": "核心倒退到 8，口碑一般。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 800,
+      "cb24_mt": 6200,
+      "gaming_rel": 58,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i5-11400f",
+    "name": "Core i5-11400F",
+    "nameEn": "Intel Core i5-11400F",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i5",
+    "gen": "rocket-lake",
+    "socket": "LGA1200",
+    "cores": "6C / 12T",
+    "clocks": "2.6 / 4.4 GHz",
+    "tdp_w": 65,
+    "igpu": null,
+    "cache_l3": "12 MB",
+    "mem": "DDR4-3200",
+    "release": "2021-03",
+    "price_cny": null,
+    "summary": "性价比不错的六核。",
+    "tags": [
+      "性价比",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 700,
+      "cb24_mt": 4800,
+      "gaming_rel": 50,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i9-12900k",
+    "name": "Core i9-12900K",
+    "nameEn": "Intel Core i9-12900K",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i9",
+    "gen": "alder-lake",
+    "socket": "LGA1700",
+    "cores": "8P+8E / 24T",
+    "clocks": "3.2 / 5.2 GHz",
+    "tdp_w": 125,
+    "igpu": "UHD 770",
+    "cache_l3": "30 MB",
+    "mem": "DDR5-4800 / DDR4-3200",
+    "release": "2021-11",
+    "price_cny": null,
+    "summary": "大小核首发旗舰。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 1120,
+      "cb24_mt": 17000,
+      "gaming_rel": 78,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i5-12600k",
+    "name": "Core i5-12600K",
+    "nameEn": "Intel Core i5-12600K",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i5",
+    "gen": "alder-lake",
+    "socket": "LGA1700",
+    "cores": "6P+4E / 16T",
+    "clocks": "3.7 / 4.9 GHz",
+    "tdp_w": 125,
+    "igpu": "UHD 770",
+    "cache_l3": "20 MB",
+    "mem": "DDR5-4800 / DDR4-3200",
+    "release": "2021-11",
+    "price_cny": null,
+    "summary": "12 代甜点。",
+    "tags": [
+      "性价比",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 1050,
+      "cb24_mt": 11500,
+      "gaming_rel": 72,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "intel-core-i7-13700k",
+    "name": "Core i7-13700K",
+    "nameEn": "Intel Core i7-13700K",
+    "brand": "Intel",
+    "form": "desktop",
+    "series": "Core i7",
+    "gen": "raptor-lake",
+    "socket": "LGA1700",
+    "cores": "8P+8E / 24T",
+    "clocks": "3.4 / 5.4 GHz",
+    "tdp_w": 125,
+    "igpu": "UHD 770",
+    "cache_l3": "30 MB",
+    "mem": "DDR5-5600 / DDR4-3200",
+    "release": "2022-10",
+    "price_cny": null,
+    "summary": "13 代 i7，与 14700K 接近。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 1260,
+      "cb24_mt": 19500,
+      "gaming_rel": 83,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "amd-phenom-x4-9850",
+    "name": "Phenom X4 9850 Black",
+    "nameEn": "AMD Phenom X4 9850 Black",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Phenom",
+    "gen": "k10",
+    "socket": "AM2+",
+    "cores": "4C / 4T",
+    "clocks": "2.5 GHz",
+    "tdp_w": 125,
+    "igpu": null,
+    "cache_l3": "2 MB",
+    "mem": "DDR2-1066",
+    "release": "2008-03",
+    "price_cny": null,
+    "summary": "原生四核首作，TLB 门后修正版。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 130,
+      "cb24_mt": 480,
+      "gaming_rel": 9,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "amd-phenom-ii-x4-955",
+    "name": "Phenom II X4 955 BE",
+    "nameEn": "AMD Phenom II X4 955 BE",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Phenom II",
+    "gen": "k10",
+    "socket": "AM3",
+    "cores": "4C / 4T",
+    "clocks": "3.2 GHz",
+    "tdp_w": 125,
+    "igpu": null,
+    "cache_l3": "6 MB",
+    "mem": "DDR3-1333",
+    "release": "2009-04",
+    "price_cny": null,
+    "summary": "AMD 翻身四核，性价比高。",
+    "tags": [
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 190,
+      "cb24_mt": 720,
+      "gaming_rel": 13,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "amd-phenom-ii-x6-1090t",
+    "name": "Phenom II X6 1090T",
+    "nameEn": "AMD Phenom II X6 1090T",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Phenom II",
+    "gen": "k10",
+    "socket": "AM3",
+    "cores": "6C / 6T",
+    "clocks": "3.2 / 3.6 GHz",
+    "tdp_w": 125,
+    "igpu": null,
+    "cache_l3": "6 MB",
+    "mem": "DDR3-1333",
+    "release": "2010-04",
+    "price_cny": null,
+    "summary": "首款消费级六核。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 195,
+      "cb24_mt": 1000,
+      "gaming_rel": 13,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "amd-fx-8150",
+    "name": "FX-8150",
+    "nameEn": "AMD FX-8150",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "FX",
+    "gen": "bulldozer",
+    "socket": "AM3+",
+    "cores": "8C / 8T",
+    "clocks": "3.6 / 4.2 GHz",
+    "tdp_w": 125,
+    "igpu": null,
+    "cache_l3": "8 MB",
+    "mem": "DDR3-1866",
+    "release": "2011-10",
+    "price_cny": null,
+    "summary": "推土机首发，单核令人失望。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 240,
+      "cb24_mt": 1500,
+      "gaming_rel": 17,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "amd-fx-8350",
+    "name": "FX-8350",
+    "nameEn": "AMD FX-8350",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "FX",
+    "gen": "piledriver",
+    "socket": "AM3+",
+    "cores": "8C / 8T",
+    "clocks": "4.0 / 4.2 GHz",
+    "tdp_w": 125,
+    "igpu": null,
+    "cache_l3": "8 MB",
+    "mem": "DDR3-1866",
+    "release": "2012-10",
+    "price_cny": null,
+    "summary": "打桩机，多线程性价比。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 270,
+      "cb24_mt": 1750,
+      "gaming_rel": 19,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "amd-ryzen-7-1800x",
+    "name": "Ryzen 7 1800X",
+    "nameEn": "AMD Ryzen 7 1800X",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Ryzen 7",
+    "gen": "zen",
+    "socket": "AM4",
+    "cores": "8C / 16T",
+    "clocks": "3.6 / 4.0 GHz",
+    "tdp_w": 95,
+    "igpu": null,
+    "cache_l3": "16 MB",
+    "mem": "DDR4-2667",
+    "release": "2017-03",
+    "price_cny": null,
+    "summary": "Zen 首发旗舰，AMD 复兴。",
+    "tags": [
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 470,
+      "cb24_mt": 3700,
+      "gaming_rel": 33,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "amd-ryzen-5-1600",
+    "name": "Ryzen 5 1600",
+    "nameEn": "AMD Ryzen 5 1600",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Ryzen 5",
+    "gen": "zen",
+    "socket": "AM4",
+    "cores": "6C / 12T",
+    "clocks": "3.2 / 3.6 GHz",
+    "tdp_w": 65,
+    "igpu": null,
+    "cache_l3": "16 MB",
+    "mem": "DDR4-2667",
+    "release": "2017-04",
+    "price_cny": null,
+    "summary": "六核十二线程千元价，改变市场。",
+    "tags": [
+      "性价比",
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 440,
+      "cb24_mt": 2700,
+      "gaming_rel": 30,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "amd-ryzen-7-2700x",
+    "name": "Ryzen 7 2700X",
+    "nameEn": "AMD Ryzen 7 2700X",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Ryzen 7",
+    "gen": "zen+",
+    "socket": "AM4",
+    "cores": "8C / 16T",
+    "clocks": "3.7 / 4.3 GHz",
+    "tdp_w": 105,
+    "igpu": null,
+    "cache_l3": "16 MB",
+    "mem": "DDR4-2933",
+    "release": "2018-04",
+    "price_cny": null,
+    "summary": "12nm 小改。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 510,
+      "cb24_mt": 4100,
+      "gaming_rel": 36,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "amd-ryzen-9-3900x",
+    "name": "Ryzen 9 3900X",
+    "nameEn": "AMD Ryzen 9 3900X",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Ryzen 9",
+    "gen": "zen2",
+    "socket": "AM4",
+    "cores": "12C / 24T",
+    "clocks": "3.8 / 4.6 GHz",
+    "tdp_w": 105,
+    "igpu": null,
+    "cache_l3": "64 MB",
+    "mem": "DDR4-3200",
+    "release": "2019-07",
+    "price_cny": null,
+    "summary": "主流平台 12 核首作。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 620,
+      "cb24_mt": 7200,
+      "gaming_rel": 45,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "amd-ryzen-9-3950x",
+    "name": "Ryzen 9 3950X",
+    "nameEn": "AMD Ryzen 9 3950X",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Ryzen 9",
+    "gen": "zen2",
+    "socket": "AM4",
+    "cores": "16C / 32T",
+    "clocks": "3.5 / 4.7 GHz",
+    "tdp_w": 105,
+    "igpu": null,
+    "cache_l3": "64 MB",
+    "mem": "DDR4-3200",
+    "release": "2019-11",
+    "price_cny": null,
+    "summary": "主流平台 16 核首作。",
+    "tags": [
+      "生产力",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 630,
+      "cb24_mt": 9500,
+      "gaming_rel": 46,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "amd-ryzen-7-3700x",
+    "name": "Ryzen 7 3700X",
+    "nameEn": "AMD Ryzen 7 3700X",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Ryzen 7",
+    "gen": "zen2",
+    "socket": "AM4",
+    "cores": "8C / 16T",
+    "clocks": "3.6 / 4.4 GHz",
+    "tdp_w": 65,
+    "igpu": null,
+    "cache_l3": "32 MB",
+    "mem": "DDR4-3200",
+    "release": "2019-07",
+    "price_cny": null,
+    "summary": "65W 八核，能效标杆。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 600,
+      "cb24_mt": 4900,
+      "gaming_rel": 44,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "amd-ryzen-5-3600",
+    "name": "Ryzen 5 3600",
+    "nameEn": "AMD Ryzen 5 3600",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Ryzen 5",
+    "gen": "zen2",
+    "socket": "AM4",
+    "cores": "6C / 12T",
+    "clocks": "3.6 / 4.2 GHz",
+    "tdp_w": 65,
+    "igpu": null,
+    "cache_l3": "32 MB",
+    "mem": "DDR4-3200",
+    "release": "2019-07",
+    "price_cny": null,
+    "summary": "销量之王。",
+    "tags": [
+      "性价比",
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 590,
+      "cb24_mt": 3700,
+      "gaming_rel": 43,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "amd-ryzen-9-5950x",
+    "name": "Ryzen 9 5950X",
+    "nameEn": "AMD Ryzen 9 5950X",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Ryzen 9",
+    "gen": "zen3",
+    "socket": "AM4",
+    "cores": "16C / 32T",
+    "clocks": "3.4 / 4.9 GHz",
+    "tdp_w": 105,
+    "igpu": null,
+    "cache_l3": "64 MB",
+    "mem": "DDR4-3200",
+    "release": "2020-11",
+    "price_cny": null,
+    "summary": "AM4 生产力之巅。",
+    "tags": [
+      "生产力",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 800,
+      "cb24_mt": 12500,
+      "gaming_rel": 62,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "amd-ryzen-9-5900x",
+    "name": "Ryzen 9 5900X",
+    "nameEn": "AMD Ryzen 9 5900X",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Ryzen 9",
+    "gen": "zen3",
+    "socket": "AM4",
+    "cores": "12C / 24T",
+    "clocks": "3.7 / 4.8 GHz",
+    "tdp_w": 105,
+    "igpu": null,
+    "cache_l3": "64 MB",
+    "mem": "DDR4-3200",
+    "release": "2020-11",
+    "price_cny": null,
+    "summary": "12 核均衡之选。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 790,
+      "cb24_mt": 9800,
+      "gaming_rel": 62,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "amd-ryzen-7-5800x",
+    "name": "Ryzen 7 5800X",
+    "nameEn": "AMD Ryzen 7 5800X",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Ryzen 7",
+    "gen": "zen3",
+    "socket": "AM4",
+    "cores": "8C / 16T",
+    "clocks": "3.8 / 4.7 GHz",
+    "tdp_w": 105,
+    "igpu": null,
+    "cache_l3": "32 MB",
+    "mem": "DDR4-3200",
+    "release": "2020-11",
+    "price_cny": null,
+    "summary": "单 CCD 八核。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 780,
+      "cb24_mt": 7000,
+      "gaming_rel": 61,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "amd-ryzen-5-5600x",
+    "name": "Ryzen 5 5600X",
+    "nameEn": "AMD Ryzen 5 5600X",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Ryzen 5",
+    "gen": "zen3",
+    "socket": "AM4",
+    "cores": "6C / 12T",
+    "clocks": "3.7 / 4.6 GHz",
+    "tdp_w": 65,
+    "igpu": null,
+    "cache_l3": "32 MB",
+    "mem": "DDR4-3200",
+    "release": "2020-11",
+    "price_cny": null,
+    "summary": "游戏性价比六核。",
+    "tags": [
+      "性价比",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 770,
+      "cb24_mt": 5500,
+      "gaming_rel": 60,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "amd-ryzen-7-5700x3d",
+    "name": "Ryzen 7 5700X3D",
+    "nameEn": "AMD Ryzen 7 5700X3D",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Ryzen 7",
+    "gen": "zen3",
+    "socket": "AM4",
+    "cores": "8C / 16T",
+    "clocks": "3.0 / 4.1 GHz",
+    "tdp_w": 105,
+    "igpu": null,
+    "cache_l3": "96 MB (3D V-Cache)",
+    "mem": "DDR4-3200",
+    "release": "2024-01",
+    "price_cny": null,
+    "summary": "AM4 最后的性价比游戏 U。",
+    "tags": [
+      "X3D",
+      "游戏",
+      "AM4",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 830,
+      "cb24_mt": 9500,
+      "gaming_rel": 83,
+      "igpu_rel": null
+    }
+  },
+  {
+    "id": "amd-ryzen-7-8700g",
+    "name": "Ryzen 7 8700G",
+    "nameEn": "AMD Ryzen 7 8700G",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Ryzen 7",
+    "gen": "zen4",
+    "socket": "AM5",
+    "cores": "8C / 16T",
+    "clocks": "4.2 / 5.1 GHz",
+    "tdp_w": 65,
+    "igpu": "Radeon 780M",
+    "cache_l3": "16 MB",
+    "mem": "DDR5-5200",
+    "release": "2024-01",
+    "price_cny": null,
+    "summary": "桌面最强核显 APU。",
+    "tags": [
+      "核显",
+      "APU",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 1100,
+      "cb24_mt": 12000,
+      "gaming_rel": 73,
+      "igpu_rel": 100
+    }
+  },
+  {
+    "id": "amd-ryzen-5-8600g",
+    "name": "Ryzen 5 8600G",
+    "nameEn": "AMD Ryzen 5 8600G",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Ryzen 5",
+    "gen": "zen4",
+    "socket": "AM5",
+    "cores": "6C / 12T",
+    "clocks": "4.3 / 5.0 GHz",
+    "tdp_w": 65,
+    "igpu": "Radeon 760M",
+    "cache_l3": "16 MB",
+    "mem": "DDR5-5200",
+    "release": "2024-01",
+    "price_cny": null,
+    "summary": "无独显过渡装机之选。",
+    "tags": [
+      "核显",
+      "APU",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 1050,
+      "cb24_mt": 9500,
+      "gaming_rel": 70,
+      "igpu_rel": 78
+    }
+  },
+  {
+    "id": "amd-ryzen-5-5600g",
+    "name": "Ryzen 5 5600G",
+    "nameEn": "AMD Ryzen 5 5600G",
+    "brand": "AMD",
+    "form": "desktop",
+    "series": "Ryzen 5",
+    "gen": "zen3",
+    "socket": "AM4",
+    "cores": "6C / 12T",
+    "clocks": "3.9 / 4.4 GHz",
+    "tdp_w": 65,
+    "igpu": "Vega 7",
+    "cache_l3": "16 MB",
+    "mem": "DDR4-3200",
+    "release": "2021-08",
+    "price_cny": null,
+    "summary": "AM4 核显 APU。",
+    "tags": [
+      "核显",
+      "APU",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 740,
+      "cb24_mt": 5200,
+      "gaming_rel": 55,
+      "igpu_rel": 40
+    }
+  },
+  {
+    "id": "intel-core-i7-4700hq",
+    "name": "Core i7-4700HQ",
+    "nameEn": "Intel Core i7-4700HQ",
+    "brand": "Intel",
+    "form": "laptop",
+    "series": "Core i7",
+    "gen": "haswell",
+    "socket": "soldered",
+    "cores": "4C / 8T",
+    "clocks": "2.4 / 3.4 GHz",
+    "tdp_w": 47,
+    "igpu": "HD 4600",
+    "cache_l3": "6 MB",
+    "mem": "DDR3L-1600",
+    "release": "2013-06",
+    "price_cny": null,
+    "summary": "Haswell 游戏本标配。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 380,
+      "cb24_mt": 1700,
+      "gaming_rel": 25,
+      "igpu_rel": 15
+    }
+  },
+  {
+    "id": "intel-core-i7-6700hq",
+    "name": "Core i7-6700HQ",
+    "nameEn": "Intel Core i7-6700HQ",
+    "brand": "Intel",
+    "form": "laptop",
+    "series": "Core i7",
+    "gen": "skylake",
+    "socket": "soldered",
+    "cores": "4C / 8T",
+    "clocks": "2.6 / 3.5 GHz",
+    "tdp_w": 45,
+    "igpu": "HD 530",
+    "cache_l3": "6 MB",
+    "mem": "DDR4-2133",
+    "release": "2015-09",
+    "price_cny": null,
+    "summary": "Skylake 标压四核。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 430,
+      "cb24_mt": 2000,
+      "gaming_rel": 30,
+      "igpu_rel": 18
+    }
+  },
+  {
+    "id": "intel-core-i7-7700hq",
+    "name": "Core i7-7700HQ",
+    "nameEn": "Intel Core i7-7700HQ",
+    "brand": "Intel",
+    "form": "laptop",
+    "series": "Core i7",
+    "gen": "kaby-lake",
+    "socket": "soldered",
+    "cores": "4C / 8T",
+    "clocks": "2.8 / 3.8 GHz",
+    "tdp_w": 45,
+    "igpu": "HD 630",
+    "cache_l3": "6 MB",
+    "mem": "DDR4-2400",
+    "release": "2017-01",
+    "price_cny": null,
+    "summary": "最常见的游戏本 U 之一。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 460,
+      "cb24_mt": 2100,
+      "gaming_rel": 32,
+      "igpu_rel": 18
+    }
+  },
+  {
+    "id": "intel-core-i7-8750h",
+    "name": "Core i7-8750H",
+    "nameEn": "Intel Core i7-8750H",
+    "brand": "Intel",
+    "form": "laptop",
+    "series": "Core i7",
+    "gen": "coffee-lake",
+    "socket": "soldered",
+    "cores": "6C / 12T",
+    "clocks": "2.2 / 4.1 GHz",
+    "tdp_w": 45,
+    "igpu": "UHD 630",
+    "cache_l3": "9 MB",
+    "mem": "DDR4-2666",
+    "release": "2018-04",
+    "price_cny": null,
+    "summary": "笔记本六核元年。",
+    "tags": [
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 520,
+      "cb24_mt": 3300,
+      "gaming_rel": 40,
+      "igpu_rel": 20
+    }
+  },
+  {
+    "id": "intel-core-i7-9750h",
+    "name": "Core i7-9750H",
+    "nameEn": "Intel Core i7-9750H",
+    "brand": "Intel",
+    "form": "laptop",
+    "series": "Core i7",
+    "gen": "coffee-lake",
+    "socket": "soldered",
+    "cores": "6C / 12T",
+    "clocks": "2.6 / 4.5 GHz",
+    "tdp_w": 45,
+    "igpu": "UHD 630",
+    "cache_l3": "12 MB",
+    "mem": "DDR4-2666",
+    "release": "2019-04",
+    "price_cny": null,
+    "summary": "8750H 小改。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 550,
+      "cb24_mt": 3500,
+      "gaming_rel": 42,
+      "igpu_rel": 20
+    }
+  },
+  {
+    "id": "intel-core-i7-10750h",
+    "name": "Core i7-10750H",
+    "nameEn": "Intel Core i7-10750H",
+    "brand": "Intel",
+    "form": "laptop",
+    "series": "Core i7",
+    "gen": "comet-lake",
+    "socket": "soldered",
+    "cores": "6C / 12T",
+    "clocks": "2.6 / 5.0 GHz",
+    "tdp_w": 45,
+    "igpu": "UHD 630",
+    "cache_l3": "12 MB",
+    "mem": "DDR4-2933",
+    "release": "2020-04",
+    "price_cny": null,
+    "summary": "14nm 末代六核。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 600,
+      "cb24_mt": 3900,
+      "gaming_rel": 46,
+      "igpu_rel": 20
+    }
+  },
+  {
+    "id": "intel-core-i7-11800h",
+    "name": "Core i7-11800H",
+    "nameEn": "Intel Core i7-11800H",
+    "brand": "Intel",
+    "form": "laptop",
+    "series": "Core i7",
+    "gen": "tiger-lake",
+    "socket": "soldered",
+    "cores": "8C / 16T",
+    "clocks": "2.3 / 4.6 GHz",
+    "tdp_w": 45,
+    "igpu": "Iris Xe (32EU)",
+    "cache_l3": "24 MB",
+    "mem": "DDR4-3200",
+    "release": "2021-05",
+    "price_cny": null,
+    "summary": "10nm 八核，PCIe 4.0。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 780,
+      "cb24_mt": 6500,
+      "gaming_rel": 55,
+      "igpu_rel": 38
+    }
+  },
+  {
+    "id": "intel-core-i7-12700h",
+    "name": "Core i7-12700H",
+    "nameEn": "Intel Core i7-12700H",
+    "brand": "Intel",
+    "form": "laptop",
+    "series": "Core i7",
+    "gen": "alder-lake",
+    "socket": "soldered",
+    "cores": "6P+8E / 20T",
+    "clocks": "2.3 / 4.7 GHz",
+    "tdp_w": 45,
+    "igpu": "Iris Xe (96EU)",
+    "cache_l3": "24 MB",
+    "mem": "DDR5-4800 / LPDDR5-5200",
+    "release": "2022-01",
+    "price_cny": null,
+    "summary": "大小核进入笔记本。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 1040,
+      "cb24_mt": 9500,
+      "gaming_rel": 63,
+      "igpu_rel": 40
+    }
+  },
+  {
+    "id": "intel-core-i7-13700h",
+    "name": "Core i7-13700H",
+    "nameEn": "Intel Core i7-13700H",
+    "brand": "Intel",
+    "form": "laptop",
+    "series": "Core i7",
+    "gen": "raptor-lake",
+    "socket": "soldered",
+    "cores": "6P+8E / 20T",
+    "clocks": "2.4 / 5.0 GHz",
+    "tdp_w": 45,
+    "igpu": "Iris Xe (96EU)",
+    "cache_l3": "24 MB",
+    "mem": "DDR5-5200 / LPDDR5-6400",
+    "release": "2023-01",
+    "price_cny": null,
+    "summary": "13 代全能本主力。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 1090,
+      "cb24_mt": 10500,
+      "gaming_rel": 62,
+      "igpu_rel": 42
+    }
+  },
+  {
+    "id": "intel-core-i9-13980hx",
+    "name": "Core i9-13980HX",
+    "nameEn": "Intel Core i9-13980HX",
+    "brand": "Intel",
+    "form": "laptop",
+    "series": "Core i9",
+    "gen": "raptor-lake-hx",
+    "socket": "soldered",
+    "cores": "8P+16E / 32T",
+    "clocks": "2.2 / 5.6 GHz",
+    "tdp_w": 55,
+    "tdp_range": "55–157W",
+    "igpu": "UHD",
+    "cache_l3": "36 MB",
+    "mem": "DDR5-5600",
+    "release": "2023-01",
+    "price_cny": null,
+    "summary": "13 代游戏本旗舰。",
+    "tags": [
+      "游戏本",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 1230,
+      "cb24_mt": 19500,
+      "gaming_rel": 76,
+      "igpu_rel": 22
+    }
+  },
+  {
+    "id": "intel-core-i7-1360p",
+    "name": "Core i7-1360P",
+    "nameEn": "Intel Core i7-1360P",
+    "brand": "Intel",
+    "form": "laptop",
+    "series": "Core i7",
+    "gen": "raptor-lake",
+    "socket": "soldered",
+    "cores": "4P+8E / 16T",
+    "clocks": "2.2 / 5.0 GHz",
+    "tdp_w": 28,
+    "tdp_range": "28–64W",
+    "igpu": "Iris Xe (96EU)",
+    "cache_l3": "18 MB",
+    "mem": "LPDDR5-5200",
+    "release": "2023-01",
+    "price_cny": null,
+    "summary": "轻薄本 P 系列。",
+    "tags": [
+      "轻薄",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 1020,
+      "cb24_mt": 6800,
+      "gaming_rel": 48,
+      "igpu_rel": 40
+    }
+  },
+  {
+    "id": "amd-ryzen-7-4800h",
+    "name": "Ryzen 7 4800H",
+    "nameEn": "AMD Ryzen 7 4800H",
+    "brand": "AMD",
+    "form": "laptop",
+    "series": "Ryzen 7",
+    "gen": "zen2",
+    "socket": "soldered",
+    "cores": "8C / 16T",
+    "clocks": "2.9 / 4.2 GHz",
+    "tdp_w": 45,
+    "igpu": "Vega 8",
+    "cache_l3": "8 MB",
+    "mem": "DDR4-3200",
+    "release": "2020-01",
+    "price_cny": null,
+    "summary": "AMD 笔记本翻身之作。",
+    "tags": [
+      "经典",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 660,
+      "cb24_mt": 6500,
+      "gaming_rel": 48,
+      "igpu_rel": 30
+    }
+  },
+  {
+    "id": "amd-ryzen-7-5800h",
+    "name": "Ryzen 7 5800H",
+    "nameEn": "AMD Ryzen 7 5800H",
+    "brand": "AMD",
+    "form": "laptop",
+    "series": "Ryzen 7",
+    "gen": "zen3",
+    "socket": "soldered",
+    "cores": "8C / 16T",
+    "clocks": "3.2 / 4.4 GHz",
+    "tdp_w": 45,
+    "igpu": "Vega 8",
+    "cache_l3": "16 MB",
+    "mem": "DDR4-3200",
+    "release": "2021-01",
+    "price_cny": null,
+    "summary": "Zen 3 游戏本主力。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 790,
+      "cb24_mt": 8500,
+      "gaming_rel": 56,
+      "igpu_rel": 35
+    }
+  },
+  {
+    "id": "amd-ryzen-9-6900hs",
+    "name": "Ryzen 9 6900HS",
+    "nameEn": "AMD Ryzen 9 6900HS",
+    "brand": "AMD",
+    "form": "laptop",
+    "series": "Ryzen 9",
+    "gen": "zen3+",
+    "socket": "soldered",
+    "cores": "8C / 16T",
+    "clocks": "3.3 / 4.9 GHz",
+    "tdp_w": 35,
+    "igpu": "Radeon 680M",
+    "cache_l3": "16 MB",
+    "mem": "DDR5-4800 / LPDDR5-6400",
+    "release": "2022-02",
+    "price_cny": null,
+    "summary": "RDNA2 核显首发。",
+    "tags": [
+      "核显",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 830,
+      "cb24_mt": 8700,
+      "gaming_rel": 58,
+      "igpu_rel": 60
+    }
+  },
+  {
+    "id": "amd-ryzen-7-7735hs",
+    "name": "Ryzen 7 7735HS",
+    "nameEn": "AMD Ryzen 7 7735HS",
+    "brand": "AMD",
+    "form": "laptop",
+    "series": "Ryzen 7",
+    "gen": "zen3+",
+    "socket": "soldered",
+    "cores": "8C / 16T",
+    "clocks": "3.2 / 4.75 GHz",
+    "tdp_w": 45,
+    "igpu": "Radeon 680M",
+    "cache_l3": "16 MB",
+    "mem": "DDR5-4800",
+    "release": "2023-01",
+    "price_cny": null,
+    "summary": "6800H 换标。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 850,
+      "cb24_mt": 8800,
+      "gaming_rel": 56,
+      "igpu_rel": 60
+    }
+  },
+  {
+    "id": "amd-ryzen-7-7840hs",
+    "name": "Ryzen 7 7840HS",
+    "nameEn": "AMD Ryzen 7 7840HS",
+    "brand": "AMD",
+    "form": "laptop",
+    "series": "Ryzen 7",
+    "gen": "zen4",
+    "socket": "soldered",
+    "cores": "8C / 16T",
+    "clocks": "3.8 / 5.1 GHz",
+    "tdp_w": 45,
+    "igpu": "Radeon 780M",
+    "cache_l3": "16 MB",
+    "mem": "LPDDR5X-7500 / DDR5-5600",
+    "release": "2023-04",
+    "price_cny": null,
+    "summary": "Phoenix，780M 首发。",
+    "tags": [
+      "核显",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 1090,
+      "cb24_mt": 10800,
+      "gaming_rel": 56,
+      "igpu_rel": 73
+    }
+  },
+  {
+    "id": "apple-m1-8",
+    "name": "Apple M1 (8核)",
+    "nameEn": "Apple Apple M1 (8核)",
+    "brand": "Apple",
+    "form": "laptop",
+    "series": "M1",
+    "gen": "apple-m1",
+    "socket": "soldered",
+    "cores": "4P+4E / 8T",
+    "clocks": "— / 3.2 GHz",
+    "tdp_w": 15,
+    "tdp_range": "10–20W",
+    "igpu": "M1 GPU (8核)",
+    "cache_l3": "—",
+    "mem": "LPDDR4X-4266",
+    "release": "2020-11",
+    "price_cny": null,
+    "summary": "Apple Silicon 开山之作。",
+    "tags": [
+      "经典",
+      "能效",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 1090,
+      "cb24_mt": 5000,
+      "gaming_rel": 32,
+      "igpu_rel": 45
+    }
+  },
+  {
+    "id": "apple-m1-pro-10",
+    "name": "Apple M1 Pro (10核)",
+    "nameEn": "Apple Apple M1 Pro (10核)",
+    "brand": "Apple",
+    "form": "laptop",
+    "series": "M1",
+    "gen": "apple-m1",
+    "socket": "soldered",
+    "cores": "8P+2E / 10T",
+    "clocks": "— / 3.2 GHz",
+    "tdp_w": 30,
+    "tdp_range": "20–40W",
+    "igpu": "M1 Pro GPU (16核)",
+    "cache_l3": "—",
+    "mem": "LPDDR5-6400",
+    "release": "2021-10",
+    "price_cny": null,
+    "summary": "专业本重生。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 1100,
+      "cb24_mt": 8500,
+      "gaming_rel": 50,
+      "igpu_rel": 65
+    }
+  },
+  {
+    "id": "apple-m1-max-10",
+    "name": "Apple M1 Max (10核)",
+    "nameEn": "Apple Apple M1 Max (10核)",
+    "brand": "Apple",
+    "form": "laptop",
+    "series": "M1",
+    "gen": "apple-m1",
+    "socket": "soldered",
+    "cores": "8P+2E / 10T",
+    "clocks": "— / 3.2 GHz",
+    "tdp_w": 60,
+    "tdp_range": "30–70W",
+    "igpu": "M1 Max GPU (32核)",
+    "cache_l3": "—",
+    "mem": "LPDDR5-6400",
+    "release": "2021-10",
+    "price_cny": null,
+    "summary": "400GB/s 统一内存。",
+    "tags": [
+      "生产力",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 1100,
+      "cb24_mt": 8600,
+      "gaming_rel": 60,
+      "igpu_rel": 80
+    }
+  },
+  {
+    "id": "apple-m2-8",
+    "name": "Apple M2 (8核)",
+    "nameEn": "Apple Apple M2 (8核)",
+    "brand": "Apple",
+    "form": "laptop",
+    "series": "M2",
+    "gen": "apple-m2",
+    "socket": "soldered",
+    "cores": "4P+4E / 8T",
+    "clocks": "— / 3.5 GHz",
+    "tdp_w": 20,
+    "tdp_range": "10–22W",
+    "igpu": "M2 GPU (10核)",
+    "cache_l3": "—",
+    "mem": "LPDDR5-6400",
+    "release": "2022-06",
+    "price_cny": null,
+    "summary": "M1 小改。",
+    "tags": [
+      "轻薄",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 1230,
+      "cb24_mt": 5700,
+      "gaming_rel": 36,
+      "igpu_rel": 50
+    }
+  },
+  {
+    "id": "apple-m2-pro-12",
+    "name": "Apple M2 Pro (12核)",
+    "nameEn": "Apple Apple M2 Pro (12核)",
+    "brand": "Apple",
+    "form": "laptop",
+    "series": "M2",
+    "gen": "apple-m2",
+    "socket": "soldered",
+    "cores": "8P+4E / 12T",
+    "clocks": "— / 3.5 GHz",
+    "tdp_w": 30,
+    "tdp_range": "25–45W",
+    "igpu": "M2 Pro GPU (19核)",
+    "cache_l3": "—",
+    "mem": "LPDDR5-6400",
+    "release": "2023-01",
+    "price_cny": null,
+    "summary": "Apple M2 Pro (12核)。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 1250,
+      "cb24_mt": 10500,
+      "gaming_rel": 55,
+      "igpu_rel": 70
+    }
+  },
+  {
+    "id": "apple-m2-max-12",
+    "name": "Apple M2 Max (12核)",
+    "nameEn": "Apple Apple M2 Max (12核)",
+    "brand": "Apple",
+    "form": "laptop",
+    "series": "M2",
+    "gen": "apple-m2",
+    "socket": "soldered",
+    "cores": "8P+4E / 12T",
+    "clocks": "— / 3.7 GHz",
+    "tdp_w": 60,
+    "tdp_range": "35–80W",
+    "igpu": "M2 Max GPU (38核)",
+    "cache_l3": "—",
+    "mem": "LPDDR5-6400",
+    "release": "2023-01",
+    "price_cny": null,
+    "summary": "Apple M2 Max (12核)。",
+    "tags": [
+      "生产力",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 1260,
+      "cb24_mt": 10800,
+      "gaming_rel": 65,
+      "igpu_rel": 88
+    }
+  },
+  {
+    "id": "apple-m3-pro-12",
+    "name": "Apple M3 Pro (12核)",
+    "nameEn": "Apple Apple M3 Pro (12核)",
+    "brand": "Apple",
+    "form": "laptop",
+    "series": "M3",
+    "gen": "apple-m3",
+    "socket": "soldered",
+    "cores": "6P+6E / 12T",
+    "clocks": "— / 4.05 GHz",
+    "tdp_w": 35,
+    "tdp_range": "25–45W",
+    "igpu": "M3 Pro GPU (18核)",
+    "cache_l3": "—",
+    "mem": "LPDDR5-6400",
+    "release": "2023-11",
+    "price_cny": null,
+    "summary": "P 核减少，能效为先。",
+    "tags": [
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 1430,
+      "cb24_mt": 10300,
+      "gaming_rel": 58,
+      "igpu_rel": 72
+    }
+  },
+  {
+    "id": "apple-m3-max-16",
+    "name": "Apple M3 Max (16核)",
+    "nameEn": "Apple Apple M3 Max (16核)",
+    "brand": "Apple",
+    "form": "laptop",
+    "series": "M3",
+    "gen": "apple-m3",
+    "socket": "soldered",
+    "cores": "12P+4E / 16T",
+    "clocks": "— / 4.05 GHz",
+    "tdp_w": 60,
+    "tdp_range": "40–80W",
+    "igpu": "M3 Max GPU (40核)",
+    "cache_l3": "—",
+    "mem": "LPDDR5-6400",
+    "release": "2023-11",
+    "price_cny": null,
+    "summary": "硬件光追首次登陆 Mac。",
+    "tags": [
+      "生产力",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 1450,
+      "cb24_mt": 17500,
+      "gaming_rel": 72,
+      "igpu_rel": 94
+    }
+  },
+  {
+    "id": "qualcomm-snapdragon-8cx-gen3",
+    "name": "Snapdragon 8cx Gen 3",
+    "nameEn": "Qualcomm Snapdragon 8cx Gen 3",
+    "brand": "Qualcomm",
+    "form": "laptop",
+    "series": "Snapdragon 8cx",
+    "gen": "snapdragon-8cx",
+    "socket": "soldered",
+    "cores": "8C / 8T",
+    "clocks": "3.0 GHz",
+    "tdp_w": 15,
+    "igpu": "Adreno 690",
+    "cache_l3": "—",
+    "mem": "LPDDR4X-4266",
+    "release": "2022-03",
+    "price_cny": null,
+    "summary": "X Elite 之前的 ARM 本，性能弱。",
+    "tags": [
+      "ARM",
+      "历史"
+    ],
+    "est": true,
+    "scores": {
+      "cb24_st": 600,
+      "cb24_mt": 3500,
+      "gaming_rel": 15,
+      "igpu_rel": 25
+    }
   }
 ]

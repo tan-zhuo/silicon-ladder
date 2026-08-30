@@ -448,5 +448,275 @@
     "release": "2021-08",
     "price_cny": 699,
     "summary": "EVGA 经典金牌，已渐退市。"
+  },
+  {
+    "id": "corsair-hx620",
+    "name": "Corsair HX620W",
+    "brand": "Corsair",
+    "form": "atx",
+    "watt": 620,
+    "tier": "A",
+    "efficiency": "80Plus",
+    "atx31": false,
+    "modular": "semi",
+    "oem": "Seasonic",
+    "release": "2007-01",
+    "price_cny": null,
+    "summary": "海盗船电源起家之作，海韵代工。",
+    "tags": [
+      "历史"
+    ]
+  },
+  {
+    "id": "corsair-tx650",
+    "name": "Corsair TX650W",
+    "brand": "Corsair",
+    "form": "atx",
+    "watt": 650,
+    "tier": "B",
+    "efficiency": "80Plus",
+    "atx31": false,
+    "modular": "none",
+    "oem": "Seasonic",
+    "release": "2008-01",
+    "price_cny": null,
+    "summary": "非模组主流款。",
+    "tags": [
+      "历史"
+    ]
+  },
+  {
+    "id": "antec-earthwatts-500",
+    "name": "Antec EarthWatts 500",
+    "brand": "Antec",
+    "form": "atx",
+    "watt": 500,
+    "tier": "C",
+    "efficiency": "80Plus",
+    "atx31": false,
+    "modular": "none",
+    "oem": "Seasonic",
+    "release": "2008-01",
+    "price_cny": null,
+    "summary": "入门级，用料一般。",
+    "tags": [
+      "历史"
+    ]
+  },
+  {
+    "id": "cooler-master-gx-650",
+    "name": "Cooler Master GX 650W",
+    "brand": "Cooler Master",
+    "form": "atx",
+    "watt": 650,
+    "tier": "D",
+    "efficiency": "80Plus Bronze",
+    "atx31": false,
+    "modular": "none",
+    "oem": "Enhance",
+    "release": "2010-01",
+    "price_cny": null,
+    "summary": "纹波超标，评测口碑差。",
+    "tags": [
+      "历史"
+    ]
+  },
+  {
+    "id": "seasonic-x-650",
+    "name": "Seasonic X-650",
+    "brand": "Seasonic",
+    "form": "atx",
+    "watt": 650,
+    "tier": "A",
+    "efficiency": "80Plus Gold",
+    "atx31": false,
+    "modular": "full",
+    "oem": "Seasonic",
+    "release": "2010-01",
+    "price_cny": null,
+    "summary": "金牌全模组开创者。",
+    "tags": [
+      "历史"
+    ]
+  },
+  {
+    "id": "corsair-ax850-2010",
+    "name": "Corsair AX850 (2010)",
+    "brand": "Corsair",
+    "form": "atx",
+    "watt": 850,
+    "tier": "A",
+    "efficiency": "80Plus Gold",
+    "atx31": false,
+    "modular": "full",
+    "oem": "Seasonic",
+    "release": "2010-06",
+    "price_cny": null,
+    "summary": "X 系列换壳。",
+    "tags": [
+      "历史"
+    ]
+  },
+  {
+    "id": "corsair-cx600",
+    "name": "Corsair CX600",
+    "brand": "Corsair",
+    "form": "atx",
+    "watt": 600,
+    "tier": "C",
+    "efficiency": "80Plus Bronze",
+    "atx31": false,
+    "modular": "none",
+    "oem": "CWT",
+    "release": "2012-01",
+    "price_cny": null,
+    "summary": "铜牌入门，电容一般。",
+    "tags": [
+      "历史"
+    ]
+  },
+  {
+    "id": "corsair-rm750-2013",
+    "name": "Corsair RM750 (2013)",
+    "brand": "Corsair",
+    "form": "atx",
+    "watt": 750,
+    "tier": "B",
+    "efficiency": "80Plus Gold",
+    "atx31": false,
+    "modular": "full",
+    "oem": "CWT",
+    "release": "2013-09",
+    "price_cny": null,
+    "summary": "首代 RM，电容用料被诟病。",
+    "tags": [
+      "历史"
+    ]
+  },
+  {
+    "id": "evga-supernova-750-g2",
+    "name": "EVGA SuperNOVA 750 G2",
+    "brand": "EVGA",
+    "form": "atx",
+    "watt": 750,
+    "tier": "A",
+    "efficiency": "80Plus Gold",
+    "atx31": false,
+    "modular": "full",
+    "oem": "Super Flower",
+    "release": "2014-01",
+    "price_cny": null,
+    "summary": "振华 Leadex 平台，一代神机。",
+    "tags": [
+      "历史"
+    ]
+  },
+  {
+    "id": "thermaltake-smart-600",
+    "name": "Thermaltake Smart 600W",
+    "brand": "Thermaltake",
+    "form": "atx",
+    "watt": 600,
+    "tier": "D",
+    "efficiency": "80Plus White",
+    "atx31": false,
+    "modular": "none",
+    "oem": "HEC",
+    "release": "2015-01",
+    "price_cny": null,
+    "summary": "白牌入门，不建议带独显。",
+    "tags": [
+      "历史"
+    ]
+  },
+  {
+    "id": "seasonic-focus-plus-gold-750",
+    "name": "Seasonic Focus Plus Gold 750",
+    "brand": "Seasonic",
+    "form": "atx",
+    "watt": 750,
+    "tier": "A",
+    "efficiency": "80Plus Gold",
+    "atx31": false,
+    "modular": "full",
+    "oem": "Seasonic",
+    "release": "2017-08",
+    "price_cny": null,
+    "summary": "海韵主流金牌，十年保。",
+    "tags": [
+      "历史"
+    ]
+  },
+  {
+    "id": "corsair-rm750x-2018",
+    "name": "Corsair RM750x (2018)",
+    "brand": "Corsair",
+    "form": "atx",
+    "watt": 750,
+    "tier": "A",
+    "efficiency": "80Plus Gold",
+    "atx31": false,
+    "modular": "full",
+    "oem": "CWT",
+    "release": "2018-03",
+    "price_cny": null,
+    "summary": "长期推荐款。",
+    "tags": [
+      "历史"
+    ]
+  },
+  {
+    "id": "corsair-sf600-2018",
+    "name": "Corsair SF600 Platinum",
+    "brand": "Corsair",
+    "form": "sfx",
+    "watt": 600,
+    "tier": "A",
+    "efficiency": "80Plus Platinum",
+    "atx31": false,
+    "modular": "full",
+    "oem": "Great Wall",
+    "release": "2018-05",
+    "price_cny": null,
+    "summary": "ITX 装机经典。",
+    "tags": [
+      "历史"
+    ]
+  },
+  {
+    "id": "be-quiet-straight-power-11-750",
+    "name": "be quiet! Straight Power 11 750W",
+    "brand": "be quiet!",
+    "form": "atx",
+    "watt": 750,
+    "tier": "A",
+    "efficiency": "80Plus Gold",
+    "atx31": false,
+    "modular": "full",
+    "oem": "FSP",
+    "release": "2018-01",
+    "price_cny": null,
+    "summary": "安静金牌。",
+    "tags": [
+      "历史"
+    ]
+  },
+  {
+    "id": "great-wall-gw-6000",
+    "name": "长城 GW-6000",
+    "brand": "Great Wall",
+    "form": "atx",
+    "watt": 500,
+    "tier": "C",
+    "efficiency": "80Plus Bronze",
+    "atx31": false,
+    "modular": "none",
+    "oem": "Great Wall",
+    "release": "2018-01",
+    "price_cny": null,
+    "summary": "国产入门铜牌。",
+    "tags": [
+      "历史"
+    ]
   }
 ]

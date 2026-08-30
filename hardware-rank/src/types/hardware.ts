@@ -16,6 +16,8 @@ export interface BaseItem {
   price_cny?: number | null
   summary: string
   tags?: string[]
+  /** 历史硬件：分数为按公开评测比例换算的估算值 */
+  est?: boolean
 }
 
 export interface Cpu extends BaseItem {

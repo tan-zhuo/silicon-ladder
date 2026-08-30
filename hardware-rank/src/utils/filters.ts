@@ -16,6 +16,8 @@ export interface FilterState {
   wattMax: number | null
   tier: string
   atx31: boolean
+  yearMin: number | null
+  yearMax: number | null
 }
 
 function str(v: unknown): string {
@@ -44,6 +46,8 @@ export function parseQuery(q: LocationQuery, defaults: { form: string; sort: str
     wattMax: numOrNull(q.wattMax),
     tier: str(q.tier),
     atx31: str(q.atx31) === 'true',
+    yearMin: numOrNull(q.yearMin),
+    yearMax: numOrNull(q.yearMax),
   }
 }
 
@@ -63,6 +67,8 @@ export function toQuery(f: FilterState, defaults: { form: string; sort: string }
   if (f.wattMax !== null) out.wattMax = String(f.wattMax)
   if (f.tier) out.tier = f.tier
   if (f.atx31) out.atx31 = 'true'
+  if (f.yearMin !== null) out.yearMin = String(f.yearMin)
+  if (f.yearMax !== null) out.yearMax = String(f.yearMax)
   return out
 }
 
@@ -86,6 +92,9 @@ export function applyFilters(cat: Category, items: AnyItem[], f: FilterState): A
     if (it.form !== f.form) return false
     if (f.brand.length && !f.brand.includes(it.brand)) return false
     if (!matchQuery(it, f.q)) return false
+    const y = Number(it.release.slice(0, 4))
+    if (f.yearMin !== null && y < f.yearMin) return false
+    if (f.yearMax !== null && y > f.yearMax) return false
     if (cat === 'cpu') {
       const c = it as Cpu
       if (f.gen && c.gen !== f.gen) return false
