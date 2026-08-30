@@ -84,34 +84,33 @@ useSeo(() => ({
 
 <template>
   <div class="space-y-4">
-    <div class="flex flex-wrap items-end justify-between gap-3">
-      <div>
-        <div class="kicker">{{ catLabel(category) }}</div>
-        <h1 class="text-2xl sm:text-3xl font-bold tracking-tight mt-1">{{ title }}</h1>
-        <p class="text-sm text-muted mt-1">{{ t('rank.count', { n: rows.length }) }}</p>
-      </div>
-      <div v-if="canLadder" class="seg">
-        <button class="seg-btn" :class="{ 'seg-active': view === 'list' }" @click="setView('list')">{{ t('rank.list') }}</button>
-        <button class="seg-btn" :class="{ 'seg-active': view === 'ladder' }" @click="setView('ladder')">{{ t('rank.ladder') }}</button>
-      </div>
+    <div>
+      <div class="kicker">{{ catLabel(category) }}</div>
+      <h1 class="text-2xl sm:text-3xl font-bold tracking-tight mt-1">{{ title }}</h1>
+      <p class="text-sm text-muted mt-1">{{ t('rank.count', { n: rows.length }) }}</p>
     </div>
 
     <div v-if="category === 'psu'" class="notice-info">{{ t('rank.psuNote') }}</div>
     <div v-if="isLaptop" class="notice-warn">{{ t('rank.laptopWarn') }}</div>
     <div v-if="category === 'ram' && filters.form === 'onboard'" class="notice-info">{{ t('rank.onboardNote') }}</div>
 
-    <div class="flex flex-col lg:flex-row lg:items-center gap-3">
-      <FormTabs :options="FORMS[category]" :model-value="filters.form" :counts="formCounts" @update:model-value="setForm" />
-      <div class="lg:ml-auto">
-        <SortTabs v-if="category !== 'psu'" :options="sortOptions" :model-value="effectiveSort" @update:model-value="setSort" />
-        <span v-else class="text-xs text-muted">{{ t('rank.psuSort') }}</span>
-      </div>
-    </div>
+    <FormTabs :options="FORMS[category]" :model-value="filters.form" :counts="formCounts" @update:model-value="setForm" />
 
     <FilterBar :category="category" :model-value="filters" :brands="brands" :gens="gens" :years="years" @update:model-value="update" />
 
-    <p v-if="view === 'ladder'" class="text-xs text-muted">{{ t('rank.ladderNote', { sort: sortLabel }) }}<span v-if="hasEst"> {{ t('rank.estNote') }}</span></p>
-    <p v-else-if="hasEst" class="text-xs text-muted">{{ t('rank.estNote') }}</p>
+    <!-- 工具栏：紧贴列表 -->
+    <div class="flex flex-wrap items-center gap-3 -mb-1">
+      <SortTabs v-if="category !== 'psu'" :options="sortOptions" :model-value="effectiveSort" @update:model-value="setSort" />
+      <span v-else class="text-xs text-muted">{{ t('rank.psuSort') }}</span>
+      <div class="ml-auto flex items-center gap-3">
+        <span v-if="hasEst" class="hidden xl:inline text-xs text-muted">{{ t('rank.estNote') }}</span>
+        <div v-if="canLadder" class="seg">
+          <button class="seg-btn" :class="{ 'seg-active': view === 'list' }" @click="setView('list')">{{ t('rank.list') }}</button>
+          <button class="seg-btn" :class="{ 'seg-active': view === 'ladder' }" @click="setView('ladder')">{{ t('rank.ladder') }}</button>
+        </div>
+      </div>
+    </div>
+    <p v-if="view === 'ladder'" class="text-xs text-muted">{{ t('rank.ladderNote', { sort: sortLabel }) }}</p>
     <LadderView v-if="view === 'ladder'" :category="category" :rows="rows" :sort="effectiveSort" />
     <RankTable v-else :category="category" :rows="rows" :sort="effectiveSort" :dir="filters.dir" @sort="onHeaderSort" />
   </div>
