@@ -126,6 +126,7 @@ useSeo(() => {
     title: `${name} ${t('product.specs')}、${t('product.scores')}、${t('product.platform')}`,
     description: `${it.brand} ${name}（${it.release}）${rank}。${it.summary} ${specText}`,
     path: `/product/${category.value}/${it.id}`,
+    image: `${SITE_URL}/og/${category.value}/${it.id}.png`,
     jsonLd: [
       breadcrumb([{ name: t('product.home'), path: '/' }, { name: `${formLabel(it.form)} ${catLabel(category.value)}`, path: `/rank/${category.value}` }, { name, path: `/product/${category.value}/${it.id}` }]),
       {

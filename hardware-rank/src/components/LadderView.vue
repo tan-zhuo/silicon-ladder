@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import type { Category, RankedRow } from '@/types/hardware'
 import { formBadge } from '@/utils/columns'
@@ -8,8 +8,23 @@ import { useCompare } from '@/stores/compare'
 import { UiCheckbox } from '@/components/ui'
 import BrandLogo from '@/components/BrandLogo.vue'
 import { useI18n, displayName } from '@/i18n'
+import { toPng } from 'html-to-image'
+import { UiButton } from '@/components/ui'
+import { catLabel, formLabel } from '@/utils/format'
 
 const props = defineProps<{ category: Category; rows: RankedRow[]; sort: string }>()
+const exportEl = ref<HTMLElement | null>(null)
+const exporting = ref(false)
+async function exportImage() {
+  if (!exportEl.value || exporting.value) return
+  exporting.value = true
+  exportEl.value.classList.add('exporting')
+  try {
+    const bg = getComputedStyle(document.documentElement).getPropertyValue('--c-bg').trim()
+    const url = await toPng(exportEl.value, { pixelRatio: 2, backgroundColor: `rgb(${bg})`, filter: (n) => !(n instanceof HTMLElement && n.dataset.noExport !== undefined) })
+    const a = document.createElement('a'); a.href = url; a.download = `silicon-ladder-${props.category}-${props.rows[0]?.item.form ?? ''}-${props.sort}.png`; a.click()
+  } finally { exportEl.value.classList.remove('exporting'); exporting.value = false }
+}
 const router = useRouter()
 const compare = useCompare()
 const { t } = useI18n()
@@ -72,7 +87,10 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
       </div>
     </div>
     <div class="overflow-x-auto hidden md:block">
-      <div class="min-w-[640px]">
+      <div ref="exportEl" class="min-w-[640px]">
+        <div class="hidden export-only px-4 py-3 border-b border-line items-center gap-3">
+          <span class="font-bold">Silicon Ladder</span><span class="text-muted text-sm">{{ formLabel(rows[0]?.item.form ?? '') }} {{ catLabel(category) }} · {{ sortLabel }}</span>
+        </div>
         <!-- 品牌表头 -->
         <div class="grid border-b border-line bg-card2" :style="{ gridTemplateColumns: gridCols }">
           <template v-if="mirror">
@@ -170,8 +188,10 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
           </template>
         </div>
 
-        <div class="px-4 py-2 text-[11px] text-muted border-t border-line flex flex-wrap gap-x-4 gap-y-1">
+        <div class="px-4 py-2 text-[11px] text-muted border-t border-line flex flex-wrap items-center gap-x-4 gap-y-1">
           <span>{{ t('ladder.legend') }}</span>
+          <span class="hidden export-only">{{ t('exportImg.footer') }}</span>
+          <span class="ml-auto" data-no-export><UiButton size="sm" :disabled="exporting" @click="exportImage">{{ exporting ? t('exportImg.busy') : t('exportImg.btn') }}</UiButton></span>
           <span v-if="unscored.length">{{ t('ladder.unscored', { sort: sortLabel }) }}{{ unscored.map(r => displayName(r.item)).join(', ') }}</span>
         </div>
         <div v-if="!scored.length" class="p-10 text-center text-muted">{{ t('rank.empty') }}</div>
@@ -182,6 +202,7 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
 
 <style scoped>
 .ladder-item { cursor: pointer; border-radius: 6px; }
+.exporting .export-only { display: flex !important; }
 .ladder-item:focus-visible { outline: 2px solid rgb(var(--c-accent)); outline-offset: 2px; }
 .ladder-item:hover > div:first-child, .ladder-item:hover > div:last-child { filter: saturate(1.2); }
 </style>

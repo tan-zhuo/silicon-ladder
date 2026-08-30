@@ -22,7 +22,8 @@ npm run calibrate  # 用 data-src/calibration.csv 回写真实评测分数
 
 1. `public/data/*.json` 是站点唯一数据源；`scripts/validate-data.mjs` 在每次 build 前校验 id 唯一/格式、枚举、`null` 而非 0 等。
 2. 分数校准：把公开评测数据填入 `data-src/calibration.csv`（模板见 `data-src/README.md`），`npm run calibrate` 按池内比例回写并清除 `est` 标记、`meta.version` +1。
-3. 构建后 `scripts/prerender.mjs` 生成每个路由的静态 HTML、sitemap、robots。
+3. 构建后 `scripts/gen-og.mjs` 用 `@resvg/resvg-js` + 内置 DejaVu 字体为每个产品生成 1200×630 OG 图（`dist/og/<cat>/<id>.png`），再由 `scripts/prerender.mjs` 生成每个路由 × 三语的静态 HTML、sitemap、robots。
+4. 天梯图右下角「导出图片」用 `html-to-image` 在浏览器端生成 2× PNG。
 
 ## 页面
 

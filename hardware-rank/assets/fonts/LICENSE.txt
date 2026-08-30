@@ -1,0 +1,2 @@
+DejaVu fonts — Bitstream Vera Fonts Copyright (c) 2003 Bitstream, Inc.; DejaVu changes are in public domain.
+Used only at build time to rasterize Open Graph images (scripts/gen-og.mjs). License: https://dejavu-fonts.github.io/License.html

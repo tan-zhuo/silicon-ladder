@@ -80,5 +80,6 @@ export const zh = {
   chips: { active: '已选', clear: '全部清除', era: '年代', tdp: 'TDP', watt: '瓦数', q: '关键词' },
   rel: { rivals: '直接竞品', rivalsDesc: '同池、同期（±1 年）、综合分接近的其他品牌产品', lineage: '同系列前后代', prev: '上一代', next: '下一代', vsFirst: '较第一列', same: '相同', diff: '不同' },
   tags: { X3D: 'X3D', 游戏: '游戏', 旗舰: '旗舰', 生产力: '生产力', 性价比: '性价比', 能效: '能效', ARM: 'ARM', 核显: '核显', 轻薄: '轻薄', 全能本: '全能本', 游戏本: '游戏本', AM4: 'AM4', 经典: '经典', 历史: '历史', HEDT: 'HEDT', APU: 'APU', '4K': '4K', '2K': '2K', 高TGP: '高 TGP', 中TGP: '中 TGP', 低TGP: '低 TGP', '1080p': '1080p', PCIe5: 'PCIe 5.0', 国产: '国产', 入门: '入门', SATA: 'SATA', NAS: 'NAS', CMR: 'CMR', QLC: 'QLC', 企业: '企业级', SMR: 'SMR' },
+  exportImg: { btn: '导出图片', busy: '生成中…', footer: '来源 silicon-ladder.vercel.app · 相对分，池内最高 100' },
   loading: '加载数据中…', loadError: '数据加载失败：',
 }

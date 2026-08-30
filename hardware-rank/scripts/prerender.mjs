@@ -39,7 +39,7 @@ const nameOf = (i, l) => (l === 'zh' || !i.nameEn ? i.name : i.nameEn.startsWith
 const sumOf = (i, l) => (l === 'en' ? i.summary_en : l === 'ja' ? i.summary_ja : i.summary) || i.summary
 
 const template = readFileSync(join(DIST, 'index.html'), 'utf8')
-function render(path, l, { title, description, jsonLd = [], body = '' }) {
+function render(path, l, { title, description, jsonLd = [], body = '', image }) {
   const p = prefix(l) + (path === '/' ? '' : path)
   const url = SITE + (p || '/')
   const alts = LANGS.map((x) => `    <link rel="alternate" hreflang="${HL[x]}" href="${SITE + (prefix(x) + (path === '/' ? '' : path) || '/')}" />`).join('\n') + `\n    <link rel="alternate" hreflang="x-default" href="${SITE + (path === '/' ? '/' : path)}" />`
@@ -49,6 +49,7 @@ function render(path, l, { title, description, jsonLd = [], body = '' }) {
     .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${esc(description)}" />`)
     .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${url}" />`)
     .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${esc(title)}" />`)
+  if (image) html = html.replace(/<meta property="og:image" content="[^"]*" \/>/, `<meta property="og:image" content="${SITE}${image}" />`).replace('</head>', `    <meta property="og:image:width" content="1200" />\n    <meta property="og:image:height" content="630" />\n    <meta name="twitter:image" content="${SITE}${image}" />\n  </head>`)
   html = html.replace('</head>', `    <meta property="og:url" content="${url}" />\n    <meta property="og:description" content="${esc(description)}" />\n    <meta property="og:locale" content="${l === 'zh' ? 'zh_CN' : l === 'ja' ? 'ja_JP' : 'en_US'}" />\n${alts}\n` + jsonLd.map((o) => `    <script type="application/ld+json">${JSON.stringify(o)}</script>`).join('\n') + '\n  </head>')
   html = html.replace('<div id="app"></div>', `<div id="app"></div>\n    <div id="ssr-summary" style="max-width:960px;margin:24px auto;padding:0 16px;font-family:system-ui,sans-serif;color:#0F172A">${body}</div>`)
   const rel = (p || '/').replace(/^\//, '')
@@ -86,7 +87,7 @@ for (const l of LANGS) {
     const n = nameOf(i, l); const C = t.cat[cat]; const F = t.form[i.form]
     const title = t.prodTitle(n, F, C); const desc = t.prodDesc(i.brand, n, i.release, sumOf(i, l), lines.slice(0, 5).map(([k, v]) => `${k} ${v}`).join(', '))
     const body = `<h1>${esc(n)}</h1><p>${esc(i.brand)} · ${esc(F)} ${esc(C)} · ${esc(i.release)}</p><p>${esc(sumOf(i, l))}</p><table>` + lines.map(([k, v]) => `<tr><th align="left">${esc(k)}</th><td>${esc(v)}</td></tr>`).join('') + `</table><p><a href="${prefix(l)}/rank/${cat}">${esc(t.viewAll(C))}</a></p>`
-    render(`/product/${cat}/${i.id}`, l, { title, description: desc, body, jsonLd: [bc(l, [[t.home, '/'], [C + ' ' + t.rankings, `/rank/${cat}`], [n, `/product/${cat}/${i.id}`]]), { '@context': 'https://schema.org', '@type': 'Product', name: n, brand: { '@type': 'Brand', name: i.brand }, description: sumOf(i, l), releaseDate: i.release, sku: i.id, url: `${SITE}${prefix(l)}/product/${cat}/${i.id}`, additionalProperty: lines.map(([k, v]) => ({ '@type': 'PropertyValue', name: k, value: String(v) })), ...(i.price_cny ? { offers: { '@type': 'Offer', priceCurrency: 'CNY', price: i.price_cny } } : {}) }] })
+    render(`/product/${cat}/${i.id}`, l, { title, description: desc, body, image: `/og/${cat}/${i.id}.png`, jsonLd: [bc(l, [[t.home, '/'], [C + ' ' + t.rankings, `/rank/${cat}`], [n, `/product/${cat}/${i.id}`]]), { '@context': 'https://schema.org', '@type': 'Product', name: n, brand: { '@type': 'Brand', name: i.brand }, description: sumOf(i, l), releaseDate: i.release, sku: i.id, url: `${SITE}${prefix(l)}/product/${cat}/${i.id}`, additionalProperty: lines.map(([k, v]) => ({ '@type': 'PropertyValue', name: k, value: String(v) })), ...(i.price_cny ? { offers: { '@type': 'Offer', priceCurrency: 'CNY', price: i.price_cny } } : {}) }] })
     if (l === 'zh') paths.push([`/product/${cat}/${i.id}`, '0.7', 'monthly'])
   }
   render('/guide', l, { title: t.guide[0], description: t.guide[1], body: `<h1>${esc(t.guide[2])}</h1>` })
