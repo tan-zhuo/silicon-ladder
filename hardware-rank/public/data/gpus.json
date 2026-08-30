@@ -39,7 +39,7 @@
       "mem_gbps": 28,
       "mem_bw_gbs": 1792,
       "l2_mb": 96,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 104.8,
       "launch_usd": 1999
     }
@@ -83,7 +83,7 @@
       "mem_gbps": 30,
       "mem_bw_gbs": 960,
       "l2_mb": 64,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 56.3,
       "launch_usd": 999
     }
@@ -128,7 +128,7 @@
       "mem_gbps": 21,
       "mem_bw_gbs": 1008,
       "l2_mb": 72,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 82.6,
       "launch_usd": 1599
     }
@@ -172,7 +172,7 @@
       "mem_gbps": 28,
       "mem_bw_gbs": 896,
       "l2_mb": 48,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 43.9,
       "launch_usd": 749
     }
@@ -261,7 +261,7 @@
       "mem_gbps": 21,
       "mem_bw_gbs": 504,
       "l2_mb": 48,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 35.5,
       "launch_usd": 599
     }
@@ -353,9 +353,9 @@
       "mem_gbps": 28,
       "mem_bw_gbs": 896,
       "l2_mb": 64,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 45.3,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -399,9 +399,9 @@
       "mem_gbps": 28,
       "mem_bw_gbs": 896,
       "l2_mb": 48,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 33.6,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -445,9 +445,9 @@
       "mem_gbps": 28,
       "mem_bw_gbs": 448,
       "l2_mb": 32,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 18.5,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -492,9 +492,9 @@
       "mem_gbps": 28,
       "mem_bw_gbs": 448,
       "l2_mb": 32,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 17.5,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -538,9 +538,9 @@
       "mem_gbps": 16,
       "mem_bw_gbs": 256,
       "l2_mb": 32,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 20,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -571,22 +571,22 @@
     "summary_en": "iGPU ceiling: weak RT, strong productivity.",
     "summary_ja": "内蔵GPUの天井。RT は弱いが生産性は強い。",
     "tech": {
-      "die_mm2": null,
-      "transistors_m": null,
+      "die_mm2": -1,
+      "transistors_m": -1,
       "units": 40,
       "shaders": 5120,
       "tmus": 320,
       "rops": 160,
       "rt_cores": 40,
       "tensor_cores": null,
-      "base_mhz": null,
+      "base_mhz": -1,
       "boost_mhz": 1578,
       "mem_gbps": null,
       "mem_bw_gbs": 546,
       "l2_mb": null,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 16.2,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -628,7 +628,7 @@
       "mem_gbps": 28,
       "mem_bw_gbs": 672,
       "l2_mb": 48,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 30.9,
       "launch_usd": 549
     }
@@ -673,7 +673,7 @@
       "mem_gbps": 28,
       "mem_bw_gbs": 448,
       "l2_mb": 32,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 23.7,
       "launch_usd": 429
     }
@@ -717,7 +717,7 @@
       "mem_gbps": 28,
       "mem_bw_gbs": 448,
       "l2_mb": 32,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 19.2,
       "launch_usd": 299
     }
@@ -761,7 +761,7 @@
       "mem_gbps": 23,
       "mem_bw_gbs": 736,
       "l2_mb": 64,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 52.2,
       "launch_usd": 999
     }
@@ -805,7 +805,7 @@
       "mem_gbps": 21,
       "mem_bw_gbs": 672,
       "l2_mb": 48,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 44.1,
       "launch_usd": 799
     }
@@ -849,7 +849,7 @@
       "mem_gbps": 21,
       "mem_bw_gbs": 504,
       "l2_mb": 36,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 29.1,
       "launch_usd": 599
     }
@@ -893,7 +893,7 @@
       "mem_gbps": 18,
       "mem_bw_gbs": 288,
       "l2_mb": 32,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 22.1,
       "launch_usd": 399
     }
@@ -938,7 +938,7 @@
       "mem_gbps": 17,
       "mem_bw_gbs": 272,
       "l2_mb": 24,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 15.1,
       "launch_usd": 299
     }
@@ -982,7 +982,7 @@
       "mem_gbps": 19,
       "mem_bw_gbs": 760,
       "l2_mb": 5,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 29.8,
       "launch_usd": 699
     }
@@ -1026,7 +1026,7 @@
       "mem_gbps": 14,
       "mem_bw_gbs": 448,
       "l2_mb": 4,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 20.3,
       "launch_usd": 499
     }
@@ -1070,7 +1070,7 @@
       "mem_gbps": 15,
       "mem_bw_gbs": 360,
       "l2_mb": 3,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 12.7,
       "launch_usd": 329
     }
@@ -1473,7 +1473,7 @@
       "mem_gbps": 19,
       "mem_bw_gbs": 456,
       "l2_mb": 18,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 13.7,
       "launch_usd": 249
     }
@@ -1517,7 +1517,7 @@
       "mem_gbps": 19,
       "mem_bw_gbs": 380,
       "l2_mb": 18,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 11.5,
       "launch_usd": 219
     }
@@ -1561,7 +1561,7 @@
       "mem_gbps": 17.5,
       "mem_bw_gbs": 560,
       "l2_mb": 16,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 17.2,
       "launch_usd": 349
     }
@@ -1607,9 +1607,9 @@
       "mem_gbps": 28,
       "mem_bw_gbs": 672,
       "l2_mb": 48,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 23.7,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -1653,9 +1653,9 @@
       "mem_gbps": 28,
       "mem_bw_gbs": 448,
       "l2_mb": 32,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 14.4,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -1700,9 +1700,9 @@
       "mem_gbps": 28,
       "mem_bw_gbs": 448,
       "l2_mb": 32,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 13.3,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -1746,9 +1746,9 @@
       "mem_gbps": 24,
       "mem_bw_gbs": 384,
       "l2_mb": 24,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 12.3,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -1793,9 +1793,9 @@
       "mem_gbps": 18,
       "mem_bw_gbs": 576,
       "l2_mb": 64,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 39.7,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -1839,9 +1839,9 @@
       "mem_gbps": 20,
       "mem_bw_gbs": 432,
       "l2_mb": 48,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 33.9,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -1886,9 +1886,9 @@
       "mem_gbps": 16,
       "mem_bw_gbs": 256,
       "l2_mb": 32,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 18.2,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -1933,9 +1933,9 @@
       "mem_gbps": 16,
       "mem_bw_gbs": 256,
       "l2_mb": 24,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 14.6,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -1979,9 +1979,9 @@
       "mem_gbps": 16,
       "mem_bw_gbs": 256,
       "l2_mb": 24,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 13.1,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -2025,9 +2025,9 @@
       "mem_gbps": 16,
       "mem_bw_gbs": 192,
       "l2_mb": 24,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 12.1,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -2073,7 +2073,7 @@
       "l2_mb": 6,
       "infinity_cache_mb": 64,
       "tflops_fp32": 19.3,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -2119,7 +2119,7 @@
       "l2_mb": 2,
       "infinity_cache_mb": 32,
       "tflops_fp32": 9,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -2149,22 +2149,22 @@
     "summary_en": "Rivals a low-TGP 4060 Laptop.",
     "summary_ja": "低 TGP の 4060 Laptop に匹敵。",
     "tech": {
-      "die_mm2": null,
-      "transistors_m": null,
+      "die_mm2": -1,
+      "transistors_m": -1,
       "units": 20,
       "shaders": 2560,
       "tmus": 160,
       "rops": 80,
       "rt_cores": 20,
       "tensor_cores": null,
-      "base_mhz": null,
+      "base_mhz": -1,
       "boost_mhz": 1578,
       "mem_gbps": null,
       "mem_bw_gbs": 273,
       "l2_mb": null,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 8.1,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -2194,22 +2194,22 @@
     "summary_en": "Air-class iGPU.",
     "summary_ja": "Air クラスの内蔵GPU。",
     "tech": {
-      "die_mm2": null,
-      "transistors_m": null,
+      "die_mm2": -1,
+      "transistors_m": -1,
       "units": 10,
       "shaders": 1280,
       "tmus": 80,
       "rops": 40,
       "rt_cores": 10,
       "tensor_cores": null,
-      "base_mhz": null,
+      "base_mhz": -1,
       "boost_mhz": 1578,
       "mem_gbps": null,
       "mem_bw_gbs": 120,
       "l2_mb": null,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 4,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -2240,22 +2240,22 @@
     "summary_en": "x86 iGPU ceiling, close to a 4070 Laptop.",
     "summary_ja": "x86 内蔵GPUの天井。4070 Laptop に迫る。",
     "tech": {
-      "die_mm2": null,
-      "transistors_m": null,
+      "die_mm2": -1,
+      "transistors_m": -1,
       "units": 40,
       "shaders": 2560,
       "tmus": 160,
       "rops": 64,
       "rt_cores": 40,
       "tensor_cores": 80,
-      "base_mhz": null,
+      "base_mhz": -1,
       "boost_mhz": 2900,
       "mem_gbps": 8,
       "mem_bw_gbs": 256,
       "l2_mb": null,
       "infinity_cache_mb": 32,
       "tflops_fp32": 14.8,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -2285,22 +2285,22 @@
     "summary_en": "One of the strongest x86 iGPUs for thin-and-lights.",
     "summary_ja": "薄型ノート最強クラスの x86 内蔵GPU。",
     "tech": {
-      "die_mm2": null,
-      "transistors_m": null,
+      "die_mm2": -1,
+      "transistors_m": -1,
       "units": 16,
       "shaders": 1024,
       "tmus": 64,
       "rops": 32,
       "rt_cores": 16,
       "tensor_cores": 32,
-      "base_mhz": null,
+      "base_mhz": -1,
       "boost_mhz": 2900,
       "mem_gbps": 7.5,
       "mem_bw_gbs": 120,
       "l2_mb": null,
       "infinity_cache_mb": null,
       "tflops_fp32": 5.9,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -2330,22 +2330,22 @@
     "summary_en": "Common in handhelds and thin laptops.",
     "summary_ja": "携帯ゲーム機や薄型ノートに多い。",
     "tech": {
-      "die_mm2": null,
-      "transistors_m": null,
+      "die_mm2": -1,
+      "transistors_m": -1,
       "units": 12,
       "shaders": 768,
       "tmus": 48,
       "rops": 32,
       "rt_cores": 12,
       "tensor_cores": 24,
-      "base_mhz": null,
+      "base_mhz": -1,
       "boost_mhz": 2700,
       "mem_gbps": 7.5,
       "mem_bw_gbs": 120,
       "l2_mb": null,
       "infinity_cache_mb": null,
       "tflops_fp32": 4.1,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -2375,22 +2375,22 @@
     "summary_en": "Lunar Lake iGPU with excellent efficiency.",
     "summary_ja": "Lunar Lake の内蔵GPU。効率が優秀。",
     "tech": {
-      "die_mm2": null,
-      "transistors_m": null,
+      "die_mm2": -1,
+      "transistors_m": -1,
       "units": 8,
       "shaders": 1024,
       "tmus": 64,
       "rops": 32,
       "rt_cores": 8,
       "tensor_cores": 64,
-      "base_mhz": null,
+      "base_mhz": -1,
       "boost_mhz": 2050,
       "mem_gbps": 8.5,
       "mem_bw_gbs": 136,
       "l2_mb": 8,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 4.2,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -2420,22 +2420,22 @@
     "summary_en": "Arrow Lake-H iGPU.",
     "summary_ja": "Arrow Lake-H の内蔵GPU。",
     "tech": {
-      "die_mm2": null,
-      "transistors_m": null,
+      "die_mm2": -1,
+      "transistors_m": -1,
       "units": 8,
       "shaders": 1024,
       "tmus": 64,
       "rops": 32,
       "rt_cores": 8,
       "tensor_cores": 64,
-      "base_mhz": null,
+      "base_mhz": -1,
       "boost_mhz": 2250,
       "mem_gbps": 8.4,
       "mem_bw_gbs": 134,
       "l2_mb": 8,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 4.6,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -2464,7 +2464,25 @@
       "rt_rel": null
     },
     "summary_en": "ARM-laptop iGPU with many compatibility limits.",
-    "summary_ja": "ARM ノートの内蔵GPU。互換性の制約多し。"
+    "summary_ja": "ARM ノートの内蔵GPU。互換性の制約多し。",
+    "tech": {
+      "die_mm2": -1,
+      "transistors_m": -1,
+      "units": null,
+      "shaders": null,
+      "tmus": null,
+      "rops": null,
+      "rt_cores": null,
+      "tensor_cores": null,
+      "base_mhz": -1,
+      "boost_mhz": null,
+      "mem_gbps": null,
+      "mem_bw_gbs": null,
+      "l2_mb": null,
+      "infinity_cache_mb": -1,
+      "tflops_fp32": null,
+      "launch_usd": -1
+    }
   },
   {
     "id": "nvidia-geforce-8800-gt",
@@ -2506,8 +2524,8 @@
       "boost_mhz": 1500,
       "mem_gbps": 1.8,
       "mem_bw_gbs": 57.6,
-      "l2_mb": null,
-      "infinity_cache_mb": null,
+      "l2_mb": -1,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 0.34,
       "launch_usd": 249
     }
@@ -2551,8 +2569,8 @@
       "boost_mhz": 1296,
       "mem_gbps": 2.2,
       "mem_bw_gbs": 141,
-      "l2_mb": null,
-      "infinity_cache_mb": null,
+      "l2_mb": -1,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 0.62,
       "launch_usd": 649
     }
@@ -2597,7 +2615,7 @@
       "mem_gbps": 3.7,
       "mem_bw_gbs": 177,
       "l2_mb": 0.75,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 1.34,
       "launch_usd": 499
     }
@@ -2642,7 +2660,7 @@
       "mem_gbps": 4,
       "mem_bw_gbs": 192,
       "l2_mb": 0.75,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 1.58,
       "launch_usd": 499
     }
@@ -2687,7 +2705,7 @@
       "mem_gbps": 6,
       "mem_bw_gbs": 192,
       "l2_mb": 0.5,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 3.3,
       "launch_usd": 499
     }
@@ -2732,7 +2750,7 @@
       "mem_gbps": 7,
       "mem_bw_gbs": 336,
       "l2_mb": 1.5,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 5.3,
       "launch_usd": 699
     }
@@ -2778,7 +2796,7 @@
       "mem_gbps": 7,
       "mem_bw_gbs": 224,
       "l2_mb": 1.75,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 3.9,
       "launch_usd": 329
     }
@@ -2823,7 +2841,7 @@
       "mem_gbps": 7,
       "mem_bw_gbs": 224,
       "l2_mb": 2,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 5,
       "launch_usd": 549
     }
@@ -2868,7 +2886,7 @@
       "mem_gbps": 7,
       "mem_bw_gbs": 336,
       "l2_mb": 3,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 6.1,
       "launch_usd": 649
     }
@@ -2915,7 +2933,7 @@
       "mem_gbps": 8,
       "mem_bw_gbs": 192,
       "l2_mb": 1.5,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 4.4,
       "launch_usd": 249
     }
@@ -2960,7 +2978,7 @@
       "mem_gbps": 8,
       "mem_bw_gbs": 256,
       "l2_mb": 2,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 6.5,
       "launch_usd": 379
     }
@@ -3005,7 +3023,7 @@
       "mem_gbps": 10,
       "mem_bw_gbs": 320,
       "l2_mb": 2,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 8.9,
       "launch_usd": 599
     }
@@ -3051,7 +3069,7 @@
       "mem_gbps": 11,
       "mem_bw_gbs": 484,
       "l2_mb": 2.75,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 11.3,
       "launch_usd": 699
     }
@@ -3096,7 +3114,7 @@
       "mem_gbps": 8,
       "mem_bw_gbs": 128,
       "l2_mb": 1,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 3,
       "launch_usd": 149
     }
@@ -3142,7 +3160,7 @@
       "mem_gbps": 14,
       "mem_bw_gbs": 336,
       "l2_mb": 1.5,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 5,
       "launch_usd": 229
     }
@@ -3187,7 +3205,7 @@
       "mem_gbps": 14,
       "mem_bw_gbs": 336,
       "l2_mb": 3,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 6.5,
       "launch_usd": 349
     }
@@ -3232,7 +3250,7 @@
       "mem_gbps": 14,
       "mem_bw_gbs": 448,
       "l2_mb": 4,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 9.1,
       "launch_usd": 499
     }
@@ -3277,7 +3295,7 @@
       "mem_gbps": 14,
       "mem_bw_gbs": 616,
       "l2_mb": 5.5,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 13.4,
       "launch_usd": 999
     }
@@ -3322,7 +3340,7 @@
       "mem_gbps": 14,
       "mem_bw_gbs": 224,
       "l2_mb": 2,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 9.1,
       "launch_usd": 249
     }
@@ -3368,7 +3386,7 @@
       "mem_gbps": 14,
       "mem_bw_gbs": 448,
       "l2_mb": 4,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 16.2,
       "launch_usd": 399
     }
@@ -3413,7 +3431,7 @@
       "mem_gbps": 19,
       "mem_bw_gbs": 912,
       "l2_mb": 6,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 34.1,
       "launch_usd": 1199
     }
@@ -3459,7 +3477,7 @@
       "mem_gbps": 19.5,
       "mem_bw_gbs": 936,
       "l2_mb": 6,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 35.6,
       "launch_usd": 1499
     }
@@ -3504,7 +3522,7 @@
       "boost_mhz": 750,
       "mem_gbps": 3.6,
       "mem_bw_gbs": 115,
-      "l2_mb": null,
+      "l2_mb": -1,
       "infinity_cache_mb": null,
       "tflops_fp32": 1.2,
       "launch_usd": 299
@@ -3549,7 +3567,7 @@
       "boost_mhz": 850,
       "mem_gbps": 4.8,
       "mem_bw_gbs": 154,
-      "l2_mb": null,
+      "l2_mb": -1,
       "infinity_cache_mb": null,
       "tflops_fp32": 2.72,
       "launch_usd": 379
@@ -4138,7 +4156,7 @@
       "mem_gbps": 16,
       "mem_bw_gbs": 512,
       "l2_mb": 16,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 14.7,
       "launch_usd": 289
     }
@@ -4185,9 +4203,9 @@
       "mem_gbps": 8,
       "mem_bw_gbs": 192,
       "l2_mb": 1.5,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 4.3,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -4231,9 +4249,9 @@
       "mem_gbps": 8,
       "mem_bw_gbs": 256,
       "l2_mb": 2,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 6.7,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -4278,9 +4296,9 @@
       "mem_gbps": 8,
       "mem_bw_gbs": 128,
       "l2_mb": 1,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 3.2,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -4325,9 +4343,9 @@
       "mem_gbps": 12,
       "mem_bw_gbs": 288,
       "l2_mb": 1.5,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 4.9,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -4372,9 +4390,9 @@
       "mem_gbps": 14,
       "mem_bw_gbs": 336,
       "l2_mb": 3,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 4.6,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -4420,9 +4438,9 @@
       "mem_gbps": 12,
       "mem_bw_gbs": 384,
       "l2_mb": 4,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 5.5,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -4467,9 +4485,9 @@
       "mem_gbps": 14,
       "mem_bw_gbs": 448,
       "l2_mb": 4,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 9.4,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -4514,9 +4532,9 @@
       "mem_gbps": 12,
       "mem_bw_gbs": 192,
       "l2_mb": 2,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 7.1,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -4562,9 +4580,9 @@
       "mem_gbps": 14,
       "mem_bw_gbs": 336,
       "l2_mb": 3,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 13.1,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -4609,9 +4627,9 @@
       "mem_gbps": 14,
       "mem_bw_gbs": 448,
       "l2_mb": 4,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 16.6,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -4656,9 +4674,9 @@
       "mem_gbps": 14,
       "mem_bw_gbs": 448,
       "l2_mb": 4,
-      "infinity_cache_mb": null,
+      "infinity_cache_mb": -1,
       "tflops_fp32": 21,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -4705,7 +4723,7 @@
       "l2_mb": 3,
       "infinity_cache_mb": 96,
       "tflops_fp32": 11.8,
-      "launch_usd": null
+      "launch_usd": -1
     }
   }
 ]

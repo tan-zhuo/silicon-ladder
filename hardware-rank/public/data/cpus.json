@@ -176,7 +176,7 @@
     "tech": {
       "die": "Compute Tile (N3B) + GPU/SoC/IO Tile (Foveros)",
       "die_mm2": 243,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 36,
       "base_ghz": 3.9,
       "boost_ghz": 5.5,
@@ -223,7 +223,7 @@
     "tech": {
       "die": "单片 (Intel 7 257mm²)",
       "die_mm2": 257,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 28,
       "base_ghz": 3.4,
       "boost_ghz": 5.6,
@@ -331,7 +331,7 @@
       "pcie": "4.0 ×? (Thunderbolt 5)",
       "igpu_cu": 20,
       "igpu_ghz": null,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -380,7 +380,7 @@
       "pcie": "4.0 ×8",
       "igpu_cu": null,
       "igpu_ghz": null,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -429,7 +429,7 @@
       "pcie": "4.0 ×16",
       "igpu_cu": 16,
       "igpu_ghz": 2.9,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -461,7 +461,24 @@
       "igpu_rel": 70
     },
     "summary_en": "Meteor Lake flagship: decent multi-core, average efficiency.",
-    "summary_ja": "Meteor Lake フラッグシップ。マルチは良好、効率は平凡。"
+    "summary_ja": "Meteor Lake フラッグシップ。マルチは良好、効率は平凡。",
+    "tech": {
+      "die": "Compute (Intel 4) + GPU (N5) + SoC/IO (N6) Tile, Foveros",
+      "die_mm2": -1,
+      "transistors_m": -1,
+      "l2_mb": 24,
+      "base_ghz": 2.3,
+      "boost_ghz": 5.1,
+      "power_label": "PL2",
+      "power_max_w": 115,
+      "mem_channels": 2,
+      "mem_max_mt": 7467,
+      "mem_max_gb": 96,
+      "pcie": "5.0 ×8 + 4.0 ×12",
+      "igpu_cu": 8,
+      "igpu_ghz": 2.35,
+      "launch_usd": -1
+    }
   },
   {
     "id": "amd-ryzen-9-9955hx",
@@ -509,7 +526,7 @@
       "pcie": "5.0 ×28",
       "igpu_cu": 2,
       "igpu_ghz": 2.2,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -1112,7 +1129,7 @@
     "tech": {
       "die": "Compute Tile (N3B) + GPU/SoC/IO Tile (Foveros)",
       "die_mm2": 243,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 40,
       "base_ghz": 3.7,
       "boost_ghz": 5.7,
@@ -1157,7 +1174,7 @@
     "tech": {
       "die": "Compute Tile (N3B) + GPU/SoC/IO Tile (Foveros)",
       "die_mm2": 243,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 26,
       "base_ghz": 4.2,
       "boost_ghz": 5.2,
@@ -1204,7 +1221,7 @@
     "tech": {
       "die": "单片 (Intel 7 257mm²)",
       "die_mm2": 257,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 32,
       "base_ghz": 3.2,
       "boost_ghz": 6,
@@ -1251,7 +1268,7 @@
     "tech": {
       "die": "单片 (Intel 7 257mm²)",
       "die_mm2": 257,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 20,
       "base_ghz": 3.5,
       "boost_ghz": 5.3,
@@ -1296,7 +1313,7 @@
     "tech": {
       "die": "单片 (Intel 7)",
       "die_mm2": 257,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 9.5,
       "base_ghz": 2.5,
       "boost_ghz": 4.7,
@@ -1343,7 +1360,7 @@
     "tech": {
       "die": "单片 (Intel 7 257mm²)",
       "die_mm2": 257,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 32,
       "base_ghz": 3,
       "boost_ghz": 5.8,
@@ -1390,7 +1407,7 @@
     "tech": {
       "die": "单片 (Intel 7)",
       "die_mm2": 257,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 9.5,
       "base_ghz": 2.5,
       "boost_ghz": 4.6,
@@ -1435,7 +1452,7 @@
     "tech": {
       "die": "单片 (Intel 7 215mm²)",
       "die_mm2": 215,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 12,
       "base_ghz": 3.6,
       "boost_ghz": 5,
@@ -1482,7 +1499,7 @@
     "tech": {
       "die": "单片 (Intel 7 163mm²)",
       "die_mm2": 163,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 7.5,
       "base_ghz": 2.5,
       "boost_ghz": 4.4,
@@ -1543,7 +1560,7 @@
       "pcie": "Thunderbolt 4",
       "igpu_cu": 10,
       "igpu_ghz": null,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -1592,7 +1609,7 @@
       "pcie": "Thunderbolt 5",
       "igpu_cu": 40,
       "igpu_ghz": null,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -1624,7 +1641,24 @@
       "igpu_rel": 58
     },
     "summary_en": "Last-gen Air chip, fine for everyday use.",
-    "summary_ja": "前世代の Air 向け。日常用途には十分。"
+    "summary_ja": "前世代の Air 向け。日常用途には十分。",
+    "tech": {
+      "die": "单片 SoC (N3B)",
+      "die_mm2": -1,
+      "transistors_m": 25000,
+      "l2_mb": -1,
+      "base_ghz": -1,
+      "boost_ghz": 4.05,
+      "power_label": "cTDP",
+      "power_max_w": 20,
+      "mem_channels": 2,
+      "mem_max_mt": 6400,
+      "mem_max_gb": 24,
+      "pcie": "Thunderbolt 4",
+      "igpu_cu": 10,
+      "igpu_ghz": -1,
+      "launch_usd": -1
+    }
   },
   {
     "id": "intel-core-ultra-9-288v",
@@ -1659,8 +1693,8 @@
     "summary_ja": "Lunar Lake フラッグシップ。電池と内蔵GPUは強くマルチは弱い。",
     "tech": {
       "die": "Compute + Platform Tile, 内存封装内 (N3B)",
-      "die_mm2": null,
-      "transistors_m": null,
+      "die_mm2": -1,
+      "transistors_m": -1,
       "l2_mb": 10,
       "base_ghz": 3.3,
       "boost_ghz": 5.1,
@@ -1672,7 +1706,7 @@
       "pcie": "4.0 ×8",
       "igpu_cu": 8,
       "igpu_ghz": 2.05,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -1708,8 +1742,8 @@
     "summary_ja": "薄型ノート向け Lunar Lake の主力。",
     "tech": {
       "die": "Compute + Platform Tile, 内存封装内 (N3B)",
-      "die_mm2": null,
-      "transistors_m": null,
+      "die_mm2": -1,
+      "transistors_m": -1,
       "l2_mb": 10,
       "base_ghz": 2.2,
       "boost_ghz": 4.8,
@@ -1721,7 +1755,7 @@
       "pcie": "4.0 ×8",
       "igpu_cu": 8,
       "igpu_ghz": 1.95,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -1757,8 +1791,8 @@
     "summary_ja": "ゲーミングノートのフラッグシップ。マルチはデスクトップ級。",
     "tech": {
       "die": "Compute Tile (N3B) + SoC/IO Tile",
-      "die_mm2": null,
-      "transistors_m": null,
+      "die_mm2": -1,
+      "transistors_m": -1,
       "l2_mb": 40,
       "base_ghz": 2.7,
       "boost_ghz": 5.4,
@@ -1770,7 +1804,7 @@
       "pcie": "20×5.0 + 4×4.0",
       "igpu_cu": 4,
       "igpu_ghz": 2,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -1802,7 +1836,24 @@
       "igpu_rel": 72
     },
     "summary_en": "Mainstream all-rounder, balanced.",
-    "summary_ja": "汎用ノートの主流。バランス型。"
+    "summary_ja": "汎用ノートの主流。バランス型。",
+    "tech": {
+      "die": "Compute (N3B) + GPU + SoC Tile, Foveros",
+      "die_mm2": -1,
+      "transistors_m": -1,
+      "l2_mb": 24,
+      "base_ghz": 2,
+      "boost_ghz": 5.1,
+      "power_label": "PL2",
+      "power_max_w": 115,
+      "mem_channels": 2,
+      "mem_max_mt": 8400,
+      "mem_max_gb": 128,
+      "pcie": "5.0 ×8 + 4.0 ×12",
+      "igpu_cu": 8,
+      "igpu_ghz": 2.25,
+      "launch_usd": -1
+    }
   },
   {
     "id": "intel-core-i9-14900hx",
@@ -1837,7 +1888,7 @@
     "tech": {
       "die": "单片 (Intel 7 257mm²)",
       "die_mm2": 257,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 32,
       "base_ghz": 2.2,
       "boost_ghz": 5.8,
@@ -1849,7 +1900,7 @@
       "pcie": "16×5.0 + 4×4.0",
       "igpu_cu": 32,
       "igpu_ghz": 1.65,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -1899,7 +1950,7 @@
       "pcie": "4.0 ×16",
       "igpu_cu": 40,
       "igpu_ghz": 2.9,
-      "launch_usd": null
+      "launch_usd": -1
     }
   },
   {
@@ -1931,7 +1982,24 @@
       "igpu_rel": 74
     },
     "summary_en": "Krackan for mainstream thin-and-lights.",
-    "summary_ja": "主流薄型ノート向け Krackan。"
+    "summary_ja": "主流薄型ノート向け Krackan。",
+    "tech": {
+      "die": "单片 (N4P ~178mm²)",
+      "die_mm2": 178,
+      "transistors_m": -1,
+      "l2_mb": 8,
+      "base_ghz": 2,
+      "boost_ghz": 5,
+      "power_label": "cTDP",
+      "power_max_w": 54,
+      "mem_channels": 2,
+      "mem_max_mt": 8000,
+      "mem_max_gb": 256,
+      "pcie": "4.0 ×16",
+      "igpu_cu": 8,
+      "igpu_ghz": 3,
+      "launch_usd": -1
+    }
   },
   {
     "id": "amd-ryzen-9-8945hs",
@@ -1962,7 +2030,24 @@
       "igpu_rel": 75
     },
     "summary_en": "Hawk Point high-end with Radeon 780M.",
-    "summary_ja": "Hawk Point 上位、内蔵 780M。"
+    "summary_ja": "Hawk Point 上位、内蔵 780M。",
+    "tech": {
+      "die": "单片 (N4 178mm²)",
+      "die_mm2": 178,
+      "transistors_m": 25000,
+      "l2_mb": 8,
+      "base_ghz": 4,
+      "boost_ghz": 5.2,
+      "power_label": "cTDP",
+      "power_max_w": 54,
+      "mem_channels": 2,
+      "mem_max_mt": 7500,
+      "mem_max_gb": 256,
+      "pcie": "4.0 ×20",
+      "igpu_cu": 12,
+      "igpu_ghz": 2.8,
+      "launch_usd": -1
+    }
   },
   {
     "id": "amd-ryzen-7-8845hs",
@@ -1994,7 +2079,24 @@
       "igpu_rel": 74
     },
     "summary_en": "The most common 2024 thin all-rounder chip.",
-    "summary_ja": "2024年の薄型汎用ノートで最も普及。"
+    "summary_ja": "2024年の薄型汎用ノートで最も普及。",
+    "tech": {
+      "die": "单片 (N4 178mm²)",
+      "die_mm2": 178,
+      "transistors_m": 25000,
+      "l2_mb": 8,
+      "base_ghz": 3.8,
+      "boost_ghz": 5.1,
+      "power_label": "cTDP",
+      "power_max_w": 54,
+      "mem_channels": 2,
+      "mem_max_mt": 7500,
+      "mem_max_gb": 256,
+      "pcie": "4.0 ×20",
+      "igpu_cu": 12,
+      "igpu_ghz": 2.7,
+      "launch_usd": -1
+    }
   },
   {
     "id": "amd-ryzen-9-7945hx",
@@ -2025,7 +2127,24 @@
       "igpu_rel": 20
     },
     "summary_en": "Last-gen 16-core gaming laptop chip.",
-    "summary_ja": "前世代ゲーミングノートの16コア。"
+    "summary_ja": "前世代ゲーミングノートの16コア。",
+    "tech": {
+      "die": "2× CCD (N5 71mm²) + IOD (N6 122mm²)",
+      "die_mm2": 264,
+      "transistors_m": 13100,
+      "l2_mb": 16,
+      "base_ghz": 2.5,
+      "boost_ghz": 5.4,
+      "power_label": "cTDP",
+      "power_max_w": 75,
+      "mem_channels": 2,
+      "mem_max_mt": 5200,
+      "mem_max_gb": 64,
+      "pcie": "5.0 ×28",
+      "igpu_cu": 2,
+      "igpu_ghz": 2.2,
+      "launch_usd": -1
+    }
   },
   {
     "id": "qualcomm-snapdragon-x-plus-x1p-64-100",
@@ -2057,7 +2176,24 @@
       "igpu_rel": 68
     },
     "summary_en": "The budget version of X Elite.",
-    "summary_ja": "X Elite の廉価版。"
+    "summary_ja": "X Elite の廉価版。",
+    "tech": {
+      "die": "单片 SoC (N4 170mm²)",
+      "die_mm2": 170,
+      "transistors_m": -1,
+      "l2_mb": 36,
+      "base_ghz": 3.4,
+      "boost_ghz": 3.4,
+      "power_label": "cTDP",
+      "power_max_w": 45,
+      "mem_channels": 8,
+      "mem_max_mt": 8448,
+      "mem_max_gb": 64,
+      "pcie": "4.0 ×8",
+      "igpu_cu": -1,
+      "igpu_ghz": -1,
+      "launch_usd": -1
+    }
   },
   {
     "id": "intel-core-2-quad-q6600",
@@ -2771,7 +2907,7 @@
     "tech": {
       "die": "单片 (14nm 122mm²)",
       "die_mm2": 122,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 1,
       "base_ghz": 4,
       "boost_ghz": 4.2,
@@ -2819,7 +2955,7 @@
     "tech": {
       "die": "单片 (14nm 126mm²)",
       "die_mm2": 126,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 1,
       "base_ghz": 4.2,
       "boost_ghz": 4.5,
@@ -2868,7 +3004,7 @@
     "tech": {
       "die": "单片 (14nm 149mm²)",
       "die_mm2": 149,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 1.5,
       "base_ghz": 3.7,
       "boost_ghz": 4.7,
@@ -2917,7 +3053,7 @@
     "tech": {
       "die": "单片 (14nm 149mm²)",
       "die_mm2": 149,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 1.5,
       "base_ghz": 2.8,
       "boost_ghz": 4,
@@ -2965,7 +3101,7 @@
     "tech": {
       "die": "单片 (14nm 174mm²)",
       "die_mm2": 174,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 2,
       "base_ghz": 3.6,
       "boost_ghz": 5,
@@ -3013,7 +3149,7 @@
     "tech": {
       "die": "单片 (14nm 149mm²)",
       "die_mm2": 149,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 1.5,
       "base_ghz": 3.7,
       "boost_ghz": 4.6,
@@ -3061,7 +3197,7 @@
     "tech": {
       "die": "单片 (14nm 206mm²)",
       "die_mm2": 206,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 2.5,
       "base_ghz": 3.7,
       "boost_ghz": 5.3,
@@ -3110,7 +3246,7 @@
     "tech": {
       "die": "单片 (14nm 206mm²)",
       "die_mm2": 206,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 1.5,
       "base_ghz": 2.9,
       "boost_ghz": 4.3,
@@ -3158,7 +3294,7 @@
     "tech": {
       "die": "单片 (14nm 276mm²)",
       "die_mm2": 276,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 4,
       "base_ghz": 3.5,
       "boost_ghz": 5.3,
@@ -3207,7 +3343,7 @@
     "tech": {
       "die": "单片 (14nm 276mm²)",
       "die_mm2": 276,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 3,
       "base_ghz": 2.6,
       "boost_ghz": 4.4,
@@ -3255,7 +3391,7 @@
     "tech": {
       "die": "单片 (Intel 7 215mm²)",
       "die_mm2": 215,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 14,
       "base_ghz": 3.2,
       "boost_ghz": 5.2,
@@ -3304,7 +3440,7 @@
     "tech": {
       "die": "单片 (Intel 7 215mm²)",
       "die_mm2": 215,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 9.5,
       "base_ghz": 3.7,
       "boost_ghz": 4.9,
@@ -3352,7 +3488,7 @@
     "tech": {
       "die": "单片 (Intel 7 257mm²)",
       "die_mm2": 257,
-      "transistors_m": null,
+      "transistors_m": -1,
       "l2_mb": 24,
       "base_ghz": 3.4,
       "boost_ghz": 5.4,
@@ -4374,7 +4510,24 @@
       "igpu_rel": 15
     },
     "summary_en": "Standard Haswell gaming-laptop chip.",
-    "summary_ja": "Haswell ゲーミングノートの定番。"
+    "summary_ja": "Haswell ゲーミングノートの定番。",
+    "tech": {
+      "die": "单片 (22nm 177mm²)",
+      "die_mm2": 177,
+      "transistors_m": 1400,
+      "l2_mb": 1,
+      "base_ghz": 2.4,
+      "boost_ghz": 3.4,
+      "power_label": "TDP",
+      "power_max_w": 47,
+      "mem_channels": 2,
+      "mem_max_mt": 1600,
+      "mem_max_gb": 32,
+      "pcie": "3.0 ×16",
+      "igpu_cu": 20,
+      "igpu_ghz": 1.2,
+      "launch_usd": -1
+    }
   },
   {
     "id": "intel-core-i7-6700hq",
@@ -4405,7 +4558,24 @@
       "igpu_rel": 18
     },
     "summary_en": "Skylake standard-voltage quad.",
-    "summary_ja": "Skylake 標準電圧クアッド。"
+    "summary_ja": "Skylake 標準電圧クアッド。",
+    "tech": {
+      "die": "单片 (14nm 122mm²)",
+      "die_mm2": 122,
+      "transistors_m": -1,
+      "l2_mb": 1,
+      "base_ghz": 2.6,
+      "boost_ghz": 3.5,
+      "power_label": "PL2",
+      "power_max_w": 56,
+      "mem_channels": 2,
+      "mem_max_mt": 2133,
+      "mem_max_gb": 64,
+      "pcie": "3.0 ×16",
+      "igpu_cu": 24,
+      "igpu_ghz": 1.05,
+      "launch_usd": -1
+    }
   },
   {
     "id": "intel-core-i7-7700hq",
@@ -4436,7 +4606,24 @@
       "igpu_rel": 18
     },
     "summary_en": "One of the most common gaming-laptop chips.",
-    "summary_ja": "最も普及したゲーミングノート CPU の一つ。"
+    "summary_ja": "最も普及したゲーミングノート CPU の一つ。",
+    "tech": {
+      "die": "单片 (14nm 126mm²)",
+      "die_mm2": 126,
+      "transistors_m": -1,
+      "l2_mb": 1,
+      "base_ghz": 2.8,
+      "boost_ghz": 3.8,
+      "power_label": "PL2",
+      "power_max_w": 56,
+      "mem_channels": 2,
+      "mem_max_mt": 2400,
+      "mem_max_gb": 64,
+      "pcie": "3.0 ×16",
+      "igpu_cu": 24,
+      "igpu_ghz": 1.1,
+      "launch_usd": -1
+    }
   },
   {
     "id": "intel-core-i7-8750h",
@@ -4468,7 +4655,24 @@
       "igpu_rel": 20
     },
     "summary_en": "The year laptops went six-core.",
-    "summary_ja": "ノートが6コアになった年。"
+    "summary_ja": "ノートが6コアになった年。",
+    "tech": {
+      "die": "单片 (14nm 149mm²)",
+      "die_mm2": 149,
+      "transistors_m": -1,
+      "l2_mb": 1.5,
+      "base_ghz": 2.2,
+      "boost_ghz": 4.1,
+      "power_label": "PL2",
+      "power_max_w": 78,
+      "mem_channels": 2,
+      "mem_max_mt": 2666,
+      "mem_max_gb": 64,
+      "pcie": "3.0 ×16",
+      "igpu_cu": 24,
+      "igpu_ghz": 1.1,
+      "launch_usd": -1
+    }
   },
   {
     "id": "intel-core-i7-9750h",
@@ -4499,7 +4703,24 @@
       "igpu_rel": 20
     },
     "summary_en": "Minor 8750H refresh.",
-    "summary_ja": "8750H の小改良。"
+    "summary_ja": "8750H の小改良。",
+    "tech": {
+      "die": "单片 (14nm 149mm²)",
+      "die_mm2": 149,
+      "transistors_m": -1,
+      "l2_mb": 1.5,
+      "base_ghz": 2.6,
+      "boost_ghz": 4.5,
+      "power_label": "PL2",
+      "power_max_w": 90,
+      "mem_channels": 2,
+      "mem_max_mt": 2666,
+      "mem_max_gb": 128,
+      "pcie": "3.0 ×16",
+      "igpu_cu": 24,
+      "igpu_ghz": 1.15,
+      "launch_usd": -1
+    }
   },
   {
     "id": "intel-core-i7-10750h",
@@ -4530,7 +4751,24 @@
       "igpu_rel": 20
     },
     "summary_en": "Last 14nm six-core.",
-    "summary_ja": "14nm 最後の6コア。"
+    "summary_ja": "14nm 最後の6コア。",
+    "tech": {
+      "die": "单片 (14nm ~150mm²)",
+      "die_mm2": 150,
+      "transistors_m": -1,
+      "l2_mb": 1.5,
+      "base_ghz": 2.6,
+      "boost_ghz": 5,
+      "power_label": "PL2",
+      "power_max_w": 107,
+      "mem_channels": 2,
+      "mem_max_mt": 2933,
+      "mem_max_gb": 128,
+      "pcie": "3.0 ×16",
+      "igpu_cu": 24,
+      "igpu_ghz": 1.15,
+      "launch_usd": -1
+    }
   },
   {
     "id": "intel-core-i7-11800h",
@@ -4561,7 +4799,24 @@
       "igpu_rel": 38
     },
     "summary_en": "10nm eight-core with PCIe 4.0.",
-    "summary_ja": "10nm 8コア、PCIe 4.0。"
+    "summary_ja": "10nm 8コア、PCIe 4.0。",
+    "tech": {
+      "die": "单片 (Intel 10nm SuperFin ~190mm²)",
+      "die_mm2": 190,
+      "transistors_m": -1,
+      "l2_mb": 10,
+      "base_ghz": 2.3,
+      "boost_ghz": 4.6,
+      "power_label": "PL2",
+      "power_max_w": 107,
+      "mem_channels": 2,
+      "mem_max_mt": 3200,
+      "mem_max_gb": 64,
+      "pcie": "4.0 ×20",
+      "igpu_cu": 32,
+      "igpu_ghz": 1.45,
+      "launch_usd": -1
+    }
   },
   {
     "id": "intel-core-i7-12700h",
@@ -4592,7 +4847,24 @@
       "igpu_rel": 40
     },
     "summary_en": "Hybrid cores arrive in laptops.",
-    "summary_ja": "ハイブリッドコアがノートへ。"
+    "summary_ja": "ハイブリッドコアがノートへ。",
+    "tech": {
+      "die": "单片 (Intel 7 ~217mm²)",
+      "die_mm2": 217,
+      "transistors_m": -1,
+      "l2_mb": 24,
+      "base_ghz": 2.3,
+      "boost_ghz": 4.7,
+      "power_label": "PL2",
+      "power_max_w": 115,
+      "mem_channels": 2,
+      "mem_max_mt": 5200,
+      "mem_max_gb": 64,
+      "pcie": "5.0 ×8 + 4.0 ×12",
+      "igpu_cu": 96,
+      "igpu_ghz": 1.4,
+      "launch_usd": -1
+    }
   },
   {
     "id": "intel-core-i7-13700h",
@@ -4623,7 +4895,24 @@
       "igpu_rel": 42
     },
     "summary_en": "13th-gen all-rounder mainstay.",
-    "summary_ja": "第13世代汎用ノートの主力。"
+    "summary_ja": "第13世代汎用ノートの主力。",
+    "tech": {
+      "die": "单片 (Intel 7 ~217mm²)",
+      "die_mm2": 217,
+      "transistors_m": -1,
+      "l2_mb": 24,
+      "base_ghz": 2.4,
+      "boost_ghz": 5,
+      "power_label": "PL2",
+      "power_max_w": 115,
+      "mem_channels": 2,
+      "mem_max_mt": 6400,
+      "mem_max_gb": 96,
+      "pcie": "5.0 ×8 + 4.0 ×12",
+      "igpu_cu": 96,
+      "igpu_ghz": 1.5,
+      "launch_usd": -1
+    }
   },
   {
     "id": "intel-core-i9-13980hx",
@@ -4656,7 +4945,24 @@
       "igpu_rel": 22
     },
     "summary_en": "13th-gen gaming-laptop flagship.",
-    "summary_ja": "第13世代ゲーミングノート旗艦。"
+    "summary_ja": "第13世代ゲーミングノート旗艦。",
+    "tech": {
+      "die": "单片 (Intel 7 257mm²)",
+      "die_mm2": 257,
+      "transistors_m": -1,
+      "l2_mb": 32,
+      "base_ghz": 2.2,
+      "boost_ghz": 5.6,
+      "power_label": "PL2",
+      "power_max_w": 157,
+      "mem_channels": 2,
+      "mem_max_mt": 5600,
+      "mem_max_gb": 128,
+      "pcie": "16×5.0 + 4×4.0",
+      "igpu_cu": 32,
+      "igpu_ghz": 1.65,
+      "launch_usd": -1
+    }
   },
   {
     "id": "intel-core-i7-1360p",
@@ -4689,7 +4995,24 @@
       "igpu_rel": 40
     },
     "summary_en": "P-series for thin-and-lights.",
-    "summary_ja": "薄型ノート向け P シリーズ。"
+    "summary_ja": "薄型ノート向け P シリーズ。",
+    "tech": {
+      "die": "单片 (Intel 7)",
+      "die_mm2": -1,
+      "transistors_m": -1,
+      "l2_mb": 18,
+      "base_ghz": 2.2,
+      "boost_ghz": 5,
+      "power_label": "PL2",
+      "power_max_w": 64,
+      "mem_channels": 2,
+      "mem_max_mt": 6400,
+      "mem_max_gb": 64,
+      "pcie": "4.0 ×8 + ×12",
+      "igpu_cu": 96,
+      "igpu_ghz": 1.5,
+      "launch_usd": -1
+    }
   },
   {
     "id": "amd-ryzen-7-4800h",
@@ -4721,7 +5044,24 @@
       "igpu_rel": 30
     },
     "summary_en": "AMD's laptop comeback.",
-    "summary_ja": "AMD ノート巻き返しの一作。"
+    "summary_ja": "AMD ノート巻き返しの一作。",
+    "tech": {
+      "die": "单片 (N7 156mm²)",
+      "die_mm2": 156,
+      "transistors_m": 9800,
+      "l2_mb": 4,
+      "base_ghz": 2.9,
+      "boost_ghz": 4.2,
+      "power_label": "cTDP",
+      "power_max_w": 54,
+      "mem_channels": 2,
+      "mem_max_mt": 3200,
+      "mem_max_gb": 64,
+      "pcie": "3.0 ×16",
+      "igpu_cu": 7,
+      "igpu_ghz": 1.6,
+      "launch_usd": -1
+    }
   },
   {
     "id": "amd-ryzen-7-5800h",
@@ -4752,7 +5092,24 @@
       "igpu_rel": 35
     },
     "summary_en": "Zen 3 gaming-laptop mainstay.",
-    "summary_ja": "Zen 3 ゲーミングノートの主力。"
+    "summary_ja": "Zen 3 ゲーミングノートの主力。",
+    "tech": {
+      "die": "单片 (N7 180mm²)",
+      "die_mm2": 180,
+      "transistors_m": 10700,
+      "l2_mb": 4,
+      "base_ghz": 3.2,
+      "boost_ghz": 4.4,
+      "power_label": "cTDP",
+      "power_max_w": 54,
+      "mem_channels": 2,
+      "mem_max_mt": 3200,
+      "mem_max_gb": 64,
+      "pcie": "3.0 ×20",
+      "igpu_cu": 8,
+      "igpu_ghz": 2,
+      "launch_usd": -1
+    }
   },
   {
     "id": "amd-ryzen-9-6900hs",
@@ -4784,7 +5141,24 @@
       "igpu_rel": 60
     },
     "summary_en": "First RDNA2 iGPU.",
-    "summary_ja": "RDNA2 内蔵GPU 初採用。"
+    "summary_ja": "RDNA2 内蔵GPU 初採用。",
+    "tech": {
+      "die": "单片 (N6 210mm²)",
+      "die_mm2": 210,
+      "transistors_m": 13100,
+      "l2_mb": 4,
+      "base_ghz": 3.3,
+      "boost_ghz": 4.9,
+      "power_label": "cTDP",
+      "power_max_w": 54,
+      "mem_channels": 2,
+      "mem_max_mt": 6400,
+      "mem_max_gb": 64,
+      "pcie": "4.0 ×20",
+      "igpu_cu": 12,
+      "igpu_ghz": 2.4,
+      "launch_usd": -1
+    }
   },
   {
     "id": "amd-ryzen-7-7735hs",
@@ -4815,7 +5189,24 @@
       "igpu_rel": 60
     },
     "summary_en": "Rebadged 6800H.",
-    "summary_ja": "6800H のリネーム。"
+    "summary_ja": "6800H のリネーム。",
+    "tech": {
+      "die": "单片 (N6 210mm²)",
+      "die_mm2": 210,
+      "transistors_m": 13100,
+      "l2_mb": 4,
+      "base_ghz": 3.2,
+      "boost_ghz": 4.75,
+      "power_label": "cTDP",
+      "power_max_w": 54,
+      "mem_channels": 2,
+      "mem_max_mt": 4800,
+      "mem_max_gb": 64,
+      "pcie": "4.0 ×20",
+      "igpu_cu": 12,
+      "igpu_ghz": 2.2,
+      "launch_usd": -1
+    }
   },
   {
     "id": "amd-ryzen-7-7840hs",
@@ -4847,7 +5238,24 @@
       "igpu_rel": 73
     },
     "summary_en": "Phoenix, debut of the 780M.",
-    "summary_ja": "Phoenix。780M 初採用。"
+    "summary_ja": "Phoenix。780M 初採用。",
+    "tech": {
+      "die": "单片 (N4 178mm²)",
+      "die_mm2": 178,
+      "transistors_m": 25000,
+      "l2_mb": 8,
+      "base_ghz": 3.8,
+      "boost_ghz": 5.1,
+      "power_label": "cTDP",
+      "power_max_w": 54,
+      "mem_channels": 2,
+      "mem_max_mt": 7500,
+      "mem_max_gb": 256,
+      "pcie": "4.0 ×20",
+      "igpu_cu": 12,
+      "igpu_ghz": 2.7,
+      "launch_usd": -1
+    }
   },
   {
     "id": "apple-m1-8",
@@ -4881,7 +5289,24 @@
       "igpu_rel": 45
     },
     "summary_en": "The chip that started Apple Silicon.",
-    "summary_ja": "Apple Silicon の始まり。"
+    "summary_ja": "Apple Silicon の始まり。",
+    "tech": {
+      "die": "单片 SoC (N5 119mm²)",
+      "die_mm2": 119,
+      "transistors_m": 16000,
+      "l2_mb": -1,
+      "base_ghz": -1,
+      "boost_ghz": 3.2,
+      "power_label": "cTDP",
+      "power_max_w": 20,
+      "mem_channels": 2,
+      "mem_max_mt": 4266,
+      "mem_max_gb": 16,
+      "pcie": "Thunderbolt 4",
+      "igpu_cu": 8,
+      "igpu_ghz": -1,
+      "launch_usd": -1
+    }
   },
   {
     "id": "apple-m1-pro-10",
@@ -4913,7 +5338,24 @@
       "igpu_rel": 65
     },
     "summary_en": "The pro laptop reborn.",
-    "summary_ja": "プロ向けノートの再生。"
+    "summary_ja": "プロ向けノートの再生。",
+    "tech": {
+      "die": "单片 SoC (N5 245mm²)",
+      "die_mm2": 245,
+      "transistors_m": 33700,
+      "l2_mb": -1,
+      "base_ghz": -1,
+      "boost_ghz": 3.2,
+      "power_label": "cTDP",
+      "power_max_w": 40,
+      "mem_channels": 4,
+      "mem_max_mt": 6400,
+      "mem_max_gb": 32,
+      "pcie": "Thunderbolt 4",
+      "igpu_cu": 16,
+      "igpu_ghz": -1,
+      "launch_usd": -1
+    }
   },
   {
     "id": "apple-m1-max-10",
@@ -4946,7 +5388,24 @@
       "igpu_rel": 80
     },
     "summary_en": "400 GB/s unified memory.",
-    "summary_ja": "400GB/s のユニファイドメモリ。"
+    "summary_ja": "400GB/s のユニファイドメモリ。",
+    "tech": {
+      "die": "单片 SoC (N5 432mm²)",
+      "die_mm2": 432,
+      "transistors_m": 57000,
+      "l2_mb": -1,
+      "base_ghz": -1,
+      "boost_ghz": 3.2,
+      "power_label": "cTDP",
+      "power_max_w": 70,
+      "mem_channels": 8,
+      "mem_max_mt": 6400,
+      "mem_max_gb": 64,
+      "pcie": "Thunderbolt 4",
+      "igpu_cu": 32,
+      "igpu_ghz": -1,
+      "launch_usd": -1
+    }
   },
   {
     "id": "apple-m2-8",
@@ -4979,7 +5438,24 @@
       "igpu_rel": 50
     },
     "summary_en": "Minor M1 refresh.",
-    "summary_ja": "M1 の小改良。"
+    "summary_ja": "M1 の小改良。",
+    "tech": {
+      "die": "单片 SoC (N5P ~155mm²)",
+      "die_mm2": 155,
+      "transistors_m": 20000,
+      "l2_mb": -1,
+      "base_ghz": -1,
+      "boost_ghz": 3.5,
+      "power_label": "cTDP",
+      "power_max_w": 22,
+      "mem_channels": 2,
+      "mem_max_mt": 6400,
+      "mem_max_gb": 24,
+      "pcie": "Thunderbolt 4",
+      "igpu_cu": 10,
+      "igpu_ghz": -1,
+      "launch_usd": -1
+    }
   },
   {
     "id": "apple-m2-pro-12",
@@ -5011,7 +5487,24 @@
       "igpu_rel": 70
     },
     "summary_en": "Apple M2 Pro (12-core).",
-    "summary_ja": "Apple M2 Pro（12コア）。"
+    "summary_ja": "Apple M2 Pro（12コア）。",
+    "tech": {
+      "die": "单片 SoC (N5P)",
+      "die_mm2": -1,
+      "transistors_m": 40000,
+      "l2_mb": -1,
+      "base_ghz": -1,
+      "boost_ghz": 3.5,
+      "power_label": "cTDP",
+      "power_max_w": 45,
+      "mem_channels": 4,
+      "mem_max_mt": 6400,
+      "mem_max_gb": 32,
+      "pcie": "Thunderbolt 4",
+      "igpu_cu": 19,
+      "igpu_ghz": -1,
+      "launch_usd": -1
+    }
   },
   {
     "id": "apple-m2-max-12",
@@ -5044,7 +5537,24 @@
       "igpu_rel": 88
     },
     "summary_en": "Apple M2 Max (12-core).",
-    "summary_ja": "Apple M2 Max（12コア）。"
+    "summary_ja": "Apple M2 Max（12コア）。",
+    "tech": {
+      "die": "单片 SoC (N5P)",
+      "die_mm2": -1,
+      "transistors_m": 67000,
+      "l2_mb": -1,
+      "base_ghz": -1,
+      "boost_ghz": 3.7,
+      "power_label": "cTDP",
+      "power_max_w": 80,
+      "mem_channels": 8,
+      "mem_max_mt": 6400,
+      "mem_max_gb": 96,
+      "pcie": "Thunderbolt 4",
+      "igpu_cu": 38,
+      "igpu_ghz": -1,
+      "launch_usd": -1
+    }
   },
   {
     "id": "apple-m3-pro-12",
@@ -5076,7 +5586,24 @@
       "igpu_rel": 72
     },
     "summary_en": "Fewer P-cores, efficiency first.",
-    "summary_ja": "P コア削減、効率優先。"
+    "summary_ja": "P コア削減、効率優先。",
+    "tech": {
+      "die": "单片 SoC (N3B)",
+      "die_mm2": -1,
+      "transistors_m": 37000,
+      "l2_mb": -1,
+      "base_ghz": -1,
+      "boost_ghz": 4.05,
+      "power_label": "cTDP",
+      "power_max_w": 45,
+      "mem_channels": 3,
+      "mem_max_mt": 6400,
+      "mem_max_gb": 36,
+      "pcie": "Thunderbolt 4",
+      "igpu_cu": 18,
+      "igpu_ghz": -1,
+      "launch_usd": -1
+    }
   },
   {
     "id": "apple-m3-max-16",
@@ -5109,7 +5636,24 @@
       "igpu_rel": 94
     },
     "summary_en": "Hardware ray tracing comes to Mac.",
-    "summary_ja": "ハードウェア RT が Mac に初搭載。"
+    "summary_ja": "ハードウェア RT が Mac に初搭載。",
+    "tech": {
+      "die": "单片 SoC (N3B)",
+      "die_mm2": -1,
+      "transistors_m": 92000,
+      "l2_mb": -1,
+      "base_ghz": -1,
+      "boost_ghz": 4.05,
+      "power_label": "cTDP",
+      "power_max_w": 80,
+      "mem_channels": 8,
+      "mem_max_mt": 6400,
+      "mem_max_gb": 128,
+      "pcie": "Thunderbolt 4",
+      "igpu_cu": 40,
+      "igpu_ghz": -1,
+      "launch_usd": -1
+    }
   },
   {
     "id": "qualcomm-snapdragon-8cx-gen3",
@@ -5141,6 +5685,23 @@
       "igpu_rel": 25
     },
     "summary_en": "Pre-X Elite ARM laptop chip, weak performance.",
-    "summary_ja": "X Elite 以前の ARM ノート。性能は低い。"
+    "summary_ja": "X Elite 以前の ARM ノート。性能は低い。",
+    "tech": {
+      "die": "单片 SoC (Samsung 5nm)",
+      "die_mm2": -1,
+      "transistors_m": -1,
+      "l2_mb": -1,
+      "base_ghz": 3,
+      "boost_ghz": 3,
+      "power_label": "cTDP",
+      "power_max_w": 15,
+      "mem_channels": 8,
+      "mem_max_mt": 4266,
+      "mem_max_gb": 32,
+      "pcie": "4.0 ×4",
+      "igpu_cu": -1,
+      "igpu_ghz": -1,
+      "launch_usd": -1
+    }
   }
 ]
