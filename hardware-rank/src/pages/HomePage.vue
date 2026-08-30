@@ -5,6 +5,7 @@ import { useCatalog } from '@/data/load'
 import { matchQuery } from '@/utils/filters'
 import { CATEGORY_LABEL, FORM_LABEL } from '@/utils/format'
 import type { Category, AnyItem } from '@/types/hardware'
+import AppLogo from '@/components/AppLogo.vue'
 
 const catalog = useCatalog()
 const router = useRouter()
@@ -34,11 +35,21 @@ const recent = computed(() =>
 </script>
 
 <template>
-  <section class="py-6 sm:py-10">
-    <h1 class="text-3xl sm:text-4xl font-semibold tracking-tight">Hardware Rank <span class="text-muted font-normal text-xl sm:text-2xl">消费级硬件排行榜</span></h1>
-    <p class="mt-3 text-muted max-w-2xl leading-relaxed">
-      按桌面、笔记本、移动芯片分池排名。可切换游戏、生产力、能效与性价比。分数来自静态数据集，不是实时爬虫。
+  <section class="hero relative rounded-2xl border border-line/70 px-5 sm:px-10 py-8 sm:py-12 mb-6 overflow-hidden">
+    <div class="flex items-center gap-4">
+      <AppLogo :size="56" />
+      <div>
+        <h1 class="text-3xl sm:text-5xl font-semibold tracking-tight">Silicon Ladder</h1>
+        <div class="text-muted text-base sm:text-lg mt-1">消费级硬件排行榜 · 天梯图</div>
+      </div>
+    </div>
+    <p class="mt-5 text-muted max-w-2xl leading-relaxed">
+      按桌面、笔记本、移动芯片分池排名。可切换游戏、生产力、能效与性价比，AMD / Intel / NVIDIA 并列天梯一眼看清。分数来自静态数据集，不是实时爬虫。
     </p>
+    <div class="mt-5 flex flex-wrap gap-2">
+      <router-link :to="{ path: '/rank/cpu', query: { view: 'ladder' } }" class="btn">CPU 天梯图</router-link>
+      <router-link :to="{ path: '/rank/gpu', query: { view: 'ladder' } }" class="btn-ghost !py-2">GPU 天梯图</router-link>
+    </div>
 
     <div class="mt-6 relative max-w-xl">
       <input v-model="q" class="input !py-2.5" placeholder="搜索 7800X3D / RTX 5070 / 990 PRO …" />
@@ -57,7 +68,7 @@ const recent = computed(() =>
   </section>
 
   <section class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-    <router-link v-for="c in cards" :key="c.to" :to="c.to" class="card p-4 sm:p-5 hover:border-accent/60 transition-colors group">
+    <router-link v-for="c in cards" :key="c.to" :to="c.to" class="card card-hover p-4 sm:p-5 group">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" class="text-accent mb-3"><path :d="c.icon" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
       <div class="font-semibold text-lg group-hover:text-accent transition-colors">{{ c.title }}</div>
       <div class="text-sm text-muted mt-1">{{ c.desc }}</div>
@@ -70,7 +81,7 @@ const recent = computed(() =>
       <span class="text-xs text-muted">数据快照 {{ catalog.meta.updated }}</span>
     </div>
     <div class="mt-3 grid sm:grid-cols-3 gap-3">
-      <router-link v-for="r in recent" :key="r.item.id" :to="`/product/${r.cat}/${r.item.id}`" class="card p-4 hover:border-accent/60 transition-colors">
+      <router-link v-for="r in recent" :key="r.item.id" :to="`/product/${r.cat}/${r.item.id}`" class="card card-hover p-4">
         <div class="text-xs text-muted">{{ CATEGORY_LABEL[r.cat] }} · {{ FORM_LABEL[r.item.form] }} · {{ r.item.release }}</div>
         <div class="font-medium mt-1">{{ r.item.name }}</div>
         <div class="text-sm text-muted mt-1">{{ r.item.summary }}</div>

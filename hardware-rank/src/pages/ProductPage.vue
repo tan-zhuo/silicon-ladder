@@ -5,8 +5,9 @@ import type { Category, Cpu, Gpu, Ram, Storage, Psu } from '@/types/hardware'
 import { useCatalog } from '@/data/load'
 import { useCompare } from '@/stores/compare'
 import { scorePool, sortRows, SORT_DEFS } from '@/utils/rank'
-import { CATEGORY_LABEL, FORM_LABEL, INTERFACE_LABEL, MODULAR_LABEL, price, num, iops, brandColor, capacity, bool, DASH } from '@/utils/format'
+import { CATEGORY_LABEL, FORM_LABEL, INTERFACE_LABEL, MODULAR_LABEL, price, num, iops, capacity, bool, DASH } from '@/utils/format'
 import ScoreBar from '@/components/ScoreBar.vue'
+import BrandLogo from '@/components/BrandLogo.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -113,7 +114,7 @@ function useCase(): string {
       <div class="flex flex-wrap items-start gap-4">
         <div class="flex-1 min-w-0">
           <div class="flex items-center gap-2 flex-wrap">
-            <span class="w-2.5 h-2.5 rounded-full" :style="{ background: brandColor(item.brand) }" />
+            <BrandLogo :brand="item.brand" :size="22" />
             <span class="text-sm text-muted">{{ item.brand }}</span>
             <span class="text-[11px] px-1.5 py-0.5 rounded bg-line text-muted">{{ FORM_LABEL[item.form] }}</span>
             <span class="text-xs text-muted">发布 {{ item.release }}</span>
@@ -163,9 +164,9 @@ function useCase(): string {
     <section v-if="similar.length">
       <h2 class="font-semibold mb-3">同类推荐</h2>
       <div class="grid sm:grid-cols-3 gap-3">
-        <button v-for="r in similar" :key="r.item.id" class="card p-4 text-left hover:border-accent/60 transition-colors" @click="router.push(`/product/${category}/${r.item.id}`)">
+        <button v-for="r in similar" :key="r.item.id" class="card card-hover p-4 text-left" @click="router.push(`/product/${category}/${r.item.id}`)">
           <div class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full" :style="{ background: brandColor(r.item.brand) }" />
+            <BrandLogo :brand="r.item.brand" :size="16" />
             <span class="font-medium">{{ r.item.name }}</span>
           </div>
           <div class="text-xs text-muted mt-1">#{{ r.rank }}<span v-if="r.rel.overall != null"> · 综合 {{ r.rel.overall?.toFixed(1) }}</span></div>

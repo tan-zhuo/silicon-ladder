@@ -65,7 +65,7 @@ function reset() {
       </div>
 
       <div v-if="showTdp" class="flex flex-wrap items-center gap-2">
-        <span class="text-xs text-muted w-10">{{ category === 'gpu' ? 'TGP/TDP' : 'TDP' }}</span>
+        <span class="text-xs text-muted min-w-[2.5rem] whitespace-nowrap">{{ category === 'gpu' ? 'TGP/TDP' : 'TDP' }}</span>
         <input class="input !w-24" type="number" placeholder="最小 W" :value="modelValue.tdpMin ?? ''" @change="set('tdpMin', numInput($event))" />
         <span class="text-muted">–</span>
         <input class="input !w-24" type="number" placeholder="最大 W" :value="modelValue.tdpMax ?? ''" @change="set('tdpMax', numInput($event))" />

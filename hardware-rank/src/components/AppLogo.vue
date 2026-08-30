@@ -1,0 +1,26 @@
+<script setup lang="ts">
+withDefaults(defineProps<{ size?: number }>(), { size: 28 })
+</script>
+
+<template>
+  <svg :width="size" :height="size" viewBox="0 0 64 64" role="img" aria-label="Silicon Ladder" class="shrink-0">
+    <defs>
+      <linearGradient id="sl-g" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#7AA5FF" />
+        <stop offset="1" stop-color="#3D6BE6" />
+      </linearGradient>
+    </defs>
+    <rect x="4" y="4" width="56" height="56" rx="14" fill="#121821" />
+    <rect x="4.75" y="4.75" width="54.5" height="54.5" rx="13.5" fill="none" stroke="#1E2630" stroke-width="1.5" />
+    <g stroke="#3B5FB8" stroke-width="2.4" stroke-linecap="round">
+      <path d="M22 9v-2M32 9v-2M42 9v-2M22 57v-2M32 57v-2M42 57v-2M9 22h-2M9 32h-2M9 42h-2M57 22h-2M57 32h-2M57 42h-2" />
+    </g>
+    <rect x="13" y="13" width="38" height="38" rx="8" fill="none" stroke="url(#sl-g)" stroke-width="3" />
+    <g fill="url(#sl-g)">
+      <rect x="21" y="39" width="10" height="4.5" rx="2.25" />
+      <rect x="27" y="30.5" width="12" height="4.5" rx="2.25" />
+      <rect x="33" y="22" width="10" height="4.5" rx="2.25" />
+    </g>
+    <circle cx="44.5" cy="18.5" r="2.6" fill="#E7EEF6" />
+  </svg>
+</template>

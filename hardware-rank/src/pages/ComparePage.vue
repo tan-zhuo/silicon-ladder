@@ -4,8 +4,9 @@ import { useRoute } from 'vue-router'
 import type { Category, AnyItem, Cpu, Gpu, Ram, Storage, Psu, RankedRow } from '@/types/hardware'
 import { useCatalog } from '@/data/load'
 import { useCompare } from '@/stores/compare'
+import BrandLogo from '@/components/BrandLogo.vue'
 import { scoreAllPools, SORT_DEFS } from '@/utils/rank'
-import { CATEGORY_LABEL, FORM_LABEL, INTERFACE_LABEL, MODULAR_LABEL, price, num, iops, bool, capacity, brandColor, DASH, rel as fmtRel } from '@/utils/format'
+import { CATEGORY_LABEL, FORM_LABEL, INTERFACE_LABEL, MODULAR_LABEL, price, num, iops, bool, capacity, DASH, rel as fmtRel } from '@/utils/format'
 
 const route = useRoute()
 const catalog = useCatalog()
@@ -78,7 +79,7 @@ const scoreKeys = computed(() => (cat.value && cat.value !== 'psu' ? SORT_DEFS[c
               <th class="text-left px-4 py-3 text-xs text-muted w-32">指标</th>
               <th v-for="it in items" :key="it.id" class="text-left px-4 py-3 min-w-[160px]">
                 <div class="flex items-center gap-2">
-                  <span class="w-2 h-2 rounded-full" :style="{ background: brandColor(it.brand) }" />
+                  <BrandLogo :brand="it.brand" :size="18" />
                   <router-link :to="`/product/${cat}/${it.id}`" class="font-medium hover:text-accent">{{ it.name }}</router-link>
                 </div>
                 <div class="text-[11px] text-muted font-normal mt-0.5">{{ FORM_LABEL[it.form] }} <button class="ml-1 hover:text-fg" @click="compare.remove(it.id)">移除</button></div>

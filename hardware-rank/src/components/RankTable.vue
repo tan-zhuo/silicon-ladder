@@ -3,8 +3,9 @@ import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 import type { Category, RankedRow } from '@/types/hardware'
 import { COLUMNS, formBadge } from '@/utils/columns'
-import { brandColor, rel as fmtRel } from '@/utils/format'
+import { rel as fmtRel } from '@/utils/format'
 import ScoreBar from '@/components/ScoreBar.vue'
+import BrandLogo from '@/components/BrandLogo.vue'
 import { useCompare } from '@/stores/compare'
 import { SORT_DEFS } from '@/utils/rank'
 
@@ -41,7 +42,7 @@ function currentScore(row: RankedRow): string {
     <!-- 桌面端表格 -->
     <div v-else class="card overflow-x-auto hidden md:block">
       <table class="w-full text-sm">
-        <thead class="text-xs text-muted">
+        <thead class="text-xs text-muted bg-bg/40">
           <tr class="border-b border-line">
             <th class="text-left px-4 py-3 w-12">#</th>
             <th class="text-left px-2 py-3">型号</th>
@@ -66,7 +67,7 @@ function currentScore(row: RankedRow): string {
             <td class="px-4 py-3.5 font-semibold" :class="rankClass(r.rank)">{{ r.rank }}</td>
             <td class="px-2 py-3.5">
               <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full shrink-0" :style="{ background: brandColor(r.item.brand) }" :title="r.item.brand" />
+                <BrandLogo :brand="r.item.brand" :size="18" />
                 <router-link :to="`/product/${category}/${r.item.id}`" class="font-medium hover:text-accent whitespace-nowrap" @click.stop>{{ r.item.name }}</router-link>
                 <span v-if="formBadge(category, r)" class="text-[11px] px-1.5 py-0.5 rounded bg-line text-muted whitespace-nowrap">{{ formBadge(category, r) }}</span>
               </div>
@@ -89,13 +90,13 @@ function currentScore(row: RankedRow): string {
     <div v-if="rows.length" class="md:hidden space-y-2">
       <div
         v-for="r in rows" :key="r.item.id"
-        class="card p-3 flex items-center gap-3"
+        class="card card-hover p-3 flex items-center gap-3"
         @click="go(r)"
       >
         <div class="w-7 text-lg font-semibold text-center" :class="rankClass(r.rank)">{{ r.rank }}</div>
         <div class="flex-1 min-w-0">
           <div class="flex items-center gap-2 min-w-0">
-            <span class="w-2 h-2 rounded-full shrink-0" :style="{ background: brandColor(r.item.brand) }" />
+            <BrandLogo :brand="r.item.brand" :size="16" />
             <span class="font-medium truncate">{{ r.item.name }}</span>
           </div>
           <div class="text-xs text-muted mt-0.5 truncate">

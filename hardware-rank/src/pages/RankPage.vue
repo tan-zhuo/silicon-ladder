@@ -10,6 +10,7 @@ import FormTabs from '@/components/FormTabs.vue'
 import SortTabs from '@/components/SortTabs.vue'
 import FilterBar from '@/components/FilterBar.vue'
 import RankTable from '@/components/RankTable.vue'
+import LadderView from '@/components/LadderView.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -70,6 +71,16 @@ const rows = computed(() => {
   return sortRows(category.value, subset, effectiveSort.value, filters.value.dir)
 })
 
+const canLadder = computed(() => category.value === 'cpu' || category.value === 'gpu')
+const view = computed<'list' | 'ladder'>(() => (canLadder.value && route.query.view === 'ladder' ? 'ladder' : 'list'))
+function setView(v: 'list' | 'ladder') {
+  const q = { ...route.query }
+  if (v === 'ladder') q.view = 'ladder'
+  else delete q.view
+  router.replace({ query: q })
+}
+const sortLabel = computed(() => sortOptions.value.find((s) => s.key === effectiveSort.value)?.label ?? '')
+
 const title = computed(() => `${FORM_LABEL[filters.value.form] ?? ''} ${CATEGORY_LABEL[category.value]} 排行榜`)
 const isLaptop = computed(() => filters.value.form === 'laptop' && (category.value === 'cpu' || category.value === 'gpu'))
 </script>
@@ -87,7 +98,11 @@ const isLaptop = computed(() => filters.value.form === 'laptop' && (category.val
 
     <div class="flex flex-col lg:flex-row lg:items-center gap-3">
       <FormTabs :options="FORMS[category]" :model-value="filters.form" @update:model-value="setForm" />
-      <div class="lg:ml-auto">
+      <div class="lg:ml-auto flex flex-wrap items-center gap-3">
+        <div v-if="canLadder" class="inline-flex bg-card border border-line rounded-full p-0.5 text-sm">
+          <button class="px-3 py-1 rounded-full transition-colors" :class="view === 'list' ? 'bg-line text-fg' : 'text-muted hover:text-fg'" @click="setView('list')">列表</button>
+          <button class="px-3 py-1 rounded-full transition-colors" :class="view === 'ladder' ? 'bg-line text-fg' : 'text-muted hover:text-fg'" @click="setView('ladder')">天梯图</button>
+        </div>
         <SortTabs v-if="category !== 'psu'" :options="sortOptions" :model-value="effectiveSort" @update:model-value="setSort" />
         <span v-else class="text-xs text-muted">排序：分档 A→D，同档按瓦数降序</span>
       </div>
@@ -95,6 +110,8 @@ const isLaptop = computed(() => filters.value.form === 'laptop' && (category.val
 
     <FilterBar :category="category" :model-value="filters" :brands="brands" :gens="gens" @update:model-value="update" />
 
-    <RankTable :category="category" :rows="rows" :sort="effectiveSort" :dir="filters.dir" @sort="onHeaderSort" />
+    <div v-if="view === 'ladder'" class="text-xs text-muted -mt-1">天梯图按「{{ sortLabel }}」相对分分带（每 5 分一档），品牌并列，同一档内按排名先后。切换排序可换维度。</div>
+    <LadderView v-if="view === 'ladder'" :category="category" :rows="rows" :sort="effectiveSort" :sort-label="sortLabel" />
+    <RankTable v-else :category="category" :rows="rows" :sort="effectiveSort" :dir="filters.dir" @sort="onHeaderSort" />
   </div>
 </template>

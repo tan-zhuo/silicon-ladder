@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import AppLogo from '@/components/AppLogo.vue'
 const open = ref(false)
 const links = [
   { to: '/rank/cpu', label: 'CPU' },
@@ -14,15 +15,14 @@ const links = [
 </script>
 
 <template>
-  <header class="sticky top-0 z-40 bg-bg/90 backdrop-blur border-b border-line">
+  <header class="sticky top-0 z-40 bg-bg/85 backdrop-blur-md border-b border-line/80">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center gap-4">
-      <router-link to="/" class="flex items-center gap-2 font-semibold tracking-tight">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-accent">
-          <rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="2" />
-          <path d="M8 16V10M12 16V7M16 16v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-        </svg>
-        <span>Hardware Rank</span>
-        <span class="hidden sm:inline text-muted font-normal text-sm">消费级硬件排行榜</span>
+      <router-link to="/" class="flex items-center gap-2.5 font-semibold tracking-tight">
+        <AppLogo :size="30" />
+        <span class="leading-tight">
+          <span class="block">Silicon Ladder</span>
+          <span class="hidden sm:block text-muted font-normal text-[11px] tracking-wide">消费级硬件排行榜</span>
+        </span>
       </router-link>
       <nav class="ml-auto hidden md:flex items-center gap-1 text-sm">
         <router-link
