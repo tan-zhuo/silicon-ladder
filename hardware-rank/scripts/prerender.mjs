@@ -23,7 +23,8 @@ function render(path, { title, description, jsonLd = [], body = '' }) {
   html = html.replace('<div id="app"></div>', `<div id="app"></div>\n    <div id="ssr-summary" style="max-width:960px;margin:24px auto;padding:0 16px;font-family:system-ui,sans-serif;color:#0F172A">${body}</div>`)
   const dir = join(DIST, path)
   mkdirSync(dir, { recursive: true })
-  writeFileSync(join(dir, 'index.html'), html)
+  writeFileSync(join(dir, 'index.html'), html) // 目录索引形式（Netlify / 通用静态托管）
+  if (path !== '/') writeFileSync(join(DIST, path + '.html'), html) // cleanUrls 形式（Vercel）
 }
 const bc = (items) => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map((it, i) => ({ '@type': 'ListItem', position: i + 1, name: it[0], item: SITE + it[1] })) })
 
