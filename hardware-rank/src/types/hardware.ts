@@ -4,6 +4,8 @@ export interface Meta {
   updated: string
   note: string
   version: number
+  /** 汇率：1 CNY 折合的 USD / JPY */
+  fx?: { USD: number; JPY: number; asOf: string }
 }
 
 export interface BaseItem {

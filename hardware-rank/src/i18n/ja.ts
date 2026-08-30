@@ -49,7 +49,7 @@ export const ja: Msg = {
     platform: 'プラットフォームと互換性', platformNote: 'ソケット / アーキテクチャ別の公開仕様。組立前にマザーボードメーカーの対応表をご確認ください。',
     similar: '類似製品', est: '推定', estNote: '旧世代: 公開レビュー比率から現行プールへ換算した目安値です。',
   },
-  spec: { series: 'シリーズ', gen: '世代', socket: 'ソケット', cores: 'コア / スレッド', clocks: 'クロック', tdp: 'TDP', igpu: '内蔵GPU', l3: 'L3', mem: 'メモリ', price: '参考価格', arch: 'アーキテクチャ', chip: 'ダイ', vram: 'VRAM', bus: 'バス幅', tbp: 'TBP', tgp: 'TGP', type: '種類', spec: '仕様', capacity: '容量', speed: '速度', cl: 'CL', write: '書込帯域', interface: 'IF', nand: 'NAND', dram: 'DRAM', seq: 'Seq. 読 / 書', r4k: '4K ランダム読', cacheOut: 'キャッシュ外書込', tbw: 'TBW', watt: 'W数', tier: '品質ティア', eff: '認証', atx31: 'ATX 3.1 / 12V-2x6', modular: 'モジュラー', oem: 'OEM', brand: 'ブランド', form: 'フォーム', release: '発売', seqRead: 'Seq. 読', seqWrite: 'Seq. 書', yes: 'あり', no: 'なし' },
+  spec: { priceNote: '参考価格は人民元のスナップショット。USD / JPY は {d} 時点のレートで換算', series: 'シリーズ', gen: '世代', socket: 'ソケット', cores: 'コア / スレッド', clocks: 'クロック', tdp: 'TDP', igpu: '内蔵GPU', l3: 'L3', mem: 'メモリ', price: '参考価格', arch: 'アーキテクチャ', chip: 'ダイ', vram: 'VRAM', bus: 'バス幅', tbp: 'TBP', tgp: 'TGP', type: '種類', spec: '仕様', capacity: '容量', speed: '速度', cl: 'CL', write: '書込帯域', interface: 'IF', nand: 'NAND', dram: 'DRAM', seq: 'Seq. 読 / 書', r4k: '4K ランダム読', cacheOut: 'キャッシュ外書込', tbw: 'TBW', watt: 'W数', tier: '品質ティア', eff: '認証', atx31: 'ATX 3.1 / 12V-2x6', modular: 'モジュラー', oem: 'OEM', brand: 'ブランド', form: 'フォーム', release: '発売', seqRead: 'Seq. 読', seqWrite: 'Seq. 書', yes: 'あり', no: 'なし' },
   compare: { title: '比較', needTwo: '2件以上必要です。', goRank: 'ランキング', pick: 'で製品をチェックしてください（同カテゴリ最大4件）。', mixed: '異なるフォームファクタを比較しています。数値は乗り換えの根拠にはなりません。', metric: '指標', specs: '仕様', scores: 'スコア（同プール相対値）', psuNoScore: '電源は性能ベンチなし。仕様とティアのみ比較。', addMore: '追加する', clear: 'かごを空にする', remove: '削除' },
   footer: { updated: 'データ更新: ', method: '評価方法とデータソース', disclaimer: '静的スナップショットです。スコアは相対順位用で購入助言ではありません。' },
   guide: {
@@ -76,7 +76,7 @@ export const ja: Msg = {
     h6: '免責事項', p6: '静的スナップショットです。スコアは相対順位用で購入助言ではありません。ノートとデスクトップは別プールで比較不可。同名GPUはTGPで20–40%差があります。',
   },
   lang: '言語',
-  footerx: { blog: '作者ブログ', about: 'Silicon Ladder はコンシューマー向けハードウェアの静的ランキング／ラダーサイトです。CPU・GPU・メモリ・ストレージ・電源をフォームファクタ別にプール分けし、AMD / Intel / NVIDIA を左右対照。スコアはすべて公開レビューに遡れます。', rankings: 'ランキング', ladders: 'ラダー', tools: 'ツールと説明', resources: 'リソース', desktop: 'デスクトップ', laptop: 'ノート', igpu: '内蔵GPU', github: 'GitHub ソース', data: 'データファイル (JSON)', sitemap: 'サイトマップ', dataVersion: 'データ版', copyright: '© {y} Silicon Ladder · ブランド名・商標は各社に帰属します', noAffiliation: 'AMD、Intel、NVIDIA、Apple 等のメーカーとは無関係です。広告・アフィリエイトなし。' },
+  footerx: { blog: '作者ブログ', about: 'Silicon Ladder はコンシューマー向けハードウェアの静的ランキング／ラダーサイトです。CPU・GPU・メモリ・ストレージ・電源をフォームファクタ別にプール分けし、AMD / Intel / NVIDIA を左右対照。スコアはすべて公開レビューに遡れます。', rankings: 'ランキング', ladders: 'ラダー', tools: 'ツールと説明', resources: 'リソース', desktop: 'デスクトップ', laptop: 'ノート', igpu: '内蔵GPU', github: 'GitHub ソース', data: 'データファイル (JSON)', sitemap: 'サイトマップ', dataVersion: 'データ版', copyright: '© {y} Silicon Ladder · ブランド名・商標は各社に帰属します', noAffiliation: 'AMD、Intel、NVIDIA、Apple 等のメーカーとは無関係。広告なし。ストアリンクは検索ページで、アフィリエイトタグを含む場合があります。' },
   search: { title: 'サイト内検索', ph: 'モデル / ブランド 例: 9800X3D, RTX 5070, 990 PRO', hint: '↑↓ 選択 · Enter 開く · Esc 閉じる', empty: '該当する製品がありません', shortcut: '検索' },
   chips: { active: '選択中', clear: 'すべてクリア', era: '年代', tdp: 'TDP', watt: 'W数', q: 'キーワード' },
   rel: { rivals: '直接の競合', rivalsDesc: '同プール・同時期（±1年）・総合スコアが近い他ブランド', lineage: '同シリーズの前後世代', prev: '前世代', next: '次世代', vsFirst: '1列目との差', same: '同じ', diff: '異なる' },
@@ -85,5 +85,6 @@ export const ja: Msg = {
   tech: { na: '未公開 / 該当なし', title: '技術仕様', note: 'アーキテクチャ情報は世代から導出、製品情報は公開仕様から整理。不明は空欄。', gArch: 'アーキテクチャとプロセス', gCores: 'コアとキャッシュ', gClock: 'クロックと電力', gMem: 'メモリと I/O', gIgpu: '内蔵GPU', gUnits: '演算ユニット', gMemG: 'メモリ', gPerf: '理論性能', gPrice: '発売価格',
     cores: 'コアマイクロアーキテクチャ', process: 'プロセス', design: 'チップ設計', die: 'ダイ構成', die_mm2: 'ダイ面積', transistors: 'トランジスタ数', l1: 'L1（コアあたり）', l2: 'L2（合計）', l3: 'L3', isa: '命令セット拡張', smt: 'マルチスレッド', base: 'ベースクロック', boost: 'ブーストクロック', tdp: 'TDP', pmax: '最大電力', memc: 'メモリコントローラ', memmax: '最大容量', pcie: 'PCIe', igpu: '内蔵GPU', igpuCu: '内蔵GPU ユニット', igpuClk: '内蔵GPU クロック', usd: '発売価格 (USD)',
     units: '演算ユニット', shaders: 'シェーダ', tmus: 'TMU', rops: 'ROP', rt: 'RT コア', tensor: 'AI / Tensor', rtGen: 'RT ユニット世代', aiGen: 'AI ユニット世代', baseClk: 'ベースクロック', boostClk: 'ブーストクロック', vram: 'VRAM', bus: 'バス幅', gbps: 'メモリ速度', bw: 'メモリ帯域', l2g: 'L2', ic: 'Infinity Cache', tbp: 'TBP / TGP', tflops: 'FP32 演算性能', perW: 'ワットあたり性能', density: 'トランジスタ密度', shPerUnit: 'ユニットあたりシェーダ' },
+  shop: { title: '購入 / 価格比較', note: '各ストアの検索結果へのリンクです。価格と在庫はストア側の情報。ストア API は使わず、Amazon リンクにはアフィリエイトタグが含まれる場合があります。', search: '“{q}” を検索' },
   loading: 'データ読込中…', loadError: 'データの読込に失敗: ',
 }

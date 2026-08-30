@@ -10,6 +10,7 @@ import ScoreBar from '@/components/ScoreBar.vue'
 import BrandLogo from '@/components/BrandLogo.vue'
 import { cpuPlatform, gpuPlatform, ramPlatform, storagePlatform, psuPlatform, type Row } from '@/data/platforms'
 import { cpuTechRows, gpuTechRows, type TechRow } from '@/data/techrows'
+import { shopLinks, shopQuery } from '@/data/shops'
 import { useI18n, displayName, displaySummary, tagLabel } from '@/i18n'
 import { useSeo, breadcrumb, SITE_URL } from '@/seo'
 
@@ -191,8 +192,9 @@ useSeo(() => {
       <section class="card p-5 lg:col-span-3">
         <h2 class="font-bold mb-3">{{ t('product.specs') }}</h2>
         <dl class="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-3 text-sm">
-          <div v-for="[k, v] in specs" :key="k"><dt class="text-xs text-muted">{{ k }}</dt><dd class="mt-0.5 font-medium">{{ v }}</dd></div>
+          <div v-for="[k, v] in specs" :key="k" :class="k === t('spec.price') ? 'col-span-2 sm:col-span-3' : ''"><dt class="text-xs text-muted">{{ k }}</dt><dd class="mt-0.5 font-medium">{{ v }}</dd></div>
         </dl>
+        <p v-if="item.price_cny" class="text-[11px] text-muted mt-3">{{ t('spec.priceNote', { d: catalog.meta.fx?.asOf ?? catalog.meta.updated }) }}</p>
       </section>
       <section class="card p-5 lg:col-span-2">
         <h2 class="font-bold mb-3">{{ t('product.scores') }}</h2>
@@ -206,6 +208,20 @@ useSeo(() => {
         </div>
       </section>
     </div>
+
+    <section class="card p-5">
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <h2 class="font-bold">{{ t('shop.title') }}</h2>
+        <span class="text-xs text-muted">{{ t('shop.search', { q: shopQuery(item) }) }}</span>
+      </div>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <a v-for="l in shopLinks(item)" :key="l.key" :href="l.url" target="_blank" rel="noopener nofollow sponsored" class="btn-ghost">
+          <span class="badge !py-0">{{ l.region }}</span>{{ l.label }}
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+        </a>
+      </div>
+      <p class="text-[11px] text-muted mt-3">{{ t('shop.note') }}</p>
+    </section>
 
     <section v-if="techGroups.length" class="card p-5">
       <h2 class="font-bold">{{ t('tech.title') }}</h2>

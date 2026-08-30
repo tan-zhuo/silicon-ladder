@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import type { Category, Cpu, Gpu, Ram, Storage, Psu, Meta, AnyItem } from '@/types/hardware'
+import { FX } from '@/utils/format'
 
 async function fetchJson<T>(path: string): Promise<T> {
   const base = import.meta.env.BASE_URL.replace(/\/$/, '')
@@ -34,6 +35,7 @@ export const useCatalog = defineStore('catalog', () => {
           fetchJson<Psu[]>('psus.json'),
         ])
         meta.value = m
+        if (m.fx) { FX.USD = m.fx.USD; FX.JPY = m.fx.JPY }
         cpus.value = c
         gpus.value = g
         rams.value = r

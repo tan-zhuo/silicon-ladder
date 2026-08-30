@@ -9,11 +9,20 @@ export function num(v: number | null | undefined, digits = 0): string {
 export function rel(v: number | null | undefined): string {
   return v === null || v === undefined ? DASH : v.toFixed(1)
 }
+/** 汇率由 meta.json 提供（1 CNY → USD / JPY），加载后由 catalog 写入 */
+export const FX = { USD: 0.139, JPY: 20.5 }
+const fmt0 = (n: number) => n.toLocaleString('en-US', { maximumFractionDigits: 0 })
+/** 三币种参考价：当前语言的币种排在最前 */
 export function price(v: number | null | undefined): string {
   if (v === null || v === undefined) return DASH
-  const loc = locale.value === 'zh' ? 'zh-CN' : locale.value === 'ja' ? 'ja-JP' : 'en-US'
-  const s = new Intl.NumberFormat(loc, { style: 'currency', currency: 'CNY', maximumFractionDigits: 0 }).format(v)
-  return locale.value === 'zh' ? s : s.replace(/^(CN¥|￥|¥|CNY)\s?/, 'CN¥')
+  const parts = { zh: `CN¥${fmt0(v)}`, en: `US$${fmt0(v * FX.USD)}`, ja: `JP¥${fmt0(Math.round((v * FX.JPY) / 100) * 100)}` }
+  const order = locale.value === 'en' ? ['en', 'zh', 'ja'] : locale.value === 'ja' ? ['ja', 'zh', 'en'] : ['zh', 'en', 'ja']
+  return order.map((k) => parts[k as keyof typeof parts]).join(' · ')
+}
+/** 单币种（当前语言） */
+export function priceShort(v: number | null | undefined): string {
+  if (v === null || v === undefined) return DASH
+  return locale.value === 'en' ? `US$${fmt0(v * FX.USD)}` : locale.value === 'ja' ? `JP¥${fmt0(Math.round((v * FX.JPY) / 100) * 100)}` : `CN¥${fmt0(v)}`
 }
 export function bool(v: boolean | null | undefined): string {
   if (v === null || v === undefined) return DASH

@@ -48,7 +48,7 @@ export const zh = {
     platform: '平台与兼容性', platformNote: '按插槽 / 架构整理的公开规格，装机前请以主板厂商支持列表为准。',
     similar: '同类推荐', est: '估算', estNote: '历史硬件：分数按公开评测比例换算为同池示意分，仅供定位参考。',
   },
-  spec: { series: '系列', gen: '代数', socket: '插槽', cores: '核心 / 线程', clocks: '频率', tdp: 'TDP', igpu: '核显', l3: 'L3 缓存', mem: '内存支持', price: '参考价', arch: '架构', chip: '核心', vram: '显存', bus: '位宽', tbp: 'TBP', tgp: 'TGP', type: '类型', spec: '规格', capacity: '容量', speed: '速率', cl: 'CL', write: '写带宽', interface: '接口', nand: '颗粒', dram: 'DRAM 缓存', seq: '顺序读 / 写', r4k: '4K 随机读', cacheOut: '缓外写入', tbw: 'TBW', watt: '瓦数', tier: '品质分档', eff: '认证', atx31: 'ATX 3.1 / 12V-2x6', modular: '模组', oem: '代工 (OEM)', brand: '品牌', form: '形态', release: '发布', seqRead: '顺序读', seqWrite: '顺序写', yes: '是', no: '否' },
+  spec: { priceNote: '参考价为人民币快照，美元 / 日元按 {d} 汇率换算', series: '系列', gen: '代数', socket: '插槽', cores: '核心 / 线程', clocks: '频率', tdp: 'TDP', igpu: '核显', l3: 'L3 缓存', mem: '内存支持', price: '参考价', arch: '架构', chip: '核心', vram: '显存', bus: '位宽', tbp: 'TBP', tgp: 'TGP', type: '类型', spec: '规格', capacity: '容量', speed: '速率', cl: 'CL', write: '写带宽', interface: '接口', nand: '颗粒', dram: 'DRAM 缓存', seq: '顺序读 / 写', r4k: '4K 随机读', cacheOut: '缓外写入', tbw: 'TBW', watt: '瓦数', tier: '品质分档', eff: '认证', atx31: 'ATX 3.1 / 12V-2x6', modular: '模组', oem: '代工 (OEM)', brand: '品牌', form: '形态', release: '发布', seqRead: '顺序读', seqWrite: '顺序写', yes: '是', no: '否' },
   compare: { title: '对比', needTwo: '对比篮里至少需要 2 项。去', goRank: '排行榜', pick: '勾选产品（同品类最多 4 项）。', mixed: '你正在对比不同形态的产品，性能数字不能当换机依据。不同形态不可直接比较性能。', metric: '指标', specs: '规格', scores: '分数（同形态池相对分）', psuNoScore: '电源不做性能跑分，仅比较规格与分档。', addMore: '继续添加', clear: '清空对比篮', remove: '移除' },
   footer: { updated: '数据更新：', method: '方法论与数据来源', disclaimer: '数据为静态快照，分数用于相对排序，不构成购买建议。' },
   guide: {
@@ -75,7 +75,7 @@ export const zh = {
     h6: '免责声明', p6: '数据为静态快照，分数用于相对排序，不构成购买建议。笔记本与桌面分数按形态分池，不可直接比较；同名 GPU 会因 TGP 不同出现 20–40% 差距。',
   },
   lang: '语言',
-  footerx: { blog: '作者博客', about: 'Silicon Ladder 是一个纯静态的消费级硬件排行与天梯站：CPU、GPU、内存、存储、电源按形态分池归一，AMD / Intel / NVIDIA 并列对照，分数可追溯到公开评测。', rankings: '排行榜', ladders: '天梯图', tools: '工具与说明', resources: '资源', desktop: '桌面', laptop: '笔记本', igpu: '核显', github: 'GitHub 源码', data: '数据文件 (JSON)', sitemap: '站点地图', dataVersion: '数据版本', copyright: '© {y} Silicon Ladder · 站内品牌名称与商标归各自所有者所有', noAffiliation: '与 AMD、Intel、NVIDIA、Apple 等厂商无关联，不含广告与联盟链接。' },
+  footerx: { blog: '作者博客', about: 'Silicon Ladder 是一个纯静态的消费级硬件排行与天梯站：CPU、GPU、内存、存储、电源按形态分池归一，AMD / Intel / NVIDIA 并列对照，分数可追溯到公开评测。', rankings: '排行榜', ladders: '天梯图', tools: '工具与说明', resources: '资源', desktop: '桌面', laptop: '笔记本', igpu: '核显', github: 'GitHub 源码', data: '数据文件 (JSON)', sitemap: '站点地图', dataVersion: '数据版本', copyright: '© {y} Silicon Ladder · 站内品牌名称与商标归各自所有者所有', noAffiliation: '与 AMD、Intel、NVIDIA、Apple 等厂商无关联；无广告，商城链接为搜索页，可能含联盟标签。' },
   search: { title: '全站搜索', ph: '输入型号 / 品牌，如 9800X3D、RTX 5070、990 PRO', hint: '↑↓ 选择 · Enter 打开 · Esc 关闭', empty: '没有匹配的产品', shortcut: '搜索' },
   chips: { active: '已选', clear: '全部清除', era: '年代', tdp: 'TDP', watt: '瓦数', q: '关键词' },
   rel: { rivals: '直接竞品', rivalsDesc: '同池、同期（±1 年）、综合分接近的其他品牌产品', lineage: '同系列前后代', prev: '上一代', next: '下一代', vsFirst: '较第一列', same: '相同', diff: '不同' },
@@ -84,5 +84,6 @@ export const zh = {
   tech: { na: '厂商未公开 / 不适用', title: '技术规格', note: '架构级信息按代次派生，产品级数据为公开规格整理；未知留空。', gArch: '架构与工艺', gCores: '核心与缓存', gClock: '时钟与功耗', gMem: '内存与 I/O', gIgpu: '核显', gUnits: '计算单元', gMemG: '显存', gPerf: '理论性能', gPrice: '首发价',
     cores: '核心微架构', process: '制程', design: '芯片设计', die: '晶片布局', die_mm2: '晶片面积', transistors: '晶体管', l1: 'L1 缓存（每核）', l2: 'L2 缓存（总）', l3: 'L3 缓存', isa: '指令集', smt: '多线程', base: '基础频率', boost: '加速频率', tdp: 'TDP', pmax: '最大功耗', memc: '内存控制器', memmax: '最大容量', pcie: 'PCIe', igpu: '核显', igpuCu: '核显单元', igpuClk: '核显频率', usd: '首发价 (USD)',
     units: '计算单元', shaders: '着色器', tmus: 'TMU', rops: 'ROP', rt: 'RT 核心', tensor: 'AI / Tensor', rtGen: 'RT 单元世代', aiGen: 'AI 单元世代', baseClk: '基础频率', boostClk: '加速频率', vram: '显存', bus: '位宽', gbps: '显存速率', bw: '显存带宽', l2g: 'L2 缓存', ic: 'Infinity Cache', tbp: 'TBP / TGP', tflops: 'FP32 算力', perW: '每瓦算力', density: '晶体管密度', shPerUnit: '每单元着色器' },
+  shop: { title: '购买 / 比价', note: '以下为各商城搜索页链接，价格与库存以商城为准；本站不接商城 API，亚马逊链接可能含联盟标签。', search: '搜索 “{q}”' },
   loading: '加载数据中…', loadError: '数据加载失败：',
 }

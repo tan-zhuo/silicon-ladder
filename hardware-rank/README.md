@@ -18,6 +18,11 @@ npm run validate   # 数据校验（build 前自动执行）
 npm run calibrate  # 用 data-src/calibration.csv 回写真实评测分数
 ```
 
+## 价格与购买链接
+
+- `price_cny` 为人民币快照；详情页同时显示 USD / JPY，汇率在 `public/data/meta.json` 的 `fx`（1 CNY 折合值 + `asOf`），改汇率只需改这一处。
+- 详情页「购买 / 比价」为京东、京东国际（全球购）、Amazon.com、Amazon.co.jp 的搜索页链接（`src/data/shops.ts`），不接商城 API。复制 `.env.example` 为 `.env` 并填写 `VITE_AMZN_TAG` 可挂亚马逊联盟标签。
+
 ## 数据管线
 
 1. `public/data/*.json` 是站点唯一数据源；`scripts/validate-data.mjs` 在每次 build 前校验 id 唯一/格式、枚举、`null` 而非 0 等。
