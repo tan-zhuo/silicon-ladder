@@ -47,6 +47,7 @@ useSeo(() => ({
   jsonLd: [{
     '@context': 'https://schema.org', '@type': 'WebSite', name: SITE_NAME, url: SITE_URL,
     description: t('home.heroDesc'),
+    author: { '@type': 'Person', name: 'tanzhuo', url: 'https://tanzhuo.xyz' },
     potentialAction: { '@type': 'SearchAction', target: `${SITE_URL}/rank/cpu?q={search_term_string}`, 'query-input': 'required name=search_term_string' },
   }],
 }))

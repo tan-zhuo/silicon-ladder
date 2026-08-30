@@ -77,6 +77,7 @@ const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
               <li><a :href="REPO" target="_blank" rel="noopener" class="hover:text-accent inline-flex items-center gap-1">{{ t('footerx.github') }}<svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg></a></li>
               <li><a :href="`${REPO}/tree/main/hardware-rank/public/data`" target="_blank" rel="noopener" class="hover:text-accent">{{ t('footerx.data') }}</a></li>
               <li><a href="/sitemap.xml" class="hover:text-accent">{{ t('footerx.sitemap') }}</a></li>
+              <li><a href="https://tanzhuo.xyz" target="_blank" rel="noopener me" class="hover:text-accent inline-flex items-center gap-1">{{ t('footerx.blog') }} · tanzhuo.xyz<svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg></a></li>
             </ul>
           </div>
         </div>
