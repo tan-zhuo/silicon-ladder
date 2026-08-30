@@ -52,7 +52,7 @@ const chips = computed(() => {
   <div class="card p-3 sm:p-4">
     <div class="flex items-center gap-2">
       <div class="relative flex-1">
-        <svg class="absolute left-2.5 top-2 text-muted" width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" /><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+        <svg class="absolute left-2.5 top-1/2 -translate-y-1/2 text-muted pointer-events-none" width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" /><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
         <input class="input pl-8" :value="modelValue.q" :placeholder="t('filter.search')" @input="set('q', ($event.target as HTMLInputElement).value)" />
       </div>
       <button class="btn-ghost md:hidden" @click="open = !open">{{ t('filter.filters') }}<span v-if="activeCount" class="ml-1 text-accent">({{ activeCount }})</span></button>
