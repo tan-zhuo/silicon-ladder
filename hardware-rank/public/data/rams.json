@@ -11,7 +11,7 @@
     "cl": 30,
     "latency_ns": 62,
     "release": "2023-03",
-    "price_cny": 699,
+    "price_cny": 3299,
     "summary": "AM5 甜点频率，EXPO 一键即用。",
     "scores": {
       "read_GBs": 90,
@@ -33,7 +33,7 @@
     "cl": 34,
     "latency_ns": 60,
     "release": "2023-06",
-    "price_cny": 999,
+    "price_cny": 4299,
     "summary": "Intel 平台高频首选，AM5 需看板。",
     "scores": {
       "read_GBs": 106,
@@ -55,7 +55,7 @@
     "cl": 36,
     "latency_ns": 70,
     "release": "2022-11",
-    "price_cny": 599,
+    "price_cny": 3299,
     "summary": "入门 DDR5，稳定但延迟偏高。",
     "scores": {
       "read_GBs": 82,
@@ -77,7 +77,7 @@
     "cl": 46,
     "latency_ns": 80,
     "release": "2023-01",
-    "price_cny": 649,
+    "price_cny": 3199,
     "summary": "笔记本升级常见选择，JEDEC 时序。",
     "scores": {
       "read_GBs": 78,
@@ -121,7 +121,7 @@
     "cl": 16,
     "latency_ns": 64,
     "release": "2020-03",
-    "price_cny": 399,
+    "price_cny": 1399,
     "summary": "上代平台对照组，延迟不差带宽低。",
     "scores": {
       "read_GBs": 52,
@@ -143,7 +143,7 @@
     "cl": 30,
     "latency_ns": 61,
     "release": "2024-03",
-    "price_cny": 1399,
+    "price_cny": 6499,
     "summary": "AM5 大容量首选，EXPO。",
     "scores": {
       "read_GBs": 92,
@@ -165,7 +165,7 @@
     "cl": 30,
     "latency_ns": 62,
     "release": "2022-11",
-    "price_cny": 599,
+    "price_cny": 3199,
     "summary": "无灯低矮，AM5 性价比之选。",
     "scores": {
       "read_GBs": 90,
@@ -187,7 +187,7 @@
     "cl": 32,
     "latency_ns": 61,
     "release": "2023-03",
-    "price_cny": 699,
+    "price_cny": 3699,
     "summary": "海力士 A-die，可超。",
     "scores": {
       "read_GBs": 96,
@@ -209,7 +209,7 @@
     "cl": 34,
     "latency_ns": 60,
     "release": "2023-07",
-    "price_cny": 1299,
+    "price_cny": 4599,
     "summary": "旗舰外观，Intel 平台。",
     "scores": {
       "read_GBs": 106,
@@ -231,7 +231,7 @@
     "cl": 38,
     "latency_ns": 59,
     "release": "2024-06",
-    "price_cny": 1899,
+    "price_cny": 8498,
     "summary": "超频玩家向，需好主板。",
     "scores": {
       "read_GBs": 118,
@@ -253,7 +253,7 @@
     "cl": 32,
     "latency_ns": 61,
     "release": "2022-06",
-    "price_cny": 799,
+    "price_cny": 3999,
     "summary": "金士顿高端线。",
     "scores": {
       "read_GBs": 96,
@@ -275,7 +275,7 @@
     "cl": 46,
     "latency_ns": 78,
     "release": "2023-05",
-    "price_cny": 499,
+    "price_cny": 3099,
     "summary": "JEDEC 原厂颗粒，稳但慢。",
     "scores": {
       "read_GBs": 82,
@@ -297,7 +297,7 @@
     "cl": 16,
     "latency_ns": 68,
     "release": "2016-01",
-    "price_cny": 229,
+    "price_cny": 699,
     "summary": "DDR4 时代的标准答案。",
     "scores": {
       "read_GBs": 46,
@@ -319,7 +319,7 @@
     "cl": 40,
     "latency_ns": 74,
     "release": "2023-04",
-    "price_cny": 699,
+    "price_cny": 3299,
     "summary": "时序稍好的笔记本条。",
     "scores": {
       "read_GBs": 79,
@@ -341,7 +341,7 @@
     "cl": 38,
     "latency_ns": 68,
     "release": "2024-02",
-    "price_cny": 899,
+    "price_cny": 3899,
     "summary": "支持 XMP 的高频笔记本条。",
     "scores": {
       "read_GBs": 88,
@@ -363,7 +363,7 @@
     "cl": 22,
     "latency_ns": 78,
     "release": "2020-01",
-    "price_cny": 249,
+    "price_cny": 749,
     "summary": "老笔记本升级。",
     "scores": {
       "read_GBs": 44,

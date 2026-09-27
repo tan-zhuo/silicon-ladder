@@ -15,7 +15,7 @@
     "cache_l3": "96 MB (3D V-Cache)",
     "mem": "DDR5-5200",
     "release": "2023-04",
-    "price_cny": 2499,
+    "price_cny": 1523,
     "summary": "上代游戏神U，3D 缓存加持，功耗温和。",
     "tags": [
       "X3D",
@@ -63,7 +63,7 @@
     "cache_l3": "96 MB (3D V-Cache)",
     "mem": "DDR5-5600",
     "release": "2024-11",
-    "price_cny": 3699,
+    "price_cny": 2189,
     "summary": "当前游戏最强，第二代 3D 缓存可超频。",
     "tags": [
       "X3D",
@@ -641,7 +641,7 @@
     "cache_l3": "32 MB",
     "mem": "DDR5-5600",
     "release": "2024-08",
-    "price_cny": 2199,
+    "price_cny": 1243,
     "summary": "65W 能效极佳，单核强。",
     "tags": [
       "能效"
@@ -688,7 +688,7 @@
     "cache_l3": "32 MB",
     "mem": "DDR5-5600",
     "release": "2024-08",
-    "price_cny": 1699,
+    "price_cny": 943,
     "summary": "Zen5 入门，单核不输旗舰。",
     "tags": [
       "性价比"

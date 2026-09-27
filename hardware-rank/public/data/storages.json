@@ -14,7 +14,7 @@
     "write_cache_out": 1600,
     "tbw": 1200,
     "release": "2022-10",
-    "price_cny": 1199,
+    "price_cny": 2399,
     "summary": "PCIe 4.0 天花板，4K 与缓外均优秀。",
     "tags": [
       "旗舰"
@@ -37,7 +37,7 @@
     "write_cache_out": 1500,
     "tbw": 1200,
     "release": "2022-08",
-    "price_cny": 1099,
+    "price_cny": 2199,
     "summary": "游戏盘口碑款，温度控制好。",
     "tags": [
       "游戏"
@@ -84,7 +84,7 @@
     "write_cache_out": 1100,
     "tbw": 1200,
     "release": "2023-06",
-    "price_cny": 799,
+    "price_cny": 1899,
     "summary": "国产主流，无 DRAM 但 HMB 表现不错。",
     "tags": [
       "国产",
@@ -250,7 +250,7 @@
     "write_cache_out": 2600,
     "tbw": 1200,
     "release": "2025-04",
-    "price_cny": 1499,
+    "price_cny": 2499,
     "summary": "国产 PCIe 5.0，价格友好。",
     "tags": [
       "国产",
@@ -548,7 +548,7 @@
     "write_cache_out": null,
     "tbw": null,
     "release": "2020-10",
-    "price_cny": 2299,
+    "price_cny": 3876,
     "summary": "企业盘做仓库，噪音大。",
     "tags": [
       "CMR",
@@ -572,7 +572,7 @@
     "write_cache_out": null,
     "tbw": null,
     "release": "2020-01",
-    "price_cny": 2699,
+    "price_cny": 5199,
     "summary": "企业级大容量。",
     "tags": [
       "CMR",
@@ -643,7 +643,7 @@
     "write_cache_out": null,
     "tbw": null,
     "release": "2016-01",
-    "price_cny": 349,
+    "price_cny": 958,
     "summary": "SMR 叠瓦，只适合冷数据。",
     "tags": [
       "SMR"
