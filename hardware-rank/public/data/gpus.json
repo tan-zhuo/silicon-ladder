@@ -13,7 +13,7 @@
     "bus_bit": 512,
     "tdp_w": 575,
     "release": "2025-01",
-    "price_cny": 16499,
+    "price_cny": null,
     "summary": "当前桌面最强，功耗与价格同样惊人。",
     "tags": [
       "旗舰",
@@ -58,7 +58,7 @@
     "bus_bit": 256,
     "tdp_w": 360,
     "release": "2025-01",
-    "price_cny": 8299,
+    "price_cny": 12399,
     "summary": "次旗舰，16GB 显存略保守。",
     "tags": [
       "4K"
@@ -147,7 +147,7 @@
     "bus_bit": 256,
     "tdp_w": 300,
     "release": "2025-02",
-    "price_cny": 6299,
+    "price_cny": 9099,
     "summary": "2K 高刷甜点，16GB 显存够用。",
     "tags": [
       "2K"
@@ -603,7 +603,7 @@
     "bus_bit": 192,
     "tdp_w": 250,
     "release": "2025-03",
-    "price_cny": 4599,
+    "price_cny": 6799,
     "summary": "12GB 显存偏保守，2K 主流。",
     "tags": [
       "2K"
@@ -692,7 +692,7 @@
     "bus_bit": 128,
     "tdp_w": 145,
     "release": "2025-05",
-    "price_cny": 2499,
+    "price_cny": 2980,
     "summary": "8GB 显存是硬伤。",
     "tags": [
       "1080p"
@@ -7750,7 +7750,7 @@
     "bus_bit": 512,
     "tdp_w": 575,
     "release": "2025-01",
-    "price_cny": 16499,
+    "price_cny": 24799,
     "summary": "中国特供版，AI 算力受限，游戏几乎无差。",
     "summary_en": "China-market version with capped AI throughput; gaming nearly identical.",
     "summary_ja": "中国向け。AI 性能制限、ゲームはほぼ同じ。",
@@ -8506,7 +8506,7 @@
     "bus_bit": 192,
     "tdp_w": 220,
     "release": "2025-05",
-    "price_cny": 3999,
+    "price_cny": 3600,
     "summary": "12GB 中国首发版。",
     "summary_en": "12GB China-first variant.",
     "summary_ja": "12GB 中国先行版。",
