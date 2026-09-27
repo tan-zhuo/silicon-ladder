@@ -147,7 +147,7 @@
     "bus_bit": 256,
     "tdp_w": 300,
     "release": "2025-02",
-    "price_cny": 9099,
+    "price_cny": 9200,
     "summary": "2K 高刷甜点，16GB 显存够用。",
     "tags": [
       "2K"
@@ -191,7 +191,7 @@
     "bus_bit": 256,
     "tdp_w": 304,
     "release": "2025-03",
-    "price_cny": 4999,
+    "price_cny": 5899,
     "summary": "RDNA4 光追大幅进步，性价比好。",
     "tags": [
       "2K",
@@ -603,7 +603,7 @@
     "bus_bit": 192,
     "tdp_w": 250,
     "release": "2025-03",
-    "price_cny": 6799,
+    "price_cny": 6949,
     "summary": "12GB 显存偏保守，2K 主流。",
     "tags": [
       "2K"
@@ -647,7 +647,7 @@
     "bus_bit": 128,
     "tdp_w": 180,
     "release": "2025-04",
-    "price_cny": 3599,
+    "price_cny": 5400,
     "summary": "16GB 版本才值得买。",
     "tags": [
       "1080p",
@@ -1089,7 +1089,7 @@
     "bus_bit": 256,
     "tdp_w": 220,
     "release": "2025-03",
-    "price_cny": 4499,
+    "price_cny": 5276,
     "summary": "220W 能效很好，比 XT 更均衡。",
     "tags": [
       "2K",
@@ -1134,7 +1134,7 @@
     "bus_bit": 128,
     "tdp_w": 160,
     "release": "2025-06",
-    "price_cny": 2799,
+    "price_cny": 3300,
     "summary": "同价位 16GB，对标 5060 Ti。",
     "tags": [
       "1080p",
@@ -4740,7 +4740,7 @@
     "bus_bit": 128,
     "tdp_w": 180,
     "release": "2025-04",
-    "price_cny": 3199,
+    "price_cny": 3400,
     "summary": "8GB 版在新游戏里明显掉速。",
     "summary_en": "The 8GB version stumbles in newer games.",
     "summary_ja": "8GB 版は新作で明らかに失速。",
@@ -5574,7 +5574,7 @@
     "bus_bit": 128,
     "tdp_w": 150,
     "release": "2025-06",
-    "price_cny": 2299,
+    "price_cny": 2662,
     "summary": "8GB 版便宜但受限。",
     "summary_en": "Cheaper 8GB version, VRAM-limited.",
     "summary_ja": "安価な 8GB 版、VRAM 制限あり。",
@@ -7750,7 +7750,7 @@
     "bus_bit": 512,
     "tdp_w": 575,
     "release": "2025-01",
-    "price_cny": 24799,
+    "price_cny": 26734,
     "summary": "中国特供版，AI 算力受限，游戏几乎无差。",
     "summary_en": "China-market version with capped AI throughput; gaming nearly identical.",
     "summary_ja": "中国向け。AI 性能制限、ゲームはほぼ同じ。",
@@ -7803,7 +7803,7 @@
     "bus_bit": 128,
     "tdp_w": 130,
     "release": "2025-07",
-    "price_cny": 1999,
+    "price_cny": 2352,
     "summary": "GDDR6 版入门 50 系。",
     "summary_en": "Entry 50-series with GDDR6.",
     "summary_ja": "GDDR6 の入門 50 系。",
