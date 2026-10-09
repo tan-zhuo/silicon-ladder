@@ -58,7 +58,7 @@
     "bus_bit": 256,
     "tdp_w": 360,
     "release": "2025-01",
-    "price_cny": 12399,
+    "price_cny": 12499,
     "summary": "次旗舰，16GB 显存略保守。",
     "tags": [
       "4K"
@@ -147,7 +147,7 @@
     "bus_bit": 256,
     "tdp_w": 300,
     "release": "2025-02",
-    "price_cny": 9200,
+    "price_cny": 9394,
     "summary": "2K 高刷甜点，16GB 显存够用。",
     "tags": [
       "2K"
@@ -647,7 +647,7 @@
     "bus_bit": 128,
     "tdp_w": 180,
     "release": "2025-04",
-    "price_cny": 5400,
+    "price_cny": 5399,
     "summary": "16GB 版本才值得买。",
     "tags": [
       "1080p",
@@ -1446,7 +1446,7 @@
     "bus_bit": 192,
     "tdp_w": 190,
     "release": "2024-12",
-    "price_cny": 2199,
+    "price_cny": 2499,
     "summary": "Battlemage 12GB，驱动大幅改善。",
     "tags": [
       "1080p",
@@ -4740,7 +4740,7 @@
     "bus_bit": 128,
     "tdp_w": 180,
     "release": "2025-04",
-    "price_cny": 3400,
+    "price_cny": 3499,
     "summary": "8GB 版在新游戏里明显掉速。",
     "summary_en": "The 8GB version stumbles in newer games.",
     "summary_ja": "8GB 版は新作で明らかに失速。",
@@ -5574,7 +5574,7 @@
     "bus_bit": 128,
     "tdp_w": 150,
     "release": "2025-06",
-    "price_cny": 2662,
+    "price_cny": 2699,
     "summary": "8GB 版便宜但受限。",
     "summary_en": "Cheaper 8GB version, VRAM-limited.",
     "summary_ja": "安価な 8GB 版、VRAM 制限あり。",
@@ -7803,7 +7803,7 @@
     "bus_bit": 128,
     "tdp_w": 130,
     "release": "2025-07",
-    "price_cny": 2352,
+    "price_cny": 2499,
     "summary": "GDDR6 版入门 50 系。",
     "summary_en": "Entry 50-series with GDDR6.",
     "summary_ja": "GDDR6 の入門 50 系。",
