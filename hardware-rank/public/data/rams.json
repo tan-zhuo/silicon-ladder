@@ -198,6 +198,50 @@
     "summary_ja": "Hynix A-die。OC 可能。"
   },
   {
+    "id": "adata-xpg-d600g-ddr5-6000-cl26-32",
+    "name": "ADATA XPG 龙耀 D600G DDR5-6000 CL26 32GB",
+    "brand": "ADATA",
+    "form": "kit-desktop",
+    "type": "DDR5",
+    "spec": "DDR5-6000 CL26 32GB (16x2)",
+    "capacity_gb": 32,
+    "speed_mt": 6000,
+    "cl": 26,
+    "latency_ns": null,
+    "release": "2026-10",
+    "price_cny": 5499,
+    "summary": "海力士 A-die CL26，无限镜灯效，10 层 PCB。",
+    "scores": {
+      "read_GBs": null,
+      "write_GBs": null,
+      "latency_ns": null
+    },
+    "summary_en": "Hynix A-die CL26, infinity-mirror RGB, 10-layer PCB.",
+    "summary_ja": "Hynix A-die CL26。無限ミラー RGB、10 層 PCB。"
+  },
+  {
+    "id": "colorful-igame-shadow2-ddr5-6000-cl30-32",
+    "name": "七彩虹 iGame 影Ⅱ DDR5-6000 CL30 32GB",
+    "brand": "Colorful",
+    "form": "kit-desktop",
+    "type": "DDR5",
+    "spec": "DDR5-6000 CL30-38-38 32GB (16x2) 1.4V",
+    "capacity_gb": 32,
+    "speed_mt": 6000,
+    "cl": 30,
+    "latency_ns": null,
+    "release": "2026-10",
+    "price_cny": 3999,
+    "summary": "国产颗粒做到 CL30，带 On-Die ECC。",
+    "scores": {
+      "read_GBs": null,
+      "write_GBs": null,
+      "latency_ns": null
+    },
+    "summary_en": "Domestic DRAM at CL30, with On-Die ECC.",
+    "summary_ja": "国産ダイで CL30。On-Die ECC 対応。"
+  },
+  {
     "id": "corsair-dominator-titanium-ddr5-7200-cl34-32",
     "name": "Corsair Dominator Titanium DDR5-7200 CL34 32GB",
     "brand": "Corsair",
