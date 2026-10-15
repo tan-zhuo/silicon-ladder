@@ -9,9 +9,9 @@ export const zh = {
   sort: { overall: '综合', gaming: '游戏', single: '单核', multi: '生产力', efficiency: '能效', igpu: '核显', value: '性价比', raster: '光栅', rt: '光追', bandwidth: '带宽', latency: '延迟', random4k: '4K 随机', cacheOut: '缓外写入', seqRead: '顺序读', endurance: '耐久', tier: '品质分档' },
   col: { rank: '#', model: '型号', cores: '核心', tdp: 'TDP', single: '单核', multi: '多核', gaming: '游戏', overall: '综合', vram: '显存', power: 'TGP/TDP', raster: '光栅', rt: '光追', spec: '规格', read: '读带宽', latency: '延迟', interface: '接口', seqRead: '顺序读', random4k: '4K 随机', cacheOut: '缓外写入', watt: '瓦数', tier: '分档', efficiency: '认证', atx31: 'ATX 3.1', modular: '模组', compare: '对比', release: '发布' },
   home: {
-    heroKicker: '硬件天梯 · 2007 → 2026',
-    heroTitle: '看清每一代芯片的位置',
-    heroDesc: '从 Core 2 Duo 到 Ryzen 9950X3D，从 8800 GT 到 RTX 5090。桌面、笔记本、核显分池排名，AMD / Intel / NVIDIA 并列天梯，游戏、生产力、能效、性价比一键切换。',
+    heroKicker: '数据覆盖 2007 年至今',
+    heroTitle: '消费级硬件排行与天梯图',
+    heroDesc: '收录 2007 年至今的 CPU、GPU、内存、存储与电源。桌面、笔记本、核显分池排名，AMD / Intel / NVIDIA 并列对照，可按游戏、生产力、能效、性价比切换排序。',
     ctaCpu: 'CPU 天梯图', ctaGpu: 'GPU 天梯图', ctaCompare: '开始对比',
     searchPh: '搜索 7800X3D / RTX 5070 / 990 PRO …',
     statItems: '收录条目', statCpu: 'CPU', statGpu: 'GPU', statSpan: '年份跨度', statUpdated: '数据更新',

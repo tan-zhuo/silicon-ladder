@@ -1,0 +1,63 @@
+// 把夸张文案改为中性描述（zh/en/ja）
+import { readFileSync, writeFileSync } from 'node:fs'
+const T = {
+  'amd-ryzen-7-7800x3d': ['上代游戏表现最好的型号之一，3D 缓存，功耗温和。', 'One of last generation\'s best gaming CPUs; 3D V-Cache, modest power.', '前世代でゲーム性能上位。3D V-Cache、消費電力控えめ。'],
+  'amd-ryzen-7-9800x3d': ['当前游戏性能第一，第二代 3D 缓存支持超频。', 'Currently the fastest gaming CPU; 2nd-gen 3D V-Cache supports overclocking.', '現行ゲーム性能首位。第2世代 3D V-Cache は OC 対応。'],
+  'apple-m4-pro-14': ['笔记本芯片中单核性能第一，能效领先。', 'Highest single-core of any laptop chip; leading efficiency.', 'ノート向けでシングル性能首位。効率も優秀。'],
+  'amd-ryzen-ai-9-hx-370': ['x86 轻薄本中核显性能第一，整体均衡。', 'Top iGPU performance among x86 thin-and-lights; well balanced.', 'x86 薄型ノートで内蔵GPU性能首位。バランス良好。'],
+  'amd-ryzen-9-7950x': ['16 核生产力，降价后性价比突出。', '16-core productivity part, good value after price cuts.', '16コア生産性向け。値下げ後は割安。'],
+  'amd-ryzen-5-7500f': ['无核显版本，入门游戏装机性价比突出。', 'No-iGPU variant with standout value for entry gaming builds.', '内蔵GPUなし版。入門ゲーム構成で割安。'],
+  'amd-ryzen-7-5800x3d': ['AM4 平台最后的游戏向升级选择。', 'The final gaming upgrade for AM4.', 'AM4 最後のゲーム向けアップグレード。'],
+  'intel-core-ultra-9-285k': ['Intel 多核性能最高的型号，游戏弱于 X3D 系列。', 'Intel\'s highest multi-core part; gaming trails the X3D series.', 'Intel でマルチ性能最高。ゲームは X3D に劣る。'],
+  'amd-ryzen-ai-max-395': ['Strix Halo：核显性能接近中端独显。', 'Strix Halo: iGPU performance close to a mid-range discrete GPU.', 'Strix Halo。内蔵GPUがミドル dGPU に迫る。'],
+  'intel-core-2-quad-q6600': ['首款平价四核，超频空间大。', 'First affordable quad-core with plenty of overclocking headroom.', '初の手頃なクアッドコア。OC 余地大。'],
+  'intel-core-i5-2500k': ['超频潜力大，长期是装机热门。', 'Big overclocking headroom; a long-time build favorite.', 'OC 余地が大きく長年の定番。'],
+  'intel-core-i7-2600k': ['可用周期极长，许多用户用了近十年。', 'Remarkably long-lived; many ran it for nearly a decade.', '非常に息の長い CPU。10 年近く使われた例も多い。'],
+  'intel-core-i7-4790k': ['首款 4GHz 基频的主流 CPU。', 'First mainstream CPU with a 4 GHz base clock.', '初の 4GHz ベース主流 CPU。'],
+  'amd-phenom-ii-x4-955': ['K10 架构的成熟四核，性价比高。', 'Mature K10 quad-core, good value.', '成熟した K10 クアッド。コスパ良好。'],
+  'amd-ryzen-7-1800x': ['Zen 架构首发旗舰。', 'Launch flagship of the Zen architecture.', 'Zen アーキテクチャの初代旗艦。'],
+  'amd-ryzen-5-3600': ['当年销量最高的桌面 CPU 之一。', 'One of the best-selling desktop CPUs of its time.', '当時最も売れたデスクトップ CPU の一つ。'],
+  'amd-ryzen-7-8700g': ['桌面核显性能最高的 APU。', 'The desktop APU with the strongest iGPU.', 'デスクトップで内蔵GPU性能最高の APU。'],
+  'amd-ryzen-7-4800h': ['AMD 重返笔记本市场的关键产品。', 'The part that brought AMD back into laptops.', 'AMD がノート市場に復帰した鍵の製品。'],
+  'apple-m1-8': ['Apple Silicon 的第一款 Mac 芯片。', 'The first Apple Silicon Mac chip.', '初の Apple Silicon Mac チップ。'],
+  'intel-core-i5-13500': ['65W 大小核，适合办公与多任务。', '65W hybrid cores, good for office work and multitasking.', '65W ハイブリッド。事務とマルチタスク向け。'],
+  'amd-ryzen-7-5700g': ['AM4 核显性能最高的 APU。', 'The AM4 APU with the strongest iGPU.', 'AM4 で内蔵GPU性能最高の APU。'],
+  'intel-core-2-quad-q9650': ['LGA775 性能最高的四核。', 'The fastest LGA775 quad-core.', 'LGA775 最速のクアッド。'],
+  'intel-pentium-g4560': ['带超线程的低价奔腾，性价比突出。', 'Budget Pentium with HT, standout value.', 'HT 付き低価格 Pentium。割安。'],
+  'amd-ryzen-3-2200g': ['低预算核显装机的常见选择。', 'A common pick for budget iGPU builds.', '低予算内蔵GPU構成の定番。'],
+  'amd-threadripper-7980x': ['64 核 HEDT，面向工作站负载。', '64-core HEDT for workstation workloads.', 'ワークステーション向け 64コア HEDT。'],
+  'nvidia-rtx-5090': ['当前桌面性能第一，功耗与价格都很高。', 'The fastest desktop card today; power draw and price are both very high.', '現行デスクトップ最速。電力も価格も非常に高い。'],
+  'nvidia-rtx-4090': ['上代旗舰，24GB 显存适合生产力。', 'Last-gen flagship; 24GB suits productivity work.', '前世代旗艦。24GB は制作用途向け。'],
+  'apple-m4-max-gpu-40': ['当前性能最高的核显，光追较弱，生产力强。', 'The fastest iGPU today; weak RT, strong productivity.', '現行最速の内蔵GPU。RT は弱いが制作用途に強い。'],
+  'amd-rx-6600': ['千元价位 1080p 表现最好的选择之一。', 'One of the best 1080p picks at its price.', '価格帯で 1080p 性能上位の選択肢。'],
+  'amd-radeon-8060s': ['x86 侧性能最高的核显，接近 4070 Laptop。', 'The fastest x86 iGPU, close to a 4070 Laptop.', 'x86 最速の内蔵GPU。4070 Laptop に迫る。'],
+  'amd-radeon-890m': ['轻薄本 x86 核显中的第一梯队。', 'Among the fastest x86 iGPUs for thin-and-lights.', '薄型ノート向け x86 内蔵GPUの最上位クラス。'],
+  'nvidia-geforce-8800-gt': ['让统一渲染架构普及的高性价比型号。', 'The value card that popularized unified shaders.', '統合シェーダを普及させた高コスパモデル。'],
+  'nvidia-gtx-480': ['Fermi 首发，发热与功耗偏高。', 'Fermi debut; ran hot with high power draw.', 'Fermi 初代。発熱と電力が高め。'],
+  'nvidia-gtx-1060-6gb': ['长期占据 Steam 硬件调查份额第一。', 'Long the most common GPU in the Steam hardware survey.', 'Steam ハードウェア調査で長期首位。'],
+  'amd-rx-580-8gb': ['矿潮主力卡，二手市场存量大。', 'A mining-boom staple; abundant on the used market.', 'マイニング期の主力。中古在庫が豊富。'],
+  'nvidia-gtx-1660-ti': ['无光追 Turing 中性能最高。', 'Fastest non-RT Turing card.', 'RT なし Turing で最速。'],
+  'nvidia-gtx-750-ti': ['Maxwell 首作，60W 免外接供电。', 'First Maxwell card; 60W, no power connector.', 'Maxwell 初作。60W 外部電源不要。'],
+  'nvidia-gtx-460': ['修正了 Fermi 初期问题的主流型号。', 'The mainstream card that fixed early Fermi issues.', 'Fermi 初期の問題を解消した主流モデル。'],
+  'nvidia-geforce-8800-gtx': ['首款统一渲染架构旗舰。', 'The first unified-shader flagship.', '初の統合シェーダ旗艦。'],
+  'amd-rx-570-8gb': ['矿卡退役后二手性价比突出。', 'Standout used-market value after the mining era.', 'マイニング後の中古で割安。'],
+  'amd-radeon-hd-4850': ['以 $199 大幅拉低主流价位。', 'Cut the mainstream price point hard at $199.', '$199 で主流価格を大きく下げた。'],
+  'apple-m3-max-gpu-40': ['上代性能最高的核显。', 'The fastest iGPU of the last generation.', '前世代最速の内蔵GPU。'],
+  'corsair-vengeance-lpx-ddr4-3200-cl16-16': ['DDR4 时代销量最高的套装之一。', 'One of the best-selling DDR4 kits.', 'DDR4 時代で最も売れたキットの一つ。'],
+  'samsung-990-pro-2tb': ['PCIe 4.0 性能上限，4K 与缓外均优秀。', 'The PCIe 4.0 performance ceiling; excellent 4K and post-cache.', 'PCIe 4.0 性能上限。4K もキャッシュ外も優秀。'],
+  'wd-black-sn8100-2tb': ['当前 PCIe 5.0 综合表现最好的型号之一，发热可控。', 'Among the best overall PCIe 5.0 drives; manageable heat.', 'PCIe 5.0 総合性能上位。発熱は許容範囲。'],
+  'seagate-firecuda-530-2tb': ['TBW 2550，耐久指标同级最高。', 'TBW 2550, the highest endurance rating in its class.', 'TBW 2550。同クラス最高の耐久値。'],
+  'evga-supernova-750-g2': ['振华 Leadex 平台，口碑极佳的经典型号。', 'Super Flower Leadex platform; a classic with an excellent reputation.', 'Super Flower Leadex 基板。評価の高い定番。'],
+  'wd-velociraptor-300gb': ['万转机械盘，SSD 普及前的性能首选。', '10,000 rpm drive, the performance pick before SSDs.', '1万回転 HDD。SSD 普及前の性能志向の選択。'],
+  'nvidia-rtx-3090': ['24GB 显存，上上代旗舰。', '24GB flagship of two generations ago.', '2世代前の 24GB 旗艦。'],
+  'intel-core-i5-10400f': ['千元价位游戏装机的热门选择。', 'A popular budget gaming pick.', '廉価ゲーム構成の人気選択。'],
+  'intel-core-i5-12400f': ['入门装机的常见选择。', 'A common entry-build choice.', '入門構成の定番。'],
+  'amd-r9-nano': ['15cm 长度的完整 Fiji 核心。', 'Full Fiji die in a 15 cm card.', '15cm 長のフル Fiji。'],
+}
+let n = 0
+for (const f of ['cpus', 'gpus', 'rams', 'storages', 'psus']) {
+  const p = `public/data/${f}.json`; const arr = JSON.parse(readFileSync(p, 'utf8'))
+  for (const it of arr) { const t = T[it.id]; if (t) { it.summary = t[0]; it.summary_en = t[1]; it.summary_ja = t[2]; n++ } }
+  writeFileSync(p, JSON.stringify(arr, null, 2) + '\n')
+}
+console.log('toned down', n)

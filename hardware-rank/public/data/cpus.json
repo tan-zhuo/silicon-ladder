@@ -16,7 +16,7 @@
     "mem": "DDR5-5200",
     "release": "2023-04",
     "price_cny": 1523,
-    "summary": "上代游戏神U，3D 缓存加持，功耗温和。",
+    "summary": "上代游戏表现最好的型号之一，3D 缓存，功耗温和。",
     "tags": [
       "X3D",
       "游戏"
@@ -27,8 +27,8 @@
       "gaming_rel": 100,
       "igpu_rel": null
     },
-    "summary_en": "Last-gen gaming king with 3D V-Cache and modest power draw.",
-    "summary_ja": "前世代のゲーム最強。3D V-Cache 搭載で消費電力も控えめ。",
+    "summary_en": "One of last generation's best gaming CPUs; 3D V-Cache, modest power.",
+    "summary_ja": "前世代でゲーム性能上位。3D V-Cache、消費電力控えめ。",
     "tech": {
       "die": "1× CCD (N5 71mm²) + IOD (N6 122mm²)",
       "die_mm2": 193,
@@ -64,7 +64,7 @@
     "mem": "DDR5-5600",
     "release": "2024-11",
     "price_cny": 2260,
-    "summary": "当前游戏最强，第二代 3D 缓存可超频。",
+    "summary": "当前游戏性能第一，第二代 3D 缓存支持超频。",
     "tags": [
       "X3D",
       "游戏",
@@ -76,8 +76,8 @@
       "gaming_rel": 104,
       "igpu_rel": null
     },
-    "summary_en": "The fastest gaming CPU today; 2nd-gen 3D V-Cache is overclockable.",
-    "summary_ja": "現行ゲーム最速。第2世代 3D V-Cache はOCも可能。",
+    "summary_en": "Currently the fastest gaming CPU; 2nd-gen 3D V-Cache supports overclocking.",
+    "summary_ja": "現行ゲーム性能首位。第2世代 3D V-Cache は OC 対応。",
     "tech": {
       "die": "1× CCD (N4P 70.6mm²) + IOD (N6 122mm²)",
       "die_mm2": 193,
@@ -303,7 +303,7 @@
     "mem": "LPDDR5X-8533",
     "release": "2024-11",
     "price_cny": null,
-    "summary": "单核最强笔记本芯片，能效领先。",
+    "summary": "笔记本芯片中单核性能第一，能效领先。",
     "tags": [
       "能效",
       "旗舰"
@@ -314,8 +314,8 @@
       "gaming_rel": 70,
       "igpu_rel": 92
     },
-    "summary_en": "Best single-core of any laptop chip, class-leading efficiency.",
-    "summary_ja": "ノート向けでシングル最強、効率もトップクラス。",
+    "summary_en": "Highest single-core of any laptop chip; leading efficiency.",
+    "summary_ja": "ノート向けでシングル性能首位。効率も優秀。",
     "tech": {
       "die": "单片 SoC (N3E)",
       "die_mm2": null,
@@ -401,7 +401,7 @@
     "mem": "LPDDR5X-7500",
     "release": "2024-07",
     "price_cny": null,
-    "summary": "核显最强 x86 轻薄本芯片，均衡。",
+    "summary": "x86 轻薄本中核显性能第一，整体均衡。",
     "tags": [
       "核显",
       "轻薄"
@@ -412,8 +412,8 @@
       "gaming_rel": 62,
       "igpu_rel": 88
     },
-    "summary_en": "Strongest iGPU among x86 thin-and-lights, well balanced.",
-    "summary_ja": "x86 薄型ノートで内蔵GPU最強、バランス良好。",
+    "summary_en": "Top iGPU performance among x86 thin-and-lights; well balanced.",
+    "summary_ja": "x86 薄型ノートで内蔵GPU性能首位。バランス良好。",
     "tech": {
       "die": "单片 (N4P 232mm²)",
       "die_mm2": 232,
@@ -784,7 +784,7 @@
     "mem": "DDR5-5200",
     "release": "2022-09",
     "price_cny": 3599,
-    "summary": "16 核生产力，降价后很香。",
+    "summary": "16 核生产力，降价后性价比突出。",
     "tags": [
       "生产力"
     ],
@@ -794,8 +794,8 @@
       "gaming_rel": 84,
       "igpu_rel": null
     },
-    "summary_en": "16-core productivity, a bargain after price cuts.",
-    "summary_ja": "16コア生産性向け。値下げ後はお買い得。",
+    "summary_en": "16-core productivity part, good value after price cuts.",
+    "summary_ja": "16コア生産性向け。値下げ後は割安。",
     "tech": {
       "die": "2× CCD (N5 71mm²) + IOD (N6 122mm²)",
       "die_mm2": 264,
@@ -968,7 +968,7 @@
     "mem": "DDR5-5200",
     "release": "2023-07",
     "price_cny": 1049,
-    "summary": "无核显特供，游戏入门性价比之王。",
+    "summary": "无核显版本，入门游戏装机性价比突出。",
     "tags": [
       "性价比",
       "游戏"
@@ -979,8 +979,8 @@
       "gaming_rel": 77,
       "igpu_rel": null
     },
-    "summary_en": "No-iGPU special; the best-value entry gaming chip.",
-    "summary_ja": "内蔵GPUなしの特別版。入門ゲーム用コスパ王。",
+    "summary_en": "No-iGPU variant with standout value for entry gaming builds.",
+    "summary_ja": "内蔵GPUなし版。入門ゲーム構成で割安。",
     "tech": {
       "die": "1× CCD (6C, N5) + IOD (N6)",
       "die_mm2": 193,
@@ -1016,7 +1016,7 @@
     "mem": "DDR4-3200",
     "release": "2022-04",
     "price_cny": 1799,
-    "summary": "AM4 平台游戏终点站。",
+    "summary": "AM4 平台最后的游戏向升级选择。",
     "tags": [
       "X3D",
       "游戏",
@@ -1028,8 +1028,8 @@
       "gaming_rel": 85,
       "igpu_rel": null
     },
-    "summary_en": "The final gaming stop for AM4.",
-    "summary_ja": "AM4 プラットフォームのゲーム最終到達点。",
+    "summary_en": "The final gaming upgrade for AM4.",
+    "summary_ja": "AM4 最後のゲーム向けアップグレード。",
     "tech": {
       "die": "1× CCD (N7 80.7mm²) + IOD (GF 12nm 125mm²)",
       "die_mm2": 206,
@@ -1113,7 +1113,7 @@
     "mem": "DDR5-6400",
     "release": "2024-10",
     "price_cny": 4499,
-    "summary": "多核最强 Intel，游戏不如 X3D。",
+    "summary": "Intel 多核性能最高的型号，游戏弱于 X3D 系列。",
     "tags": [
       "生产力",
       "旗舰"
@@ -1124,8 +1124,8 @@
       "gaming_rel": 86,
       "igpu_rel": null
     },
-    "summary_en": "Intel's strongest multi-core; gaming trails X3D.",
-    "summary_ja": "Intel 最強のマルチ。ゲームでは X3D に及ばず。",
+    "summary_en": "Intel's highest multi-core part; gaming trails the X3D series.",
+    "summary_ja": "Intel でマルチ性能最高。ゲームは X3D に劣る。",
     "tech": {
       "die": "Compute Tile (N3B) + GPU/SoC/IO Tile (Foveros)",
       "die_mm2": 243,
@@ -1484,7 +1484,7 @@
     "mem": "DDR5-4800 / DDR4-3200",
     "release": "2022-01",
     "price_cny": 799,
-    "summary": "经典入门神 U。",
+    "summary": "入门装机的常见选择。",
     "tags": [
       "性价比"
     ],
@@ -1494,8 +1494,8 @@
       "gaming_rel": 66,
       "igpu_rel": null
     },
-    "summary_en": "Classic entry-level favorite.",
-    "summary_ja": "定番の入門神CPU。",
+    "summary_en": "A common entry-build choice.",
+    "summary_ja": "入門構成の定番。",
     "tech": {
       "die": "单片 (Intel 7 163mm²)",
       "die_mm2": 163,
@@ -1921,7 +1921,7 @@
     "mem": "LPDDR5X-8000 (板载, 256-bit)",
     "release": "2025-02",
     "price_cny": null,
-    "summary": "Strix Halo：核显直逼独显的怪物。",
+    "summary": "Strix Halo：核显性能接近中端独显。",
     "tags": [
       "旗舰",
       "核显",
@@ -1933,8 +1933,8 @@
       "gaming_rel": 85,
       "igpu_rel": 100
     },
-    "summary_en": "Strix Halo: an iGPU that rivals discrete cards.",
-    "summary_ja": "Strix Halo。内蔵GPUが dGPU に迫る怪物。",
+    "summary_en": "Strix Halo: iGPU performance close to a mid-range discrete GPU.",
+    "summary_ja": "Strix Halo。内蔵GPUがミドル dGPU に迫る。",
     "tech": {
       "die": "2× CCD (N4P) + IOD (N4P, 含 40CU GPU)",
       "die_mm2": null,
@@ -2212,7 +2212,7 @@
     "mem": "DDR2-800",
     "release": "2007-01",
     "price_cny": null,
-    "summary": "首款平民四核，超频神话。",
+    "summary": "首款平价四核，超频空间大。",
     "tags": [
       "经典",
       "历史"
@@ -2224,8 +2224,8 @@
       "gaming_rel": 12,
       "igpu_rel": null
     },
-    "summary_en": "First affordable quad-core, an overclocking legend.",
-    "summary_ja": "初の庶民派クアッドコア。OC の伝説。",
+    "summary_en": "First affordable quad-core with plenty of overclocking headroom.",
+    "summary_ja": "初の手頃なクアッドコア。OC 余地大。",
     "tech": {
       "die": "2× 双核晶片 (65nm 2×143mm²)",
       "die_mm2": 286,
@@ -2503,7 +2503,7 @@
     "mem": "DDR3-1333",
     "release": "2011-01",
     "price_cny": null,
-    "summary": "一代神 U，随便超 4.5GHz。",
+    "summary": "超频潜力大，长期是装机热门。",
     "tags": [
       "经典",
       "历史"
@@ -2515,8 +2515,8 @@
       "gaming_rel": 24,
       "igpu_rel": null
     },
-    "summary_en": "Legendary chip; 4.5 GHz with ease.",
-    "summary_ja": "伝説の神CPU。4.5GHz が余裕。",
+    "summary_en": "Big overclocking headroom; a long-time build favorite.",
+    "summary_ja": "OC 余地が大きく長年の定番。",
     "tech": {
       "die": "单片 (32nm 216mm²)",
       "die_mm2": 216,
@@ -2552,7 +2552,7 @@
     "mem": "DDR3-1333",
     "release": "2011-01",
     "price_cny": null,
-    "summary": "服役十年的传奇。",
+    "summary": "可用周期极长，许多用户用了近十年。",
     "tags": [
       "经典",
       "历史"
@@ -2564,8 +2564,8 @@
       "gaming_rel": 25,
       "igpu_rel": null
     },
-    "summary_en": "A decade of service — the legend.",
-    "summary_ja": "10年現役の伝説。",
+    "summary_en": "Remarkably long-lived; many ran it for nearly a decade.",
+    "summary_ja": "非常に息の長い CPU。10 年近く使われた例も多い。",
     "tech": {
       "die": "单片 (32nm 216mm²)",
       "die_mm2": 216,
@@ -2793,7 +2793,7 @@
     "mem": "DDR3-1600",
     "release": "2014-05",
     "price_cny": null,
-    "summary": "首款 4GHz 基频，钎焊回归前的巅峰。",
+    "summary": "首款 4GHz 基频的主流 CPU。",
     "tags": [
       "经典",
       "历史"
@@ -2805,8 +2805,8 @@
       "gaming_rel": 32,
       "igpu_rel": null
     },
-    "summary_en": "First 4 GHz base clock; the peak before solder returned.",
-    "summary_ja": "初の 4GHz ベース。ソルダー復活前の頂点。",
+    "summary_en": "First mainstream CPU with a 4 GHz base clock.",
+    "summary_ja": "初の 4GHz ベース主流 CPU。",
     "tech": {
       "die": "单片 (22nm 177mm²)",
       "die_mm2": 177,
@@ -3229,7 +3229,7 @@
     "mem": "DDR4-2666",
     "release": "2020-05",
     "price_cny": null,
-    "summary": "千元内游戏神 U。",
+    "summary": "千元价位游戏装机的热门选择。",
     "tags": [
       "性价比",
       "历史"
@@ -3241,8 +3241,8 @@
       "gaming_rel": 45,
       "igpu_rel": null
     },
-    "summary_en": "Budget gaming favorite under ¥1000.",
-    "summary_ja": "1000元以下のゲーム神CPU。",
+    "summary_en": "A popular budget gaming pick.",
+    "summary_ja": "廉価ゲーム構成の人気選択。",
     "tech": {
       "die": "单片 (14nm 206mm²)",
       "die_mm2": 206,
@@ -3568,7 +3568,7 @@
     "mem": "DDR3-1333",
     "release": "2009-04",
     "price_cny": null,
-    "summary": "AMD 翻身四核，性价比高。",
+    "summary": "K10 架构的成熟四核，性价比高。",
     "tags": [
       "经典",
       "历史"
@@ -3580,8 +3580,8 @@
       "gaming_rel": 13,
       "igpu_rel": null
     },
-    "summary_en": "AMD's comeback quad-core, great value.",
-    "summary_ja": "AMD 巻き返しのクアッド。コスパ良好。",
+    "summary_en": "Mature K10 quad-core, good value.",
+    "summary_ja": "成熟した K10 クアッド。コスパ良好。",
     "tech": {
       "die": "单片 (45nm SOI 258mm²)",
       "die_mm2": 258,
@@ -3761,7 +3761,7 @@
     "mem": "DDR4-2667",
     "release": "2017-03",
     "price_cny": null,
-    "summary": "Zen 首发旗舰，AMD 复兴。",
+    "summary": "Zen 架构首发旗舰。",
     "tags": [
       "经典",
       "历史"
@@ -3773,8 +3773,8 @@
       "gaming_rel": 33,
       "igpu_rel": null
     },
-    "summary_en": "Zen launch flagship; AMD's revival.",
-    "summary_ja": "Zen 初代旗艦。AMD 復活の狼煙。",
+    "summary_en": "Launch flagship of the Zen architecture.",
+    "summary_ja": "Zen アーキテクチャの初代旗艦。",
     "tech": {
       "die": "单片 (GF 14nm 213mm²)",
       "die_mm2": 213,
@@ -4053,7 +4053,7 @@
     "mem": "DDR4-3200",
     "release": "2019-07",
     "price_cny": null,
-    "summary": "销量之王。",
+    "summary": "当年销量最高的桌面 CPU 之一。",
     "tags": [
       "性价比",
       "经典",
@@ -4066,8 +4066,8 @@
       "gaming_rel": 43,
       "igpu_rel": null
     },
-    "summary_en": "The best-seller.",
-    "summary_ja": "販売数の王者。",
+    "summary_en": "One of the best-selling desktop CPUs of its time.",
+    "summary_ja": "当時最も売れたデスクトップ CPU の一つ。",
     "tech": {
       "die": "1× CCD (6C, N7) + IOD (GF 12nm)",
       "die_mm2": 199,
@@ -4348,7 +4348,7 @@
     "mem": "DDR5-5200",
     "release": "2024-01",
     "price_cny": null,
-    "summary": "桌面最强核显 APU。",
+    "summary": "桌面核显性能最高的 APU。",
     "tags": [
       "核显",
       "APU",
@@ -4361,8 +4361,8 @@
       "gaming_rel": 73,
       "igpu_rel": 100
     },
-    "summary_en": "Strongest desktop iGPU APU.",
-    "summary_ja": "デスクトップ最強の内蔵GPU APU。",
+    "summary_en": "The desktop APU with the strongest iGPU.",
+    "summary_ja": "デスクトップで内蔵GPU性能最高の APU。",
     "tech": {
       "die": "单片 (N4 178mm²)",
       "die_mm2": 178,
@@ -5031,7 +5031,7 @@
     "mem": "DDR4-3200",
     "release": "2020-01",
     "price_cny": null,
-    "summary": "AMD 笔记本翻身之作。",
+    "summary": "AMD 重返笔记本市场的关键产品。",
     "tags": [
       "经典",
       "历史"
@@ -5043,8 +5043,8 @@
       "gaming_rel": 48,
       "igpu_rel": 30
     },
-    "summary_en": "AMD's laptop comeback.",
-    "summary_ja": "AMD ノート巻き返しの一作。",
+    "summary_en": "The part that brought AMD back into laptops.",
+    "summary_ja": "AMD がノート市場に復帰した鍵の製品。",
     "tech": {
       "die": "单片 (N7 156mm²)",
       "die_mm2": 156,
@@ -5275,7 +5275,7 @@
     "mem": "LPDDR4X-4266",
     "release": "2020-11",
     "price_cny": null,
-    "summary": "Apple Silicon 开山之作。",
+    "summary": "Apple Silicon 的第一款 Mac 芯片。",
     "tags": [
       "经典",
       "能效",
@@ -5288,8 +5288,8 @@
       "gaming_rel": 32,
       "igpu_rel": 45
     },
-    "summary_en": "The chip that started Apple Silicon.",
-    "summary_ja": "Apple Silicon の始まり。",
+    "summary_en": "The first Apple Silicon Mac chip.",
+    "summary_ja": "初の Apple Silicon Mac チップ。",
     "tech": {
       "die": "单片 SoC (N5 119mm²)",
       "die_mm2": 119,
@@ -5751,9 +5751,9 @@
     "mem": "DDR5-4800 / DDR4-3200",
     "release": "2023-01",
     "price_cny": 1599,
-    "summary": "65W 大小核，办公多开利器。",
-    "summary_en": "65W hybrid, great for multitasking.",
-    "summary_ja": "65W ハイブリッド、マルチタスク向け。",
+    "summary": "65W 大小核，适合办公与多任务。",
+    "summary_en": "65W hybrid cores, good for office work and multitasking.",
+    "summary_ja": "65W ハイブリッド。事務とマルチタスク向け。",
     "tags": [],
     "scores": {
       "cb24_st": 1080,
@@ -6575,9 +6575,9 @@
     "mem": "DDR4-3200",
     "release": "2021-08",
     "price_cny": 1399,
-    "summary": "AM4 最强 APU。",
-    "summary_en": "Strongest AM4 APU.",
-    "summary_ja": "AM4 最強 APU。",
+    "summary": "AM4 核显性能最高的 APU。",
+    "summary_en": "The AM4 APU with the strongest iGPU.",
+    "summary_ja": "AM4 で内蔵GPU性能最高の APU。",
     "tags": [
       "APU",
       "核显"
@@ -8618,9 +8618,9 @@
     "mem": "DDR3-1066",
     "release": "2008-08",
     "price_cny": null,
-    "summary": "LGA775 最强四核。",
-    "summary_en": "Strongest LGA775 quad.",
-    "summary_ja": "LGA775 最強クアッド。",
+    "summary": "LGA775 性能最高的四核。",
+    "summary_en": "The fastest LGA775 quad-core.",
+    "summary_ja": "LGA775 最速のクアッド。",
     "tags": [
       "历史"
     ],
@@ -8743,9 +8743,9 @@
     "mem": "DDR4-2400",
     "release": "2017-01",
     "price_cny": null,
-    "summary": "带超线程的奔腾，性价比神话。",
-    "summary_en": "Pentium with HT, a value legend.",
-    "summary_ja": "HT 付き Pentium。コスパの伝説。",
+    "summary": "带超线程的低价奔腾，性价比突出。",
+    "summary_en": "Budget Pentium with HT, standout value.",
+    "summary_ja": "HT 付き低価格 Pentium。割安。",
     "tags": [
       "历史",
       "经典"
@@ -9589,9 +9589,9 @@
     "mem": "DDR4-2933",
     "release": "2018-02",
     "price_cny": null,
-    "summary": "千元核显装机神器。",
-    "summary_en": "The budget iGPU build favorite.",
-    "summary_ja": "廉価内蔵GPU構成の定番。",
+    "summary": "低预算核显装机的常见选择。",
+    "summary_en": "A common pick for budget iGPU builds.",
+    "summary_ja": "低予算内蔵GPU構成の定番。",
     "tags": [
       "APU",
       "历史"
@@ -9776,9 +9776,9 @@
     "mem": "DDR5-5200 四通道",
     "release": "2023-11",
     "price_cny": 39999,
-    "summary": "64 核 HEDT 怪物。",
-    "summary_en": "64-core HEDT monster.",
-    "summary_ja": "64コア HEDT モンスター。",
+    "summary": "64 核 HEDT，面向工作站负载。",
+    "summary_en": "64-core HEDT for workstation workloads.",
+    "summary_ja": "ワークステーション向け 64コア HEDT。",
     "tags": [
       "HEDT",
       "生产力"

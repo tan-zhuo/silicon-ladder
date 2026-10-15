@@ -680,15 +680,15 @@
     "latency_ns": 68,
     "release": "2017-06",
     "price_cny": null,
-    "summary": "DDR4 时代销量之王。",
+    "summary": "DDR4 时代销量最高的套装之一。",
     "est": true,
     "scores": {
       "read_GBs": 44,
       "write_GBs": 42,
       "latency_ns": 68
     },
-    "summary_en": "The DDR4-era best-seller.",
-    "summary_ja": "DDR4 時代の販売王。"
+    "summary_en": "One of the best-selling DDR4 kits.",
+    "summary_ja": "DDR4 時代で最も売れたキットの一つ。"
   },
   {
     "id": "gskill-trident-z-royal-ddr4-4000-cl18-16",

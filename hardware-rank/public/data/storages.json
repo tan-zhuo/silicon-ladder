@@ -15,12 +15,12 @@
     "tbw": 1200,
     "release": "2022-10",
     "price_cny": 2399,
-    "summary": "PCIe 4.0 天花板，4K 与缓外均优秀。",
+    "summary": "PCIe 4.0 性能上限，4K 与缓外均优秀。",
     "tags": [
       "旗舰"
     ],
-    "summary_en": "PCIe 4.0 ceiling; excellent 4K and post-cache.",
-    "summary_ja": "PCIe 4.0 の天井。4K もキャッシュ外も優秀。"
+    "summary_en": "The PCIe 4.0 performance ceiling; excellent 4K and post-cache.",
+    "summary_ja": "PCIe 4.0 性能上限。4K もキャッシュ外も優秀。"
   },
   {
     "id": "wd-black-sn850x-2tb",
@@ -227,13 +227,13 @@
     "tbw": 1200,
     "release": "2025-05",
     "price_cny": 1799,
-    "summary": "当前 PCIe 5.0 综合最强之一，发热可控。",
+    "summary": "当前 PCIe 5.0 综合表现最好的型号之一，发热可控。",
     "tags": [
       "旗舰",
       "PCIe5"
     ],
-    "summary_en": "Among the best PCIe 5.0 drives overall, manageable heat.",
-    "summary_ja": "PCIe 5.0 総合最強クラス。発熱は許容範囲。"
+    "summary_en": "Among the best overall PCIe 5.0 drives; manageable heat.",
+    "summary_ja": "PCIe 5.0 総合性能上位。発熱は許容範囲。"
   },
   {
     "id": "zhitai-tiplus9100-2tb",
@@ -1011,13 +1011,13 @@
     "tbw": 2550,
     "release": "2021-07",
     "price_cny": null,
-    "summary": "TBW 2550，耐久之王。",
+    "summary": "TBW 2550，耐久指标同级最高。",
     "tags": [
       "历史"
     ],
     "est": true,
-    "summary_en": "TBW 2550, the endurance king.",
-    "summary_ja": "TBW 2550。耐久の王者。"
+    "summary_en": "TBW 2550, the highest endurance rating in its class.",
+    "summary_ja": "TBW 2550。同クラス最高の耐久値。"
   },
   {
     "id": "wd-caviar-black-1tb-2008",
@@ -1060,15 +1060,15 @@
     "tbw": null,
     "release": "2008-04",
     "price_cny": null,
-    "summary": "万转机械盘，SSD 前的性能王。",
+    "summary": "万转机械盘，SSD 普及前的性能首选。",
     "tags": [
       "经典",
       "CMR",
       "历史"
     ],
     "est": true,
-    "summary_en": "10,000 rpm; the performance king before SSDs.",
-    "summary_ja": "1万回転。SSD 以前の性能王。"
+    "summary_en": "10,000 rpm drive, the performance pick before SSDs.",
+    "summary_ja": "1万回転 HDD。SSD 普及前の性能志向の選択。"
   },
   {
     "id": "seagate-barracuda-7200-12-1tb",

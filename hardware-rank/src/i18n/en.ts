@@ -10,9 +10,9 @@ export const en: Msg = {
   sort: { overall: 'Overall', gaming: 'Gaming', single: 'Single-core', multi: 'Multi-core', efficiency: 'Efficiency', igpu: 'iGPU', value: 'Value', raster: 'Raster', rt: 'Ray tracing', bandwidth: 'Bandwidth', latency: 'Latency', random4k: '4K random', cacheOut: 'Post-cache write', seqRead: 'Seq. read', endurance: 'Endurance', tier: 'Quality tier' },
   col: { rank: '#', model: 'Model', cores: 'Cores', tdp: 'TDP', single: 'Single', multi: 'Multi', gaming: 'Gaming', overall: 'Overall', vram: 'VRAM', power: 'TGP/TDP', raster: 'Raster', rt: 'RT', spec: 'Spec', read: 'Read BW', latency: 'Latency', interface: 'Interface', seqRead: 'Seq. read', random4k: '4K random', cacheOut: 'Post-cache', watt: 'Watts', tier: 'Tier', efficiency: 'Rating', atx31: 'ATX 3.1', modular: 'Modular', compare: 'Compare', release: 'Released' },
   home: {
-    heroKicker: 'Hardware ladder · 2007 → 2026',
-    heroTitle: 'See where every generation of silicon stands',
-    heroDesc: 'From Core 2 Duo to Ryzen 9950X3D, from 8800 GT to RTX 5090. Desktop, laptop and iGPU pools ranked separately; AMD / Intel / NVIDIA side by side; switch between gaming, productivity, efficiency and value in one click.',
+    heroKicker: 'Data from 2007 to today',
+    heroTitle: 'Consumer hardware rankings and ladder charts',
+    heroDesc: 'CPUs, GPUs, memory, storage and PSUs from 2007 to today. Desktop, laptop and iGPU pools are ranked separately, AMD / Intel / NVIDIA shown side by side, sortable by gaming, productivity, efficiency or value.',
     ctaCpu: 'CPU ladder', ctaGpu: 'GPU ladder', ctaCompare: 'Start comparing',
     searchPh: 'Search 7800X3D / RTX 5070 / 990 PRO …',
     statItems: 'Entries', statCpu: 'CPUs', statGpu: 'GPUs', statSpan: 'Years covered', statUpdated: 'Data updated',

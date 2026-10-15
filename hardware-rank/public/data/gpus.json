@@ -14,7 +14,7 @@
     "tdp_w": 575,
     "release": "2025-01",
     "price_cny": null,
-    "summary": "当前桌面最强，功耗与价格同样惊人。",
+    "summary": "当前桌面性能第一，功耗与价格都很高。",
     "tags": [
       "旗舰",
       "4K"
@@ -23,8 +23,8 @@
       "raster_rel": 100,
       "rt_rel": 100
     },
-    "summary_en": "Fastest desktop card today; power and price equally shocking.",
-    "summary_ja": "現行デスクトップ最速。電力も価格も衝撃的。",
+    "summary_en": "The fastest desktop card today; power draw and price are both very high.",
+    "summary_ja": "現行デスクトップ最速。電力も価格も非常に高い。",
     "tech": {
       "die_mm2": 750,
       "transistors_m": 92200,
@@ -103,7 +103,7 @@
     "tdp_w": 450,
     "release": "2022-10",
     "price_cny": 12999,
-    "summary": "上代旗舰，24GB 显存仍是生产力利器。",
+    "summary": "上代旗舰，24GB 显存适合生产力。",
     "tags": [
       "旗舰",
       "生产力"
@@ -112,8 +112,8 @@
       "raster_rel": 82,
       "rt_rel": 84
     },
-    "summary_en": "Last-gen flagship; 24GB still a productivity weapon.",
-    "summary_ja": "前世代旗艦。24GB は今も生産性の武器。",
+    "summary_en": "Last-gen flagship; 24GB suits productivity work.",
+    "summary_ja": "前世代旗艦。24GB は制作用途向け。",
     "tech": {
       "die_mm2": 609,
       "transistors_m": 76300,
@@ -559,7 +559,7 @@
     "tgp_w": 70,
     "release": "2024-11",
     "price_cny": null,
-    "summary": "核显天花板，光追弱，生产力强。",
+    "summary": "当前性能最高的核显，光追较弱，生产力强。",
     "tags": [
       "核显",
       "生产力"
@@ -568,8 +568,8 @@
       "raster_rel": 58,
       "rt_rel": 20
     },
-    "summary_en": "iGPU ceiling: weak RT, strong productivity.",
-    "summary_ja": "内蔵GPUの天井。RT は弱いが生産性は強い。",
+    "summary_en": "The fastest iGPU today; weak RT, strong productivity.",
+    "summary_ja": "現行最速の内蔵GPU。RT は弱いが制作用途に強い。",
     "tech": {
       "die_mm2": -1,
       "transistors_m": -1,
@@ -1402,7 +1402,7 @@
     "tdp_w": 132,
     "release": "2021-10",
     "price_cny": 1299,
-    "summary": "千元档 1080p 王者。",
+    "summary": "千元价位 1080p 表现最好的选择之一。",
     "tags": [
       "1080p",
       "性价比"
@@ -1411,8 +1411,8 @@
       "raster_rel": 24,
       "rt_rel": 14
     },
-    "summary_en": "The budget 1080p king.",
-    "summary_ja": "低価格帯 1080p の王者。",
+    "summary_en": "One of the best 1080p picks at its price.",
+    "summary_ja": "価格帯で 1080p 性能上位の選択肢。",
     "tech": {
       "die_mm2": 237,
       "transistors_m": 11100,
@@ -2228,7 +2228,7 @@
     "tgp_w": 55,
     "release": "2025-02",
     "price_cny": null,
-    "summary": "核显天花板 x86 侧，接近 4070 Laptop。",
+    "summary": "x86 侧性能最高的核显，接近 4070 Laptop。",
     "tags": [
       "核显",
       "旗舰"
@@ -2237,8 +2237,8 @@
       "raster_rel": 55,
       "rt_rel": 18
     },
-    "summary_en": "x86 iGPU ceiling, close to a 4070 Laptop.",
-    "summary_ja": "x86 内蔵GPUの天井。4070 Laptop に迫る。",
+    "summary_en": "The fastest x86 iGPU, close to a 4070 Laptop.",
+    "summary_ja": "x86 最速の内蔵GPU。4070 Laptop に迫る。",
     "tech": {
       "die_mm2": -1,
       "transistors_m": -1,
@@ -2274,7 +2274,7 @@
     "tgp_w": 28,
     "release": "2024-07",
     "price_cny": null,
-    "summary": "轻薄本最强 x86 核显之一。",
+    "summary": "轻薄本 x86 核显中的第一梯队。",
     "tags": [
       "核显"
     ],
@@ -2282,8 +2282,8 @@
       "raster_rel": 20,
       "rt_rel": 6
     },
-    "summary_en": "One of the strongest x86 iGPUs for thin-and-lights.",
-    "summary_ja": "薄型ノート最強クラスの x86 内蔵GPU。",
+    "summary_en": "Among the fastest x86 iGPUs for thin-and-lights.",
+    "summary_ja": "薄型ノート向け x86 内蔵GPUの最上位クラス。",
     "tech": {
       "die_mm2": -1,
       "transistors_m": -1,
@@ -2499,7 +2499,7 @@
     "tdp_w": 105,
     "release": "2007-10",
     "price_cny": null,
-    "summary": "统一渲染架构普及者，性价比传奇。",
+    "summary": "让统一渲染架构普及的高性价比型号。",
     "tags": [
       "经典",
       "历史"
@@ -2509,8 +2509,8 @@
       "raster_rel": 1.5,
       "rt_rel": null
     },
-    "summary_en": "Popularized unified shaders; a value legend.",
-    "summary_ja": "統合シェーダを普及させたコスパの伝説。",
+    "summary_en": "The value card that popularized unified shaders.",
+    "summary_ja": "統合シェーダを普及させた高コスパモデル。",
     "tech": {
       "die_mm2": 324,
       "transistors_m": 754,
@@ -2590,7 +2590,7 @@
     "tdp_w": 250,
     "release": "2010-03",
     "price_cny": null,
-    "summary": "Fermi 首发，「核弹」。",
+    "summary": "Fermi 首发，发热与功耗偏高。",
     "tags": [
       "历史"
     ],
@@ -2599,8 +2599,8 @@
       "raster_rel": 4.2,
       "rt_rel": null
     },
-    "summary_en": "Fermi debut — the \"nuclear\" card.",
-    "summary_ja": "Fermi 初代。「核爆弾」。",
+    "summary_en": "Fermi debut; ran hot with high power draw.",
+    "summary_ja": "Fermi 初代。発熱と電力が高め。",
     "tech": {
       "die_mm2": 529,
       "transistors_m": 3200,
@@ -2906,7 +2906,7 @@
     "tdp_w": 120,
     "release": "2016-07",
     "price_cny": null,
-    "summary": "Steam 占有率之王。",
+    "summary": "长期占据 Steam 硬件调查份额第一。",
     "tags": [
       "经典",
       "性价比",
@@ -2917,8 +2917,8 @@
       "raster_rel": 10.5,
       "rt_rel": null
     },
-    "summary_en": "King of the Steam hardware survey.",
-    "summary_ja": "Steam シェアの王者。",
+    "summary_en": "Long the most common GPU in the Steam hardware survey.",
+    "summary_ja": "Steam ハードウェア調査で長期首位。",
     "tech": {
       "die_mm2": 200,
       "transistors_m": 4400,
@@ -3451,7 +3451,7 @@
     "tdp_w": 350,
     "release": "2020-09",
     "price_cny": null,
-    "summary": "BFGPU，24GB。",
+    "summary": "24GB 显存，上上代旗舰。",
     "tags": [
       "生产力",
       "历史"
@@ -3461,8 +3461,8 @@
       "raster_rel": 55,
       "rt_rel": 47
     },
-    "summary_en": "The BFGPU, 24GB.",
-    "summary_ja": "BFGPU、24GB。",
+    "summary_en": "24GB flagship of two generations ago.",
+    "summary_ja": "2世代前の 24GB 旗艦。",
     "tech": {
       "die_mm2": 628,
       "transistors_m": 28300,
@@ -3815,7 +3815,7 @@
     "tdp_w": 185,
     "release": "2017-04",
     "price_cny": null,
-    "summary": "矿卡之王，二手海量。",
+    "summary": "矿潮主力卡，二手市场存量大。",
     "tags": [
       "经典",
       "历史"
@@ -3825,8 +3825,8 @@
       "raster_rel": 10.5,
       "rt_rel": null
     },
-    "summary_en": "King of mining cards, flooding the used market.",
-    "summary_ja": "マイニングカードの王。中古が大量。",
+    "summary_en": "A mining-boom staple; abundant on the used market.",
+    "summary_ja": "マイニング期の主力。中古在庫が豊富。",
     "tech": {
       "die_mm2": 232,
       "transistors_m": 5700,
@@ -5031,9 +5031,9 @@
     "tdp_w": 120,
     "release": "2019-02",
     "price_cny": null,
-    "summary": "Turing 无光追最强。",
-    "summary_en": "Strongest non-RT Turing.",
-    "summary_ja": "RT なし Turing 最強。",
+    "summary": "无光追 Turing 中性能最高。",
+    "summary_en": "Fastest non-RT Turing card.",
+    "summary_ja": "RT なし Turing で最速。",
     "tags": [
       "历史"
     ],
@@ -5329,9 +5329,9 @@
     "tdp_w": 60,
     "release": "2014-02",
     "price_cny": null,
-    "summary": "Maxwell 首作，60W 神卡。",
-    "summary_en": "First Maxwell, the 60W legend.",
-    "summary_ja": "Maxwell 初作、60W の伝説。",
+    "summary": "Maxwell 首作，60W 免外接供电。",
+    "summary_en": "First Maxwell card; 60W, no power connector.",
+    "summary_ja": "Maxwell 初作。60W 外部電源不要。",
     "tags": [
       "历史",
       "经典"
@@ -5465,9 +5465,9 @@
     "tdp_w": 160,
     "release": "2010-07",
     "price_cny": null,
-    "summary": "Fermi 翻身之作。",
-    "summary_en": "Fermi's redemption.",
-    "summary_ja": "Fermi 巻き返しの一作。",
+    "summary": "修正了 Fermi 初期问题的主流型号。",
+    "summary_en": "The mainstream card that fixed early Fermi issues.",
+    "summary_ja": "Fermi 初期の問題を解消した主流モデル。",
     "tags": [
       "历史",
       "经典"
@@ -5547,9 +5547,9 @@
     "tdp_w": 155,
     "release": "2006-11",
     "price_cny": null,
-    "summary": "统一渲染架构开山旗舰。",
-    "summary_en": "The flagship that started unified shaders.",
-    "summary_ja": "統合シェーダの開祖旗艦。",
+    "summary": "首款统一渲染架构旗舰。",
+    "summary_en": "The first unified-shader flagship.",
+    "summary_ja": "初の統合シェーダ旗艦。",
     "tags": [
       "历史",
       "经典"
@@ -5971,9 +5971,9 @@
     "tdp_w": 150,
     "release": "2017-04",
     "price_cny": null,
-    "summary": "矿卡退役后的性价比神卡。",
-    "summary_en": "The post-mining value legend.",
-    "summary_ja": "マイニング後のコスパ神カード。",
+    "summary": "矿卡退役后二手性价比突出。",
+    "summary_en": "Standout used-market value after the mining era.",
+    "summary_ja": "マイニング後の中古で割安。",
     "tags": [
       "历史",
       "经典"
@@ -6539,9 +6539,9 @@
     "tdp_w": 110,
     "release": "2008-06",
     "price_cny": null,
-    "summary": "$199 的价格屠夫。",
-    "summary_en": "The $199 price killer.",
-    "summary_ja": "$199 の価格破壊。",
+    "summary": "以 $199 大幅拉低主流价位。",
+    "summary_en": "Cut the mainstream price point hard at $199.",
+    "summary_ja": "$199 で主流価格を大きく下げた。",
     "tags": [
       "历史",
       "经典"
@@ -7611,9 +7611,9 @@
     "tgp_w": 60,
     "release": "2023-11",
     "price_cny": null,
-    "summary": "上代核显天花板。",
-    "summary_en": "Last-gen iGPU ceiling.",
-    "summary_ja": "前世代内蔵GPUの天井。",
+    "summary": "上代性能最高的核显。",
+    "summary_en": "The fastest iGPU of the last generation.",
+    "summary_ja": "前世代最速の内蔵GPU。",
     "tags": [
       "核显",
       "生产力"
@@ -8669,9 +8669,9 @@
     "tdp_w": 175,
     "release": "2015-09",
     "price_cny": null,
-    "summary": "15cm 的完整 Fiji。",
-    "summary_en": "Full Fiji in 15 cm.",
-    "summary_ja": "15cm のフル Fiji。",
+    "summary": "15cm 长度的完整 Fiji 核心。",
+    "summary_en": "Full Fiji die in a 15 cm card.",
+    "summary_ja": "15cm 長のフル Fiji。",
     "tags": [
       "历史",
       "经典"

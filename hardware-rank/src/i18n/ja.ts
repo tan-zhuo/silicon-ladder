@@ -10,9 +10,9 @@ export const ja: Msg = {
   sort: { overall: '総合', gaming: 'ゲーム', single: 'シングル', multi: 'マルチ', efficiency: '電力効率', igpu: '内蔵GPU', value: 'コスパ', raster: 'ラスタ', rt: 'レイトレ', bandwidth: '帯域', latency: 'レイテンシ', random4k: '4Kランダム', cacheOut: 'キャッシュ外書込', seqRead: 'シーケンシャル読', endurance: '耐久性', tier: '品質ティア' },
   col: { rank: '#', model: 'モデル', cores: 'コア', tdp: 'TDP', single: 'シングル', multi: 'マルチ', gaming: 'ゲーム', overall: '総合', vram: 'VRAM', power: 'TGP/TDP', raster: 'ラスタ', rt: 'RT', spec: '仕様', read: '読込帯域', latency: 'レイテンシ', interface: 'IF', seqRead: 'Seq.読', random4k: '4K', cacheOut: 'キャッシュ外', watt: 'W数', tier: 'ティア', efficiency: '認証', atx31: 'ATX 3.1', modular: 'モジュラー', compare: '比較', release: '発売' },
   home: {
-    heroKicker: 'ハードウェアラダー · 2007 → 2026',
-    heroTitle: '歴代シリコンの立ち位置を一目で',
-    heroDesc: 'Core 2 Duo から Ryzen 9950X3D まで、8800 GT から RTX 5090 まで。デスクトップ / ノート / 内蔵GPU をプール分けし、AMD / Intel / NVIDIA を左右対照。ゲーム・生産性・電力効率・コスパをワンクリックで切替。',
+    heroKicker: '2007 年〜現在のデータ',
+    heroTitle: 'コンシューマー向けハードウェアのランキングと性能ラダー',
+    heroDesc: '2007 年から現在までの CPU・GPU・メモリ・ストレージ・電源を収録。デスクトップ / ノート / 内蔵GPU を別プールで順位付けし、AMD / Intel / NVIDIA を並べて比較。ゲーム・生産性・効率・コスパで並び替え可能。',
     ctaCpu: 'CPU ラダー', ctaGpu: 'GPU ラダー', ctaCompare: '比較を始める',
     searchPh: '検索 7800X3D / RTX 5070 / 990 PRO …',
     statItems: '収録数', statCpu: 'CPU', statGpu: 'GPU', statSpan: '対象年', statUpdated: 'データ更新',
