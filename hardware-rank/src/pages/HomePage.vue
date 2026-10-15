@@ -71,7 +71,7 @@ useSeo(() => ({
         <svg class="absolute left-4 top-1/2 -translate-y-1/2 text-muted pointer-events-none" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" /><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
         <div v-if="hits.length" class="absolute z-20 mt-1 w-full card overflow-hidden">
           <button v-for="h in hits" :key="h.cat + h.item.id" class="w-full text-left px-4 py-2.5 hover:bg-accent/5 flex items-center gap-3 text-sm" @click="router.push(`/product/${h.cat}/${h.item.id}`); q = ''">
-            <BrandLogo :brand="h.item.brand" :size="16" />
+            <BrandLogo :brand="h.item.brand" :size="20" />
             <span class="text-xs text-muted w-14">{{ catLabel(h.cat) }}</span>
             <span class="flex-1 font-medium">{{ displayName(h.item) }}</span>
             <span class="text-xs text-muted">{{ formLabel(h.item.form) }} · {{ yearOf(h.item.release) }}</span>
@@ -115,7 +115,7 @@ useSeo(() => ({
         <div class="space-y-2">
           <router-link v-for="r in tp.rows" :key="r.item.id" :to="`/product/${tp.cat}/${r.item.id}`" class="flex items-center gap-2.5 group">
             <span class="w-5 text-sm font-bold" :style="{ color: r.rank === 1 ? 'var(--gold)' : r.rank === 2 ? 'var(--silver)' : 'var(--bronze)' }">{{ r.rank }}</span>
-            <BrandLogo :brand="r.item.brand" :size="16" />
+            <BrandLogo :brand="r.item.brand" :size="20" />
             <span class="flex-1 text-sm font-medium truncate group-hover:text-accent">{{ displayName(r.item) }}</span>
             <div class="w-20 h-1.5 rounded-full overflow-hidden shrink-0" style="background: var(--bar-track)"><div class="h-full" :style="{ width: (r.rel.overall ?? 0) + '%', background: 'var(--bar-fill)' }" /></div>
             <span class="text-xs w-9 text-right shrink-0 tabular-nums">{{ fmtRel(r.rel.overall) }}</span>
@@ -144,7 +144,7 @@ useSeo(() => ({
     </div>
     <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
       <router-link v-for="r in recent" :key="r.item.id" :to="`/product/${r.cat}/${r.item.id}`" class="card card-hover p-4">
-        <div class="flex items-center gap-2 text-xs text-muted"><BrandLogo :brand="r.item.brand" :size="14" />{{ catLabel(r.cat) }} · {{ formLabel(r.item.form) }} · {{ r.item.release }}</div>
+        <div class="flex items-center gap-2 text-xs text-muted"><BrandLogo :brand="r.item.brand" :size="18" />{{ catLabel(r.cat) }} · {{ formLabel(r.item.form) }} · {{ r.item.release }}</div>
         <div class="font-semibold mt-2">{{ displayName(r.item) }}</div>
         <div class="text-sm text-muted mt-1 line-clamp-2">{{ displaySummary(r.item) }}</div>
       </router-link>

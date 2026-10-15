@@ -108,7 +108,7 @@ useSeo(() => ({
             <tr class="border-b border-line bg-card2">
               <th class="text-left px-3 py-3 text-xs text-muted w-28 lg:w-36">{{ t('compare.metric') }}</th>
               <th v-for="it in items" :key="it.id" class="text-left px-3 py-3">
-                <div class="flex items-center gap-2"><BrandLogo :brand="it.brand" :size="18" /><router-link :to="`/product/${cat}/${it.id}`" class="font-semibold hover:text-accent truncate" :title="displayName(it)">{{ displayName(it) }}</router-link></div>
+                <div class="flex items-center gap-2"><BrandLogo :brand="it.brand" :size="24" /><router-link :to="`/product/${cat}/${it.id}`" class="font-semibold hover:text-accent truncate" :title="displayName(it)">{{ displayName(it) }}</router-link></div>
                 <div class="text-[11px] text-muted font-normal mt-0.5">{{ formLabel(it.form) }} <button class="ml-1 hover:text-fg underline" @click="compare.remove(it.id)">{{ t('compare.remove') }}</button></div>
               </th>
             </tr>

@@ -41,7 +41,7 @@ useSeo(() => ({ title: t('guide.title'), description: t('guide.sub'), path: '/gu
           <ul class="mt-3 divide-y divide-line/60">
             <li v-for="pk in b.picks" :key="pk.cat + pk.id" class="py-2 flex items-center gap-3 text-sm">
               <span class="badge w-16 justify-center shrink-0">{{ catLabel(pk.cat) }}</span>
-              <BrandLogo v-if="item(pk.cat, pk.id)" :brand="item(pk.cat, pk.id)!.brand" :size="16" />
+              <BrandLogo v-if="item(pk.cat, pk.id)" :brand="item(pk.cat, pk.id)!.brand" :size="20" />
               <div class="flex-1 min-w-0">
                 <router-link :to="`/product/${pk.cat}/${pk.id}`" class="font-semibold hover:text-accent">{{ item(pk.cat, pk.id) ? displayName(item(pk.cat, pk.id)!) : pk.id }}</router-link>
                 <div class="text-xs text-muted">{{ p(pk.why) }}</div>

@@ -54,7 +54,7 @@ onUnmounted(() => window.removeEventListener('keydown', onKey))
         <ul v-if="hits.length" class="max-h-[50vh] overflow-y-auto py-1">
           <li v-for="(h, i) in hits" :key="h.cat + h.item.id">
             <button class="w-full text-left px-4 py-2.5 flex items-center gap-3 text-sm" :class="i === idx ? 'bg-accent/10' : 'hover:bg-accent/5'" @mouseenter="idx = i" @click="go(h)">
-              <BrandLogo :brand="h.item.brand" :size="18" />
+              <BrandLogo :brand="h.item.brand" :size="22" />
               <span class="badge w-14 justify-center">{{ catLabel(h.cat) }}</span>
               <span class="flex-1 font-medium truncate">{{ displayName(h.item) }}</span>
               <span class="text-xs text-muted whitespace-nowrap">{{ formLabel(h.item.form) }} · {{ yearOf(h.item.release) }}</span>

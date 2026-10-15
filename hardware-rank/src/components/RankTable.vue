@@ -47,7 +47,7 @@ function currentScore(row: RankedRow): string {
               <th class="text-left px-2 py-3">{{ t('col.model') }}</th>
               <th
                 v-for="c in cols" :key="c.key" class="px-2 py-3 whitespace-nowrap"
-                :class="[c.kind === 'score' || c.align === 'right' ? 'text-right' : 'text-left', c.sortKey ? 'cursor-pointer select-none hover:text-fg' : '', hideCls(c), c.kind === 'score' ? 'w-[7.5rem] xl:w-[9.5rem] 2xl:w-[11rem]' : c.key === 'spec' ? 'w-[14rem]' : 'w-[6rem]']"
+                :class="[c.kind === 'score' || c.align === 'right' ? 'text-right' : 'text-left', c.sortKey ? 'cursor-pointer select-none hover:text-fg' : '', hideCls(c), c.kind === 'score' ? 'w-[7.5rem] xl:w-[9.5rem] 2xl:w-[11rem]' : c.key === 'spec' ? 'w-[14rem]' : 'w-[6rem] xl:w-[8rem]']"
                 @click="c.sortKey && emit('sort', c.sortKey)"
               >
                 <span :class="c.sortKey === sort ? 'text-accent' : ''">{{ t('col.' + c.label) }}</span>
@@ -69,7 +69,7 @@ function currentScore(row: RankedRow): string {
               </td>
               <td class="px-2 py-3">
                 <div class="flex items-center gap-2.5">
-                  <BrandLogo :brand="r.item.brand" :size="20" />
+                  <BrandLogo :brand="r.item.brand" :size="28" />
                   <div class="min-w-0">
                     <div class="flex items-center gap-1.5 min-w-0">
                       <router-link :to="`/product/${category}/${r.item.id}`" class="font-semibold truncate group-hover:text-accent" :title="displayName(r.item)" @click.stop>{{ displayName(r.item) }}</router-link>
@@ -104,7 +104,7 @@ function currentScore(row: RankedRow): string {
     <div v-if="rows.length" class="md:hidden space-y-2">
       <div v-for="r in rows" :key="r.item.id" class="card card-hover p-3 flex items-center gap-3" tabindex="0" @click="go(r)" @keydown.enter="go(r)">
         <div class="w-7 text-lg font-bold text-center" :style="rankStyle(r.rank)">{{ r.rank }}</div>
-        <BrandLogo :brand="r.item.brand" :size="20" />
+        <BrandLogo :brand="r.item.brand" :size="24" />
         <div class="flex-1 min-w-0">
           <div class="font-semibold truncate">{{ displayName(r.item) }}</div>
           <div class="text-[11px] text-muted mt-0.5 truncate">

@@ -258,7 +258,7 @@ useSeo(() => {
         <p class="text-xs text-muted mt-0.5 mb-3">{{ t('rel.rivalsDesc') }}</p>
         <div class="divide-y divide-line/60">
           <router-link v-for="r in rivals" :key="r.item.id" :to="`/product/${category}/${r.item.id}`" class="flex items-center gap-3 py-2 group text-sm">
-            <BrandLogo :brand="r.item.brand" :size="16" />
+            <BrandLogo :brand="r.item.brand" :size="20" />
             <span class="font-medium group-hover:text-accent flex-1 truncate">{{ displayName(r.item) }}</span>
             <span class="text-xs text-muted">{{ r.item.release }}</span>
             <span class="text-xs text-muted">#{{ r.rank }}</span>
@@ -274,7 +274,7 @@ useSeo(() => {
           <div v-for="[k, x] in [['prev', lineage.prev], ['next', lineage.next]] as const" :key="k">
             <div class="text-[11px] text-muted uppercase tracking-wide">{{ t('rel.' + k) }}</div>
             <router-link v-if="x" :to="`/product/${category}/${x.id}`" class="flex items-center gap-2 mt-1 group">
-              <BrandLogo :brand="x.brand" :size="16" /><span class="font-medium group-hover:text-accent flex-1 truncate">{{ displayName(x) }}</span>
+              <BrandLogo :brand="x.brand" :size="20" /><span class="font-medium group-hover:text-accent flex-1 truncate">{{ displayName(x) }}</span>
               <span class="text-xs text-muted">{{ x.release }}</span><span class="w-10 text-right">{{ rowOf(x.id)?.rel.overall?.toFixed(1) ?? '—' }}</span>
             </router-link>
             <div v-else class="text-muted mt-1">—</div>
@@ -287,7 +287,7 @@ useSeo(() => {
       <h2 class="font-bold mb-3">{{ t('product.similar') }}</h2>
       <div class="grid sm:grid-cols-3 gap-3">
         <button v-for="r in similar" :key="r.item.id" class="card card-hover p-4 text-left" @click="router.push(`/product/${category}/${r.item.id}`)">
-          <div class="flex items-center gap-2"><BrandLogo :brand="r.item.brand" :size="16" /><span class="font-semibold">{{ displayName(r.item) }}</span></div>
+          <div class="flex items-center gap-2"><BrandLogo :brand="r.item.brand" :size="20" /><span class="font-semibold">{{ displayName(r.item) }}</span></div>
           <div class="text-xs text-muted mt-1">#{{ r.rank }}<span v-if="r.rel.overall != null"> · {{ t('sort.overall') }} {{ r.rel.overall?.toFixed(1) }}</span></div>
           <div class="text-sm text-muted mt-1 line-clamp-2">{{ displaySummary(r.item) }}</div>
         </button>
