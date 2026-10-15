@@ -1,14 +1,25 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 export interface UiOption { value: string; label: string }
-const props = withDefaults(defineProps<{ options: UiOption[]; size?: 'md' | 'sm'; ariaLabel?: string; align?: 'left' | 'right' }>(), { size: 'md', ariaLabel: '', align: 'left' })
+const props = withDefaults(defineProps<{ options: UiOption[]; size?: 'md' | 'sm'; ariaLabel?: string; align?: 'left' | 'right'; direction?: 'down' | 'up' | 'auto' }>(), { size: 'md', ariaLabel: '', align: 'left', direction: 'auto' })
 const model = defineModel<string>({ default: '' })
 const open = ref(false)
 const root = ref<HTMLElement | null>(null)
 const idx = ref(0)
 const current = computed(() => props.options.find((o) => o.value === model.value) ?? props.options[0])
 function choose(o: UiOption) { model.value = o.value; open.value = false }
-function toggle() { open.value = !open.value; idx.value = Math.max(0, props.options.findIndex((o) => o.value === model.value)) }
+const dropUp = ref(false)
+function toggle() {
+  open.value = !open.value
+  idx.value = Math.max(0, props.options.findIndex((o) => o.value === model.value))
+  if (open.value) {
+    if (props.direction === 'auto') {
+      const r = root.value?.getBoundingClientRect()
+      // 预估菜单高度：每项约 34px + padding；放不下则向上弹
+      dropUp.value = !!r && window.innerHeight - r.bottom < props.options.length * 34 + 16
+    } else dropUp.value = props.direction === 'up'
+  }
+}
 function onDoc(e: MouseEvent) { if (root.value && !root.value.contains(e.target as Node)) open.value = false }
 function onKey(e: KeyboardEvent) {
   if (!open.value) { if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle() } return }
@@ -34,7 +45,7 @@ onUnmounted(() => document.removeEventListener('mousedown', onDoc))
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-muted transition-transform" :class="open ? 'rotate-180' : ''"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
     </button>
     <transition name="fade">
-      <ul v-if="open" role="listbox" class="absolute z-50 mt-1 min-w-full py-1 card !rounded-lg overflow-hidden" :class="align === 'right' ? 'right-0' : 'left-0'">
+      <ul v-if="open" role="listbox" class="absolute z-50 min-w-full py-1 card !rounded-lg overflow-hidden" :class="[align === 'right' ? 'right-0' : 'left-0', dropUp ? 'bottom-full mb-1' : 'top-full mt-1']">
         <li
           v-for="(o, i) in options" :key="o.value" role="option" :aria-selected="o.value === model"
           class="px-3 py-1.5 text-sm cursor-pointer whitespace-nowrap flex items-center gap-2"

@@ -66,10 +66,10 @@ const isActive = (to: string) => {
     <nav class="flex-1 overflow-y-auto px-3 py-3 space-y-0.5">
       <router-link
         v-for="n in nav" :key="n.to" :to="n.to"
-        class="flex items-center gap-3 px-3 h-9 rounded-lg text-sm text-muted hover:text-fg hover:bg-card2 transition-colors"
+        class="flex items-center gap-3 px-3 h-10 rounded-lg text-[13.5px] text-muted hover:text-fg hover:bg-card2 transition-colors"
         :class="isActive(n.to) ? '!text-accent !bg-accent/10 font-medium' : ''"
       >
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" class="shrink-0"><path :d="n.icon" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="shrink-0"><path :d="n.icon" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
         <span class="flex-1 truncate">{{ n.label }}</span>
         <span v-if="n.count" class="text-[11px] text-muted/70 tabular-nums">{{ n.count }}</span>
       </router-link>

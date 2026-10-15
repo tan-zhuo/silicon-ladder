@@ -94,8 +94,8 @@ useSeo(() => ({
     </div>
     <div class="grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6 gap-4">
       <router-link v-for="c in cards" :key="c.key" :to="c.to" class="card card-hover p-5 sm:p-6 group relative overflow-hidden">
-        <div class="w-11 h-11 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-4">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path :d="c.icon" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        <div class="w-[60px] h-[60px] rounded-2xl bg-accent/10 text-accent flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path :d="c.icon" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
         </div>
         <div class="flex items-baseline gap-2"><span class="font-bold text-lg group-hover:text-accent transition-colors">{{ c.title }}</span><span v-if="c.count" class="text-xs text-muted">{{ c.count }}</span></div>
         <div class="text-sm text-muted mt-1 truncate">{{ c.desc }}</div>
