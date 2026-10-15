@@ -1,7 +1,7 @@
 import type { Msg } from './index'
 export const ja: Msg = {
   site: { name: 'CPU.News', tagline: 'コンシューマー向けハードウェアランキング', sub: '性能ラダー · ランキング · 比較' },
-  nav: { cpu: 'CPU', gpu: 'GPU', ram: 'メモリ', storage: 'ストレージ', psu: '電源', compare: '比較', guide: '購入ガイド', methodology: '評価方法', menu: 'メニュー' },
+  nav: { news: 'ニュース', cpu: 'CPU', gpu: 'GPU', ram: 'メモリ', storage: 'ストレージ', psu: '電源', compare: '比較', guide: '購入ガイド', methodology: '評価方法', menu: 'メニュー' },
   theme: { light: 'ライト', dark: 'ダーク', toggle: 'テーマ切替' },
   cat: { cpu: 'CPU', gpu: 'GPU', ram: 'メモリ', storage: 'ストレージ', psu: '電源' },
   form: { desktop: 'デスクトップ', laptop: 'ノート', igpu: '内蔵GPU', 'kit-desktop': 'デスクトップ用', sodimm: 'SO-DIMM', onboard: 'オンボード', nvme: 'NVMe', sata: 'SATA', hdd: 'HDD', atx: 'ATX', sfx: 'SFX' },
@@ -86,5 +86,6 @@ export const ja: Msg = {
     cores: 'コアマイクロアーキテクチャ', process: 'プロセス', design: 'チップ設計', die: 'ダイ構成', die_mm2: 'ダイ面積', transistors: 'トランジスタ数', l1: 'L1（コアあたり）', l2: 'L2（合計）', l3: 'L3', isa: '命令セット拡張', smt: 'マルチスレッド', base: 'ベースクロック', boost: 'ブーストクロック', tdp: 'TDP', pmax: '最大電力', memc: 'メモリコントローラ', memmax: '最大容量', pcie: 'PCIe', igpu: '内蔵GPU', igpuCu: '内蔵GPU ユニット', igpuClk: '内蔵GPU クロック', usd: '発売価格 (USD)',
     units: '演算ユニット', shaders: 'シェーダ', tmus: 'TMU', rops: 'ROP', rt: 'RT コア', tensor: 'AI / Tensor', rtGen: 'RT ユニット世代', aiGen: 'AI ユニット世代', baseClk: 'ベースクロック', boostClk: 'ブーストクロック', vram: 'VRAM', bus: 'バス幅', gbps: 'メモリ速度', bw: 'メモリ帯域', l2g: 'L2', ic: 'Infinity Cache', tbp: 'TBP / TGP', tflops: 'FP32 演算性能', perW: 'ワットあたり性能', density: 'トランジスタ密度', shPerUnit: 'ユニットあたりシェーダ' },
   shop: { title: '購入 / 価格比較', note: '各ストアの検索結果へのリンクです。価格と在庫はストア側の情報。ストア API は使わず、Amazon リンクにはアフィリエイトタグが含まれる場合があります。', search: '“{q}” を検索' },
+  news: { title: 'ハードウェアニュース', sub: 'メーカー公式ニュースルームのみを集約：AMD、NVIDIA、Apple、Samsung。タイトルは公式原文へリンクします。', updated: '取得日', all: 'すべて', visit: '公式記事を読む', intelNote: 'Intel / Qualcomm は公開フィードがないため未収録です。', empty: 'ニュースデータなし', home: '公式ニュース', more: 'すべて見る', legal: 'タイトルとリンクのみを保存。内容の権利は各社に帰属します。' },
   loading: 'データ読込中…', loadError: 'データの読込に失敗: ',
 }

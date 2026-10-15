@@ -1,0 +1,838 @@
+{
+  "updated": "2026-10-15",
+  "note": "仅聚合厂商官方新闻源的标题与链接，正文请访问官方原文。",
+  "items": [
+    {
+      "id": "18dfa8d65f52",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "From Smart City to Race Circuit: Samsung’s The Wall in Control Rooms",
+      "url": "https://news.samsung.com/global/from-smart-city-to-race-circuit-samsungs-the-wall-in-control-rooms",
+      "date": "2026-10-15"
+    },
+    {
+      "id": "158d95d104c6",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Hosts Silicon Valley Future Wireless Summit 2026",
+      "url": "https://news.samsung.com/global/samsung-hosts-silicon-valley-future-wireless-summit-2026",
+      "date": "2026-10-15"
+    },
+    {
+      "id": "99d1e6fc22c4",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Newsroom",
+      "title": "NVIDIA and Semiconductor Leaders Advance AI Across Chip Design and Manufacturing for AI-Defined Fabs",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-and-semiconductor-leaders-advance-ai-across-chip-design-and-manufacturing-for-ai-defined-labs",
+      "date": "2026-10-14"
+    },
+    {
+      "id": "4d5bdcd4b509",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Blog",
+      "title": "NVIDIA Announces New Investments in the UK Startup Ecosystem",
+      "url": "https://blogs.nvidia.com/blog/uk-ecosystem-deployment/",
+      "date": "2026-10-14"
+    },
+    {
+      "id": "fe984002b5c8",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Newsroom",
+      "title": "NVIDIA Commits $250 Million to Advance UK Agentic Safety and Security Research Over the Next Five Years",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-commits-250-million-to-advance-uk-agentic-safety-and-security-research-over-the-next-five-years",
+      "date": "2026-10-14"
+    },
+    {
+      "id": "8a326a200e9b",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Blog",
+      "title": "European Cities Deploy NVIDIA-Powered AI Agents to Run Smarter Urban Operations",
+      "url": "https://blogs.nvidia.com/blog/european-cities-agents-urban-operations/",
+      "date": "2026-10-14"
+    },
+    {
+      "id": "c9c8080e6d59",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Expands Language Support Across AI Experiences on Galaxy",
+      "url": "https://news.samsung.com/global/samsung-expands-language-support-across-ai-experiences-on-galaxy",
+      "date": "2026-10-14"
+    },
+    {
+      "id": "4c8284c1c8e3",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Health Makes Sleep Coaching Easier To Start and Tailors Weekly Guidance",
+      "url": "https://news.samsung.com/global/samsung-health-makes-sleep-coaching-easier-to-start-and-tailors-weekly-guidance",
+      "date": "2026-10-14"
+    },
+    {
+      "id": "82ca084a98c4",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "Bünyamin Aydın’s new collection, “From Earth to Sky,” soars with iPad Pro",
+      "url": "https://www.apple.com/newsroom/2026/10/bunyamin-aydins-new-collection-from-earth-to-sky-soars-with-ipad-pro/",
+      "date": "2026-10-14"
+    },
+    {
+      "id": "05b845700b5b",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Blog",
+      "title": "All Systems Go: Global PC App Ecosystem Ready for NVIDIA RTX Spark",
+      "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/",
+      "date": "2026-10-13"
+    },
+    {
+      "id": "a25a6a3914ca",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Newsroom",
+      "title": "NVIDIA Lands in Europe for GTC Berlin",
+      "url": "https://blogs.nvidia.com/gtc-berlin-2026-news/",
+      "date": "2026-10-13"
+    },
+    {
+      "id": "d976f13d85f1",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Blog",
+      "title": "NVIDIA Announces New Investments in France’s Startups",
+      "url": "https://blogs.nvidia.com/blog/france-ecosystem-agentic-computing/",
+      "date": "2026-10-13"
+    },
+    {
+      "id": "36e754d4f91f",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "Meet Apple HomeView, a new way to enjoy entertainment and manage the home",
+      "url": "https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/",
+      "date": "2026-10-13"
+    },
+    {
+      "id": "424b9551a74d",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "Apple unveils the new Apple TV 4K, supercharged by Siri AI",
+      "url": "https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/",
+      "date": "2026-10-13"
+    },
+    {
+      "id": "4f81b3069723",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "Apple announces the next generation of HomePod mini",
+      "url": "https://www.apple.com/newsroom/2026/10/apple-announces-the-next-generation-of-homepod-mini/",
+      "date": "2026-10-13"
+    },
+    {
+      "id": "2b60b4b91f32",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "Introducing Apple Home Collection, a new lineup of smart home accessories",
+      "url": "https://www.apple.com/newsroom/2026/10/introducing-apple-home-collection-a-new-lineup-of-smart-home-accessories/",
+      "date": "2026-10-13"
+    },
+    {
+      "id": "6a737356ea20",
+      "brand": "AMD",
+      "source": "AMD Newsroom (IR)",
+      "title": "Introducing AMD Helion, Agentic AI Compute at Rack Scale",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1301/introducing-amd-helion-agentic-ai-compute-at-rack-scale",
+      "date": "2026-10-12"
+    },
+    {
+      "id": "645ff95d08b3",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Blog",
+      "title": "OCP Global Summit: Amid Ecosystem Adoption, NVIDIA Opens Vera Rubin Architecture to Help Scale AI Factories Worldwide",
+      "url": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/",
+      "date": "2026-10-12"
+    },
+    {
+      "id": "5806b5bf5d22",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Newsroom",
+      "title": "NVIDIA and Cisco Introduce New Pluggable Optics Form Factor to Scale AI Factories",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-and-cisco-introduce-new-pluggable-optics-form-factor-to-scale-ai-factories",
+      "date": "2026-10-12"
+    },
+    {
+      "id": "5ef4605e3de3",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "App Store Indie Games Week kicks off today",
+      "url": "https://www.apple.com/newsroom/2026/10/app-store-indie-games-week-kicks-off-today/",
+      "date": "2026-10-12"
+    },
+    {
+      "id": "1a4ac42905b1",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Newsroom",
+      "title": "Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents",
+      "url": "https://blogs.nvidia.com/blog/developers-simulations-frontier-ai-agents/",
+      "date": "2026-10-08"
+    },
+    {
+      "id": "afacedbf9bb5",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Newsroom",
+      "title": "NVIDIA Commits $1 Billion to Advance US Science Over the Next Five Years",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-commits-1-billion-to-advance-us-science-over-the-next-five-years",
+      "date": "2026-10-08"
+    },
+    {
+      "id": "0c22a86a2f28",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Blog",
+      "title": "Rally Up: ‘Gears of War: E-Day’ Launches on GeForce NOW",
+      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-gears-of-war-e-day/",
+      "date": "2026-10-08"
+    },
+    {
+      "id": "d3870d60c1b5",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Blog",
+      "title": "Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents",
+      "url": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/",
+      "date": "2026-10-08"
+    },
+    {
+      "id": "12f318c42415",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Electronics Announces Earnings Guidance for Third Quarter 2026",
+      "url": "https://news.samsung.com/global/samsung-electronics-announces-earnings-guidance-for-third-quarter-2026",
+      "date": "2026-10-08"
+    },
+    {
+      "id": "e478e549f7b0",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Blog",
+      "title": "NVIDIA, Microsoft Kick Off a New Beginning for Windows PCs With RTX Spark and AI Agents",
+      "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/",
+      "date": "2026-10-07"
+    },
+    {
+      "id": "296a724541bc",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "Apple, The King’s Trust launch initiative to empower young creatives",
+      "url": "https://www.apple.com/newsroom/2026/10/apple-the-kings-trust-launch-initiative-to-empower-young-creatives/",
+      "date": "2026-10-07"
+    },
+    {
+      "id": "382756107823",
+      "brand": "AMD",
+      "source": "AMD Newsroom (IR)",
+      "title": "AMD to Report Fiscal Third Quarter 2026 Financial Results",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1300/amd-to-report-fiscal-third-quarter-2026-financial-results",
+      "date": "2026-10-06"
+    },
+    {
+      "id": "a61c63bfcf3c",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Blog",
+      "title": "Why Telecom Operators Are Building Their AI Strategy on Open Models",
+      "url": "https://blogs.nvidia.com/blog/telecom-operators-open-models/",
+      "date": "2026-10-06"
+    },
+    {
+      "id": "bbd3865f50d5",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Art Store Expands Its Collection With 30 Exclusive Works From the British Museum",
+      "url": "https://news.samsung.com/global/samsung-art-store-expands-its-collection-with-30-exclusive-works-from-the-british-museum",
+      "date": "2026-10-06"
+    },
+    {
+      "id": "cdd1f4c1c760",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Introduces ‘SmartThings Now’ in New Platform Update That Brings More Intuitive User Experiences",
+      "url": "https://news.samsung.com/global/samsung-introduces-smartthings-now-in-new-platform-update-that-brings-more-intuitive-user-experiences",
+      "date": "2026-10-06"
+    },
+    {
+      "id": "303ff9e9753c",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Blog",
+      "title": "From Scan to Treatment Plan, AI Helps Close Breast Cancer’s Deadliest Gaps",
+      "url": "https://blogs.nvidia.com/blog/ai-breast-cancer-startups/",
+      "date": "2026-10-05"
+    },
+    {
+      "id": "e9d4e012b46c",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Blog",
+      "title": "NVIDIA DGX Spark 64GB Gives Developers More Ways to Build and Scale Local AI",
+      "url": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/",
+      "date": "2026-10-02"
+    },
+    {
+      "id": "8efce2651a63",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Blog",
+      "title": "How NVIDIA GPUs Help Accelerate OpenAI’s GPT-6 Astra Ultrafast",
+      "url": "https://blogs.nvidia.com/blog/gpus-openai-gpt-6-astra-ultrafast/",
+      "date": "2026-10-01"
+    },
+    {
+      "id": "ebe7155505fe",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Blog",
+      "title": "Fall Into 25 New Games on GeForce NOW This October",
+      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-october-2026-games-list/",
+      "date": "2026-10-01"
+    },
+    {
+      "id": "052ead0cacdf",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Blog",
+      "title": "Productive, Durable, Fungible: How NVIDIA AI Factories Maximize Return on Investment",
+      "url": "https://blogs.nvidia.com/blog/productive-durable-fungible-ai-factories/",
+      "date": "2026-10-01"
+    },
+    {
+      "id": "c52c0ca254a9",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Lee Kun-Hee Collection Expands to Europe With Opening of ‘Korea’ Exhibition at the British Museum",
+      "url": "https://news.samsung.com/global/lee-kun-hee-collection-expands-to-europe-with-opening-of-korea-exhibition-at-the-british-museum",
+      "date": "2026-10-01"
+    },
+    {
+      "id": "0aec32a803d7",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Blog",
+      "title": "NVIDIA Opens Applications for 2027–2028 Graduate Fellowships With Awards Up to $60,000",
+      "url": "https://blogs.nvidia.com/blog/applications-open-graduate-fellowship-awards-2026/",
+      "date": "2026-09-30"
+    },
+    {
+      "id": "dee9ae257b7d",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Blog",
+      "title": "From Training to Production, NVIDIA and CoreWeave Close the Loop on Agentic AI",
+      "url": "https://blogs.nvidia.com/blog/coreweave-agentic-ai-vera-rubin/",
+      "date": "2026-09-30"
+    },
+    {
+      "id": "f56f978600ce",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Galaxy SmartTag3 Makes It Easier To Keep Track of What Matters",
+      "url": "https://news.samsung.com/global/samsung-galaxy-smarttag3-makes-it-easier-to-keep-track-of-what-matters",
+      "date": "2026-09-30"
+    },
+    {
+      "id": "9cadfe6b060f",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Introduces Galaxy Tab S12 Series: The Ultimate Productivity Powerhouse Built for Growth",
+      "url": "https://news.samsung.com/global/samsung-introduces-galaxy-tab-s12-series-the-ultimate-productivity-powerhouse-built-for-growth",
+      "date": "2026-09-30"
+    },
+    {
+      "id": "7c8692ba5165",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung To Invest USD 1 Billion in AI Infrastructure Company Helix",
+      "url": "https://news.samsung.com/global/samsung-to-invest-usd-1-billion-in-ai-infrastructure-company-helix",
+      "date": "2026-09-29"
+    },
+    {
+      "id": "269f61980c2f",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "[World Heart Day] Taking Care of Your Heart Every Day, Starting From Your Wrist",
+      "url": "https://news.samsung.com/global/world-heart-day-taking-care-of-your-heart-every-day-starting-from-your-wrist",
+      "date": "2026-09-29"
+    },
+    {
+      "id": "83495b4be712",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "Final Cut Camera now supports variable aperture on iPhone 18 Pro",
+      "url": "https://www.apple.com/newsroom/2026/09/final-cut-camera-now-supports-variable-aperture-on-iphone-18-pro/",
+      "date": "2026-09-29"
+    },
+    {
+      "id": "51aced2ef750",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "New updates coming to Apple Creator Studio",
+      "url": "https://www.apple.com/newsroom/2026/09/new-updates-coming-to-apple-creator-studio/",
+      "date": "2026-09-29"
+    },
+    {
+      "id": "f0b4ac3a620f",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "Apple releases new guide to help families build healthy digital habits",
+      "url": "https://www.apple.com/newsroom/2026/09/apple-releases-new-guide-to-help-families-build-healthy-digital-habits/",
+      "date": "2026-09-29"
+    },
+    {
+      "id": "ac6e7bb0f3d7",
+      "brand": "AMD",
+      "source": "AMD Newsroom (IR)",
+      "title": "AMD to Acquire World Labs to Advance the Future of AI Compute",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute",
+      "date": "2026-09-28"
+    },
+    {
+      "id": "65133667f37f",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Art Store Debuts First-Ever Cinematic Collection for Samsung TVs",
+      "url": "https://news.samsung.com/global/samsung-art-store-debuts-first-ever-cinematic-collection-for-samsung-tvs",
+      "date": "2026-09-28"
+    },
+    {
+      "id": "a41104308547",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung TV Plus Expands Global Creator Lineup to More Markets",
+      "url": "https://news.samsung.com/global/samsung-tv-plus-expands-global-creator-lineup-to-more-markets",
+      "date": "2026-09-28"
+    },
+    {
+      "id": "86ee634d28da",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung, SK Telecom, and Hana Financial Group Build Korea’s First Private 5G Smart Office in the Financial Sector",
+      "url": "https://news.samsung.com/global/samsung-sk-telecom-and-hana-financial-group-buildkoreas-first-private-5g-smart-office-in-the-financial-sector",
+      "date": "2026-09-28"
+    },
+    {
+      "id": "17c8f093a999",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Blog",
+      "title": "How Open Science Can Help Researchers Prepare for the Next Pandemic",
+      "url": "https://blogs.nvidia.com/blog/open-protein-dataset/",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "0d586c56f2ba",
+      "brand": "NVIDIA",
+      "source": "NVIDIA Blog",
+      "title": "Contain the Chaos: ‘CONTROL Resonant’ Launches on GeForce NOW",
+      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-control-resonant/",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "7b2d76c171cd",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung at the Forefront of Korea’s AI RAN Projects with KT and SK Telecom",
+      "url": "https://news.samsung.com/global/samsung-at-the-forefront-of-koreas-ai-ran-projects-with-kt-and-sk-telecom",
+      "date": "2026-09-23"
+    },
+    {
+      "id": "c720085deaac",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Bringing Fantasy Characters to Life: Samsung Spatial Signage Transforms Tokyo Game Show 2026",
+      "url": "https://news.samsung.com/global/bringing-fantasy-characters-to-life-samsung-spatial-signage-transforms-tokyo-game-show-2026",
+      "date": "2026-09-23"
+    },
+    {
+      "id": "617c180f04f8",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Opens Built-In Appliance Showroom in Germany To Advance European Market Expansion",
+      "url": "https://news.samsung.com/global/samsung-opens-built-in-appliance-showroom-in-germany-to-advance-european-market-expansion",
+      "date": "2026-09-22"
+    },
+    {
+      "id": "5ab723e2919b",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "The new Mac mini and Mac Studio are available today",
+      "url": "https://www.apple.com/newsroom/2026/09/the-new-mac-mini-and-mac-studio-are-available-today/",
+      "date": "2026-09-22"
+    },
+    {
+      "id": "78d7faf5c126",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "Apple opens Apple Music Hall, a state-of-the-art live music venue in London",
+      "url": "https://www.apple.com/newsroom/2026/09/apple-opens-apple-music-hall-a-state-of-the-art-live-music-venue-in-london/",
+      "date": "2026-09-22"
+    },
+    {
+      "id": "de5289cd091b",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "The latest iPhone, Apple Watch, and AirPods lineups arrive in stores worldwide",
+      "url": "https://www.apple.com/newsroom/2026/09/the-latest-iphone-apple-watch-and-airpods-lineups-arrive-in-stores-worldwide/",
+      "date": "2026-09-18"
+    },
+    {
+      "id": "903ef8a4b273",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Begins Official Rollout of One UI 9, Bringing the Latest Galaxy Experiences to More Devices",
+      "url": "https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices",
+      "date": "2026-09-16"
+    },
+    {
+      "id": "b33a765a9467",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "[Interview] The People Behind the Galaxy Z Series’ Camera Innovations ②: How Portrait Video Recreates the Look of Professional Camera Lenses",
+      "url": "https://news.samsung.com/global/interview-the-people-behind-the-galaxy-z-series-camera-innovations-%e2%91%a1-how-portrait-video-recreates-the-look-of-professional-camera-lenses",
+      "date": "2026-09-16"
+    },
+    {
+      "id": "76391c640d7a",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "Celebrating “What Holds Us” on iPhone 18 Pro",
+      "url": "https://www.apple.com/newsroom/2026/09/celebrating-what-holds-us-on-iphone-18-pro/",
+      "date": "2026-09-16"
+    },
+    {
+      "id": "82f82543451d",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "Widow’s Bay triumphs as most decorated freshman comedy in Emmy history",
+      "url": "https://www.apple.com/newsroom/2026/09/widows-bay-triumphs-as-most-decorated-freshman-comedy-in-emmy-history/",
+      "date": "2026-09-15"
+    },
+    {
+      "id": "80ad0d5e3b89",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung and Verizon Complete Successful ISAC Trial Over Virtualized Network at Global Sports Event",
+      "url": "https://news.samsung.com/global/samsung-and-verizon-complete-successful-isac-trial-over-virtualized-network-at-global-sports-event",
+      "date": "2026-09-14"
+    },
+    {
+      "id": "35b8d9579323",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "Major updates for Apple’s software platforms are now available",
+      "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/",
+      "date": "2026-09-14"
+    },
+    {
+      "id": "f5fcc0f5ec94",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "Siri AI, a profoundly more capable and personal assistant, is here",
+      "url": "https://www.apple.com/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here/",
+      "date": "2026-09-14"
+    },
+    {
+      "id": "481b368e0d40",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "Apple’s new child safety features now available",
+      "url": "https://www.apple.com/newsroom/2026/09/apples-new-child-safety-features-now-available/",
+      "date": "2026-09-14"
+    },
+    {
+      "id": "a7847b11ad51",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "Get ready to experience iPhone 18 Pro, the new Apple Watch lineup, and AirPods 5",
+      "url": "https://www.apple.com/newsroom/2026/09/get-ready-to-experience-iphone-18-pro-the-new-apple-watch-lineup-and-airpods-5/",
+      "date": "2026-09-11"
+    },
+    {
+      "id": "c55ec8de0200",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung and Mistral AI Announce Strategic Partnership for Intelligence-Driven Semiconductor Infrastructure",
+      "url": "https://news.samsung.com/global/samsung-and-mistral-ai-announce-strategic-partnership-for-intelligence-driven-semiconductor-infrastructure",
+      "date": "2026-09-09"
+    },
+    {
+      "id": "c4a33207d7fd",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "From 253 Grams to 201 Grams: The Engineering Behind the World’s Lightest Fold",
+      "url": "https://news.samsung.com/global/from-253-grams-to-201-grams-the-engineering-behind-the-worlds-lightest-fold",
+      "date": "2026-09-09"
+    },
+    {
+      "id": "a62e31b38e7d",
+      "brand": "Apple",
+      "source": "Apple Newsroom",
+      "title": "Apple unveils iPhone Duo",
+      "url": "https://www.apple.com/newsroom/2026/09/apple-unveils-iphone-duo/",
+      "date": "2026-09-09"
+    },
+    {
+      "id": "20a0fcbf5311",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Electronics and ASML Expand Strategic Collaboration for Next-Generation Semiconductor Manufacturing",
+      "url": "https://news.samsung.com/global/samsung-electronics-and-asml-expand-strategic-collaboration-for-next-generation-semiconductor-manufacturing",
+      "date": "2026-09-08"
+    },
+    {
+      "id": "6a53a5035824",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Immaculate Engineering Meets Artistic Imagination: Highlights From Design Miami Seoul 2026",
+      "url": "https://news.samsung.com/global/immaculate-engineering-meets-artistic-imagination-highlights-from-design-miami-seoul-2026",
+      "date": "2026-09-07"
+    },
+    {
+      "id": "54661e9f3643",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Medison Expands Women’s Health Diagnostic Portfolio With Launch of Premium Ultrasound ‘HERA Z10’",
+      "url": "https://news.samsung.com/global/samsung-medison-expands-womens-health-diagnostic-portfolio-with-launch-of-premium-ultrasound-hera-z10",
+      "date": "2026-09-07"
+    },
+    {
+      "id": "c6027f50b73d",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Enhances Long-Term Value of Refrigerators and Laundry Appliances With AI-Focused Software Updates",
+      "url": "https://news.samsung.com/global/samsung-enhances-long-term-value-of-refrigerators-and-laundry-appliances-with-ai-focused-software-updates",
+      "date": "2026-09-07"
+    },
+    {
+      "id": "a4b16c5f15c0",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Wins Multiple Honors at IFA Innovation Awards 2026",
+      "url": "https://news.samsung.com/global/samsung-wins-multiple-honors-at-ifa-innovation-awards-2026",
+      "date": "2026-09-04"
+    },
+    {
+      "id": "0e3e65d2ed5d",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Gamescom 2026: Samsung Odyssey Breaks Boundaries — Supporting Every Way You Play",
+      "url": "https://news.samsung.com/global/gamescom-2026-samsung-odyssey-breaks-boundaries-supporting-every-way-you-play",
+      "date": "2026-09-04"
+    },
+    {
+      "id": "9ddef43e05ba",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Meet the Generation17 Young Leaders: The Story of Soumya Dabriwal",
+      "url": "https://news.samsung.com/global/meet-the-generation17-young-leaders-the-story-of-soumya-dabriwal",
+      "date": "2026-09-04"
+    },
+    {
+      "id": "b9fc6e288ce0",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Showcases New Washers With Flat Design at IFA 2026",
+      "url": "https://news.samsung.com/global/samsung-showcases-new-washers-with-flat-design-at-ifa-2026",
+      "date": "2026-09-03"
+    },
+    {
+      "id": "efc0988d1402",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "[Video] [Voices of Galaxy] Meet Lefa Makgato, Championing Africa’s Next Generation of Innovators",
+      "url": "https://news.samsung.com/global/video-voices-of-galaxy-meet-lefa-makgato-championing-africas-next-generation-of-innovators",
+      "date": "2026-09-02"
+    },
+    {
+      "id": "5a370399daae",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Redefines Laundry With New A-70% and 13 Kg Bespoke AI Washers at IFA 2026",
+      "url": "https://news.samsung.com/global/samsung-redefines-laundry-with-new-a-70-and-13-kg-bespoke-ai-washers-at-ifa-2026",
+      "date": "2026-09-02"
+    },
+    {
+      "id": "8c5ca3f50d1e",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Presents ‘Design Is an Act of Love’ at Design Miami Seoul 2026",
+      "url": "https://news.samsung.com/global/samsung-presents-design-is-an-act-of-love-at-design-miami-seoul-2026",
+      "date": "2026-09-01"
+    },
+    {
+      "id": "7e89adec69e9",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "[Interview] The People Behind the Galaxy Z Series’ Camera Innovations ①: How My FanCam Keeps Favorite People in Focus",
+      "url": "https://news.samsung.com/global/interview-the-people-behind-the-galaxy-z-series-camera-innovations-%e2%91%a0-how-my-fancam-keeps-favorite-people-in-focus",
+      "date": "2026-09-01"
+    },
+    {
+      "id": "0f8ca8acfde9",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Expands the Galaxy Book6 Lineup, Making Galaxy Book More Accessible",
+      "url": "https://news.samsung.com/global/samsung-expands-the-galaxy-book6-lineup-making-galaxy-book-more-accessible",
+      "date": "2026-09-01"
+    },
+    {
+      "id": "3ab10cb17abe",
+      "brand": "AMD",
+      "source": "AMD Newsroom (IR)",
+      "title": "AMD, Cisco and HUMAIN Expand Saudi Arabia’s AI Infrastructure as AMD Instinct Systems Go Live",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1298/amd-cisco-and-humain-expand-saudi-arabias-ai-infrastructure-as-amd-instinct-systems-go-live",
+      "date": "2026-08-31"
+    },
+    {
+      "id": "cf5e5bfa19eb",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Hosts #PlayGalaxy Cup World Final at Gamescom 2026",
+      "url": "https://news.samsung.com/global/samsung-hosts-playgalaxy-cup-world-final-at-gamescom-2026",
+      "date": "2026-08-31"
+    },
+    {
+      "id": "807308b39f2c",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Galaxy S26 FE: Delivering the Latest Flagship Experience, Focused on What Matters Most",
+      "url": "https://news.samsung.com/global/samsung-galaxy-s26-fe-delivering-the-latest-flagship-experience-focused-on-what-matters-most",
+      "date": "2026-08-27"
+    },
+    {
+      "id": "2dc7f2f08771",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Introduces New Odyssey Lineup for Fast-Paced Gaming at Gamescom 2026",
+      "url": "https://news.samsung.com/global/samsung-introduces-new-odyssey-lineup-for-fast-paced-gaming-at-gamescom-2026",
+      "date": "2026-08-27"
+    },
+    {
+      "id": "9ca4bc8ea5f9",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "[Video] No Unfolding Needed: A Day With Galaxy Z Flip8’s FlexWindow",
+      "url": "https://news.samsung.com/global/video-no-unfolding-needed-a-day-with-galaxy-z-flip8s-flexwindow",
+      "date": "2026-08-27"
+    },
+    {
+      "id": "9d8d77e67664",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Showcases P9 and P7 SSDs Featuring USB4 at Gamescom 2026",
+      "url": "https://news.samsung.com/global/samsung-showcases-p9-and-p7-ssds-featuring-usb4-at-gamescom-2026",
+      "date": "2026-08-26"
+    },
+    {
+      "id": "9772ee716616",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "The New Galaxy Z Series Earns Strong Early Reviews From European Consumers",
+      "url": "https://news.samsung.com/global/the-new-galaxy-z-series-earns-strong-early-reviews-from-european-consumers",
+      "date": "2026-08-26"
+    },
+    {
+      "id": "1b8cc84c3203",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "[Invitation] Design Miami Seoul 2026: Opening of Samsung’s ‘Design Is an Act of Love’ Exhibition",
+      "url": "https://news.samsung.com/global/invitation-design-miami-seoul-2026-opening-of-samsungs-design-is-an-act-of-love-exhibition",
+      "date": "2026-08-25"
+    },
+    {
+      "id": "2372ce4999ce",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung To Showcase Wide-Ranging Gaming Solutions With Immersive Exhibition at Gamescom 2026",
+      "url": "https://news.samsung.com/global/samsung-to-showcase-wide-ranging-gaming-solutions-with-immersive-exhibition-at-gamescom-2026",
+      "date": "2026-08-25"
+    },
+    {
+      "id": "72f458842def",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "An Easier Way To Switch to the New Galaxy Z Fold8",
+      "url": "https://news.samsung.com/global/an-easier-way-to-switch-to-the-new-galaxy-z-fold8",
+      "date": "2026-08-25"
+    },
+    {
+      "id": "514e5f8ff8db",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Galaxy Buds4 Pro Superior Hi-Fi Sound Recognized by Audio Experts",
+      "url": "https://news.samsung.com/global/samsung-galaxy-buds4-pro-superior-hi-fi-sound-recognized-by-audio-experts",
+      "date": "2026-08-24"
+    },
+    {
+      "id": "7e8e6c51e0df",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung Electronics To Implement Largest-Ever Shareholder Return in 2026, Estimated at KRW 90 to 110 Trillion",
+      "url": "https://news.samsung.com/global/samsung-electronics-to-implement-largest-ever-shareholder-return-in-2026-estimated-at-krw-90-to-110-trillion",
+      "date": "2026-08-21"
+    },
+    {
+      "id": "3ee8b2ea4e31",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "Samsung’s Human-Centered Design Wins IDEA and Red Dot Design Award 2026",
+      "url": "https://news.samsung.com/global/samsungs-human-centered-design-wins-idea-and-red-dot-design-award-2026",
+      "date": "2026-08-21"
+    },
+    {
+      "id": "55d6789b58de",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "[Video] [Galaxy Unpacked July 2026] Samsung Health Envisions Simpler, More Connected Care With AI",
+      "url": "https://news.samsung.com/global/video-galaxy-unpacked-july-2026-samsung-health-envisions-simpler-more-connected-care-with-ai",
+      "date": "2026-08-20"
+    },
+    {
+      "id": "0266af3663c6",
+      "brand": "Samsung",
+      "source": "Samsung Newsroom",
+      "title": "[Invitation] Galaxy Event August 2026",
+      "url": "https://news.samsung.com/global/invitation-galaxy-event-august-2026",
+      "date": "2026-08-20"
+    },
+    {
+      "id": "e087ae459b1a",
+      "brand": "AMD",
+      "source": "AMD Newsroom (IR)",
+      "title": "AMD Appoints Tim Ryan to Board of Directors",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1297/amd-appoints-tim-ryan-to-board-of-directors",
+      "date": "2026-08-19"
+    },
+    {
+      "id": "6b3ab8ee92e2",
+      "brand": "AMD",
+      "source": "AMD Newsroom (IR)",
+      "title": "AMD Acquires Taalas to Advance Compute Solutions for Rapidly Growing AI Inference Market",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1296/amd-acquires-taalas-to-advance-compute-solutions-for-rapidly-growing-ai-inference-market",
+      "date": "2026-08-06"
+    },
+    {
+      "id": "01d1f70be16f",
+      "brand": "AMD",
+      "source": "AMD Newsroom (IR)",
+      "title": "AMD Reports Second Quarter 2026 Financial Results",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1295/amd-reports-second-quarter-2026-financial-results",
+      "date": "2026-08-04"
+    },
+    {
+      "id": "91ebc675d72a",
+      "brand": "AMD",
+      "source": "AMD Newsroom (IR)",
+      "title": "AAI 2026: AMD Delivers Full-Stack Compute for the Agentic AI Era",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1294/aai-2026-amd-delivers-full-stack-compute-for-the-agentic-ai-era",
+      "date": "2026-07-23"
+    },
+    {
+      "id": "25b2a864efe8",
+      "brand": "AMD",
+      "source": "AMD Newsroom (IR)",
+      "title": "AMD and Cerebras Announce Industry-Leading Ultra-Low-Latency and High Throughput AI Inference Solution",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1293/amd-and-cerebras-announce-industry-leading-ultra-low-latency-and-high-throughput-ai-inference-solution",
+      "date": "2026-07-23"
+    },
+    {
+      "id": "8760041a4abb",
+      "brand": "AMD",
+      "source": "AMD Newsroom (IR)",
+      "title": "AMD and Anthropic Announce Strategic Partnership to Deploy Up to 2 Gigawatts of AMD Instinct MI450 Series GPUs",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus",
+      "date": "2026-07-22"
+    }
+  ]
+}

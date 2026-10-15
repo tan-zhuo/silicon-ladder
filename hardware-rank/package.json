@@ -12,7 +12,8 @@
     "test": "vitest run",
     "validate": "node scripts/validate-data.mjs",
     "calibrate": "node scripts/calibrate.mjs",
-    "gen:og": "node scripts/gen-og.mjs"
+    "gen:og": "node scripts/gen-og.mjs",
+    "fetch:news": "node scripts/fetch-news.mjs"
   },
   "dependencies": {
     "html-to-image": "^1.11.13",

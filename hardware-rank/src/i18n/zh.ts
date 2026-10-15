@@ -1,6 +1,6 @@
 export const zh = {
   site: { name: 'CPU.News', tagline: '消费级硬件排行榜', sub: '天梯图 · 排行 · 对比' },
-  nav: { cpu: 'CPU', gpu: 'GPU', ram: '内存', storage: '存储', psu: '电源', compare: '对比', guide: '选购指南', methodology: '方法论', menu: '菜单' },
+  nav: { news: '新闻', cpu: 'CPU', gpu: 'GPU', ram: '内存', storage: '存储', psu: '电源', compare: '对比', guide: '选购指南', methodology: '方法论', menu: '菜单' },
   theme: { light: '明亮', dark: '深色', toggle: '切换主题' },
   cat: { cpu: 'CPU', gpu: 'GPU', ram: '内存', storage: '存储', psu: '电源' },
   form: { desktop: '桌面', laptop: '笔记本', igpu: '核显', 'kit-desktop': '台式套装', sodimm: '笔记本条', onboard: '板载', nvme: 'NVMe', sata: 'SATA', hdd: 'HDD', atx: 'ATX', sfx: 'SFX' },
@@ -85,5 +85,6 @@ export const zh = {
     cores: '核心微架构', process: '制程', design: '芯片设计', die: '晶片布局', die_mm2: '晶片面积', transistors: '晶体管', l1: 'L1 缓存（每核）', l2: 'L2 缓存（总）', l3: 'L3 缓存', isa: '指令集', smt: '多线程', base: '基础频率', boost: '加速频率', tdp: 'TDP', pmax: '最大功耗', memc: '内存控制器', memmax: '最大容量', pcie: 'PCIe', igpu: '核显', igpuCu: '核显单元', igpuClk: '核显频率', usd: '首发价 (USD)',
     units: '计算单元', shaders: '着色器', tmus: 'TMU', rops: 'ROP', rt: 'RT 核心', tensor: 'AI / Tensor', rtGen: 'RT 单元世代', aiGen: 'AI 单元世代', baseClk: '基础频率', boostClk: '加速频率', vram: '显存', bus: '位宽', gbps: '显存速率', bw: '显存带宽', l2g: 'L2 缓存', ic: 'Infinity Cache', tbp: 'TBP / TGP', tflops: 'FP32 算力', perW: '每瓦算力', density: '晶体管密度', shPerUnit: '每单元着色器' },
   shop: { title: '购买 / 比价', note: '以下为各商城搜索页链接，价格与库存以商城为准；本站不接商城 API，亚马逊链接可能含联盟标签。', search: '搜索 “{q}”' },
+  news: { title: '硬件新闻', sub: '仅聚合厂商官方新闻室的动态：AMD、NVIDIA、Apple、Samsung。点击标题跳转官方原文。', updated: '抓取于', all: '全部', visit: '阅读官方原文', intelNote: 'Intel / Qualcomm 官方新闻室未提供公开订阅源，暂未收录。', empty: '暂无新闻数据', home: '官方动态', more: '查看全部', legal: '本站仅收录标题与链接，版权归各厂商所有。' },
   loading: '加载数据中…', loadError: '数据加载失败：',
 }

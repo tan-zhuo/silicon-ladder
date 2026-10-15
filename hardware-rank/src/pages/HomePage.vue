@@ -136,6 +136,21 @@ useSeo(() => ({
     </div>
   </section>
 
+  <!-- 官方动态 -->
+  <section v-if="catalog.news.items.length" class="mt-12">
+    <div class="flex items-baseline justify-between mb-4">
+      <h2 class="text-xl font-bold">{{ t('news.home') }}</h2>
+      <router-link to="/news" class="text-xs text-accent hover:underline">{{ t('news.more') }} →</router-link>
+    </div>
+    <div class="card divide-y divide-line/60">
+      <a v-for="n in catalog.news.items.slice(0, 6)" :key="n.id" :href="n.url" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-3 group hover:bg-accent/[.04]">
+        <BrandLogo :brand="n.brand" :size="18" />
+        <span class="flex-1 min-w-0 truncate text-sm font-medium group-hover:text-accent">{{ n.title }}</span>
+        <span class="text-[11px] text-muted shrink-0 tabular-nums">{{ n.date }}</span>
+      </a>
+    </div>
+  </section>
+
   <!-- 最近更新 -->
   <section class="mt-12">
     <div class="flex items-baseline justify-between mb-4">

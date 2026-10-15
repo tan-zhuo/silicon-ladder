@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
-import type { Category, Cpu, Gpu, Ram, Storage, Psu, Meta, AnyItem } from '@/types/hardware'
+import type { Category, Cpu, Gpu, Ram, Storage, Psu, Meta, AnyItem, NewsData } from '@/types/hardware'
 import { FX } from '@/utils/format'
 
 async function fetchJson<T>(path: string): Promise<T> {
@@ -20,6 +20,7 @@ export const useCatalog = defineStore('catalog', () => {
   const rams = ref<Ram[]>([])
   const storages = ref<Storage[]>([])
   const psus = ref<Psu[]>([])
+  const news = ref<NewsData>({ updated: '', note: '', items: [] })
 
   let pending: Promise<void> | null = null
 
@@ -36,6 +37,7 @@ export const useCatalog = defineStore('catalog', () => {
           fetchJson<Psu[]>('psus.json'),
         ])
         meta.value = m
+        fetchJson<NewsData>('news.json').then((n) => { news.value = n }).catch(() => { /* 新闻源可选 */ })
         if (m.fx) { FX.USD = m.fx.USD; FX.JPY = m.fx.JPY }
         cpus.value = c
         gpus.value = g
@@ -67,5 +69,5 @@ export const useCatalog = defineStore('catalog', () => {
     return index.get(key)
   }
 
-  return { loaded, error, meta, cpus, gpus, rams, storages, psus, load, byCategory, find }
+  return { loaded, error, meta, news, cpus, gpus, rams, storages, psus, load, byCategory, find }
 })

@@ -163,3 +163,13 @@ export interface RankedRow<T extends AnyItem = AnyItem> {
   sortValue: number | null
   rank: number
 }
+
+export interface NewsItem {
+  id: string
+  brand: string
+  source: string
+  title: string
+  url: string
+  date: string
+}
+export interface NewsData { updated: string; note: string; items: NewsItem[] }

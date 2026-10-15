@@ -66,6 +66,7 @@ const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
           <div>
             <h3 class="text-xs font-semibold uppercase tracking-widest text-muted mb-3">{{ t('footerx.tools') }}</h3>
             <ul class="space-y-2 text-sm">
+              <li><router-link to="/news" class="hover:text-accent">{{ t('nav.news') }}</router-link></li>
               <li><router-link to="/compare" class="hover:text-accent">{{ t('nav.compare') }}</router-link></li>
               <li><router-link to="/guide" class="hover:text-accent">{{ t('nav.guide') }}</router-link></li>
               <li><router-link to="/methodology" class="hover:text-accent">{{ t('nav.methodology') }}</router-link></li>

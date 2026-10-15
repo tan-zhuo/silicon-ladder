@@ -18,6 +18,11 @@ npm run validate   # 数据校验（build 前自动执行）
 npm run calibrate  # 用 data-src/calibration.csv 回写真实评测分数
 ```
 
+## 硬件新闻
+
+- `/news` 仅聚合厂商**官方新闻室**的标题与链接（AMD IR、NVIDIA Newsroom + Blog、Apple Newsroom、Samsung Newsroom），不抓正文、点击跳官方原文；Intel / Qualcomm 无公开订阅源暂未收录。
+- `npm run fetch:news` 抓取并合并进 `public/data/news.json`（按 URL 去重，保留 180 天 / 每源最新 30 条）；建议纳入每日数据更新流程，抓取后提交即可触发部署。
+
 ## 价格与购买链接
 
 - `price_cny` 为人民币快照；详情页同时显示 USD / JPY，汇率在 `public/data/meta.json` 的 `fx`（1 CNY 折合值 + `asOf`），改汇率只需改这一处。

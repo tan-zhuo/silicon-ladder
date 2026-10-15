@@ -24,7 +24,7 @@ onMounted(() => catalog.load())
     <AppSidebar />
     <div class="lg:pl-60 min-h-screen flex flex-col">
       <AppHeader />
-      <main class="flex-1 w-full max-w-[1800px] mx-auto px-4 sm:px-6 xl:px-10 2xl:px-14 py-6 pb-28">
+      <main class="flex-1 w-full max-w-[1800px] mx-auto px-4 sm:px-6 xl:px-10 2xl:px-14 py-6" :class="compare.ids.length ? 'pb-28' : 'pb-10'">
       <div v-if="catalog.error" class="notice-warn">{{ t('loadError') }}{{ catalog.error }}</div>
       <div v-else-if="!catalog.loaded" class="text-muted text-sm py-20 text-center">{{ t('loading') }}</div>
       <router-view v-else />

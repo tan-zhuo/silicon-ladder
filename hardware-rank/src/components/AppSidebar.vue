@@ -24,6 +24,7 @@ const I = {
   storage: 'M4 6h16v5H4zM4 13h16v5H4zM7 8.5h.01M7 15.5h.01',
   psu: 'M13 2L4 14h7l-1 8 9-12h-7z',
   compare: 'M4 5h6v14H4zM14 5h6v14h-6z',
+  news: 'M5 4h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V7m14 13a2 2 0 002-2M8 8h6M8 12h6M8 16h4',
   guide: 'M4 5a2 2 0 012-2h12a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2zM8 7h8M8 11h8M8 15h5',
   method: 'M12 3l2 4 4.5.5-3.3 3.2.8 4.5-4-2.2-4 2.2.8-4.5L5.5 7.5 10 7z',
 }
@@ -34,6 +35,7 @@ const nav = computed(() => [
   { to: '/rank/ram', label: t('nav.ram'), icon: I.ram, count: catalog.rams.length },
   { to: '/rank/storage', label: t('nav.storage'), icon: I.storage, count: catalog.storages.length },
   { to: '/rank/psu', label: t('nav.psu'), icon: I.psu, count: catalog.psus.length },
+  { to: '/news', label: t('nav.news'), icon: I.news, count: null },
   { to: '/compare', label: t('nav.compare'), icon: I.compare, count: null },
   { to: '/guide', label: t('nav.guide'), icon: I.guide, count: null },
   { to: '/methodology', label: t('nav.methodology'), icon: I.method, count: null },

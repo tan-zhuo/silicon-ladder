@@ -1,7 +1,7 @@
 import type { Msg } from './index'
 export const en: Msg = {
   site: { name: 'CPU.News', tagline: 'Consumer Hardware Rankings', sub: 'Ladder · Rankings · Compare' },
-  nav: { cpu: 'CPU', gpu: 'GPU', ram: 'Memory', storage: 'Storage', psu: 'PSU', compare: 'Compare', guide: 'Buying Guide', methodology: 'Methodology', menu: 'Menu' },
+  nav: { news: 'News', cpu: 'CPU', gpu: 'GPU', ram: 'Memory', storage: 'Storage', psu: 'PSU', compare: 'Compare', guide: 'Buying Guide', methodology: 'Methodology', menu: 'Menu' },
   theme: { light: 'Light', dark: 'Dark', toggle: 'Toggle theme' },
   cat: { cpu: 'CPU', gpu: 'GPU', ram: 'Memory', storage: 'Storage', psu: 'PSU' },
   form: { desktop: 'Desktop', laptop: 'Laptop', igpu: 'iGPU', 'kit-desktop': 'Desktop kit', sodimm: 'SO-DIMM', onboard: 'Onboard', nvme: 'NVMe', sata: 'SATA', hdd: 'HDD', atx: 'ATX', sfx: 'SFX' },
@@ -86,5 +86,6 @@ export const en: Msg = {
     cores: 'Core microarchitecture', process: 'Process', design: 'Chip design', die: 'Die layout', die_mm2: 'Die area', transistors: 'Transistors', l1: 'L1 cache (per core)', l2: 'L2 cache (total)', l3: 'L3 cache', isa: 'ISA extensions', smt: 'Multithreading', base: 'Base clock', boost: 'Boost clock', tdp: 'TDP', pmax: 'Max power', memc: 'Memory controller', memmax: 'Max capacity', pcie: 'PCIe', igpu: 'iGPU', igpuCu: 'iGPU units', igpuClk: 'iGPU clock', usd: 'Launch price (USD)',
     units: 'Compute units', shaders: 'Shaders', tmus: 'TMUs', rops: 'ROPs', rt: 'RT cores', tensor: 'AI / Tensor', rtGen: 'RT unit generation', aiGen: 'AI unit generation', baseClk: 'Base clock', boostClk: 'Boost clock', vram: 'VRAM', bus: 'Bus width', gbps: 'Memory speed', bw: 'Memory bandwidth', l2g: 'L2 cache', ic: 'Infinity Cache', tbp: 'TBP / TGP', tflops: 'FP32 compute', perW: 'Compute per watt', density: 'Transistor density', shPerUnit: 'Shaders per unit' },
   shop: { title: 'Where to buy', note: 'Links open each store\'s search results; prices and stock are the store\'s. No store APIs are used; Amazon links may carry an affiliate tag.', search: 'Search “{q}”' },
+  news: { title: 'Hardware News', sub: 'Aggregated only from official vendor newsrooms: AMD, NVIDIA, Apple, Samsung. Titles link to the official source.', updated: 'Fetched', all: 'All', visit: 'Read the official post', intelNote: 'Intel / Qualcomm newsrooms offer no public feed and are not included yet.', empty: 'No news data', home: 'Official news', more: 'View all', legal: 'Only titles and links are stored; all content belongs to the respective vendors.' },
   loading: 'Loading data…', loadError: 'Failed to load data: ',
 }
