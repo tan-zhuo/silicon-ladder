@@ -4,11 +4,11 @@ import AppLogo from '@/components/AppLogo.vue'
 import { useTheme } from '@/stores/theme'
 import { useI18n, LOCALES, localizePath, type Locale } from '@/i18n'
 import { useRoute, useRouter } from 'vue-router'
-import GlobalSearch from '@/components/GlobalSearch.vue'
+import { useUi } from '@/stores/ui'
 import { UiSelect } from '@/components/ui'
 
 const open = ref(false)
-const searchOpen = ref(false)
+const ui = useUi()
 const theme = useTheme()
 const route = useRoute()
 const router = useRouter()
@@ -27,7 +27,7 @@ const links = computed(() => [
 </script>
 
 <template>
-  <header class="sticky top-0 z-40 bg-bg/80 backdrop-blur-md border-b border-line">
+  <header class="lg:hidden sticky top-0 z-40 bg-bg/80 backdrop-blur-md border-b border-line">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center gap-4">
       <router-link to="/" class="flex items-center gap-2.5 font-semibold tracking-tight">
         <AppLogo :size="32" />
@@ -37,7 +37,7 @@ const links = computed(() => [
         </span>
       </router-link>
 
-      <nav class="ml-auto hidden lg:flex items-center gap-0.5 text-sm">
+      <nav class="ml-auto hidden items-center gap-0.5 text-sm">
         <router-link
           v-for="l in links" :key="l.to" :to="l.to"
           class="px-3 py-1.5 rounded-lg text-muted hover:text-fg hover:bg-card2"
@@ -46,7 +46,7 @@ const links = computed(() => [
       </nav>
 
       <div class="flex items-center gap-1.5 lg:ml-2">
-        <button class="btn-ghost !px-2.5 gap-2" :title="t('search.title') + ' (⌘K)'" @click="searchOpen = true">
+        <button class="btn-ghost !px-2.5 gap-2" :title="t('search.title') + ' (⌘K)'" @click="ui.searchOpen = true">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" /><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
           <span class="hidden xl:inline text-xs">{{ t('search.shortcut') }}</span><kbd class="hidden xl:inline badge !py-0">⌘K</kbd>
         </button>
@@ -66,5 +66,4 @@ const links = computed(() => [
       <router-link v-for="l in links" :key="l.to" :to="l.to" class="px-3 py-2 rounded-lg text-muted hover:text-fg" active-class="!text-accent bg-accent/10">{{ l.label }}</router-link>
     </nav>
   </header>
-  <GlobalSearch v-model="searchOpen" />
 </template>

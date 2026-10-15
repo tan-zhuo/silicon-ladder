@@ -55,7 +55,7 @@ useSeo(() => ({
 
 <template>
   <!-- Hero -->
-  <section class="hero relative rounded-3xl border border-line px-6 sm:px-12 py-12 sm:py-20 mb-8 overflow-hidden">
+  <section class="hero relative rounded-3xl border border-line px-6 sm:px-12 2xl:px-16 py-12 sm:py-16 2xl:py-20 mb-8 overflow-hidden">
     <div class="absolute -right-24 -top-24 opacity-[.07] pointer-events-none"><AppLogo :size="420" /></div>
     <div class="relative max-w-3xl">
       <div class="kicker">{{ t('home.heroKicker') }}</div>
@@ -92,7 +92,7 @@ useSeo(() => ({
     <div class="flex items-baseline justify-between mb-4">
       <div><h2 class="text-xl font-bold">{{ t('home.sectionCats') }}</h2><p class="text-sm text-muted">{{ t('home.sectionCatsDesc') }}</p></div>
     </div>
-    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6 gap-4">
       <router-link v-for="c in cards" :key="c.key" :to="c.to" class="card card-hover p-5 sm:p-6 group relative overflow-hidden">
         <div class="w-11 h-11 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-4">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path :d="c.icon" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
@@ -106,7 +106,7 @@ useSeo(() => ({
   <!-- 榜首 -->
   <section class="mt-12">
     <div class="mb-4"><h2 class="text-xl font-bold">{{ t('home.sectionTop') }}</h2><p class="text-sm text-muted">{{ t('home.sectionTopDesc') }}</p></div>
-    <div class="grid md:grid-cols-2 2xl:grid-cols-4 gap-4">
+    <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
       <div v-for="tp in tops" :key="tp.cat + tp.form" class="card p-4">
         <div class="flex items-center justify-between mb-3">
           <div class="font-semibold">{{ formLabel(tp.form) }} {{ catLabel(tp.cat) }}</div>
