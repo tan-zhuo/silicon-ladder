@@ -3,7 +3,7 @@ withDefaults(defineProps<{ size?: number }>(), { size: 28 })
 </script>
 
 <template>
-  <svg :width="size" :height="size" viewBox="0 0 64 64" role="img" aria-label="Silicon Ladder" class="shrink-0">
+  <svg :width="size" :height="size" viewBox="0 0 64 64" role="img" aria-label="CPU.News" class="shrink-0">
     <defs>
       <linearGradient id="sl-g" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0" stop-color="#7AA5FF" />

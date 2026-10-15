@@ -1,6 +1,6 @@
 import type { Msg } from './index'
 export const ja: Msg = {
-  site: { name: 'Silicon Ladder', tagline: 'コンシューマー向けハードウェアランキング', sub: '性能ラダー · ランキング · 比較' },
+  site: { name: 'CPU.News', tagline: 'コンシューマー向けハードウェアランキング', sub: '性能ラダー · ランキング · 比較' },
   nav: { cpu: 'CPU', gpu: 'GPU', ram: 'メモリ', storage: 'ストレージ', psu: '電源', compare: '比較', guide: '購入ガイド', methodology: '評価方法', menu: 'メニュー' },
   theme: { light: 'ライト', dark: 'ダーク', toggle: 'テーマ切替' },
   cat: { cpu: 'CPU', gpu: 'GPU', ram: 'メモリ', storage: 'ストレージ', psu: '電源' },
@@ -76,12 +76,12 @@ export const ja: Msg = {
     h6: '免責事項', p6: '静的スナップショットです。スコアは相対順位用で購入助言ではありません。ノートとデスクトップは別プールで比較不可。同名GPUはTGPで20–40%差があります。',
   },
   lang: '言語',
-  footerx: { blog: '作者ブログ', about: 'Silicon Ladder はコンシューマー向けハードウェアの静的ランキング／ラダーサイトです。CPU・GPU・メモリ・ストレージ・電源をフォームファクタ別にプール分けし、AMD / Intel / NVIDIA を左右対照。スコアはすべて公開レビューに遡れます。', rankings: 'ランキング', ladders: 'ラダー', tools: 'ツールと説明', resources: 'リソース', desktop: 'デスクトップ', laptop: 'ノート', igpu: '内蔵GPU', github: 'GitHub ソース', data: 'データファイル (JSON)', sitemap: 'サイトマップ', dataVersion: 'データ版', copyright: '© {y} Silicon Ladder · ブランド名・商標は各社に帰属します', noAffiliation: 'AMD、Intel、NVIDIA、Apple 等のメーカーとは無関係。広告なし。ストアリンクは検索ページで、アフィリエイトタグを含む場合があります。' },
+  footerx: { blog: '作者ブログ', about: 'CPU.News はコンシューマー向けハードウェアの静的ランキング／ラダーサイトです。CPU・GPU・メモリ・ストレージ・電源をフォームファクタ別にプール分けし、AMD / Intel / NVIDIA を左右対照。スコアはすべて公開レビューに遡れます。', rankings: 'ランキング', ladders: 'ラダー', tools: 'ツールと説明', resources: 'リソース', desktop: 'デスクトップ', laptop: 'ノート', igpu: '内蔵GPU', github: 'GitHub ソース', data: 'データファイル (JSON)', sitemap: 'サイトマップ', dataVersion: 'データ版', copyright: '© {y} CPU.News · ブランド名・商標は各社に帰属します', noAffiliation: 'AMD、Intel、NVIDIA、Apple 等のメーカーとは無関係。広告なし。ストアリンクは検索ページで、アフィリエイトタグを含む場合があります。' },
   search: { title: 'サイト内検索', ph: 'モデル / ブランド 例: 9800X3D, RTX 5070, 990 PRO', hint: '↑↓ 選択 · Enter 開く · Esc 閉じる', empty: '該当する製品がありません', shortcut: '検索' },
   chips: { active: '選択中', clear: 'すべてクリア', era: '年代', tdp: 'TDP', watt: 'W数', q: 'キーワード' },
   rel: { rivals: '直接の競合', rivalsDesc: '同プール・同時期（±1年）・総合スコアが近い他ブランド', lineage: '同シリーズの前後世代', prev: '前世代', next: '次世代', vsFirst: '1列目との差', same: '同じ', diff: '異なる' },
   tags: { X3D: 'X3D', 游戏: 'ゲーム', 旗舰: 'フラッグシップ', 生产力: '生産性', 性价比: 'コスパ', 能效: '高効率', ARM: 'ARM', 核显: '内蔵GPU', 轻薄: '薄型', 全能本: '汎用ノート', 游戏本: 'ゲーミングノート', AM4: 'AM4', 经典: '定番', 历史: '旧世代', HEDT: 'HEDT', APU: 'APU', '4K': '4K', '2K': 'WQHD', 高TGP: '高TGP', 中TGP: '中TGP', 低TGP: '低TGP', '1080p': '1080p', PCIe5: 'PCIe 5.0', 国产: '中国製', 入门: '入門', SATA: 'SATA', NAS: 'NAS', CMR: 'CMR', QLC: 'QLC', 企业: 'エンタープライズ', SMR: 'SMR' },
-  exportImg: { btn: '画像を書き出し', busy: '生成中…', footer: '出典 silicon-ladder.vercel.app · 相対スコア、プール最高 100' },
+  exportImg: { btn: '画像を書き出し', busy: '生成中…', footer: '出典 cpu.news · 相対スコア、プール最高 100' },
   tech: { na: '未公開 / 該当なし', title: '技術仕様', note: 'アーキテクチャ情報は世代から導出、製品情報は公開仕様から整理。不明は空欄。', gArch: 'アーキテクチャとプロセス', gCores: 'コアとキャッシュ', gClock: 'クロックと電力', gMem: 'メモリと I/O', gIgpu: '内蔵GPU', gUnits: '演算ユニット', gMemG: 'メモリ', gPerf: '理論性能', gPrice: '発売価格',
     cores: 'コアマイクロアーキテクチャ', process: 'プロセス', design: 'チップ設計', die: 'ダイ構成', die_mm2: 'ダイ面積', transistors: 'トランジスタ数', l1: 'L1（コアあたり）', l2: 'L2（合計）', l3: 'L3', isa: '命令セット拡張', smt: 'マルチスレッド', base: 'ベースクロック', boost: 'ブーストクロック', tdp: 'TDP', pmax: '最大電力', memc: 'メモリコントローラ', memmax: '最大容量', pcie: 'PCIe', igpu: '内蔵GPU', igpuCu: '内蔵GPU ユニット', igpuClk: '内蔵GPU クロック', usd: '発売価格 (USD)',
     units: '演算ユニット', shaders: 'シェーダ', tmus: 'TMU', rops: 'ROP', rt: 'RT コア', tensor: 'AI / Tensor', rtGen: 'RT ユニット世代', aiGen: 'AI ユニット世代', baseClk: 'ベースクロック', boostClk: 'ブーストクロック', vram: 'VRAM', bus: 'バス幅', gbps: 'メモリ速度', bw: 'メモリ帯域', l2g: 'L2', ic: 'Infinity Cache', tbp: 'TBP / TGP', tflops: 'FP32 演算性能', perW: 'ワットあたり性能', density: 'トランジスタ密度', shPerUnit: 'ユニットあたりシェーダ' },

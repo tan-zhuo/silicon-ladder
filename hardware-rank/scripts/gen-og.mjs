@@ -38,8 +38,8 @@ function svg(cat, i) {
   <text x="80" y="${92 + size + 78}" font-family="DejaVu Sans" font-size="26" fill="#8B9BB0">${esc(i.release)}${i.est ? '  ·  estimated score' : ''}</text>
   ${rows.map(([k, v], n) => `<text x="80" y="${330 + n * 46}" font-family="DejaVu Sans" font-size="26" fill="#8B9BB0">${esc(k)}</text><text x="300" y="${330 + n * 46}" font-family="DejaVu Sans" font-size="26" font-weight="bold" fill="#E7EEF6">${esc(v)}</text>`).join('')}
   <rect x="80" y="562" width="360" height="6" rx="3" fill="url(#b)"/>
-  <text x="1120" y="590" text-anchor="end" font-family="DejaVu Sans" font-size="26" font-weight="bold" fill="#E7EEF6">Silicon Ladder</text>
-  <text x="1120" y="616" text-anchor="end" font-family="DejaVu Sans" font-size="18" fill="#8B9BB0">silicon-ladder.vercel.app</text>
+  <text x="1120" y="590" text-anchor="end" font-family="DejaVu Sans" font-size="26" font-weight="bold" fill="#E7EEF6">CPU.News</text>
+  <text x="1120" y="616" text-anchor="end" font-family="DejaVu Sans" font-size="18" fill="#8B9BB0">cpu.news</text>
 </svg>`
 }
 

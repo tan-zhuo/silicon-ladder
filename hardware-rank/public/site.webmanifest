@@ -1,6 +1,6 @@
 {
-  "name": "Silicon Ladder — 消费级硬件排行榜",
-  "short_name": "Silicon Ladder",
+  "name": "CPU.News — 消费级硬件排行榜",
+  "short_name": "CPU.News",
   "icons": [
     { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }

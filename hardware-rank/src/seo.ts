@@ -1,8 +1,8 @@
 import { watchEffect, onUnmounted, type Ref } from 'vue'
 import { locale, localizePath, stripLocale } from '@/i18n'
 
-export const SITE_URL = 'https://silicon-ladder.vercel.app'
-export const SITE_NAME = 'Silicon Ladder'
+export const SITE_URL = 'https://cpu.news'
+export const SITE_NAME = 'CPU.News'
 
 export interface SeoInput {
   title: string

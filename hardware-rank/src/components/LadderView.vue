@@ -89,7 +89,7 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
     <div class="hidden md:block">
       <div ref="exportEl">
         <div class="hidden export-only px-4 py-3 border-b border-line items-center gap-3">
-          <span class="font-bold">Silicon Ladder</span><span class="text-muted text-sm">{{ formLabel(rows[0]?.item.form ?? '') }} {{ catLabel(category) }} · {{ sortLabel }}</span>
+          <span class="font-bold">CPU.News</span><span class="text-muted text-sm">{{ formLabel(rows[0]?.item.form ?? '') }} {{ catLabel(category) }} · {{ sortLabel }}</span>
         </div>
         <!-- 品牌表头 -->
         <div class="grid border-b border-line bg-card2" :style="{ gridTemplateColumns: gridCols }">
