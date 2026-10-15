@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+
 import AppHeader from '@/components/AppHeader.vue'
 import AppSidebar from '@/components/AppSidebar.vue'
 import GlobalSearch from '@/components/GlobalSearch.vue'
 import { useUi } from '@/stores/ui'
+import { ref, onMounted, onUnmounted } from 'vue'
 import AppFooter from '@/components/AppFooter.vue'
 import CompareDock from '@/components/CompareDock.vue'
 import { useCatalog } from '@/data/load'
@@ -16,7 +17,11 @@ const ui = useUi()
 const compare = useCompare()
 useTheme()
 const { t } = useI18n()
-onMounted(() => catalog.load())
+const showTop = ref(false)
+const onScroll = () => { showTop.value = window.scrollY > 800 }
+const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
+onMounted(() => { catalog.load(); window.addEventListener('scroll', onScroll, { passive: true }) })
+onUnmounted(() => window.removeEventListener('scroll', onScroll))
 </script>
 
 <template>
@@ -32,6 +37,16 @@ onMounted(() => catalog.load())
       <AppFooter />
     </div>
     <CompareDock />
+    <transition name="fade">
+      <button
+        v-if="showTop" :aria-label="t('backTop')" :title="t('backTop')"
+        class="fixed right-4 z-40 w-10 h-10 rounded-full bg-card border border-line shadow-card dark:shadow-cardDark text-muted hover:text-accent hover:border-accent/60 transition-colors flex items-center justify-center"
+        :class="compare.ids.length ? 'bottom-24' : 'bottom-5'"
+        @click="scrollTop"
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      </button>
+    </transition>
     <GlobalSearch v-model="ui.searchOpen" />
     <transition name="fade">
       <div v-if="compare.notice" class="fixed top-16 left-1/2 -translate-x-1/2 z-50 card px-4 py-2 text-sm">

@@ -35,6 +35,7 @@ export const zh = {
     list: '列表', ladder: '天梯图', sortLabel: '排序', psuSort: '排序：分档 A→D，同档按瓦数降序',
     ladderNote: '天梯按「{sort}」相对分排布，条长即分数，左右品牌对照。切换排序可换维度。',
     empty: '没有符合筛选的产品',
+    showMore: '显示更多（还剩 {n} 条）',
     estNote: '带「估算」标记的历史硬件，分数按公开评测比例换算。',
   },
   filter: { search: '搜索型号 / 品牌 / id', brand: '品牌', gen: '代数', all: '全部', tdp: 'TDP', tgp: 'TGP/TDP', minW: '最小 W', maxW: '最大 W', tgpTier: 'TGP 档', interface: '接口', watt: '瓦数', tier: '分档', atx31: '仅 ATX 3.1 / 12V-2x6', clear: '清除', clearAll: '清除筛选', filters: '筛选', era: '年代' },
@@ -86,5 +87,6 @@ export const zh = {
     units: '计算单元', shaders: '着色器', tmus: 'TMU', rops: 'ROP', rt: 'RT 核心', tensor: 'AI / Tensor', rtGen: 'RT 单元世代', aiGen: 'AI 单元世代', baseClk: '基础频率', boostClk: '加速频率', vram: '显存', bus: '位宽', gbps: '显存速率', bw: '显存带宽', l2g: 'L2 缓存', ic: 'Infinity Cache', tbp: 'TBP / TGP', tflops: 'FP32 算力', perW: '每瓦算力', density: '晶体管密度', shPerUnit: '每单元着色器' },
   shop: { title: '购买 / 比价', note: '以下为各商城搜索页链接，价格与库存以商城为准；本站不接商城 API，亚马逊链接可能含联盟标签。', search: '搜索 “{q}”' },
   news: { title: '硬件新闻', sub: '仅聚合厂商官方新闻室的动态：AMD、NVIDIA、Apple、Samsung。点击标题跳转官方原文。', updated: '抓取于', all: '全部', visit: '阅读官方原文', intelNote: 'Intel / Qualcomm 官方新闻室未提供公开订阅源，暂未收录。', empty: '暂无新闻数据', home: '官方动态', more: '查看全部', legal: '本站仅收录标题与链接，版权归各厂商所有。' },
+  backTop: '回到顶部',
   loading: '加载数据中…', loadError: '数据加载失败：',
 }

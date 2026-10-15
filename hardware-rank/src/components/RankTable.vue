@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import type { Category, RankedRow } from '@/types/hardware'
 import { COLUMNS, formBadge, genBadge } from '@/utils/columns'
@@ -16,6 +16,11 @@ const router = useRouter()
 const compare = useCompare()
 const { t } = useI18n()
 const cols = computed(() => COLUMNS[props.category])
+const BATCH = 60
+const shown = ref(BATCH)
+watch(() => [props.rows, props.sort, props.dir], () => { shown.value = BATCH })
+const visibleRows = computed(() => props.rows.slice(0, shown.value))
+const remaining = computed(() => Math.max(0, props.rows.length - shown.value))
 const sortLabel = computed(() => t('sort.' + props.sort))
 
 const hideCls = (c: { hide?: 'lg' | 'xl' }) => (c.hide === 'lg' ? 'hidden lg:table-cell' : c.hide === 'xl' ? 'hidden xl:table-cell' : '')
@@ -58,7 +63,7 @@ function currentScore(row: RankedRow): string {
           </thead>
           <tbody>
             <tr
-              v-for="r in rows" :key="r.item.id"
+              v-for="r in visibleRows" :key="r.item.id"
               class="border-b border-line/70 last:border-0 cursor-pointer group hover:bg-accent/[.04] focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
               :class="[r.rank <= 3 ? 'bg-accent/[.025]' : '', compare.has(category, r.item.id) ? '!bg-accent/10' : '']"
               tabindex="0" :aria-label="`#${r.rank} ${displayName(r.item)}`"
@@ -100,9 +105,14 @@ function currentScore(row: RankedRow): string {
       </div>
     </div>
 
+    <!-- 加载更多（桌面表格） -->
+    <div v-if="rows.length && remaining" class="hidden md:flex justify-center mt-3">
+      <button class="btn-ghost" @click="shown += BATCH * 2">{{ t('rank.showMore', { n: remaining }) }}</button>
+    </div>
+
     <!-- 移动端卡片 -->
     <div v-if="rows.length" class="md:hidden space-y-2">
-      <div v-for="r in rows" :key="r.item.id" class="card card-hover p-3 flex items-center gap-3" tabindex="0" @click="go(r)" @keydown.enter="go(r)">
+      <div v-for="r in visibleRows" :key="r.item.id" class="card card-hover p-3 flex items-center gap-3" tabindex="0" @click="go(r)" @keydown.enter="go(r)">
         <div class="w-7 text-lg font-bold text-center" :style="rankStyle(r.rank)">{{ r.rank }}</div>
         <BrandLogo :brand="r.item.brand" :size="24" />
         <div class="flex-1 min-w-0">
@@ -117,6 +127,7 @@ function currentScore(row: RankedRow): string {
         </div>
         <UiCheckbox size="sm" :model-value="compare.has(category, r.item.id)" :aria-label="t('col.compare')" @update:model-value="compare.toggle(category, r.item.id)" />
       </div>
+      <button v-if="remaining" class="btn-ghost w-full justify-center" @click="shown += BATCH * 2">{{ t('rank.showMore', { n: remaining }) }}</button>
     </div>
   </div>
 </template>

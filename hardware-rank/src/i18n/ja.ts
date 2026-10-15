@@ -36,6 +36,7 @@ export const ja: Msg = {
     list: 'リスト', ladder: 'ラダー', sortLabel: '並び順', psuSort: 'ティア A→D、同ティアはW数降順',
     ladderNote: 'ラダーは「{sort}」相対スコアで配置。バーの長さがスコア、左右でブランド対照。並び順で指標を変更できます。',
     empty: '条件に合う製品がありません',
+    showMore: 'さらに表示（残り {n} 件）',
     estNote: '「推定」マークの旧世代は公開レビュー比率からの換算値です。',
   },
   filter: { search: 'モデル / ブランド / id を検索', brand: 'ブランド', gen: '世代', all: 'すべて', tdp: 'TDP', tgp: 'TGP/TDP', minW: '最小 W', maxW: '最大 W', tgpTier: 'TGP帯', interface: 'IF', watt: 'W数', tier: 'ティア', atx31: 'ATX 3.1 / 12V-2x6 のみ', clear: 'クリア', clearAll: 'フィルタをクリア', filters: 'フィルタ', era: '年代' },
@@ -87,5 +88,6 @@ export const ja: Msg = {
     units: '演算ユニット', shaders: 'シェーダ', tmus: 'TMU', rops: 'ROP', rt: 'RT コア', tensor: 'AI / Tensor', rtGen: 'RT ユニット世代', aiGen: 'AI ユニット世代', baseClk: 'ベースクロック', boostClk: 'ブーストクロック', vram: 'VRAM', bus: 'バス幅', gbps: 'メモリ速度', bw: 'メモリ帯域', l2g: 'L2', ic: 'Infinity Cache', tbp: 'TBP / TGP', tflops: 'FP32 演算性能', perW: 'ワットあたり性能', density: 'トランジスタ密度', shPerUnit: 'ユニットあたりシェーダ' },
   shop: { title: '購入 / 価格比較', note: '各ストアの検索結果へのリンクです。価格と在庫はストア側の情報。ストア API は使わず、Amazon リンクにはアフィリエイトタグが含まれる場合があります。', search: '“{q}” を検索' },
   news: { title: 'ハードウェアニュース', sub: 'メーカー公式ニュースルームのみを集約：AMD、NVIDIA、Apple、Samsung。タイトルは公式原文へリンクします。', updated: '取得日', all: 'すべて', visit: '公式記事を読む', intelNote: 'Intel / Qualcomm は公開フィードがないため未収録です。', empty: 'ニュースデータなし', home: '公式ニュース', more: 'すべて見る', legal: 'タイトルとリンクのみを保存。内容の権利は各社に帰属します。' },
+  backTop: 'トップへ戻る',
   loading: 'データ読込中…', loadError: 'データの読込に失敗: ',
 }

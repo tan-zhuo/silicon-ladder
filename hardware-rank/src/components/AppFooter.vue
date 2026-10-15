@@ -17,7 +17,7 @@ const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
 
 <template>
   <footer class="border-t border-line mt-16 bg-card2/60">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-8">
+    <div class="max-w-[1800px] mx-auto px-4 sm:px-6 xl:px-10 2xl:px-14 pt-12 pb-8">
       <div class="grid gap-10 lg:grid-cols-12">
         <!-- 品牌 -->
         <div class="lg:col-span-4">

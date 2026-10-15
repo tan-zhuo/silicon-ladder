@@ -56,7 +56,7 @@ useSeo(() => ({
 <template>
   <!-- Hero -->
   <section class="hero relative rounded-3xl border border-line px-6 sm:px-12 2xl:px-16 py-12 sm:py-16 2xl:py-20 mb-8 overflow-hidden">
-    <div class="absolute -right-24 -top-24 opacity-[.07] pointer-events-none"><AppLogo :size="420" /></div>
+    <div class="hidden sm:block absolute -right-24 -top-24 opacity-[.07] pointer-events-none"><AppLogo :size="420" /></div>
     <div class="relative max-w-3xl">
       <div class="kicker">{{ t('home.heroKicker') }}</div>
       <h1 class="text-4xl sm:text-6xl font-bold tracking-tight mt-3 leading-[1.08]">{{ t('home.heroTitle') }}</h1>
@@ -79,7 +79,7 @@ useSeo(() => ({
         </div>
       </div>
     </div>
-    <div class="relative mt-10 flex flex-wrap gap-x-10 gap-y-4">
+    <div class="relative mt-8 sm:mt-10 flex flex-wrap gap-x-6 sm:gap-x-10 gap-y-4">
       <div v-for="s in [[all.length, t('home.statItems')], [catalog.cpus.length, t('home.statCpu')], [catalog.gpus.length, t('home.statGpu')], [years, t('home.statSpan')], [catalog.meta.updated, t('home.statUpdated')]]" :key="String(s[1])" class="whitespace-nowrap">
         <div class="text-2xl sm:text-3xl font-bold tracking-tight tabular-nums">{{ s[0] }}</div>
         <div class="text-xs text-muted mt-0.5">{{ s[1] }}</div>
@@ -116,8 +116,8 @@ useSeo(() => ({
           <router-link v-for="r in tp.rows" :key="r.item.id" :to="`/product/${tp.cat}/${r.item.id}`" class="flex items-center gap-2.5 group">
             <span class="w-5 text-sm font-bold" :style="{ color: r.rank === 1 ? 'var(--gold)' : r.rank === 2 ? 'var(--silver)' : 'var(--bronze)' }">{{ r.rank }}</span>
             <BrandLogo :brand="r.item.brand" :size="20" />
-            <span class="flex-1 text-sm font-medium truncate group-hover:text-accent">{{ displayName(r.item) }}</span>
-            <div class="w-20 h-1.5 rounded-full overflow-hidden shrink-0" style="background: var(--bar-track)"><div class="h-full" :style="{ width: (r.rel.overall ?? 0) + '%', background: 'var(--bar-fill)' }" /></div>
+            <span class="flex-1 min-w-0 text-sm font-medium truncate group-hover:text-accent">{{ displayName(r.item) }}</span>
+            <div class="hidden xs:block w-16 sm:w-20 h-1.5 rounded-full overflow-hidden shrink-0" style="background: var(--bar-track)"><div class="h-full" :style="{ width: (r.rel.overall ?? 0) + '%', background: 'var(--bar-fill)' }" /></div>
             <span class="text-xs w-9 text-right shrink-0 tabular-nums">{{ fmtRel(r.rel.overall) }}</span>
           </router-link>
         </div>

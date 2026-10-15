@@ -165,7 +165,7 @@ useSeo(() => {
     </nav>
 
     <header class="card p-6 sm:p-8 relative overflow-hidden">
-      <div class="absolute -right-10 -top-10 opacity-[.06] pointer-events-none"><BrandLogo :brand="item.brand" :size="260" mono /></div>
+      <div class="hidden sm:block absolute -right-10 -top-10 opacity-[.06] pointer-events-none"><BrandLogo :brand="item.brand" :size="260" mono /></div>
       <div class="relative flex flex-wrap items-start gap-4">
         <div class="flex-1 min-w-0">
           <div class="flex items-center gap-2 flex-wrap">
@@ -257,13 +257,13 @@ useSeo(() => {
         <h2 class="font-bold">{{ t('rel.rivals') }}</h2>
         <p class="text-xs text-muted mt-0.5 mb-3">{{ t('rel.rivalsDesc') }}</p>
         <div class="divide-y divide-line/60">
-          <router-link v-for="r in rivals" :key="r.item.id" :to="`/product/${category}/${r.item.id}`" class="flex items-center gap-3 py-2 group text-sm">
+          <router-link v-for="r in rivals" :key="r.item.id" :to="`/product/${category}/${r.item.id}`" class="flex items-center gap-2.5 sm:gap-3 py-2 group text-sm min-w-0">
             <BrandLogo :brand="r.item.brand" :size="20" />
-            <span class="font-medium group-hover:text-accent flex-1 truncate">{{ displayName(r.item) }}</span>
-            <span class="text-xs text-muted">{{ r.item.release }}</span>
-            <span class="text-xs text-muted">#{{ r.rank }}</span>
-            <span class="w-24 h-1.5 rounded-full overflow-hidden" style="background: var(--bar-track)"><span class="block h-full" :style="{ width: (r.rel.overall ?? 0) + '%', background: 'var(--bar-fill)' }" /></span>
-            <span class="w-10 text-right font-medium">{{ r.rel.overall?.toFixed(1) }}</span>
+            <span class="font-medium group-hover:text-accent flex-1 truncate min-w-0">{{ displayName(r.item) }}</span>
+            <span class="hidden md:inline text-xs text-muted shrink-0">{{ r.item.release }}</span>
+            <span class="hidden sm:inline text-xs text-muted shrink-0">#{{ r.rank }}</span>
+            <span class="hidden lg:block w-24 h-1.5 rounded-full overflow-hidden shrink-0" style="background: var(--bar-track)"><span class="block h-full" :style="{ width: (r.rel.overall ?? 0) + '%', background: 'var(--bar-fill)' }" /></span>
+            <span class="w-10 text-right font-medium shrink-0">{{ r.rel.overall?.toFixed(1) }}</span>
             <span class="w-14 text-right text-xs" :class="(r.rel.overall ?? 0) >= (row!.rel.overall ?? 0) ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'">{{ ((r.rel.overall ?? 0) - (row!.rel.overall ?? 0) >= 0 ? '+' : '') + ((r.rel.overall ?? 0) - (row!.rel.overall ?? 0)).toFixed(1) }}</span>
           </router-link>
         </div>

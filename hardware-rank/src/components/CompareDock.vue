@@ -17,7 +17,7 @@ const visible = computed(() => compare.ids.length > 0 && route.path !== '/compar
 <template>
   <transition name="dock">
     <div v-if="visible" class="fixed bottom-0 inset-x-0 lg:left-60 z-40 border-t border-line bg-card/95 backdrop-blur shadow-[0_-8px_30px_-12px_rgb(15_23_42/.25)]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-3">
+      <div class="max-w-[1800px] mx-auto px-4 sm:px-6 xl:px-10 2xl:px-14 py-3 flex items-center gap-3">
         <div class="flex-1 min-w-0">
           <div class="text-xs text-muted mb-1">{{ t('dock.basket', { cat: catLabel(compare.category!) }) }}</div>
           <div class="flex flex-wrap gap-2">

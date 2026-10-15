@@ -36,6 +36,7 @@ export const en: Msg = {
     list: 'List', ladder: 'Ladder', sortLabel: 'Sort', psuSort: 'Sorted by tier A→D, then wattage',
     ladderNote: 'Ladder is laid out by "{sort}" relative score — bar length is the score, brands face each other. Switch sort to change the metric.',
     empty: 'No products match the filters',
+    showMore: 'Show more ({n} left)',
     estNote: 'Items marked "est." are historical hardware scaled from public reviews.',
   },
   filter: { search: 'Search model / brand / id', brand: 'Brand', gen: 'Generation', all: 'All', tdp: 'TDP', tgp: 'TGP/TDP', minW: 'Min W', maxW: 'Max W', tgpTier: 'TGP tier', interface: 'Interface', watt: 'Watts', tier: 'Tier', atx31: 'ATX 3.1 / 12V-2x6 only', clear: 'Clear', clearAll: 'Clear filters', filters: 'Filters', era: 'Era' },
@@ -87,5 +88,6 @@ export const en: Msg = {
     units: 'Compute units', shaders: 'Shaders', tmus: 'TMUs', rops: 'ROPs', rt: 'RT cores', tensor: 'AI / Tensor', rtGen: 'RT unit generation', aiGen: 'AI unit generation', baseClk: 'Base clock', boostClk: 'Boost clock', vram: 'VRAM', bus: 'Bus width', gbps: 'Memory speed', bw: 'Memory bandwidth', l2g: 'L2 cache', ic: 'Infinity Cache', tbp: 'TBP / TGP', tflops: 'FP32 compute', perW: 'Compute per watt', density: 'Transistor density', shPerUnit: 'Shaders per unit' },
   shop: { title: 'Where to buy', note: 'Links open each store\'s search results; prices and stock are the store\'s. No store APIs are used; Amazon links may carry an affiliate tag.', search: 'Search “{q}”' },
   news: { title: 'Hardware News', sub: 'Aggregated only from official vendor newsrooms: AMD, NVIDIA, Apple, Samsung. Titles link to the official source.', updated: 'Fetched', all: 'All', visit: 'Read the official post', intelNote: 'Intel / Qualcomm newsrooms offer no public feed and are not included yet.', empty: 'No news data', home: 'Official news', more: 'View all', legal: 'Only titles and links are stored; all content belongs to the respective vendors.' },
+  backTop: 'Back to top',
   loading: 'Loading data…', loadError: 'Failed to load data: ',
 }

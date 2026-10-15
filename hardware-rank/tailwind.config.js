@@ -5,6 +5,7 @@ export default {
   content: ['./index.html', './src/**/*.{vue,ts}'],
   theme: {
     extend: {
+      screens: { xs: '420px' },
       colors: {
         bg: v('c-bg'),
         card: v('c-card'),
