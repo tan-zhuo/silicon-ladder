@@ -1,4 +1,4 @@
-export type Category = 'cpu' | 'gpu' | 'ram' | 'storage' | 'psu' | 'mobo'
+export type Category = 'cpu' | 'gpu' | 'ram' | 'storage' | 'psu' | 'mobo' | 'cooler'
 
 export interface Meta {
   updated: string
@@ -163,7 +163,29 @@ export interface Mobo extends BaseItem {
   flashback: boolean
 }
 
-export type AnyItem = Cpu | Gpu | Ram | Storage | Psu | Mobo
+export interface Cooler extends BaseItem {
+  form: 'air' | 'aio'
+  type: 'tower-single' | 'tower-dual' | 'top-down' | 'aio-120' | 'aio-240' | 'aio-280' | 'aio-360' | 'aio-420'
+  height_mm: number
+  radiator_mm: number | null
+  thickness_mm: number | null
+  fans: string
+  noise_db: number
+  tdp_w: number
+  sockets: string
+  ram_clearance_mm: number | null
+  lcd: boolean
+  rgb: boolean
+  warranty_y: number
+  scores: {
+    /** 同池散热性能相对分（定噪音温差，100 = 池内最强） */
+    cool_rel: number | null
+    /** 同池静音相对分（100 = 最安静） */
+    noise_rel: number | null
+  }
+}
+
+export type AnyItem = Cpu | Gpu | Ram | Storage | Psu | Mobo | Cooler
 
 export interface CategoryMap {
   cpu: Cpu
@@ -172,6 +194,7 @@ export interface CategoryMap {
   storage: Storage
   psu: Psu
   mobo: Mobo
+  cooler: Cooler
 }
 
 /** 已计算完毕、可直接渲染的行 */

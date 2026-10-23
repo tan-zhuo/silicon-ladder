@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import type { Category, Cpu, Gpu, Ram, Storage, Psu, Mobo } from '@/types/hardware'
+import type { Category, Cpu, Gpu, Ram, Storage, Psu, Mobo, Cooler } from '@/types/hardware'
 import { useCatalog } from '@/data/load'
 import { useCompare } from '@/stores/compare'
 import { scorePool, sortRows, SORT_DEFS } from '@/utils/rank'
-import { catLabel, formLabel, ifaceLabel, modularLabel, price, num, iops, capacity, bool, vram, DASH, sizeLabel } from '@/utils/format'
+import { catLabel, formLabel, ifaceLabel, modularLabel, price, num, iops, capacity, bool, vram, DASH, sizeLabel, coolerTypeLabel } from '@/utils/format'
 import ScoreBar from '@/components/ScoreBar.vue'
 import BrandLogo from '@/components/BrandLogo.vue'
-import { cpuPlatform, gpuPlatform, ramPlatform, storagePlatform, psuPlatform, moboPlatform, type Row } from '@/data/platforms'
+import { cpuPlatform, gpuPlatform, ramPlatform, storagePlatform, psuPlatform, moboPlatform, coolerPlatform, type Row } from '@/data/platforms'
 import { cpuTechRows, gpuTechRows, type TechRow } from '@/data/techrows'
 import { shopLinks, shopQuery } from '@/data/shops'
 import ShopLogo from '@/components/ShopLogo.vue'
@@ -63,6 +63,10 @@ const specs = computed<Spec[]>(() => {
     const s = it as Storage
     return [[L('interface'), ifaceLabel(s.interface)], [L('capacity'), capacity(s.capacity_gb)], [L('nand'), s.nand ?? DASH], [L('dram'), bool(s.dram)], [L('seq'), `${num(s.seq_read)} / ${num(s.seq_write)} MB/s`], [L('r4k'), iops(s.iops_4k_read) + (s.iops_4k_read ? ' IOPS' : '')], [L('cacheOut'), s.write_cache_out == null ? DASH : `${num(s.write_cache_out)} MB/s`], [L('tbw'), s.tbw == null ? DASH : `${num(s.tbw)} TB`], [L('price'), price(s.price_cny)]]
   }
+  if (category.value === 'cooler') {
+    const c = it as Cooler
+    return [[L('coolerType'), coolerTypeLabel(c.type)], [L('height'), `${c.height_mm} mm`], ...(c.form === 'aio' ? [[L('radiator'), `${c.radiator_mm} × ${c.thickness_mm ?? '—'} mm`] as [string, string]] : []), [L('fans'), c.fans], [L('noise'), `${c.noise_db} dBA`], [L('tdpRated'), `${c.tdp_w}W`], [L('sockets'), c.sockets], ...(c.form === 'air' ? [[L('ramClear'), c.ram_clearance_mm ? `${c.ram_clearance_mm} mm` : DASH] as [string, string]] : [[L('lcd'), bool(c.lcd)] as [string, string]]), [L('rgb'), bool(c.rgb)], [L('warranty'), t('spec.years', { n: c.warranty_y })], [L('price'), price(c.price_cny)]]
+  }
   if (category.value === 'mobo') {
     const m = it as Mobo
     return [[L('chipset'), m.chipset], [L('size'), sizeLabel(m.size)], [L('tier'), m.tier], [L('vrm'), m.vrm], [L('memMax'), `${m.mem_slots}× ${m.mem_type}-${m.mem_max_mt}`], [L('m2'), m.m2_gen5 ? `${m.m2} (${m.m2_gen5}× PCIe 5.0)` : String(m.m2)], [L('pcie5'), bool(m.pcie5_x16)], [L('lan'), m.lan], [L('wifi'), m.wifi ?? DASH], [L('usb4'), bool(m.usb4)], [L('flashback'), bool(m.flashback)], [L('price'), price(m.price_cny)]]
@@ -82,6 +86,8 @@ const scoreCards = computed(() => {
     if (category.value === 'storage' && k === 'random4k') return iops(v as number)
     if (category.value === 'storage' && (k === 'seqRead' || k === 'cacheOut')) return `${num(v as number)} MB/s`
     if (category.value === 'storage' && k === 'endurance') return `${v} TBW/GB`
+    if (category.value === 'cooler' && k === 'quiet') return `${v} dBA`
+    if (category.value === 'cooler' && k === 'cooling') return `${v}`
     if (typeof v === 'number') return String(Math.round(v * 100) / 100)
     return String(v)
   }
@@ -100,6 +106,7 @@ const platformRows = computed<Row[]>(() => {
     case 'storage': return storagePlatform(it as Storage)
     case 'psu': return psuPlatform(it as Psu)
     case 'mobo': return moboPlatform(it as Mobo)
+    case 'cooler': return coolerPlatform(it as Cooler)
   }
 })
 /** 直接竞品：同池、其他品牌优先、发布 ±1 年、综合分差 ≤ 10 */

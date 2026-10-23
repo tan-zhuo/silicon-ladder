@@ -10,7 +10,7 @@ import type { Category } from '@/types/hardware'
 const catalog = useCatalog()
 const { t } = useI18n()
 const year = new Date().getFullYear()
-const CATS: Category[] = ['cpu', 'gpu', 'ram', 'storage', 'psu', 'mobo']
+const CATS: Category[] = ['cpu', 'gpu', 'ram', 'storage', 'psu', 'mobo', 'cooler']
 const total = computed(() => CATS.reduce((n, c) => n + catalog.byCategory(c).length, 0))
 const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
 </script>

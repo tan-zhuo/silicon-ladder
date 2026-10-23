@@ -1,15 +1,16 @@
 import type { Msg } from './index'
 export const ja: Msg = {
   site: { name: 'CPU.News', tagline: 'コンシューマー向けハードウェアランキング', sub: '性能ラダー · ランキング · 比較' },
-  nav: { mobo: 'マザーボード', app: 'アプリ', news: 'ニュース', cpu: 'CPU', gpu: 'GPU', ram: 'メモリ', storage: 'ストレージ', psu: '電源', compare: '比較', guide: '購入ガイド', methodology: '評価方法', menu: 'メニュー' },
+  nav: { cooler: 'クーラー', mobo: 'マザーボード', app: 'アプリ', news: 'ニュース', cpu: 'CPU', gpu: 'GPU', ram: 'メモリ', storage: 'ストレージ', psu: '電源', compare: '比較', guide: '購入ガイド', methodology: '評価方法', menu: 'メニュー' },
   theme: { light: 'ライト', dark: 'ダーク', toggle: 'テーマ切替' },
-  cat: { cpu: 'CPU', gpu: 'GPU', ram: 'メモリ', storage: 'ストレージ', psu: '電源', mobo: 'マザーボード' },
-  form: { desktop: 'デスクトップ', laptop: 'ノート', igpu: '内蔵GPU', 'kit-desktop': 'デスクトップ用', sodimm: 'SO-DIMM', onboard: 'オンボード', nvme: 'NVMe', sata: 'SATA', hdd: 'HDD', atx: 'ATX', sfx: 'SFX', am5: 'AM5', lga1851: 'LGA1851', am4: 'AM4', lga1700: 'LGA1700' },
+  cat: { cpu: 'CPU', gpu: 'GPU', ram: 'メモリ', storage: 'ストレージ', psu: '電源', mobo: 'マザーボード', cooler: 'CPU クーラー' },
+  form: { desktop: 'デスクトップ', laptop: 'ノート', igpu: '内蔵GPU', 'kit-desktop': 'デスクトップ用', sodimm: 'SO-DIMM', onboard: 'オンボード', nvme: 'NVMe', sata: 'SATA', hdd: 'HDD', atx: 'ATX', sfx: 'SFX', am5: 'AM5', lga1851: 'LGA1851', am4: 'AM4', lga1700: 'LGA1700', air: '空冷', aio: '簡易水冷' },
   iface: { pcie5: 'PCIe 5.0', pcie4: 'PCIe 4.0', pcie3: 'PCIe 3.0', sata: 'SATA', 'sata-hdd': 'SATA (HDD)' },
+  coolertype: { 'tower-single': 'シングルタワー', 'tower-dual': 'デュアルタワー', 'top-down': 'トップフロー', 'aio-120': '120 水冷', 'aio-240': '240 水冷', 'aio-280': '280 水冷', 'aio-360': '360 水冷', 'aio-420': '420 水冷' },
   mobosize: { atx: 'ATX', eatx: 'E-ATX', matx: 'mATX', itx: 'Mini-ITX' },
   modular: { full: 'フルモジュラー', semi: 'セミモジュラー', none: '直出し' },
-  sort: { overall: '総合', gaming: 'ゲーム', single: 'シングル', multi: 'マルチ', efficiency: '電力効率', igpu: '内蔵GPU', value: 'コスパ', raster: 'ラスタ', rt: 'レイトレ', bandwidth: '帯域', latency: 'レイテンシ', random4k: '4Kランダム', cacheOut: 'キャッシュ外書込', seqRead: 'シーケンシャル読', endurance: '耐久性', tier: '品質ティア' },
-  col: { rank: '#', model: 'モデル', cores: 'コア', tdp: 'TDP', single: 'シングル', multi: 'マルチ', gaming: 'ゲーム', overall: '総合', vram: 'VRAM', power: 'TGP/TDP', raster: 'ラスタ', rt: 'RT', spec: '仕様', read: '読込帯域', latency: 'レイテンシ', interface: 'IF', seqRead: 'Seq.読', random4k: '4K', cacheOut: 'キャッシュ外', watt: 'W数', tier: 'ティア', efficiency: '認証', atx31: 'ATX 3.1', modular: 'モジュラー', compare: '比較', release: '発売', chipset: 'チップセット · 規格', vrm: 'VRM', memMax: 'メモリ上限', m2: 'M.2', lan: 'ネットワーク' },
+  sort: { overall: '総合', gaming: 'ゲーム', single: 'シングル', multi: 'マルチ', efficiency: '電力効率', igpu: '内蔵GPU', value: 'コスパ', raster: 'ラスタ', rt: 'レイトレ', bandwidth: '帯域', latency: 'レイテンシ', random4k: '4Kランダム', cacheOut: 'キャッシュ外書込', seqRead: 'シーケンシャル読', endurance: '耐久性', tier: '品質ティア', cooling: '冷却', quiet: '静音' },
+  col: { rank: '#', model: 'モデル', cores: 'コア', tdp: 'TDP', single: 'シングル', multi: 'マルチ', gaming: 'ゲーム', overall: '総合', vram: 'VRAM', power: 'TGP/TDP', raster: 'ラスタ', rt: 'RT', spec: '仕様', read: '読込帯域', latency: 'レイテンシ', interface: 'IF', seqRead: 'Seq.読', random4k: '4K', cacheOut: 'キャッシュ外', watt: 'W数', tier: 'ティア', efficiency: '認証', atx31: 'ATX 3.1', modular: 'モジュラー', compare: '比較', release: '発売', chipset: 'チップセット · 規格', vrm: 'VRM', memMax: 'メモリ上限', m2: 'M.2', lan: 'ネットワーク', coolerType: 'タイプ · サイズ', cooling: '冷却', quiet: '静音', tdpRated: '公称 TDP', coolerSize: 'サイズ · ファン' },
   home: {
     heroKicker: '2007 年〜現在のデータ',
     heroTitle: 'コンシューマー向けハードウェアのランキングと性能ラダー',
@@ -17,8 +18,8 @@ export const ja: Msg = {
     ctaCpu: 'CPU ラダー', ctaGpu: 'GPU ラダー', ctaCompare: '比較を始める',
     searchPh: '検索 7800X3D / RTX 5070 / 990 PRO …',
     statItems: '収録数', statCpu: 'CPU', statGpu: 'GPU', statSpan: '対象年', statUpdated: 'データ更新',
-    sectionCats: '6つのカテゴリ', sectionCatsDesc: 'カテゴリごとにフォームファクタでプール分け、混在なし',
-    cards: { cpu: 'シングル・マルチ・ゲームをプール別に', gpu: 'デスクトップとノートTGPを分けて順位付け', ram: 'クロックだけでなくレイテンシと帯域', storage: '4Kとキャッシュ外はシーケンシャルより重要', psu: 'W数ではなく品質ティア', compare: '同カテゴリ最大4件を並べて比較', mobo: 'ソケット別プール、部品品質でティア分け' },
+    sectionCats: '7つのカテゴリ', sectionCatsDesc: 'カテゴリごとにフォームファクタでプール分け、混在なし',
+    cards: { cpu: 'シングル・マルチ・ゲームをプール別に', gpu: 'デスクトップとノートTGPを分けて順位付け', ram: 'クロックだけでなくレイテンシと帯域', storage: '4Kとキャッシュ外はシーケンシャルより重要', psu: 'W数ではなく品質ティア', compare: '同カテゴリ最大4件を並べて比較', mobo: 'ソケット別プール、部品品質でティア分け', cooler: '空冷と簡易水冷を分けて、冷却と騒音で評価' },
     sectionTop: '現在のトップ', sectionTopDesc: '各プール総合上位3件。クリックでラダーへ',
     viewLadder: 'ラダーを見る',
     sectionHow: '使い方は3ステップ',
@@ -31,6 +32,7 @@ export const ja: Msg = {
   rank: {
     title: '{form} {cat} ランキング',
     count: '{n} 件 · 相対スコアは同フォームプール内で正規化、最高 = 100',
+    coolerNote: '冷却スコアは公開の騒音一定温度テストに基づきプール内で正規化（100 = プール最強）。総合 = 冷却 70% + 静音 30%。「推定」は位置付けからの推算。',
     moboNote: 'マザーボードは VRM・冷却・BIOS・拡張性でティア分け（A が最良）し、ベンチは行いません。同ティア内は電源供給能力順です。', moboSort: 'ティア A→D、同ティアは VRM 能力（フェーズ数 × 電流）順',
     psuNote: '電源は電気的品質と仕様によるティア分けで、性能ベンチではありません。80Plus は効率の認証であり部品品質の保証ではありません。',
     laptopWarn: 'ノートとデスクトップは別プールで比較不可。同名ノートGPUはTGPにより 20–40% 差が出ます。',
@@ -41,7 +43,7 @@ export const ja: Msg = {
     showMore: 'さらに表示（残り {n} 件）',
     estNote: '「推定」マークの旧世代は公開レビュー比率からの換算値です。',
   },
-  filter: { chipset: 'チップセット', size: '規格', search: 'モデル / ブランド / id を検索', brand: 'ブランド', gen: '世代', all: 'すべて', tdp: 'TDP', tgp: 'TGP/TDP', minW: '最小 W', maxW: '最大 W', tgpTier: 'TGP帯', interface: 'IF', watt: 'W数', tier: 'ティア', atx31: 'ATX 3.1 / 12V-2x6 のみ', clear: 'クリア', clearAll: 'フィルタをクリア', filters: 'フィルタ', era: '年代' },
+  filter: { coolerType: 'タイプ', tdpRated: '公称 TDP', chipset: 'チップセット', size: '規格', search: 'モデル / ブランド / id を検索', brand: 'ブランド', gen: '世代', all: 'すべて', tdp: 'TDP', tgp: 'TGP/TDP', minW: '最小 W', maxW: '最大 W', tgpTier: 'TGP帯', interface: 'IF', watt: 'W数', tier: 'ティア', atx31: 'ATX 3.1 / 12V-2x6 のみ', clear: 'クリア', clearAll: 'フィルタをクリア', filters: 'フィルタ', era: '年代' },
   ladder: { score: '{sort}', vsTop: 'トップ比', items: '{n} 件', unscored: '「{sort}」スコアなし（ラダー外）: ', legend: 'バー長 = 相対スコア（プール最高 100）', top: 'トップ' },
   dock: { basket: '{cat} 比較かご', clear: 'クリア', compare: '比較 ({n}/{max})', remove: '削除', switched: 'カテゴリが変わったためかごを空にしました', max: '最大 {max} 件まで' },
   product: {
@@ -53,7 +55,7 @@ export const ja: Msg = {
     platform: 'プラットフォームと互換性', platformNote: 'ソケット / アーキテクチャ別の公開仕様。組立前にマザーボードメーカーの対応表をご確認ください。',
     similar: '類似製品', est: '推定', estNote: '旧世代: 公開レビュー比率から現行プールへ換算した目安値です。',
   },
-  spec: { priceNote: '参考価格は人民元のスナップショット。USD / JPY は {d} 時点のレートで換算', series: 'シリーズ', gen: '世代', socket: 'ソケット', cores: 'コア / スレッド', clocks: 'クロック', tdp: 'TDP', igpu: '内蔵GPU', l3: 'L3', mem: 'メモリ', price: '参考価格', arch: 'アーキテクチャ', chip: 'ダイ', vram: 'VRAM', bus: 'バス幅', tbp: 'TBP', tgp: 'TGP', type: '種類', spec: '仕様', capacity: '容量', speed: '速度', cl: 'CL', write: '書込帯域', interface: 'IF', nand: 'NAND', dram: 'DRAM', seq: 'Seq. 読 / 書', r4k: '4K ランダム読', cacheOut: 'キャッシュ外書込', tbw: 'TBW', watt: 'W数', tier: '品質ティア', eff: '認証', atx31: 'ATX 3.1 / 12V-2x6', modular: 'モジュラー', oem: 'OEM', brand: 'ブランド', form: 'フォーム', release: '発売', seqRead: 'Seq. 読', seqWrite: 'Seq. 書', yes: 'あり', no: 'なし', chipset: 'チップセット', size: 'フォームファクタ', vrm: 'VRM 電源', memMax: 'メモリ', m2: 'M.2 スロット', pcie5: 'PCIe 5.0 ×16', lan: '有線 LAN', wifi: '無線', usb4: 'USB4 / Thunderbolt', flashback: 'BIOS Flashback' },
+  spec: { priceNote: '参考価格は人民元のスナップショット。USD / JPY は {d} 時点のレートで換算', series: 'シリーズ', gen: '世代', socket: 'ソケット', cores: 'コア / スレッド', clocks: 'クロック', tdp: 'TDP', igpu: '内蔵GPU', l3: 'L3', mem: 'メモリ', price: '参考価格', arch: 'アーキテクチャ', chip: 'ダイ', vram: 'VRAM', bus: 'バス幅', tbp: 'TBP', tgp: 'TGP', type: '種類', spec: '仕様', capacity: '容量', speed: '速度', cl: 'CL', write: '書込帯域', interface: 'IF', nand: 'NAND', dram: 'DRAM', seq: 'Seq. 読 / 書', r4k: '4K ランダム読', cacheOut: 'キャッシュ外書込', tbw: 'TBW', watt: 'W数', tier: '品質ティア', eff: '認証', atx31: 'ATX 3.1 / 12V-2x6', modular: 'モジュラー', oem: 'OEM', brand: 'ブランド', form: 'フォーム', release: '発売', seqRead: 'Seq. 読', seqWrite: 'Seq. 書', yes: 'あり', no: 'なし', chipset: 'チップセット', size: 'フォームファクタ', vrm: 'VRM 電源', memMax: 'メモリ', m2: 'M.2 スロット', pcie5: 'PCIe 5.0 ×16', lan: '有線 LAN', wifi: '無線', usb4: 'USB4 / Thunderbolt', flashback: 'BIOS Flashback', coolerType: 'タイプ', height: '高さ', radiator: 'ラジエーター', fans: 'ファン', noise: '最大騒音', tdpRated: '公称 TDP', sockets: '対応ソケット', ramClear: 'メモリ許容高', lcd: 'LCD', rgb: 'ライティング', warranty: '保証', years: '{n} 年' },
   compare: { moboNoScore: 'マザーボードはティアで比較します。性能スコアはありません。', title: '比較', needTwo: '2件以上必要です。', goRank: 'ランキング', pick: 'で製品をチェックしてください（同カテゴリ最大4件）。', mixed: '異なるフォームファクタを比較しています。数値は乗り換えの根拠にはなりません。', metric: '指標', specs: '仕様', scores: 'スコア（同プール相対値）', psuNoScore: '電源は性能ベンチなし。仕様とティアのみ比較。', addMore: '追加する', clear: 'かごを空にする', remove: '削除' },
   footer: { updated: 'データ更新: ', method: '評価方法とデータソース', disclaimer: '静的スナップショットです。スコアは相対順位用で購入助言ではありません。' },
   guide: {

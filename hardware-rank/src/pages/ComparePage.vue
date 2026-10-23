@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
-import type { Category, AnyItem, Cpu, Gpu, Ram, Storage, Psu, RankedRow, Mobo } from '@/types/hardware'
+import type { Category, AnyItem, Cpu, Gpu, Ram, Storage, Psu, RankedRow, Mobo, Cooler } from '@/types/hardware'
 import { useCatalog } from '@/data/load'
 import { useCompare } from '@/stores/compare'
 import { scoreAllPools, SORT_DEFS } from '@/utils/rank'
-import { catLabel, formLabel, ifaceLabel, modularLabel, price, num, iops, bool, capacity, vram, DASH, rel as fmtRel, sizeLabel } from '@/utils/format'
+import { catLabel, formLabel, ifaceLabel, modularLabel, price, num, iops, bool, capacity, vram, DASH, rel as fmtRel, sizeLabel, coolerTypeLabel } from '@/utils/format'
 import BrandLogo from '@/components/BrandLogo.vue'
 import { cpuTechRows, gpuTechRows, type TechRow } from '@/data/techrows'
 import { useI18n, displayName } from '@/i18n'
@@ -15,7 +15,7 @@ const route = useRoute()
 const catalog = useCatalog()
 const compare = useCompare()
 const { t } = useI18n()
-const CATS: Category[] = ['cpu', 'gpu', 'ram', 'storage', 'psu', 'mobo']
+const CATS: Category[] = ['cpu', 'gpu', 'ram', 'storage', 'psu', 'mobo', 'cooler']
 
 const parsed = computed<{ cat: Category | null; ids: string[] }>(() => {
   const raw = String(route.query.ids ?? '')
@@ -51,6 +51,7 @@ const specRows = computed<SpecRow[]>(() => {
     case 'ram': return [...common, mk(L('spec'), (i) => (i as Ram).spec), mk(L('capacity'), (i) => `${(i as Ram).capacity_gb}GB`), mk(L('speed'), (i) => `${(i as Ram).speed_mt} MT/s`), mk(L('cl'), (i) => (i as Ram).cl == null ? DASH : String((i as Ram).cl))]
     case 'storage': return [...common, mk(L('interface'), (i) => ifaceLabel((i as Storage).interface)), mk(L('capacity'), (i) => capacity((i as Storage).capacity_gb)), mk(L('dram'), (i) => bool((i as Storage).dram)), mk(L('seqRead'), (i) => `${num((i as Storage).seq_read)} MB/s`), mk(L('seqWrite'), (i) => `${num((i as Storage).seq_write)} MB/s`), mk(L('r4k'), (i) => iops((i as Storage).iops_4k_read)), mk(L('cacheOut'), (i) => (i as Storage).write_cache_out == null ? DASH : `${num((i as Storage).write_cache_out)} MB/s`), mk(L('tbw'), (i) => (i as Storage).tbw == null ? DASH : `${(i as Storage).tbw} TB`)]
     case 'psu': return [...common, mk(L('watt'), (i) => `${(i as Psu).watt}W`), mk(L('tier'), (i) => (i as Psu).tier), mk(L('eff'), (i) => (i as Psu).efficiency), mk(L('atx31'), (i) => bool((i as Psu).atx31)), mk(L('modular'), (i) => modularLabel((i as Psu).modular)), mk(L('oem'), (i) => (i as Psu).oem)]
+    case 'cooler': return [...common, mk(L('coolerType'), (i) => coolerTypeLabel((i as Cooler).type)), mk(L('height'), (i) => `${(i as Cooler).height_mm} mm`), mk(L('radiator'), (i) => (i as Cooler).radiator_mm ? `${(i as Cooler).radiator_mm} × ${(i as Cooler).thickness_mm ?? '—'} mm` : DASH), mk(L('fans'), (i) => (i as Cooler).fans), mk(L('noise'), (i) => `${(i as Cooler).noise_db} dBA`), mk(L('tdpRated'), (i) => `${(i as Cooler).tdp_w}W`), mk(L('sockets'), (i) => (i as Cooler).sockets), mk(L('ramClear'), (i) => (i as Cooler).ram_clearance_mm ? `${(i as Cooler).ram_clearance_mm} mm` : DASH), mk(L('lcd'), (i) => bool((i as Cooler).lcd)), mk(L('warranty'), (i) => `${(i as Cooler).warranty_y}`)]
     case 'mobo': return [...common, mk(L('chipset'), (i) => (i as Mobo).chipset), mk(L('size'), (i) => sizeLabel((i as Mobo).size)), mk(L('tier'), (i) => (i as Mobo).tier), mk(L('vrm'), (i) => (i as Mobo).vrm), mk(L('memMax'), (i) => `${(i as Mobo).mem_slots}× ${(i as Mobo).mem_type}-${(i as Mobo).mem_max_mt}`), mk(L('m2'), (i) => `${(i as Mobo).m2}${(i as Mobo).m2_gen5 ? ` (${(i as Mobo).m2_gen5}× PCIe 5.0)` : ''}`), mk(L('pcie5'), (i) => bool((i as Mobo).pcie5_x16)), mk(L('lan'), (i) => (i as Mobo).lan), mk(L('wifi'), (i) => (i as Mobo).wifi ?? DASH), mk(L('usb4'), (i) => bool((i as Mobo).usb4)), mk(L('flashback'), (i) => bool((i as Mobo).flashback))]
   }
 })

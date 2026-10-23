@@ -2,7 +2,7 @@
 import { computed, ref } from 'vue'
 import type { Category } from '@/types/hardware'
 import type { FilterState } from '@/utils/filters'
-import { ifaceLabel, sizeLabel } from '@/utils/format'
+import { ifaceLabel, sizeLabel, coolerTypeLabel } from '@/utils/format'
 import { useI18n } from '@/i18n'
 import { UiInput, UiCheckbox } from '@/components/ui'
 
@@ -14,7 +14,7 @@ const open = ref(false)
 function set<K extends keyof FilterState>(k: K, v: FilterState[K]) { emit('update:modelValue', { ...props.modelValue, [k]: v }) }
 function toggleBrand(b: string) { const cur = props.modelValue.brand; set('brand', cur.includes(b) ? cur.filter((x) => x !== b) : [...cur, b]) }
 function numInput(e: Event): number | null { const v = (e.target as HTMLInputElement).value; return v === '' ? null : Number(v) }
-const showTdp = computed(() => props.category === 'cpu' || props.category === 'gpu')
+const showTdp = computed(() => props.category === 'cpu' || props.category === 'gpu' || props.category === 'cooler')
 const showTgpTier = computed(() => props.category === 'gpu' && props.modelValue.form === 'laptop')
 const ERAS = computed(() => {
   if (!props.years) return []
@@ -71,16 +71,16 @@ const chips = computed(() => {
         <button v-for="b in brands" :key="b" class="pill !h-8 !text-xs" :class="{ 'pill-active': modelValue.brand.includes(b) }" @click="toggleBrand(b)">{{ b }}</button>
       </div>
       <div v-if="gens.length" class="flex flex-wrap items-center gap-1.5">
-        <span class="text-xs text-muted min-w-[3rem] pr-1 shrink-0 whitespace-nowrap">{{ t(category === 'mobo' ? 'filter.chipset' : 'filter.gen') }}</span>
+        <span class="text-xs text-muted min-w-[3rem] pr-1 shrink-0 whitespace-nowrap">{{ t(category === 'mobo' ? 'filter.chipset' : category === 'cooler' ? 'filter.coolerType' : 'filter.gen') }}</span>
         <button class="pill !h-8 !text-xs" :class="{ 'pill-active': !modelValue.gen }" @click="set('gen', '')">{{ t('filter.all') }}</button>
-        <button v-for="g in gens" :key="g" class="pill !h-8 !text-xs" :class="{ 'pill-active': modelValue.gen === g }" @click="set('gen', g)">{{ g }}</button>
+        <button v-for="g in gens" :key="g" class="pill !h-8 !text-xs" :class="{ 'pill-active': modelValue.gen === g }" @click="set('gen', g)">{{ category === 'cooler' ? coolerTypeLabel(g) : g }}</button>
       </div>
       <div v-if="ERAS.length > 2" class="flex flex-wrap items-center gap-1.5">
         <span class="text-xs text-muted min-w-[3rem] pr-1 shrink-0 whitespace-nowrap">{{ t('filter.era') }}</span>
         <button v-for="e in ERAS" :key="e.label" class="pill !h-8 !text-xs" :class="{ 'pill-active': modelValue.yearMin === e.min && modelValue.yearMax === e.max }" @click="emit('update:modelValue', { ...modelValue, yearMin: e.min, yearMax: e.max })">{{ e.label }}</button>
       </div>
       <div v-if="showTdp" class="flex flex-wrap items-center gap-1.5">
-        <span class="text-xs text-muted min-w-[3rem] pr-1 shrink-0 whitespace-nowrap">{{ category === 'gpu' ? t('filter.tgp') : t('filter.tdp') }}</span>
+        <span class="text-xs text-muted min-w-[3rem] pr-1 shrink-0 whitespace-nowrap">{{ category === 'gpu' ? t('filter.tgp') : category === 'cooler' ? t('filter.tdpRated') : t('filter.tdp') }}</span>
         <div class="w-24"><UiInput size="sm" type="number" :placeholder="t('filter.minW')" :model-value="modelValue.tdpMin ?? ''" @change="set('tdpMin', numInput($event))" /></div>
         <span class="text-muted">–</span>
         <div class="w-24"><UiInput size="sm" type="number" :placeholder="t('filter.maxW')" :model-value="modelValue.tdpMax ?? ''" @change="set('tdpMax', numInput($event))" /></div>

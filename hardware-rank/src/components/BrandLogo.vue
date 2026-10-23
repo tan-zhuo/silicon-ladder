@@ -36,7 +36,7 @@ const mark = computed(() => {
     <path :d="logo.path" />
   </svg>
   <span
-    v-else-if="logo?.svg" class="brand-vec shrink-0 inline-flex items-center justify-start" :class="{ 'tone-dark': logo.toneDark && !mono }" role="img" :aria-label="logo.title" :title="brand"
+    v-else-if="logo?.svg && ((logo.ratio ?? 1) <= 7 || size >= 32)" class="brand-vec shrink-0 inline-flex items-center justify-start" :class="{ 'tone-dark': logo.toneDark && !mono }" role="img" :aria-label="logo.title" :title="brand"
     :style="vecStyle" v-html="logo.svg"
   />
   <span

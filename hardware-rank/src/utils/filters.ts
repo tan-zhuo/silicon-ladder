@@ -1,4 +1,4 @@
-import type { Category, AnyItem, Cpu, Gpu, Storage, Psu, Mobo } from '@/types/hardware'
+import type { Category, AnyItem, Cpu, Gpu, Storage, Psu, Mobo, Cooler } from '@/types/hardware'
 import type { LocationQuery } from 'vue-router'
 
 export interface FilterState {
@@ -128,6 +128,12 @@ export function applyFilters(cat: Category, items: AnyItem[], f: FilterState): A
       if (f.gen && m.chipset !== f.gen) return false
       if (f.tier && m.tier !== f.tier) return false
       if (f.size && m.size !== f.size) return false
+    }
+    if (cat === 'cooler') {
+      const c = it as Cooler
+      if (f.gen && c.type !== f.gen) return false
+      if (f.tdpMin !== null && c.tdp_w < f.tdpMin) return false
+      if (f.tdpMax !== null && c.tdp_w > f.tdpMax) return false
     }
     return true
   })

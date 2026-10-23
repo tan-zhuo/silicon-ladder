@@ -2,7 +2,7 @@
  * 平台 / 兼容性知识表：按插槽、代次派生，三语（zh / en / ja）。
  * 每条文案为 L(zh, en, ja) 三元组，运行时按当前语言取值。
  */
-import type { Cpu, Gpu, Storage, Psu, Ram, Mobo } from '@/types/hardware'
+import type { Cpu, Gpu, Storage, Psu, Ram, Mobo, Cooler } from '@/types/hardware'
 import { locale } from '@/i18n'
 
 type L3 = [string, string, string]
@@ -317,5 +317,24 @@ export function moboPlatform(m: Mobo): Row[] {
   rows.push(row(LBL.upgrade, s.upgrade))
   if (m.flashback) rows.push(row(LBL.note, L('支持 BIOS Flashback，无 CPU 也能刷新固件', 'BIOS Flashback: update firmware without a CPU', 'BIOS Flashback 対応。CPU なしで更新可')))
   if (m.tier === 'D') rows.push(row(LBL.risk, L('供电偏弱，不建议搭配 8 核以上或高功耗 CPU', 'Weak VRM; not recommended with 8+ core or high-power CPUs', 'VRM が弱め。8 コア超や高消費電力 CPU には非推奨')))
+  return rows
+}
+
+/* ---------- Cooler ---------- */
+export function coolerPlatform(c: Cooler): Row[] {
+  const rows: Row[] = []
+  rows.push(row(LBL.socket, c.sockets, L('AM5 与 AM4 扣具通用；LGA1851 沿用 LGA1700 扣具', 'AM5 shares AM4 brackets; LGA1851 uses LGA1700 brackets', 'AM5 と AM4 は金具共通。LGA1851 は LGA1700 の金具')))
+  if (c.form === 'air') {
+    rows.push(row(LBL.spec, L(`总高 ${c.height_mm}mm，机箱限高需 ≥ ${c.height_mm + 3}mm`, `${c.height_mm} mm tall; case clearance must be ≥ ${c.height_mm + 3} mm`, `高さ ${c.height_mm}mm。ケースの許容高は ${c.height_mm + 3}mm 以上`), c.height_mm <= 70 ? L('ITX / 薄机箱可用', 'Fits ITX / slim cases', 'ITX / 薄型ケース対応') : c.height_mm >= 160 ? L('需中塔以上机箱', 'Needs a mid-tower or larger', 'ミドルタワー以上が必要') : undefined))
+    rows.push(row(LBL.mem, c.ram_clearance_mm ? L(`内存限高 ${c.ram_clearance_mm}mm，高马甲条需确认或移风扇`, `RAM clearance ${c.ram_clearance_mm} mm; tall heat-spreaders may need the fan moved`, `メモリ許容高 ${c.ram_clearance_mm}mm。背の高いヒートスプレッダはファン移動が必要な場合あり`) : L('不遮挡内存槽', 'Does not overhang the RAM slots', 'メモリスロットに干渉しない')))
+    const cls = c.tdp_w >= 250 ? L('9950X / 285K 默认功耗可压', 'Handles a 9950X / 285K at stock', '9950X / 285K の定格に対応') : c.tdp_w >= 180 ? L('适合 105–170W 的 8–12 核', 'Good for 105–170 W 8–12-core CPUs', '105–170W の 8–12 コア向け') : c.tdp_w >= 120 ? L('适合 ≤ 120W 的 6–8 核', 'For ≤ 120 W 6–8-core CPUs', '120W 以下の 6–8 コア向け') : L('仅 65W 级 CPU', 'Only 65 W-class CPUs', '65W 級 CPU のみ')
+    rows.push(row(LBL.carry, cls))
+  } else {
+    rows.push(row(LBL.spec, L(`${c.radiator_mm}mm 冷排，厚 ${c.thickness_mm ?? '—'}mm，连风扇约 ${(c.thickness_mm ?? 27) + 25}mm`, `${c.radiator_mm} mm radiator, ${c.thickness_mm ?? '—'} mm thick, ~${(c.thickness_mm ?? 27) + 25} mm with fans`, `${c.radiator_mm}mm ラジエーター、厚さ ${c.thickness_mm ?? '—'}mm、ファン込み約 ${(c.thickness_mm ?? 27) + 25}mm`), L('确认机箱顶部 / 前部冷排位与内存高度', 'Check the case radiator mount (top / front) and RAM height', 'ケースのラジエーター位置（天面 / 前面）とメモリ高を確認')))
+    rows.push(row(LBL.carry, (c.radiator_mm ?? 0) >= 360 ? L('任何桌面 CPU，含解锁功耗墙', 'Any desktop CPU, including unlocked power limits', '電力制限解除を含む全デスクトップ CPU') : (c.radiator_mm ?? 0) >= 240 ? L('≤ 200W CPU；280/240 够 9950X 默认', '≤ 200 W CPUs; 240/280 handles a stock 9950X', '200W 以下。240/280 で定格 9950X 可') : L('≤ 120W CPU', '≤ 120 W CPUs', '120W 以下')))
+    rows.push(row(LBL.note, L('水冷头 LCD 与灯效需要主板 USB 2.0 内接口；泵头朝下、冷排顶置最不易进气', 'LCD / lighting needs a USB 2.0 header; mount the radiator above the pump to avoid air in the block', 'LCD / ライティングは USB 2.0 ヘッダーが必要。ラジエーターはポンプより上に')))
+  }
+  rows.push(row(LBL.cool, L(`满速噪音 ${c.noise_db} dBA；${c.noise_db <= 25 ? '静音级' : c.noise_db <= 32 ? '日常安静' : '满载偏吵，建议曲线限速'}`, `${c.noise_db} dBA at full speed: ${c.noise_db <= 25 ? 'silent class' : c.noise_db <= 32 ? 'quiet in daily use' : 'loud at full load; use a fan curve'}`, `最大 ${c.noise_db} dBA：${c.noise_db <= 25 ? '静音クラス' : c.noise_db <= 32 ? '日常は静か' : '全負荷時はうるさめ。ファンカーブ推奨'}`)))
+  rows.push(row(LBL.note, L(`质保 ${c.warranty_y} 年${c.form === 'aio' ? '；水冷寿命通常 5–7 年' : ''}`, `${c.warranty_y}-year warranty${c.form === 'aio' ? '; AIOs typically last 5–7 years' : ''}`, `保証 ${c.warranty_y} 年${c.form === 'aio' ? '。簡易水冷の寿命は通常 5–7 年' : ''}`)))
   return rows
 }

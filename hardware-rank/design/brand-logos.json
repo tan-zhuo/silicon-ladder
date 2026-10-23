@@ -153,5 +153,15 @@
   },
   "ASRock": {
     "commons": "File:ASRock logo.svg"
+  },
+  "Noctua": {
+    "commons": "File:Noctua wordmark.svg"
+  },
+  "Thermalright": {
+    "commons": "File:Thermalright Logo.svg",
+    "whiteToCurrent": true
+  },
+  "Zalman": {
+    "commons": "File:Zalman logo.svg"
   }
 }

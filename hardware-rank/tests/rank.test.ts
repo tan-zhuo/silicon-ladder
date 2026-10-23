@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { relScore, relInverse, weighted, scorePool, sortRows } from '../src/utils/rank'
-import type { Cpu, Gpu, Ram, Psu, Mobo } from '../src/types/hardware'
+import type { Cpu, Gpu, Ram, Psu, Mobo, Cooler } from '../src/types/hardware'
 
 const cpu = (id: string, o: Partial<Cpu> & { scores: Cpu['scores'] }): Cpu => ({
   id, name: id, nameEn: id, brand: 'AMD', form: 'desktop', series: 's', gen: 'g', socket: 'AM5', cores: '8/16', clocks: '', tdp_w: 100, cache_l3: '', mem: '', release: '2024-01', summary: '', tags: [], ...o,
@@ -87,5 +87,16 @@ describe('Motherboard order', () => {
     const m = (id: string, tier: Mobo['tier'], phases: number, amps: number, mem = 8000): Mobo => ({ id, name: id, brand: 'x', form: 'am5', chipset: 'X870E', size: 'atx', tier, vrm: `${phases}+2 ${amps}A`, vrm_phases: phases, vrm_amps: amps, mem_slots: 4, mem_max_mt: mem, mem_type: 'DDR5', m2: 4, m2_gen5: 2, pcie5_x16: true, lan: '2.5GbE', wifi: 'Wi-Fi 7', usb4: true, flashback: true, release: '2024-10', summary: '' })
     const rows = sortRows('mobo', scorePool('mobo', [m('b-18x110', 'B', 18, 110), m('a-14x80', 'A', 14, 80), m('a-16x90', 'A', 16, 90), m('a-16x90-mem', 'A', 16, 90, 8400)]), 'tier')
     expect(rows.map((r) => r.item.id)).toEqual(['a-16x90-mem', 'a-16x90', 'a-14x80', 'b-18x110'])
+  })
+})
+
+describe('Cooler scoring', () => {
+  it('overall = cooling 70 + quiet 30, pool leader is 100, value needs a price', () => {
+    const k = (id: string, cool: number, quiet: number, price: number | null = null): Cooler => ({ id, name: id, brand: 'x', form: 'air', type: 'tower-dual', height_mm: 155, radiator_mm: null, thickness_mm: null, fans: '2× 120mm', noise_db: 30, tdp_w: 250, sockets: 'AM5', ram_clearance_mm: null, lcd: false, rgb: false, warranty_y: 6, release: '2024-01', summary: '', price_cny: price, scores: { cool_rel: cool, noise_rel: quiet } })
+    const rows = sortRows('cooler', scorePool('cooler', [k('strong-loud', 100, 60, 300), k('weak-quiet', 70, 100, 100), k('mid', 85, 85)]), 'overall')
+    expect(rows[0].item.id).toBe('strong-loud')
+    expect(rows[0].rel.overall).toBe(100)
+    expect(rows.find((r) => r.item.id === 'mid')!.rel.value).toBeNull()
+    expect(sortRows('cooler', scorePool('cooler', [k('a', 100, 60, 300), k('b', 70, 100, 100)]), 'value')[0].item.id).toBe('b')
   })
 })

@@ -21,6 +21,7 @@ const links = computed(() => [
   { to: '/rank/storage', label: t('nav.storage') },
   { to: '/rank/psu', label: t('nav.psu') },
   { to: '/rank/mobo', label: t('nav.mobo') },
+  { to: '/rank/cooler', label: t('nav.cooler') },
   { to: '/news', label: t('nav.news') },
   { to: '/compare', label: t('nav.compare') },
   { to: '/guide', label: t('nav.guide') },

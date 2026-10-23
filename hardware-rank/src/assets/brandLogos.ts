@@ -29,6 +29,9 @@ import l_xpg_svg from './logos/xpg.svg?raw'
 import l_montech_svg from './logos/montech.svg?raw'
 import l_xfx_svg from './logos/xfx.svg?raw'
 import l_asrock_svg from './logos/asrock.svg?raw'
+import l_noctua_svg from './logos/noctua.svg?raw'
+import l_thermalright_svg from './logos/thermalright.svg?raw'
+import l_zalman_svg from './logos/zalman.svg?raw'
 export interface BrandLogo { title: string; hex: string; path?: string; svg?: string; mono?: boolean; tone?: string; toneDark?: boolean; ratio?: number }
 export const BRAND_LOGOS: Record<string, BrandLogo> = {
   "AMD": {
@@ -364,5 +367,30 @@ export const BRAND_LOGOS: Record<string, BrandLogo> = {
     "tone": "#79bd28",
     "toneDark": false,
     "ratio": 5.78
+  },
+  "Noctua": {
+    "title": "Noctua",
+    "hex": "#551805",
+    "svg": l_noctua_svg,
+    "mono": false,
+    "tone": "#551805",
+    "toneDark": true,
+    "ratio": 5.952
+  },
+  "Thermalright": {
+    "title": "Thermalright",
+    "hex": "#e2d4b8",
+    "svg": l_thermalright_svg,
+    "mono": false,
+    "ratio": 11.531
+  },
+  "Zalman": {
+    "title": "Zalman",
+    "hex": "#0000ff",
+    "svg": l_zalman_svg,
+    "mono": false,
+    "tone": "#0000ff",
+    "toneDark": true,
+    "ratio": 4.545
   }
 }

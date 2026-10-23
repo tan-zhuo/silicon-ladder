@@ -44,6 +44,7 @@ export const formLabel = (f: string) => t(`form.${f}`)
 export const ifaceLabel = (i: string) => t(`iface.${i}`)
 export const modularLabel = (m: string) => t(`modular.${m}`)
 export const sizeLabel = (s: string) => t(`mobosize.${s}`)
+export const coolerTypeLabel = (s: string) => t(`coolertype.${s}`)
 
 /** 品牌主色：天梯条、字标回退、OG 图共用（近似官方色） */
 export const BRAND_COLORS: Record<string, string> = {
@@ -55,6 +56,7 @@ export const BRAND_COLORS: Record<string, string> = {
   ZhiTai: '#1F6FEB', 致态: '#1F6FEB', Netac: '#1E63C8', Hikvision: '#E60012', Sabrent: '#1E73BE', OCZ: '#1C1C1C', Transcend: '#960014', Hitachi: '#CC0000', HGST: '#005EB8',
   Seasonic: '#003C7D', 'be quiet!': '#F08A00', 'Super Flower': '#F39800', Thermaltake: '#E4002B', 'Cooler Master': '#6B2C91', MSI: '#E4002B', ASUS: '#1F1F1F', Gigabyte: '#F58220',
   EVGA: '#1C1C1C', Antec: '#1C1C1C', FSP: '#005BAC', SilverStone: '#1C1C1C', 'Lian Li': '#1C1C1C', NZXT: '#8B35FF', DeepCool: '#1C1C1C', Phanteks: '#1C1C1C', 'Fractal Design': '#1C1C1C',
+  Noctua: '#A0522D', Thermalright: '#1C1C1C', Arctic: '#1E63C8', 'ID-COOLING': '#E60012', Scythe: '#E60012', EK: '#1C1C1C', Jonsbo: '#1C1C1C', Valkyrie: '#1C1C1C', PCCOOLER: '#1E63C8', Zalman: '#1E63C8', Endorfy: '#E60012',
   ASRock: '#0A63B5', Biostar: '#E60012', Maxsun: '#E60012', 铭瑄: '#E60012',
   Enermax: '#D71920', Montech: '#1C1C1C', 'Great Wall': '#C8102E', 长城: '#C8102E', Segotep: '#F5B400', 鑫谷: '#F5B400', Huntkey: '#0066B3', 航嘉: '#0066B3', 'Golden Field': '#1E63C8', 金河田: '#1E63C8', Aigo: '#E60012', 爱国者: '#E60012', SAMA: '#1C1C1C', 先马: '#1C1C1C', '1STPLAYER': '#E60012', Rosewill: '#1E63C8', XFX: '#1C1C1C', Zotac: '#F5B400', Sapphire: '#1E63C8', Generic: '#8B9BB0',
 }

@@ -1,4 +1,4 @@
-import type { Category, AnyItem, Cpu, Gpu, Ram, Storage, Psu, Mobo, RankedRow } from '@/types/hardware'
+import type { Category, AnyItem, Cpu, Gpu, Ram, Storage, Psu, Mobo, Cooler, RankedRow } from '@/types/hardware'
 
 /** 相对分：round(x / max * 1000) / 10，缺失 -> null */
 export function relScore(x: number | null | undefined, max: number | null): number | null {
@@ -67,6 +67,12 @@ export const SORT_DEFS: Record<Category, SortDef[]> = {
   ],
   psu: [{ key: 'tier' }],
   mobo: [{ key: 'tier' }],
+  cooler: [
+    { key: 'overall' },
+    { key: 'cooling' },
+    { key: 'quiet' },
+    { key: 'value' },
+  ],
 }
 
 /** 每个品类可用的 form 枚举 */
@@ -99,6 +105,10 @@ export const FORMS: Record<Category, { key: string }[]> = {
     { key: 'lga1851' },
     { key: 'am4' },
     { key: 'lga1700' },
+  ],
+  cooler: [
+    { key: 'air' },
+    { key: 'aio' },
   ],
 }
 
@@ -295,6 +305,24 @@ function rankMobo(pool: Mobo[]): RankedRow<Mobo>[] {
   }))
 }
 
+/* ---------------- Cooler ---------------- */
+/** 散热器：散热 70% + 静音 30%（同池归一），性价比 = 综合 / 价格 */
+function rankCooler(pool: Cooler[]): RankedRow<Cooler>[] {
+  const cMax = maxOf(pool.map((c) => c.scores.cool_rel))
+  const qMax = maxOf(pool.map((c) => c.scores.noise_rel))
+  const overallRaw = pool.map((c) => weighted({ cool: relScore(c.scores.cool_rel, cMax), quiet: relScore(c.scores.noise_rel, qMax) }, { cool: 70, quiet: 30 }))
+  const overallRel = normalizeAll(overallRaw)
+  const valueRaw = pool.map((c, i) => (overallRel[i] !== null && c.price_cny ? (overallRel[i] as number) / c.price_cny : null))
+  const valueRel = normalizeAll(valueRaw)
+  return pool.map((c, i) => ({
+    item: c,
+    rank: 0,
+    sortValue: null,
+    raw: { cooling: c.scores.cool_rel, quiet: c.noise_db, tdp: c.tdp_w, value: valueRaw[i] },
+    rel: { cooling: relScore(c.scores.cool_rel, cMax), quiet: relScore(c.scores.noise_rel, qMax), overall: overallRel[i], value: valueRel[i] },
+  }))
+}
+
 /** 对同 category + 同 form 的池计算全部相对分（不排序） */
 export function scorePool(cat: Category, pool: AnyItem[]): RankedRow[] {
   if (!pool.length) return []
@@ -305,6 +333,7 @@ export function scorePool(cat: Category, pool: AnyItem[]): RankedRow[] {
     case 'storage': return rankStorage(pool as Storage[])
     case 'psu': return rankPsu(pool as Psu[])
     case 'mobo': return rankMobo(pool as Mobo[])
+    case 'cooler': return rankCooler(pool as Cooler[])
   }
 }
 

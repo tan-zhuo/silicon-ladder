@@ -1,5 +1,5 @@
-import type { Category, RankedRow, Cpu, Gpu, Ram, Storage, Psu, Mobo } from '@/types/hardware'
-import { num, iops, ifaceLabel, modularLabel, sizeLabel, DASH, vram } from '@/utils/format'
+import type { Category, RankedRow, Cpu, Gpu, Ram, Storage, Psu, Mobo, Cooler } from '@/types/hardware'
+import { num, iops, ifaceLabel, modularLabel, sizeLabel, coolerTypeLabel, DASH, vram } from '@/utils/format'
 
 export interface Column {
   key: string
@@ -58,6 +58,13 @@ export const COLUMNS: Record<Category, Column[]> = {
     { key: 'm2', label: 'm2', kind: 'text', align: 'right', hide: 'xl', text: (r) => { const m = r.item as Mobo; return m.m2_gen5 ? `${m.m2} (${m.m2_gen5}× 5.0)` : String(m.m2) } },
     { key: 'lan', label: 'lan', kind: 'text', hide: 'xl', text: (r) => { const m = r.item as Mobo; return m.wifi ? `${m.lan} · ${m.wifi}` : m.lan } },
   ],
+  cooler: [
+    { key: 'ctype', label: 'coolerSize', kind: 'text', hide: 'lg', text: (r) => { const c = r.item as Cooler; return c.form === 'aio' ? `${c.radiator_mm}×${c.thickness_mm ?? '—'}mm` : `${c.height_mm}mm · ${c.fans}` } },
+    { key: 'tdp', label: 'tdpRated', kind: 'text', align: 'right', hide: 'xl', text: (r) => `${(r.item as Cooler).tdp_w}W` },
+    { key: 'cooling', label: 'cooling', kind: 'score', sortKey: 'cooling' },
+    { key: 'quiet', label: 'quiet', kind: 'score', hide: 'lg', sortKey: 'quiet', raw: (r) => `${(r.item as Cooler).noise_db} dBA` },
+    { key: 'overall', label: 'overall', kind: 'score', sortKey: 'overall' },
+  ],
 }
 
 export function formBadge(cat: Category, row: RankedRow): string {
@@ -81,6 +88,7 @@ export function formBadge(cat: Category, row: RankedRow): string {
   }
   if (cat === 'psu') return (it as Psu).form === 'sfx' ? 'SFX' : ''
   if (cat === 'mobo') return sizeLabel((it as Mobo).size)
+  if (cat === 'cooler') { const c = it as Cooler; return c.lcd ? 'LCD' : c.form === 'air' && c.type === 'top-down' ? 'ITX' : '' }
   return ''
 }
 
@@ -89,5 +97,6 @@ export function genBadge(cat: Category, row: RankedRow): string {
   if (cat === 'cpu') return (row.item as Cpu).gen
   if (cat === 'gpu') return (row.item as Gpu).gen
   if (cat === 'mobo') return (row.item as Mobo).chipset
+  if (cat === 'cooler') return coolerTypeLabel((row.item as Cooler).type)
   return ''
 }

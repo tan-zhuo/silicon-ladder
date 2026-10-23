@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
-import type { Category, Cpu, Gpu, Ram, Storage, Psu, Mobo, Meta, AnyItem, NewsData } from '@/types/hardware'
+import type { Category, Cpu, Gpu, Ram, Storage, Psu, Mobo, Cooler, Meta, AnyItem, NewsData } from '@/types/hardware'
 import { FX } from '@/utils/format'
 
 async function fetchJson<T>(path: string): Promise<T> {
@@ -21,6 +21,7 @@ export const useCatalog = defineStore('catalog', () => {
   const storages = ref<Storage[]>([])
   const psus = ref<Psu[]>([])
   const mobos = ref<Mobo[]>([])
+  const coolers = ref<Cooler[]>([])
   const news = ref<NewsData>({ updated: '', note: '', items: [] })
 
   let pending: Promise<void> | null = null
@@ -29,7 +30,7 @@ export const useCatalog = defineStore('catalog', () => {
     if (pending) return pending
     pending = (async () => {
       try {
-        const [m, c, g, r, s, p, b] = await Promise.all([
+        const [m, c, g, r, s, p, b, k] = await Promise.all([
           fetchJson<Meta>('meta.json'),
           fetchJson<Cpu[]>('cpus.json'),
           fetchJson<Gpu[]>('gpus.json'),
@@ -37,6 +38,7 @@ export const useCatalog = defineStore('catalog', () => {
           fetchJson<Storage[]>('storages.json'),
           fetchJson<Psu[]>('psus.json'),
           fetchJson<Mobo[]>('mobos.json').catch(() => [] as Mobo[]),
+          fetchJson<Cooler[]>('coolers.json').catch(() => [] as Cooler[]),
         ])
         meta.value = m
         fetchJson<NewsData>('news.json').then((n) => { news.value = n }).catch(() => { /* 新闻源可选 */ })
@@ -47,6 +49,7 @@ export const useCatalog = defineStore('catalog', () => {
         storages.value = s
         psus.value = p
         mobos.value = b
+        coolers.value = k
         loaded.value = true
       } catch (e) {
         error.value = (e as Error).message
@@ -63,6 +66,7 @@ export const useCatalog = defineStore('catalog', () => {
       case 'storage': return storages.value
       case 'psu': return psus.value
       case 'mobo': return mobos.value
+      case 'cooler': return coolers.value
     }
   }
 
@@ -73,5 +77,5 @@ export const useCatalog = defineStore('catalog', () => {
     return index.get(key)
   }
 
-  return { loaded, error, meta, news, cpus, gpus, rams, storages, psus, mobos, load, byCategory, find }
+  return { loaded, error, meta, news, cpus, gpus, rams, storages, psus, mobos, coolers, load, byCategory, find }
 })

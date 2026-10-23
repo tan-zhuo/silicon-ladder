@@ -12,7 +12,7 @@ import type { Category } from '@/types/hardware'
 const { t } = useI18n()
 const catalog = useCatalog()
 const p = (v: L3) => v[locale.value === 'en' ? 1 : locale.value === 'ja' ? 2 : 0]
-const maps = computed(() => Object.fromEntries((['cpu', 'gpu', 'ram', 'storage', 'psu', 'mobo'] as Category[]).map((c) => [c, scoreAllPools(c, catalog.byCategory(c))])))
+const maps = computed(() => Object.fromEntries((['cpu', 'gpu', 'ram', 'storage', 'psu', 'mobo', 'cooler'] as Category[]).map((c) => [c, scoreAllPools(c, catalog.byCategory(c))])))
 const item = (cat: Category, id: string) => catalog.find(cat, id)
 const overall = (cat: Category, id: string) => maps.value[cat]?.get(id)?.rel.overall ?? null
 const tierOf = (cat: Category, id: string) => { const it = item(cat, id) as { tier?: string } | undefined; return it?.tier ?? null }
