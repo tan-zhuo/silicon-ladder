@@ -1,0 +1,154 @@
+{
+  "$description": "品牌 Logo 来源清单。si = simple-icons 导出名；commons = Wikimedia Commons 文件名；url = 直接地址；mono 可强制单色（填充改 currentColor 以适配暗色）。无矢量来源的品牌走 BrandLogo 的文字字标回退。运行 npm run gen:logos 生成 src/assets/brandLogos.ts。",
+  "AMD": {
+    "si": "siAmd"
+  },
+  "Intel": {
+    "si": "siIntel"
+  },
+  "NVIDIA": {
+    "si": "siNvidia"
+  },
+  "Apple": {
+    "si": "siApple"
+  },
+  "Qualcomm": {
+    "si": "siQualcomm"
+  },
+  "Samsung": {
+    "si": "siSamsung"
+  },
+  "Corsair": {
+    "si": "siCorsair"
+  },
+  "Kingston": {
+    "si": "siKingstontechnology"
+  },
+  "Seagate": {
+    "si": "siSeagate"
+  },
+  "MSI": {
+    "si": "siMsi"
+  },
+  "Cooler Master": {
+    "si": "siCoolermaster"
+  },
+  "ASUS": {
+    "si": "siAsus"
+  },
+  "NZXT": {
+    "si": "siNzxt"
+  },
+  "DeepCool": {
+    "si": "siDeepcool"
+  },
+  "Toshiba": {
+    "si": "siToshiba"
+  },
+  "Hitachi": {
+    "si": "siHitachi"
+  },
+  "Lenovo": {
+    "si": "siLenovo"
+  },
+  "Dell": {
+    "si": "siDell"
+  },
+  "HP": {
+    "si": "siHp"
+  },
+  "Acer": {
+    "si": "siAcer"
+  },
+  "HyperX": {
+    "url": "https://cdn.simpleicons.org/hyperx",
+    "mono": true
+  },
+  "WD": {
+    "commons": "File:Western Digital brand mark 2025.svg"
+  },
+  "SanDisk": {
+    "commons": "File:SanDisk 2024 logo.svg"
+  },
+  "SK Hynix": {
+    "commons": "File:SK Hynix.svg"
+  },
+  "KIOXIA": {
+    "commons": "File:Kioxia.svg"
+  },
+  "Lexar": {
+    "commons": "File:Lexar.svg"
+  },
+  "ADATA": {
+    "commons": "File:Adata wordmark.svg"
+  },
+  "Seasonic": {
+    "commons": "File:Seasonic logo.svg"
+  },
+  "be quiet!": {
+    "commons": "File:Be-quiet! Logo.svg"
+  },
+  "Thermaltake": {
+    "commons": "File:Thermaltake wordmark.svg",
+    "stripClip": true
+  },
+  "Gigabyte": {
+    "commons": "File:Gigabyte Technology Logo.svg"
+  },
+  "EVGA": {
+    "commons": "File:EVGA Logo.svg"
+  },
+  "Antec": {
+    "commons": "File:Antec 2017 logo.svg"
+  },
+  "Lian Li": {
+    "commons": "File:Lian Li logo.svg"
+  },
+  "Micron": {
+    "commons": "File:Micron Technology logo 2024.svg"
+  },
+  "Patriot": {
+    "commons": "File:Patriot Memory logo.svg"
+  },
+  "PNY": {
+    "commons": "File:PNY Technologies logo.svg"
+  },
+  "Silicon Power": {
+    "commons": "File:Silicon Power logo.svg"
+  },
+  "Phanteks": {
+    "commons": "File:Phanteks-logo.svg"
+  },
+  "Fractal Design": {
+    "commons": "File:Fractal Design logo 2019.svg"
+  },
+  "Enermax": {
+    "commons": "File:Enermax Technology logo.svg"
+  },
+  "Zotac": {
+    "commons": "File:Logo of Zotac International.svg"
+  },
+  "OCZ": {
+    "commons": "File:OCZ Technology 2014 logo.svg"
+  },
+  "Transcend": {
+    "commons": "File:Transcend Logo.svg"
+  },
+  "HIKVISION": {
+    "commons": "File:Hikvision logo.svg"
+  },
+  "TEAMGROUP": {
+    "url": "https://www.teamgroupinc.com/public/images/logo.svg"
+  },
+  "XPG": {
+    "url": "https://www.xpg.com/vendor/xpgcms/0.5.3/img/chrome/xpg-logo.svg",
+    "referer": "https://www.xpg.com/"
+  },
+  "Montech": {
+    "url": "https://www.montech.com/images/montech-logo.svg",
+    "whiteToCurrent": true
+  },
+  "XFX": {
+    "commons": "File:XFX 2019 logo.svg"
+  }
+}
