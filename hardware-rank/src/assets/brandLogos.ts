@@ -28,6 +28,7 @@ import l_teamgroup_svg from './logos/teamgroup.svg?raw'
 import l_xpg_svg from './logos/xpg.svg?raw'
 import l_montech_svg from './logos/montech.svg?raw'
 import l_xfx_svg from './logos/xfx.svg?raw'
+import l_asrock_svg from './logos/asrock.svg?raw'
 export interface BrandLogo { title: string; hex: string; path?: string; svg?: string; mono?: boolean; tone?: string; toneDark?: boolean; ratio?: number }
 export const BRAND_LOGOS: Record<string, BrandLogo> = {
   "AMD": {
@@ -354,5 +355,14 @@ export const BRAND_LOGOS: Record<string, BrandLogo> = {
     "svg": l_xfx_svg,
     "mono": true,
     "ratio": 5.92
+  },
+  "ASRock": {
+    "title": "ASRock",
+    "hex": "#79bd28",
+    "svg": l_asrock_svg,
+    "mono": false,
+    "tone": "#79bd28",
+    "toneDark": false,
+    "ratio": 5.78
   }
 }

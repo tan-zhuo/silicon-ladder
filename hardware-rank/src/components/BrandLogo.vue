@@ -4,7 +4,7 @@ import { computed } from 'vue'
 import { BRAND_LOGOS } from '@/assets/brandLogos'
 import { brandColor } from '@/utils/format'
 
-const props = withDefaults(defineProps<{ brand: string; size?: number; mono?: boolean }>(), { size: 18, mono: false })
+const props = withDefaults(defineProps<{ brand: string; size?: number; mono?: boolean; maxRatio?: number }>(), { size: 18, mono: false, maxRatio: 3.6 })
 const logo = computed(() => BRAND_LOGOS[props.brand])
 const fill = computed(() => {
   if (props.mono) return 'currentColor'
@@ -15,7 +15,7 @@ const fill = computed(() => {
 })
 /** 横向字标最大宽度 = 3.6 倍高度（更宽的按比例缩小），避免长 Logo 把行撑爆 */
 const vecStyle = computed(() => {
-  const r = Math.min(logo.value?.ratio ?? 1, 3.6)
+  const r = Math.min(logo.value?.ratio ?? 1, props.maxRatio)
   // 单一品牌色的矢量：亮色用品牌色；暗色下品牌色太深则改用前景色（.tone-dark 由 CSS 接管）
   const tone = !props.mono && logo.value?.tone ? logo.value.tone : undefined
   return { height: props.size + 'px', width: Math.round(props.size * r) + 'px', '--brand-tone': tone }

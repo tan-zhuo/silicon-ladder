@@ -10,10 +10,10 @@ const prefix = (l) => (l === 'zh' ? '' : `/${l}`)
 const load = (f) => JSON.parse(readFileSync(`public/data/${f}`, 'utf8'))
 const meta = load('meta.json')
 const news = (() => { try { return load('news.json') } catch { return { items: [] } } })()
-const data = { cpu: load('cpus.json'), gpu: load('gpus.json'), ram: load('rams.json'), storage: load('storages.json'), psu: load('psus.json') }
+const data = { cpu: load('cpus.json'), gpu: load('gpus.json'), ram: load('rams.json'), storage: load('storages.json'), psu: load('psus.json'), mobo: (() => { try { return load('mobos.json') } catch { return [] } })() }
 
 const T = {
-  zh: { site: 'CPU.News — 消费级硬件排行榜', cat: { cpu: 'CPU', gpu: 'GPU', ram: '内存', storage: '存储', psu: '电源' }, form: { desktop: '桌面', laptop: '笔记本', igpu: '核显', 'kit-desktop': '台式套装', sodimm: '笔记本条', onboard: '板载', nvme: 'NVMe', sata: 'SATA', hdd: 'HDD', atx: 'ATX', sfx: 'SFX' },
+  zh: { site: 'CPU.News — 消费级硬件排行榜', cat: { cpu: 'CPU', gpu: 'GPU', ram: '内存', storage: '存储', psu: '电源', mobo: '主板' }, form: { desktop: '桌面', laptop: '笔记本', igpu: '核显', 'kit-desktop': '台式套装', sodimm: '笔记本条', onboard: '板载', nvme: 'NVMe', sata: 'SATA', hdd: 'HDD', atx: 'ATX', sfx: 'SFX', am5: 'AM5', lga1851: 'LGA1851', am4: 'AM4', lga1700: 'LGA1700' },
     rankTitle: (c, fs) => `${c} 排行榜 / 天梯图 — ${fs.join(' / ')}分池 · CPU.News`, rankDesc: (c, n, fs) => `${c} 排行榜与天梯图，收录 ${n} 款（${fs.join('、')}），支持游戏 / 单核 / 多核 / 能效 / 性价比切换，AMD、Intel、NVIDIA 并列对照。数据更新 ${meta.updated}。`,
     rankH1: (c) => `${c} 排行榜 / 天梯图`, prodTitle: (n, f, c) => `${n} 规格、跑分、天梯排名与兼容性 · ${f} ${c} · CPU.News`, prodDesc: (b, n, r, s, l) => `${b} ${n}（${r}）：${s} ${l}。`, viewAll: (c) => `查看 ${c} 完整排行榜`, home: '首页', rankings: '排行榜',
     guide: ['场景选购指南 — 游戏 / 生产力 / 轻薄本 / 游戏本 · CPU.News', '四个常见场景各 3 条硬件推荐：纯游戏台式机、生产力剪辑、轻薄本、游戏本。', '场景选购指南'],
@@ -22,7 +22,7 @@ const T = {
     news: ['硬件新闻 — AMD / NVIDIA / Apple / Samsung 官方动态 · CPU.News', '仅聚合厂商官方新闻室的最新动态标题与链接，点击跳转官方原文。', '硬件新闻'],
     compare: ['硬件对比 — 同品类最多 4 项并排 · CPU.News', 'CPU / GPU / 内存 / 存储 / 电源同品类并排对比，规格与相对分一目了然。', '硬件对比'],
     spec: { socket: '插槽', cores: '核心 / 线程', clocks: '频率', tdp: 'TDP', igpu: '核显', l3: 'L3', mem: '内存', st: 'Cinebench 2024 单核', mt: 'Cinebench 2024 多核', arch: '架构', chip: '核心', vram: '显存', bus: '位宽', tbp: 'TBP', tgp: 'TGP', raster: '光栅相对分', rt: '光追相对分', spec: '规格', cap: '容量', speed: '速率', cl: 'CL', read: '读带宽', lat: '延迟', iface: '接口', nand: '颗粒', dram: 'DRAM', seq: '顺序读/写', r4k: '4K 随机读', co: '缓外写入', tbw: 'TBW', watt: '瓦数', tier: '分档', eff: '认证', atx31: 'ATX 3.1', mod: '模组', oem: 'OEM', yes: '有', no: '无', y: '是', n: '否' } },
-  en: { site: 'CPU.News — Consumer Hardware Rankings', cat: { cpu: 'CPU', gpu: 'GPU', ram: 'Memory', storage: 'Storage', psu: 'PSU' }, form: { desktop: 'Desktop', laptop: 'Laptop', igpu: 'iGPU', 'kit-desktop': 'Desktop kit', sodimm: 'SO-DIMM', onboard: 'Onboard', nvme: 'NVMe', sata: 'SATA', hdd: 'HDD', atx: 'ATX', sfx: 'SFX' },
+  en: { site: 'CPU.News — Consumer Hardware Rankings', cat: { cpu: 'CPU', gpu: 'GPU', ram: 'Memory', storage: 'Storage', psu: 'PSU', mobo: 'Motherboard' }, form: { desktop: 'Desktop', laptop: 'Laptop', igpu: 'iGPU', 'kit-desktop': 'Desktop kit', sodimm: 'SO-DIMM', onboard: 'Onboard', nvme: 'NVMe', sata: 'SATA', hdd: 'HDD', atx: 'ATX', sfx: 'SFX', am5: 'AM5', lga1851: 'LGA1851', am4: 'AM4', lga1700: 'LGA1700' },
     rankTitle: (c, fs) => `${c} Rankings & Ladder — ${fs.join(' / ')} pools · CPU.News`, rankDesc: (c, n, fs) => `${c} rankings and ladder chart with ${n} entries (${fs.join(', ')}). Switch between gaming, single-core, multi-core, efficiency and value; AMD, Intel and NVIDIA side by side. Data updated ${meta.updated}.`,
     rankH1: (c) => `${c} Rankings & Ladder`, prodTitle: (n, f, c) => `${n} specs, benchmarks, ladder rank & compatibility · ${f} ${c} · CPU.News`, prodDesc: (b, n, r, s, l) => `${b} ${n} (${r}): ${s} ${l}.`, viewAll: (c) => `See the full ${c} rankings`, home: 'Home', rankings: 'Rankings',
     guide: ['Buying guide by scenario — gaming / productivity / thin & light / gaming laptop · CPU.News', 'Three hardware picks for each of four scenarios: gaming desktop, productivity, thin & light, gaming laptop.', 'Buying guide by scenario'],
@@ -31,7 +31,7 @@ const T = {
     news: ['Hardware News — official AMD / NVIDIA / Apple / Samsung updates · CPU.News', 'Headlines aggregated only from official vendor newsrooms, linking to the original posts.', 'Hardware News'],
     compare: ['Hardware compare — up to 4 items side by side · CPU.News', 'Compare CPUs, GPUs, memory, storage and PSUs within a category: specs and relative scores at a glance.', 'Hardware compare'],
     spec: { socket: 'Socket', cores: 'Cores / threads', clocks: 'Clocks', tdp: 'TDP', igpu: 'iGPU', l3: 'L3', mem: 'Memory', st: 'Cinebench 2024 single', mt: 'Cinebench 2024 multi', arch: 'Architecture', chip: 'Die', vram: 'VRAM', bus: 'Bus', tbp: 'TBP', tgp: 'TGP', raster: 'Raster (relative)', rt: 'RT (relative)', spec: 'Spec', cap: 'Capacity', speed: 'Speed', cl: 'CL', read: 'Read BW', lat: 'Latency', iface: 'Interface', nand: 'NAND', dram: 'DRAM', seq: 'Seq. read/write', r4k: '4K random read', co: 'Post-cache write', tbw: 'TBW', watt: 'Wattage', tier: 'Tier', eff: 'Rating', atx31: 'ATX 3.1', mod: 'Modular', oem: 'OEM', yes: 'Yes', no: 'No', y: 'Yes', n: 'No' } },
-  ja: { site: 'CPU.News — コンシューマー向けハードウェアランキング', cat: { cpu: 'CPU', gpu: 'GPU', ram: 'メモリ', storage: 'ストレージ', psu: '電源' }, form: { desktop: 'デスクトップ', laptop: 'ノート', igpu: '内蔵GPU', 'kit-desktop': 'デスクトップ用', sodimm: 'SO-DIMM', onboard: 'オンボード', nvme: 'NVMe', sata: 'SATA', hdd: 'HDD', atx: 'ATX', sfx: 'SFX' },
+  ja: { site: 'CPU.News — コンシューマー向けハードウェアランキング', cat: { cpu: 'CPU', gpu: 'GPU', ram: 'メモリ', storage: 'ストレージ', psu: '電源', mobo: 'マザーボード' }, form: { desktop: 'デスクトップ', laptop: 'ノート', igpu: '内蔵GPU', 'kit-desktop': 'デスクトップ用', sodimm: 'SO-DIMM', onboard: 'オンボード', nvme: 'NVMe', sata: 'SATA', hdd: 'HDD', atx: 'ATX', sfx: 'SFX', am5: 'AM5', lga1851: 'LGA1851', am4: 'AM4', lga1700: 'LGA1700' },
     rankTitle: (c, fs) => `${c} ランキング / 性能ラダー — ${fs.join(' / ')} 別 · CPU.News`, rankDesc: (c, n, fs) => `${c} のランキングと性能ラダー。${n} 件収録（${fs.join('、')}）。ゲーム / シングル / マルチ / 電力効率 / コスパを切替、AMD・Intel・NVIDIA を左右対照。データ更新 ${meta.updated}。`,
     rankH1: (c) => `${c} ランキング / 性能ラダー`, prodTitle: (n, f, c) => `${n} 仕様・ベンチマーク・ラダー順位・互換性 · ${f} ${c} · CPU.News`, prodDesc: (b, n, r, s, l) => `${b} ${n}（${r}）：${s} ${l}。`, viewAll: (c) => `${c} の全ランキングを見る`, home: 'ホーム', rankings: 'ランキング',
     guide: ['シーン別購入ガイド — ゲーム / 生産性 / 薄型 / ゲーミングノート · CPU.News', 'よくある4シーンにハードウェアを各3件推奨：ゲーム用デスクトップ、生産性、薄型ノート、ゲーミングノート。', 'シーン別購入ガイド'],
@@ -93,6 +93,7 @@ function specLines(cat, i, S) {
     case 'ram': return [[S.spec, i.spec], [S.cap, i.capacity_gb + 'GB'], [S.speed, i.speed_mt + ' MT/s'], [S.cl, i.cl ?? '—'], [S.read, i.scores.read_GBs ? i.scores.read_GBs + ' GB/s' : '—'], [S.lat, i.scores.latency_ns ? i.scores.latency_ns + ' ns' : '—']]
     case 'storage': return [[S.iface, i.interface], [S.cap, i.capacity_gb + 'GB'], [S.nand, i.nand ?? '—'], [S.dram, i.dram ? S.yes : S.no], [S.seq, `${i.seq_read ?? '—'} / ${i.seq_write ?? '—'} MB/s`], [S.r4k, i.iops_4k_read ?? '—'], [S.co, i.write_cache_out ? i.write_cache_out + ' MB/s' : '—'], [S.tbw, i.tbw ?? '—']]
     case 'psu': return [[S.watt, i.watt + 'W'], [S.tier, i.tier], [S.eff, i.efficiency], [S.atx31, i.atx31 ? S.y : S.n], [S.mod, i.modular], [S.oem, i.oem]]
+    case 'mobo': return [['Chipset', i.chipset], ['Form factor', i.size.toUpperCase()], [S.tier, i.tier], ['VRM', i.vrm], [S.mem, `${i.mem_slots}× ${i.mem_type}-${i.mem_max_mt}`], ['M.2', `${i.m2}${i.m2_gen5 ? ` (${i.m2_gen5}× PCIe 5.0)` : ''}`], ['LAN', i.lan], ['Wi-Fi', i.wifi ?? '—'], ['USB4', i.usb4 ? S.y : S.n]]
   }
 }
 

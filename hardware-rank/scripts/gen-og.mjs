@@ -5,9 +5,9 @@ import { Resvg } from '@resvg/resvg-js'
 
 const DIST = 'dist'
 const load = (f) => JSON.parse(readFileSync(`public/data/${f}`, 'utf8'))
-const data = { cpu: load('cpus.json'), gpu: load('gpus.json'), ram: load('rams.json'), storage: load('storages.json'), psu: load('psus.json') }
-const CAT = { cpu: 'CPU', gpu: 'GPU', ram: 'MEMORY', storage: 'STORAGE', psu: 'PSU' }
-const FORM = { desktop: 'Desktop', laptop: 'Laptop', igpu: 'iGPU', 'kit-desktop': 'Desktop kit', sodimm: 'SO-DIMM', onboard: 'Onboard', nvme: 'NVMe', sata: 'SATA', hdd: 'HDD', atx: 'ATX', sfx: 'SFX' }
+const data = { cpu: load('cpus.json'), gpu: load('gpus.json'), ram: load('rams.json'), storage: load('storages.json'), psu: load('psus.json'), mobo: (() => { try { return load('mobos.json') } catch { return [] } })() }
+const CAT = { cpu: 'CPU', gpu: 'GPU', ram: 'MEMORY', storage: 'STORAGE', psu: 'PSU', mobo: 'MOTHERBOARD' }
+const FORM = { desktop: 'Desktop', laptop: 'Laptop', igpu: 'iGPU', 'kit-desktop': 'Desktop kit', sodimm: 'SO-DIMM', onboard: 'Onboard', nvme: 'NVMe', sata: 'SATA', hdd: 'HDD', atx: 'ATX', sfx: 'SFX', am5: 'AM5', lga1851: 'LGA1851', am4: 'AM4', lga1700: 'LGA1700' }
 const COLOR = { AMD: '#E65C00', NVIDIA: '#76B900', Intel: '#0071C5', Apple: '#8E8E93', Qualcomm: '#3253DC' }
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]))
 const latin = (s) => String(s ?? '').replace(/[^\x20-\x7E -ɏ–—·×]/g, '').replace(/\s+/g, ' ').trim()
@@ -20,6 +20,7 @@ function lines(cat, i) {
     case 'ram': return [['Spec', i.spec], ['Speed', i.speed_mt + ' MT/s'], ['CL', i.cl ?? '—'], ['Read', i.scores.read_GBs ? i.scores.read_GBs + ' GB/s' : '—'], ['Latency', i.scores.latency_ns ? i.scores.latency_ns + ' ns' : '—']]
     case 'storage': return [['Interface', i.interface.toUpperCase()], ['Capacity', i.capacity_gb >= 1000 ? i.capacity_gb / 1000 + 'TB' : i.capacity_gb + 'GB'], ['Seq. read', i.seq_read ? i.seq_read + ' MB/s' : '—'], ['4K read', i.iops_4k_read ? Math.round(i.iops_4k_read / 1000) + 'K IOPS' : '—'], ['DRAM', i.dram ? 'Yes' : 'No']]
     case 'psu': return [['Wattage', i.watt + 'W'], ['Tier', i.tier], ['Rating', i.efficiency], ['ATX 3.1', i.atx31 ? 'Yes' : 'No'], ['Modular', i.modular]]
+    case 'mobo': return [['Chipset', i.chipset], ['Form', i.size.toUpperCase()], ['Tier', i.tier], ['VRM', i.vrm], ['Memory', `${i.mem_type}-${i.mem_max_mt}`]]
   }
 }
 const fit = (s, max) => (s.length > max ? s.slice(0, max - 1) + '…' : s)

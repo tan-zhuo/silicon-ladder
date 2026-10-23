@@ -14,11 +14,13 @@ const RULES = {
   'rams.json': { form: ['kit-desktop', 'sodimm', 'onboard'], req: ['type', 'spec', 'capacity_gb', 'speed_mt'], scores: ['read_GBs', 'write_GBs', 'latency_ns'] },
   'storages.json': { form: ['nvme', 'sata', 'hdd'], req: ['interface', 'capacity_gb', 'dram'], nums: ['seq_read', 'seq_write', 'iops_4k_read', 'write_cache_out', 'tbw'] },
   'psus.json': { form: ['atx', 'sfx'], req: ['watt', 'tier', 'efficiency', 'atx31', 'modular', 'oem'], enums: { tier: ['A', 'B', 'C', 'D'], modular: ['full', 'semi', 'none'] } },
+  'mobos.json': { form: ['am5', 'lga1851', 'am4', 'lga1700'], req: ['chipset', 'size', 'tier', 'vrm', 'vrm_phases', 'vrm_amps', 'mem_slots', 'mem_max_mt', 'mem_type', 'm2', 'm2_gen5', 'pcie5_x16', 'lan', 'wifi', 'usb4', 'flashback'], enums: { tier: ['A', 'B', 'C', 'D'], size: ['atx', 'eatx', 'matx', 'itx'], mem_type: ['DDR5', 'DDR4'] }, nums: ['vrm_phases', 'vrm_amps', 'mem_slots', 'mem_max_mt', 'm2', 'm2_gen5'] },
 }
 const allIds = new Map()
 let total = 0
 for (const [f, rule] of Object.entries(RULES)) {
-  const arr = load(f)
+  let arr
+  try { arr = load(f) } catch (e) { if (f === 'mobos.json') { console.warn('⚠ mobos.json 缺失，跳过'); continue } throw e }
   const seen = new Set()
   for (const it of arr) {
     total++

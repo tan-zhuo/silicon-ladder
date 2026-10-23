@@ -26,7 +26,7 @@ const sortLabel = computed(() => t('sort.' + props.sort))
 const hideCls = (c: { hide?: 'lg' | 'xl' }) => (c.hide === 'lg' ? 'hidden lg:table-cell' : c.hide === 'xl' ? 'hidden xl:table-cell' : '')
 function go(row: RankedRow) { router.push(`/product/${props.category}/${row.item.id}`) }
 function currentScore(row: RankedRow): string {
-  if (props.category === 'psu') return `${row.raw.tier}`
+  if (props.category === 'psu' || props.category === 'mobo') return `${row.raw.tier}`
   if (props.sort === 'latency') return row.raw.latency == null ? '—' : `${row.raw.latency} ns`
   return fmtRel(row.rel[props.sort])
 }
@@ -69,7 +69,7 @@ function currentScore(row: RankedRow): string {
               </td>
               <td class="px-2 py-2.5">
                 <div class="flex items-center gap-2.5">
-                  <BrandLogo :brand="r.item.brand" :size="26" />
+                  <BrandLogo :brand="r.item.brand" :size="26" :max-ratio="2.4" />
                   <div class="min-w-0">
                     <div class="flex items-center gap-1.5 min-w-0">
                       <router-link :to="`/product/${category}/${r.item.id}`" class="font-medium truncate group-hover:text-accent transition-colors" :title="displayName(r.item)" @click.stop>{{ displayName(r.item) }}</router-link>
@@ -109,7 +109,7 @@ function currentScore(row: RankedRow): string {
     <div v-if="rows.length" class="md:hidden space-y-2">
       <div v-for="(r, ri) in visibleRows" :key="r.item.id" class="card card-hover p-3 flex items-center gap-3 rise-anim" :style="{ '--i': Math.min(ri, 30) }" tabindex="0" @click="go(r)" @keydown.enter="go(r)">
         <div class="rank-no" :class="r.rank <= 3 ? `rank-no-${r.rank}` : ''">{{ r.rank }}</div>
-        <BrandLogo :brand="r.item.brand" :size="24" />
+        <BrandLogo :brand="r.item.brand" :size="24" :max-ratio="2.2" />
         <div class="flex-1 min-w-0">
           <div class="font-semibold truncate">{{ displayName(r.item) }}</div>
           <div class="text-[11px] text-faint mt-0.5 truncate">

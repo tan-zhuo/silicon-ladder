@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { relScore, relInverse, weighted, scorePool, sortRows } from '../src/utils/rank'
-import type { Cpu, Gpu, Ram, Psu } from '../src/types/hardware'
+import type { Cpu, Gpu, Ram, Psu, Mobo } from '../src/types/hardware'
 
 const cpu = (id: string, o: Partial<Cpu> & { scores: Cpu['scores'] }): Cpu => ({
   id, name: id, nameEn: id, brand: 'AMD', form: 'desktop', series: 's', gen: 'g', socket: 'AM5', cores: '8/16', clocks: '', tdp_w: 100, cache_l3: '', mem: '', release: '2024-01', summary: '', tags: [], ...o,
@@ -79,5 +79,13 @@ describe('PSU order', () => {
     const p = (id: string, tier: Psu['tier'], watt: number): Psu => ({ id, name: id, brand: 'x', form: 'atx', watt, tier, efficiency: '', atx31: false, modular: 'full', oem: '', release: '2024-01', summary: '' })
     const rows = sortRows('psu', scorePool('psu', [p('b1000', 'B', 1000), p('a750', 'A', 750), p('a850', 'A', 850)]), 'tier')
     expect(rows.map((r) => r.item.id)).toEqual(['a850', 'a750', 'b1000'])
+  })
+})
+
+describe('Motherboard order', () => {
+  it('tier A→D, then VRM capacity (phases × amps), then memory ceiling', () => {
+    const m = (id: string, tier: Mobo['tier'], phases: number, amps: number, mem = 8000): Mobo => ({ id, name: id, brand: 'x', form: 'am5', chipset: 'X870E', size: 'atx', tier, vrm: `${phases}+2 ${amps}A`, vrm_phases: phases, vrm_amps: amps, mem_slots: 4, mem_max_mt: mem, mem_type: 'DDR5', m2: 4, m2_gen5: 2, pcie5_x16: true, lan: '2.5GbE', wifi: 'Wi-Fi 7', usb4: true, flashback: true, release: '2024-10', summary: '' })
+    const rows = sortRows('mobo', scorePool('mobo', [m('b-18x110', 'B', 18, 110), m('a-14x80', 'A', 14, 80), m('a-16x90', 'A', 16, 90), m('a-16x90-mem', 'A', 16, 90, 8400)]), 'tier')
+    expect(rows.map((r) => r.item.id)).toEqual(['a-16x90-mem', 'a-16x90', 'a-14x80', 'b-18x110'])
   })
 })

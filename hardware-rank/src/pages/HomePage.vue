@@ -23,14 +23,15 @@ const ICONS: Record<string, string> = {
   ram: 'M3 9h18v6H3zM7 9V6M11 9V6M15 9V6M7 15v3M11 15v3M15 15v3',
   storage: 'M4 6h16v5H4zM4 13h16v5H4zM7 8.5h.01M7 15.5h.01',
   psu: 'M13 2L4 14h7l-1 8 9-12h-7z',
+  mobo: 'M4 4h16v16H4zM8 8h5v5H8zM16 8v2M16 12v2M8 16h8',
   compare: 'M4 5h6v14H4zM14 5h6v14h-6z',
 }
-const cards = computed(() => (['cpu', 'gpu', 'ram', 'storage', 'psu', 'compare'] as const).map((k) => ({
+const cards = computed(() => (['cpu', 'gpu', 'ram', 'storage', 'psu', 'mobo', 'compare'] as const).map((k) => ({
   key: k, to: k === 'compare' ? '/compare' : `/rank/${k}`, title: k === 'compare' ? t('nav.compare') : catLabel(k), desc: t('home.cards.' + k), icon: ICONS[k],
   count: k === 'compare' ? null : catalog.byCategory(k).length,
 })))
 
-const all = computed<{ cat: Category; item: AnyItem }[]>(() => (['cpu', 'gpu', 'ram', 'storage', 'psu'] as Category[]).flatMap((cat) => catalog.byCategory(cat).map((item) => ({ cat, item }))))
+const all = computed<{ cat: Category; item: AnyItem }[]>(() => (['cpu', 'gpu', 'ram', 'storage', 'psu', 'mobo'] as Category[]).flatMap((cat) => catalog.byCategory(cat).map((item) => ({ cat, item }))))
 const hits = computed(() => (q.value.trim() ? all.value.filter((x) => matchQuery(x.item, q.value)).slice(0, 8) : []))
 const recent = computed(() => [...all.value].sort((a, b) => b.item.release.localeCompare(a.item.release)).slice(0, 4))
 const years = computed(() => { const ys = all.value.map((x) => yearOf(x.item.release)); return ys.length ? `${Math.min(...ys)}–${Math.max(...ys)}` : '—' })
@@ -92,7 +93,7 @@ useSeo(() => ({
     <div class="flex items-baseline justify-between mb-4">
       <div><h2 class="t-h2">{{ t('home.sectionCats') }}</h2><p class="text-sm text-muted mt-0.5">{{ t('home.sectionCatsDesc') }}</p></div>
     </div>
-    <div class="grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6 gap-4">
+    <div class="grid grid-cols-2 lg:grid-cols-4 2xl:grid-cols-7 gap-4">
       <router-link v-for="c in cards" :key="c.key" :to="c.to" class="card card-hover p-5 group relative overflow-hidden">
         <div class="w-11 h-11 rounded-sm bg-card2 border border-line text-fg flex items-center justify-center mb-5 group-hover:text-accent group-hover:border-line2 transition-colors">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path :d="c.icon" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>

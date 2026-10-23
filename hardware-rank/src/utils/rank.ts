@@ -1,4 +1,4 @@
-import type { Category, AnyItem, Cpu, Gpu, Ram, Storage, Psu, RankedRow } from '@/types/hardware'
+import type { Category, AnyItem, Cpu, Gpu, Ram, Storage, Psu, Mobo, RankedRow } from '@/types/hardware'
 
 /** 相对分：round(x / max * 1000) / 10，缺失 -> null */
 export function relScore(x: number | null | undefined, max: number | null): number | null {
@@ -66,6 +66,7 @@ export const SORT_DEFS: Record<Category, SortDef[]> = {
     { key: 'endurance' },
   ],
   psu: [{ key: 'tier' }],
+  mobo: [{ key: 'tier' }],
 }
 
 /** 每个品类可用的 form 枚举 */
@@ -92,6 +93,12 @@ export const FORMS: Record<Category, { key: string }[]> = {
   psu: [
     { key: 'atx' },
     { key: 'sfx' },
+  ],
+  mobo: [
+    { key: 'am5' },
+    { key: 'lga1851' },
+    { key: 'am4' },
+    { key: 'lga1700' },
   ],
 }
 
@@ -275,6 +282,19 @@ function rankPsu(pool: Psu[]): RankedRow<Psu>[] {
   }))
 }
 
+/* ---------------- Motherboard ---------------- */
+/** 主板与电源一样按用料分档，不跑分；同档内按 VRM 供电能力（相数×电流）再按内存上限排序 */
+function rankMobo(pool: Mobo[]): RankedRow<Mobo>[] {
+  const tierNum: Record<string, number> = { A: 4, B: 3, C: 2, D: 1 }
+  return pool.map((m) => ({
+    item: m,
+    rank: 0,
+    sortValue: null,
+    raw: { tier: m.tier, tierNum: tierNum[m.tier], vrm: m.vrm_phases * m.vrm_amps, memMax: m.mem_max_mt },
+    rel: {},
+  }))
+}
+
 /** 对同 category + 同 form 的池计算全部相对分（不排序） */
 export function scorePool(cat: Category, pool: AnyItem[]): RankedRow[] {
   if (!pool.length) return []
@@ -284,6 +304,7 @@ export function scorePool(cat: Category, pool: AnyItem[]): RankedRow[] {
     case 'ram': return rankRam(pool as Ram[])
     case 'storage': return rankStorage(pool as Storage[])
     case 'psu': return rankPsu(pool as Psu[])
+    case 'mobo': return rankMobo(pool as Mobo[])
   }
 }
 
@@ -294,6 +315,18 @@ export function sortRows(cat: Category, rows: RankedRow[], sortKey: string, dir:
       const ta = a.item as Psu, tb = b.item as Psu
       if (ta.tier !== tb.tier) return ta.tier < tb.tier ? -1 : 1
       if (ta.watt !== tb.watt) return tb.watt - ta.watt
+      return ta.name.localeCompare(tb.name)
+    })
+    if (dir === 'asc') sorted.reverse()
+    return sorted.map((r, i) => ({ ...r, sortValue: null, rank: i + 1 }))
+  }
+  if (cat === 'mobo') {
+    const sorted = [...rows].sort((a, b) => {
+      const ta = a.item as Mobo, tb = b.item as Mobo
+      if (ta.tier !== tb.tier) return ta.tier < tb.tier ? -1 : 1
+      const va = ta.vrm_phases * ta.vrm_amps, vb = tb.vrm_phases * tb.vrm_amps
+      if (va !== vb) return vb - va
+      if (ta.mem_max_mt !== tb.mem_max_mt) return tb.mem_max_mt - ta.mem_max_mt
       return ta.name.localeCompare(tb.name)
     })
     if (dir === 'asc') sorted.reverse()

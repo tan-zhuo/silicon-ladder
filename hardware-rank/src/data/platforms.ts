@@ -2,7 +2,7 @@
  * 平台 / 兼容性知识表：按插槽、代次派生，三语（zh / en / ja）。
  * 每条文案为 L(zh, en, ja) 三元组，运行时按当前语言取值。
  */
-import type { Cpu, Gpu, Storage, Psu, Ram } from '@/types/hardware'
+import type { Cpu, Gpu, Storage, Psu, Ram, Mobo } from '@/types/hardware'
 import { locale } from '@/i18n'
 
 type L3 = [string, string, string]
@@ -294,5 +294,28 @@ export function psuPlatform(p: Psu): Row[] {
   rows.push(row(LBL.carry, L(`${cls} 级`, `${cls} class`, `${cls} クラス`)))
   rows.push(row(LBL.modular, p.modular === 'full' ? L('全模组：所有线材可拆，理线方便', 'Fully modular: all cables detach, easy cable management', 'フルモジュラー：全ケーブル着脱可、配線が容易') : p.modular === 'semi' ? L('半模组：24-pin / CPU 固定', 'Semi-modular: 24-pin / CPU fixed', 'セミモジュラー：24-pin / CPU 固定') : L('非模组：线材固定，理线困难', 'Non-modular: fixed cables, harder to manage', '直出し：ケーブル固定、配線しにくい')))
   if (p.tier === 'D') rows.push(row(LBL.risk, L('标称功率与真实能力可能不符，不建议搭配独立显卡', 'Rated wattage may not reflect real capability; not recommended with a discrete GPU', '表記 W 数と実力が一致しない可能性。dGPU との組み合わせは非推奨')))
+  return rows
+}
+
+/* ---------- Motherboard ---------- */
+const SOCKET_INFO: Record<Mobo['form'], { cpu: L3; mem: L3; pcie: L3; cooler: L3; upgrade: L3 }> = {
+  am5: { cpu: L('Ryzen 7000 / 8000 / 9000（Zen 4 / Zen 5），含 X3D', 'Ryzen 7000 / 8000 / 9000 (Zen 4 / Zen 5), incl. X3D', 'Ryzen 7000 / 8000 / 9000（Zen 4 / Zen 5）、X3D 含む'), mem: L('仅 DDR5；EXPO 6000 CL30 为甜点', 'DDR5 only; EXPO 6000 CL30 is the sweet spot', 'DDR5 のみ。EXPO 6000 CL30 が定番'), pcie: L('CPU 直出 PCIe 5.0 ×16 + ×4（取决于芯片组是否开放）', 'CPU provides PCIe 5.0 ×16 + ×4 (chipset decides exposure)', 'CPU から PCIe 5.0 ×16 + ×4（チップセットにより公開）'), cooler: L('孔位与 AM4 相同，多数散热器免换扣具', 'Same mount as AM4; most coolers fit without new brackets', 'AM4 と同じ取付孔。多くのクーラーがそのまま使用可'), upgrade: L('AMD 承诺支持至 2027+，一板多代', 'AMD commits to support through 2027+; several generations on one board', 'AMD は 2027 年以降までのサポートを表明') },
+  lga1851: { cpu: L('Core Ultra 200S（Arrow Lake）', 'Core Ultra 200S (Arrow Lake)', 'Core Ultra 200S（Arrow Lake）'), mem: L('仅 DDR5；支持 CUDIMM，8000+ 可行', 'DDR5 only; CUDIMM supported, 8000+ feasible', 'DDR5 のみ。CUDIMM 対応で 8000 超も可'), pcie: L('CPU 直出 PCIe 5.0 ×16 + ×4 + Thunderbolt 4', 'CPU provides PCIe 5.0 ×16 + ×4 plus Thunderbolt 4', 'CPU から PCIe 5.0 ×16 + ×4 と Thunderbolt 4'), cooler: L('孔位沿用 LGA1700，注意 CPU 热点位置偏移', 'LGA1700 mount; note the shifted hot-spot', 'LGA1700 と同じ取付孔。ホットスポット位置の変化に注意'), upgrade: L('平台寿命较短，升级空间有限', 'Short-lived platform; limited upgrade headroom', 'プラットフォーム寿命は短め。アップグレード余地は限定的') },
+  am4: { cpu: L('Ryzen 1000–5000（Zen–Zen 3），含 5800X3D / 5700X3D', 'Ryzen 1000–5000 (Zen–Zen 3), incl. 5800X3D / 5700X3D', 'Ryzen 1000–5000（Zen〜Zen 3）、5800X3D / 5700X3D 含む'), mem: L('DDR4；3600 CL16 与 FCLK 1800 同步最佳', 'DDR4; 3600 CL16 with FCLK 1800 is ideal', 'DDR4。3600 CL16 + FCLK 1800 が最適'), pcie: L('X570 / B550 支持 PCIe 4.0 显卡与 M.2', 'X570 / B550 give PCIe 4.0 GPU and M.2', 'X570 / B550 は PCIe 4.0 GPU と M.2 に対応'), cooler: L('AM4 标准孔位', 'Standard AM4 mount', 'AM4 標準取付'), upgrade: L('平台终点为 5000 系，但 X3D 仍是游戏性价比之选', 'Platform ends at Ryzen 5000, but X3D remains a value gaming pick', '5000 シリーズで打ち止めだが X3D はコスパ良好') },
+  lga1700: { cpu: L('12 / 13 / 14 代 Core（Alder / Raptor Lake）', '12th / 13th / 14th Gen Core (Alder / Raptor Lake)', '第 12 / 13 / 14 世代 Core（Alder / Raptor Lake）'), mem: L('按板型分 DDR4 或 DDR5，不可混插', 'DDR4 or DDR5 depending on the board, never both', 'ボードにより DDR4 か DDR5。混在不可'), pcie: L('CPU 直出 PCIe 5.0 ×16 + 4.0 ×4', 'CPU provides PCIe 5.0 ×16 + 4.0 ×4', 'CPU から PCIe 5.0 ×16 + 4.0 ×4'), cooler: L('LGA1700 孔位；建议加防弯扣具', 'LGA1700 mount; a contact frame is recommended', 'LGA1700 取付。反り防止フレーム推奨'), upgrade: L('平台已到 14 代终点；注意 13/14 代微码更新', 'Platform ends at 14th Gen; keep 13th/14th-Gen microcode updated', '第 14 世代で終了。13/14 世代のマイクロコード更新に注意') },
+}
+export function moboPlatform(m: Mobo): Row[] {
+  const s = SOCKET_INFO[m.form]
+  const rows: Row[] = []
+  rows.push(row(LBL.socket, m.form.toUpperCase(), s.cpu))
+  rows.push(row(LBL.mem, L(`${m.mem_slots} 槽 ${m.mem_type}，最高 ${m.mem_max_mt} MT/s（OC）`, `${m.mem_slots} slots ${m.mem_type}, up to ${m.mem_max_mt} MT/s (OC)`, `${m.mem_slots} スロット ${m.mem_type}、最大 ${m.mem_max_mt} MT/s（OC）`), s.mem))
+  rows.push(row(LBL.pcie, m.pcie5_x16 ? L('显卡槽 PCIe 5.0 ×16', 'PCIe 5.0 ×16 GPU slot', 'GPU スロット PCIe 5.0 ×16') : L('显卡槽 PCIe 4.0 ×16', 'PCIe 4.0 ×16 GPU slot', 'GPU スロット PCIe 4.0 ×16'), s.pcie))
+  rows.push(row(LBL.iface, L(`M.2 ×${m.m2}${m.m2_gen5 ? `（${m.m2_gen5} 个 PCIe 5.0）` : ''} · ${m.lan}${m.wifi ? ' · ' + m.wifi : ''}${m.usb4 ? ' · USB4' : ''}`, `M.2 ×${m.m2}${m.m2_gen5 ? ` (${m.m2_gen5}× PCIe 5.0)` : ''} · ${m.lan}${m.wifi ? ' · ' + m.wifi : ''}${m.usb4 ? ' · USB4' : ''}`, `M.2 ×${m.m2}${m.m2_gen5 ? `（PCIe 5.0 ×${m.m2_gen5}）` : ''} · ${m.lan}${m.wifi ? ' · ' + m.wifi : ''}${m.usb4 ? ' · USB4' : ''}`)))
+  rows.push(row(LBL.cooler, s.cooler))
+  const sz = { eatx: L('E-ATX（305×277mm），需确认机箱支持', 'E-ATX (305×277 mm); check case support', 'E-ATX（305×277mm）。ケースの対応要確認'), atx: L('ATX（305×244mm）', 'ATX (305×244 mm)', 'ATX（305×244mm）'), matx: L('Micro-ATX（244×244mm）', 'Micro-ATX (244×244 mm)', 'Micro-ATX（244×244mm）'), itx: L('Mini-ITX（170×170mm），单 PCIe 槽', 'Mini-ITX (170×170 mm), single PCIe slot', 'Mini-ITX（170×170mm）、PCIe スロット 1 本') }[m.size]
+  rows.push(row(LBL.spec, sz))
+  rows.push(row(LBL.upgrade, s.upgrade))
+  if (m.flashback) rows.push(row(LBL.note, L('支持 BIOS Flashback，无 CPU 也能刷新固件', 'BIOS Flashback: update firmware without a CPU', 'BIOS Flashback 対応。CPU なしで更新可')))
+  if (m.tier === 'D') rows.push(row(LBL.risk, L('供电偏弱，不建议搭配 8 核以上或高功耗 CPU', 'Weak VRM; not recommended with 8+ core or high-power CPUs', 'VRM が弱め。8 コア超や高消費電力 CPU には非推奨')))
   return rows
 }

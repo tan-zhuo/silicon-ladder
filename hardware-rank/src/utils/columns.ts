@@ -1,5 +1,5 @@
-import type { Category, RankedRow, Cpu, Gpu, Ram, Storage, Psu } from '@/types/hardware'
-import { num, iops, ifaceLabel, modularLabel, DASH, vram } from '@/utils/format'
+import type { Category, RankedRow, Cpu, Gpu, Ram, Storage, Psu, Mobo } from '@/types/hardware'
+import { num, iops, ifaceLabel, modularLabel, sizeLabel, DASH, vram } from '@/utils/format'
 
 export interface Column {
   key: string
@@ -50,6 +50,14 @@ export const COLUMNS: Record<Category, Column[]> = {
     { key: 'atx31', label: 'atx31', kind: 'text', hide: 'xl', text: (r) => ((r.item as Psu).atx31 ? '✓' : '—') },
     { key: 'modular', label: 'modular', kind: 'text', hide: 'xl', text: (r) => modularLabel((r.item as Psu).modular) },
   ],
+  mobo: [
+    { key: 'chipset', label: 'chipset', kind: 'text', text: (r) => `${(r.item as Mobo).chipset} · ${sizeLabel((r.item as Mobo).size)}` },
+    { key: 'tier', label: 'tier', kind: 'text', text: (r) => (r.item as Mobo).tier },
+    { key: 'vrm', label: 'vrm', kind: 'text', hide: 'lg', text: (r) => (r.item as Mobo).vrm },
+    { key: 'memMax', label: 'memMax', kind: 'text', align: 'right', hide: 'xl', text: (r) => `${(r.item as Mobo).mem_type}-${(r.item as Mobo).mem_max_mt}` },
+    { key: 'm2', label: 'm2', kind: 'text', align: 'right', hide: 'xl', text: (r) => { const m = r.item as Mobo; return m.m2_gen5 ? `${m.m2} (${m.m2_gen5}× 5.0)` : String(m.m2) } },
+    { key: 'lan', label: 'lan', kind: 'text', hide: 'xl', text: (r) => { const m = r.item as Mobo; return m.wifi ? `${m.lan} · ${m.wifi}` : m.lan } },
+  ],
 }
 
 export function formBadge(cat: Category, row: RankedRow): string {
@@ -72,6 +80,7 @@ export function formBadge(cat: Category, row: RankedRow): string {
     return s.form === 'nvme' ? (s.dram ? 'DRAM' : 'HMB') : ''
   }
   if (cat === 'psu') return (it as Psu).form === 'sfx' ? 'SFX' : ''
+  if (cat === 'mobo') return sizeLabel((it as Mobo).size)
   return ''
 }
 
@@ -79,5 +88,6 @@ export function formBadge(cat: Category, row: RankedRow): string {
 export function genBadge(cat: Category, row: RankedRow): string {
   if (cat === 'cpu') return (row.item as Cpu).gen
   if (cat === 'gpu') return (row.item as Gpu).gen
+  if (cat === 'mobo') return (row.item as Mobo).chipset
   return ''
 }

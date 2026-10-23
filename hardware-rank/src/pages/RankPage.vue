@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, watch, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import type { Category, Cpu, Gpu } from '@/types/hardware'
+import type { Category, Cpu, Gpu, Mobo } from '@/types/hardware'
 import { useCatalog } from '@/data/load'
 import { SORT_DEFS, FORMS, scorePool, sortRows } from '@/utils/rank'
 import { parseQuery, toQuery, applyFilters, uniq, type FilterState } from '@/utils/filters'
@@ -37,6 +37,7 @@ const brands = computed(() => uniq(poolItems.value.map((i) => i.brand)).sort())
 const gens = computed(() => {
   if (category.value === 'cpu') return uniq(poolItems.value.map((i) => (i as Cpu).gen)).sort()
   if (category.value === 'gpu') return uniq(poolItems.value.map((i) => (i as Gpu).gen)).sort()
+  if (category.value === 'mobo') return uniq(poolItems.value.map((i) => (i as Mobo).chipset)).sort()
   return []
 })
 const years = computed<[number, number] | null>(() => {
@@ -91,6 +92,7 @@ useSeo(() => ({
     </div>
 
     <div v-if="category === 'psu'" class="notice-info">{{ t('rank.psuNote') }}</div>
+    <div v-if="category === 'mobo'" class="notice-info">{{ t('rank.moboNote') }}</div>
     <div v-if="isLaptop" class="notice-warn">{{ t('rank.laptopWarn') }}</div>
     <div v-if="category === 'ram' && filters.form === 'onboard'" class="notice-info">{{ t('rank.onboardNote') }}</div>
 
@@ -100,8 +102,8 @@ useSeo(() => ({
 
     <!-- 工具栏：紧贴列表 -->
     <div class="flex flex-wrap items-center gap-3 -mb-1">
-      <SortTabs v-if="category !== 'psu'" :options="sortOptions" :model-value="effectiveSort" @update:model-value="setSort" />
-      <span v-else class="text-xs text-muted">{{ t('rank.psuSort') }}</span>
+      <SortTabs v-if="category !== 'psu' && category !== 'mobo'" :options="sortOptions" :model-value="effectiveSort" @update:model-value="setSort" />
+      <span v-else class="text-xs text-muted">{{ t(category === 'mobo' ? 'rank.moboSort' : 'rank.psuSort') }}</span>
       <div class="ml-auto flex items-center gap-3">
         <span v-if="hasEst" class="hidden xl:inline text-xs text-muted">{{ t('rank.estNote') }}</span>
         <div v-if="canLadder" class="seg">

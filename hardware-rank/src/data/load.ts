@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
-import type { Category, Cpu, Gpu, Ram, Storage, Psu, Meta, AnyItem, NewsData } from '@/types/hardware'
+import type { Category, Cpu, Gpu, Ram, Storage, Psu, Mobo, Meta, AnyItem, NewsData } from '@/types/hardware'
 import { FX } from '@/utils/format'
 
 async function fetchJson<T>(path: string): Promise<T> {
@@ -20,6 +20,7 @@ export const useCatalog = defineStore('catalog', () => {
   const rams = ref<Ram[]>([])
   const storages = ref<Storage[]>([])
   const psus = ref<Psu[]>([])
+  const mobos = ref<Mobo[]>([])
   const news = ref<NewsData>({ updated: '', note: '', items: [] })
 
   let pending: Promise<void> | null = null
@@ -28,13 +29,14 @@ export const useCatalog = defineStore('catalog', () => {
     if (pending) return pending
     pending = (async () => {
       try {
-        const [m, c, g, r, s, p] = await Promise.all([
+        const [m, c, g, r, s, p, b] = await Promise.all([
           fetchJson<Meta>('meta.json'),
           fetchJson<Cpu[]>('cpus.json'),
           fetchJson<Gpu[]>('gpus.json'),
           fetchJson<Ram[]>('rams.json'),
           fetchJson<Storage[]>('storages.json'),
           fetchJson<Psu[]>('psus.json'),
+          fetchJson<Mobo[]>('mobos.json').catch(() => [] as Mobo[]),
         ])
         meta.value = m
         fetchJson<NewsData>('news.json').then((n) => { news.value = n }).catch(() => { /* 新闻源可选 */ })
@@ -44,6 +46,7 @@ export const useCatalog = defineStore('catalog', () => {
         rams.value = r
         storages.value = s
         psus.value = p
+        mobos.value = b
         loaded.value = true
       } catch (e) {
         error.value = (e as Error).message
@@ -59,6 +62,7 @@ export const useCatalog = defineStore('catalog', () => {
       case 'ram': return rams.value
       case 'storage': return storages.value
       case 'psu': return psus.value
+      case 'mobo': return mobos.value
     }
   }
 
@@ -69,5 +73,5 @@ export const useCatalog = defineStore('catalog', () => {
     return index.get(key)
   }
 
-  return { loaded, error, meta, news, cpus, gpus, rams, storages, psus, load, byCategory, find }
+  return { loaded, error, meta, news, cpus, gpus, rams, storages, psus, mobos, load, byCategory, find }
 })

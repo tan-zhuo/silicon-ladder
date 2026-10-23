@@ -1,4 +1,4 @@
-import type { Category, AnyItem, Cpu, Gpu, Storage, Psu } from '@/types/hardware'
+import type { Category, AnyItem, Cpu, Gpu, Storage, Psu, Mobo } from '@/types/hardware'
 import type { LocationQuery } from 'vue-router'
 
 export interface FilterState {
@@ -15,6 +15,7 @@ export interface FilterState {
   wattMin: number | null
   wattMax: number | null
   tier: string
+  size: string
   atx31: boolean
   yearMin: number | null
   yearMax: number | null
@@ -45,6 +46,7 @@ export function parseQuery(q: LocationQuery, defaults: { form: string; sort: str
     wattMin: numOrNull(q.wattMin),
     wattMax: numOrNull(q.wattMax),
     tier: str(q.tier),
+    size: str(q.size),
     atx31: str(q.atx31) === 'true',
     yearMin: numOrNull(q.yearMin),
     yearMax: numOrNull(q.yearMax),
@@ -66,6 +68,7 @@ export function toQuery(f: FilterState, defaults: { form: string; sort: string }
   if (f.wattMin !== null) out.wattMin = String(f.wattMin)
   if (f.wattMax !== null) out.wattMax = String(f.wattMax)
   if (f.tier) out.tier = f.tier
+  if (f.size) out.size = f.size
   if (f.atx31) out.atx31 = 'true'
   if (f.yearMin !== null) out.yearMin = String(f.yearMin)
   if (f.yearMax !== null) out.yearMax = String(f.yearMax)
@@ -119,6 +122,12 @@ export function applyFilters(cat: Category, items: AnyItem[], f: FilterState): A
       if (f.wattMax !== null && p.watt > f.wattMax) return false
       if (f.tier && p.tier !== f.tier) return false
       if (f.atx31 && !p.atx31) return false
+    }
+    if (cat === 'mobo') {
+      const m = it as Mobo
+      if (f.gen && m.chipset !== f.gen) return false
+      if (f.tier && m.tier !== f.tier) return false
+      if (f.size && m.size !== f.size) return false
     }
     return true
   })

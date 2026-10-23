@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import type { Category, Cpu, Gpu, Ram, Storage, Psu } from '@/types/hardware'
+import type { Category, Cpu, Gpu, Ram, Storage, Psu, Mobo } from '@/types/hardware'
 import { useCatalog } from '@/data/load'
 import { useCompare } from '@/stores/compare'
 import { scorePool, sortRows, SORT_DEFS } from '@/utils/rank'
-import { catLabel, formLabel, ifaceLabel, modularLabel, price, num, iops, capacity, bool, vram, DASH } from '@/utils/format'
+import { catLabel, formLabel, ifaceLabel, modularLabel, price, num, iops, capacity, bool, vram, DASH, sizeLabel } from '@/utils/format'
 import ScoreBar from '@/components/ScoreBar.vue'
 import BrandLogo from '@/components/BrandLogo.vue'
-import { cpuPlatform, gpuPlatform, ramPlatform, storagePlatform, psuPlatform, type Row } from '@/data/platforms'
+import { cpuPlatform, gpuPlatform, ramPlatform, storagePlatform, psuPlatform, moboPlatform, type Row } from '@/data/platforms'
 import { cpuTechRows, gpuTechRows, type TechRow } from '@/data/techrows'
 import { shopLinks, shopQuery } from '@/data/shops'
 import ShopLogo from '@/components/ShopLogo.vue'
@@ -33,7 +33,7 @@ const rankPos = computed(() => ranked.value.find((r) => r.item.id === id.value)?
 const similar = computed(() => {
   if (!row.value) return []
   const me = row.value.rel.overall ?? null
-  const psu = category.value === 'psu'
+  const psu = category.value === 'psu' || category.value === 'mobo'
   return ranked.value.filter((r) => r.item.id !== id.value).sort((a, b) => {
     if (psu) return Math.abs(a.rank - (rankPos.value ?? 0)) - Math.abs(b.rank - (rankPos.value ?? 0))
     const da = me === null || a.rel.overall === null ? 999 : Math.abs((a.rel.overall ?? 0) - me)
@@ -63,12 +63,16 @@ const specs = computed<Spec[]>(() => {
     const s = it as Storage
     return [[L('interface'), ifaceLabel(s.interface)], [L('capacity'), capacity(s.capacity_gb)], [L('nand'), s.nand ?? DASH], [L('dram'), bool(s.dram)], [L('seq'), `${num(s.seq_read)} / ${num(s.seq_write)} MB/s`], [L('r4k'), iops(s.iops_4k_read) + (s.iops_4k_read ? ' IOPS' : '')], [L('cacheOut'), s.write_cache_out == null ? DASH : `${num(s.write_cache_out)} MB/s`], [L('tbw'), s.tbw == null ? DASH : `${num(s.tbw)} TB`], [L('price'), price(s.price_cny)]]
   }
+  if (category.value === 'mobo') {
+    const m = it as Mobo
+    return [[L('chipset'), m.chipset], [L('size'), sizeLabel(m.size)], [L('tier'), m.tier], [L('vrm'), m.vrm], [L('memMax'), `${m.mem_slots}× ${m.mem_type}-${m.mem_max_mt}`], [L('m2'), m.m2_gen5 ? `${m.m2} (${m.m2_gen5}× PCIe 5.0)` : String(m.m2)], [L('pcie5'), bool(m.pcie5_x16)], [L('lan'), m.lan], [L('wifi'), m.wifi ?? DASH], [L('usb4'), bool(m.usb4)], [L('flashback'), bool(m.flashback)], [L('price'), price(m.price_cny)]]
+  }
   const p = it as Psu
   return [[L('watt'), `${p.watt}W`], [L('tier'), p.tier], [L('eff'), p.efficiency], [L('atx31'), bool(p.atx31)], [L('modular'), modularLabel(p.modular)], [L('oem'), p.oem], [L('price'), price(p.price_cny)]]
 })
 
 const scoreCards = computed(() => {
-  if (!row.value || category.value === 'psu') return []
+  if (!row.value || category.value === 'psu' || category.value === 'mobo') return []
   const rawText = (k: string) => {
     const v = row.value!.raw[k]
     if (v == null) return DASH
@@ -95,6 +99,7 @@ const platformRows = computed<Row[]>(() => {
     case 'ram': return ramPlatform(it as Ram)
     case 'storage': return storagePlatform(it as Storage)
     case 'psu': return psuPlatform(it as Psu)
+    case 'mobo': return moboPlatform(it as Mobo)
   }
 })
 /** 直接竞品：同池、其他品牌优先、发布 ±1 年、综合分差 ≤ 10 */
@@ -181,7 +186,7 @@ useSeo(() => {
           <p v-if="item.est" class="text-xs text-muted mt-2">{{ t('product.estNote') }}</p>
         </div>
         <div class="text-right">
-          <div v-if="rankPos" class="t-overline text-faint">{{ category === 'psu' ? t('product.rankTier') : t('product.rankIn') }}</div>
+          <div v-if="rankPos" class="t-overline text-faint">{{ category === 'psu' || category === 'mobo' ? t('product.rankTier') : t('product.rankIn') }}</div>
           <div v-if="rankPos" class="stat !text-[36px] mt-1" :style="rankPos === 1 ? { color: 'var(--gold)' } : {}">#{{ rankPos }}</div>
           <button class="mt-3" :class="inCompare ? 'btn-ghost' : 'btn'" @click="compare.toggle(category, item.id)">{{ inCompare ? t('product.inCompare') : t('product.addCompare') }}</button>
         </div>
@@ -199,6 +204,7 @@ useSeo(() => {
       <section class="card p-5 lg:col-span-2">
         <h2 class="t-h3 mb-3">{{ t('product.scores') }}</h2>
         <div v-if="category === 'psu'" class="text-sm text-muted">{{ t('product.psuScoreNote', { tier: (item as Psu).tier }) }}</div>
+        <div v-else-if="category === 'mobo'" class="text-sm text-muted">{{ t('product.moboScoreNote', { tier: (item as Mobo).tier }) }}</div>
         <div v-else class="space-y-3">
           <div v-for="(s, si) in scoreCards" :key="s.key">
             <div class="flex justify-between text-xs text-muted mb-1"><span>{{ t('sort.' + s.key) }}</span><span v-if="s.raw">{{ t('product.raw') }} {{ s.raw }}</span></div>

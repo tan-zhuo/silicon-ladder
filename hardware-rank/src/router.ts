@@ -10,8 +10,8 @@ const router = createRouter({
   },
   routes: [
     { path: '/:lang(en|ja)?', component: () => import('./pages/HomePage.vue') },
-    { path: '/:lang(en|ja)?/rank/:category(cpu|gpu|ram|storage|psu)', component: () => import('./pages/RankPage.vue') },
-    { path: '/:lang(en|ja)?/product/:category(cpu|gpu|ram|storage|psu)/:id', component: () => import('./pages/ProductPage.vue') },
+    { path: '/:lang(en|ja)?/rank/:category(cpu|gpu|ram|storage|psu|mobo)', component: () => import('./pages/RankPage.vue') },
+    { path: '/:lang(en|ja)?/product/:category(cpu|gpu|ram|storage|psu|mobo)/:id', component: () => import('./pages/ProductPage.vue') },
     { path: '/:lang(en|ja)?/compare', component: () => import('./pages/ComparePage.vue') },
     { path: '/:lang(en|ja)?/news', component: () => import('./pages/NewsPage.vue') },
     { path: '/:lang(en|ja)?/app', component: () => import('./pages/AppPage.vue') },

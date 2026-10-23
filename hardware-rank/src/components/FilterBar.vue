@@ -2,7 +2,7 @@
 import { computed, ref } from 'vue'
 import type { Category } from '@/types/hardware'
 import type { FilterState } from '@/utils/filters'
-import { ifaceLabel } from '@/utils/format'
+import { ifaceLabel, sizeLabel } from '@/utils/format'
 import { useI18n } from '@/i18n'
 import { UiInput, UiCheckbox } from '@/components/ui'
 
@@ -25,10 +25,10 @@ const ERAS = computed(() => {
 })
 const activeCount = computed(() => {
   const f = props.modelValue
-  return f.brand.length + [f.gen, f.tgpTier, f.interface, f.tier].filter(Boolean).length + [f.tdpMin, f.tdpMax, f.wattMin, f.wattMax, f.yearMin, f.yearMax].filter((x) => x !== null).length + (f.atx31 ? 1 : 0)
+  return f.brand.length + [f.gen, f.tgpTier, f.interface, f.tier, f.size].filter(Boolean).length + [f.tdpMin, f.tdpMax, f.wattMin, f.wattMax, f.yearMin, f.yearMax].filter((x) => x !== null).length + (f.atx31 ? 1 : 0)
 })
 function reset() {
-  emit('update:modelValue', { ...props.modelValue, brand: [], gen: '', q: '', tdpMin: null, tdpMax: null, tgpTier: '', interface: '', wattMin: null, wattMax: null, tier: '', atx31: false, yearMin: null, yearMax: null })
+  emit('update:modelValue', { ...props.modelValue, brand: [], gen: '', q: '', tdpMin: null, tdpMax: null, tgpTier: '', interface: '', wattMin: null, wattMax: null, tier: '', size: '', atx31: false, yearMin: null, yearMax: null })
 }
 const IFACES = ['pcie5', 'pcie4', 'pcie3', 'sata', 'sata-hdd']
 const chips = computed(() => {
@@ -42,6 +42,7 @@ const chips = computed(() => {
   if (f.interface) out.push({ label: ifaceLabel(f.interface), clear: () => set('interface', '') })
   if (f.wattMin !== null || f.wattMax !== null) out.push({ label: `${t('chips.watt')} ${f.wattMin ?? ''}–${f.wattMax ?? ''}W`, clear: () => emit('update:modelValue', { ...f, wattMin: null, wattMax: null }) })
   if (f.tier) out.push({ label: `Tier ${f.tier}`, clear: () => set('tier', '') })
+  if (f.size) out.push({ label: sizeLabel(f.size), clear: () => set('size', '') })
   if (f.atx31) out.push({ label: 'ATX 3.1', clear: () => set('atx31', false) })
   if (f.q) out.push({ label: `${t('chips.q')} “${f.q}”`, clear: () => set('q', '') })
   return out
@@ -70,7 +71,7 @@ const chips = computed(() => {
         <button v-for="b in brands" :key="b" class="pill !h-8 !text-xs" :class="{ 'pill-active': modelValue.brand.includes(b) }" @click="toggleBrand(b)">{{ b }}</button>
       </div>
       <div v-if="gens.length" class="flex flex-wrap items-center gap-1.5">
-        <span class="text-xs text-muted min-w-[3rem] pr-1 shrink-0 whitespace-nowrap">{{ t('filter.gen') }}</span>
+        <span class="text-xs text-muted min-w-[3rem] pr-1 shrink-0 whitespace-nowrap">{{ t(category === 'mobo' ? 'filter.chipset' : 'filter.gen') }}</span>
         <button class="pill !h-8 !text-xs" :class="{ 'pill-active': !modelValue.gen }" @click="set('gen', '')">{{ t('filter.all') }}</button>
         <button v-for="g in gens" :key="g" class="pill !h-8 !text-xs" :class="{ 'pill-active': modelValue.gen === g }" @click="set('gen', g)">{{ g }}</button>
       </div>
@@ -93,8 +94,13 @@ const chips = computed(() => {
         <button class="pill !h-8 !text-xs" :class="{ 'pill-active': !modelValue.interface }" @click="set('interface', '')">{{ t('filter.all') }}</button>
         <button v-for="k in IFACES" :key="k" class="pill !h-8 !text-xs" :class="{ 'pill-active': modelValue.interface === k }" @click="set('interface', k)">{{ ifaceLabel(k) }}</button>
       </div>
-      <template v-if="category === 'psu'">
-        <div class="flex flex-wrap items-center gap-1.5">
+      <div v-if="category === 'mobo'" class="flex flex-wrap items-center gap-1.5">
+        <span class="text-xs text-muted min-w-[3rem] pr-1 shrink-0 whitespace-nowrap">{{ t('filter.size') }}</span>
+        <button class="pill !h-8 !text-xs" :class="{ 'pill-active': !modelValue.size }" @click="set('size', '')">{{ t('filter.all') }}</button>
+        <button v-for="sz in ['eatx', 'atx', 'matx', 'itx']" :key="sz" class="pill !h-8 !text-xs" :class="{ 'pill-active': modelValue.size === sz }" @click="set('size', sz)">{{ sizeLabel(sz) }}</button>
+      </div>
+      <template v-if="category === 'psu' || category === 'mobo'">
+        <div v-if="category === 'psu'" class="flex flex-wrap items-center gap-1.5">
           <span class="text-xs text-muted min-w-[3rem] pr-1 shrink-0 whitespace-nowrap">{{ t('filter.watt') }}</span>
           <div class="w-24"><UiInput size="sm" type="number" :placeholder="t('filter.minW')" :model-value="modelValue.wattMin ?? ''" @change="set('wattMin', numInput($event))" /></div>
           <span class="text-muted">–</span>
@@ -104,7 +110,7 @@ const chips = computed(() => {
           <span class="text-xs text-muted min-w-[3rem] pr-1 shrink-0 whitespace-nowrap">{{ t('filter.tier') }}</span>
           <button class="pill !h-8 !text-xs" :class="{ 'pill-active': !modelValue.tier }" @click="set('tier', '')">{{ t('filter.all') }}</button>
           <button v-for="tt in ['A', 'B', 'C', 'D']" :key="tt" class="pill !h-8 !text-xs" :class="{ 'pill-active': modelValue.tier === tt }" @click="set('tier', tt)">{{ tt }}</button>
-          <span class="ml-2"><UiCheckbox size="sm" :model-value="modelValue.atx31" :label="t('filter.atx31')" @update:model-value="set('atx31', $event)" /></span>
+          <span v-if="category === 'psu'" class="ml-2"><UiCheckbox size="sm" :model-value="modelValue.atx31" :label="t('filter.atx31')" @update:model-value="set('atx31', $event)" /></span>
         </div>
       </template>
       <button v-if="activeCount || modelValue.q" class="btn-ghost md:hidden self-start" @click="reset">{{ t('filter.clearAll') }}</button>

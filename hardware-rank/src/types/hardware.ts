@@ -1,4 +1,4 @@
-export type Category = 'cpu' | 'gpu' | 'ram' | 'storage' | 'psu'
+export type Category = 'cpu' | 'gpu' | 'ram' | 'storage' | 'psu' | 'mobo'
 
 export interface Meta {
   updated: string
@@ -142,7 +142,28 @@ export interface Psu extends BaseItem {
   oem: string
 }
 
-export type AnyItem = Cpu | Gpu | Ram | Storage | Psu
+export interface Mobo extends BaseItem {
+  form: 'am5' | 'lga1851' | 'am4' | 'lga1700'
+  chipset: string
+  size: 'atx' | 'eatx' | 'matx' | 'itx'
+  /** 用料分档：VRM / 散热 / BIOS / 扩展综合，A 最佳 */
+  tier: 'A' | 'B' | 'C' | 'D'
+  vrm: string
+  vrm_phases: number
+  vrm_amps: number
+  mem_slots: number
+  mem_max_mt: number
+  mem_type: 'DDR5' | 'DDR4'
+  m2: number
+  m2_gen5: number
+  pcie5_x16: boolean
+  lan: string
+  wifi: string | null
+  usb4: boolean
+  flashback: boolean
+}
+
+export type AnyItem = Cpu | Gpu | Ram | Storage | Psu | Mobo
 
 export interface CategoryMap {
   cpu: Cpu
@@ -150,6 +171,7 @@ export interface CategoryMap {
   ram: Ram
   storage: Storage
   psu: Psu
+  mobo: Mobo
 }
 
 /** 已计算完毕、可直接渲染的行 */

@@ -16,7 +16,7 @@ const q = ref('')
 const idx = ref(0)
 const input = ref<HTMLInputElement | null>(null)
 
-const all = computed<{ cat: Category; item: AnyItem }[]>(() => (['cpu', 'gpu', 'ram', 'storage', 'psu'] as Category[]).flatMap((cat) => catalog.byCategory(cat).map((item) => ({ cat, item }))))
+const all = computed<{ cat: Category; item: AnyItem }[]>(() => (['cpu', 'gpu', 'ram', 'storage', 'psu', 'mobo'] as Category[]).flatMap((cat) => catalog.byCategory(cat).map((item) => ({ cat, item }))))
 const hits = computed(() => {
   const s = q.value.trim()
   if (!s) return []
