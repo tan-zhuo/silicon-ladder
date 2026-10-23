@@ -120,7 +120,7 @@ const tabs = computed(() => [t('rank.ladder'), t('nav.compare'), t('nav.news'), 
       </template>
 
       <!-- 底部 Tab -->
-      <div class="shrink-0 h-10 border-t border-line bg-card/90 backdrop-blur flex items-center justify-around text-[8px] text-faint">
+      <div class="shrink-0 h-10 border-t border-line bg-card flex items-center justify-around text-[8px] text-faint">
         <span v-for="(tb, i) in tabs" :key="tb" :class="(screen === 'ladder' && i === 0) || (screen === 'compare' && i === 1) ? 'text-fg font-medium' : ''">{{ tb }}</span>
       </div>
       <div class="shrink-0 h-3 flex items-center justify-center"><span class="w-16 h-[3px] rounded-full bg-fg/60" /></div>
@@ -131,6 +131,6 @@ const tabs = computed(() => [t('rank.ladder'), t('nav.compare'), t('nav.news'), 
 <style scoped>
 .phone { width: calc(232px * var(--s, 1)); height: calc(480px * var(--s, 1)); border-radius: calc(38px * var(--s, 1)); padding: calc(10px * var(--s, 1)); background: rgb(var(--c-fg)); box-shadow: var(--shadow-lg), 0 0 0 1px rgb(var(--c-fg) / .15); position: relative; }
 .phone::before { content: ''; position: absolute; top: calc(18px * var(--s, 1)); left: 50%; transform: translateX(-50%); width: calc(72px * var(--s, 1)); height: calc(18px * var(--s, 1)); border-radius: 10px; background: rgb(var(--c-fg)); z-index: 2; }
-.phone-screen { position: relative; width: 100%; height: 100%; border-radius: calc(30px * var(--s, 1)); overflow: hidden; background: rgb(var(--c-bg)); color: rgb(var(--c-fg)); font-size: calc(10px * var(--s, 1)); }
+.phone-screen { position: relative; width: 100%; height: 100%; border-radius: calc(30px * var(--s, 1)); overflow: hidden; clip-path: inset(0 round calc(30px * var(--s, 1))); isolation: isolate; transform: translateZ(0); background: rgb(var(--c-bg)); color: rgb(var(--c-fg)); font-size: calc(10px * var(--s, 1)); }
 .phone-screen > * { zoom: var(--s, 1); }
 </style>
