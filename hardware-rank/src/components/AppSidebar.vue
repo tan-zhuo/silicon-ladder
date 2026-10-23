@@ -50,30 +50,30 @@ const isActive = (to: string) => {
 </script>
 
 <template>
-  <aside class="hidden lg:flex fixed inset-y-0 left-0 w-60 flex-col border-r border-line bg-card z-40">
-    <router-link to="/" class="flex items-center gap-2.5 px-5 h-16 border-b border-line shrink-0">
-      <AppLogo :size="30" />
+  <aside class="hidden lg:flex fixed inset-y-0 left-0 w-60 flex-col border-r border-line bg-bg z-40">
+    <router-link to="/" class="flex items-center gap-2.5 px-4 h-16 shrink-0">
+      <AppLogo :size="28" />
       <span class="leading-tight font-semibold tracking-tight">
-        <span class="block text-[15px]">{{ t('site.name') }}</span>
-        <span class="block text-muted font-normal text-[10.5px] tracking-wide">{{ t('site.tagline') }}</span>
+        <span class="block text-[14px]">{{ t('site.name') }}</span>
+        <span class="block text-faint font-normal text-[10.5px] tracking-wide truncate">{{ t('site.tagline') }}</span>
       </span>
     </router-link>
 
-    <button class="mx-3 mt-3 h-9 inline-flex items-center gap-2 rounded-lg border border-line bg-card2 px-3 text-sm text-muted hover:text-fg hover:border-accent/60 transition-colors" @click="ui.searchOpen = true">
+    <button class="mx-3 mt-1 h-9 inline-flex items-center gap-2 rounded-sm border border-line bg-card px-2.5 text-[13px] text-muted hover:text-fg hover:border-line2 transition-colors shadow-sm" @click="ui.searchOpen = true">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" /><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
       <span class="flex-1 text-left">{{ t('search.shortcut') }}</span>
-      <kbd class="badge !py-0">⌘K</kbd>
+      <kbd class="badge-mono">⌘K</kbd>
     </button>
 
-    <nav class="flex-1 overflow-y-auto px-3 py-3 space-y-0.5">
+    <nav class="flex-1 overflow-y-auto px-3 py-3 space-y-px">
       <router-link
         v-for="n in nav" :key="n.to" :to="n.to"
-        class="flex items-center gap-3 px-3 h-10 rounded-lg text-[13.5px] text-muted hover:text-fg hover:bg-card2 transition-colors"
-        :class="isActive(n.to) ? '!text-accent !bg-accent/10 font-medium' : ''"
+        class="nav-item"
+        :class="isActive(n.to) ? 'nav-item-active' : ''"
       >
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="shrink-0"><path :d="n.icon" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="shrink-0 text-faint"><path :d="n.icon" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
         <span class="flex-1 truncate">{{ n.label }}</span>
-        <span v-if="n.count" class="text-[11px] text-muted/70 tabular-nums">{{ n.count }}</span>
+        <span v-if="n.count" class="num text-[11px] text-faint">{{ n.count }}</span>
       </router-link>
     </nav>
 
@@ -87,7 +87,7 @@ const isActive = (to: string) => {
           <svg v-else width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" /><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
         </button>
       </div>
-      <div class="px-1 text-[10.5px] text-muted leading-relaxed">{{ t('footer.updated') }}{{ catalog.meta.updated || '—' }} · v{{ catalog.meta.version }}</div>
+      <div class="px-1 text-[10.5px] text-faint leading-relaxed num">{{ t('footer.updated') }}{{ catalog.meta.updated || '—' }} · v{{ catalog.meta.version }}</div>
     </div>
   </aside>
 </template>

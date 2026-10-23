@@ -165,7 +165,6 @@ useSeo(() => {
     </nav>
 
     <header class="card p-6 sm:p-8 relative overflow-hidden">
-      <div class="hidden sm:block absolute -right-10 -top-10 opacity-[.06] pointer-events-none"><BrandLogo :brand="item.brand" :size="260" mono /></div>
       <div class="relative flex flex-wrap items-start gap-4">
         <div class="flex-1 min-w-0">
           <div class="flex items-center gap-2 flex-wrap">
@@ -175,35 +174,35 @@ useSeo(() => {
             <span v-if="item.est" class="badge !text-amber-700 dark:!text-amber-300 !border-amber-500/40">{{ t('product.est') }}</span>
             <span class="text-xs text-muted">{{ t('product.released', { d: item.release }) }}</span>
           </div>
-          <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mt-3">{{ displayName(item) }}</h1>
+          <h1 class="t-h1 !text-[28px] sm:!text-[36px] mt-3">{{ displayName(item) }}</h1>
           <div v-if="item.nameEn && item.nameEn !== displayName(item)" class="text-sm text-muted mt-0.5">{{ item.nameEn }}</div>
           <p class="mt-3 text-fg/90">{{ displaySummary(item) }}</p>
           <p v-if="tags.length" class="text-sm text-muted mt-1">{{ t('product.fit', { tags: tags.map(tagLabel).join(' / ') }) }}</p>
           <p v-if="item.est" class="text-xs text-muted mt-2">{{ t('product.estNote') }}</p>
         </div>
         <div class="text-right">
-          <div v-if="rankPos" class="text-xs text-muted">{{ category === 'psu' ? t('product.rankTier') : t('product.rankIn') }}</div>
-          <div v-if="rankPos" class="text-4xl font-bold tracking-tight" :style="rankPos === 1 ? { color: 'var(--gold)' } : {}">#{{ rankPos }}</div>
-          <button class="btn mt-2" :class="inCompare ? '!bg-card2 !text-fg !shadow-none border border-line' : ''" @click="compare.toggle(category, item.id)">{{ inCompare ? t('product.inCompare') : t('product.addCompare') }}</button>
+          <div v-if="rankPos" class="t-overline text-faint">{{ category === 'psu' ? t('product.rankTier') : t('product.rankIn') }}</div>
+          <div v-if="rankPos" class="stat !text-[36px] mt-1" :style="rankPos === 1 ? { color: 'var(--gold)' } : {}">#{{ rankPos }}</div>
+          <button class="mt-3" :class="inCompare ? 'btn-ghost' : 'btn'" @click="compare.toggle(category, item.id)">{{ inCompare ? t('product.inCompare') : t('product.addCompare') }}</button>
         </div>
       </div>
     </header>
 
     <div class="grid lg:grid-cols-5 gap-4">
       <section class="card p-5 lg:col-span-3">
-        <h2 class="font-bold mb-3">{{ t('product.specs') }}</h2>
+        <h2 class="t-h3 mb-3">{{ t('product.specs') }}</h2>
         <dl class="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-3 text-sm">
-          <div v-for="[k, v] in specs" :key="k" :class="k === t('spec.price') ? 'col-span-2 sm:col-span-3' : ''"><dt class="text-xs text-muted">{{ k }}</dt><dd class="mt-0.5 font-medium">{{ v }}</dd></div>
+          <div v-for="[k, v] in specs" :key="k" :class="k === t('spec.price') ? 'col-span-2 sm:col-span-3' : ''"><dt class="text-xs text-faint">{{ k }}</dt><dd class="mt-0.5 font-medium num text-[13px]">{{ v }}</dd></div>
         </dl>
         <p v-if="item.price_cny" class="text-[11px] text-muted mt-3">{{ t('spec.priceNote', { d: catalog.meta.fx?.asOf ?? catalog.meta.updated }) }}</p>
       </section>
       <section class="card p-5 lg:col-span-2">
-        <h2 class="font-bold mb-3">{{ t('product.scores') }}</h2>
+        <h2 class="t-h3 mb-3">{{ t('product.scores') }}</h2>
         <div v-if="category === 'psu'" class="text-sm text-muted">{{ t('product.psuScoreNote', { tier: (item as Psu).tier }) }}</div>
         <div v-else class="space-y-3">
-          <div v-for="s in scoreCards" :key="s.key">
+          <div v-for="(s, si) in scoreCards" :key="s.key">
             <div class="flex justify-between text-xs text-muted mb-1"><span>{{ t('sort.' + s.key) }}</span><span v-if="s.raw">{{ t('product.raw') }} {{ s.raw }}</span></div>
-            <ScoreBar :value="s.rel" :dim="s.key !== 'overall'" :height="8" />
+            <ScoreBar :value="s.rel" :dim="s.key !== 'overall'" :height="8" :index="si * 3" />
           </div>
           <p class="text-xs text-muted pt-2">{{ t('product.relNote') }}</p>
         </div>
@@ -212,7 +211,7 @@ useSeo(() => {
 
     <section class="card p-5">
       <div class="flex flex-wrap items-baseline justify-between gap-2">
-        <h2 class="font-bold">{{ t('shop.title') }}</h2>
+        <h2 class="t-h3">{{ t('shop.title') }}</h2>
         <span class="text-xs text-muted">{{ t('shop.search', { q: shopQuery(item) }) }}</span>
       </div>
       <div class="mt-3 flex flex-wrap gap-2">
@@ -226,7 +225,7 @@ useSeo(() => {
     </section>
 
     <section v-if="techGroups.length" class="card p-5">
-      <h2 class="font-bold">{{ t('tech.title') }}</h2>
+      <h2 class="t-h3">{{ t('tech.title') }}</h2>
       <p class="text-xs text-muted mt-1 mb-4">{{ t('tech.note') }}</p>
       <div class="grid md:grid-cols-2 gap-x-8 gap-y-5">
         <div v-for="g in techGroups" :key="g.group">
@@ -242,7 +241,7 @@ useSeo(() => {
     </section>
 
     <section v-if="platformRows.length" class="card p-5">
-      <h2 class="font-bold">{{ t('product.platform') }}</h2>
+      <h2 class="t-h3">{{ t('product.platform') }}</h2>
       <p class="text-xs text-muted mt-1 mb-3">{{ t('product.platformNote') }}</p>
       <dl class="divide-y divide-line/60">
         <div v-for="r in platformRows" :key="r.label" class="grid grid-cols-[7rem_1fr] sm:grid-cols-[9rem_1fr] gap-3 py-2.5 text-sm">
@@ -254,7 +253,7 @@ useSeo(() => {
 
     <section v-if="rivals.length || lineage.prev || lineage.next" class="grid lg:grid-cols-3 gap-4">
       <div v-if="rivals.length" class="card p-5 lg:col-span-2">
-        <h2 class="font-bold">{{ t('rel.rivals') }}</h2>
+        <h2 class="t-h3">{{ t('rel.rivals') }}</h2>
         <p class="text-xs text-muted mt-0.5 mb-3">{{ t('rel.rivalsDesc') }}</p>
         <div class="divide-y divide-line/60">
           <router-link v-for="r in rivals" :key="r.item.id" :to="`/product/${category}/${r.item.id}`" class="flex items-center gap-2.5 sm:gap-3 py-2 group text-sm min-w-0">
@@ -262,14 +261,14 @@ useSeo(() => {
             <span class="font-medium group-hover:text-accent flex-1 truncate min-w-0">{{ displayName(r.item) }}</span>
             <span class="hidden md:inline text-xs text-muted shrink-0">{{ r.item.release }}</span>
             <span class="hidden sm:inline text-xs text-muted shrink-0">#{{ r.rank }}</span>
-            <span class="hidden lg:block w-24 h-1.5 rounded-full overflow-hidden shrink-0" style="background: var(--bar-track)"><span class="block h-full" :style="{ width: (r.rel.overall ?? 0) + '%', background: 'var(--bar-fill)' }" /></span>
+            <span class="hidden lg:block w-24 h-1.5 rounded-full overflow-hidden shrink-0" style="background: var(--bar-track)"><span class="block h-full bar-anim" :style="{ width: (r.rel.overall ?? 0) + '%', background: 'var(--bar-fill)' }" /></span>
             <span class="w-10 text-right font-medium shrink-0">{{ r.rel.overall?.toFixed(1) }}</span>
             <span class="w-14 text-right text-xs" :class="(r.rel.overall ?? 0) >= (row!.rel.overall ?? 0) ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'">{{ ((r.rel.overall ?? 0) - (row!.rel.overall ?? 0) >= 0 ? '+' : '') + ((r.rel.overall ?? 0) - (row!.rel.overall ?? 0)).toFixed(1) }}</span>
           </router-link>
         </div>
       </div>
       <div v-if="lineage.prev || lineage.next" class="card p-5">
-        <h2 class="font-bold mb-3">{{ t('rel.lineage') }}</h2>
+        <h2 class="t-h3 mb-3">{{ t('rel.lineage') }}</h2>
         <div class="space-y-3 text-sm">
           <div v-for="[k, x] in [['prev', lineage.prev], ['next', lineage.next]] as const" :key="k">
             <div class="text-[11px] text-muted uppercase tracking-wide">{{ t('rel.' + k) }}</div>
@@ -284,7 +283,7 @@ useSeo(() => {
     </section>
 
     <section v-if="similar.length">
-      <h2 class="font-bold mb-3">{{ t('product.similar') }}</h2>
+      <h2 class="t-h3 mb-3">{{ t('product.similar') }}</h2>
       <div class="grid sm:grid-cols-3 gap-3">
         <button v-for="r in similar" :key="r.item.id" class="card card-hover p-4 text-left" @click="router.push(`/product/${category}/${r.item.id}`)">
           <div class="flex items-center gap-2"><BrandLogo :brand="r.item.brand" :size="20" /><span class="font-semibold">{{ displayName(r.item) }}</span></div>

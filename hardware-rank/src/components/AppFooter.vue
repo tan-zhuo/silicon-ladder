@@ -16,7 +16,7 @@ const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
 </script>
 
 <template>
-  <footer class="border-t border-line mt-16 bg-card2/60">
+  <footer class="border-t border-line mt-20 bg-card2/50">
     <div class="max-w-[1800px] mx-auto px-4 sm:px-6 xl:px-10 2xl:px-14 pt-12 pb-8">
       <div class="grid gap-10 lg:grid-cols-12">
         <!-- 品牌 -->
@@ -27,16 +27,16 @@ const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
           </router-link>
           <p class="text-sm text-muted mt-4 leading-relaxed max-w-sm">{{ t('footerx.about') }}</p>
           <dl class="mt-5 grid grid-cols-3 gap-3 max-w-sm text-sm">
-            <div><dt class="text-[11px] text-muted">{{ t('home.statItems') }}</dt><dd class="font-semibold">{{ total }}</dd></div>
-            <div><dt class="text-[11px] text-muted">{{ t('footerx.dataVersion') }}</dt><dd class="font-semibold">v{{ catalog.meta.version }}</dd></div>
-            <div><dt class="text-[11px] text-muted">{{ t('home.statUpdated') }}</dt><dd class="font-semibold">{{ catalog.meta.updated || '—' }}</dd></div>
+            <div><dt class="text-[11px] text-faint">{{ t('home.statItems') }}</dt><dd class="num font-semibold">{{ total }}</dd></div>
+            <div><dt class="text-[11px] text-faint">{{ t('footerx.dataVersion') }}</dt><dd class="num font-semibold">v{{ catalog.meta.version }}</dd></div>
+            <div><dt class="text-[11px] text-faint">{{ t('home.statUpdated') }}</dt><dd class="num font-semibold">{{ catalog.meta.updated || '—' }}</dd></div>
           </dl>
         </div>
 
         <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-6 min-w-0 [&>div]:min-w-0">
         <!-- 排行榜 -->
         <div>
-          <h3 class="text-xs font-semibold uppercase tracking-widest text-muted mb-3">{{ t('footerx.rankings') }}</h3>
+          <h3 class="t-overline text-faint mb-3">{{ t('footerx.rankings') }}</h3>
           <ul class="space-y-2 text-sm">
             <li v-for="c in CATS" :key="c" class="flex flex-col">
               <router-link :to="`/rank/${c}`" class="font-medium hover:text-accent">{{ catLabel(c) }}</router-link>
@@ -52,7 +52,7 @@ const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
 
         <!-- 天梯 -->
         <div>
-          <h3 class="text-xs font-semibold uppercase tracking-widest text-muted mb-3">{{ t('footerx.ladders') }}</h3>
+          <h3 class="t-overline text-faint mb-3">{{ t('footerx.ladders') }}</h3>
           <ul class="space-y-2 text-sm">
             <li><router-link :to="{ path: '/rank/cpu', query: { view: 'ladder' } }" class="hover:text-accent">{{ t('footerx.desktop') }} CPU</router-link></li>
             <li><router-link :to="{ path: '/rank/cpu', query: { view: 'ladder', form: 'laptop' } }" class="hover:text-accent">{{ t('footerx.laptop') }} CPU</router-link></li>
@@ -64,7 +64,7 @@ const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
 
         <!-- 工具 / 资源 -->
           <div>
-            <h3 class="text-xs font-semibold uppercase tracking-widest text-muted mb-3">{{ t('footerx.tools') }}</h3>
+            <h3 class="t-overline text-faint mb-3">{{ t('footerx.tools') }}</h3>
             <ul class="space-y-2 text-sm">
               <li><router-link to="/news" class="hover:text-accent">{{ t('nav.news') }}</router-link></li>
               <li><router-link to="/compare" class="hover:text-accent">{{ t('nav.compare') }}</router-link></li>
@@ -73,7 +73,7 @@ const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
             </ul>
           </div>
           <div>
-            <h3 class="text-xs font-semibold uppercase tracking-widest text-muted mb-3">{{ t('footerx.resources') }}</h3>
+            <h3 class="t-overline text-faint mb-3">{{ t('footerx.resources') }}</h3>
             <ul class="space-y-2 text-sm">
               <li><a :href="REPO" target="_blank" rel="noopener" class="hover:text-accent inline-flex items-center gap-1">{{ t('footerx.github') }}<svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg></a></li>
               <li><a :href="`${REPO}/tree/main/hardware-rank/public/data`" target="_blank" rel="noopener" class="hover:text-accent">{{ t('footerx.data') }}</a></li>

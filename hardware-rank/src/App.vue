@@ -11,6 +11,8 @@ import { useCatalog } from '@/data/load'
 import { useCompare } from '@/stores/compare'
 import { useTheme } from '@/stores/theme'
 import { useI18n } from '@/i18n'
+import { Analytics } from '@vercel/analytics/vue'
+import { SpeedInsights } from '@vercel/speed-insights/vue'
 
 const catalog = useCatalog()
 const ui = useUi()
@@ -48,6 +50,9 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
       </button>
     </transition>
     <GlobalSearch v-model="ui.searchOpen" />
+    <!-- Vercel 监控：Web Analytics（访问量/路由）+ Speed Insights（Core Web Vitals），随 vue-router 自动跟踪路由 -->
+    <Analytics />
+    <SpeedInsights />
     <transition name="fade">
       <div v-if="compare.notice" class="fixed top-16 left-1/2 -translate-x-1/2 z-50 card px-4 py-2 text-sm">
         {{ compare.notice }}

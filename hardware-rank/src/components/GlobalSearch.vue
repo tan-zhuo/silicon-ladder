@@ -44,25 +44,25 @@ onUnmounted(() => window.removeEventListener('keydown', onKey))
 
 <template>
   <transition name="fade">
-    <div v-if="open" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-start justify-center p-4 pt-[12vh]" @click.self="open = false">
-      <div class="card w-full max-w-xl overflow-hidden" role="dialog" :aria-label="t('search.title')">
+    <div v-if="open" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-[2px] flex items-start justify-center p-4 pt-[12vh]" @click.self="open = false">
+      <div class="panel w-full max-w-xl overflow-hidden shadow-lg" role="dialog" :aria-label="t('search.title')">
         <div class="flex items-center gap-2 px-4 border-b border-line">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-muted"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" /><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
           <input ref="input" v-model="q" class="flex-1 bg-transparent py-3.5 text-base outline-none placeholder:text-muted/60" :placeholder="t('search.ph')" />
-          <kbd class="badge">Esc</kbd>
+          <kbd class="badge-mono">Esc</kbd>
         </div>
         <ul v-if="hits.length" class="max-h-[50vh] overflow-y-auto py-1">
           <li v-for="(h, i) in hits" :key="h.cat + h.item.id">
-            <button class="w-full text-left px-4 py-2.5 flex items-center gap-3 text-sm" :class="i === idx ? 'bg-accent/10' : 'hover:bg-accent/5'" @mouseenter="idx = i" @click="go(h)">
+            <button class="w-full text-left px-4 py-2.5 flex items-center gap-3 text-sm" :class="i === idx ? 'bg-card2' : ''" @mouseenter="idx = i" @click="go(h)">
               <BrandLogo :brand="h.item.brand" :size="22" />
               <span class="badge w-14 justify-center">{{ catLabel(h.cat) }}</span>
               <span class="flex-1 font-medium truncate">{{ displayName(h.item) }}</span>
-              <span class="text-xs text-muted whitespace-nowrap">{{ formLabel(h.item.form) }} · {{ yearOf(h.item.release) }}</span>
+              <span class="text-xs text-faint whitespace-nowrap">{{ formLabel(h.item.form) }} · {{ yearOf(h.item.release) }}</span>
             </button>
           </li>
         </ul>
         <div v-else-if="q.trim()" class="px-4 py-8 text-center text-sm text-muted">{{ t('search.empty') }}</div>
-        <div class="px-4 py-2 text-[11px] text-muted border-t border-line">{{ t('search.hint') }}</div>
+        <div class="px-4 py-2 text-[11px] text-faint border-t border-line bg-card2/60">{{ t('search.hint') }}</div>
       </div>
     </div>
   </transition>

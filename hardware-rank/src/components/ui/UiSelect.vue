@@ -36,7 +36,7 @@ onUnmounted(() => document.removeEventListener('mousedown', onDoc))
   <div ref="root" class="relative inline-block" @keydown="onKey">
     <button
       type="button" role="combobox" :aria-expanded="open" :aria-label="ariaLabel"
-      class="ui-control inline-flex items-center gap-1.5 rounded-lg border border-line bg-card text-fg hover:border-accent/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 transition-colors whitespace-nowrap"
+      class="ui-control inline-flex items-center gap-1.5 rounded-sm border border-line bg-card text-fg hover:border-line2 hover:bg-card2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 transition-colors whitespace-nowrap shadow-sm"
       :class="size === 'sm' ? 'h-8 pl-2.5 pr-2 text-xs' : 'h-9 pl-3 pr-2.5 text-sm'"
       @click="toggle"
     >
@@ -45,11 +45,11 @@ onUnmounted(() => document.removeEventListener('mousedown', onDoc))
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-muted transition-transform" :class="open ? 'rotate-180' : ''"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
     </button>
     <transition name="fade">
-      <ul v-if="open" role="listbox" class="absolute z-50 min-w-full py-1 card !rounded-lg overflow-hidden" :class="[align === 'right' ? 'right-0' : 'left-0', dropUp ? 'bottom-full mb-1' : 'top-full mt-1']">
+      <ul v-if="open" role="listbox" class="absolute z-50 min-w-full py-1 panel !rounded-md overflow-hidden" :class="[align === 'right' ? 'right-0' : 'left-0', dropUp ? 'bottom-full mb-1' : 'top-full mt-1']">
         <li
           v-for="(o, i) in options" :key="o.value" role="option" :aria-selected="o.value === model"
           class="px-3 py-1.5 text-sm cursor-pointer whitespace-nowrap flex items-center gap-2"
-          :class="[i === idx ? 'bg-accent/10' : 'hover:bg-accent/5', o.value === model ? 'text-accent font-medium' : '']"
+          :class="[i === idx ? 'bg-card2' : '', o.value === model ? 'font-medium' : '']"
           @mouseenter="idx = i" @click="choose(o)"
         >
           <span class="w-3.5 text-accent">{{ o.value === model ? '✓' : '' }}</span>{{ o.label }}

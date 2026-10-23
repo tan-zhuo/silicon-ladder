@@ -78,7 +78,7 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
             <BrandLogo :brand="r.item.brand" :size="18" />
             <div class="flex-1 min-w-0">
               <div class="flex items-center gap-1.5 text-sm"><span class="font-semibold truncate">{{ displayName(r.item) }}</span><span v-if="formBadge(category, r)" class="badge !py-0">{{ formBadge(category, r) }}</span></div>
-              <div class="h-2 rounded-full overflow-hidden mt-1" style="background: var(--bar-track)"><div class="h-full rounded-full" :style="{ width: score(r) + '%', background: brandColor(r.item.brand) }" /></div>
+              <div class="h-2 rounded-full overflow-hidden mt-1" style="background: var(--bar-track)"><div class="h-full rounded-full bar-anim" :style="{ width: score(r) + '%', background: brandColor(r.item.brand), '--i': Math.min(r.rank, 40) }" /></div>
             </div>
             <span class="text-sm font-bold w-10 text-right">{{ fmtRel(score(r)) }}</span>
             <span data-no-export class="inline-flex"><UiCheckbox size="sm" :model-value="compare.has(category, r.item.id)" :aria-label="t('col.compare')" @update:model-value="compare.toggle(category, r.item.id)" /></span>
@@ -98,14 +98,14 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
               <span class="text-xs text-muted font-normal">{{ t('ladder.items', { n: rows.filter(r => r.item.brand === brands[0]).length }) }}</span>
               <span class="text-lg">{{ brands[0] }}</span><BrandLogo :brand="brands[0]" :size="28" />
             </div>
-            <div class="py-3 text-center text-[11px] uppercase tracking-wider text-muted">{{ sortLabel }}</div>
+            <div class="py-3 text-center t-overline text-faint">{{ sortLabel }}</div>
             <div class="px-4 py-3 flex items-center gap-2.5 font-semibold">
               <BrandLogo :brand="brands[1]" :size="28" /><span class="text-lg">{{ brands[1] }}</span>
               <span class="text-xs text-muted font-normal">{{ t('ladder.items', { n: rows.filter(r => r.item.brand === brands[1]).length }) }}</span>
             </div>
           </template>
           <template v-else>
-            <div class="px-3 py-3 text-[11px] uppercase tracking-wider text-muted">{{ sortLabel }}</div>
+            <div class="px-3 py-3 t-overline text-faint">{{ sortLabel }}</div>
             <div v-for="b in brands" :key="b" class="px-3 py-3 flex items-center gap-2 font-semibold border-l border-line/60">
               <BrandLogo :brand="b" :size="24" /><span>{{ b }}</span>
               <span class="text-xs text-muted font-normal">{{ rows.filter(r => r.item.brand === b).length }}</span>
@@ -116,9 +116,9 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
         <!-- 分数带 -->
         <div
           v-for="(band, bi) in bands" :key="band.hi"
-          class="grid border-b border-line/60 last:border-0 relative"
+          class="grid border-b border-line/60 last:border-0 relative rise-anim"
           :class="band.count ? '' : 'h-3'"
-          :style="{ gridTemplateColumns: gridCols, background: `linear-gradient(90deg, rgb(var(--c-accent) / ${(0.07 * (1 - bi / bands.length)).toFixed(3)}), transparent 30%, transparent 70%, rgb(var(--c-accent) / ${(0.07 * (1 - bi / bands.length)).toFixed(3)}))` }"
+          :style="{ '--i': bi, gridTemplateColumns: gridCols, background: `linear-gradient(90deg, rgb(var(--c-accent) / ${(0.07 * (1 - bi / bands.length)).toFixed(3)}), transparent 30%, transparent 70%, rgb(var(--c-accent) / ${(0.07 * (1 - bi / bands.length)).toFixed(3)}))` }"
         >
           <template v-if="mirror">
             <!-- 左列：条形向左生长 -->
@@ -135,23 +135,23 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
                   <span class="text-sm font-semibold truncate max-w-[11rem] xl:max-w-none group-hover:text-accent" :title="displayName(r.item)">{{ displayName(r.item) }}</span>
                   <span class="text-[11px] text-muted w-8 text-right">#{{ r.rank }}</span>
                 </div>
-                <div class="relative h-7 flex items-center justify-end rounded-l-md" :style="{ width: score(r) + '%', minWidth: '52px', background: `linear-gradient(270deg, ${brandColor(brands[0])}, ${brandColor(brands[0])}88)` }">
-                  <span class="text-white text-xs font-bold pr-2 drop-shadow">{{ fmtRel(score(r)) }}</span>
+                <div class="relative h-7 flex items-center justify-end rounded-l-md bar-anim" :style="{ width: score(r) + '%', minWidth: '52px', background: `linear-gradient(270deg, ${brandColor(brands[0])}, ${brandColor(brands[0])}88)`, '--i': Math.min(r.rank, 40) }">
+                  <span class="num text-white text-xs font-semibold pr-2 drop-shadow">{{ fmtRel(score(r)) }}</span>
                 </div>
               </div>
             </div>
             <!-- 中轴 -->
             <div class="flex flex-col items-center justify-center text-center border-x border-line/60 bg-card2/70">
               <template v-if="band.count">
-                <span class="text-sm font-bold">{{ band.hi }}</span>
-                <span class="text-[10px] text-muted">{{ band.lo }}</span>
+                <span class="num text-sm font-semibold">{{ band.hi }}</span>
+                <span class="num text-[10px] text-faint">{{ band.lo }}</span>
               </template>
             </div>
             <!-- 右列：条形向右生长 -->
             <div class="flex flex-col gap-1.5" :class="band.count ? 'py-2 pr-4 pl-2' : ''">
               <div v-for="r in band.cells[brands[1]]" :key="r.item.id" class="ladder-item group w-full flex items-center" tabindex="0" @click="go(r)" @keydown.enter="go(r)">
-                <div class="relative h-7 flex items-center rounded-r-md" :style="{ width: score(r) + '%', minWidth: '52px', background: `linear-gradient(90deg, ${brandColor(brands[1])}, ${brandColor(brands[1])}88)` }">
-                  <span class="text-white text-xs font-bold pl-2 drop-shadow">{{ fmtRel(score(r)) }}</span>
+                <div class="relative h-7 flex items-center rounded-r-md bar-anim" :style="{ width: score(r) + '%', minWidth: '52px', background: `linear-gradient(90deg, ${brandColor(brands[1])}, ${brandColor(brands[1])}88)`, '--i': Math.min(r.rank, 40) }">
+                  <span class="num text-white text-xs font-semibold pl-2 drop-shadow">{{ fmtRel(score(r)) }}</span>
                 </div>
                 <div class="flex items-center gap-2 pl-2 shrink-0 min-w-0">
                   <span class="text-[11px] text-muted w-8">#{{ r.rank }}</span>
@@ -179,7 +179,7 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
                   <span data-no-export class="inline-flex"><UiCheckbox size="sm" :model-value="compare.has(category, r.item.id)" :aria-label="t('col.compare')" @update:model-value="compare.toggle(category, r.item.id)" /></span>
                 </div>
                 <div class="h-5 rounded-md overflow-hidden" style="background: var(--bar-track)">
-                  <div class="h-full flex items-center rounded-md" :style="{ width: score(r) + '%', minWidth: '44px', background: `linear-gradient(90deg, ${brandColor(b)}, ${brandColor(b)}99)` }">
+                  <div class="h-full flex items-center rounded-md bar-anim" :style="{ width: score(r) + '%', minWidth: '44px', background: `linear-gradient(90deg, ${brandColor(b)}, ${brandColor(b)}99)`, '--i': Math.min(r.rank, 40) }">
                     <span class="text-white text-[11px] font-bold pl-1.5 drop-shadow">{{ fmtRel(score(r)) }}</span>
                   </div>
                 </div>
@@ -188,7 +188,7 @@ const gridCols = computed(() => mirror.value ? '1fr 64px 1fr' : `56px repeat(${b
           </template>
         </div>
 
-        <div class="px-4 py-2 text-[11px] text-muted border-t border-line flex flex-wrap items-center gap-x-4 gap-y-1">
+        <div class="px-4 py-2 text-[11px] text-faint border-t border-line bg-card2/60 flex flex-wrap items-center gap-x-4 gap-y-1">
           <span>{{ t('ladder.legend') }}</span>
           <span class="hidden export-only">{{ t('exportImg.footer') }}</span>
           <span class="ml-auto" data-no-export><UiButton size="sm" :disabled="exporting" @click="exportImage">{{ exporting ? t('exportImg.busy') : t('exportImg.btn') }}</UiButton></span>

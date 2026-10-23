@@ -86,8 +86,8 @@ useSeo(() => ({
   <div class="space-y-4">
     <div>
       <div class="kicker">{{ catLabel(category) }}</div>
-      <h1 class="text-2xl sm:text-3xl font-bold tracking-tight mt-1">{{ title }}</h1>
-      <p class="text-sm text-muted mt-1">{{ t('rank.count', { n: rows.length }) }}</p>
+      <h1 class="t-h1 mt-1.5">{{ title }}</h1>
+      <p class="text-sm text-muted mt-1.5">{{ t('rank.count', { n: rows.length }) }}</p>
     </div>
 
     <div v-if="category === 'psu'" class="notice-info">{{ t('rank.psuNote') }}</div>

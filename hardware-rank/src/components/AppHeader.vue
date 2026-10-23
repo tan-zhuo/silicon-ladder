@@ -28,13 +28,13 @@ const links = computed(() => [
 </script>
 
 <template>
-  <header class="lg:hidden sticky top-0 z-40 bg-bg/80 backdrop-blur-md border-b border-line">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center gap-4">
+  <header class="lg:hidden sticky top-0 z-40 bg-bg/85 backdrop-blur-md border-b border-line safe-t">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center gap-4">
       <router-link to="/" class="flex items-center gap-2.5 font-semibold tracking-tight">
-        <AppLogo :size="32" />
+        <AppLogo :size="28" />
         <span class="leading-tight">
-          <span class="block text-[15px]">{{ t('site.name') }}</span>
-          <span class="hidden sm:block text-muted font-normal text-[11px] tracking-wide">{{ t('site.tagline') }}</span>
+          <span class="block text-[14px]">{{ t('site.name') }}</span>
+          <span class="hidden sm:block text-faint font-normal text-[11px] tracking-wide">{{ t('site.tagline') }}</span>
         </span>
       </router-link>
 
@@ -49,7 +49,7 @@ const links = computed(() => [
       <div class="flex items-center gap-1.5 lg:ml-2">
         <button class="btn-ghost !px-2.5 gap-2" :title="t('search.title') + ' (⌘K)'" @click="ui.searchOpen = true">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" /><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
-          <span class="hidden xl:inline text-xs">{{ t('search.shortcut') }}</span><kbd class="hidden xl:inline badge !py-0">⌘K</kbd>
+          <span class="hidden xl:inline text-xs">{{ t('search.shortcut') }}</span><kbd class="hidden xl:inline badge-mono">⌘K</kbd>
         </button>
         <UiSelect :model-value="locale" :options="LOCALES.map(l => ({ value: l.key, label: l.label }))" :aria-label="t('lang')" align="right" @update:model-value="switchLang($event as Locale)">
           <template #prefix><svg width="15" height="15" viewBox="0 0 24 24" fill="none" class="text-muted"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" /><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18" stroke="currentColor" stroke-width="1.8" /></svg></template>
@@ -63,8 +63,8 @@ const links = computed(() => [
         </button>
       </div>
     </div>
-    <nav v-if="open" class="lg:hidden border-t border-line px-4 py-2 grid grid-cols-2 gap-1 text-sm bg-bg" @click="open = false">
-      <router-link v-for="l in links" :key="l.to" :to="l.to" class="px-3 py-2 rounded-lg text-muted hover:text-fg" active-class="!text-accent bg-accent/10">{{ l.label }}</router-link>
+    <nav v-if="open" class="lg:hidden border-t border-line px-3 py-2 grid grid-cols-2 gap-1 text-sm bg-bg" @click="open = false">
+      <router-link v-for="l in links" :key="l.to" :to="l.to" class="nav-item h-11" active-class="nav-item-active">{{ l.label }}</router-link>
     </nav>
   </header>
 </template>
