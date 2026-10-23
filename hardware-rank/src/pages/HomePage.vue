@@ -151,7 +151,7 @@ useSeo(() => ({
             <span class="ml-1 flex items-center gap-1.5 text-xs text-faint"><span class="badge">{{ t('app.soon') }}</span>{{ t('app.ios') }} · {{ t('app.android') }}</span>
           </div>
         </div>
-        <div class="hidden lg:block justify-self-end -mb-28 rotate-[-6deg] translate-x-4"><PhoneMock /></div>
+        <div class="hidden lg:block justify-self-end pr-2"><PhoneMock screen="ladder" :scale="0.78" /></div>
       </div>
     </div>
   </section>
