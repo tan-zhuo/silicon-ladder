@@ -33,6 +33,13 @@ function get(obj: unknown, path: string): unknown {
   return path.split('.').reduce<unknown>((o, k) => (o && typeof o === 'object' ? (o as Record<string, unknown>)[k] : undefined), obj)
 }
 
+/** 读取非字符串文案（数组/对象），找不到回退中文 */
+export function tm<T = unknown>(path: string): T {
+  let v = get(messages[locale.value], path)
+  if (v === undefined) v = get(messages.zh, path)
+  return v as T
+}
+
 /** t('rank.count', { n: 5 }) */
 export function t(path: string, params?: Record<string, string | number>): string {
   let v = get(messages[locale.value], path)

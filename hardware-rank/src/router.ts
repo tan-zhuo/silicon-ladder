@@ -14,6 +14,7 @@ const router = createRouter({
     { path: '/:lang(en|ja)?/product/:category(cpu|gpu|ram|storage|psu)/:id', component: () => import('./pages/ProductPage.vue') },
     { path: '/:lang(en|ja)?/compare', component: () => import('./pages/ComparePage.vue') },
     { path: '/:lang(en|ja)?/news', component: () => import('./pages/NewsPage.vue') },
+    { path: '/:lang(en|ja)?/app', component: () => import('./pages/AppPage.vue') },
     { path: '/:lang(en|ja)?/guide', component: () => import('./pages/GuidePage.vue') },
     { path: '/:lang(en|ja)?/methodology', component: () => import('./pages/MethodologyPage.vue') },
     { path: '/:pathMatch(.*)*', redirect: '/' },

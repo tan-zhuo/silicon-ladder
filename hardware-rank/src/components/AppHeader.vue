@@ -24,6 +24,7 @@ const links = computed(() => [
   { to: '/compare', label: t('nav.compare') },
   { to: '/guide', label: t('nav.guide') },
   { to: '/methodology', label: t('nav.methodology') },
+  { to: '/app', label: t('nav.app') },
 ])
 </script>
 

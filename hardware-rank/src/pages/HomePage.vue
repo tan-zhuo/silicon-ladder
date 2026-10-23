@@ -8,6 +8,7 @@ import { scorePool, sortRows } from '@/utils/rank'
 import type { Category, AnyItem } from '@/types/hardware'
 import BrandLogo from '@/components/BrandLogo.vue'
 import CountUp from '@/components/CountUp.vue'
+import PhoneMock from '@/components/PhoneMock.vue'
 import { useI18n, displayName, displaySummary } from '@/i18n'
 import { useSeo, SITE_URL, SITE_NAME } from '@/seo'
 
@@ -131,6 +132,25 @@ useSeo(() => ({
       <div v-for="n in 3" :key="n" class="card p-5 flex gap-4">
         <div class="num w-8 h-8 rounded-sm bg-inverse text-inverseFg flex items-center justify-center text-sm font-semibold shrink-0">{{ n }}</div>
         <div><div class="font-semibold">{{ t(`home.how${n}t`) }}</div><div class="text-sm text-muted mt-1">{{ t(`home.how${n}d`) }}</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App -->
+  <section class="mt-12">
+    <div class="card relative overflow-hidden">
+      <div class="grid lg:grid-cols-[1fr_auto] gap-8 items-center p-6 sm:p-8">
+        <div class="max-w-xl">
+          <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent" /><span class="kicker">{{ t('app.kicker') }}</span></div>
+          <h2 class="t-h1 mt-3">{{ t('app.homeTitle') }}</h2>
+          <p class="text-sm sm:text-[15px] text-muted mt-3 leading-relaxed">{{ t('app.homeDesc') }}</p>
+          <div class="mt-5 flex flex-wrap items-center gap-2.5">
+            <router-link to="/app" class="btn">{{ t('app.homeCta') }}</router-link>
+            <router-link to="/app" class="btn-ghost">{{ t('app.pwaCta') }}</router-link>
+            <span class="ml-1 flex items-center gap-1.5 text-xs text-faint"><span class="badge">{{ t('app.soon') }}</span>{{ t('app.ios') }} · {{ t('app.android') }}</span>
+          </div>
+        </div>
+        <div class="hidden lg:block justify-self-end -mb-28 rotate-[-6deg] translate-x-4"><PhoneMock /></div>
       </div>
     </div>
   </section>

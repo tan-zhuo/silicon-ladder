@@ -27,6 +27,7 @@ const I = {
   news: 'M5 4h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V7m14 13a2 2 0 002-2M8 8h6M8 12h6M8 16h4',
   guide: 'M4 5a2 2 0 012-2h12a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2zM8 7h8M8 11h8M8 15h5',
   method: 'M12 3l2 4 4.5.5-3.3 3.2.8 4.5-4-2.2-4 2.2.8-4.5L5.5 7.5 10 7z',
+  app: 'M8 2h8a2 2 0 012 2v16a2 2 0 01-2 2H8a2 2 0 01-2-2V4a2 2 0 012-2zM11 18h2',
 }
 const nav = computed(() => [
   { to: '/', label: t('product.home'), icon: I.home, count: null as number | null },
@@ -39,6 +40,7 @@ const nav = computed(() => [
   { to: '/compare', label: t('nav.compare'), icon: I.compare, count: null },
   { to: '/guide', label: t('nav.guide'), icon: I.guide, count: null },
   { to: '/methodology', label: t('nav.methodology'), icon: I.method, count: null },
+  { to: '/app', label: t('nav.app'), icon: I.app, count: null },
 ])
 const isActive = (to: string) => {
   const p = stripLocale(route.path)

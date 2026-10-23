@@ -70,6 +70,7 @@ const REPO = 'https://github.com/tan-zhuo/silicon-ladder'
               <li><router-link to="/compare" class="hover:text-accent">{{ t('nav.compare') }}</router-link></li>
               <li><router-link to="/guide" class="hover:text-accent">{{ t('nav.guide') }}</router-link></li>
               <li><router-link to="/methodology" class="hover:text-accent">{{ t('nav.methodology') }}</router-link></li>
+              <li><router-link to="/app" class="hover:text-accent">{{ t('nav.app') }}</router-link></li>
             </ul>
           </div>
           <div>

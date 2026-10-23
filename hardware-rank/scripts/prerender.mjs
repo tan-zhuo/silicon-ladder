@@ -18,6 +18,7 @@ const T = {
     rankH1: (c) => `${c} 排行榜 / 天梯图`, prodTitle: (n, f, c) => `${n} 规格、跑分、天梯排名与兼容性 · ${f} ${c} · CPU.News`, prodDesc: (b, n, r, s, l) => `${b} ${n}（${r}）：${s} ${l}。`, viewAll: (c) => `查看 ${c} 完整排行榜`, home: '首页', rankings: '排行榜',
     guide: ['场景选购指南 — 游戏 / 生产力 / 轻薄本 / 游戏本 · CPU.News', '四个常见场景各 3 条硬件推荐：纯游戏台式机、生产力剪辑、轻薄本、游戏本。', '场景选购指南'],
     method: ['方法论与数据来源 — 分池归一、综合权重、电源分档 · CPU.News', '相对分 rel(x)=x/max×100 同形态池内归一；桌面 CPU 游戏 40%+单核 25%+多核 25%+能效 10%；GPU 光栅 55%+光追 25%+能效 20%；电源按 Tier 分档不跑分。', '方法论与数据来源'],
+    app: ['CPU.News App — iOS / Android 版本开发中 · CPU.News', '天梯图、排行榜、对比与官方动态的手机版，开发中；现在即可把网页添加到主屏幕使用。', 'CPU.News App'],
     news: ['硬件新闻 — AMD / NVIDIA / Apple / Samsung 官方动态 · CPU.News', '仅聚合厂商官方新闻室的最新动态标题与链接，点击跳转官方原文。', '硬件新闻'],
     compare: ['硬件对比 — 同品类最多 4 项并排 · CPU.News', 'CPU / GPU / 内存 / 存储 / 电源同品类并排对比，规格与相对分一目了然。', '硬件对比'],
     spec: { socket: '插槽', cores: '核心 / 线程', clocks: '频率', tdp: 'TDP', igpu: '核显', l3: 'L3', mem: '内存', st: 'Cinebench 2024 单核', mt: 'Cinebench 2024 多核', arch: '架构', chip: '核心', vram: '显存', bus: '位宽', tbp: 'TBP', tgp: 'TGP', raster: '光栅相对分', rt: '光追相对分', spec: '规格', cap: '容量', speed: '速率', cl: 'CL', read: '读带宽', lat: '延迟', iface: '接口', nand: '颗粒', dram: 'DRAM', seq: '顺序读/写', r4k: '4K 随机读', co: '缓外写入', tbw: 'TBW', watt: '瓦数', tier: '分档', eff: '认证', atx31: 'ATX 3.1', mod: '模组', oem: 'OEM', yes: '有', no: '无', y: '是', n: '否' } },
@@ -26,6 +27,7 @@ const T = {
     rankH1: (c) => `${c} Rankings & Ladder`, prodTitle: (n, f, c) => `${n} specs, benchmarks, ladder rank & compatibility · ${f} ${c} · CPU.News`, prodDesc: (b, n, r, s, l) => `${b} ${n} (${r}): ${s} ${l}.`, viewAll: (c) => `See the full ${c} rankings`, home: 'Home', rankings: 'Rankings',
     guide: ['Buying guide by scenario — gaming / productivity / thin & light / gaming laptop · CPU.News', 'Three hardware picks for each of four scenarios: gaming desktop, productivity, thin & light, gaming laptop.', 'Buying guide by scenario'],
     method: ['Methodology & data sources — pooling, overall weights, PSU tiers · CPU.News', 'Relative score rel(x)=x/max×100 within the same form-factor pool; desktop CPU gaming 40% + single 25% + multi 25% + efficiency 10%; GPU raster 55% + RT 25% + efficiency 20%; PSUs tiered, not benchmarked.', 'Methodology & data sources'],
+    app: ['CPU.News App — iOS / Android in development · CPU.News', 'Ladders, rankings, compare and official news on your phone. In development; add the site to your home screen today.', 'CPU.News App'],
     news: ['Hardware News — official AMD / NVIDIA / Apple / Samsung updates · CPU.News', 'Headlines aggregated only from official vendor newsrooms, linking to the original posts.', 'Hardware News'],
     compare: ['Hardware compare — up to 4 items side by side · CPU.News', 'Compare CPUs, GPUs, memory, storage and PSUs within a category: specs and relative scores at a glance.', 'Hardware compare'],
     spec: { socket: 'Socket', cores: 'Cores / threads', clocks: 'Clocks', tdp: 'TDP', igpu: 'iGPU', l3: 'L3', mem: 'Memory', st: 'Cinebench 2024 single', mt: 'Cinebench 2024 multi', arch: 'Architecture', chip: 'Die', vram: 'VRAM', bus: 'Bus', tbp: 'TBP', tgp: 'TGP', raster: 'Raster (relative)', rt: 'RT (relative)', spec: 'Spec', cap: 'Capacity', speed: 'Speed', cl: 'CL', read: 'Read BW', lat: 'Latency', iface: 'Interface', nand: 'NAND', dram: 'DRAM', seq: 'Seq. read/write', r4k: '4K random read', co: 'Post-cache write', tbw: 'TBW', watt: 'Wattage', tier: 'Tier', eff: 'Rating', atx31: 'ATX 3.1', mod: 'Modular', oem: 'OEM', yes: 'Yes', no: 'No', y: 'Yes', n: 'No' } },
@@ -34,6 +36,7 @@ const T = {
     rankH1: (c) => `${c} ランキング / 性能ラダー`, prodTitle: (n, f, c) => `${n} 仕様・ベンチマーク・ラダー順位・互換性 · ${f} ${c} · CPU.News`, prodDesc: (b, n, r, s, l) => `${b} ${n}（${r}）：${s} ${l}。`, viewAll: (c) => `${c} の全ランキングを見る`, home: 'ホーム', rankings: 'ランキング',
     guide: ['シーン別購入ガイド — ゲーム / 生産性 / 薄型 / ゲーミングノート · CPU.News', 'よくある4シーンにハードウェアを各3件推奨：ゲーム用デスクトップ、生産性、薄型ノート、ゲーミングノート。', 'シーン別購入ガイド'],
     method: ['評価方法とデータソース — プール分け・総合重み・電源ティア · CPU.News', '相対スコア rel(x)=x/max×100 を同フォームプール内で正規化。デスクトップ CPU はゲーム 40%+シングル 25%+マルチ 25%+効率 10%、GPU はラスタ 55%+RT 25%+効率 20%。電源はティア分けでベンチなし。', '評価方法とデータソース'],
+    app: ['CPU.News アプリ — iOS / Android 版開発中 · CPU.News', 'ラダー・ランキング・比較・公式ニュースのスマホ版を開発中。今すぐホーム画面に追加して利用できます。', 'CPU.News アプリ'],
     news: ['ハードウェアニュース — AMD / NVIDIA / Apple / Samsung 公式発表 · CPU.News', 'メーカー公式ニュースルームの見出しのみを集約し、公式原文へリンクします。', 'ハードウェアニュース'],
     compare: ['ハードウェア比較 — 同カテゴリ最大4件 · CPU.News', 'CPU / GPU / メモリ / ストレージ / 電源を同カテゴリで並べて比較。仕様と相対スコアが一目瞭然。', 'ハードウェア比較'],
     spec: { socket: 'ソケット', cores: 'コア / スレッド', clocks: 'クロック', tdp: 'TDP', igpu: '内蔵GPU', l3: 'L3', mem: 'メモリ', st: 'Cinebench 2024 シングル', mt: 'Cinebench 2024 マルチ', arch: 'アーキテクチャ', chip: 'ダイ', vram: 'VRAM', bus: 'バス幅', tbp: 'TBP', tgp: 'TGP', raster: 'ラスタ相対', rt: 'RT 相対', spec: '仕様', cap: '容量', speed: '速度', cl: 'CL', read: '読込帯域', lat: 'レイテンシ', iface: 'IF', nand: 'NAND', dram: 'DRAM', seq: 'Seq. 読/書', r4k: '4K ランダム読', co: 'キャッシュ外書込', tbw: 'TBW', watt: 'W数', tier: 'ティア', eff: '認証', atx31: 'ATX 3.1', mod: 'モジュラー', oem: 'OEM', yes: 'あり', no: 'なし', y: 'はい', n: 'いいえ' } },
@@ -116,10 +119,11 @@ for (const l of LANGS) {
   render('/guide', l, { title: t.guide[0], description: t.guide[1], body: `<h1>${esc(t.guide[2])}</h1>` })
   render('/methodology', l, { title: t.method[0], description: t.method[1], body: `<h1>${esc(t.method[2])}</h1>` })
   render('/compare', l, { title: t.compare[0], description: t.compare[1], body: `<h1>${esc(t.compare[2])}</h1>` })
+  render('/app', l, { title: t.app[0], description: t.app[1], body: `<h1>${esc(t.app[2])}</h1><p>${esc(t.app[1])}</p>` })
   render('/news', l, { title: t.news[0], description: t.news[1], body: `<h1>${esc(t.news[2])}</h1><ul>` + news.items.slice(0, 40).map((i) => `<li>${esc(i.date)} [${esc(i.brand)}] <a href="${esc(i.url)}" rel="noopener">${esc(i.title)}</a></li>`).join('') + '</ul>' })
   if (l !== 'zh') render('/', l, { title: t.site, description: t.rankDesc(t.cat.cpu + ' / ' + t.cat.gpu, Object.values(data).reduce((n, a) => n + a.length, 0), Object.values(t.form).slice(0, 3)), body: `<h1>${esc(t.site)}</h1>` })
 }
-paths.push(['/news', '0.8', 'daily'], ['/guide', '0.6', 'monthly'], ['/methodology', '0.5', 'monthly'], ['/compare', '0.4', 'monthly'])
+paths.push(['/news', '0.8', 'daily'], ['/guide', '0.6', 'monthly'], ['/methodology', '0.5', 'monthly'], ['/compare', '0.4', 'monthly'], ['/app', '0.6', 'monthly'])
 
 const urlEntry = ([u, p, f]) => LANGS.map((l) => `  <url><loc>${SITE}${prefix(l)}${u === '/' ? (l === 'zh' ? '/' : '') : u}</loc><lastmod>${meta.updated}</lastmod><changefreq>${f}</changefreq><priority>${p}</priority>\n` + LANGS.map((x) => `    <xhtml:link rel="alternate" hreflang="${HL[x]}" href="${SITE}${prefix(x)}${u === '/' ? (x === 'zh' ? '/' : '') : u}"/>`).join('\n') + `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE}${u}"/>\n  </url>`).join('\n')
 writeFileSync(join(DIST, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n` + paths.map(urlEntry).join('\n') + '\n</urlset>\n')
