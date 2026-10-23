@@ -59,7 +59,7 @@ export const COLUMNS: Record<Category, Column[]> = {
     { key: 'lan', label: 'lan', kind: 'text', hide: 'xl', text: (r) => { const m = r.item as Mobo; return m.wifi ? `${m.lan} · ${m.wifi}` : m.lan } },
   ],
   cooler: [
-    { key: 'ctype', label: 'coolerSize', kind: 'text', hide: 'lg', text: (r) => { const c = r.item as Cooler; return c.form === 'aio' ? `${c.radiator_mm}×${c.thickness_mm ?? '—'}mm` : `${c.height_mm}mm · ${c.fans}` } },
+    { key: 'ctype', label: 'coolerSize', kind: 'text', hide: 'lg', text: (r) => { const c = r.item as Cooler; return c.form === 'aio' ? `${c.radiator_mm}×${c.thickness_mm ?? '—'}mm` : `${c.height_mm}mm` } },
     { key: 'tdp', label: 'tdpRated', kind: 'text', align: 'right', hide: 'xl', text: (r) => `${(r.item as Cooler).tdp_w}W` },
     { key: 'cooling', label: 'cooling', kind: 'score', sortKey: 'cooling' },
     { key: 'quiet', label: 'quiet', kind: 'score', hide: 'lg', sortKey: 'quiet', raw: (r) => `${(r.item as Cooler).noise_db} dBA` },

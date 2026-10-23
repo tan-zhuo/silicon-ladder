@@ -9,7 +9,7 @@ export const zh = {
   mobosize: { atx: 'ATX', eatx: 'E-ATX', matx: 'mATX', itx: 'Mini-ITX' },
   modular: { full: '全模组', semi: '半模组', none: '非模组' },
   sort: { overall: '综合', gaming: '游戏', single: '单核', multi: '生产力', efficiency: '能效', igpu: '核显', value: '性价比', raster: '光栅', rt: '光追', bandwidth: '带宽', latency: '延迟', random4k: '4K 随机', cacheOut: '缓外写入', seqRead: '顺序读', endurance: '耐久', tier: '品质分档', cooling: '散热', quiet: '静音' },
-  col: { rank: '#', model: '型号', cores: '核心', tdp: 'TDP', single: '单核', multi: '多核', gaming: '游戏', overall: '综合', vram: '显存', power: 'TGP/TDP', raster: '光栅', rt: '光追', spec: '规格', read: '读带宽', latency: '延迟', interface: '接口', seqRead: '顺序读', random4k: '4K 随机', cacheOut: '缓外写入', watt: '瓦数', tier: '分档', efficiency: '认证', atx31: 'ATX 3.1', modular: '模组', compare: '对比', release: '发布', chipset: '芯片组 · 板型', vrm: 'VRM', memMax: '内存上限', m2: 'M.2', lan: '网络', coolerType: '类型 · 规格', cooling: '散热', quiet: '静音', tdpRated: '标称解热', coolerSize: '尺寸 · 风扇' },
+  col: { rank: '#', model: '型号', cores: '核心', tdp: 'TDP', single: '单核', multi: '多核', gaming: '游戏', overall: '综合', vram: '显存', power: 'TGP/TDP', raster: '光栅', rt: '光追', spec: '规格', read: '读带宽', latency: '延迟', interface: '接口', seqRead: '顺序读', random4k: '4K 随机', cacheOut: '缓外写入', watt: '瓦数', tier: '分档', efficiency: '认证', atx31: 'ATX 3.1', modular: '模组', compare: '对比', release: '发布', chipset: '芯片组 · 板型', vrm: 'VRM', memMax: '内存上限', m2: 'M.2', lan: '网络', coolerType: '类型 · 规格', cooling: '散热', quiet: '静音', tdpRated: '标称解热', coolerSize: '尺寸' },
   home: {
     heroKicker: '数据覆盖 2007 年至今',
     heroTitle: '消费级硬件排行与天梯图',

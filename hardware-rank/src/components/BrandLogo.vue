@@ -21,7 +21,7 @@ const vecStyle = computed(() => {
   return { height: props.size + 'px', width: Math.round(props.size * r) + 'px', '--brand-tone': tone }
 })
 /** 字标回退：优先用覆盖表，其次 ≤8 字符整词大写，否则首字母缩写（最多 3 个） */
-const MARKS: Record<string, string> = { 'Super Flower': 'SF', 'Great Wall': 'GW', 'Golden Field': 'GF', SilverStone: 'SST', '1STPLAYER': '1ST', Generic: '—', 'G.Skill': 'G.SKILL', Crucial: 'crucial', Solidigm: 'SLDM' }
+const MARKS: Record<string, string> = { 'Super Flower': 'SF', 'Great Wall': 'GW', 'Golden Field': 'GF', SilverStone: 'SST', '1STPLAYER': '1ST', Generic: '—', 'G.Skill': 'G.SKILL', Crucial: 'crucial', Solidigm: 'SLDM', Thermalright: 'TR', 'ID-COOLING': 'ID', 'Cooler Master': 'CM', PCCOOLER: 'PCC' }
 const mark = computed(() => {
   const b = props.brand.trim()
   if (MARKS[b]) return MARKS[b]

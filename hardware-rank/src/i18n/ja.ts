@@ -10,7 +10,7 @@ export const ja: Msg = {
   mobosize: { atx: 'ATX', eatx: 'E-ATX', matx: 'mATX', itx: 'Mini-ITX' },
   modular: { full: 'フルモジュラー', semi: 'セミモジュラー', none: '直出し' },
   sort: { overall: '総合', gaming: 'ゲーム', single: 'シングル', multi: 'マルチ', efficiency: '電力効率', igpu: '内蔵GPU', value: 'コスパ', raster: 'ラスタ', rt: 'レイトレ', bandwidth: '帯域', latency: 'レイテンシ', random4k: '4Kランダム', cacheOut: 'キャッシュ外書込', seqRead: 'シーケンシャル読', endurance: '耐久性', tier: '品質ティア', cooling: '冷却', quiet: '静音' },
-  col: { rank: '#', model: 'モデル', cores: 'コア', tdp: 'TDP', single: 'シングル', multi: 'マルチ', gaming: 'ゲーム', overall: '総合', vram: 'VRAM', power: 'TGP/TDP', raster: 'ラスタ', rt: 'RT', spec: '仕様', read: '読込帯域', latency: 'レイテンシ', interface: 'IF', seqRead: 'Seq.読', random4k: '4K', cacheOut: 'キャッシュ外', watt: 'W数', tier: 'ティア', efficiency: '認証', atx31: 'ATX 3.1', modular: 'モジュラー', compare: '比較', release: '発売', chipset: 'チップセット · 規格', vrm: 'VRM', memMax: 'メモリ上限', m2: 'M.2', lan: 'ネットワーク', coolerType: 'タイプ · サイズ', cooling: '冷却', quiet: '静音', tdpRated: '公称 TDP', coolerSize: 'サイズ · ファン' },
+  col: { rank: '#', model: 'モデル', cores: 'コア', tdp: 'TDP', single: 'シングル', multi: 'マルチ', gaming: 'ゲーム', overall: '総合', vram: 'VRAM', power: 'TGP/TDP', raster: 'ラスタ', rt: 'RT', spec: '仕様', read: '読込帯域', latency: 'レイテンシ', interface: 'IF', seqRead: 'Seq.読', random4k: '4K', cacheOut: 'キャッシュ外', watt: 'W数', tier: 'ティア', efficiency: '認証', atx31: 'ATX 3.1', modular: 'モジュラー', compare: '比較', release: '発売', chipset: 'チップセット · 規格', vrm: 'VRM', memMax: 'メモリ上限', m2: 'M.2', lan: 'ネットワーク', coolerType: 'タイプ · サイズ', cooling: '冷却', quiet: '静音', tdpRated: '公称 TDP', coolerSize: 'サイズ' },
   home: {
     heroKicker: '2007 年〜現在のデータ',
     heroTitle: 'コンシューマー向けハードウェアのランキングと性能ラダー',
